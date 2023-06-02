@@ -1,0 +1,170 @@
+﻿@model core.Service.IsValidModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+<style>
+    .input-group {
+        display: flex;
+        justify-content: center;
+    }
+
+        .input-group input {
+            width: 50px;
+            margin: 0 5px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+</style>
+<form id="myForm" asp-action="@nameof(AuthController.IsValidUser)" asp-controller="Auth" method="post" class="card card-sign">
+    <div class="card-header">
+        <a href="../" class="header-logo mb-5"><img src="~/assets/img/Logo-sf.png" /></></a>
+        <h3 class="card-title">Recover</h3>
+        <p class="card-text">
+            Enter the code sent to your mobile device.
+        </p>
+    </div>
+    <div class="card-body">
+        <div class="input-group">
+            <input asp-for="Code1" type="text" maxlength="1" pattern="\d" />
+            <input asp-for="Code2" type="text" maxlength="1" pattern="\d" />
+            <input asp-for="Code3" type="text" maxlength="1" pattern="\d" />
+            <input asp-for="Code4" type="text" maxlength="1" pattern="\d" />
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="mb-8">
+
+            <button id="ExampleBotton" type="submit" class="btn btn-primary"> Enviar petición </button>
+            
+
+        </div>
+    </div>
+
+
+</form>
+
+
+@section Scripts{
+
+    <script>
+        //function mostrarAlertSweetAlert2() {
+        //    var f = $('form').attr('action');
+        //    Swal.fire('Example', '', 'success');
+        //}
+
+
+
+        $("#myForm").submit(function (event) {
+            event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("IsValidUser", "Auth")",
+                data: $(this).serialize(), // Serializar los datos del formulario
+                success: function (result) {
+                    if (result.success) {
+                        Swal.fire(result.title, result.message, result.type)
+                    .then(function () {
+                                window.location.href = "/Auth/IsValidUser";
+                    });;
+                    } else {
+                        Swal.fire(result.title, result.message, result.type);
+                    }
+                },
+                error: function () {
+                    Swal.fire("Error", "Hubo un error al procesar la acción", "error");
+                }
+            });
+        });
+
+
+        //$(document).ready(function () {
+        //    $("#ExampleBotton").click(function (event) {
+        //        event.preventDefault();
+
+        //        // Realizar petición AJAX al controlador
+        //        $.ajax({
+        //            type: "POST",
+        //            url: "@Url.Action("IsValidUser", "Auth")",
+        //            success: function (result) {
+        //                if (result.success) {
+        //                    Swal.fire(result.title, result.message, result.type);
+        //                } else {
+        //                    Swal.fire(result.title, result.message, result.type);
+        //                }
+        //            },
+        //            error: function (result) {
+        //                // Mostrar SweetAlert con el mensaje de error
+        //                Swal.fire("Error", "Hubo un error al procesar la petición", "error");
+        //            }
+        //        });
+        //    });
+        //});
+
+
+
+        //$(document).ready(function () {
+        //    $("#myButton").click(function () {
+        //        $.ajax({
+        //            url: "/Auth/IsValidUser",
+        //            type: "POST",
+        //            data: {},
+        //            success: function (result) {
+        //                swal({
+        //                    title: "¡Éxito!",
+        //                    text: "La acción se completó con éxito",
+        //                    type: "success"
+        //                });
+        //            },
+        //            error: function () {
+        //                swal({
+        //                    title: "Error",
+        //                    text: "Hubo un error al procesar la acción",
+        //                    type: "error"
+        //                });
+        //            }
+        //        });
+        //    });
+        //});
+
+
+
+
+
+
+
+        const inputs = document.querySelectorAll('.input-group input');
+
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', (event) => {
+                const inputLength = input.value.length;
+                const nextInput = inputs[index + 1];
+
+                if (inputLength === 1 && nextInput) {
+                    nextInput.focus();
+                }
+            });
+        });
+
+    </script>
+
+
+}
+
+@*<script>
+    const inputs = document.querySelectorAll('.input-group input');
+
+    inputs.forEach((input, index) => {
+        input.addEventListener('input', (event) => {
+            const inputLength = input.value.length;
+            const nextInput = inputs[index + 1];
+
+            if (inputLength === 1 && nextInput) {
+                nextInput.focus();
+            }
+        });
+    });
+</script>*@
