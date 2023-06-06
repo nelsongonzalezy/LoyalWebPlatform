@@ -1,167 +1,138 @@
-﻿<div align= "Center">
-</div>
-<div class="form-search me-auto">
-   <input type="text" class="form-control" placeholder="Search for files and folders...">
-   <i class="ri-search-line"></i>
-</div>
-<!-- form-search -->
-<h1>
-   <div class="dropdown dropdown-skin">
-      <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="ri-settings-3-line"></i></a>
-      <div class="dropdown-menu dropdown-menu-end mt-10-f">
-         <label>Skin Mode</label>
-         <nav id="skinMode" class="nav nav-skin">
-            <a href="" class="nav-link active">Light</a>
-            <a href="" class="nav-link">Dark</a>
-         </nav>
-</h1>
+﻿
 
-<div class="dropdown dropdown-notification ms-3 ms-xl-4">
-   <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-bs-auto-close="outside"><small>3</small><i class="ri-notification-3-line"></i></a>
-   <div class="dropdown-menu dropdown-menu-end mt-10-f me--10-f">
-      <div class="dropdown-menu-header">
-         <h6 class="dropdown-menu-title">Notifications</h6>
-      </div>
-      <!-- dropdown-menu-header -->
-      </li>
-      </ul>
-      <div class="dropdown-menu-footer"><a href="">Show all Notifications</a></div>
-   </div>
-   <!-- dropdown-menu -->
+<div class="container">
+
+    <div class="d-md-flex align-items-center justify-content-between mb-4">
+        <div>
+            <ol class="breadcrumb fs-sm mb-1">
+                <li class="breadcrumb-item"><a href="../Claims/index">Modulos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Modulos disponibles</li>
+            </ol>
+            <h4 class="main-title mb-0"></h4>
+        </div>
+        <div class="d-flex gap-2 mt-3 mt-md-0">
+
+            
+        </div>
+    </div>
+
+    <div class="form-search me-auto">
+        <input type="text" class="form-control" placeholder="Search for files and folders...">
+        <i class="ri-search-line"></i>
+    </div>
+
+    <br />
+
+<div class="col-lg-12 row g-3">
+        <div class="col-3 col-sm-4 col-md-3 col-xl">
+            <div class="card card-file">
+                <div class="dropdown-file">
+                    <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a href="#modalViewDetails" data-toggle="modal" class="dropdown-item details"><i class="ri-information-line"></i> View Details</a>
+                        <a href="" class="dropdown-item important"><i class="ri-star-line"></i> Mark as Important</a>
+                        <a href="#modalShare" data-toggle="modal" class="dropdown-item share"><i class="ri-share-forward-line"></i> Share</a>
+                        <a href="" class="dropdown-item download"><i class="ri-download-2-line"></i> Download</a>
+                        <a href="#modalCopy" data-toggle="modal" class="dropdown-item copy"><i class="ri-file-copy-line"></i> Copy to</a>
+                        <a href="#modalMove" data-toggle="modal" class="dropdown-item move"><i class="ri-folders-line"></i> Move to</a>
+                        <a href="#" class="dropdown-item rename"><i class="ri-edit-2-line"></i> Rename</a>
+                        <a href="#" class="dropdown-item delete"><i class="ri-delete-bin-line"></i> Delete</a>
+                    </div>
+                </div>
+                <!-- dropdown -->
+                <div class="card-file-icon danger">
+                    <i class="ri-file-pdf-line"></i>
+                </div>
+                <div class="card-body">
+                    <h6><a href="" class="link-02">Reclamos</a></h6>
+                    <span> </span>
+                </div>
+                <div class="card-footer"><span class="d-none d-sm-inline">Last access: </span></div>
+            </div>
+        </div>
+        <div class="col-3 col-sm-4 col-md-3 col-xl">
+            <div class="card card-file">
+                <div class="dropdown-file">
+                    <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a href="#modalViewDetails" data-toggle="modal" class="dropdown-item details"><i class="ri-information-line"></i> View Details</a>
+                        <a href="" class="dropdown-item important"><i class="ri-star-line"></i> Mark as Important</a>
+                        <a href="#modalShare" data-toggle="modal" class="dropdown-item share"><i class="ri-share-forward-line"></i> Share</a>
+                        <a href="" class="dropdown-item download"><i class="ri-download-2-line"></i> Download</a>
+                        <a href="#modalCopy" data-toggle="modal" class="dropdown-item copy"><i class="ri-file-copy-line"></i> Copy to</a>
+                        <a href="#modalMove" data-toggle="modal" class="dropdown-item move"><i class="ri-folders-line"></i> Move to</a>
+                        <a href="#" class="dropdown-item rename"><i class="ri-edit-2-line"></i> Rename</a>
+                        <a href="#" class="dropdown-item delete"><i class="ri-delete-bin-line"></i> Delete</a>
+                    </div>
+                </div>
+                <!-- dropdown -->
+                <div class="card-file-icon primary">
+                    <i class="ri-file-word-line"></i>
+                </div>
+                <div class="card-body">
+                    <h6><a href="" class="link-02">Board</a></h6>
+                    <span> </span>
+                </div>
+                <div class="card-footer"><span class="d-none d-sm-inline">Last access: </span></div>
+            </div>
+        </div>
+        <!-- col -->
+        <div class="col-3 col-sm-4 col-md-3 col-xl">
+            <div class="card card-file">
+                <div class="dropdown-file">
+                    <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a href="#modalViewDetails" data-toggle="modal" class="dropdown-item details"><i class="ri-information-line"></i> View Details</a>
+                        <a href="" class="dropdown-item important"><i class="ri-star-line"></i> Mark as Important</a>
+                        <a href="#modalShare" data-toggle="modal" class="dropdown-item share"><i class="ri-share-forward-line"></i> Share</a>
+                        <a href="" class="dropdown-item download"><i class="ri-download-2-line"></i> Download</a>
+                        <a href="#modalCopy" data-toggle="modal" class="dropdown-item copy"><i class="ri-file-copy-line"></i> Copy to</a>
+                        <a href="#modalMove" data-toggle="modal" class="dropdown-item move"><i class="ri-folders-line"></i> Move to</a>
+                        <a href="#" class="dropdown-item rename"><i class="ri-edit-2-line"></i> Rename</a>
+                        <a href="#" class="dropdown-item delete"><i class="ri-delete-bin-line"></i> Delete</a>
+                    </div>
+                </div>
+                <!-- dropdown -->
+                <div class="card-file-icon info">
+                    <i class="ri-image-line"></i>
+                </div>
+                <div class="card-body">
+                    <h6><a href="" class="link-02">Forecast</a></h6>
+                    <span></span>
+                </div>
+                <div class="card-footer"><span class="d-none d-sm-inline">Last access: </span></div>
+            </div>
+        </div>
+        <!-- col -->
+        <div class="col-3 col-sm-4 col-md-3 col-xl">
+            <div class="card card-file">
+                <div class="dropdown-file">
+                    <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a href="#modalViewDetails" data-toggle="modal" class="dropdown-item details"><i class="ri-information-line"></i> View Details</a>
+                        <a href="" class="dropdown-item important"><i class="ri-star-line"></i> Mark as Important</a>
+                        <a href="#modalShare" data-toggle="modal" class="dropdown-item share"><i class="ri-share-forward-line"></i> Share</a>
+                        <a href="" class="dropdown-item download"><i class="ri-download-2-line"></i> Download</a>
+                        <a href="#modalCopy" data-toggle="modal" class="dropdown-item copy"><i class="ri-file-copy-line"></i> Copy to</a>
+                        <a href="#modalMove" data-toggle="modal" class="dropdown-item move"><i class="ri-folders-line"></i> Move to</a>
+                        <a href="#" class="dropdown-item rename"><i class="ri-edit-2-line"></i> Rename</a>
+                        <a href="#" class="dropdown-item delete"><i class="ri-delete-bin-line"></i> Delete</a>
+                    </div>
+                </div>
+                <!-- dropdown -->
+                <div class="card-file-icon success">
+                    <i class="ri-file-excel-line"></i>
+                </div>
+                <div class="card-body">
+                    <h6><a href="" class="link-02"> Certificaciones</a></h6>
+                    <span></span>
+                </div>
+                <div class="card-footer"><span class="d-none d-sm-inline"> Last access: </span></div>
+            </div>
+        </div>
+
+
+
 </div>
-<!-- dropdown -->
-<div class="dropdown dropdown-profile ms-3 ms-xl-4">
-   <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-      <div class="avatar online"><img src="../assets/img/img1.jpg" alt=""></div>
-   </a>
-   <div class="dropdown-menu dropdown-menu-end mt-10-f">
-      <div class="dropdown-menu-body">
-         <div class="avatar avatar-xl online mb-3"><img src="../assets/img/img1.jpg" alt=""></div>
-         <h5 class="mb-1 text-dark fw-semibold"></h5>
-         <p class="fs-sm text-secondary">Premium Member</p>
-         <nav class="nav">
-         </nav>
-         <hr>
-         <nav class="nav">
-            <a href=""><i class="ri-question-line"></i> Help Center</a>
-            <a href=""><i class="ri-lock-line"></i> Privacy Settings</a>
-            <a href=""><i class="ri-user-settings-line"></i> Account Settings</a>
-            <a href=""><i class="ri-logout-box-r-line"></i> Log Out</a>
-         </nav>
-      </div>
-      <!-- dropdown-menu-body -->
-   </div>
-   <!-- dropdown-menu -->
+
 </div>
-<!-- dropdown -->
-<a href="" class="nav-link"><i class="ri-list-check-2"></i></a>
-<a href="" class="nav-link"><i class="ri-information-line"></i></a>
-<a href="" class="nav-link"><i class="ri-settings-3-line"></i></a>
-<div class="col-6 col-sm-4 col-md-3 col-xl">
-   <div class="card card-file">
-      <div class="dropdown-file">
-         <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
-         <div class="dropdown-menu dropdown-menu-end">
-            <a href="#modalViewDetails" data-toggle="modal" class="dropdown-item details"><i class="ri-information-line"></i> View Details</a>
-            <a href="" class="dropdown-item important"><i class="ri-star-line"></i> Mark as Important</a>
-            <a href="#modalShare" data-toggle="modal" class="dropdown-item share"><i class="ri-share-forward-line"></i> Share</a>
-            <a href="" class="dropdown-item download"><i class="ri-download-2-line"></i> Download</a>
-            <a href="#modalCopy" data-toggle="modal" class="dropdown-item copy"><i class="ri-file-copy-line"></i> Copy to</a>
-            <a href="#modalMove" data-toggle="modal" class="dropdown-item move"><i class="ri-folders-line"></i> Move to</a>
-            <a href="#" class="dropdown-item rename"><i class="ri-edit-2-line"></i> Rename</a>
-            <a href="#" class="dropdown-item delete"><i class="ri-delete-bin-line"></i> Delete</a>
-         </div>
-      </div>
-      <!-- dropdown-menu -->
-      <div class="card-file-icon danger">
-         <i class="ri-file-pdf-line"></i>
-      </div>
-      <div class="card-body">
-         <h6><a href="" class="link-02">Reclamos</a></h6>
-         <span></span>
-      </div>
-      <div class="card-footer"><span class="d-none d-sm-inline">Last access: </span></div>
-   </div>
-</div>
-<!-- col -->
-<div class="col-6 col-sm-4 col-md-3 col-xl">
-   <div class="card card-file">
-      <div class="dropdown-file">
-         <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
-         <div class="dropdown-menu dropdown-menu-end">
-            <a href="#modalViewDetails" data-toggle="modal" class="dropdown-item details"><i class="ri-information-line"></i> View Details</a>
-            <a href="" class="dropdown-item important"><i class="ri-star-line"></i> Mark as Important</a>
-            <a href="#modalShare" data-toggle="modal" class="dropdown-item share"><i class="ri-share-forward-line"></i> Share</a>
-            <a href="" class="dropdown-item download"><i class="ri-download-2-line"></i> Download</a>
-            <a href="#modalCopy" data-toggle="modal" class="dropdown-item copy"><i class="ri-file-copy-line"></i> Copy to</a>
-            <a href="#modalMove" data-toggle="modal" class="dropdown-item move"><i class="ri-folders-line"></i> Move to</a>
-            <a href="#" class="dropdown-item rename"><i class="ri-edit-2-line"></i> Rename</a>
-            <a href="#" class="dropdown-item delete"><i class="ri-delete-bin-line"></i> Delete</a>
-         </div>
-      </div>
-      <!-- dropdown -->
-      <div class="card-file-icon primary">
-         <i class="ri-file-word-line"></i>
-      </div>
-      <div class="card-body">
-         <h6><a href="" class="link-02">Board</a></h6>
-         <span> </span>
-      </div>
-      <div class="card-footer"><span class="d-none d-sm-inline">Last access: </span></div>
-   </div>
-</div>
-<!-- col -->
-<div class="col-6 col-sm-4 col-md-3 col-xl">
-   <div class="card card-file">
-      <div class="dropdown-file">
-         <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
-         <div class="dropdown-menu dropdown-menu-end">
-            <a href="#modalViewDetails" data-toggle="modal" class="dropdown-item details"><i class="ri-information-line"></i> View Details</a>
-            <a href="" class="dropdown-item important"><i class="ri-star-line"></i> Mark as Important</a>
-            <a href="#modalShare" data-toggle="modal" class="dropdown-item share"><i class="ri-share-forward-line"></i> Share</a>
-            <a href="" class="dropdown-item download"><i class="ri-download-2-line"></i> Download</a>
-            <a href="#modalCopy" data-toggle="modal" class="dropdown-item copy"><i class="ri-file-copy-line"></i> Copy to</a>
-            <a href="#modalMove" data-toggle="modal" class="dropdown-item move"><i class="ri-folders-line"></i> Move to</a>
-            <a href="#" class="dropdown-item rename"><i class="ri-edit-2-line"></i> Rename</a>
-            <a href="#" class="dropdown-item delete"><i class="ri-delete-bin-line"></i> Delete</a>
-         </div>
-      </div>
-      <!-- dropdown -->
-      <div class="card-file-icon info">
-         <i class="ri-image-line"></i>
-      </div>
-      <div class="card-body">
-         <h6><a href="" class="link-02">Forecast</a></h6>
-         <span></span>
-      </div>
-      <div class="card-footer"><span class="d-none d-sm-inline">Last access: </span></div>
-   </div>
-</div>
-<!-- col -->
-<div class="col-6 col-sm-4 col-md-3 col-xl">
-   <div class="card card-file">
-      <div class="dropdown-file">
-         <a href="" class="dropdown-link" data-bs-toggle="dropdown" aria-expanded="false"><i class="ri-more-2-fill"></i></a>
-         <div class="dropdown-menu dropdown-menu-end">
-            <a href="#modalViewDetails" data-toggle="modal" class="dropdown-item details"><i class="ri-information-line"></i> View Details</a>
-            <a href="" class="dropdown-item important"><i class="ri-star-line"></i> Mark as Important</a>
-            <a href="#modalShare" data-toggle="modal" class="dropdown-item share"><i class="ri-share-forward-line"></i> Share</a>
-            <a href="" class="dropdown-item download"><i class="ri-download-2-line"></i> Download</a>
-            <a href="#modalCopy" data-toggle="modal" class="dropdown-item copy"><i class="ri-file-copy-line"></i> Copy to</a>
-            <a href="#modalMove" data-toggle="modal" class="dropdown-item move"><i class="ri-folders-line"></i> Move to</a>
-            <a href="#" class="dropdown-item rename"><i class="ri-edit-2-line"></i> Rename</a>
-            <a href="#" class="dropdown-item delete"><i class="ri-delete-bin-line"></i> Delete</a>
-         </div>
-      </div>
-      <!-- dropdown -->
-      <div class="card-file-icon success">
-         <i class="ri-file-excel-line"></i>
-      </div>
-      <div class="card-body">
-         <h6><a href="" class="link-02"> Certificaciones</a></h6>
-         <span></span>
-      </div>
-      <div class="card-footer"><span class="d-none d-sm-inline"> Last access: </span></div>
-   </div>
-</div>
-<div class="card-footer"><span class="d-none d-sm-inline"> </span></div>
