@@ -5,6 +5,7 @@
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
+                <li class="breadcrumb-item"><a href="../menu/index">Menu</a></li>
                 <li class="breadcrumb-item"><a href="../Claims/index">Reclamos</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Nuevo Reclamo</li>
             </ol>
@@ -16,117 +17,203 @@
         </div>
     </div>
 
-    <form id="CreateClaims" class="row g-3 col-6" asp-action="@nameof(ClaimsController.Create)" asp-controller="Claims" method="post">
-    <div class="col-md-6">
-        <label class="form-label">CLaim Id</label>
-        <input value="@Model.ClaimId" class="form-control" disabled>
-    </div>
-    <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Fecha de registro</label>
-        <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
-    </div>
-    <div class="col-md-6">
-        <label class="form-label">Certificado</label>
-            <select id="select2E" class="form-select select2 mb-3">
+    <form id="CreateClaims" class="row g-3 col-12" asp-action="@nameof(ClaimsController.Create)" data-parsley-validate asp-controller="Claims" method="post">
+        <div class="col-6">
+        <div class="card card-one">
+            <div class="card-body row">
+                    <div class="col-6">
+                        <label class="form-label">CLaim Id</label>
+                        <input value="@Model.ClaimId" class="form-control" disabled>
+                    
+                    
+                    </div>
+                    <div class="col-6">
+                        <label for="inputPassword4" class="form-label">Fecha de registro</label>
+                        <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Certificado</label>
+                        <select id="select2E" class="form-select select2 mb-3">
 
-                <option value="000-000-0001">000-000-0001 | Persona 1</option>
-                <option value="000-000-0002">000-000-0002 | Persona 2</option>
-                <option value="000-000-0003">000-000-0003 | Persona 3</option>
-                <option value="000-000-0004">000-000-0004 | Persona 4</option>
-                <option value="000-000-0005">000-000-0005 | Persona 5</option>
-                <option value="000-000-0006">000-000-0006 | Persona 6</option>
-                <option value="000-000-0007">000-000-0007 | Persona 7</option>
-                <option value="000-000-0008">000-000-0008 | Persona 8</option>
-            </select>
-    </div>
-    <div class="col-md-6">
-            <label class="form-label">Asegurado</label>
-            <select id="select2F" class="form-select select2">
+                            <option value="000-000-0001">000-000-0001 | Persona 1</option>
+                            <option value="000-000-0002">000-000-0002 | Persona 2</option>
+                            <option value="000-000-0003">000-000-0003 | Persona 3</option>
+                            <option value="000-000-0004">000-000-0004 | Persona 4</option>
+                            <option value="000-000-0005">000-000-0005 | Persona 5</option>
+                            <option value="000-000-0006">000-000-0006 | Persona 6</option>
+                            <option value="000-000-0007">000-000-0007 | Persona 7</option>
+                            <option value="000-000-0008">000-000-0008 | Persona 8</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Asegurado</label>
+                        <select id="select2F" class="form-select select2">
 
-                <option value="000-000-0001">Titular</option>
-                <option value="000-000-0002">Dependiente</option>
-               
-            </select>
-    </div>
-    <div class="col-12">
-        <label for="inputAddress" class="form-label">Dx</label>
-            <select id="select2D" class="form-select" multiple>
+                            <option value="000-000-0001">Titular</option>
+                            <option value="000-000-0002">Dependiente</option>
 
-                <option value="000-000-0001">
-                    S83.241A - Dislocation of unspecified toe(s), initial encounter</option>
-                
-                <option value="000-000-0002">
-                    U07.1 - COVID-19, virus identified
-                    </option>   
-                    <option value="000-000-0002">
-                    M17.2 - Bilateral post-traumatic osteoarthritis of knee
-                    </option>
-            </select>
-    </div>
-    <div class="col-12">
-        <label for="inputAddress2" class="form-label">IC10</label>
-            <select id="select2X" class="form-select" multiple>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Tipo de reclamo</label>
+                        <select id="select2F" class="form-select select2">
 
-                <option value="000-000-0001">
-                    66982 - Extracapsular cataract removal with insertion of intraocular lens prosthesis (1-stage procedure), manual or mechanical technique (eg, irrigation and aspiration or phacoemulsification), complex, requiring devices or techniques not generally used in routine cataract surgery (eg, iris expansion device, suture support for intraocular lens, or primary posterior capsulorrhexis) or performed on patients in the amblyogenic developmental stage; without endoscopic cyclophotocoagulation
-                </option>
-                <option value="000-000-0002">
-                    97110 - Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises to develop strength and endurance, range of motion and flexibility
-                </option>                <option value="000-000-0002">
-                    99221 - Hospitalizacion
-                </option>
+                            <option value="000-000-0001">Rembolso</option>
+                            <option value="000-000-0002">Carta aval</option>
+                            <option value="000-000-0002">Emergencia</option>
 
-            </select>
-    </div>  
-    <div class="col-12">
-            <label for="inputAddress2" class="form-label">
-                Provider
-            </label>
-            <select id="select2Z" class="form-select" multiple>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">origen del reclamo</label>
+                        <select id="select2F" class="form-select select2">
+                            <option value="000-000-0001">Correo</option>
+                            <option value="000-000-0002">Portal</option>
+                            <option value="000-000-0002">Telefono</option>
+                            <option value="000-000-0002">Llamada Agente</option>
 
-                <option value="000-000-0001">
-                    Rif-J00058551-2 - Centro Médico Docente La Trinidad
-                </option>
-                <option value="000-000-0002">
-                    Rif: J-00229514-7 -  Unidad Oftalmologica de Caracas
-                </option>  
-                <option value="000-000-0002">
-                    Rif: J-40163589-0 -  Diagnostico Integral San Ignacio
-                </option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Dx</label>
+                        <select id="select2D" class="form-select" multiple>
 
-            </select>
-    </div>
-   
-    <div class="col-12">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck2">
-            <label class="form-check-label" for="gridCheck2">
-                Aplica deducible
-            </label>
+                            <option value="000-000-0001">
+                                S83.241A - Dislocation of unspecified toe(s), initial encounter
+                            </option>
+
+                            <option value="000-000-0002">
+                                U07.1 - COVID-19, virus identified
+                            </option>
+                            <option value="000-000-0002">
+                                M17.2 - Bilateral post-traumatic osteoarthritis of knee
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress2" class="form-label">IC10</label>
+                        <select id="select2X" class="form-select" multiple>
+
+                            <option value="000-000-0001">
+                                66982 - Extracapsular cataract removal with insertion of intraocular lens prosthesis (1-stage procedure), manual or mechanical technique (eg, irrigation and aspiration or phacoemulsification), complex, requiring devices or techniques not generally used in routine cataract surgery (eg, iris expansion device, suture support for intraocular lens, or primary posterior capsulorrhexis) or performed on patients in the amblyogenic developmental stage; without endoscopic cyclophotocoagulation
+                            </option>
+                            <option value="000-000-0002">
+                                97110 - Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises to develop strength and endurance, range of motion and flexibility
+                            </option>
+                            <option value="000-000-0002">
+                                99221 - Hospitalizacion
+                            </option>
+
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress2" class="form-label">
+                            Provider
+                        </label>
+                        <select id="select2Z" class="form-select" multiple>
+
+                            <option value="000-000-0001">
+                                Rif-J00058551-2 - Centro Médico Docente La Trinidad
+                            </option>
+                            <option value="000-000-0002">
+                                Rif: J-00229514-7 -  Unidad Oftalmologica de Caracas
+                            </option>
+                            <option value="000-000-0002">
+                                Rif: J-40163589-0 -  Diagnostico Integral San Ignacio
+                            </option>
+
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Notas</label>
+                        <textarea id="select2D" class="form-select" multiple>
+
+                </textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck2">
+                            <label class="form-check-label" for="gridCheck2">
+                                Aplica deducible
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck3">
+                            <label class="form-check-label" for="gridCheck3">
+                                Notificar a proveedor
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck4">
+                            <label class="form-check-label" for="gridCheck4">
+                                Notificar a asegurado
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck5">
+                            <label class="form-check-label" for="gridCheck5">
+                                Notificar a Agente de Seguros
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button id="submitButton2" type="submit" class="btn btn-primary">Aceptar</button>
+                    </div>
+
+
+            </div>
+
         </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck3">
-                <label class="form-check-label" for="gridCheck3">
-                    Notificar a proveedor
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck4">
-                <label class="form-check-label" for="gridCheck4">
-                    Notificar a asegurado
-                </label>
-            </div>        
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck5">
-                <label class="form-check-label" for="gridCheck5">
-                    Notificar a Agente de Seguros
-                </label>
-            </div>
+           
     </div>
-    <div class="col-12">
-            <button id="submitButton2" type="submit" class="btn btn-primary">Aceptar</button>
-    </div>
-</form>
+    <div class="col-6">
+            <div class="card">
+                <div class="card-body row">
+            <div class="col-md-6">
+                <label class="form-label">Nombre </label>
+                <input value="Nelson" class="form-control" disabled>
+            </div>
+            <div class="col-md-6">
+                <label for="" class="form-label">Apellido</label>
+                <input type="text" value="Gonzalez" class="form-control" disabled>
+            </div>
+            <div class="col-md-6">
+                <label for="" class="form-label">Fecha de vencimiento de la poliza</label>
+                <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Producto</label>
+                <input type="text" value="Legacy" class="form-control" disabled>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Historial de notas</label>
+                <textarea id="select2D" class="form-select" multiple disabled>
+
+                </textarea>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Exclusiones</label>
+                <textarea id="select2D" class="form-select" multiple disabled>
+
+                </textarea>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">
+                    Reclamos anteriores
+                </label>
+                <textarea id="select2D" class="form-select" multiple disabled>
+
+                </textarea>
+            </div>
+            </div>
+            </div>
+
+           
+        </div>
+
+    </form>
+   
 </div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
 <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>

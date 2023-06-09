@@ -8,17 +8,14 @@ namespace webLoyal.Controllers
         public IActionResult Index()
         {
             var model = new List<CertificatesDetailModel>();
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0001", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0002", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0003", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0004", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0005", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0006", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0007", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0008", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0009", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0010", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
-            model.Add(new CertificatesDetailModel { PolicyNumber = "000-000-0011", EffectiveStartDate = "2022-01-01", PlanCode = "Liberty", CódigoTipoVenta = "Abierto",  EffectiveEndDate = DateTime.Now.ToString() });
+            model.Add(new CertificatesDetailModel { CertificateCode = 1, TypeOfDocument = "registro", Name = "Registro", Descripction = "usa registro", RegistrationDate = DateTime.Now, ExpirationDate= DateTime.Now , LogUser="Mail@mail.com" });
+            model.Add(new CertificatesDetailModel { CertificateCode = 2, TypeOfDocument = "SS", Name = "seguro social", Descripction = "usa registro", RegistrationDate = DateTime.Now, ExpirationDate= DateTime.Now , LogUser="Mail@mail.com" });
+            model.Add(new CertificatesDetailModel { CertificateCode = 3, TypeOfDocument = "NIT", Name = "registro", Descripction = "usa registro", RegistrationDate = DateTime.Now, ExpirationDate= DateTime.Now , LogUser="Mail@mail.com" });
+            model.Add(new CertificatesDetailModel { CertificateCode = 4, TypeOfDocument = "CI", Name = "cedula", Descripction = "usa registro", RegistrationDate = DateTime.Now, ExpirationDate= DateTime.Now , LogUser="Mail@mail.com" });
+            model.Add(new CertificatesDetailModel { CertificateCode = 5, TypeOfDocument = "registro", Name = "Registro", Descripction = "usa registro", RegistrationDate = DateTime.Now, ExpirationDate= DateTime.Now , LogUser="Mail@mail.com" });
+            model.Add(new CertificatesDetailModel { CertificateCode = 6, TypeOfDocument = "registro", Name = "Registro", Descripction = "usa registro", RegistrationDate = DateTime.Now, ExpirationDate= DateTime.Now , LogUser="Mail@mail.com" });
+            model.Add(new CertificatesDetailModel { CertificateCode = 7, TypeOfDocument = "registro", Name = "Registro", Descripction = "usa registro", RegistrationDate = DateTime.Now, ExpirationDate= DateTime.Now , LogUser="Mail@mail.com" });
+            
 
             return View(model);
         }

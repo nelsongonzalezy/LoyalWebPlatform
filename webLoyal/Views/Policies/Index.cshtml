@@ -1,30 +1,23 @@
-﻿
-@model List<core.Service.ClaimCreateModel>
-
+﻿@model List<core.Service.PoliciesDetailModel>
 
 <div class="container">
-    
+
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
-                <li class="breadcrumb-item"><a href="../menu/index">Menu</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Historial de reclamos</li>
+                <li class="breadcrumb-item"><a href="../menu/index">Certificados</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Historial de Certificados</li>
             </ol>
             <h4 class="main-title mb-0"></h4>
         </div>
-        <div class="d-flex gap-2 mt-3 mt-md-0">
 
-            <a href="../Claims/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2">Crear<span class="d-none d-sm-inline"> reclamo</span></a>
-        </div>
     </div>
-	
-   
 
-<div  class="col-lg-12 row g-3">
+    <div class="col-lg-12 row g-3">
         <div class="col-6 col-xl-3">
             <div class="card card-one">
                 <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Reclamos Abiertos</label>
+                    <label class="card-title fs-sm fw-medium mb-1">Certificados Activos</label>
                     <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> 0</h3>
                     <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> than last week</small>
                 </div><!-- card-body -->
@@ -33,7 +26,7 @@
         <div class="col-6 col-xl-3">
             <div class="card card-one">
                 <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Reclamos Cerrados</label>
+                    <label class="card-title fs-sm fw-medium mb-1">Certificados En periodo de gracia</label>
                     <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> 0</h3>
                     <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> than last week</small>
                 </div><!-- card-body -->
@@ -42,7 +35,7 @@
         <div class="col-6 col-xl-3">
             <div class="card card-one">
                 <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Reclamos que requieres su atencion</label>
+                    <label class="card-title fs-sm fw-medium mb-1">Certificados pendiente de renovacion</label>
                     <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> 0</h3>
                     <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> than last week</small>
                 </div><!-- card-body -->
@@ -51,7 +44,7 @@
         <div class="col-6 col-xl-3">
             <div class="card card-one">
                 <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Reclamos en Procesos</label>
+                    <label class="card-title fs-sm fw-medium mb-1">Certificados cancelados</label>
                     <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> 0</h3>
                     <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> than last week</small>
                 </div><!-- card-body -->
@@ -60,18 +53,18 @@
         <div class="card card-one mt-3">
             <div class="card-body p-3">
                 <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                    <table id="CertificatesDatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
                         <thead>
                             <tr>
-                                <th>Claim Id</th>
-                                <th>ClaimNumber</th>
-                                <th>ClaimType</th>
-                                <th>ClaimStatu</th>
-                                <th>ClaimValue</th>
-                                <th>ClaimDescription</th>
-                                <th>ClaimDate</th>
+                                <th>PolicyNumber</th>
+                                <th>EffectiveStartDate</th>
+                                <th>PlanCode</th>
+                                <th>CódigoTipoVenta</th>
+                                <th>EffectiveStartDate</th>
+                                <th>EffectiveEndDate</th>
+                                <th>major</th>
                                 <th></th>
-                            
+
                             </tr>
                         </thead>
                         <tbody>
@@ -81,72 +74,38 @@
                                 @foreach (var claim in Model)
                                 {
                                     <tr>
-                                        <td>@claim.ClaimId </td>
-                                        <td>@claim.ClaimNumber</td>
-                                        <td>@claim.ClaimType</td>
-                                        <td class="info">@claim.ClaimStatus</td>
-                                        <td>@claim.ClaimValue</td>
-                                        <td>@claim.ClaimDescription</td>
-                                        <td>@claim.ClaimDate</td>
+                                        <td>@claim.PolicyNumber </td>
+                                        <td>@claim.EffectiveStartDate</td>
+                                        <td>@claim.PlanCode</td>
+                                        <td class="info">@claim.CódigoTipoVenta</td>
+                                        <td>@claim.EffectiveStartDate</td>
+                                        <td>@claim.EffectiveEndDate</td>
+                                        <td>@claim.major</td>
                                         <td>
                                             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                 <div class="btn-group me-2" role="group" aria-label="First group">
-                                                    <a href="../claims/get/@claim.ClaimId" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
-                                                    <a  href="../claims/delete/@claim.ClaimId" class="btn btn-sm btn-outline-danger"><i class="ri-delete-bin-2-fill"></i></a>
+                                                    <a href="../claims/get/@claim.PolicyNumber" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
+                                                    <a href="../claims/delete/@claim.PolicyNumber" class="btn btn-sm btn-outline-danger"><i class="ri-delete-bin-2-fill"></i></a>
                                                 </div>
-                                                </div>
-                                            
+                                            </div>
+
                                         </td>
-                                       
+
                                     </tr>
                                 }
 
                             }
-                            
+
                         </tbody>
                     </table>
                 </div>
             </div><!-- card-body -->
         </div>
-        </div>
-        </div>
-@*
-
-	<div  class="card">
-		<div  class="card-body">
-			<h6  class="card-title">Data Table</h6>
-			<div  class="table-responsive">
-				<div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
-
-					<div class="dataTable-container">
-							<table   class="table table-striped table-hover">
-							<thead   >
-								<tr   >
-									<th   style="width: 19.9544%;"><a href="#" class="dataTable-sorter">Claim Id</a></th>
-									<th   style="width: 29.0764%;"><a href="#" class="dataTable-sorter">ClaimNumber</a></th>
-									<th   style="width: 16.6477%;"><a href="#" class="dataTable-sorter">ClaimType</a></th>
-									<th   style="width: 7.29761%;"><a href="#" class="dataTable-sorter">ClaimStatus</a></th>
-									<th   style="width: 14.7092%;"><a href="#" class="dataTable-sorter">ClaimValue</a></th>
-									<th   style="width: 12.3147%;"><a href="#" class="dataTable-sorter">ClaimDescription</a></th>
-									<th   style="width: 12.3147%;"><a href="#" class="dataTable-sorter">ClaimDate</a></th>
-								</tr>
-							</thead>
-							<tbody   >
-								
-								
-							</tbody>
-						</table>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
+    </div>
 </div>
-</div>*@
 @section Scripts{
     <script>
-        $("#Claimdatatablet").Grid({
+        $("#CertificatesDatatablet").Grid({
             className: {
                 table: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns'
             },

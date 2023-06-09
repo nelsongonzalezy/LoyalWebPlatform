@@ -5,66 +5,33 @@
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
-                <li class="breadcrumb-item"><a href="../Claims/index">Certificados</a></li>
+                <li class="breadcrumb-item"><a href="../menu/index">Menus</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Historial de Certificados</li>
             </ol>
             <h4 class="main-title mb-0"></h4>
         </div>
+        <div class="d-flex gap-2 mt-3 mt-md-0">
 
+            <a href="../Claims/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2 disabled">Crear<span class="d-none d-sm-inline"> certificado</span></a>
+        </div>
     </div>
 
 
 
-    <div class="col-lg-12 row g-3">
-        <div class="col-6 col-xl-3">
-            <div class="card card-one">
-                <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Certificados Activos</label>
-                    <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> 0</h3>
-                    <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> than last week</small>
-                </div><!-- card-body -->
-            </div><!-- card-one -->
-        </div>
-        <div class="col-6 col-xl-3">
-            <div class="card card-one">
-                <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Certificados En periodo de gracia</label>
-                    <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> 0</h3>
-                    <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> than last week</small>
-                </div><!-- card-body -->
-            </div><!-- card-one -->
-        </div>
-        <div class="col-6 col-xl-3">
-            <div class="card card-one">
-                <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Certificados pendiente de renovacion</label>
-                    <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> 0</h3>
-                    <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> than last week</small>
-                </div><!-- card-body -->
-            </div><!-- card-one -->
-        </div>
-        <div class="col-6 col-xl-3">
-            <div class="card card-one">
-                <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Certificados cancelados</label>
-                    <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> 0</h3>
-                    <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> than last week</small>
-                </div><!-- card-body -->
-            </div><!-- card-one -->
-        </div>
+
         <div class="card card-one mt-3">
             <div class="card-body p-3">
                 <div class="table-responsive">
                     <table id="CertificatesDatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
                         <thead>
                             <tr>
-                                <th>PolicyNumber</th>
-                                <th>EffectiveStartDate</th>
-                                <th>PlanCode</th>
-                                <th>CódigoTipoVenta</th>
-                                <th>EffectiveStartDate</th>
-                                <th>EffectiveEndDate</th>
-                                <th>major</th>
+                                <th>CertificateCode</th>
+                                <th>TypeOfDocument</th>
+                                <th>Name</th>
+                                <th>Descripction</th>
+                                <th>RegistrationDate</th>
+                                <th>ExpirationDate</th>
+                                <th>LogUser</th>
                                 <th></th>
 
                             </tr>
@@ -76,18 +43,20 @@
                                 @foreach (var claim in Model)
                                 {
                                     <tr>
-                                        <td>@claim.PolicyNumber </td>
-                                        <td>@claim.EffectiveStartDate</td>
-                                        <td>@claim.PlanCode</td>
-                                        <td class="info">@claim.CódigoTipoVenta</td>
-                                        <td>@claim.EffectiveStartDate</td>
-                                        <td>@claim.EffectiveEndDate</td>
-                                        <td>@claim.major</td>
+                                        <td>@claim.CertificateCode </td>
+                                    <td>
+                                        <a class="btn btn-sm btn-outline-danger disabled"><i class="ri-file-pdf-line ql-color-red" data-bs-toggle="tooltip" title="" data-bs-original-title="ri-file-pdf-line" aria-label="ri-file-pdf-line"></i></a>
+                                     @claim.TypeOfDocument</td>
+                                        <td>@claim.Name</td>
+                                        <td class="info">@claim.Descripction</td>
+                                        <td>@claim.RegistrationDate</td>
+                                        <td>@claim.ExpirationDate</td>
+                                        <td>@claim.LogUser</td>
                                         <td>
                                             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                 <div class="btn-group me-2" role="group" aria-label="First group">
-                                                    <a href="../claims/get/@claim.PolicyNumber" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
-                                                    <a href="../claims/delete/@claim.PolicyNumber" class="btn btn-sm btn-outline-danger"><i class="ri-delete-bin-2-fill"></i></a>
+                                                    <a href="../claims/get/" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
+                                                    <a href="../claims/delete/" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
                                                 </div>
                                             </div>
 
@@ -103,7 +72,7 @@
                 </div>
             </div><!-- card-body -->
         </div>
-    </div>
+
 </div>
 @section Scripts{
     <script>
@@ -115,17 +84,18 @@
             search: true,
             pagination: true,
             resizable: true,
+
             buttons: [
                 {
                     extend: 'excelHtml5',
                     autoFilter: true,
                     className: 'btn btn-primary d-flex align-items-center gap-2',
-                    text: 'Exportar a Excel'
+                    text: 'Exportar a Excel',
                 },
                 {
                     extend: 'pdfHtml5',
                     className: 'btn btn-primary waves-effect waves-light',
-                    text: 'Exportar a PDF'
+                    text: 'Exportar a PDF',
                 }
             ]
         });
