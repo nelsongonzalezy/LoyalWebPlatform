@@ -21,49 +21,207 @@
         <div class="col-6">
         <div class="card card-one">
             <div class="card-body row">
-                    <div class="col-6">
-                        <label class="form-label">CLaim Id</label>
-                        <input value="@Model.ClaimId" class="form-control" disabled>
+
+                    <div class="accordion accordion-primary" id="accordionExampleE">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOneE">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneE" aria-expanded="true" aria-controls="collapseOneE">
+                                    Informacion del reclamo
+                                </button>
+                            </h2>
+                            <div id="collapseOneE" class="accordion-collapse collapse show" aria-labelledby="headingOneE" data-bs-parent="#accordionExampleE" style="">
+                                <div class="accordion-body row">
+                                    <div class="col-6">
+                                        <label class="form-label">CLaim Id</label>
+                                        <input value="@Model.ClaimId" class="form-control" disabled>
+
+
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="inputPassword4" class="form-label">Fecha de registro</label>
+                                        <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Tipo de reclamo</label>
+                                        <select id="select2F" class="form-select select2">
+
+                                            <option value="000-000-0001">Rembolso</option>
+                                            <option value="000-000-0002">Carta aval</option>
+                                            <option value="000-000-0002">Emergencia</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Origen del Reclamo</label>
+                                        <select id="select2g" class="form-select select2">
+
+                                            <option value="000-000-0001">Email</option>
+                                            <option value="000-000-0002">Telefono</option>
+                                            <option value="000-000-0002">Portal Agente</option>
+                                            <option value="000-000-0002">App Agente</option>
+                                            <option value="000-000-0002">App Tomodar</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwoE">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoE" aria-expanded="false" aria-controls="collapseTwoE">
+                                    Informacion del tomador de la poliza
+                                </button>
+                            </h2>
+                            <div id="collapseTwoE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
+                                <div class="accordion-body row">
+                   
+                                    <div class="col-4">
+
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label">Certificado</label>
+                                        <select id="select2E" class="form-select select2">
+                                            <option value="000-000-0001">000-000-0001 | Persona 1</option>
+                                            <option value="000-000-0002">000-000-0002 | Persona 2</option>
+                                            <option value="000-000-0003">000-000-0003 | Persona 3</option>
+                                            <option value="000-000-0004">000-000-0004 | Persona 4</option>
+                                            <option value="000-000-0005">000-000-0005 | Persona 5</option>
+                                            <option value="000-000-0006">000-000-0006 | Persona 6</option>
+                                            <option value="000-000-0007">000-000-0007 | Persona 7</option>
+                                            <option value="000-000-0008">000-000-0008 | Persona 8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTreE">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeE" aria-expanded="false" aria-controls="collapseTwoE">
+                                    Informacion del afectado de la poliza
+                                </button>
+                            </h2>
+                            <div id="collapsetreeE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
+                                <div class="accordion-body row">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Asegurado</label>
+                                        <select id="select2F" class="form-select select2">
+
+                                            <option value="000-000-0001">Titular</option>
+                                            <option value="000-000-0002">Dependiente</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Persona</label>
+                                        <select id="select2F" class="form-select select2">
+
+                                            <option value="000-000-0001">Nelson Gonzalez</option>
+                                            <option value="000-000-0002">Enrique Yabrudy</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTreE">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeE" aria-expanded="false" aria-controls="collapseTwoE">
+                                    Diagnostico
+                                </button>
+                            </h2>
+                            <div id="collapsetreeE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
+                                <div class="accordion-body row">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Asegurado</label>
+                                        <select id="select2F" class="form-select select2">
+
+                                            <option value="000-000-0001">Titular</option>
+                                            <option value="000-000-0002">Dependiente</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Persona</label>
+                                        <select id="select2F" class="form-select select2">
+
+                                            <option value="000-000-0001">Nelson Gonzalez</option>
+                                            <option value="000-000-0002">Enrique Yabrudy</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTreE">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeE" aria-expanded="false" aria-controls="collapseTwoE">
+                                    Proveedor
+                                </button>
+                            </h2>
+                            <div id="collapsetreeE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
+                                <div class="accordion-body row">
+@*                                      <div class="col-auto">
+                                        <label class="visually-hidden" for="autoSizingInputGroup">Provider</label>
+                                        <div class="input-group">
+
+                                                <button type="button" class="input-group-text btn btn-primary btn-icon"><i class="ri-add-line"></i></button>
+
+                                            <select id="select2Z" class="form-select">
+
+                                                <option value="000-000-0001">
+                                                    Rif-J00058551-2 - Centro Médico Docente La Trinidad
+                                                </option>
+                                                <option value="000-000-0002">
+                                                    Rif: J-00229514-7 -  Unidad Oftalmologica de Caracas
+                                                </option>
+                                                <option value="000-000-0002">
+                                                    Rif: J-40163589-0 -  Diagnostico Integral San Ignacio
+                                                </option>
+
+                                          </select>
+                                        </div>
+                                      </div>*@
+                                    <div class="input-group">
+                                        <select class="form-select" id="select2Z2" aria-label="Example select with button addon">
+                                            <option value="000-000-0001">
+                                                Rif-J00058551-2 - Centro Médico Docente La Trinidad
+                                            </option>
+                                            <option value="000-000-0002">
+                                                Rif: J-00229514-7 -  Unidad Oftalmologica de Caracas
+                                            </option>
+                                            <option value="000-000-0002">
+                                                Rif: J-40163589-0 -  Diagnostico Integral San Ignacio
+                                            </option>
+                                        </select>
+                                        <button class="btn btn-outline-primary" type="button"><i class="ri-add-line"></i></button>
+                                    </div>
+@*                                    <div class="col-12">
+                                        <label for="inputAddress2" class="form-label">
+                                            Provider
+                                        </label>
+                                        <select id="select2Z" class="form-select" multiple>
+
+                                            <option value="000-000-0001">
+                                                Rif-J00058551-2 - Centro Médico Docente La Trinidad
+                                            </option>
+                                            <option value="000-000-0002">
+                                                Rif: J-00229514-7 -  Unidad Oftalmologica de Caracas
+                                            </option>
+                                            <option value="000-000-0002">
+                                                Rif: J-40163589-0 -  Diagnostico Integral San Ignacio
+                                            </option>
+
+                                        </select>
+                                    </div>*@
+
+                                </div>
+                            </div>
+                        </div>
+                     </div>
                     
                     
-                    </div>
-                    <div class="col-6">
-                        <label for="inputPassword4" class="form-label">Fecha de registro</label>
-                        <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Certificado</label>
-                        <select id="select2E" class="form-select select2 mb-3">
-
-                            <option value="000-000-0001">000-000-0001 | Persona 1</option>
-                            <option value="000-000-0002">000-000-0002 | Persona 2</option>
-                            <option value="000-000-0003">000-000-0003 | Persona 3</option>
-                            <option value="000-000-0004">000-000-0004 | Persona 4</option>
-                            <option value="000-000-0005">000-000-0005 | Persona 5</option>
-                            <option value="000-000-0006">000-000-0006 | Persona 6</option>
-                            <option value="000-000-0007">000-000-0007 | Persona 7</option>
-                            <option value="000-000-0008">000-000-0008 | Persona 8</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Asegurado</label>
-                        <select id="select2F" class="form-select select2">
-
-                            <option value="000-000-0001">Titular</option>
-                            <option value="000-000-0002">Dependiente</option>
-
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Tipo de reclamo</label>
-                        <select id="select2F" class="form-select select2">
-
-                            <option value="000-000-0001">Rembolso</option>
-                            <option value="000-000-0002">Carta aval</option>
-                            <option value="000-000-0002">Emergencia</option>
-
-                        </select>
-                    </div>
                     <div class="col-md-6">
                         <label class="form-label">origen del reclamo</label>
                         <select id="select2F" class="form-select select2">
@@ -71,12 +229,14 @@
                             <option value="000-000-0002">Portal</option>
                             <option value="000-000-0002">Telefono</option>
                             <option value="000-000-0002">Llamada Agente</option>
+                            <option value="000-000-0002">App Agente</option>
+                            <option value="000-000-0002">Llamada Agente</option>
 
                         </select>
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Dx</label>
-                        <select id="select2D" class="form-select" multiple>
+                        <select id="select2D" class="form-select select2" multiple>
 
                             <option value="000-000-0001">
                                 S83.241A - Dislocation of unspecified toe(s), initial encounter
@@ -107,6 +267,26 @@
                         </select>
                     </div>
                     <div class="col-12">
+                        <label for="inputAddress5" class="form-label">CTP</label>
+                        <select id="selectCTPX" class="form-select" multiple>
+
+                            <option value="000-000-0001">
+                                A57256
+
+
+                            </option>
+                            <option value="000-000-0002">
+                                99281
+
+                            </option>
+                            <option value="000-000-0002">
+                                47562
+
+                            </option>
+
+                        </select>
+                    </div>
+                    <div class="col-12">
                         <label for="inputAddress2" class="form-label">
                             Provider
                         </label>
@@ -131,7 +311,38 @@
                 </textarea>
                     </div>
 
+                    <div class="col-md-6">
+                        <label class="form-label">Síntomas principales</label>
+                        <input id="select2E" class="form-control"/>
+
+                            
+                       
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">fecha de sintomas </label>
+                        <input type="date" class="form-control" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">medico tratante</label>
+                        <input id="select2E" class="form-control" />
+                    </div> 
+                    <div class="col-md-6">
+                        <label class="form-label">especialidad</label>
+                        <input id="select2E" class="form-control" />
+                    </div>                    
+                    <div class="col-md-6">
+                        <label class="form-label">Correo</label>
+                        <input type="email" id="select2E" class="form-control" />
+                    </div>                    
+                    <div class="col-md-6">
+                        <label class="form-label">Teléfono celular</label>
+                        <input type="text" id="select2E" class="form-control" />
+                    </div>
+      
+                    
                     <div class="col-12">
+                            <br />
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck2">
                             <label class="form-check-label" for="gridCheck2">
@@ -213,6 +424,24 @@
         </div>
 
     </form>
+
+    <div class="accordion accordion-primary" id="">
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThreeE">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeE" aria-expanded="false" aria-controls="collapseThreeE">
+                    Accordion Item #3
+                </button>
+            </h2>
+            <div id="collapseThreeE" class="accordion-collapse collapse" aria-labelledby="headingThreeE" data-bs-parent="#accordionExampleE" style="">
+                <div class="accordion-body">
+                    <p class="mb-2"><strong>This is the third item's accordion body.</strong></p>
+                    <p class="mb-0">It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.</p>
+                </div>
+            </div>
+        </div>
+    </div>
    
 </div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
@@ -313,6 +542,9 @@
             $('input.select2-search__field').prop('placeholder', 'Search...');
         });      
         $('#select2E').select2({
+            placeholder: 'Choose one'
+        });
+        $('#selectCTPX').select2({
             placeholder: 'Choose one'
         });
 
