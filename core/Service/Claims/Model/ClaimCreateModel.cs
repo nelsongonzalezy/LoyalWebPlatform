@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace core.Service
 {
@@ -9,7 +10,6 @@ namespace core.Service
         public string ClaimType { get; set; }
         public string UserID { get; set; }
         public string UserName { get; set; }
-
         public string UserType { get; set; }
         public string ClaimStatus { get; set; }
         [DisplayFormat(DataFormatString = "{0:C}")]
@@ -21,6 +21,12 @@ namespace core.Service
         public string PolicyType { get; set; }
         public string CertificatStatus { get; set; }
         public string MemberName { get; set; }
+        public string Dx { get; set; }
+        public string Icd10 { get; set; }
+        public string ServicesProcedure { get; set; }
+        public string CPTCode { get; set; }
+        public string Provider { get; set; }
+        public string ProviderID { get; set; }
 
     }
 }

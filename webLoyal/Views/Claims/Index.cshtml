@@ -67,11 +67,16 @@
                                 <th>ClaimNumber</th>
                                 <th>ClaimType</th>
                                 <th>ClaimStatu</th>
+                                
                                 <th>ClaimValue</th>
                                 <th>User</th>
                                 <th>UserType</th>
                                 <th>ClaimDescription</th>
                                 <th>ClaimDate</th>
+                                <th>PolicyNumber</th>
+                                <th>PolicyType</th>
+                                <th>CertificatStatus</th>
+                                <th>MemberName</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -85,12 +90,40 @@
                                         <td>@claim.ClaimId </td>
                                         <td>@claim.ClaimNumber</td>
                                         <td><span class="badge bg-info">@claim.ClaimType</span> </td>
-                                        <td><span class="badge bg-success">@claim.ClaimStatus</span></td>
+                                     
+                                        <td>
+                                            @switch (@claim.ClaimStatus)
+                                        {
+                                            case "Pendiente":
+                                                    <span class="badge bg-warning" title="@claim.ClaimStatus"><i class="ri-error-warning-line" data-bs-toggle="tooltip" title="" data-bs-original-title="ri-error-warning-line" aria-label="ri-error-warning-line"></i>&nbsp @claim.ClaimStatus</span>
+                                                break;
+                                            case "Aprobado":
+                                                    <span class="badge bg-success" title="@claim.ClaimStatus"><i class="ri-checkbox-circle-line" data-bs-toggle="tooltip" title="" data-bs-original-title="ri-checkbox-circle-line" aria-label="ri-checkbox-circle-line"></i>&nbsp @claim.ClaimStatus</span>
+                                                break;
+                                            case "Denegado":
+                                                    <span class="badge bg-danger" title="@claim.ClaimStatus"><i class="ri-close-circle-line" data-bs-toggle="tooltip" title="" data-bs-original-title="ri-close-circle-line" aria-label="ri-close-circle-line"></i>&nbsp @claim.ClaimStatus</span>
+                                                break;
+                                            case "En Proceso":
+                                                    <span class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@claim.ClaimStatus"></span> &nbsp @claim.ClaimStatus</span>
+
+                                                break;
+                                            case "Recibido":
+                                                    <span class="badge bg-info" title="@claim.ClaimStatus"><i class="ri-add-circle-line" data-bs-toggle="tooltip" title="" data-bs-original-title="ri-add-circle-line" aria-label="ri-add-circle-line"></i>&nbsp @claim.ClaimStatus</span>
+                                                break;
+                                                    default:
+                                                    <i class="ri-error-warning-line" title="@claim.ClaimStatus" data-bs-toggle="tooltip" title="" data-bs-original-title="ri-error-warning-line" aria-label="ri-error-warning-line">&nbsp @claim.ClaimStatus</i>
+                                                break;
+                                            }
+                                        </td>
                                         <td>@claim.ClaimValue.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>@claim.UserName</td>
                                         <td><span class="badge bg-info">@claim.UserType</span></td>
                                         <td>@claim.ClaimDescription</td>
                                         <td>@claim.ClaimDate</td>
+                                        <td>@claim.PolicyNumber</td>
+                                        <td>@claim.PolicyType</td>
+                                        <td>@claim.CertificatStatus</td>
+                                        <td>@claim.MemberName</td>
                                         <td>
                                             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                 <div class="btn-group me-2" role="group" aria-label="First group">

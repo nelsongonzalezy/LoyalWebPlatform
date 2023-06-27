@@ -16,5 +16,11 @@ namespace webLoyal.Controllers
             var ret = await _provider.GetAll();
             return View(ret.ToList());
         }
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            var ret = await _provider.GetAll();
+            return View();
+        }
     }
 }
