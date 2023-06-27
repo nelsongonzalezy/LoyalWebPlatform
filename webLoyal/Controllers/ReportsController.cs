@@ -1,12 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using core.Service;
+using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
     public class ReportsController : Controller
     {
-        public IActionResult Index()
+        private readonly IClaimsReports _ClaimReports;
+        public ReportsController(IClaimsReports claimReports) { _ClaimReports = claimReports; }
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var ret = await _ClaimReports.GetAll();
+            return View(ret.ToList());
         }
     }
 }

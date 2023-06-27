@@ -68,10 +68,11 @@
                                 <th>ClaimType</th>
                                 <th>ClaimStatu</th>
                                 <th>ClaimValue</th>
+                                <th>User</th>
+                                <th>UserType</th>
                                 <th>ClaimDescription</th>
                                 <th>ClaimDate</th>
                                 <th></th>
-                            
                             </tr>
                         </thead>
                         <tbody>
@@ -83,9 +84,11 @@
                                     <tr>
                                         <td>@claim.ClaimId </td>
                                         <td>@claim.ClaimNumber</td>
-                                        <td>@claim.ClaimType</td>
-                                        <td class="info">@claim.ClaimStatus</td>
-                                        <td>@claim.ClaimValue</td>
+                                        <td><span class="badge bg-info">@claim.ClaimType</span> </td>
+                                        <td><span class="badge bg-success">@claim.ClaimStatus</span></td>
+                                        <td>@claim.ClaimValue.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@claim.UserName</td>
+                                        <td><span class="badge bg-info">@claim.UserType</span></td>
                                         <td>@claim.ClaimDescription</td>
                                         <td>@claim.ClaimDate</td>
                                         <td>
@@ -149,32 +152,29 @@
 </div>*@
 @section Scripts{
     <script>
-        $("#Claimdatatablet").Grid({
-            className: {
-                table: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns'
-            },
-            sort: true,
-            search: true,
-            pagination: true,
-            resizable: true,
+        $("table").DataTable({
+            searchBuilder: true,
+            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
+            fixedColumns: true,
+            order: [[0, "desc"]],
+            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
             buttons: [
                 {
                     extend: 'excelHtml5',
                     autoFilter: true,
-                    className: 'btn btn-primary d-flex align-items-center gap-2',
-                    text: 'Exportar a Excel'
+                    className: 'btn btn-outline-primary',
+                    filename: 'ReclamosExcel',
                 },
                 {
                     extend: 'pdfHtml5',
-                    className: 'btn btn-primary waves-effect waves-light',
-                    text: 'Exportar a PDF'
+                    className: 'btn btn-outline-primary',
+                    filename: 'ReclamosPdf',
                 }
             ]
         });
-
-
-
+            
 
 
     </script>
+
 }

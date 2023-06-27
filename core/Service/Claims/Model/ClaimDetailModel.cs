@@ -9,7 +9,8 @@ namespace core.Service
         public string ClaimType { get; set; }
 
         public string ClaimStatus { get; set; }
-        public string ClaimValue { get; set; }
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        public decimal ClaimValue { get; set; }
         [MaxLength(250)]
         public string ClaimDescription { get; set; }
         public DateTime ClaimDate { get; set; } = DateTime.Now;

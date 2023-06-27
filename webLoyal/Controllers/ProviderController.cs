@@ -1,12 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using core.Service;
+using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
     public class ProviderController : Controller
     {
-        public IActionResult Index()
+        private readonly IProvider _provider;
+
+        public ProviderController(IProvider provider)
         {
-            return View();
+            _provider = provider;
+        }
+        public async Task<IActionResult> Index()
+        {
+            var ret = await _provider.GetAll();
+            return View(ret.ToList());
         }
     }
 }

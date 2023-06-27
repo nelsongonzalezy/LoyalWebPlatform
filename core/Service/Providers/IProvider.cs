@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace core.Service
+﻿namespace core.Service
 {
     public interface IProvider
     {
+        Task<IQueryable<ProviderModel>> GetAll();
     }
 }

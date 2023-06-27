@@ -10,13 +10,18 @@
     <link href="~/assets/css/style.min.css" rel="stylesheet" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/remixicon/fonts/remixicon.css">
     <link rel="stylesheet" href="~/lib/prismjs/themes/prism.min.css">
-    <link rel="stylesheet" href="~/lib/apexcharts/apexcharts.css">
+@*    <link rel="stylesheet" href="~/lib/apexcharts/apexcharts.css">*@
     <link rel="stylesheet" href="~/lib/select2/css/select2.min.css">
     <link rel="icon" href="https://www.loyalig.com/wp-content/uploads/2021/03/cropped-favicon-1-32x32.png" sizes="32x32">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+
+    
 
 </head>
-<body class="flex-fill ht-50 bg-gray-200">
+<body>
+
     <header>
         <div class="sidebar">
             <div class="sidebar-header">
@@ -27,20 +32,43 @@
                     <a href="#" class="nav-label">Dashboard</a>
                     <ul class="nav nav-sidebar">
                         <li class="nav-item">
-                            <a href="../dash/index" class="nav-link active"><i class="ri-pie-chart-2-fill"></i> <span>Resumen de Reclamos</span></a>
+                            <a href="../dash/index" class="nav-link active"><i class="ri-pie-chart-2-fill"></i> <span>Board de Reclamos</span></a>
                         </li>
                         <li class="nav-item">
+                            <a href="../dash/BoardAgents" class="nav-link"><i class="ri-calendar-todo-line"></i> <span>Board de Agentes</span></a>
+                        </li>
+                   
+
+                    </ul>
+                </div>
+                <div class="nav-group">
+                    <a href="#" class="nav-label">Funciones</a>
+                    <ul class="nav nav-sidebar">
+                        
+                        <li class="nav-item">
                             <a href="../claims/index" class="nav-link"><i class="ri-calendar-todo-line"></i> <span>Reclamos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../Policies/index" class="nav-link"><i class="ri-shopping-bag-3-line"></i> <span>Polizas</span></a>
+                        </li> 
+                        <li class="nav-item">
+                            <a href="../Provider/index" class="nav-link"><i class="ri-shopping-bag-3-line"></i> <span>Proveedores</span></a>
                         </li>
                         <li class="nav-item">
                             <a href="../Certificates/index" class="nav-link"><i class="ri-shopping-bag-3-line"></i> <span>Certificados</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="../Reports/index" class="nav-link"><i class="ri-file-text-line fs-48 lh-1"></i> <span>Reportes</span></a>
+                            <a href="../Reports/index" class="nav-link"><i class="ri-file-text-line fs-48 lh-1"></i> <span>Reportes de Reclamos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../Stages/index" class="nav-link"><i class="ri-file-text-line fs-48 lh-1"></i> <span>Stages</span></a>
                         </li>
 
                     </ul>
-                </div><!-- nav-group -->
+                </div>
+                
+                
+                <!-- nav-group -->
 
 
 
@@ -180,6 +208,7 @@
             &copy; 2023 - webLoyal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+     </body>
 
     <script src="~/lib/jquery/jquery.min.js" asp-append-version="true"></script>
     <script src="~/lib/perfect-scrollbar/perfect-scrollbar.min.js" asp-append-version="true"></script>
@@ -193,11 +222,28 @@
     <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="~/lib/chart.js/chart.min.js"></script>
-    <script src="~/lib/apexcharts/apexcharts.min.js"></script>
+@*    <script src="~/lib/apexcharts/apexcharts.min.js"></script>*@
+    <script src="~/js/site.js"></script>
 
+    <script src="~/js/jquery.datatables.min.js"></script>
+    <script src="~/js/jquery.datatables.js"></script>
+  
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
 
     <script src="~/lib/select2/js/select2.full.min.js"></script>
- 
+    
     <script src="~/lib/prismjs/prism.js"></script>
     <script src="~/lib/prismjs/prism.js"></script>
    
@@ -208,6 +254,9 @@
     <script src="~/assets/js/script.js"></script>
     <script src="~/assets/js/db.data.js"></script>
     <script src="~/assets/js/db.helpdesk.js"></script>
+   
+
     @await RenderSectionAsync("Scripts", required: false)
-</body>
+   
+
 </html>
