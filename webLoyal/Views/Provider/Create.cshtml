@@ -1,1 +1,107 @@
 ﻿
+<div class= "container">
+
+    <div class= "d-mdflex align-items-center justify content-between mb-4">
+        <div>
+            <ol class= "breadcrumbs fs-sm mb1">
+                <li class="breadcrumbs-item"><a herf="../Menu/index">Menu</a></li>
+                <li class="breadcrumbs-item"><a herf="../Provider/index">Proveedores</a></li>
+                <li class="breadcrumbs-item active" aria-current="page">Crear Proveedor</li>
+            </ol>
+            <h4 class="main-title mb-0"></h4>
+        </div>
+        <div class="d-flex gap-2 mt-3 mt-md-0">
+
+        </div>
+    </div>
+
+        <form id="CreateProvider" class="row g-3 col-12" asp-action="nameof(ProviderController.Create)" data-parsley-validate asp-controller="Provider" method="post">
+            <div class="col-6">
+                <div class="card card-one">
+                    <div class="card-body row">
+
+                        <div class="col-12">
+                            <label for="inputaddress" class="from-label">Código de Proveedor</label>
+                            <textarea id="select2D" class="form-select" multiple disable>
+
+                            </textarea>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputaddress" class="from-label">Razón Social</label>
+                            <textarea id="select2D" class="form-select" multiple disable>
+                                
+                            </textarea>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputaddress" class="from-label">Descripción de Estado</label>
+                            <textarea id="select2D" class="form-select" multiple disable>
+                                
+                            </textarea>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card">
+                                <div class="card-body row">
+
+                                    <div class="col-auto">
+                                        <label class="form-label">Descripción País</label>
+                                        <input value="text" value="Venezuela" class="form-control" enabled>
+                                    </div>
+                            
+                            <div class="col-auto">
+                                    <label for="inputState" class="form-label">estado</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>Seleccionar...</option>
+                                                <option>Amazonas</option>
+                                                <option>Anzoátegui</option>
+                                                <option>Apure</option>
+                                                <option>Aragua</option>
+                                                <option>Barinas</option>
+                                                <option>Bolívar</option>
+                                                <option>Carabobo</option>                                                        Cojedes
+                                                <option>Delta Amacuro</option>
+                                                <option>Dependencias Federales</option>
+                                                <option>Distrito Capital</option>
+                                                <option>Falcón</option>
+                                                <option>Guárico</option>
+                                                <option>La Guaira</option>
+                                                <option>Lara</option>
+                                                <option>Mérida</option>
+                                                <option>Miranda</option>
+                                                <option>Monagas</option>
+                                                <option>Nueva Esparta</option>
+                                                <option>Portuguesa</option>
+                                                <option>Sucre</option>
+                                                <option>Táchira</option>
+                                                <option>Trujillo</option>
+                                                <option>Yaracuy</option>
+                                                <option>Zulia</option>
+                                        </select>
+                                </div>    
+                            </div> 
+                            
+                                <div class="col-md-6">
+                                    <label class="form-label">Ciudad</label>
+                                    <input value="text" value="Caracas" class="form-control" disabled>
+                                </div> 
+                            
+                            <div class="col-auto">
+                                <label class="form-label">Telefono</label>
+                                <input value="text" value="0212-222 34 56" class="form-control">
+                            </div> 
+
+                            <div class="col-12">
+                                <label for="inputaddress" class="from-label">Dirección</label>
+                                <textarea id="select2D" class="form-select" multiple disable>
+                                
+                            </textarea>
+                            <button id="submitButton2" type="submit" class="btn btn-primary">Crear</button>
+                            <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </form>       
+    </div>
+</div>
