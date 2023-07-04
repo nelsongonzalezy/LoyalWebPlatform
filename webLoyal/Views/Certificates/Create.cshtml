@@ -1,1 +1,81 @@
-﻿@model core.Service.CertificatesDetailModel 
+﻿@model core.Service.CertificatesDetailModel
+ 
+ <div class="container">
+        <div class="d-md-flex align-items-center justify-content-between mb-4">
+            <div>
+                <ol class="breadcrumb fs-sm mb-1">
+                    <li class="breadcrumb-item"><a href="../menu/index">Menus</a></li>
+                    <li class="breadcrumb-item"><a href="../certificates/index">Certificados</a></li> 
+                    <li class="breadcrumb-item active" aria-current="page">Crear Certificados</li>
+                </ol>
+                <h4 class="main-title mb-0"></h4>
+                             
+                <form id="CreateCertificates" class="row g-3 col-12" asp-action="nameof(CertificatesController.Create)" data-parsley-validate asp-controller="Certificates" method="post">
+                    <div class="col-6">
+                        <div class="card card-one">
+                            <div class="card-body row">
+                                
+                                <div class="col-6">
+                                    <label for="inputaddress" class="form-label">Código de Certificado</label>
+                                    <input id="select2D" class="form-control">
+
+                                </div>
+
+                                <div class="col-6">
+                                    <label for="inputaddress" class="form-label">Tipo de Documento</label>
+                                    <input id="select2D" class="form-control">
+
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="inputaddress" class="form-label">Nombre</label>
+                                    <input id="select2D" class="form-control">
+                                    
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="inputaddress" class="form-label">Descripción</label>
+                                    <input id="select2D" class="form-control">
+                                    
+                                </div>
+                                
+                                <div id="datepicker">fecha de registro</div>
+                                        <script>
+                                            $('#datepicker3').datepicker({
+                                                showOtherMonths: true,
+                                                selectOtherMonths: true,
+                                                changeMonth: true,
+                                                changeYear: true,
+                                                showButtonPanel: true
+                                                });
+                                        </script>
+                                </div>
+
+                                <div>
+                                    <label for="inputaddress" class="datepickers">fecha de vencimiento</label>
+                                    <input id="datepicker3" class="form-control">
+                                        <script>
+                                            $('#datepicker3').datepicker({
+                                                showOtherMonths: true,
+                                                selectOtherMonths: true,
+                                                changeMonth: true,
+                                                changeYear: true,
+                                                showButtonPanel: true
+                                                });
+                                        </script>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="inputaddress" class="form-label">Ingresar Usuario</label>
+                                    <input id="select2D" class="form-control">
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+ </div>
+</html>
