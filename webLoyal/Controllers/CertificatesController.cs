@@ -19,5 +19,12 @@ namespace webLoyal.Controllers
 
             return View(model);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            var viewes = new CertificatesDetailModel();
+            return View(viewes);
+        }
     }
 }
