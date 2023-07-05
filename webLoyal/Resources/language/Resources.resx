@@ -141,11 +141,17 @@
   <data name="Processing" xml:space="preserve">
     <value>Processing</value>
   </data>
+  <data name="Provider" xml:space="preserve">
+    <value>Provider</value>
+  </data>
   <data name="Recover" xml:space="preserve">
     <value>Recover</value>
   </data>
   <data name="Recovermsj" xml:space="preserve">
     <value>Give us your email address, to identify your identity.</value>
+  </data>
+  <data name="RecoverSmsMsj" xml:space="preserve">
+    <value>Enter the code sent to your mobile device.</value>
   </data>
   <data name="UserFound" xml:space="preserve">
     <value>User Found</value>

@@ -21,9 +21,9 @@
 <form id="myForm" asp-action="@nameof(AuthController.IsValidUser)" asp-controller="Auth" method="post" class="card card-sign">
     <div class="card-header">
         <a href="../" class="header-logo mb-5"><img src="~/assets/img/Logo-sf.png" /></></a>
-        <h3 class="card-title">Recover</h3>
+        <h3 class="card-title">@webLoyal.Resources.language.Resources.Recover</h3>
         <p class="card-text">
-            Enter the code sent to your mobile device.
+            @webLoyal.Resources.language.Resources.RecoverSmsMsj
         </p>
     </div>
     <div class="card-body">

@@ -133,6 +133,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Provider.
+        /// </summary>
+        public static string Provider {
+            get {
+                return ResourceManager.GetString("Provider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Recover.
         /// </summary>
         public static string Recover {
@@ -147,6 +156,15 @@ namespace webLoyal.Resources.language {
         public static string Recovermsj {
             get {
                 return ResourceManager.GetString("Recovermsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the code sent to your mobile device..
+        /// </summary>
+        public static string RecoverSmsMsj {
+            get {
+                return ResourceManager.GetString("RecoverSmsMsj", resourceCulture);
             }
         }
         

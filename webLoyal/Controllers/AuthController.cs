@@ -111,7 +111,8 @@ namespace webLoyal.Controllers
         [Route("Auth/ValidUser")]
         public IActionResult ValidUser()
         {
-            return View();
+            var xnew = new IsValidModel();
+            return View(xnew);
 
         }
 
