@@ -124,6 +124,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Processing.
+        /// </summary>
+        public static string Processing {
+            get {
+                return ResourceManager.GetString("Processing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Recover.
         /// </summary>
         public static string Recover {
@@ -138,6 +147,42 @@ namespace webLoyal.Resources.language {
         public static string Recovermsj {
             get {
                 return ResourceManager.GetString("Recovermsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Found.
+        /// </summary>
+        public static string UserFound {
+            get {
+                return ResourceManager.GetString("UserFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User not found.
+        /// </summary>
+        public static string UserNotFound {
+            get {
+                return ResourceManager.GetString("UserNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry we were unable to validate your credentials.
+        /// </summary>
+        public static string UserNotFoundMsj {
+            get {
+                return ResourceManager.GetString("UserNotFoundMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wait a moment....
+        /// </summary>
+        public static string WaitMoment {
+            get {
+                return ResourceManager.GetString("WaitMoment", resourceCulture);
             }
         }
         

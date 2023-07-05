@@ -58,8 +58,8 @@
 
             // Mostrar un mensaje de carga con SweetAlert
             Swal.fire({
-                title: 'Procesando',
-                text: 'Espere un momento...',
+                title: '@webLoyal.Resources.language.Resources.Processing.ToString()',
+                text: '@webLoyal.Resources.language.Resources.WaitMoment.ToString()',
                 icon: 'info',
                 showConfirmButton: false,
                 allowOutsideClick: false,
@@ -95,7 +95,7 @@
                         // Habilitar el botón de enviar después de completar la solicitud y eliminar el spinner
                         submitButton.prop('disabled', false);
                         submitButton.removeClass('');
-                        submitButton.html('Aceptar');
+                        submitButton.html('@webLoyal.Resources.language.Resources.Accept');
                     }
                 });
             });

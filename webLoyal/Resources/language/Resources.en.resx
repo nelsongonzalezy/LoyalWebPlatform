@@ -138,14 +138,26 @@
   <data name="PassWord" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="Processing" xml:space="preserve">
+    <value>Processing</value>
+  </data>
   <data name="Recover" xml:space="preserve">
     <value>Recover</value>
   </data>
   <data name="Recovermsj" xml:space="preserve">
     <value>Give us your email address, to identify your identity.</value>
   </data>
-  <data name="String" xml:space="preserve">
-    <value />
+  <data name="UserFound" xml:space="preserve">
+    <value>User Found</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>User not found</value>
+  </data>
+  <data name="UserNotFoundMsj" xml:space="preserve">
+    <value>Sorry we were unable to validate your credentials</value>
+  </data>
+  <data name="WaitMoment" xml:space="preserve">
+    <value>Wait a moment...</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>Welcome</value>

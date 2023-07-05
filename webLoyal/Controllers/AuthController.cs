@@ -25,13 +25,13 @@ namespace webLoyal.Controllers
         [Route("Auth/Index")]
         public IActionResult Index(LoginModel model)
         {   
-            webLoyal.Resources.language.Resources.Recovermsj.ToString();
+
             if (model.Password=="123456")
             {
                 return Json(new
                 {
                     success = true,
-                    title = "Usuario encontrado",
+                    title = Resources.language.Resources.UserFound,
                     text = Resources.language.Resources.WelcomeMessage.ToString()+" "+model.Email.ToString().ToLower(),
                     icon = "success",
                     timer = 2000
@@ -43,8 +43,8 @@ namespace webLoyal.Controllers
                 return Json(new
                 {
                     success = false,
-                    title = Resources.language.Resources.Recovermsj.ToString(),
-                    message = "lo sentimos no hemos logrado validar sus credenciales",
+                    title = Resources.language.Resources.UserNotFound.ToString(),
+                    message = Resources.language.Resources.UserNotFoundMsj,
                     type = "error"
                 });
             }
@@ -91,7 +91,7 @@ namespace webLoyal.Controllers
             {
                 return Json(new {
                     success = true,
-                    title = "Usuario encontrado",
+                    title = Resources.language.Resources.UserFound,
                     message = "La acción se completó con éxito",
                     type = "success"
                 });
@@ -100,7 +100,7 @@ namespace webLoyal.Controllers
             return Json(new
             {
                 success = false,
-                title = "Usuario no encontrado",
+                title = Resources.language.Resources.UserNotFound,
                 message = "La acción se completó con éxito",
                 type = "error"
             });
