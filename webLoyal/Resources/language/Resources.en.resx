@@ -168,4 +168,22 @@
   <data name="WelcomeMessage" xml:space="preserve">
     <value>Welcome</value>
   </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+ <data name="CreateProvider" xml:space="preserve">
+    <value>Create Provider</value>
+  </data>
+  <data name="ProviderCode" xml:space="preserve">
+    <value>Provider Code</value>
+  </data>
+  <data name="BusinessName" xml:space="preserve">
+    <value>Business Name</value>
+  </data> 
+  <data name="StatusDescription" xml:space="preserve">
+    <value>Status Description</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
 </root>
