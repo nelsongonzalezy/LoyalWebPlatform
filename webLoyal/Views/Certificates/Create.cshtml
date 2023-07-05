@@ -10,7 +10,7 @@
                 </ol>
                 <h4 class="main-title mb-0"></h4>
                              
-                <form id="CreateCertificates" class="row g-3 col-12" asp-action="nameof(CertificatesController.Create)" data-parsley-validate asp-controller="Certificates" method="post">
+                <form id="CreateCertificates" class="row g-3 col-12" asp-action="@nameof(CertificatesController.Create)" data-parsley-validate asp-controller="Certificates" method="post">
                     <div class="col-6">
                         <div class="card card-one">
                             <div class="card-body row">
@@ -39,32 +39,6 @@
                                     
                                 </div>
                                 
-                                <div id="datepicker">fecha de registro</div>
-                                        <script>
-                                            $('#datepicker3').datepicker({
-                                                showOtherMonths: true,
-                                                selectOtherMonths: true,
-                                                changeMonth: true,
-                                                changeYear: true,
-                                                showButtonPanel: true
-                                                });
-                                        </script>
-                                </div>
-
-                                <div>
-                                    <label for="inputaddress" class="datepickers">fecha de vencimiento</label>
-                                    <input id="datepicker3" class="form-control">
-                                        <script>
-                                            $('#datepicker3').datepicker({
-                                                showOtherMonths: true,
-                                                selectOtherMonths: true,
-                                                changeMonth: true,
-                                                changeYear: true,
-                                                showButtonPanel: true
-                                                });
-                                        </script>
-                                </div>
-
                                 <div class="col-12">
                                     <label for="inputaddress" class="form-label">Ingresar Usuario</label>
                                     <input id="select2D" class="form-control">
@@ -72,10 +46,18 @@
                     
                             </div>
                         </div>
+                        <div id="datepicker3"></div>
+                            <script>
+                                $('#datepicker3').datepicker3({
+                                showOtherMonths: true,
+                                selectOtherMonths: true,
+                                changeMonth: true,
+                                changeYear: true
+                                });
+                            </script>
                     </div>
                 </form>
                 
             </div>
         </div>
  </div>
-</html>
