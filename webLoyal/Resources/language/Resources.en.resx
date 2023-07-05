@@ -171,7 +171,7 @@
   <data name="Menu" xml:space="preserve">
     <value>Menu</value>
   </data>
- <data name="CreateProvider" xml:space="preserve">
+  <data name="CreateProvider" xml:space="preserve">
     <value>Create Provider</value>
   </data>
   <data name="ProviderCode" xml:space="preserve">
@@ -179,11 +179,14 @@
   </data>
   <data name="BusinessName" xml:space="preserve">
     <value>Business Name</value>
-  </data> 
+  </data>
   <data name="StatusDescription" xml:space="preserve">
     <value>Status Description</value>
   </data>
   <data name="Select" xml:space="preserve">
     <value>Select</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
   </data>
 </root>

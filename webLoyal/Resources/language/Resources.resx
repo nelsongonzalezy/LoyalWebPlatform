@@ -173,7 +173,7 @@
   </data>
   <data name="CreateProvider" xml:space="preserve">
     <value>Create Provider</value>
-  </data> 
+  </data>
   <data name="ProviderCode" xml:space="preserve">
     <value>Provider Code</value>
   </data>
@@ -185,5 +185,8 @@
   </data>
   <data name="Select" xml:space="preserve">
     <value>Select</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
   </data>
 </root>
