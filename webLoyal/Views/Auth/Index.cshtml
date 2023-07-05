@@ -1,31 +1,37 @@
 ﻿@model core.Service.LoginModel
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Localization;
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Login.cshtml";
+   
 }
 
 <form id="@nameof(AuthController.Index)" asp-action="@nameof(AuthController.Index)" asp-controller="Auth" method="post">
     <div class="card-header">
         <a href="../" class="header-logo mb-5"><img src="~/assets/img/Logo-sf.png" /></></a>
-
-        <p class="card-text"></p>   
+            <h5>
+                @webLoyal.Resources.language.Resources.WelcomeMessage
+            </h5>
+        </p>
     </div><!-- card-header -->
     <div class="card-body">
         <div class="mb-4">
-            <label class="form-label">Email address</label>
-            <input asp-for="Email" class="form-control" type="text" data-toggle="tooltip" data-placement="top" required="" placeholder="jhon@smith.com">
+            <label class="form-label">@webLoyal.Resources.language.Resources.Email</label>
+            <input asp-for="Email" class="form-control" type="text" data-toggle="tooltip" data-placement="top" required="" placeholder="@webLoyal.Resources.language.Resources.Jhon_smith_com">
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
         <div class="mb-4">
-            <label class="form-label d-flex justify-content-between">Password <a href="~/auth/recover" method="get">Forgot password?</a></label>
-            <input asp-for="Password" class="form-control" type="password" data-placement="top" required="" placeholder="Password" />
+            <label class="form-label d-flex justify-content-between">@webLoyal.Resources.language.Resources.PassWord <a href="~/auth/recover" method="get">@webLoyal.Resources.language.Resources.ForgotPassword</a></label>
+            <input asp-for="Password" class="form-control" type="password" data-placement="top" required="" placeholder="********" />
 
             <span asp-validation-for="Password" class="text-danger"></span>
         </div>
     </div>
     <div class="card-footer">
         <div class="mb-4">
-            <button id="submitButton" class="btn btn-primary btn-sign" type="submit">Acceptar</button>
+            <button id="submitButton" class="btn btn-primary btn-sign" type="submit">@webLoyal.Resources.language.Resources.Accept</button>
         </div>
     </div>
 

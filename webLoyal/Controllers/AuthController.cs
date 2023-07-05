@@ -1,16 +1,19 @@
 ﻿using core.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using System.Reflection;
 
 namespace webLoyal.Controllers
 {
     public class AuthController : Controller
     {
+        private readonly IStringLocalizer<AuthController> _localizer;
         private readonly ILogger<AuthController> _logger;
 
-        public AuthController(ILogger<AuthController> logger)
+        public AuthController(ILogger<AuthController> logger, IStringLocalizer<AuthController> localizer)
         {
             _logger = logger;
+            _localizer = localizer;
         }
         [HttpGet]
         [Route("Auth/Index")]
@@ -22,13 +25,14 @@ namespace webLoyal.Controllers
         [Route("Auth/Index")]
         public IActionResult Index(LoginModel model)
         {   
+            webLoyal.Resources.language.Resources.Recovermsj.ToString();
             if (model.Password=="123456")
             {
                 return Json(new
                 {
                     success = true,
                     title = "Usuario encontrado",
-                    text = "Bienvenido" +" "+model.Email.ToString().ToLower(),
+                    text = Resources.language.Resources.WelcomeMessage.ToString()+" "+model.Email.ToString().ToLower(),
                     icon = "success",
                     timer = 2000
                 }) ;
@@ -39,7 +43,7 @@ namespace webLoyal.Controllers
                 return Json(new
                 {
                     success = false,
-                    title = "Usuario o contraseña invalida",
+                    title = Resources.language.Resources.Recovermsj.ToString(),
                     message = "lo sentimos no hemos logrado validar sus credenciales",
                     type = "error"
                 });

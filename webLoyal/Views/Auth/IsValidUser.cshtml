@@ -7,8 +7,9 @@
 <form asp-action="@nameof(AuthController.ChangePassword)" asp-controller="Auth" method="post" class="card card-sign">
     <div class="card-header">
         <a href="../" class="header-logo mb-5"><img src="~/assets/img/Logo-sf.png" /></></a>
-        <h3 class="card-title">Recover</h3>
+        <h3 class="card-title">@webLoyal.Resources.language.Resources.Recover</h3>
         <p class="card-text">
+            @webLoyal.Resources.language.Resources.PassWord
             Enter the code sent to your mobile device.
         </p>
     </div>
@@ -29,7 +30,7 @@
     <div class="card-footer">
         <div class="mb-8">
 
-            <button class="btn btn-primary btn-sign" type="submit"> Acceptar</button>
+            <button class="btn btn-primary btn-sign" type="submit"> @webLoyal.Resources.language.Resources.Accept</button>
 
         </div>
     </div>
