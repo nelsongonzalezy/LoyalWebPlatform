@@ -189,4 +189,141 @@
   <data name="Active" xml:space="preserve">
     <value>Active</value>
   </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactivo</value>
+  </data>
+  <data name="InUpdateProcess" xml:space="preserve">
+    <value>En Proceso de Actualización</value>
+  </data>
+  <data name="CountryDescription" xml:space="preserve">
+    <value>Descripción País</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+  <data name="Claims" xml:space="preserve">
+    <value>Reclamo</value>
+  </data>
+  <data name="NewClaim" xml:space="preserve">
+    <value>Nuevo Reclamo</value>
+  </data>
+  <data name="ClaimInfo" xml:space="preserve">
+    <value>Información de Reclamo</value>
+  </data>
+  <data name="ClaimID" xml:space="preserve">
+    <value>Identificación del Reclamo</value>
+  </data>
+  <data name="RecordDate" xml:space="preserve">
+    <value>Fecha del Registro</value>
+  </data>
+  <data name="ClaimType" xml:space="preserve">
+    <value>Tipo de Reclamo</value>
+  </data>
+  <data name="Refund" xml:space="preserve">
+    <value>Reembolso</value>
+  </data>
+  <data name="LetterOfGuarantee" xml:space="preserve">
+    <value>Carta Aval</value>
+  </data>
+  <data name="Emergency" xml:space="preserve">
+    <value>Emergencia</value>
+  </data>
+  <data name="OriginOfTheClaim" xml:space="preserve">
+    <value>Orígen Del Reclamo</value>
+  </data><data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data><data name="AgentPortal" xml:space="preserve">
+    <value>Agent Portal</value>
+  </data><data name="AgentApp" xml:space="preserve">
+    <value>Aplicación Agent</value>
+  </data><data name="TomodarApp" xml:space="preserve">
+    <value>Aplicación Tomodar</value>
+  </data>
+  <data name="PolicyHolderInformation" xml:space="preserve">
+    <value>Informacion del Tomador de la Poliza</value>
+  </data>
+  <data name="InformationOfTheAffectedOfThePolicy" xml:space="preserve">
+    <value>Información Del Afectado De La Poliza</value>
+  </data>
+  <data name="Insured" xml:space="preserve">
+    <value>Asegurado</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>Persona</value>
+  </data>
+  <data name="Diagnosis" xml:space="preserve">
+    <value>Diagnóstico</value>
+  </data>
+  <data name="Dx" xml:space="preserve">
+    <value>Dx</value>
+  </data>
+  <data name="IC10" xml:space="preserve">
+    <value>IC10</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="MainSymptoms" xml:space="preserve">
+    <value>Síntomas Principales</value>
+  </data>
+  <data name="SymptomDate" xml:space="preserve">
+    <value>Fecha De Síntomas</value>
+  </data>
+  <data name="AttendingDoctor" xml:space="preserve">
+    <value>Médico Tratante</value>
+  </data>
+  <data name="MedicalSpeciality" xml:space="preserve">
+    <value>Especialidad Médica</value>
+  </data>
+  <data name="DeductibleApplies" xml:space="preserve">
+    <value>Aplica Deducible</value>
+  </data>
+  <data name="NotifyProvider" xml:space="preserve">
+    <value>Notificar A Proveedor</value>
+  </data>
+  <data name="NotifyInsured" xml:space="preserve">
+    <value>Notificar A Asegurado</value>
+  </data>
+  <data name="NotifyInsuranceAgent" xml:space="preserve">
+    <value>Notificar A Agente de Seguros</value>
+  </data>
+  <data name="Agent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+  <data name="DueDate" xml:space="preserve">
+    <value>Fecha De Vencimiento</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Producto</value>
+  </data>
+  <data name="NotesHistory" xml:space="preserve">
+    <value>Historial De Notas</value>
+  </data>
+  <data name="Exclusions" xml:space="preserve">
+    <value>Exclusiones</value>
+  </data>
+  <data name="PreviousClaims" xml:space="preserve">
+    <value>Reclamos Previos</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
 </root>

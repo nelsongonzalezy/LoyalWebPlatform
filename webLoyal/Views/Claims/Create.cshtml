@@ -5,9 +5,9 @@
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
-                <li class="breadcrumb-item"><a href="../menu/index">Menu</a></li>
-                <li class="breadcrumb-item"><a href="../Claims/index">Reclamos</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Nuevo Reclamo</li>
+                <li class="breadcrumb-item"><a href="../menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+                <li class="breadcrumb-item"><a href="../Claims/index">@webLoyal.Resources.language.Resources.Claims</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@webLoyal.Resources.language.Resources.NewClaim</li>
             </ol>
             <h4 class="main-title mb-0"></h4>
         </div>
@@ -26,41 +26,41 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOneE">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneE" aria-expanded="true" aria-controls="collapseOneE">
-                                    Informacion del reclamo
+                                    @webLoyal.Resources.language.Resources.ClaimInfo
                                 </button>
                             </h2>
-                            <div id="collapseOneE" class="accordion-collapse collapse show" aria-labelledby="headingOneE" data-bs-parent="#accordionExampleE" style="">
+                            <div id="collapseOneE" class="accordion-collapse collapse show" aria-labelledby="headingOneE" data-bs-parent="#accordionExampleE" style=">
                                 <div class="accordion-body row">
                                     <div class="col-6">
-                                        <label class="form-label">CLaim Id</label>
+                                        <label class="form-label">@webLoyal.Resources.language.Resources.ClaimId</label>
                                         <input value="@Model.ClaimId" class="form-control" disabled>
 
 
                                     </div>
                                     <div class="col-6">
-                                        <label for="inputPassword4" class="form-label">Fecha de registro</label>
+                                        <label for="inputPassword4" class="form-label">@webLoyal.Resources.language.Resources.RecordDate</label>
                                         <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">Tipo de reclamo</label>
+                                        <label class="form-label">@webLoyal.Resources.language.Resources.ClaimType</label>
                                         <select id="select2F" class="form-select select2">
 
-                                            <option value="000-000-0001">Rembolso</option>
-                                            <option value="000-000-0002">Carta aval</option>
+                                            <option value="000-000-0001">Reembolso</option>
+                                            <option value="000-000-0002">Carta Aval</option>
                                             <option value="000-000-0002">Emergencia</option>
 
                                         </select>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">Origen del Reclamo</label>
+                                        <label class="form-label">@webLoyal.Resources.language.Resources.OriginOfTheClaim</label>
                                         <select id="select2g" class="form-select select2">
 
-                                            <option value="000-000-0001">Email</option>
-                                            <option value="000-000-0002">Telefono</option>
-                                            <option value="000-000-0002">Portal Agente</option>
-                                            <option value="000-000-0002">App Agente</option>
-                                            <option value="000-000-0002">App Tomodar</option>
-
+                                            <option value="000-000-0001">E-mail</option>
+                                            <option value="000-000-0002">Teléfono</option>
+                                            <option value="000-000-0002">Agent Portal</option>
+                                            <option value="000-000-0002">Agent App</option>
+                                            <option value="000-000-0002">Tomodar App</option>
+                                                
                                         </select>
                                     </div>
 
@@ -70,7 +70,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwoE">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoE" aria-expanded="false" aria-controls="collapseTwoE">
-                                    Informacion del tomador de la poliza
+                                    @webLoyal.Resources.language.Resources.PolicyholderInformation
                                 </button>
                             </h2>
                             <div id="collapseTwoE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
@@ -99,13 +99,13 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTreE">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeE" aria-expanded="false" aria-controls="collapseTwoE">
-                                    Informacion del afectado de la poliza
+                                   @webLoyal.Resources.language.Resources.InformationOfTheAffectedOfThePolicy
                                 </button>
                             </h2>
                             <div id="collapsetreeE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
                                 <div class="accordion-body row">
                                     <div class="col-md-6">
-                                        <label class="form-label">Asegurado</label>
+                                        <label class="form-label">@webLoyal.Resources.language.Resources.Insured</label>
                                         <select id="select2F" class="form-select select2">
 
                                             <option value="000-000-0001">Titular</option>
@@ -114,7 +114,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">Persona</label>
+                                        <label class="form-label">@webLoyal.Resources.language.Resources.Person</label>
                                         <select id="select2F" class="form-select select2">
 
                                             <option value="000-000-0001">Nelson Gonzalez</option>
@@ -128,13 +128,13 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTreE">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeE" aria-expanded="false" aria-controls="collapseTwoE">
-                                    Diagnostico
+                                    @webLoyal.Resources.language.Resources.Diagnosis
                                 </button>
                             </h2>
                             <div id="collapsetreeE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
                                 <div class="accordion-body row">
                                     <div class="col-md-6">
-                                        <label class="form-label">Asegurado</label>
+                                        <label class="form-label">@webLoyal.Resources.language.Resources.Insured</label>
                                         <select id="select2F" class="form-select select2">
 
                                             <option value="000-000-0001">Titular</option>
@@ -143,7 +143,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="form-label">Persona</label>
+                                        <label class="form-label">@webLoyal.Resources.language.Resources.Person</label>
                                         <select id="select2F" class="form-select select2">
 
                                             <option value="000-000-0001">Nelson Gonzalez</option>
@@ -157,7 +157,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTreE">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeE" aria-expanded="false" aria-controls="collapseTwoE">
-                                    Proveedor
+                                    @webLoyal.Resources.language.Resources.Insured.Provider
                                 </button>
                             </h2>
                             <div id="collapsetreeE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
@@ -223,7 +223,7 @@
                     
                     
                     <div class="col-md-6">
-                        <label class="form-label">origen del reclamo</label>
+                        <label class="form-label">@webLoyal.Resources.language.Resources.OriginOfTheClaim</label>
                         <select id="select2F" class="form-select select2">
                             <option value="000-000-0001">Correo</option>
                             <option value="000-000-0002">Portal</option>
@@ -235,7 +235,7 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Dx</label>
+                        <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.Dx</label>
                         <select id="select2D" class="form-select select2" multiple>
 
                             <option value="000-000-0001">
@@ -251,7 +251,7 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">IC10</label>
+                        <label for="inputAddress2" class="form-label">@webLoyal.Resources.language.Resources.IC10</label>
                         <select id="select2X" class="form-select" multiple>
 
                             <option value="000-000-0001">
@@ -267,7 +267,7 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress5" class="form-label">CTP</label>
+                        <label for="inputAddress5" class="form-label">@webLoyal.Resources.language.Resources.CTP</label>
                         <select id="selectCTPX" class="form-select" multiple>
 
                             <option value="000-000-0001">
@@ -288,7 +288,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">
-                            Provider
+                            @webLoyal.Resources.language.Resources.Provider
                         </label>
                         <select id="select2Z" class="form-select" multiple>
 
@@ -305,38 +305,38 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Notas</label>
+                        <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.Notes</label>
                         <textarea id="select2D" class="form-select" multiple>
 
                 </textarea>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Síntomas principales</label>
+                        <label class="form-label">@webLoyal.Resources.language.Resources.MainSymptoms</label>
                         <input id="select2E" class="form-control"/>
 
                             
                        
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">fecha de sintomas </label>
+                        <label class="form-label">@webLoyal.Resources.language.Resources.SymptomDate</label>
                         <input type="date" class="form-control" />
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">medico tratante</label>
+                        <label class="form-label">@webLoyal.Resources.language.Resources.AttendingDoctor</label>
                         <input id="select2E" class="form-control" />
                     </div> 
                     <div class="col-md-6">
-                        <label class="form-label">especialidad</label>
+                        <label class="form-label">@webLoyal.Resources.language.Resources.MedicalSpeciality</label>
                         <input id="select2E" class="form-control" />
                     </div>                    
                     <div class="col-md-6">
-                        <label class="form-label">Correo</label>
+                        <label class="form-label">@webLoyal.Resources.language.Resources.Email</label>
                         <input type="email" id="select2E" class="form-control" />
                     </div>                    
                     <div class="col-md-6">
-                        <label class="form-label">Teléfono celular</label>
+                        <label class="form-label">@webLoyal.Resources.language.Resources.PhoneNumber</label>
                         <input type="text" id="select2E" class="form-control" />
                     </div>
       
@@ -346,30 +346,30 @@
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck2">
                             <label class="form-check-label" for="gridCheck2">
-                                Aplica deducible
+                                @webLoyal.Resources.language.Resources.DeductibleApplies
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck3">
                             <label class="form-check-label" for="gridCheck3">
-                                Notificar a proveedor
+                                @webLoyal.Resources.language.Resources.NotifyProvider
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck4">
                             <label class="form-check-label" for="gridCheck4">
-                                Notificar a asegurado
+                                @webLoyal.Resources.language.Resource.NotifyInsured
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck5">
                             <label class="form-check-label" for="gridCheck5">
-                                Notificar a Agente de Seguros
+                                @webLoyal.Resources.language.Resources.NotifyInsuranceAgent
                             </label>
                         </div>
                     </div>
                     <div class="col-12">
-                        <button id="submitButton2" type="submit" class="btn btn-primary">Aceptar</button>
+                        <button id="submitButton2" type="submit" class="btn btn-primary">@webLoyal.Resources.language.Resources.Accept</button>
                     </div>
 
 
@@ -382,36 +382,36 @@
             <div class="card">
                 <div class="card-body row">
             <div class="col-md-6">
-                <label class="form-label">Nombre </label>
+                <label class="form-label">@webLoyal.Resources.language.Resources.Name </label>
                 <input value="Nelson" class="form-control" disabled>
             </div>
             <div class="col-md-6">
-                <label for="" class="form-label">Apellido</label>
+                <label for="" class="form-label">@webLoyal.Resources.language.Resources.LastName</label>
                 <input type="text" value="Gonzalez" class="form-control" disabled>
             </div>
             <div class="col-md-6">
-                <label for="" class="form-label">Fecha de vencimiento de la poliza</label>
+                <label for="" class="form-label">@webLoyal.Resources.language.Resources.DueDate</label>
                 <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
             </div>
             <div class="col-md-6">
-                <label class="form-label">Producto</label>
+                <label class="form-label">@webLoyal.Resources.language.Resources.Product</label>
                 <input type="text" value="Legacy" class="form-control" disabled>
             </div>
             <div class="col-12">
-                <label for="inputAddress" class="form-label">Historial de notas</label>
+                <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.NotesHistory</label>
                 <textarea id="select2D" class="form-select" multiple disabled>
 
                 </textarea>
             </div>
             <div class="col-12">
-                <label for="inputAddress" class="form-label">Exclusiones</label>
+                <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.Exclusions</label>
                 <textarea id="select2D" class="form-select" multiple disabled>
 
                 </textarea>
             </div>
             <div class="col-12">
                 <label for="inputAddress2" class="form-label">
-                    Reclamos anteriores
+                    @webLoyal.Resources.language.Resources.PreviousClaims
                 </label>
                 <textarea id="select2D" class="form-select" multiple disabled>
 
