@@ -253,10 +253,10 @@
     <value>Aplicación Tomodar</value>
   </data>
   <data name="PolicyHolderInformation" xml:space="preserve">
-    <value>Informacion del Tomador de la Poliza</value>
+    <value>Informacion del Tomador de la Póliza</value>
   </data>
   <data name="InformationOfTheAffectedOfThePolicy" xml:space="preserve">
-    <value>Información Del Afectado De La Poliza</value>
+    <value>Información Del Afectado De La Póliza</value>
   </data>
   <data name="Insured" xml:space="preserve">
     <value>Asegurado</value>
@@ -327,4 +327,62 @@
   <data name="CTP" xml:space="preserve">
     <value>CTP</value>
   </data>
+  <data name="CertificateHistory" xml:space="preserve">
+    <value>Historial de Certificados</value>
+  </data>
+  <data name="Certificate" xml:space="preserve">
+    <value>Certificado</value>
+  </data>
+  <data name="LogUser" xml:space="preserve">
+    <value>Usuario de registro</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Fecha de Vencimiento</value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>Fecha de registro</value>
+  </data>
+  <data name="Descripction" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="TypeOfDocument" xml:space="preserve">
+    <value>Tipo de Documento</value>
+  </data>
+  <data name="CertificateCode" xml:space="preserve">
+    <value>Codigo de Certificado</value>
+  </data>
+  <data name="ActiveCertificates" xml:space="preserve">
+    <value>Certificados Activos</value>
+  </data>
+  <data name="CertificatesInGracePeriod" xml:space="preserve">
+    <value>Certificados En Periodo de Gracia</value>
+  </data>
+  <data name="CertificatesPendingRenewal" xml:space="preserve">
+    <value>Certificados Pendiente de Renovación</value>
+  </data>
+  <data name="CanceledCertificates" xml:space="preserve">
+    <value>Certificados Cancelados</value>
+  </data>
+  <data name="Major" xml:space="preserve">
+    <value>Importante</value>
+  </data>
+  <data name="EffectiveEndDate" xml:space="preserve">
+    <value>Fecha de Finalización Efectiva</value>
+  </data>
+  <data name="EffectiveStartDate" xml:space="preserve">
+    <value>Fecha de Inicio Efectivo</value>
+  </data>
+  <data name="CodeTypeSale" xml:space="preserve">
+    <value>Código Tipo Venta</value>
+  </data>
+  <data name="PlanCode" xml:space="preserve">
+    <value>Código de Plan</value>
+  </data>
+  <data name="EffectiveStartDate" xml:space="preserve">
+    <value>Fecha de Inicio Efectiva</value>
+  </data>
+  <data name="PolicyNumber" xml:space="preserve">
+    <value>Número de Póliza</value>
+  </data>
+
 </root>

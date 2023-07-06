@@ -327,4 +327,61 @@
   <data name="CTP" xml:space="preserve">
     <value>CTP</value>
   </data>
+  <data name="CertificateHistory" xml:space="preserve">
+    <value>Certificate History</value>
+  </data>
+  <data name="Certificate" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="LogUser" xml:space="preserve">
+    <value>Log User</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Expiration Date</value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>Registration Date</value>
+  </data>
+  <data name="Descripction" xml:space="preserve">
+    <value>Descripction</value>
+  </data>
+  <data name="TypeOfDocument" xml:space="preserve">
+    <value>Type Of Document</value>
+  </data>
+  <data name="CertificateCode" xml:space="preserve">
+    <value>Certificate Code</value>
+  </data>
+ <data name="ActiveCertificates" xml:space="preserve">
+    <value>Active Certificates</value>
+  </data>
+  <data name="CertificatesInGracePeriod" xml:space="preserve">
+    <value>Certificates In Grace Period</value>
+  </data>
+  <data name="CertificatesPendingRenewal" xml:space="preserve">
+    <value>Certificates Pending Renewal</value>
+  </data>
+  <data name="CanceledCertificates" xml:space="preserve">
+    <value>Canceled Certificates</value>
+  </data>
+  <data name="Major" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="EffectiveEndDate" xml:space="preserve">
+    <value>Effective End Date</value>
+  </data>
+  <data name="EffectiveStartDate" xml:space="preserve">
+    <value>Effective Start Date</value>
+  </data>
+  <data name="CodeTypeSale" xml:space="preserve">
+    <value>Code Type Sale</value>
+  </data>
+  <data name="PlanCode" xml:space="preserve">
+    <value>Plan Code</value>
+  </data>
+  <data name="EffectiveStartDate" xml:space="preserve">
+    <value>Effective Start Date</value>
+  </data>
+  <data name="PolicyNumber" xml:space="preserve">
+    <value>Policy Number</value>
+  </data>
 </root>
