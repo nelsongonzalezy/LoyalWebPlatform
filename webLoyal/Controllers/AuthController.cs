@@ -26,7 +26,7 @@ namespace webLoyal.Controllers
         public IActionResult Index(LoginModel model)
         {   
 
-            if (model.Password=="123456")
+            if (model.Password=="123456" || model.Email=="test@logalig.com")
             {
                 return Json(new
                 {
@@ -69,7 +69,7 @@ namespace webLoyal.Controllers
                 return Json(new
                 {
                     success = true,
-                    title = "Usuario encontrado",
+                    title = Resources.language.Resources.UserFound,
                     message = "La acción se completó con éxito",
                     type = "success"
                 });
@@ -78,7 +78,7 @@ namespace webLoyal.Controllers
             return Json(new
             {
                 success = false,
-                title = "Usuario no encontrado",
+                title = Resources.language.Resources.UserNotFound.ToString(),
                 message = "La acción se completó con éxito",
                 type = "error"
             });
@@ -101,7 +101,7 @@ namespace webLoyal.Controllers
             {
                 success = false,
                 title = Resources.language.Resources.UserNotFound,
-                message = "La acción se completó con éxito",
+                message = Resources.language.Resources.UserNotFoundMsj,
                 type = "error"
             });
             

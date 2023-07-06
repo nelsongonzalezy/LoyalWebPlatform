@@ -79,6 +79,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active Certificates.
+        /// </summary>
+        public static string ActiveCertificates {
+            get {
+                return ResourceManager.GetString("ActiveCertificates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Address.
         /// </summary>
         public static string Address {
@@ -133,6 +142,60 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Canceled Certificates.
+        /// </summary>
+        public static string CanceledCertificates {
+            get {
+                return ResourceManager.GetString("CanceledCertificates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Certificate.
+        /// </summary>
+        public static string Certificate {
+            get {
+                return ResourceManager.GetString("Certificate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Certificate Code.
+        /// </summary>
+        public static string CertificateCode {
+            get {
+                return ResourceManager.GetString("CertificateCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Certificate History.
+        /// </summary>
+        public static string CertificateHistory {
+            get {
+                return ResourceManager.GetString("CertificateHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Certificates In Grace Period.
+        /// </summary>
+        public static string CertificatesInGracePeriod {
+            get {
+                return ResourceManager.GetString("CertificatesInGracePeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Certificates Pending Renewal.
+        /// </summary>
+        public static string CertificatesPendingRenewal {
+            get {
+                return ResourceManager.GetString("CertificatesPendingRenewal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City.
         /// </summary>
         public static string City {
@@ -174,6 +237,15 @@ namespace webLoyal.Resources.language {
         public static string ClaimType {
             get {
                 return ResourceManager.GetString("ClaimType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code Type Sale.
+        /// </summary>
+        public static string CodeTypeSale {
+            get {
+                return ResourceManager.GetString("CodeTypeSale", resourceCulture);
             }
         }
         
@@ -223,6 +295,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Descripction.
+        /// </summary>
+        public static string Descripction {
+            get {
+                return ResourceManager.GetString("Descripction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Diagnosis.
         /// </summary>
         public static string Diagnosis {
@@ -250,6 +331,24 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Effective End Date.
+        /// </summary>
+        public static string EffectiveEndDate {
+            get {
+                return ResourceManager.GetString("EffectiveEndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Effective Start Date.
+        /// </summary>
+        public static string EffectiveStartDate {
+            get {
+                return ResourceManager.GetString("EffectiveStartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E-mail.
         /// </summary>
         public static string Email {
@@ -273,6 +372,15 @@ namespace webLoyal.Resources.language {
         public static string Exclusions {
             get {
                 return ResourceManager.GetString("Exclusions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expiration Date.
+        /// </summary>
+        public static string ExpirationDate {
+            get {
+                return ResourceManager.GetString("ExpirationDate", resourceCulture);
             }
         }
         
@@ -376,11 +484,29 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Log User.
+        /// </summary>
+        public static string LogUser {
+            get {
+                return ResourceManager.GetString("LogUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Main Symptoms.
         /// </summary>
         public static string MainSymptoms {
             get {
                 return ResourceManager.GetString("MainSymptoms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        public static string Major {
+            get {
+                return ResourceManager.GetString("Major", resourceCulture);
             }
         }
         
@@ -502,11 +628,29 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Plan Code.
+        /// </summary>
+        public static string PlanCode {
+            get {
+                return ResourceManager.GetString("PlanCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Policy Holder Information.
         /// </summary>
         public static string PolicyHolderInformation {
             get {
                 return ResourceManager.GetString("PolicyHolderInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Policy Number.
+        /// </summary>
+        public static string PolicyNumber {
+            get {
+                return ResourceManager.GetString("PolicyNumber", resourceCulture);
             }
         }
         
@@ -601,6 +745,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Registration Date.
+        /// </summary>
+        public static string RegistrationDate {
+            get {
+                return ResourceManager.GetString("RegistrationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select.
         /// </summary>
         public static string Select {
@@ -642,6 +795,15 @@ namespace webLoyal.Resources.language {
         public static string TomodarApp {
             get {
                 return ResourceManager.GetString("TomodarApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type Of Document.
+        /// </summary>
+        public static string TypeOfDocument {
+            get {
+                return ResourceManager.GetString("TypeOfDocument", resourceCulture);
             }
         }
         
