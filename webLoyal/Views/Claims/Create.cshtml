@@ -29,10 +29,11 @@
                                     @webLoyal.Resources.language.Resources.ClaimInfo
                                 </button>
                             </h2>
-                            <div id="collapseOneE" class="accordion-collapse collapse show" aria-labelledby="headingOneE" data-bs-parent="#accordionExampleE" style=">
+                            <div id="collapseOneE" class="accordion-collapse collapse show" aria-labelledby="headingOneE" data-bs-parent="#accordionExampleE">
+
                                 <div class="accordion-body row">
                                     <div class="col-6">
-                                        <label class="form-label">@webLoyal.Resources.language.Resources.ClaimId</label>
+                                        <label class="form-label">@webLoyal.Resources.language.Resources.ClaimID</label>
                                         <input value="@Model.ClaimId" class="form-control" disabled>
 
 
@@ -70,7 +71,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwoE">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoE" aria-expanded="false" aria-controls="collapseTwoE">
-                                    @webLoyal.Resources.language.Resources.PolicyholderInformation
+                                    @webLoyal.Resources.language.Resources.PolicyHolderInformation
                                 </button>
                             </h2>
                             <div id="collapseTwoE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
@@ -157,7 +158,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTreE">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeE" aria-expanded="false" aria-controls="collapseTwoE">
-                                    @webLoyal.Resources.language.Resources.Insured.Provider
+                                    @webLoyal.Resources.language.Resources.Insured
                                 </button>
                             </h2>
                             <div id="collapsetreeE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
@@ -305,10 +306,10 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.Notes</label>
+                        <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.Note</label>
                         <textarea id="select2D" class="form-select" multiple>
 
-                </textarea>
+                        </textarea>
                     </div>
 
                     <div class="col-md-6">
@@ -358,7 +359,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck4">
                             <label class="form-check-label" for="gridCheck4">
-                                @webLoyal.Resources.language.Resource.NotifyInsured
+                            @webLoyal.Resources.language.Resources.NotifyInsured
                             </label>
                         </div>
                         <div class="form-check">
@@ -378,46 +379,46 @@
         </div>
            
     </div>
-    <div class="col-6">
+         <div class="col-6">
             <div class="card">
                 <div class="card-body row">
-            <div class="col-md-6">
-                <label class="form-label">@webLoyal.Resources.language.Resources.Name </label>
-                <input value="Nelson" class="form-control" disabled>
-            </div>
-            <div class="col-md-6">
-                <label for="" class="form-label">@webLoyal.Resources.language.Resources.LastName</label>
-                <input type="text" value="Gonzalez" class="form-control" disabled>
-            </div>
-            <div class="col-md-6">
-                <label for="" class="form-label">@webLoyal.Resources.language.Resources.DueDate</label>
-                <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
-            </div>
-            <div class="col-md-6">
-                <label class="form-label">@webLoyal.Resources.language.Resources.Product</label>
-                <input type="text" value="Legacy" class="form-control" disabled>
-            </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.NotesHistory</label>
-                <textarea id="select2D" class="form-select" multiple disabled>
+                    <div class="col-md-6">
+                        <label class="form-label">@webLoyal.Resources.language.Resources.Name </label>
+                        <input value="Nelson" class="form-control" disabled>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">@webLoyal.Resources.language.Resources.LastName</label>
+                        <input type="text" value="Gonzalez" class="form-control" disabled>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">@webLoyal.Resources.language.Resources.DueDate</label>
+                        <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">@webLoyal.Resources.language.Resources.Product</label>
+                        <input type="text" value="Legacy" class="form-control" disabled>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.NotesHistory</label>
+                        <textarea id="select2D" class="form-select" multiple disabled>
 
-                </textarea>
-            </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.Exclusions</label>
-                <textarea id="select2D" class="form-select" multiple disabled>
+                        </textarea>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">@webLoyal.Resources.language.Resources.Exclusions</label>
+                        <textarea id="select2D" class="form-select" multiple disabled>
 
-                </textarea>
-            </div>
-            <div class="col-12">
-                <label for="inputAddress2" class="form-label">
-                    @webLoyal.Resources.language.Resources.PreviousClaims
-                </label>
-                <textarea id="select2D" class="form-select" multiple disabled>
+                        </textarea>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress2" class="form-label">
+                            @webLoyal.Resources.language.Resources.PreviousClaims
+                        </label>
+                        <textarea id="select2D" class="form-select" multiple disabled>
 
-                </textarea>
-            </div>
-            </div>
+                        </textarea>
+                    </div>
+                 </div>
             </div>
 
            

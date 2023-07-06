@@ -79,11 +79,119 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agent.
+        /// </summary>
+        public static string Agent {
+            get {
+                return ResourceManager.GetString("Agent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agent App.
+        /// </summary>
+        public static string AgentApp {
+            get {
+                return ResourceManager.GetString("AgentApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agent Portal.
+        /// </summary>
+        public static string AgentPortal {
+            get {
+                return ResourceManager.GetString("AgentPortal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attending Doctor.
+        /// </summary>
+        public static string AttendingDoctor {
+            get {
+                return ResourceManager.GetString("AttendingDoctor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Business Name.
         /// </summary>
         public static string BusinessName {
             get {
                 return ResourceManager.GetString("BusinessName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Id.
+        /// </summary>
+        public static string ClaimID {
+            get {
+                return ResourceManager.GetString("ClaimID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Info.
+        /// </summary>
+        public static string ClaimInfo {
+            get {
+                return ResourceManager.GetString("ClaimInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Claims.
+        /// </summary>
+        public static string Claims {
+            get {
+                return ResourceManager.GetString("Claims", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Type.
+        /// </summary>
+        public static string ClaimType {
+            get {
+                return ResourceManager.GetString("ClaimType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country Description.
+        /// </summary>
+        public static string CountryDescription {
+            get {
+                return ResourceManager.GetString("CountryDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string Create {
+            get {
+                return ResourceManager.GetString("Create", resourceCulture);
             }
         }
         
@@ -97,11 +205,74 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email.
+        ///   Looks up a localized string similar to CTP.
+        /// </summary>
+        public static string CTP {
+            get {
+                return ResourceManager.GetString("CTP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deductible Applies.
+        /// </summary>
+        public static string DeductibleApplies {
+            get {
+                return ResourceManager.GetString("DeductibleApplies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diagnosis.
+        /// </summary>
+        public static string Diagnosis {
+            get {
+                return ResourceManager.GetString("Diagnosis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Due Date.
+        /// </summary>
+        public static string DueDate {
+            get {
+                return ResourceManager.GetString("DueDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dx.
+        /// </summary>
+        public static string Dx {
+            get {
+                return ResourceManager.GetString("Dx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-mail.
         /// </summary>
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Emergency.
+        /// </summary>
+        public static string Emergency {
+            get {
+                return ResourceManager.GetString("Emergency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exclusions.
+        /// </summary>
+        public static string Exclusions {
+            get {
+                return ResourceManager.GetString("Exclusions", resourceCulture);
             }
         }
         
@@ -124,6 +295,51 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IC10.
+        /// </summary>
+        public static string IC10 {
+            get {
+                return ResourceManager.GetString("IC10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inactive.
+        /// </summary>
+        public static string Inactive {
+            get {
+                return ResourceManager.GetString("Inactive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information Of The Affected Of The Policy.
+        /// </summary>
+        public static string InformationOfTheAffectedOfThePolicy {
+            get {
+                return ResourceManager.GetString("InformationOfTheAffectedOfThePolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insured.
+        /// </summary>
+        public static string Insured {
+            get {
+                return ResourceManager.GetString("Insured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In Update Process.
+        /// </summary>
+        public static string InUpdateProcess {
+            get {
+                return ResourceManager.GetString("InUpdateProcess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter the code sent to your mobile device..
         /// </summary>
         public static string Isvalidmsj {
@@ -142,11 +358,119 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Last Name.
+        /// </summary>
+        public static string LastName {
+            get {
+                return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Letter Of Guarantee.
+        /// </summary>
+        public static string LetterOfGuarantee {
+            get {
+                return ResourceManager.GetString("LetterOfGuarantee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Main Symptoms.
+        /// </summary>
+        public static string MainSymptoms {
+            get {
+                return ResourceManager.GetString("MainSymptoms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medical Speciality.
+        /// </summary>
+        public static string MedicalSpeciality {
+            get {
+                return ResourceManager.GetString("MedicalSpeciality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Menu.
         /// </summary>
         public static string Menu {
             get {
                 return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Claim.
+        /// </summary>
+        public static string NewClaim {
+            get {
+                return ResourceManager.GetString("NewClaim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string Note {
+            get {
+                return ResourceManager.GetString("Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes History.
+        /// </summary>
+        public static string NotesHistory {
+            get {
+                return ResourceManager.GetString("NotesHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notify Insurance.
+        /// </summary>
+        public static string NotifyInsuranceAgent {
+            get {
+                return ResourceManager.GetString("NotifyInsuranceAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notify Insured.
+        /// </summary>
+        public static string NotifyInsured {
+            get {
+                return ResourceManager.GetString("NotifyInsured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notify Provider.
+        /// </summary>
+        public static string NotifyProvider {
+            get {
+                return ResourceManager.GetString("NotifyProvider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origin Of The Claim.
+        /// </summary>
+        public static string OriginOfTheClaim {
+            get {
+                return ResourceManager.GetString("OriginOfTheClaim", resourceCulture);
             }
         }
         
@@ -160,11 +484,56 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Person.
+        /// </summary>
+        public static string Person {
+            get {
+                return ResourceManager.GetString("Person", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone Number.
+        /// </summary>
+        public static string PhoneNumber {
+            get {
+                return ResourceManager.GetString("PhoneNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Policy Holder Information.
+        /// </summary>
+        public static string PolicyHolderInformation {
+            get {
+                return ResourceManager.GetString("PolicyHolderInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previous Claims.
+        /// </summary>
+        public static string PreviousClaims {
+            get {
+                return ResourceManager.GetString("PreviousClaims", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Processing.
         /// </summary>
         public static string Processing {
             get {
                 return ResourceManager.GetString("Processing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product.
+        /// </summary>
+        public static string Product {
+            get {
+                return ResourceManager.GetString("Product", resourceCulture);
             }
         }
         
@@ -183,6 +552,15 @@ namespace webLoyal.Resources.language {
         public static string ProviderCode {
             get {
                 return ResourceManager.GetString("ProviderCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Record Date.
+        /// </summary>
+        public static string RecordDate {
+            get {
+                return ResourceManager.GetString("RecordDate", resourceCulture);
             }
         }
         
@@ -214,6 +592,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Refund.
+        /// </summary>
+        public static string Refund {
+            get {
+                return ResourceManager.GetString("Refund", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select.
         /// </summary>
         public static string Select {
@@ -223,11 +610,38 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        public static string State {
+            get {
+                return ResourceManager.GetString("State", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status Description.
         /// </summary>
         public static string StatusDescription {
             get {
                 return ResourceManager.GetString("StatusDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Symptom Date.
+        /// </summary>
+        public static string SymptomDate {
+            get {
+                return ResourceManager.GetString("SymptomDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tomodar App.
+        /// </summary>
+        public static string TomodarApp {
+            get {
+                return ResourceManager.GetString("TomodarApp", resourceCulture);
             }
         }
         

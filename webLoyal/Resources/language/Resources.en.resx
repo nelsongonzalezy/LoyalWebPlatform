@@ -121,7 +121,7 @@
     <value>Accept</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>E-mail</value>
   </data>
   <data name="ForgotPassword" xml:space="preserve">
     <value>Forgot password</value>
@@ -242,13 +242,14 @@
   </data>
   <data name="OriginOfTheClaim" xml:space="preserve">
     <value>Origin Of The Claim</value>
-  </data><data name="Email" xml:space="preserve">
-    <value>E-mail</value>
-  </data><data name="AgentPortal" xml:space="preserve">
+  </data>
+  <data name="AgentPortal" xml:space="preserve">
     <value>Agent Portal</value>
-  </data><data name="AgentApp" xml:space="preserve">
+  </data>
+  <data name="AgentApp" xml:space="preserve">
     <value>Agent App</value>
-  </data><data name="TomodarApp" xml:space="preserve">
+  </data>
+  <data name="TomodarApp" xml:space="preserve">
     <value>Tomodar App</value>
   </data>
   <data name="PolicyHolderInformation" xml:space="preserve">
@@ -322,5 +323,8 @@
   </data>
   <data name="PreviousClaims" xml:space="preserve">
     <value>Previous Claims</value>
+  </data>
+  <data name="CTP" xml:space="preserve">
+    <value>CTP</value>
   </data>
 </root>
