@@ -323,7 +323,4 @@
   <data name="PreviousClaims" xml:space="preserve">
     <value>Reclamos Previos</value>
   </data>
-  <data name="Accept" xml:space="preserve">
-    <value>Aceptar</value>
-  </data>
 </root>
