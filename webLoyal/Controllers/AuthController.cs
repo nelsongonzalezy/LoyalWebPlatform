@@ -29,23 +29,23 @@ namespace webLoyal.Controllers
         public async Task<IActionResult> Index(LoginModel model)
         {   
 
-            if (model.Password=="123456" || model.Email=="test@logalig.com")
+            if (model.Password=="123456" && model.Email=="test@logalig.com")
             {
                  var ActiveSession = await _loginS.Login(model);
 
                     HttpContext.Session.SetString(nameof(model.Email), model.Email);
-                    HttpContext.Session.SetString(nameof(ActiveSession.UserCode), ActiveSession.UserCode.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.UserCode), "1");
                     HttpContext.Session.SetString(nameof(ActiveSession.IndicatorCode), ActiveSession.IndicatorCode.ToString());
                     HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
                     HttpContext.Session.SetString(nameof(ActiveSession.FullNameUser), ActiveSession.FullNameUser);
-                    HttpContext.Session.SetString(nameof(ActiveSession.CodeProfile), ActiveSession.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.CodeProfile), ActiveSession.CodeProfile.ToString());
                     HttpContext.Session.SetString(nameof(ActiveSession.NameProfile), ActiveSession.NameProfile);
                     HttpContext.Session.SetString(nameof(ActiveSession.UserProfile), ActiveSession.UserProfile);
                     HttpContext.Session.SetString(nameof(ActiveSession.PasswordEmail), ActiveSession.PasswordEmail);
                     HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorMailVerified), ActiveSession.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorChangePassword), ActiveSession.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorViewAgents), ActiveSession.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorMailVerified), ActiveSession.IndicatorMailVerified.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorChangePassword), ActiveSession.IndicatorChangePassword.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorViewAgents), ActiveSession.IndicatorViewAgents.ToString());
                     HttpContext.Session.SetString(nameof(ActiveSession.CodeStateUser), ActiveSession.CodeStateUser.ToString());
 
                 return Json(new

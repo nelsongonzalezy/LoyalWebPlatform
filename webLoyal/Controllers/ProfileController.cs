@@ -5,8 +5,8 @@ namespace webLoyal.Controllers
     public class ProfileController : Controller
     {
         [HttpGet]
-        [Route("Profile/Index")]
-        public IActionResult Index(int ProfilesId)
+        [Route("Profile/edit/{UserCode}")]
+        public IActionResult edit(string UserCode)
         {
             return View();
         } 

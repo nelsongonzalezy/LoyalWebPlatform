@@ -11,8 +11,8 @@ namespace core
                        .AddScoped<IProvider, ProviderService>()
                        .AddScoped<IClaimsReports, ClaimsReportsService>()
                        .AddScoped<IBoardService, BoardService>()
-                       .AddScoped<IHttpServicesAuthorized, HttpServices>()
-                       .AddScoped<IHttpServicesUnAuthorized, HttpServices>()
+                       //.AddScoped<IHttpServicesAuthorized, HttpServices>()
+                       //.AddScoped<IHttpServicesUnAuthorized, HttpServices>()
                         ;
     }
 }
