@@ -16,6 +16,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.InitializerCore();
 builder.Services.AddLocalization(options => options.ResourcesPath = "/Resources/language");
 builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -35,7 +36,7 @@ app.UseRequestLocalization(new RequestLocalizationOptions
 });
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
 
 app.UseAuthorization();

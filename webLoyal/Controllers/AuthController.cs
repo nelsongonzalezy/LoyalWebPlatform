@@ -1,4 +1,5 @@
 ﻿using core.Service;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using System.Reflection;
@@ -7,13 +8,15 @@ namespace webLoyal.Controllers
 {
     public class AuthController : Controller
     {
+        private readonly ILogin _loginS;
         private readonly IStringLocalizer<AuthController> _localizer;
         private readonly ILogger<AuthController> _logger;
 
-        public AuthController(ILogger<AuthController> logger, IStringLocalizer<AuthController> localizer)
+        public AuthController(ILogger<AuthController> logger, IStringLocalizer<AuthController> localizer, ILogin loginS)
         {
             _logger = logger;
             _localizer = localizer;
+            _loginS = loginS;
         }
         [HttpGet]
         [Route("Auth/Index")]
@@ -23,11 +26,28 @@ namespace webLoyal.Controllers
         }
         [HttpPost]
         [Route("Auth/Index")]
-        public IActionResult Index(LoginModel model)
+        public async Task<IActionResult> Index(LoginModel model)
         {   
 
             if (model.Password=="123456" || model.Email=="test@logalig.com")
             {
+                 var ActiveSession = await _loginS.Login(model);
+
+                    HttpContext.Session.SetString(nameof(model.Email), model.Email);
+                    HttpContext.Session.SetString(nameof(ActiveSession.UserCode), ActiveSession.UserCode.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorCode), ActiveSession.IndicatorCode.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
+                    HttpContext.Session.SetString(nameof(ActiveSession.FullNameUser), ActiveSession.FullNameUser);
+                    HttpContext.Session.SetString(nameof(ActiveSession.CodeProfile), ActiveSession.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.NameProfile), ActiveSession.NameProfile);
+                    HttpContext.Session.SetString(nameof(ActiveSession.UserProfile), ActiveSession.UserProfile);
+                    HttpContext.Session.SetString(nameof(ActiveSession.PasswordEmail), ActiveSession.PasswordEmail);
+                    HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorMailVerified), ActiveSession.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorChangePassword), ActiveSession.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorViewAgents), ActiveSession.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.CodeStateUser), ActiveSession.CodeStateUser.ToString());
+
                 return Json(new
                 {
                     success = true,

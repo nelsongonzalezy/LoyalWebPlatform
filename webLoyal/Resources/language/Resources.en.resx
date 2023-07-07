@@ -351,7 +351,7 @@
   <data name="CertificateCode" xml:space="preserve">
     <value>Certificate Code</value>
   </data>
- <data name="ActiveCertificates" xml:space="preserve">
+  <data name="ActiveCertificates" xml:space="preserve">
     <value>Active Certificates</value>
   </data>
   <data name="CertificatesInGracePeriod" xml:space="preserve">
@@ -377,9 +377,6 @@
   </data>
   <data name="PlanCode" xml:space="preserve">
     <value>Plan Code</value>
-  </data>
-  <data name="EffectiveStartDate" xml:space="preserve">
-    <value>Effective Start Date</value>
   </data>
   <data name="PolicyNumber" xml:space="preserve">
     <value>Policy Number</value>

@@ -378,11 +378,7 @@
   <data name="PlanCode" xml:space="preserve">
     <value>Código de Plan</value>
   </data>
-  <data name="EffectiveStartDate" xml:space="preserve">
-    <value>Fecha de Inicio Efectiva</value>
-  </data>
   <data name="PolicyNumber" xml:space="preserve">
     <value>Número de Póliza</value>
   </data>
-
 </root>

@@ -79,14 +79,14 @@
                         <img src="https://via.placeholder.com/500/4c5366/fff" alt="">
                     </div><!-- sidebar-footer-thumb -->
                     <div class="sidebar-footer-body">
-                        <h6><a href="../pages/profile.html">Shaira Diaz</a></h6>
+                        <h6><div href="">@Context.Session.GetString("Email")</div></h6>
                         <p>Premium Member</p>
                     </div><!-- sidebar-footer-body -->
                     <a id="sidebarFooterMenu" href="" class="dropdown-link"><i class="ri-arrow-down-s-line"></i></a>
                 </div><!-- sidebar-footer-top -->
                 <div class="sidebar-footer-menu">
                     <nav class="nav">
-                        <a href=""><i class="ri-edit-2-line"></i> Edit Profile</a>
+                        <a href="../profiles/edit/@Context.Session.GetString("UserCode")"><i class="ri-edit-2-line"></i>Profile</a>
                         <a href=""><i class="ri-profile-line"></i> View Profile</a>
                     </nav>
                     <hr>
