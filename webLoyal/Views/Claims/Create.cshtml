@@ -35,8 +35,6 @@
                                     <div class="col-6">
                                         <label class="form-label">@webLoyal.Resources.language.Resources.ClaimID</label>
                                         <input value="@Model.ClaimId" class="form-control" disabled>
-
-
                                     </div>
                                     <div class="col-6">
                                         <label for="inputPassword4" class="form-label">@webLoyal.Resources.language.Resources.RecordDate</label>
@@ -98,12 +96,12 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTreE">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeE" aria-expanded="false" aria-controls="collapseTwoE">
+                            <h2 class="accordion-header" id="headingTreN">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeN" aria-expanded="false" aria-controls="collapseTwoE">
                                    @webLoyal.Resources.language.Resources.InformationOfTheAffectedOfThePolicy
                                 </button>
                             </h2>
-                            <div id="collapsetreeE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
+                            <div id="collapsetreeN" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
                                 <div class="accordion-body row">
                                     <div class="col-md-6">
                                         <label class="form-label">@webLoyal.Resources.language.Resources.Insured</label>
@@ -221,8 +219,6 @@
                             </div>
                         </div>
                      </div>
-                    
-                    
                     <div class="col-md-6">
                         <label class="form-label">@webLoyal.Resources.language.Resources.OriginOfTheClaim</label>
                         <select id="select2F" class="form-select select2">
@@ -426,7 +422,7 @@
 
     </form>
 
-    <div class="accordion accordion-primary" id="">
+    @*<div class="accordion accordion-primary" id="">
 
 
         <div class="accordion-item">
@@ -443,7 +439,7 @@
             </div>
         </div>
     </div>
-   
+   *@
 </div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
 <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>

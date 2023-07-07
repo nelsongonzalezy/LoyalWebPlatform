@@ -29,7 +29,7 @@ namespace webLoyal.Controllers
         public async Task<IActionResult> Index(LoginModel model)
         {   
 
-            if (model.Password=="123456" && model.Email=="test@logalig.com")
+            if (model.Password=="123456" && model.Email=="test@loyalig.com")
             {
                  var ActiveSession = await _loginS.Login(model);
 
