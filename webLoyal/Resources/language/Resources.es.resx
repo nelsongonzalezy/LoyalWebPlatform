@@ -381,4 +381,22 @@
   <data name="PolicyNumber" xml:space="preserve">
     <value>Número de Póliza</value>
   </data>
+  <data name="ClaimsReportsId" xml:space="preserve">
+    <value>Id. de Informes de Reclamaciones</value>
+  </data>
+  <data name="ClaimsReportFormat" xml:space="preserve">
+    <value>Formato de Informe de Reclamaciones</value>
+  </data>
+  <data name="ClaimValue" xml:space="preserve">
+    <value>Valor de reclamación</value>
+  </data>
+  <data name="ReportClaimDate" xml:space="preserve">
+    <value>Reportar Fecha de Reclamo</value>
+  </data>
+  <data name="PolicyCode" xml:space="preserve">
+    <value>Código de Poliza</value>
+  </data>
+  <data name="ClaimId" xml:space="preserve">
+    <value>Identificación de Reclamo</value>
+  </data>
 </root>

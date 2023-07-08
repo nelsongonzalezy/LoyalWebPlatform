@@ -384,5 +384,22 @@
   <data name="PolicyNumber" xml:space="preserve">
     <value>Policy Number</value>
   </data>
-
+  <data name="ClaimsReportsId" xml:space="preserve">
+    <value>Claims Reports Id</value>
+  </data>
+  <data name="ClaimsReportFormat" xml:space="preserve">
+    <value>Claims Report Format</value>
+  </data>
+  <data name="ClaimValue" xml:space="preserve">
+    <value>Claim Value</value>
+  </data>
+  <data name="ReportClaimDate" xml:space="preserve">
+    <value>Report Claim Date</value>
+  </data>
+  <data name="PolicyCode" xml:space="preserve">
+    <value>Policy Code</value>
+  </data>
+  <data name="ClaimId" xml:space="preserve">
+    <value>Claim Id</value>
+  </data>
 </root>
