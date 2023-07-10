@@ -330,7 +330,7 @@
   <data name="Certificate" xml:space="preserve">
     <value>Certificate</value>
   </data>
- <data name="LogUser" xml:space="preserve">
+  <data name="LogUser" xml:space="preserve">
     <value>Log User</value>
   </data>
   <data name="ExpirationDate" xml:space="preserve">
@@ -353,10 +353,10 @@
   </data>
   <data name="CertificatesInGracePeriod" xml:space="preserve">
     <value>Certificates In Grace Period</value>
-  </data> 
- <data name="CertificatesPendingRenewal" xml:space="preserve">
+  </data>
+  <data name="CertificatesPendingRenewal" xml:space="preserve">
     <value>Certificates Pending Renewal</value>
-  </data> 
+  </data>
   <data name="CanceledCertificates" xml:space="preserve">
     <value>Canceled Certificates</value>
   </data>
@@ -374,9 +374,6 @@
   </data>
   <data name="PlanCode" xml:space="preserve">
     <value>Plan Code</value>
-  </data>
-  <data name="EffectiveStartDate" xml:space="preserve">
-    <value>Effective Start Date</value>
   </data>
   <data name="PolicyNumber" xml:space="preserve">
     <value>Policy Number</value>
@@ -396,12 +393,6 @@
   <data name="PolicyCode" xml:space="preserve">
     <value>Policy Code</value>
   </data>
-  <data name="ClaimId" xml:space="preserve">
-    <value>Claim Id</value>
-  </data>
-  <data name="ProviderCode" xml:space="preserve">
-    <value>Provider Code</value>
-  </data>
   <data name="CompanyNameOfTheProvider" xml:space="preserve">
     <value>Company Name of the Provider</value>
   </data>
@@ -419,5 +410,10 @@
   </data>
   <data name="EditProfile" xml:space="preserve">
     <value>Edit Profile</value>
+  <data name="ClaimsHistory" xml:space="preserve">
+    <value>Claims History</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
   </data>
 </root>
