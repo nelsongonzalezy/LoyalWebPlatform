@@ -402,4 +402,7 @@
   <data name="DescriptionCountry" xml:space="preserve">
     <value>Description Country</value>
   </data>
+  <data name="ClaimId" xml:space="preserve">
+    <value>Claim Id</value>
+  </data>
 </root>

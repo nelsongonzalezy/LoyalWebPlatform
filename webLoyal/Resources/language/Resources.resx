@@ -410,10 +410,14 @@
   </data>
   <data name="EditProfile" xml:space="preserve">
     <value>Edit Profile</value>
+  </data>
   <data name="ClaimsHistory" xml:space="preserve">
     <value>Claims History</value>
   </data>
   <data name="Report" xml:space="preserve">
     <value>Report</value>
+  </data>
+  <data name="ClaimId" xml:space="preserve">
+    <value>Claim Id</value>
   </data>
 </root>

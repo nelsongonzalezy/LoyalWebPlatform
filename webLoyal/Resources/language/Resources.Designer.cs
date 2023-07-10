@@ -207,9 +207,9 @@ namespace webLoyal.Resources.language {
         /// <summary>
         ///   Looks up a localized string similar to Claim Id.
         /// </summary>
-        public static string ClaimID {
+        public static string ClaimId {
             get {
-                return ResourceManager.GetString("ClaimID", resourceCulture);
+                return ResourceManager.GetString("ClaimId", resourceCulture);
             }
         }
         
@@ -390,6 +390,24 @@ namespace webLoyal.Resources.language {
         public static string Dx {
             get {
                 return ResourceManager.GetString("Dx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Profile.
+        /// </summary>
+        public static string EditProfile {
+            get {
+                return ResourceManager.GetString("EditProfile", resourceCulture);
             }
         }
         
@@ -750,6 +768,15 @@ namespace webLoyal.Resources.language {
         public static string Product {
             get {
                 return ResourceManager.GetString("Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile.
+        /// </summary>
+        public static string Profile {
+            get {
+                return ResourceManager.GetString("Profile", resourceCulture);
             }
         }
         

@@ -403,4 +403,7 @@
   <data name="DescriptionCountry" xml:space="preserve">
     <value>Descripción País</value>
   </data>
+  <data name="ClaimId" xml:space="preserve">
+    <value>Codigo de Reclamo</value>
+  </data>
 </root>
