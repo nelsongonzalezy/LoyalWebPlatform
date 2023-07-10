@@ -412,4 +412,10 @@
   <data name="DescriptionCountry" xml:space="preserve">
     <value>Descripción País</value>
   </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
 </root>
