@@ -222,9 +222,6 @@
   <data name="ClaimInfo" xml:space="preserve">
     <value>Información de Reclamo</value>
   </data>
-  <data name="ClaimID" xml:space="preserve">
-    <value>Identificación del Reclamo</value>
-  </data>
   <data name="RecordDate" xml:space="preserve">
     <value>Fecha del Registro</value>
   </data>
@@ -417,5 +414,8 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Editar</value>
+  </data>
+  <data name="EditProfile" xml:space="preserve">
+    <value>Editar Perfíl</value>
   </data>
 </root>

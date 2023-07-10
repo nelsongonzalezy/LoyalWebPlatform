@@ -222,9 +222,6 @@
   <data name="ClaimInfo" xml:space="preserve">
     <value>Claim Info</value>
   </data>
-  <data name="ClaimID" xml:space="preserve">
-    <value>Claim Id</value>
-  </data>
   <data name="RecordDate" xml:space="preserve">
     <value>Record Date</value>
   </data>
@@ -416,5 +413,8 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="EditProfile" xml:space="preserve">
+    <value>Edit Profile</value>
   </data>
 </root>
