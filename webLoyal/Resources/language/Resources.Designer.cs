@@ -214,7 +214,7 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Claim Info.
+        ///   Looks up a localized string similar to Claim Info. 
         /// </summary>
         public static string ClaimInfo {
             get {
