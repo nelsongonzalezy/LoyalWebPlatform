@@ -399,4 +399,16 @@
   <data name="ClaimId" xml:space="preserve">
     <value>Claim Id</value>
   </data>
+  <data name="ProviderCode" xml:space="preserve">
+    <value>Provider Code</value>
+  </data>
+  <data name="CompanyNameOfTheProvider" xml:space="preserve">
+    <value>Company Name of the Provider</value>
+  </data>
+  <data name="DescriptionProviderStatus" xml:space="preserve">
+    <value>Description Provider Status</value>
+  </data>
+  <data name="DescriptionCountry" xml:space="preserve">
+    <value>Description Country</value>
+  </data>
 </root>

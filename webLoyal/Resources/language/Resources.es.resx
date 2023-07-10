@@ -399,4 +399,17 @@
   <data name="ClaimId" xml:space="preserve">
     <value>Identificación de Reclamo</value>
   </data>
+  <data name="ProviderCode" xml:space="preserve">
+    <value>Código del Proveedor
+</value>
+  </data>
+  <data name="CompanyNameOfTheProvider" xml:space="preserve">
+    <value>Razón Social del Proveedor</value>
+  </data>
+  <data name="DescriptionProviderStatus" xml:space="preserve">
+    <value>Descripción del Estado Proveedor</value>
+  </data>
+  <data name="DescriptionCountry" xml:space="preserve">
+    <value>Descripción País</value>
+  </data>
 </root>
