@@ -175,7 +175,8 @@
     <value>Crear Proveedor</value>
   </data>
   <data name="ProviderCode" xml:space="preserve">
-    <value>Código de Proveedor</value>
+    <value>Código del Proveedor
+</value>
   </data>
   <data name="BusinessName" xml:space="preserve">
     <value>Razón Social</value>
@@ -396,13 +397,6 @@
   <data name="PolicyCode" xml:space="preserve">
     <value>Código de Poliza</value>
   </data>
-  <data name="ClaimId" xml:space="preserve">
-    <value>Identificación de Reclamo</value>
-  </data>
-  <data name="ProviderCode" xml:space="preserve">
-    <value>Código del Proveedor
-</value>
-  </data>
   <data name="CompanyNameOfTheProvider" xml:space="preserve">
     <value>Razón Social del Proveedor</value>
   </data>
@@ -411,5 +405,11 @@
   </data>
   <data name="DescriptionCountry" xml:space="preserve">
     <value>Descripción País</value>
+  </data>
+  <data name="ClaimsHistory" xml:space="preserve">
+    <value>Historial de reclamos</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
   </data>
 </root>

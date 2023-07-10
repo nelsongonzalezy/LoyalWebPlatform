@@ -396,12 +396,6 @@
   <data name="PolicyCode" xml:space="preserve">
     <value>Policy Code</value>
   </data>
-  <data name="ClaimId" xml:space="preserve">
-    <value>Claim Id</value>
-  </data>
-  <data name="ProviderCode" xml:space="preserve">
-    <value>Provider Code</value>
-  </data>
   <data name="CompanyNameOfTheProvider" xml:space="preserve">
     <value>Company Name of the Provider</value>
   </data>
@@ -410,5 +404,11 @@
   </data>
   <data name="DescriptionCountry" xml:space="preserve">
     <value>Description Country</value>
+  </data>
+  <data name="ClaimsHistory" xml:space="preserve">
+    <value>Claims History</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Reportes</value>
   </data>
 </root>
