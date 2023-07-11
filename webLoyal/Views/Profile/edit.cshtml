@@ -15,38 +15,40 @@
             </div>
         </div>
 
-        <form id="CreateProvider" class="row g-3 col-12" asp-action="nameof(ProviderController.Create)" data-parsley-validate asp-controller="Provider" method="post">
+        <form id="CreateProvider" div class="row g-2 justify-content-between" asp-action="nameof(ProviderController.Create)" data-parsley-validate asp-controller="Provider" method="post">
             <div class="col-6">
                 <div class="card card-one">
                     <div class="card-body row">
+                        <div class="row mb-3">
 
-                        <div class="row g-3">
-                            <div class="col-6">
-                            <label class="form-label">@webLoyal.Resources.language.Resources.Name</label>
-                            <input type="text" class="form-control" placeholder="Enter first name" required>
-                        
-                        </div>
-                            <div class="col-6">
-                            <label class="form-label">@webLoyal.Resources.language.Resources.LastName</label>
-                            <input type="text" class="form-control" placeholder="Enter last name" required>
-                        </div>
+                            <div class="col-4">
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                    <label class="form-label">@webLoyal.Resources.language.Resources.Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter first name" required>
+                                
+                                </div>
+                            <div class="col-4">
+                                <div class="row g-3"> 
+                                    <div class="col-6">
+                                    <label class="form-label">@webLoyal.Resources.language.Resources.LastName</label>
+                                    <input type="text" class="form-control" placeholder="Enter last name" required>
+                                </div>
+                            
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3">
+                                </div>
+                            </div>
 
-                        <div class="col">
-                            <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">@webLoyal.Resources.language.Resources.Email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                        
-                        </div>
-                        
-                        <div class="col-12">
-                            <label for="inputaddress" class="form-label"></label>
-                            <select id="inputState" class="form-select">
-                        
-                        </div>
-                        <div>
-                            <div class="col">
-                            <button type="submit" class="btn btn-primary">@webLoyal.Resources.language.Resources.ExpirationDate</button>
-                        </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
                     </div>
                 </div> 
              </div>
