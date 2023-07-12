@@ -1,4 +1,4 @@
-﻿@model List<core.Service.ProviderModel>
+﻿@model List<core.Service.ProviderListModel>
 
 <div class="container">
 
@@ -12,7 +12,7 @@
         </div>
         <div class="d-flex gap-2 mt-3 mt-md-0">
 
-            <a href="../Provider/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2">Crear<span class="d-none d-sm-inline"> Proveedor</span></a>
+            <a href="../Provider/Create/0" type="button" class="btn btn-primary d-flex align-items-center gap-2">Crear<span class="d-none d-sm-inline"> Proveedor</span></a>
         </div>
     </div>
     <div class="card card-one mt-3">
@@ -40,20 +40,20 @@
                             @foreach (var claim in Model)
                             {
                                 <tr>
-                                    <td>@claim.CodigoProveedor </td>
-                                    <td>@claim.RazonSocialProveedor</td>
-                                    <td><span class="badge bg-info">@claim.DescripcionEstadoProveedor</span> </td>
-                                    <td><span class="badge bg-body">@claim.DescripcionPais</span></td>
-                                    <td>@claim.Ciudad</td>
-                                    <td>@claim.Estado</td>
+                                    <td>@claim.ProviderCode </td>
+                                    <td>@claim.ProviderCompanyName</td>
+                                    <td><span class="badge bg-info">@claim.ProviderStateDescription</span> </td>
+                                    <td><span class="badge bg-body">@claim.CountryDescription</span></td>
+                                    <td>@claim.City</td>
+                                    <td>@claim.State</td>
 
-                                    <td>@claim.Direccion</td>
-                                    <td>@claim.Telefono</td>
+                                    <td>@claim.Address</td>
+                                    <td>@claim.Telephone</td>
                                     <td>
                                         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                             <div class="btn-group me-2" role="group" aria-label="First group">
-                                                <a href="../claims/get/@claim.CodigoProveedor" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
-                                                <a href="../claims/delete/@claim.CodigoProveedor" class="btn btn-sm btn-outline-danger"><i class="ri-delete-bin-2-fill"></i></a>
+                                                <a href="../claims/get/@claim.ProviderCode" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
+                                                <a href="../claims/delete/@claim.ProviderCode" class="btn btn-sm btn-outline-danger"><i class="ri-delete-bin-2-fill"></i></a>
                                             </div>
                                         </div>
 

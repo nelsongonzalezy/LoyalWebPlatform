@@ -1,4 +1,4 @@
-﻿
+﻿@model core.Service.ProviderCreateModel
 <div class="container">
 
         <div class="d-md-flex align-items-center justify-content-between mb-4">
@@ -15,35 +15,76 @@
             </div>
         </div>
 
-        <form id="CreateProvider" class="row g-3 col-12" asp-action="nameof(ProviderController.Create)" data-parsley-validate asp-controller="Provider" method="post">
-            <div class="col-6">
+        <form id="CreateProvider" class="row g-3 col-12" asp-action="@nameof(ProviderController.Create)" data-parsley-validate asp-controller="Provider" method="post">
+            <div class="col-xl-6 col-md-12" >
                 <div class="card card-one">
                     <div class="card-body row">
 
                         <div class="col-12">
-                            <label for="inputaddress" class="form-label">@webLoyal.Resources.language.Resources.ProviderCode</label>
-                            <input id="select2D" class="form-control">
-
+                            <label class="form-label">@webLoyal.Resources.language.Resources.CompanyNameOfTheProvider</label>
+                            <input asp-for="VendorPartnerReason" type="Text" id="@nameof(Model.VendorPartnerReason)" class="form-control">
+                            <span asp-validation-for="VendorPartnerReason" class="text-danger"></span>
                         </div>
                         <div class="col-12">
-                            <label for="inputaddress" class="form-label">@webLoyal.Resources.language.Resources.BusinessName</label>
-                            <input id="select2D" class="form-control">
+                            <label class="form-label">@webLoyal.Resources.language.Resources.EffectiveStartDate</label>
+                            <input asp-for="@Model.EffectiveDate" type="date" class="form-control">
+                            <span asp-validation-for="@Model.EffectiveDate" class="text-danger"></span>
 
                         </div>
+
+                    <div class="col-12">
+                        <label class="form-label">@webLoyal.Resources.language.Resources.Address</label>
+                        <textarea asp-for="@Model.Address" id="@nameof(Model.Address)" class="form-control" multiline></textarea>
+                        <span asp-validation-for="@Model.Address" class="text-danger"></span>
+                    </div>
+
+                        <div class="col-6">
+                            <label class="form-label">@webLoyal.Resources.language.Resources.City</label>
+                            <input asp-for="@Model.City" class="form-control">
+                            <span asp-validation-for="@Model.City" class="text-danger"></span>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">@webLoyal.Resources.language.Resources.State</label>
+                            <input asp-for="@Model.States" class="form-control">
+                            <span asp-validation-for="@Model.States" class="text-danger"></span>
+                        </div>
                         <div class="col-12">
-                            <label for="inputaddress" class="form-label">@webLoyal.Resources.language.Resources.StatusDescription</label>
+                            <label for="" class="form-label">@webLoyal.Resources.language.Resources.CountryDescription</label>
                             <select id="inputState" class="form-select">
-                                    <option selected>@webLoyal.Resources.language.Resources.Select</option>
-                                    <option>@webLoyal.Resources.language.Resources.Active</option>
-                                    <option>@webLoyal.Resources.language.Resources.Inactive</option>
-                                    <option>@webLoyal.Resources.language.Resources.InUpdateProcess</option>
+                                <option selected>@webLoyal.Resources.language.Resources.Select</option>
+                                @foreach (var item in Model.Countries)
+                                {
+                                    <option value="item.CountryCode">
+                                        item.DescriptionCountry;
+
+                                    </option>
+                                }
+
                             </select>
 
                         </div>
+                        <div class="col-12">
+                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Readonly plain text here...">
 
+                        </div>
                         <div class="col-6">
-                            <label class="form-label">@webLoyal.Resources.language.Resources.CountryDescription</label>
-                            <input value="text" class="form-control">
+                            <label class="form-label">@webLoyal.Resources.language.Resources.Name</label>
+                            <input class="form-control">
+                            <span asp-validation-for="@Model.States" class="text-danger"></span>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">contac</label>
+                            <input class="form-control">
+                            <span asp-validation-for="@Model.States" class="text-danger"></span>
+                        </div> 
+                        <div class="col-6">
+                            <label class="form-label">@webLoyal.Resources.language.Resources.PhoneNumber</label>
+                            <input  class="form-control">
+                        </div>
+                        <div class="col-6">
+                        <label class="form-label">@webLoyal.Resources.language.Resources.Email</label>
+                            <input asp-for="@Model.ProviderBranchContactCode" type="email" class="form-control" placeholder="@webLoyal.Resources.language.Resources.Jhon_smith_com">
+                        <span asp-validation-for="ProviderBranchContactCode" class="text-danger"></span>
                         </div>
                             
                         <div class="col-6">
@@ -89,18 +130,17 @@
                                 <input value="text" class="form-control" id="inputAddress" placeholder="+00-0000-000-00-00">
                             </div> 
                         </div>
-                                                        
-                        <div class="col-12">
-                            <label for="inputaddress" class="from-label">@webLoyal.Resources.language.Resources.Address</label>
-                            <textarea id="select2D" class="form-select" multiple disable>
-                                
-                            </textarea>
-                        </div>
 
-                    
+                    <div class="card-footer">
                         <div class="col">
                             <button type="submit" class="btn btn-primary">@webLoyal.Resources.language.Resources.Create</button>
-                        </div>                    
+                        </div>
+
+                    </div>
+
+
+                    
+                   
                     </div>
                 </div>
             </div>
