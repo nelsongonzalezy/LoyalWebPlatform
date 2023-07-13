@@ -353,4 +353,10 @@
   <data name="ClaimId" xml:space="preserve">
     <value>Codigo de Reclamo</value>
   </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirmar Contraseña</value>
+  </data>
+  <data name="ToRegister" xml:space="preserve">
+    <value>Registrar</value>
+  </data> 
 </root>

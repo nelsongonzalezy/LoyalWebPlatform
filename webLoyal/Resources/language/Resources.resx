@@ -420,4 +420,10 @@
   <data name="ClaimId" xml:space="preserve">
     <value>Claim Id</value>
   </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="ToRegister" xml:space="preserve">
+    <value>To Register</value>
+  </data> 
 </root>
