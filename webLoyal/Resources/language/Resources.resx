@@ -425,5 +425,11 @@
   </data>
   <data name="ToRegister" xml:space="preserve">
     <value>To Register</value>
+  </data>
+  <data name="CreateCertificate" xml:space="preserve">
+    <value>Create Certificate</value>
+  </data>
+  <data name="EnterUser" xml:space="preserve">
+    <value>Enter User</value>
   </data> 
 </root>
