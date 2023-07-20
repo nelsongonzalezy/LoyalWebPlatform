@@ -27,35 +27,35 @@ namespace webLoyal.Controllers
         [HttpPost]
         [Route("Auth/Index")]
         public async Task<IActionResult> Index(LoginModel model)
-        {   
+        {
 
-            if (model.Password=="123456" && model.Email=="test@loyalig.com")
+            if (model.Password == "123456" && model.Email == "test@loyalig.com")
             {
-                 var ActiveSession = await _loginS.Login(model);
+                var ActiveSession = await _loginS.Login(model);
 
-                    HttpContext.Session.SetString(nameof(model.Email), model.Email);
-                    HttpContext.Session.SetString(nameof(ActiveSession.UserCode), "1");
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorCode), ActiveSession.IndicatorCode.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
-                    HttpContext.Session.SetString(nameof(ActiveSession.FullNameUser), ActiveSession.FullNameUser);
-                    HttpContext.Session.SetString(nameof(ActiveSession.CodeProfile), ActiveSession.CodeProfile.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.NameProfile), ActiveSession.NameProfile);
-                    HttpContext.Session.SetString(nameof(ActiveSession.UserProfile), ActiveSession.UserProfile);
-                    HttpContext.Session.SetString(nameof(ActiveSession.PasswordEmail), ActiveSession.PasswordEmail);
-                    HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorMailVerified), ActiveSession.IndicatorMailVerified.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorChangePassword), ActiveSession.IndicatorChangePassword.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicatorViewAgents), ActiveSession.IndicatorViewAgents.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.CodeStateUser), ActiveSession.CodeStateUser.ToString());
+                HttpContext.Session.SetString(nameof(model.Email), model.Email);
+                HttpContext.Session.SetString(nameof(ActiveSession.UserCode), "1");
+                HttpContext.Session.SetString(nameof(ActiveSession.IndicatorCode), ActiveSession.IndicatorCode.ToString());
+                HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
+                HttpContext.Session.SetString(nameof(ActiveSession.FullNameUser), ActiveSession.FullNameUser);
+                HttpContext.Session.SetString(nameof(ActiveSession.CodeProfile), ActiveSession.CodeProfile.ToString());
+                HttpContext.Session.SetString(nameof(ActiveSession.NameProfile), ActiveSession.NameProfile);
+                HttpContext.Session.SetString(nameof(ActiveSession.UserProfile), ActiveSession.UserProfile);
+                HttpContext.Session.SetString(nameof(ActiveSession.PasswordEmail), ActiveSession.PasswordEmail);
+                HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
+                HttpContext.Session.SetString(nameof(ActiveSession.IndicatorMailVerified), ActiveSession.IndicatorMailVerified.ToString());
+                HttpContext.Session.SetString(nameof(ActiveSession.IndicatorChangePassword), ActiveSession.IndicatorChangePassword.ToString());
+                HttpContext.Session.SetString(nameof(ActiveSession.IndicatorViewAgents), ActiveSession.IndicatorViewAgents.ToString());
+                HttpContext.Session.SetString(nameof(ActiveSession.CodeStateUser), ActiveSession.CodeStateUser.ToString());
 
                 return Json(new
                 {
                     success = true,
                     title = Resources.language.Resources.UserFound,
-                    text = Resources.language.Resources.WelcomeMessage.ToString()+" "+model.Email.ToString().ToLower(),
+                    text = Resources.language.Resources.WelcomeMessage.ToString() + " " + model.Email.ToString().ToLower(),
                     icon = "success",
                     timer = 2000
-                }) ;
+                });
 
             }
             else
@@ -69,15 +69,15 @@ namespace webLoyal.Controllers
                 });
             }
 
-            
-           
+
+
         }
 
         [HttpGet]
         [Route("Auth/Recover")]
         public IActionResult Recover()
         {
-            return View();       
+            return View();
         }
 
         [HttpPost]
@@ -124,7 +124,7 @@ namespace webLoyal.Controllers
                 message = Resources.language.Resources.UserNotFoundMsj,
                 type = "error"
             });
-            
+
         }
 
         [HttpGet]
@@ -170,13 +170,13 @@ namespace webLoyal.Controllers
                     type = "error"
                 });
             }
-        }        
+        }
         [HttpPost]
         [Route("Auth/ChangePassword")]
         public IActionResult ChangePassword(ChangePasswordModel model)
         {
 
-            return !ModelState.IsValid ? Json(new { success=true,title="success",message="",Type="success"}) : View(model);
+            return !ModelState.IsValid ? Json(new { success = true, title = "success", message = "", Type = "success" }) : View(model);
             //return ModelState.IsValid? Redirect("/auth/index") : View(model);
         }
         [HttpGet]
@@ -185,6 +185,12 @@ namespace webLoyal.Controllers
         {
             return View();
         }
-
+        [HttpGet]
+        [Route("Auth/FastLock/{email}")]
+        public IActionResult FastLock(string email) 
+        {
+           var madel = new LoginModel { Email =email };
+            return View(madel);
+        }
     }
 }

@@ -101,7 +101,38 @@
         </div><!-- sidebar -->
 
         <div class="header-main px-3 px-lg-4">
-            <a id="menuSidebar" href="#" class="menu-link me-3 me-lg-4"><i class="ri-menu-2-fill"></i></a>
+            <a id="menuSidebar" class="menu-link me-3 me-lg-4"><i class="ri-menu-2-fill"></i></a>
+            <div class="me-auto">
+                
+            </div>
+            <a class="menu-link ms-2 ms-xl-3"><i class="ri-spy-line"></i></a>
+   @*         <div class="ms-2 ms-xl-3">*@
+              @*  <a class="menu-link me-3 me-lg-4" href="~/auth/FastLock/@Context.Session.GetString("Email")"><i class="ri-spy-line"></i></a>
+                @*<div class="dropdown-menu dropdown-menu-end mt-10-f me--10-f">
+                    <div class="dropdown-menu-header">
+                        <h6 class="dropdown-menu-title">Notifications</h6>
+                    </div><!-- dropdown-menu-header -->
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="list-group-body">US</div><!-- list-group-body -->
+                        </li>
+                    </ul>*@
+                   
+                @*</div><!-- dropdown-menu -->
+            </div><!-- dropdown -->*@
+          
+
+            <div class="dropdown dropdown-skin ms-2 ms-xl-3">
+                <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"><i class="ri-settings-3-line"></i></a>
+                <div class="dropdown-menu dropdown-menu-end mt-10-f" style="">
+                    <label>Skin Mode</label>
+                    <nav id="skinMode" class="nav nav-skin">
+                        <a href="" class="nav-link active">Light</a>
+                        <a href="" class="nav-link">Dark</a>
+                    </nav>
+                                        
+                </div><!-- dropdown-menu -->
+            </div>
 
             @*            <div class="form-search me-auto">
             <input type="text" class="form-control" placeholder="Search">
@@ -126,7 +157,7 @@
             </div><!-- dropdown-menu -->
             </div><!-- dropdown -->*@
 
-            <div class="dropdown dropdown-notification ms-3 ms-xl-4">
+            @*<div class="dropdown dropdown-notification ms-3 ms-xl-4">
                 <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-bs-auto-close="outside"><small>3</small><i class="ri-notification-3-line"></i></a>
                 <div class="dropdown-menu dropdown-menu-end mt-10-f me--10-f">
                     <div class="dropdown-menu-header">
@@ -171,7 +202,7 @@
                     </ul>
                     <div class="dropdown-menu-footer"><a href="">Show all Notifications</a></div>
                 </div><!-- dropdown-menu -->
-            </div><!-- dropdown -->
+            </div><!-- dropdown -->*@
             @*<div class="dropdown dropdown-profile ms-3 ms-xl-4">
             <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-bs-auto-close="outside"><div class="avatar online"><img src="https://via.placeholder.com/500/4c5366/fff" alt=""></div></a>
             <div class="dropdown-menu dropdown-menu-end mt-10-f">
@@ -194,6 +225,7 @@
             </div><!-- dropdown-menu-body -->
             </div><!-- dropdown-menu -->
             </div><!-- dropdown -->*@
+
         </div><!-- header-main -->
 
     </header>

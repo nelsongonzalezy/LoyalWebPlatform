@@ -1,0 +1,101 @@
+﻿@model core.Service.LoginModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+<form id="@nameof(AuthController.Index)" asp-action="@nameof(AuthController.Index)" asp-controller="Auth" method="post">
+    <div class="card-header">
+        <a href="../" class="header-logo mb-5"><img src="~/assets/img/Logo-sf.png" /></></a>
+        <h5>
+            @webLoyal.Resources.language.Resources.WelcomeMessage
+        </h5>
+        </p>
+    </div><!-- card-header -->
+    <div class="card-body">
+        <div class="mb-4">
+            <label class="form-label">@webLoyal.Resources.language.Resources.Email</label>
+            <input asp-for="Email" class="form-control" disabled type="text" value="@Model.Email.ToLower()">
+        </div>
+        <div class="mb-4">
+            <label class="form-label d-flex justify-content-between">@webLoyal.Resources.language.Resources.PassWord <a href="~/auth/recover" method="get">@webLoyal.Resources.language.Resources.ForgotPassword</a></label>
+            <input asp-for="Password" class="form-control" type="password" data-placement="top" required="" placeholder="********" />
+
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="mb-4">
+            <button id="submitButton" class="btn btn-primary btn-sign" type="submit">@webLoyal.Resources.language.Resources.Accept</button>
+        </div>
+    </div>
+
+</form>
+
+@section Scripts{
+    <script>
+        $("#Index").submit(function (event) {
+            event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+            var form = $(this);
+
+            if (!form.valid()) {
+                return;
+            }
+
+            // Deshabilitar el botón de enviar y agregar clases para activar el spinner
+            var submitButton = form.find('#submitButton');
+            submitButton.prop('disabled', true);
+            submitButton.addClass('btn btn-primary btn-sign');
+            submitButton.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> &nbsp;Loading...');
+
+            // Mostrar un mensaje de carga con SweetAlert
+            Swal.fire({
+                title: '@webLoyal.Resources.language.Resources.Processing.ToString()',
+                text: '@webLoyal.Resources.language.Resources.WaitMoment.ToString()',
+                icon: 'info',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                timer: 2000 // Duración de espera en milisegundos (en este caso, 2 segundos)
+            }).then(function () {
+                // Llamar a tu método AJAX
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: form.serialize(), // Serializar los datos del formulario
+                    success: function (result) {
+                        if (result.success) {
+                            // Mostrar el mensaje de confirmación sin botón de acción
+                            Swal.fire({
+                                title: result.title,
+                                text: result.text,
+                                icon: result.icon,
+                                showConfirmButton: false,
+                                allowOutsideClick: false,
+                                timer: 2000 // Duración de espera en milisegundos antes de redireccionar (en este caso, 2 segundos)
+                            }).then(function () {
+                                // Redireccionar
+                                window.location.href = "/menu/index";
+                            });
+                        } else {
+                            Swal.fire(result.title, result.message, result.type);
+                        }
+                    },
+                    error: function () {
+                        Swal.fire(result.title, result.message, result.type);
+                    },
+                    complete: function () {
+                        // Habilitar el botón de enviar después de completar la solicitud y eliminar el spinner
+                        submitButton.prop('disabled', false);
+                        submitButton.removeClass('');
+                        submitButton.html('@webLoyal.Resources.language.Resources.Accept');
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+}

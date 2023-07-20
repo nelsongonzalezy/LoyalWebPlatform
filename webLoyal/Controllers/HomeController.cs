@@ -32,7 +32,36 @@ namespace webLoyal.Controllers
         {
             return View();
         }
-
+        [HttpGet]
+        [Route("/home/InConstruction")]
+        public async Task<IActionResult> InConstruction()
+        {
+            return View();
+        }        
+        [HttpGet]
+        [Route("/home/notfound")]
+        public IActionResult Notfound()
+        {
+            return View();
+        }        
+        [HttpGet]
+        [Route("/home/Internalservererror")]
+        public async Task<IActionResult> InternalServerError()
+        {
+            return View();
+        }        
+        [HttpGet]
+        [Route("/home/ServicesUnaiviable")]
+        public async Task<IActionResult> ServicesUnaiviable()
+        {
+            return View();
+        }       
+        [HttpGet]
+        [Route("/home/Forbidden")]
+        public async Task<IActionResult> Forbidden()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
