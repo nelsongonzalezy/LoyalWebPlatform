@@ -2,10 +2,25 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Login.cshtml";
+    Layout = "~/Views/Shared/_LockScreen.cshtml";
 }
+<div class="card-body">
+    <form id="@nameof(AuthController.FastSingin)" asp-action="@nameof(AuthController.FastSingin)" asp-controller="Auth" method="post">
 
-<form id="@nameof(AuthController.Index)" asp-action="@nameof(AuthController.Index)" asp-controller="Auth" method="post">
+
+
+        <a href="" class="card-thumb"><img src="https://via.placeholder.com/500/4c5366/fff" alt=""></a>
+    <div class="mb-4">
+            <label class="form-label d-flex justify-content-between">@webLoyal.Resources.language.Resources.PassWord <a href="~/auth/recover" method="get">@webLoyal.Resources.language.Resources.ForgotPassword</a></label>
+            <input asp-for="Password" class="form-control" type="password" data-placement="top" required="" placeholder="********" />
+
+            <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+        <button id="submitButton" class="btn btn-primary btn-sign" type="submit">@webLoyal.Resources.language.Resources.Accept</button>
+    </form>
+</div><!-- card-body -->
+
+@*<form id="@nameof(AuthController.Index)" asp-action="@nameof(AuthController.Index)" asp-controller="Auth" method="post">
     <div class="card-header">
         <a href="../" class="header-logo mb-5"><img src="~/assets/img/Logo-sf.png" /></></a>
         <h5>
@@ -32,10 +47,10 @@
     </div>
 
 </form>
-
+*@
 @section Scripts{
     <script>
-        $("#Index").submit(function (event) {
+        $("#FastSingin").submit(function (event) {
             event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
 
             var form = $(this);

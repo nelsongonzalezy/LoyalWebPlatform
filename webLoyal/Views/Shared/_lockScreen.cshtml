@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewData["Title"] - webLoyal</title>
+    <link href="~/assets/css/style.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/assets/css/style.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/remixicon/fonts/remixicon.css" rel="stylesheet" asp-append-version="true">
+    <link href="~/assets/img/favicon.png" rel="stylesheet" type="image/x-icon" asp-append-version="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+
+</head>
+<body class="page-sign">
+
+    <div class="card card-sign">
+        <div class="card-header d-flex flex-column align-items-center">
+            <a href="../" class="header-logo mb-5"><img src="~/assets/img/Logo-sf.png" /></></a>
+            <h3 class="card-title text-center">Account Locked</h3>
+            <p class="card-text text-center">Your account was locked due to inactivity.</p>
+        </div><!-- card-header -->
+        @RenderBody()
+
+    </div><!-- card -->
+
+
+    <script>
+        'use script'
+
+        var skinMode = localStorage.getItem('skin-mode');
+        if (skinMode) {
+            $('html').attr('data-skin', 'dark');
+        }
+    </script>
+    <script src="~/lib/jquery/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js" asp-append-version="true"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -49,14 +49,13 @@ namespace webLoyal.Controllers
                 HttpContext.Session.SetString(nameof(ActiveSession.CodeStateUser), ActiveSession.CodeStateUser.ToString());
 
                 return Json(new
-                {
+                {   
                     success = true,
                     title = Resources.language.Resources.UserFound,
                     text = Resources.language.Resources.WelcomeMessage.ToString() + " " + model.Email.ToString().ToLower(),
                     icon = "success",
                     timer = 2000
                 });
-
             }
             else
             {
@@ -68,9 +67,6 @@ namespace webLoyal.Controllers
                     type = "error"
                 });
             }
-
-
-
         }
 
         [HttpGet]
@@ -191,6 +187,34 @@ namespace webLoyal.Controllers
         {
            var madel = new LoginModel { Email =email };
             return View(madel);
+        }
+        [HttpPost]
+        [Route("Auth/FastSingin")]
+        public IActionResult FastSingin(string password)
+        {
+
+            var mail = HttpContext.Session.GetString("Email");
+            if (mail == "test@loyalig.com" && password =="123456") {
+                return Json(new
+                {
+                    success = true,
+                    title = Resources.language.Resources.UserFound,
+                    text = Resources.language.Resources.WelcomeMessage.ToString() + " " + mail.ToString().ToLower(),
+                    icon = "success",
+                    timer = 2000
+                });
+            }
+            else
+            {
+                return Json(new
+                {
+                    success = false,
+                    title = Resources.language.Resources.UserNotFound.ToString(),
+                    message = Resources.language.Resources.UserNotFoundMsj,
+                    type = "error"
+                });
+            }
+
         }
     }
 }
