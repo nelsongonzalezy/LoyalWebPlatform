@@ -364,5 +364,24 @@
   </data>
   <data name="EnterUser" xml:space="preserve">
     <value>Ingresar Usuarior</value>
-  </data> 
+  </data>
+  <data name="PageNotFoundMsj" xml:space="preserve">
+    <value>Ups. La página que estabas buscando no existe. Es posible que haya escrito mal la dirección o que la página se haya movido.</value>
+  </data>
+  <data name="InternalServerErrorMsj" xml:space="preserve">
+    <value>Ups. El servidor encontró un error de servidor interno y no pudo completar su solicitud. Por favor, inténtelo de nuevo más tarde.</value>
+  </data>
+  <data name="ServiceUnavailableMsj" xml:space="preserve">
+    <value>Ups. El servidor no puede atender su solicitud debido a tiempo de inactividad por mantenimiento o problemas de capacidad. Por favor, inténtelo de nuevo más tarde.</value>
+  </data>
+  <data name="ForbiddenMsj" xml:space="preserve">
+    <value>Ups. Algo está mal. Hemos sido alertados automáticamente del problema y trabajaremos para solucionarlo lo antes posible.</value>
+  </data>
+  <data name="InConstructionMsj" xml:space="preserve">
+    <value>Éste sitio web está en construcción.
+Para ofrecer la mejor experiencia a nuestros usuarios estamos trabajando en el desarrollo de nuestra plataforma.</value>
+  </data>
+  <data name="BackHome" xml:space="preserve">
+    <value>Volver al Inicio</value>
+  </data>
 </root>

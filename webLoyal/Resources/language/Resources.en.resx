@@ -363,5 +363,24 @@
   </data>
   <data name="EnterUser" xml:space="preserve">
     <value>Enter User</value>
-  </data> 
+  </data>
+  <data name="PageNotFoundMsj" xml:space="preserve">
+    <value>Oopps. The page you were looking for doesn't exist. You may have mistyped the address or the page may have moved.</value>
+  </data>
+  <data name="InternalServerErrorMsj" xml:space="preserve">
+    <value>Oopps. The server encountered an internal server error and was unable to complete your request. Please try again later.</value>
+  </data>
+  <data name="ServiceUnavailableMsj" xml:space="preserve">
+    <value>Oopps. The server is unable to service your request due to maintenance downtime or capacity problems. Please try again later.</value>
+  </data>
+  <data name="ForbiddenMsj" xml:space="preserve">
+    <value>Oopps. Something is broken. We've been automatically alerted of the issue and will work to fix it asap.</value>
+  </data>
+  <data name="InConstructionMsj" xml:space="preserve">
+    <value>This website is under construction.
+To offer the best experience to our users we are working on the development of our platform.</value>
+  </data>
+  <data name="BackHome" xml:space="preserve">
+    <value>Back Home</value>
+  </data>
 </root>
