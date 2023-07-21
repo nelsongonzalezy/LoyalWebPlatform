@@ -25,7 +25,7 @@
     <header>
         <div class="sidebar">
             <div class="sidebar-header">
-                <a href="../" class="sidebar-logo">Loyal Major Medical</a>
+                <a href="../menu/index" class="sidebar-logo"><img style="height:60px;" src="~/assets/img/LogoLoyal.png" /></a>
             </div><!-- sidebar-header -->
             <div id="sidebarMenu" class="sidebar-body">
                 <div class="nav-group">
@@ -105,7 +105,7 @@
             <div class="me-auto">
                 
             </div>
-            <a class="menu-link ms-2 ms-xl-3"><i class="ri-spy-line"></i></a>
+            <a href="~/auth/FastLock/@Context.Session.GetString("Email")"  class="menu-link ms-2 ms-xl-3"><i class="ri-spy-line"></i></a>
    @*         <div class="ms-2 ms-xl-3">*@
               @*  <a class="menu-link me-3 me-lg-4" href="~/auth/FastLock/@Context.Session.GetString("Email")"><i class="ri-spy-line"></i></a>
                 @*<div class="dropdown-menu dropdown-menu-end mt-10-f me--10-f">
