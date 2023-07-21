@@ -381,4 +381,7 @@
     <value>Éste sitio web está en construcción.
 Para ofrecer la mejor experiencia a nuestros usuarios estamos trabajando en el desarrollo de nuestra plataforma.</value>
   </data>
+  <data name="BackHome" xml:space="preserve">
+    <value>Volver al Inicio</value>
+  </data>
 </root>

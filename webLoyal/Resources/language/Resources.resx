@@ -448,4 +448,7 @@
     <value>This website is under construction.
 To offer the best experience to our users we are working on the development of our platform.</value>
   </data>
+  <data name="BackHome" xml:space="preserve">
+    <value>Back Home</value>
+  </data>
 </root>
