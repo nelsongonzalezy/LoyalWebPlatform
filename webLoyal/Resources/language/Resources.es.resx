@@ -414,4 +414,7 @@ Para ofrecer la mejor experiencia a nuestros usuarios estamos trabajando en el d
   <data name="ForbiddenOoppsMsj" xml:space="preserve">
     <value>Ups. Algo está roto. Hemos sido alertados automáticamente del problema y trabajaremos para solucionarlo lo antes posible.</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
 </root>

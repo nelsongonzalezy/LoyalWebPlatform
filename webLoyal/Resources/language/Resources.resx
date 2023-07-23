@@ -481,4 +481,7 @@ To offer the best experience to our users we are working on the development of o
   <data name="ForbiddenOoppsMsj" xml:space="preserve">
     <value>Oopps. Something is broken. We’ve been automatically alerted of the issue and will work to fix it asap.</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
 </root>
