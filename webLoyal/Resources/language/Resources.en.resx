@@ -383,10 +383,10 @@ To offer the best experience to our users we are working on the development of o
   <data name="BackHome" xml:space="preserve">
     <value>Back Home</value>
   </data>
-  <data name="ServicesUnaiviableMsj" xml:space="preserve">
-    <value>Services Unaiviable</value>
+  <data name="ServicesUnavailableMsj" xml:space="preserve">
+    <value>Services Unavailable</value>
   </data>
-  <data name="ServicesUnaiviableOoppsMsj" xml:space="preserve">
+  <data name="ServicesUnavailableOoppsMsj" xml:space="preserve">
     <value>Oopps. The server is unable to service your request due to maintenance downtime or capacity problems. Please try again later.</value>
   </data>
   <data name="NotFoundMsj" xml:space="preserve">

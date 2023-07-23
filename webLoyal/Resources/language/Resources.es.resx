@@ -384,10 +384,10 @@ Para ofrecer la mejor experiencia a nuestros usuarios estamos trabajando en el d
   <data name="BackHome" xml:space="preserve">
     <value>Volver al Inicio</value>
   </data>
-  <data name="ServicesUnaiviableMsj" xml:space="preserve">
-    <value>Services Unaiviable</value>
+  <data name="ServicesUnavailableMsj" xml:space="preserve">
+    <value>Servicio No Disponible</value>
   </data>
-  <data name="ServicesUnaiviableOoppsMsj" xml:space="preserve">
+  <data name="ServicesUnavailableOoppsMsj" xml:space="preserve">
     <value>Ups. El servidor no puede atender su solicitud debido a tiempo de inactividad por mantenimiento o problemas de capacidad. Por favor, inténtelo de nuevo más tarde.</value>
   </data>
   <data name="NotFoundMsj" xml:space="preserve">
