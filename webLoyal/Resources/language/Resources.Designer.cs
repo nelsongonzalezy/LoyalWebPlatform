@@ -133,6 +133,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Back Home.
+        /// </summary>
+        public static string BackHome {
+            get {
+                return ResourceManager.GetString("BackHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Business Name.
         /// </summary>
         public static string BusinessName {
@@ -214,7 +223,7 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Claim Info. 
+        ///   Looks up a localized string similar to Claim Info.
         /// </summary>
         public static string ClaimInfo {
             get {
@@ -295,6 +304,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        public static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Country Description.
         /// </summary>
         public static string CountryDescription {
@@ -309,6 +327,15 @@ namespace webLoyal.Resources.language {
         public static string Create {
             get {
                 return ResourceManager.GetString("Create", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create Certificate.
+        /// </summary>
+        public static string CreateCertificate {
+            get {
+                return ResourceManager.GetString("CreateCertificate", resourceCulture);
             }
         }
         
@@ -448,6 +475,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter User.
+        /// </summary>
+        public static string EnterUser {
+            get {
+                return ResourceManager.GetString("EnterUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exclusions.
         /// </summary>
         public static string Exclusions {
@@ -462,6 +498,24 @@ namespace webLoyal.Resources.language {
         public static string ExpirationDate {
             get {
                 return ResourceManager.GetString("ExpirationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forbidden.
+        /// </summary>
+        public static string ForbiddenMsj {
+            get {
+                return ResourceManager.GetString("ForbiddenMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oopps. Something is broken. We’ve been automatically alerted of the issue and will work to fix it asap..
+        /// </summary>
+        public static string ForbiddenOoppsMsj {
+            get {
+                return ResourceManager.GetString("ForbiddenOoppsMsj", resourceCulture);
             }
         }
         
@@ -484,6 +538,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to IC10.
         /// </summary>
         public static string IC10 {
@@ -502,6 +565,24 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to In Construction.
+        /// </summary>
+        public static string InConstructionMsj {
+            get {
+                return ResourceManager.GetString("InConstructionMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This website is under construction. To offer the best experience to our users we are working on the development of our platform..
+        /// </summary>
+        public static string InConstructionOoppsMsj {
+            get {
+                return ResourceManager.GetString("InConstructionOoppsMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Information Of The Affected Of The Policy.
         /// </summary>
         public static string InformationOfTheAffectedOfThePolicy {
@@ -516,6 +597,24 @@ namespace webLoyal.Resources.language {
         public static string Insured {
             get {
                 return ResourceManager.GetString("Insured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal Server Error.
+        /// </summary>
+        public static string InternalServerErrorMsj {
+            get {
+                return ResourceManager.GetString("InternalServerErrorMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oopps. The server encountered an internal server error and was unable to complete your request. Please try again later..
+        /// </summary>
+        public static string InternalServerErrorOoppsMsj {
+            get {
+                return ResourceManager.GetString("InternalServerErrorOoppsMsj", resourceCulture);
             }
         }
         
@@ -646,6 +745,24 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not Found.
+        /// </summary>
+        public static string NotFoundMsj {
+            get {
+                return ResourceManager.GetString("NotFoundMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oopps. The page you were looking for doesn&apos;t exist. You may have mistyped the address or the page may have moved..
+        /// </summary>
+        public static string NotFoundOoppsMsj {
+            get {
+                return ResourceManager.GetString("NotFoundOoppsMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notify Insurance.
         /// </summary>
         public static string NotifyInsuranceAgent {
@@ -678,6 +795,15 @@ namespace webLoyal.Resources.language {
         public static string OriginOfTheClaim {
             get {
                 return ResourceManager.GetString("OriginOfTheClaim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oopps. The page you were looking for doesn&apos;t exist. You may have mistyped the address or the page may have moved..
+        /// </summary>
+        public static string PageNotFoundMsj {
+            get {
+                return ResourceManager.GetString("PageNotFoundMsj", resourceCulture);
             }
         }
         
@@ -880,6 +1006,33 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Services Unavailable.
+        /// </summary>
+        public static string ServicesUnavailableMsj {
+            get {
+                return ResourceManager.GetString("ServicesUnavailableMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oopps. The server is unable to service your request due to maintenance downtime or capacity problems. Please try again later..
+        /// </summary>
+        public static string ServicesUnavailableOoppsMsj {
+            get {
+                return ResourceManager.GetString("ServicesUnavailableOoppsMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oopps. The server is unable to service your request due to maintenance downtime or capacity problems. Please try again later..
+        /// </summary>
+        public static string ServiceUnavailableMsj {
+            get {
+                return ResourceManager.GetString("ServiceUnavailableMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to State.
         /// </summary>
         public static string State {
@@ -912,6 +1065,15 @@ namespace webLoyal.Resources.language {
         public static string TomodarApp {
             get {
                 return ResourceManager.GetString("TomodarApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To Register.
+        /// </summary>
+        public static string ToRegister {
+            get {
+                return ResourceManager.GetString("ToRegister", resourceCulture);
             }
         }
         
