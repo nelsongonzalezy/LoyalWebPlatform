@@ -2,7 +2,7 @@
 
 namespace webLoyal.Controllers
 {
-    public class draftController : Controller
+    public class DraftController : Controller
     {
         public IActionResult Index()
         {
