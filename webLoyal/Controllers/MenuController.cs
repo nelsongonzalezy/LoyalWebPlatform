@@ -19,8 +19,9 @@ namespace webLoyal.Controllers
         }
         public async  Task<IActionResult> PartialMenu()
         {
-            var x = await _menu.GetByUser();
-            return View(x.ToList());
+            //var x = await _menu.GetByUser();
+            //return View(x.ToList());
+            return View();
         }
     }
 }
