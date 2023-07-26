@@ -1,3 +1,38 @@
-﻿ <div>
-    
- </div>
+﻿<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div style="display: flex; align-items: center; justify-content: center; width: 18cm; height: 1.5cm; border: 1px solid black; text-align: center; background-color: skyblue; margin-bottom: 20px">
+  <h1 style="color: white;">Ingrese datos de Cotización</h1>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Si desea asociar un agente seleccione
+  </label>
+</div>
+<input style=type="text" class="form-control" value=" " data-role="tagsinput">
+<p>Inicio de Validez</p>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+
+<html>
+  <head>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#datepicker3').datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true,
+          changeMonth: true,
+          changeYear: true
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" id="datepicker3">
+  </body>
+</html>
