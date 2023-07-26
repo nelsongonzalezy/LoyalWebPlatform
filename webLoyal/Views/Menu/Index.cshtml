@@ -1,4 +1,4 @@
-﻿
+﻿@model List<core.Service.MenuModel>;
 
 <div class="container">
 
@@ -16,16 +16,34 @@
         </div>
     </div>
 
-    <div class="form-search me-auto">
+@*    <div class="form-search me-auto">
         <input type="text" class="form-control" placeholder="Search for files and folders...">
         <i class="ri-search-line"></i>
-    </div>
+    </div>*@
 
     <br />
 
 <div class="col-lg-12 row g-3">
-        <div class="col-3 col-sm-4 col-md-3 col-xl">
-            <div class="card card-file">
+
+
+            @foreach (var menu in Model)
+            {
+                <div class="col-3">
+
+                <div class="card card-file">
+                    <div class="card-file-icon danger">
+                        <i class="fa fa-ambulance" aria-hidden="true"></i>
+                    </div>
+                
+                <div class="card-body">
+                    <h6><a href="@menu.Url" class="link-02"> @menu.NameOption</a></h6>
+                    <span> </span>
+                </div>
+                </div>
+            </div>
+      
+            }
+@*            <div class="card card-file">
                
                 <!-- dropdown -->
                 <div class="card-file-icon danger">
@@ -79,9 +97,9 @@
                 <div class="card-footer"><span class="d-none d-sm-inline"> Last access: </span></div>
             </div>
         </div>
+*@
 
 
-
-</div>
+</>
 
 </div>

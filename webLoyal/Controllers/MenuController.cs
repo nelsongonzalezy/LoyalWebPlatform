@@ -1,12 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using core.Service;
+using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
     public class MenuController : Controller
     {
-        public IActionResult Index()
+        private readonly IMenu _menu;
+
+        public MenuController(IMenu menu) 
         {
-            return View();
+            _menu = menu;
+        }
+
+        public async  Task<IActionResult> Index()
+        {
+            var x = await _menu.GetByUser();
+            return View(x.ToList());
+        }
+        public async  Task<IActionResult> PartialMenu()
+        {
+            var x = await _menu.GetByUser();
+            return View(x.ToList());
         }
     }
 }

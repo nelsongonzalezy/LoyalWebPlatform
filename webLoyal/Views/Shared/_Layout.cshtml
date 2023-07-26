@@ -27,46 +27,10 @@
             <div class="sidebar-header">
                 <a href="../menu/index" class="sidebar-logo"><img style="height:60px;" src="~/assets/img/LogoLoyal.png" /></a>
             </div><!-- sidebar-header -->
+
             <div id="sidebarMenu" class="sidebar-body">
-                <div class="nav-group">
-                    <a href="#" class="nav-label">Dashboard</a>
-                    <ul class="nav nav-sidebar">
-                        <li class="nav-item">
-                            <a href="~/dash/index" class="nav-link active"><i class="ri-pie-chart-2-fill"></i> <span>Board de Reclamos</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="~/dash/BoardAgents" class="nav-link"><i class="ri-calendar-todo-line"></i> <span>Board de Agentes</span></a>
-                        </li>
-                   
 
-                    </ul>
-                </div>
-                <div class="nav-group">
-                    <a href="#" class="nav-label">Funciones</a>
-                    <ul class="nav nav-sidebar">
-                        
-                        <li class="nav-item">
-                            <a href="~/claims/index" class="nav-link"><i class="ri-calendar-todo-line"></i> <span>Reclamos</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="~/Policies/index" class="nav-link"><i class="ri-shopping-bag-3-line"></i> <span>Polizas</span></a>
-                        </li> 
-                        <li class="nav-item">
-                            <a href="~/Provider/index" class="nav-link"><i class="ri-shopping-bag-3-line"></i> <span>Proveedores</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="~/Certificates/index" class="nav-link"><i class="ri-shopping-bag-3-line"></i> <span>Certificados</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="~/Reports/index" class="nav-link"><i class="ri-file-text-line fs-48 lh-1"></i> <span>Reportes de Reclamos</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="~/Stages/index" class="nav-link"><i class="ri-file-text-line fs-48 lh-1"></i> <span>Stages</span></a>
-                        </li>
-
-                    </ul>
-                </div>
-                
+                @Html.Partial("~/Views/Menu/PartialMenu.cshtml")
                 
                 <!-- nav-group -->
 

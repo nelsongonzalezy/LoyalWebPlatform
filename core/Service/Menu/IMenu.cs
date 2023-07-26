@@ -2,5 +2,6 @@
 {
     public interface IMenu
     {
+        Task<IQueryable<MenuModel>> GetByUser();
     }
 }
