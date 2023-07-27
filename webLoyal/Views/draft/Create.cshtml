@@ -10,7 +10,7 @@
           
         </div>
     </div>
-       
+  
     <form class="row g-3 col-12">
 
     <div class="form-check form-switch">
@@ -32,30 +32,24 @@
     listaNombres.disabled = !this.checked;
      });
     </script>
-
-            <form id="CreateProvider" class="row g-3 col-12" asp-action="@nameof(ProviderController.Create)" data-parsley-validate asp-controller="Provider" method="post">
-            <div class="col-xl-6 col-md-12" >
-                <div class="card card-one">
-                    <div class="card-body row">
-
-                        <div class="col-12">
-                            <label class="form-label">@webLoyal.Resources.language.Resources.CompanyNameOfTheProvider</label>
-                            <input asp-for="VendorPartnerReason" type="Text" id="@nameof(Model.VendorPartnerReason)" class="form-control"></input>
-                            <span asp-validation-for="VendorPartnerReason" class="text-danger"></span>
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label">@webLoyal.Resources.language.Resources.EffectiveStartDate</label>
-                            <input asp-for="@Model.EffectiveDate" type="date" class="form-control"></input>
-                            <span asp-validation-for="@Model.EffectiveDate" class="text-danger"></span>
-
-                        </div>
-                    </div>
-                 </div>
-            </div>
-                
-            </form>
-
-    de aqui para abajo es el boton de aceptar
+    <style>
+        input[type="date"], select {
+        display: inline-block;
+        }
+        input[type="date"] {
+        float: left;
+         }
+        </style>
+    <div>
+       <label>Inicio de Validez</label>
+    </div>
+    <input type="date" name="fecha">
+    <select class="form-select" aria-label="Default select example">
+    <option selected>Selecciona el Pais</option>
+    <option value="1">Alemania</option>
+    <option value="2">Colombia</option>
+    <option value="3">Venezuela</option>
+    </select>
 
                     <div class="col-12">
                         <button id="submitButton2" type="submit" class="btn btn-primary">@webLoyal.Resources.language.Resources.Accept</button>
@@ -63,3 +57,5 @@
 
     </form>
  </div>
+
+ 
