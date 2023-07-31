@@ -1,4 +1,15 @@
-﻿ <div class="container">
+﻿
+<style>
+    input[type="date"], select {
+        display: inline-block;
+    }
+
+    input[type="date"] {
+        float: left;
+    }
+</style>
+
+<div class="container">
     
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
@@ -11,51 +22,70 @@
         </div>
     </div>
   
-    <form class="row g-3 col-12">
+    <form class="row col-6">
 
-    <div class="form-check form-switch">
-     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-     <label class="form-check-label" for="flexSwitchCheckDefault">Si desea asociar un agente seleccione</label>
-    </div>
 
-    <select id="listaNombres" disabled>
-    <option value="nombre1">Agente 1</option>
-    <option value="nombre2">Agente 2</option>
-    <option value="nombre3">Agente 3</option>
-    </select>
+        <div class="col-6 form-control">
+            <div class="card card-one">
+                <div class ="card-body row">
+                    <div class="col-12">
+                        
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-label" for="flexSwitchCheckDefault">Si desea asociar un agente seleccione</label>
+                        </div>
 
-    <script>
-    const checkbox = document.getElementById('flexSwitchCheckDefault');
-    const listaNombres = document.getElementById('listaNombres');
+                    </div>
+                    <div class="col-12"
+                    <label class="form-label">Agentes</label>
 
-    checkbox.addEventListener('change', function() {
-    listaNombres.disabled = !this.checked;
-     });
-    </script>
-    <style>
-        input[type="date"], select {
-        display: inline-block;
-        }
-        input[type="date"] {
-        float: left;
-         }
-        </style>
-    <div>
-       <label>Inicio de Validez</label>
-    </div>
-    <input type="date" name="fecha">
-    <select class="form-select" aria-label="Default select example">
-    <option selected>Selecciona el Pais</option>
-    <option value="1">Alemania</option>
-    <option value="2">Colombia</option>
-    <option value="3">Venezuela</option>
-    </select>
+                    <select class="form-select" id="listaNombres" disabled>
+                        <option value="nombre1">Agente 1</option>
+                        <option value="nombre2">Agente 2</option>
+                        <option value="nombre3">Agente 3</option>
+                    </select>
 
+                    </div>
+                    <div class="col-12"
+                    <label class="form-label">Inicio de Validez</label>
+                    <input class="form-control" type="date" name="fecha">
+                    
+                    </div>
+                    <div class="col-12"
+                    <label class="form-label">pais</label>
+                     <select class="form-select" aria-label="Default select example">
+                        <option selected>Selecciona el Pais</option>
+                        <option value="1">Alemania</option>
+                        <option value="2">Colombia</option>
+                        <option value="3">Venezuela</option>
+                    </select>
+                    
+                    </div>
+
+                   
+
+
+        </div>
+                <div class="card-footer">
                     <div class="col-12">
                         <button id="submitButton2" type="submit" class="btn btn-primary">@webLoyal.Resources.language.Resources.Accept</button>
                     </div>
 
+                </div>
+            </div>
+        </div>
+
+ 
     </form>
  </div>
 
- 
+@section Scripts{
+    <script>
+        const checkbox = document.getElementById('flexSwitchCheckDefault');
+        const listaNombres = document.getElementById('listaNombres');
+
+        checkbox.addEventListener('change', function () {
+            listaNombres.disabled = !this.checked;
+        });
+    </script>
+}
