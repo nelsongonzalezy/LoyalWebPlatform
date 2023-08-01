@@ -1,5 +1,6 @@
 ﻿using core.Service;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace webLoyal.Controllers
 {
@@ -58,6 +59,17 @@ namespace webLoyal.Controllers
                     type = "error"
                 });
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GenerateLetterOfGuarantee() 
+        {
+            return View();
+        }
+        [HttpGet]
+        public async Task<IActionResult> GenerateDenialLetter()
+        {
+            return View();
         }
     }
 }
