@@ -1,14 +1,4 @@
 ﻿
-<style>
-    input[type="date"], select {
-        display: inline-block;
-    }
-
-    input[type="date"] {
-        float: left;
-    }
-</style>
-
 <div class="container">
     
     <div class="d-md-flex align-items-center justify-content-between mb-4">
@@ -36,7 +26,7 @@
                         </div>
 
                     </div>
-                    <div class="col-12"
+                    <div class="col-12">
                     <label class="form-label">Agentes</label>
 
                     <select class="form-select" id="listaNombres" disabled>
@@ -46,12 +36,12 @@
                     </select>
 
                     </div>
-                    <div class="col-12"
+                    <div class="col-12">
                     <label class="form-label">Inicio de Validez</label>
                     <input class="form-control" type="date" name="fecha">
                     
                     </div>
-                    <div class="col-12"
+                    <div class="col-12">
                     <label class="form-label">Pais</label>
                      <select class="form-select" aria-label="Default select example">
                         <option selected>Selecciona el Pais</option>
@@ -65,36 +55,20 @@
                     <label for="exampleFormControlTextarea1" class="form-label">Aplicante</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Nombre Completo..."></textarea>
                 </div>
-                 <div class="col-12"
+                 <div class="col-12">
                     <label class="form-label">Fecha de Nacimiento</label>
                     <input class="form-control" type="date" name="fecha">
                     
                 </div>   
-                <div class="col-12"
-                    <label class="form-label">Genero Asignado al Nacer</label>
+                <div class="col-12">
+                    <label class="form-label">Sexo</label>
 
-                    <select class="form-select" aria-label="Genero Asignado al Nacer">
+                    <select class="form-select" aria-label="Sexo">
                         <option selected>Selecciona el Genero</option>
                         <option value="1">Femenino</option>
                         <option value="2">Masculino</option>
-                        <option value="3">Prefiero no decirlo</option>
                     </select>
                 </div>
-                <div class="col-12"
-                    <label class="form-label">Identidad Sexual</label>
-
-                    <select class="form-select" aria-label="Identidad Sexual">
-                        <option selected>Selecciona como te identificas</option>
-                        <option value="nombre1">Femenino</option>
-                        <option value="nombre2">Masculino</option>
-                        <option value="nombre3">Gender Nonconforming</option>
-                        <option value="nombre4">No Binario (a)</option>
-                        <option value="nombre5">Trans Femenino</option>
-                        <option value="nombre6">Trans Masculino</option>
-                        <option value="nombre7">Prefiero no decirlo</option>
-                    </select>
-                </div>
-
         </div>
                 <div class="card-footer">
                     <div class="col-12">
@@ -107,6 +81,7 @@
 
  
     </form>
+<div class="col-6"></div>
  </div>
 
 @section Scripts{
@@ -117,5 +92,6 @@
         checkbox.addEventListener('change', function () {
             listaNombres.disabled = !this.checked;
         });
+
     </script>
 }
