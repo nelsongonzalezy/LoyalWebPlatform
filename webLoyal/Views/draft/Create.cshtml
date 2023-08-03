@@ -1,14 +1,4 @@
 ﻿
-<style>
-    input[type="date"], select {
-        display: inline-block;
-    }
-
-    input[type="date"] {
-        float: left;
-    }
-</style>
-
 <div class="container">
     
     <div class="d-md-flex align-items-center justify-content-between mb-4">
@@ -36,48 +26,92 @@
                         </div>
 
                     </div>
-                    <div class="col-12"
-                    <label class="form-label">Agentes</label>
+                    <div class="col-12">
+                        <label class="form-label">Agentes</label>
 
-                    <select class="form-select" id="listaNombres" disabled>
-                        <option value="nombre1">Agente 1</option>
-                        <option value="nombre2">Agente 2</option>
-                        <option value="nombre3">Agente 3</option>
-                    </select>
+                        <select class="form-select" id="listaNombres" disabled>
+                            <option value="nombre1">Agente 1</option>
+                            <option value="nombre2">Agente 2</option>
+                            <option value="nombre3">Agente 3</option>
+                        </select>
 
                     </div>
-                    <div class="col-12"
-                    <label class="form-label">Inicio de Validez</label>
+                    <div class="col-12">
+                        <label class="form-label">Inicio de Validez</label>
+                        <input class="form-control" type="date" name="fecha">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Pais</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecciona el Pais</option>
+                                <option value="1">Alemania</option>
+                                <option value="2">Colombia</option>
+                                <option value="3">Venezuela</option>
+                            </select>
+                    </div>
+                <div>
+                <div style="background-color: lightblue; padding: 0,5px;margin-bottom: 8px;margin-top: 10px;">
+                    <label for="exampleFormControlTextarea1" class="form-label">Aplicante</label>
+                </div>
+                <div>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Nombre Completo..."></textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Fecha de Nacimiento</label>
                     <input class="form-control" type="date" name="fecha">
-                    
-                    </div>
-                    <div class="col-12"
-                    <label class="form-label">pais</label>
-                     <select class="form-select" aria-label="Default select example">
-                        <option selected>Selecciona el Pais</option>
-                        <option value="1">Alemania</option>
-                        <option value="2">Colombia</option>
-                        <option value="3">Venezuela</option>
+                </div>   
+                <div class="col-12">
+                    <label class="form-label">Sexo</label>
+
+                    <select class="form-select" aria-label="Sexo">
+                        <option selected>Selecciona el Genero</option>
+                        <option value="1">Femenino</option>
+                        <option value="2">Masculino</option>
                     </select>
-                    
-                    </div>
-
-                   
-
-
-        </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                </div>
+                <div style="background-color: lightblue; padding: 0,5px;margin-bottom: 8px;">
+                    <label for="exampleFormControlTextarea1" class="form-label">Conyugue</label>
+                </div>
+                <div>
+                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Nombre Completo..."></textarea>
+                </div>
+                <div class="col-12">
+                        <label class="form-label">Fecha de Nacimiento</label>
+                        <input class="form-control" type="date" name="fecha">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Número de Hijos (Opcional)</label>
+                    <input type="number" id="numero" min="0" max="10">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Transplante
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Complicaciones Maternidad
+                    </label>
                 <div class="card-footer">
                     <div class="col-12">
                         <button id="submitButton2" type="submit" class="btn btn-primary">@webLoyal.Resources.language.Resources.Accept</button>
                     </div>
-
+                </div>                    
                 </div>
             </div>
         </div>
 
+
  
     </form>
- </div>
+    <div class="col-6"></div>
+</div>
 
 @section Scripts{
     <script>
@@ -87,5 +121,6 @@
         checkbox.addEventListener('change', function () {
             listaNombres.disabled = !this.checked;
         });
+
     </script>
 }
