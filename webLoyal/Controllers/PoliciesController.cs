@@ -22,5 +22,8 @@ namespace webLoyal.Controllers
 
             return View(model);
         }
+
+        public IActionResult Detail() { return View(); }
+
     }
 }
