@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Service\RequestMonitor\Model\" />
     <Folder Include="Service\Users\" />
     <Folder Include="Utilities\" />
   </ItemGroup>
