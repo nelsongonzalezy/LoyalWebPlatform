@@ -1,4 +1,5 @@
-﻿
+﻿@model List<core.Service.RequestMonitorDetailModel>
+
 <div class="row g-3">
     <div class="col-xl-12">
         <div class="card card-one mt-3">
@@ -9,43 +10,45 @@
                             <tr>
                                 <th>#</th>
                                 <th>@webLoyal.Resources.language.Resources.Agent</th>
-                                <th>@webLoyal.Resources.language.Resources.Product</th>
-                                <th>@webLoyal.Resources.language.Resources.EffectiveStartDate</th>
                                 <th>@webLoyal.Resources.language.Resources.State</th>
+                                <th>@webLoyal.Resources.language.Resources.Product</th>
+
+                                <th>@webLoyal.Resources.language.Resources.EffectiveStartDate</th>
                                 <th>@webLoyal.Resources.language.Resources.CountryDescription</th>
                                 <th>@webLoyal.Resources.language.Resources.PlanCode</th>
-                                <th>Forma de pago</th>
+                                
                                 <th></th>
 
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.CodigoCotizacion</td>
 
-                                    <tr>
-                                        <td>10</td>
-                                        <td>Nelson Gonnzalez</td>
-                                        <td>Legacy</td>
+                                    <td>@item.NombreAgente</td>
+                                    <td>@item.DescripcionEstadoSolicitud</td>
+                                    <td>@item.DescripcionProducto</td>
+                                    <td>@item.FechaSolicitud</td>
+                                    <td>@item.DescripcionPais</td>
+                                    <td>@item.DescripcionPlan</td>
+                                   
+                                    <td>
+                                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                            <div class="btn-group me-2" role="group" aria-label="First group">
+                                                <a href="../requestmonitor/detail" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
 
-                                        <td>2023-01-01</td>
-                                        <td>
-                                            <span class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title=""></span> &nbsp En proceso</span>
-                                        </td>
-
-                                        <td>Venezuela</td>
-                                        <td>Opcion II </td>
-                                        <td>Trimestral</td>
-                                        <td>
-                                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                                <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../requestmonitor/detail" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
-                                                
-                                                </div>
                                             </div>
+                                        </div>
 
-                                        </td>
+                                    </td>
 
-                                    </tr>
-                            <tr>
+                                </tr>
+
+                            }
+
+                            @*<tr>
                                 <td>9</td>
                                 <td>Nelson Gonnzalez</td>
                                 <td>Legacy</td>
@@ -117,7 +120,7 @@
                                 </td>
 
                             </tr>
-
+*@
                         </tbody>
                     </table>
                 </div>

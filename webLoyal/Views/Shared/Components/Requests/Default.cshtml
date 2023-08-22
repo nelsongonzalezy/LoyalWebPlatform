@@ -1,5 +1,19 @@
-﻿<div class="row g-3">
-    <div class="col-6 col-xl-3">
+﻿@model List<core.Service.RequestMonitorStatusModel>;
+
+<div class="row g-3">
+    @foreach( var item in Model)
+    {
+        <div class="col-6 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">@item.DescripcionEstadoSolicitud.</label>
+                    <h3 class="card-value mb-1"><i class="@item.Icon"></i> @item.CantidadRegistros</h3>
+
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div>
+    }
+   @* <div class="col-6 col-xl-3">
         <div class="card card-one">
             <div class="card-body">
                 <label class="card-title fs-sm fw-medium mb-1">Generada</label>
@@ -70,5 +84,5 @@
 
             </div><!-- card-body -->
         </div><!-- card-one -->
-    </div>
+    </div>*@
 </div>

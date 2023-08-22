@@ -1,13 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using core.Service;
+using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Views.ViewComponents
 {
     public class RequestsViewComponent : ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly IRequestMonitor _requestMonitor;
+
+        public RequestsViewComponent(IRequestMonitor requestMonitor)
         {
-            // Lógica para obtener datos o realizar acciones necesarias
-            return View();
+            _requestMonitor = requestMonitor;
+        }
+
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var x = await _requestMonitor.GetAllStatus(); 
+            return View(x.ToList());
         }
     }
 }
