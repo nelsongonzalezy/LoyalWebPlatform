@@ -6,7 +6,7 @@
         public int? CodigoCotizacion { get; set; }
         public string CodigoEstadoSolicitud { get; set; }
         public string DescripcionEstadoSolicitud { get; set; }
-        public DateTime? FechaSolicitud { get; set; }
+        public DateTime FechaSolicitud { get; set; }
         public int? CodigoPais { get; set; }
         public string DescripcionPais { get; set; }
         public int? CodigoProducto { get; set; }
