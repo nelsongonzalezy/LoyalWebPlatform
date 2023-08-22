@@ -18,22 +18,23 @@ namespace webLoyal.Controllers
             _localizer = localizer;
             _loginS = loginS;
         }
+
         [HttpGet]
         [Route("Auth/Index")]
         public IActionResult Index()
         {
             return View();
         }
+
         [HttpPost]
         [Route("Auth/Index")]
         public async Task<IActionResult> Index(LoginModel model)
         {
-
-            if (model.Password == "123456" && model.Email == "test@loyalig.com")
+            if (model.Password == "123456" && model.UserName == "test")
             {
                 var ActiveSession = await _loginS.Login(model);
 
-                HttpContext.Session.SetString(nameof(model.Email), model.Email);
+                HttpContext.Session.SetString(nameof(model.UserName), model.UserName);
                 HttpContext.Session.SetString(nameof(ActiveSession.UserCode), "1");
                 HttpContext.Session.SetString(nameof(ActiveSession.IndicatorCode), ActiveSession.IndicatorCode.ToString());
                 HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
@@ -52,7 +53,7 @@ namespace webLoyal.Controllers
                 {   
                     success = true,
                     title = Resources.language.Resources.UserFound,
-                    text = Resources.language.Resources.WelcomeMessage.ToString() + " " + model.Email.ToString().ToLower(),
+                    text = Resources.language.Resources.WelcomeMessage.ToString() + " " + model.UserName.ToString().ToLower(),
                     icon = "success",
                     timer = 2000
                 });
@@ -183,10 +184,10 @@ namespace webLoyal.Controllers
         }
         [HttpGet]
         [Route("Auth/FastLock/{email}")]
-        public IActionResult FastLock(string email) 
+        public IActionResult FastLock(string userName) 
         {
-           var madel = new LoginModel { Email =email };
-            return View(madel);
+           var model = new LoginModel { UserName = userName};
+            return View(model);
         }
         [HttpPost]
         [Route("Auth/FastSingin")]

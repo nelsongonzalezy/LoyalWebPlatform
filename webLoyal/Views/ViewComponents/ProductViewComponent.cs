@@ -1,13 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using core.Service;
+using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Views.ViewComponents
 {
     public class ProductViewComponent : ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly IProduct _produc;
+
+        public ProductViewComponent(IProduct produc)
         {
-            // Lógica para obtener datos o realizar acciones necesarias
-            return View();
+            _produc = produc;
+        }
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var x =  await _produc.GetProducComponent();
+            return View(x.ToList());
         }
     }
 }

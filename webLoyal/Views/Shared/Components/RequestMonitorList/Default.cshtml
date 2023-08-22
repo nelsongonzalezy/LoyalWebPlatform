@@ -1,4 +1,5 @@
-﻿
+﻿@model List<core.Service.RequestMonitorDetailModel>
+
 <div class="row g-3">
     <div class="col-xl-12">
         <div class="card card-one mt-3">
@@ -9,43 +10,65 @@
                             <tr>
                                 <th>#</th>
                                 <th>@webLoyal.Resources.language.Resources.Agent</th>
+                                <th>@webLoyal.Resources.language.Resources.State</th>
                                 <th>@webLoyal.Resources.language.Resources.Product</th>
                                 <th>@webLoyal.Resources.language.Resources.EffectiveStartDate</th>
-                                <th>@webLoyal.Resources.language.Resources.State</th>
                                 <th>@webLoyal.Resources.language.Resources.CountryDescription</th>
                                 <th>@webLoyal.Resources.language.Resources.PlanCode</th>
-                                <th>Forma de pago</th>
+                                
                                 <th></th>
 
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.CodigoCotizacion</td>
 
-                                    <tr>
-                                        <td>10</td>
-                                        <td>Nelson Gonnzalez</td>
-                                        <td>Legacy</td>
-
-                                        <td>2023-01-01</td>
-                                        <td>
-                                            <span class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title=""></span> &nbsp En proceso</span>
+                                    <td>@item.NombreAgente</td>
+                                    @if (item.CodigoEstadoSolicitud == "03")
+                                    {<td>
+                                            <span class="badge bg-warning" title="aprobado"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
                                         </td>
-
-                                        <td>Venezuela</td>
-                                        <td>Opcion II </td>
-                                        <td>Trimestral</td>
+                                    }
+                                    @if (item.CodigoEstadoSolicitud == "04")
+                                    {
                                         <td>
-                                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                                <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../requestmonitor/detail" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
-                                                
-                                                </div>
+                                            <span class="badge bg-success" title="aprobado"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                        </td>
+                                    }
+                                    @if (item.CodigoEstadoSolicitud == "05")
+                                    {<td>
+                                            <span class="badge bg-danger" title="aprobado"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                        </td>
+                                    }
+                                    @if (item.CodigoEstadoSolicitud == "06")
+                                    {<td>
+                                            <span class="badge bg-info" title="aprobado"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                        </td>
+                                    }
+
+                                    <td>@item.DescripcionProducto</td>
+                                    <td>@item.FechaSolicitud.ToString("MM-dd-yyyy")</td>
+                                    <td>@item.DescripcionPais</td>
+                                    <td>@item.DescripcionPlan</td>
+                                   
+                                    <td>
+                                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                            <div class="btn-group me-2" role="group" aria-label="First group">
+                                                <a href="../requestmonitor/detail" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
+
                                             </div>
+                                        </div>
 
-                                        </td>
+                                    </td>
 
-                                    </tr>
-                            <tr>
+                                </tr>
+
+                            }
+
+                            @*<tr>
                                 <td>9</td>
                                 <td>Nelson Gonnzalez</td>
                                 <td>Legacy</td>
@@ -117,7 +140,7 @@
                                 </td>
 
                             </tr>
-
+*@
                         </tbody>
                     </table>
                 </div>
