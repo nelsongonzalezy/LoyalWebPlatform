@@ -13,6 +13,12 @@
                     </ol>
 
                 </div>
+                <nav class="nav nav-icon nav-icon-lg">
+
+                    <a href="javascript:void(0);" class="nav-link" title="Refrescar" onclick="showSweetAlert()"><i class="ri-refresh-line"></i></a>
+
+                </nav>
+                
             </div>
             <div class="row g-3">
                
@@ -34,6 +40,90 @@
 </div>
 @section Scripts{
     <script>
+        //// Función para mostrar una alerta estilo SweetAlert
+        //function showSweetAlert() {
+        //    Swal.fire({
+        //        position: 'top-end',
+        //        text: "Refrescando...",
+        //        icon: "info",
+        //        timer: 2000, // 2 segundos
+        //        timerProgressBar: true,
+        //        showConfirmButton: false
+        //    }).then(() => {
+        //        location.reload(); // Refrescar la página después de cerrar la alerta
+        //    });
+        //}
+        //function startInterval() {
+        //    let countdown = 1;
+
+        //    const interval = setInterval(() => {
+        //        Swal.fire({
+        //            title: `Refrescando en ${countdown} segundos...`,
+        //            icon: "info",
+        //            timer: 1000, // 1 segundo
+        //            timerProgressBar: true,
+        //            showConfirmButton: false,
+        //            position: 'top'
+        //        });
+
+        //        countdown--;
+
+        //        if (countdown < 0) {
+        //            clearInterval(interval);
+        //            showSweetAlert(); // Ejecutar la función después del conteo regresivo
+        //        }
+        //    }, 1000); // 1 segundo
+        //}
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            startInterval();
+        });
+
+        // Función para mostrar un mensaje con un temporizador de cierre automático
+        function showSweetAlert() {
+            Swal.fire({
+                position: 'top',
+                text:'Actualizando',
+
+                timer: 2000, // 2 segundos
+                timerProgressBar: true,
+                showConfirmButton: false,
+            }).then(() => {
+                location.reload(); // Refrescar la página después de cerrar la alerta
+            });
+        }
+
+        // Función para comenzar el intervalo de 1 minuto con conteo regresivo de 10 segundos
+        function startInterval() {
+            let countdown = 10;
+
+            const interval = setInterval(() => {
+                Swal.fire({
+                    position: 'top',
+                    text: 'Actualizando',
+
+                    timer: 2000, // 2 segundos
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                }).then(() => {
+                    location.reload(); // Refrescar la página después de cerrar la alerta
+                });
+
+                countdown--;
+
+                if (countdown < 0) {
+                    clearInterval(interval);
+                    showSweetAlert(); // Ejecutar la función después del conteo regresivo
+                }
+            }, 50000); // 1 segundo
+        }
+
+
+
+
+
         $("table").DataTable({
             searchBuilder: true,
             class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
