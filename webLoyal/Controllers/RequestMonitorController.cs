@@ -10,5 +10,11 @@ namespace webLoyal.Controllers
         {
             return View();
         }
+        [HttpGet]
+        [Route("RequestMonitor/Detail")]
+        public IActionResult Detail()
+        {
+            return View();
+        }
     }
 }

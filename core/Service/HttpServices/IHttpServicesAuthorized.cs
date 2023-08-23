@@ -7,6 +7,4 @@
         Task<TResponse> DeleteAuthorizedAsync<TSource, TResponse>(string pathUrl, string token, TSource body);
         Task<TResponse> PostAuthorizedAsync<TSource, TResponse>(string pathUrl, string token, TSource body);
     }
-
-
 }

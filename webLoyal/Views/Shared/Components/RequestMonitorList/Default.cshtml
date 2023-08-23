@@ -1,0 +1,151 @@
+﻿@model List<core.Service.RequestMonitorDetailModel>
+
+<div class="row g-3">
+    <div class="col-xl-12">
+        <div class="card card-one mt-3">
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>@webLoyal.Resources.language.Resources.Agent</th>
+                                <th>@webLoyal.Resources.language.Resources.State</th>
+                                <th>@webLoyal.Resources.language.Resources.Product</th>
+                                <th>@webLoyal.Resources.language.Resources.EffectiveStartDate</th>
+                                <th>@webLoyal.Resources.language.Resources.CountryDescription</th>
+                                <th>@webLoyal.Resources.language.Resources.PlanCode</th>
+                                
+                                <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.CodigoCotizacion</td>
+
+                                    <td>@item.NombreAgente</td>
+                                    @if (item.CodigoEstadoSolicitud == "03")
+                                    {<td>
+                                            <span class="badge bg-warning" title="aprobado"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                        </td>
+                                    }
+                                    @if (item.CodigoEstadoSolicitud == "04")
+                                    {
+                                        <td>
+                                            <span class="badge bg-success" title="aprobado"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                        </td>
+                                    }
+                                    @if (item.CodigoEstadoSolicitud == "05")
+                                    {<td>
+                                            <span class="badge bg-danger" title="aprobado"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                        </td>
+                                    }
+                                    @if (item.CodigoEstadoSolicitud == "06")
+                                    {<td>
+                                            <span class="badge bg-info" title="aprobado"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                        </td>
+                                    }
+
+                                    <td>@item.DescripcionProducto</td>
+                                    <td>@item.FechaSolicitud.ToString("MM-dd-yyyy")</td>
+                                    <td>@item.DescripcionPais</td>
+                                    <td>@item.DescripcionPlan</td>
+                                   
+                                    <td>
+                                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                            <div class="btn-group me-2" role="group" aria-label="First group">
+                                                <a href="../requestmonitor/detail" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            }
+
+                            @*<tr>
+                                <td>9</td>
+                                <td>Nelson Gonnzalez</td>
+                                <td>Legacy</td>
+
+                                <td>2023-01-01</td>
+                                <td>
+                                    <span class="badge bg-success" title="aprobado"><i class="ri-checkbox-circle-line"></i>&nbsp Aprobado</span>
+                                </td>
+
+                                <td>Venezuela</td>
+                                <td>Opcion II </td>
+                                <td>Trimestral</td>
+                                <td>
+                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                        <div class="btn-group me-2" role="group" aria-label="First group">
+                                            <a href="../requestmonitor/detail" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
+
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Nelson Gonnzalez</td>
+                                <td>Legacy</td>
+
+                                <td>2023-01-01</td>
+                                <td>
+                                    <span class="badge bg-danger" title="Negado"><i class="ri-close-circle-line"></i>&nbsp Negado</span>
+                                </td>
+
+                                <td>Venezuela</td>
+                                <td>Opcion II </td>
+                                <td>Trimestral</td>
+                                <td>
+                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                        <div class="btn-group me-2" role="group" aria-label="First group">
+                                            <a href="../requestmonitor/detail" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
+
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Nelson Gonnzalez</td>
+                                <td>Legacy</td>
+
+                                <td>2023-01-01</td>
+                                <td>
+                                    <span class="badge bg-warning"><i class="ri-error-warning-line" title="Evaluación Pospuesta">&nbsp Evaluación Pospuesta</i> </span>
+                                </td>
+
+                                <td>Venezuela</td>
+                                <td>Opcion II </td>
+                                <td>Trimestral</td>
+                                <td>
+                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                        <div class="btn-group me-2" role="group" aria-label="First group">
+                                            <a href="../requestmonitor/detail" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
+
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                            </tr>
+*@
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+    </div><!-- col -->
+    </div><!-- col -->
+
