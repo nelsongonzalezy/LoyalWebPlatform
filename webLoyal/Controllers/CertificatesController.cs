@@ -8,7 +8,7 @@ namespace webLoyal.Controllers
         public IActionResult Index()
         {
 
-            return View(model);
+            return View();
         }
 
         [HttpGet]
