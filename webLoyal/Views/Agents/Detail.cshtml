@@ -10,24 +10,137 @@
 
         </div>
     </div>
-
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="media-profile">
-                        <div class="media-img">
-                            <img src="https://lh5.googleusercontent.com/-t-BC2jMToqhirTi_j2PPMj59Prpp5oirXFr6_mE-pQwgG8geU4MLQa09HQ0K00ElDQcsQMg228gGqVCnYSb1594fe8-jK8jaw9h51xvlUiY58GVq_nnqd4HLdElt-UV3tqqhK6n" class="img-fluid" alt="...">
-
-                        </div>
-                            <div class="media-body">
-                                <h5 class="media-name">Shaira Diaz</h5>
-                                <p class="d-flex gap-2 mb-4"><i class="ri-map-pin-line"></i> San Francisco, California</p>
-                                <p class="mb-0">Redhead, Innovator, Saviour of Mankind, Hopeless Romantic, Attractive 20-something Yogurt Enthusiast. You can replace this with any content and adjust it as needed... <a href="">Read more</a></p>
-                            </div><!-- media-body -->
-                        </div>
-                    </div>
-                </div>
+    <head>
+        <style>
+            .media-profile .media-img img 
+            {
+                border-radius:inherit;
+                max-width: 100%;
+                height: auto;
+                max-width: 100%;
+            }
+            .profile-item-body {
+                align-content: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="row g-5">
+            <div class="col-xl">
+                <div class="media-profile mb-5">
+                    <div class="media-img mb-3 mb-sm-0">
+                        <img src="../assets/img/-customer-service-agent_89777-2.png" class="img-fluid" alt="...">
+                    </div><!-- media-img -->
+                    <div class="media-body">
+                        <h5 class="media-name">Pedro Perez</h5>
+                        <p class="d-flex gap-2 mb-4"><i class="ri-map-pin-line"></i> CDMX, México</p>
+                        <p class="mb-0">Innovador, Empático, Eficiente, Ético, Lema: "las personas siempre deben ser lo primero, estamos a su servicio para ayudarles a tener una mejor y más segura vida". <a href="">Read more</a></p>
+                    </div><!-- media-body -->
+                </div><!-- media-profile -->
             </div>
-        </div>
-        
+
+            <div class="row row-cols-sm-auto g-4 g-md-5 g-xl-4 g-xxl-5">
+                <div class="col">
+                    <div class="profile-item">
+                        <i class="ri-article-line"></i>
+                        <div class="profile-item-body">
+                            <p>Educación</p>
+                            <span>Lic.</span>
+                        </div><!-- profile-item-body -->
+                    </div><!-- profile-item -->
+                </div><!-- col -->
+                <div class="col">
+                    <div class="profile-item">
+                        <i class="ri-medal-2-line"></i>
+                        <div class="profile-item-body">
+                            <p>Reconocimientos</p>
+                            <span>Logros</span>
+                        </div><!-- profile-item-body -->
+                    </div><!-- profile-item -->
+                </div><!-- col -->
+                <div class="col">
+                <div class="profile-item">
+                    <i class="ri-suitcase-line"></i>
+                    <div class="profile-item-body">
+                    <p>15+ Años</p>
+                    <span>Experiencia Laboral</span>
+                    </div><!-- profile-item-body -->
+                </div><!-- profile-item -->
+                </div><!-- col -->
+                <div class="col">
+                <div class="profile-item">
+                    <i class="ri-team-line"></i>
+                    <div class="profile-item-body">
+                    <p>3,560</p>
+                    <span>Personas atendidas</span>
+                    </div><!-- profile-item-body -->
+                </div><!-- profile-item -->
+                </div><!-- col -->
+                <div class="col">
+                <div class="profile-item">
+                    <i class="ri-team-line"></i>
+                    <div class="profile-item-body">
+                    <p>3,506</p>
+                    <span>Personas Aseguradas</span>
+                    </div><!-- profile-item-body -->
+                </div><!-- profile-item -->
+            </div><!-- col -->
+
+            <div class="card card-post mt-4">
+                <div class="card-header">
+                    <h6 class="card-title">Estadísticas</h6>
+                    <a href="" class="link-more"><i class="ri-more-2-fill"></i></a>
+                </div><!-- card-header -->
+                    <div class="card-body">
+                        <div class="post-header mb-3">
+                            <a href="" class="avatar online"><span class="avatar-initial">s</span></a>
+                            <div class="post-content">
+                                <h6>Promedio comparado</h6>
+                                <span>2022- 2023</span>
+                            </div><!-- post-content -->
+                        </div><!-- post-header -->
+                    </div>
+                <p class="post-text">Evaluamos a nuestros agentes desde una perspectiva comparativamente reflexiva de sus propios logros. <a href="">#AgenteDelAño</a> <a href="">#TopAgent</a></p>
+
+                <div class="post-preview">
+                    <div class="row g-3">
+                            <canvas id="marksChart" width="600" height="400"></canvas>
+                    </div><!-- row -->
+                </div><!-- post-preview -->
+            </div><!-- card-body -->
+            <div class="card-footer">
+              <nav class="nav">
+                <a href="" class="nav-link"><i class="ri-thumb-up-line"></i> Like</a>
+                <a href="" class="nav-link"><i class="ri-chat-1-line"></i> Comment</a>
+                <a href="" class="nav-link"><i class="ri-share-forward-line"></i> Share</a>
+              </nav>
+            </div><!-- card-footer -->
+          </div><!-- card -->
+                
+        </div><!-- row -->
+    </body>
 </div>
+@section Scripts{
+    <script>
+        var marksCanvas = document.getElementById("marksChart");
+
+        var marksData = {
+        labels: ["Volumen de ventas", "Valor total de las ventas", "Retención de clientes", "Comisiones generadas", "Valoración de los clientes:", "Cumplimiento de objetivos", "Número de referencias", "Conocimiento del producto y competencia"],
+        datasets: [{
+            label: "2022",
+            backgroundColor: "rgba(200,0,0,0.2)",
+            data: [65, 75, 80, 80, 60, 80, 60, 79]
+        }, {
+            label: "2023",
+            backgroundColor: "rgba(0,0,200,0.2)",
+            data: [74, 85, 87, 82, 80, 90, 80, 81]
+        }]
+        };
+
+        var radarChart = new Chart(marksCanvas, {
+        type: 'radar',
+        data: marksData
+        });
+    </script>
+}
