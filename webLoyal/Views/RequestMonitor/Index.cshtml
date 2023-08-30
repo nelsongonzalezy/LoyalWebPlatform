@@ -29,7 +29,7 @@
 
                 </div><!-- col -->
                 <div class="col-xl-4">
-                    @await Component.InvokeAsync("Product")
+                   @await Component.InvokeAsync("Product")
                 </div><!-- col -->
             </div><!-- row -->
 
@@ -126,6 +126,11 @@
 
         $("table").DataTable({
             searchBuilder: true,
+            sort: true,
+            resizable: true,
+            responsive: true,
+            scrollY: 200,
+            class: 'stripe',
             class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
             fixedColumns: true,
             order: [[0, "desc"]],
