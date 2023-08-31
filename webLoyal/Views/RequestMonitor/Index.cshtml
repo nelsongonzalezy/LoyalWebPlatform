@@ -1,43 +1,100 @@
-﻿<div class="">
-
- 
+﻿@model List<core.Service.RequestMonitorDetailModel>
+<div>
     <div class="container">
 
-        <div class="">
-            <div class="d-md-flex align-items-center justify-content-between mb-4">
-                <div>
-                    <ol class="breadcrumb fs-sm mb-1">
-                        <li class="breadcrumb-item"><a href="../menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
-                        <li class="breadcrumb-item active"><a href="../requestmonitor/index">requestmonitor/index</a></li>
+        <div class="d-md-flex align-items-center justify-content-between mb-4">
+            <div>
+                <ol class="breadcrumb fs-sm mb-1">
+                    <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+                    <li class="breadcrumb-item active"><a href="~/requestmonitor/index">requestmonitor</a></li>
 
-                    </ol>
+                </ol>
 
-                </div>
-                <nav class="nav nav-icon nav-icon-lg">
-
-                    <a href="javascript:void(0);" class="nav-link" title="Refrescar" onclick="showSweetAlert()"><i class="ri-refresh-line"></i></a>
-
-                </nav>
-                
             </div>
-            <div class="row g-3">
-               
-                <div class="col-xl-8">
-                    @await Component.InvokeAsync("Requests")
-                    <br />
-                    @await Component.InvokeAsync("RequestMonitorList")
+            <nav class="nav nav-icon nav-icon-lg">
 
-                </div><!-- col -->
-                <div class="col-xl-4">
-                   @await Component.InvokeAsync("Product")
-                </div><!-- col -->
-            </div><!-- row -->
+                <a href="javascript:void(0);" class="nav-link" title="Refrescar" onclick="showSweetAlert()"><i class="ri-refresh-line"></i></a>
 
+            </nav>
         </div>
+        <div class="row g-3">
+            <div class="col-xl-8">
+                @await Component.InvokeAsync("Requests")
+                <br />
+                <div class="row g-3">
+                <div class="col-xl-12">
+                   <div class="card">
+                       <div class="card-body">
+                           <div class="table-responsive">
+                               <table>
+                                   <thead>
+                                        <th>#</th>
+                                        <th>Agente</th>
+                                        <th>Estado</th>
+                                        <th>Producto</th>
+                                        <th>@webLoyal.Resources.language.Resources.EffectiveStartDate</th>
+                                        <th>@webLoyal.Resources.language.Resources.CountryDescription</th>
+                                        <th>@webLoyal.Resources.language.Resources.PlanCode</th>
+                                   </thead>
+                                   <tbody>
+                                       @foreach (var item in Model)
+                                            {
+                                               <tr>
+                                                    <td> <a href="../requestmonitor/detail/@item.CodigoSolicitud" class="btn btn-outline-tertiary"> @item.CodigoSolicitud</a> </td>
+                                                    <td><a class="btn btn-link" href="../agents/detail/@item.CodigoAgente">@item.NombreAgente</a></td>
+                                                   <td>
+                                                        @switch (item.CodigoEstadoSolicitud)
+                                                        {
+                                                            case "01":
+                                                                <span class="badge bg-info" title="@item.DescripcionEstadoSolicitud"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                                                break;
+                                                            case "02":
+                                                                <span class="badge bg-warning" title="@item.DescripcionEstadoSolicitud"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                                                break;
+                                                            case "04":
+                                                                <span class="badge bg-success" title="@item.DescripcionEstadoSolicitud"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                                                break;
+                                                            case "05":
+                                                                <span class="badge bg-danger" title="@item.DescripcionEstadoSolicitud"><i class="ri-close-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                                                break;
+                                                            case "03":
+                                                                <span class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@item.DescripcionEstadoSolicitud"></span> &nbsp @item.DescripcionEstadoSolicitud</span>
 
+                                                                break;
+                                                            case "06":
+                                                                <span class="badge bg-danger" title="@item.DescripcionEstadoSolicitud"><i class="ri-add-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</span>
+                                                                break;
+                                                            default:
+                                                                <span class="ri-error-warning-line" title="@item.DescripcionEstadoSolicitud">&nbsp @item.DescripcionEstadoSolicitud</span>
+                                                                break;
+                                                        }
+                                                       </td>
+                                                   <td>@item.DescripcionProducto</td>
+                                                   <td>@item.FechaSolicitud</td>
+                                                   <td>@item.DescripcionPais</td>
+                                                   <td>@item.DescripcionPlan</td>
+                                                </tr> 
+                                            }
+
+                                   </tbody>
+                               </table>
+
+                           </div>
+
+                       </div>
+
+                   </div>
+                </div><!-- col -->
+                </div><!-- col -->
+            </div><!-- col -->
+            <div class="col-xl-4">
+                @await Component.InvokeAsync("Product")
+            </div><!-- col -->
+        </div><!-- row -->
     </div>
+</div>    
 
-</div>
+
 @section Scripts{
     <script>
         //// Función para mostrar una alerta estilo SweetAlert
@@ -125,13 +182,14 @@
 
 
         $("table").DataTable({
+            searchPanes: {
+                viewTotal: true
+            },
             searchBuilder: true,
             sort: true,
             resizable: true,
             responsive: true,
-            scrollY: 200,
-            class: 'stripe',
-            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
+            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
             fixedColumns: true,
             order: [[0, "desc"]],
             dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
@@ -140,12 +198,12 @@
                     extend: 'excelHtml5',
                     autoFilter: true,
                     className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.PoliciesDetailModel)Excel',
+                    filename: '@nameof(core.Service.ResponseRequestCifraSolicitudEstadoModel)Excel',
                 },
                 {
                     extend: 'pdfHtml5',
                     className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.PoliciesDetailModel)Pdf',
+                    filename: '@nameof(core.Service.ResponseRequestCifraSolicitudEstadoModel)Pdf',
                 }
             ]
         });

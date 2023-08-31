@@ -1,11 +1,53 @@
-﻿<div class="card card-one">
+﻿@model List<core.Service.SolicitudTareasModel>
+
+
+<div class="card card-one">
     <div class="card-header">
         <h6 class="card-title">Tareas </h6>
         
     </div><!-- card-header -->
     <div class="card-body p-3">
         <ul class="events-list">
+        @foreach (var item in Model.OrderByDescending(x=> x.CodigoTarea))
+        {
             <li>
+            
+                    @switch (item.CodigoEstadoTarea)
+                        {
+                            case 1:
+                                <div class="event-date badge bg-warning">
+                                <h5 class="spinner-border spinner-border-sm" role="status"></h5>
+                                </div>
+                                break;
+                            case 2:
+                                <div class="event-date badge bg-secondary">
+                                    <h5 class="spinner-border spinner-border-sm" role="status"></h5>
+                                </div>
+                                break;
+                            case 3:
+                            <div class="event-date badge bg-success">
+                                <h5 class="ri-checkbox-circle-line" role="status"></h5>
+                            </div>
+                            break;
+                            default:
+                            <div class="event-date badge bg-warning">
+                                <h5 class="spinner-border spinner-border-sm" role="status"></h5>
+                            </div>
+                            break;
+                    }
+                    
+                <!-- event-date -->
+                <div class="events-body">
+                    <div class="ev-item">
+                        <small>@item.DescripcionEstadoTarea : @item.FechaFinTarea  Inicio: @item.FechaInicioTarea </small>
+                        <h6>#@item.CodigoTarea @item.DescripcionTipoTarea - @item.NombreUsuarioAsignado </h6>
+                        <p>@item.DescripcionTarea</p>
+                    </div><!-- event-item -->
+                </div><!-- events-body -->
+            </li>
+        }
+        
+            @*<li>
                 <div class="event-date badge bg-secondary">
                     <h5 class="spinner-border spinner-border-sm" role="status"></h5>
                 </div><!-- event-date -->
@@ -57,7 +99,7 @@
                         <p>Jorge Gerardo Salas Monsalve  Nro. Planilla 1502 Poliza Nro. 000-00-1501  1 LEGACY Opcion I  (US$ 500 - US$ 1,000)</p>
                     </div><!-- event-item -->
                 </div><!-- events-body -->
-            </li>
+            </li>*@
         </ul>
     </div>
 </div><!-- card-header -->

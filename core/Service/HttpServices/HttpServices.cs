@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 
@@ -113,34 +114,52 @@ namespace core.Service
 
         public async Task<TResponse> GetUnAuthorizedAsync<TResponse>(string pathUrl)
         {
-            if (string.IsNullOrEmpty(pathUrl))
-                throw new ArgumentNullException($"{nameof(pathUrl)} is required");
+            try
+            {
+                if (string.IsNullOrEmpty(pathUrl))
+                    throw new ArgumentNullException($"{nameof(pathUrl)} is required");
 
-            var result = await client.GetStringAsync(GetUrl(pathUrl));
+                var result = await client.GetStringAsync(GetUrl(pathUrl));
 
-            return await Task.Run(() => JsonConvert.DeserializeObject<TResponse>(result));
+                return await Task.Run(() => JsonConvert.DeserializeObject<TResponse>(result));
+                throw new HttpRequestException(result);
+            }
+            catch (Exception x)
+            {
 
-            throw new HttpRequestException(result);
+                throw;
+            }
+         
+
+     
         }
 
         public async Task<TResponse> PostUnAuthorizedAsync<TSource, TResponse>(string pathUrl, TSource body)
         {
-            if (string.IsNullOrEmpty(pathUrl))
-                throw new ArgumentNullException($"{nameof(pathUrl)} is required");
-
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(HttpConfig.Application));
-            client.DefaultRequestHeaders.Add(HttpConfig.Cache, HttpConfig.NoChace);
-
-            var result = await client.PostAsync(GetUrl(pathUrl),
-                                new StringContent(JsonConvert.SerializeObject(body), Encoding.UTF8, HttpConfig.Application));
-
-            if (result.IsSuccessStatusCode)
+            try
             {
-                return await Task.Run(() => JsonConvert.DeserializeObject<TResponse>(result.Content.ReadAsStringAsync().Result));
-            }
+                if (string.IsNullOrEmpty(pathUrl))
+                    throw new ArgumentNullException($"{nameof(pathUrl)}");
 
-            throw new HttpRequestException(result.ReasonPhrase);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("Cache-Control", "no-cache");
+                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer");
+
+                var result = await client.PostAsync(GetUrl(pathUrl),
+                                    new StringContent(JsonConvert.SerializeObject(body), Encoding.UTF8, "application/json"));
+
+                if (result.IsSuccessStatusCode)
+                {
+                    var value = await result.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<TResponse>(value);
+                }
+                throw new HttpRequestException(result.ReasonPhrase);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
 

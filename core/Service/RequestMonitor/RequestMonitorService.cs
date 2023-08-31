@@ -23,6 +23,18 @@
            
             return y.Content.AsQueryable();
         }
+        public async Task<IQueryable<RequestMonitorDetailModel>> Getbyid(int CodigoSolicitud)
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseMonitorDetailModel>("api/v1/Solicitud/?codigoSolicitud=" + CodigoSolicitud.ToString());
+
+            return y.Content.AsQueryable();
+        }
+        public async Task<IQueryable<SolicitudTareasModel>> GetTaskByID(string codigoSolicitud)
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseRequestSolicitudTareasModel>("api/v1/Solicitud/SolicitudTarea?codigoSolicitud=" + codigoSolicitud.ToString());
+
+            return y.Content.AsQueryable();
+        }
 
     }
 }

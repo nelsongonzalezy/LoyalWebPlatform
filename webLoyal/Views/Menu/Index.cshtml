@@ -1,32 +1,87 @@
 ﻿@model List<core.Service.MenuModel>;
 
-<div class="container">
 
-    <div class="d-md-flex align-items-center justify-content-between mb-4">
-        <div>
-            <ol class="breadcrumb fs-sm mb-1">
-                <li class="breadcrumb-item"><a href="../Claims/index">Modulos</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Modulos disponibles</li>
-            </ol>
-            <h4 class="main-title mb-0"></h4>
-        </div>
-        <div class="d-flex gap-2 mt-3 mt-md-0">
+<div class="">
 
-            
+
+    <div class="container">
+
+        <div class="">
+            <div class="d-md-flex align-items-center justify-content-between mb-4">
+                <div>
+                    <ol class="breadcrumb fs-sm mb-1">
+                        <li class="breadcrumb-item"><a href="../menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+                        <li class="breadcrumb-item active"><a href="../requestmonitor/index">requestmonitor/index</a></li>
+
+                    </ol>
+
+                </div>
+                <nav class="nav nav-icon nav-icon-lg">
+
+
+
+                </nav>
+
+            </div>
+            <div class="row g-3">
+
+                <div class="">
+                    <div class="col-xl-8 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title text-dark">
+                                    <h3>
+                                        Solicitudes
+
+                                    </h3>
+                                </div>
+                                @await Component.InvokeAsync("Requests")
+                            </div>
+                            <div class="card-footer">
+                                <a href="../requestmonitor/index" class="btn btn-outline-secondary">ver mas</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="col-xl-8 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title text-dark">
+                                    <h3>
+                                        Polizas
+
+                                    </h3>
+                                </div>
+                                @await Component.InvokeAsync("PoliciesStatus")
+                            </div>
+                            <div class="card-footer">
+                                <a href="../Policies/index" class="btn btn-outline-secondary">ver mas</a>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div><!-- col -->
+
+
+                </div><!-- col -->
+                <div class="col-xl-4">
+
+                </div><!-- col -->
+            </div><!-- row -->
+
         </div>
+
     </div>
 
-@*    <div class="form-search me-auto">
-        <input type="text" class="form-control" placeholder="Search for files and folders...">
-        <i class="ri-search-line"></i>
-    </div>*@
-
-    <br />
-
-<div class="col-lg-12 row g-3">
 
 
-            @foreach (var menu in Model)
+@*            @foreach (var menu in Model)
             {
                 <div class="col-3">
 
@@ -42,7 +97,7 @@
                 </div>
             </div>
       
-            }
+            }*@
 @*            <div class="card card-file">
                
                 <!-- dropdown -->
@@ -99,7 +154,3 @@
         </div>
 *@
 
-
-</>
-
-</div>

@@ -2,6 +2,7 @@ using core;
 using core.Service;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
+using Microsoft.Extensions.Options;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +18,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.InitializerCore();
 builder.Services.AddLocalization(options => options.ResourcesPath = "/Resources/language");
 builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization();
-builder.Services.AddSession();
+builder.Services.AddSession(options => {options.IdleTimeout = TimeSpan.FromMinutes(30);});
 
 var app = builder.Build();
 
@@ -44,6 +45,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Auth}/{action=Index}/{id?}");
+    pattern: "{controller=Auth}/{action=index}");
 
 app.Run();

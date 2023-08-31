@@ -6,8 +6,8 @@ namespace webLoyal.Controllers
     {
     
     [HttpGet]
-    [Route("Agents/Detail")]
-    public IActionResult Detail()
+    [Route("Agents/Detail/{codigoAgente}")]
+    public IActionResult Detail(int codigoAgente)
     {
         return View();
     }

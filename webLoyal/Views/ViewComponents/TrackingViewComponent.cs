@@ -1,13 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using core.Service;
+using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Views.ViewComponents
 {
     public class TrackingViewComponent : ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly IRequestMonitor _requestMonitor;
+
+        public TrackingViewComponent(IRequestMonitor requestMonitor)
         {
-            // Lógica para obtener datos o realizar acciones necesarias
-            return View();
+            _requestMonitor = requestMonitor;
+        }
+        public async Task<IViewComponentResult> InvokeAsync(string CodigoSolicitud)
+        {
+            var x = await _requestMonitor.GetTaskByID(CodigoSolicitud);
+            return View(x.ToList());
         }
     }
 }
