@@ -32,7 +32,31 @@
                                     <div class="d-flex align-items-center fw-medium text-primary mb-1"><i class="ri-calendar-check-line fs-40 lh-1 me-2"></i> Estado</div>
                                     <label class="d-block mb-1 fw-medium text-dark">
                                         <p>Efectividad</p>
-                                        <p>@item.DescripcionEstadoSolicitud</p>
+                                        @switch (item.CodigoEstadoSolicitud)
+                                        {
+                                            case "01":
+                                                <p class="badge bg-info" title="@item.DescripcionEstadoSolicitud"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoSolicitud</p>
+                                                break;
+                                            case "02":
+                                                <p class="badge bg-warning" title="@item.DescripcionEstadoSolicitud"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoSolicitud</p>
+                                                break;
+                                            case "04":
+                                                <p class="badge bg-success" title="@item.DescripcionEstadoSolicitud"><i class="ri-checkbox-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</p>
+                                                break;
+                                            case "05":
+                                                <p class="badge bg-danger" title="@item.DescripcionEstadoSolicitud"><i class="ri-close-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</p>
+                                                break;
+                                            case "03":
+                                                <p class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@item.DescripcionEstadoSolicitud"></span> &nbsp @item.DescripcionEstadoSolicitud</p>
+
+                                                break;
+                                            case "06":
+                                                <p class="badge bg-danger" title="@item.DescripcionEstadoSolicitud"><i class="ri-add-circle-line"></i>&nbsp @item.DescripcionEstadoSolicitud</p>
+                                                break;
+                                            default:
+                                                <p class="ri-error-warning-line" title="@item.DescripcionEstadoSolicitud">&nbsp @item.DescripcionEstadoSolicitud</p>
+                                                break;
+                                        }
                                         <p>@item.DescripcionPais</p>
                                         <p>Transplante de Organos </p>
                                         <p>Maternidad </p>
