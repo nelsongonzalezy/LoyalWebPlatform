@@ -187,7 +187,7 @@ namespace core.Service
 
         private string GetUrl(string pathUrl)
         {
-            var url = "http://apirestloyal-env.us-east-1.elasticbeanstalk.com/" + pathUrl;
+            var url = "http://api-prod-rest.us-east-1.elasticbeanstalk.com/" + pathUrl;
             return url;
         }
     }

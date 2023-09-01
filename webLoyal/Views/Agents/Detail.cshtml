@@ -1,4 +1,9 @@
-﻿<div class="container">
+﻿@model List<core.Service.AgentsDetailModel>
+<div>
+
+
+
+<div class="container">
     
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
@@ -10,36 +15,48 @@
 
         </div>
     </div>
-    <head>
-        <style>
-            .media-profile .media-img img 
-            {
-                border-radius:inherit;
-                max-width: 100%;
-                height: auto;
-                max-width: 100%;
-            }
-            .profile-item-body {
-                align-content: center;
-            }
-            
-        </style>
-    </head>
-    <body>
+@foreach (var item in Model)
+    {
+        
         <div class="row g-5">
             <div class="col-xl">
                 <div class="media-profile mb-5">
                     <div class="media-img mb-3 mb-sm-0">
-                        <img src="../assets/img/-customer-service-agent_89777-2.png" class="img-fluid" alt="...">
+                        <img src="~/assets/img/-customer-service-agent_89777-2.png" class="img-fluid" alt="...">
                     </div><!-- media-img -->
                     <div class="media-body">
-                        <h5 class="media-name">Pedro Perez</h5>
-                        <p class="d-flex gap-2 mb-4"><i class="ri-map-pin-line"></i> CDMX, México</p>
-                        <p class="mb-0">Innovador, Empático, Eficiente, Ético, Lema: "las personas siempre deben ser lo primero, estamos a su servicio para ayudarles a tener una mejor y más segura vida". <a href="">Read more</a></p>
+                        <h5 class="media-name">@item.NombreCompleto
+                            @switch (item.CodigoEstadoAgente)
+                            {
+                                case "01":
+                                    <span class="badge bg-success" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                    break;
+                                    case "02":
+                                    <span class="badge bg-warning" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                    break;
+                                    case "03":
+                                    <span class="badge bg-danger" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                    break;
+                                    case "04":
+                                    <span class="badge bg-black" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                    break;
+                            }
+                            </h5>
+                        <p class="d-flex gap-2 mb-4"><i class="ri-map-pin-line"></i>@item.Direccion
+                                @item.Provincia,  @item.CiudadOficina @item.DescripcionPaisOficina , @item.CodigoDireccionPostal
+                            </p>
+                            <ul class="mt-3">
+                                <li>Correo Electronico: @item.Correo</li>
+                                <li>Celular: @item.Celular</li>
+                                <li>Direccion bancaria: @item.DirecciónCuenta</li>
+                                <li>Fecha de Nacimiento: @item.FechaNacimiento</li>
+                                <li>Fecha de Contrato: @item.FechaInicioContrato</li>
+
+                            </ul>
                     </div><!-- media-body -->
                 </div><!-- media-profile -->
             </div>
-
+        </div>
             <div class="row row-cols-sm-auto g-4 g-md-5 g-xl-4 g-xxl-5">
                 <div class="col">
                     <div class="profile-item">
@@ -60,33 +77,58 @@
                     </div><!-- profile-item -->
                 </div><!-- col -->
                 <div class="col">
-                <div class="profile-item">
-                    <i class="ri-suitcase-line"></i>
-                    <div class="profile-item-body">
-                    <p>15+ Años</p>
-                    <span>Experiencia Laboral</span>
-                    </div><!-- profile-item-body -->
-                </div><!-- profile-item -->
+                    <div class="profile-item">
+                        <i class="ri-suitcase-line"></i>
+                        <div class="profile-item-body">
+                            <p>15+ Años</p>
+                            <span>Experiencia Laboral</span>
+                        </div><!-- profile-item-body -->
+                    </div><!-- profile-item -->
                 </div><!-- col -->
                 <div class="col">
-                <div class="profile-item">
-                    <i class="ri-team-line"></i>
-                    <div class="profile-item-body">
-                    <p>3,560</p>
-                    <span>Personas atendidas</span>
-                    </div><!-- profile-item-body -->
-                </div><!-- profile-item -->
+                    <div class="profile-item">
+                        <i class="ri-team-line"></i>
+                        <div class="profile-item-body">
+                            <p>3,560</p>
+                            <span>Personas atendidas</span>
+                        </div><!-- profile-item-body -->
+                    </div><!-- profile-item -->
                 </div><!-- col -->
                 <div class="col">
-                <div class="profile-item">
-                    <i class="ri-team-line"></i>
-                    <div class="profile-item-body">
-                    <p>3,506</p>
-                    <span>Personas Aseguradas</span>
-                    </div><!-- profile-item-body -->
-                </div><!-- profile-item -->
-            </div><!-- col -->
+                    <div class="profile-item">
+                        <i class="ri-team-line"></i>
+                        <div class="profile-item-body">
+                            <p>3,506</p>
+                            <span>Personas Aseguradas</span>
+                        </div><!-- profile-item-body -->
+                    </div><!-- profile-item -->
+                </div><!-- col -->
+            </div>
 
+            <!-- col -->
+            <div class="card card-post mt-4">
+                <div class="card-header">
+                    <h6 class="card-title">Datos Bancarios</h6>
+                    <a href="" class="link-more"><i class="ri-more-2-fill"></i></a>
+                </div><!-- card-header -->
+                <div class="card-body">
+                    <div class="experience-item">
+                        <div class="experience-icon"><i class="ri-suitcase-line"></i></div>
+                        <div class="experience-body">
+                            <h5>@item.DescripcionBanco</h5>
+                            <ul class="mt-3">
+                                <li>Numero de Cuenta: @item.NumeroCuentaDeposito</li>
+                                <li>Tipo de Cuenta: @item.TipoCuentaDeposito</li>
+                                <li>Codigo de Enrutamiento: @item.CodigoRouting</li>
+                                <li>Direccion bancaria: @item.DirecciónCuenta @item.CodigoPostalOficina</li>
+                               
+                            </ul>
+                        </div><!-- experience-body -->
+                    </div><!-- experience-item -->
+                </div><!-- card-body -->
+            </div>
+
+               
             <div class="card card-post mt-4">
                 <div class="card-header">
                     <h6 class="card-title">Estadísticas</h6>
@@ -296,6 +338,7 @@
                     </div><!-- card-body -->
                 </div><!-- card -->
             </div><!-- col -->
+            @*
             <div class="col-12">
             <div class="card card-one">
                 <div class="card-header">
@@ -379,7 +422,12 @@
               </nav>
             </div><!-- card-footer -->
         </div><!-- row -->
-    </body>
+
+</div>*@
+        
+    }
+ 
+</div>
 </div>
 @section Scripts{
     <script>
