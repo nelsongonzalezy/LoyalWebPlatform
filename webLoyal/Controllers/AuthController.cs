@@ -95,12 +95,14 @@ namespace webLoyal.Controllers
         }
 
         [HttpGet]
+        [Route("Auth/Recover")]
         public IActionResult Recover()
         {
             return View();
         }
 
         [HttpPost]
+        [Route("Auth/Recover")]
         public IActionResult Recover(RecoverModel model)
         {
             if (model.Email == "nelson.gonzalez@grupokaizen.net")
@@ -124,6 +126,7 @@ namespace webLoyal.Controllers
         }
 
         [HttpPost]
+        [Route("Auth/ValidUser")]
         public IActionResult ValidUser(RecoverModel model)
         {
             if (model.Email == "nelson.gonzalez@grupokaizen.net")
@@ -147,6 +150,7 @@ namespace webLoyal.Controllers
         }
 
         [HttpGet]
+        [Route("Auth/ValidUser")]
         public IActionResult ValidUser()
         {
             var xnew = new IsValidModel();
@@ -155,12 +159,14 @@ namespace webLoyal.Controllers
         }
 
         [HttpGet]
+        [Route("Auth/IsValidUser")]
         public IActionResult IsValidUser()
         {
             return View();
         }
 
         [HttpPost]
+        [Route("Auth/IsValidUser")]
         public IActionResult IsValidUser(IsValidModel model)
         {
             try
@@ -189,6 +195,7 @@ namespace webLoyal.Controllers
         }
 
         [HttpPost]
+        [Route("Auth/ChangePassword")]
         public IActionResult ChangePassword(ChangePasswordModel model)
         {
 
@@ -197,12 +204,14 @@ namespace webLoyal.Controllers
         }
 
         [HttpGet]
+        [Route("Auth/Reporting")]
         public IActionResult Reporting()
         {
             return View();
         }
 
         [HttpGet]
+        [Route("Auth/FastLock/{email}")]
         public IActionResult FastLock(string userName) 
         {
            var model = new LoginModel { UserName = userName};
@@ -210,6 +219,7 @@ namespace webLoyal.Controllers
         }
 
         [HttpPost]
+        [Route("Auth/FastSingin")]
         public async Task<IActionResult> FastSingin(string password)
 
         {
