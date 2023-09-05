@@ -13,9 +13,10 @@ namespace core.Service
         }
         public async Task<LoginAuthModel> Login(LoginModel model)
         {
-            var y = await _unAuthorized.PostUnAuthorizedAsync<LoginModel, ResponseRequestLoginAuthModel>("api/v1/Auth", model);
+            var y = await _unAuthorized.PostUnAuthorizedAsync<LoginModel, ResponseRequestLoginAuthModel>("api/v1/Auth",model);
 
             return y.Content.User;
+           
 
         }
     }

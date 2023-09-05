@@ -9,9 +9,11 @@
 
 
 
-        <a href="" class="card-thumb"><img src="https://via.placeholder.com/500/4c5366/fff" alt=""></a>
+        <a href="" class="card-thumb"><img src="~/assets/img/user_1077114.png" alt=""></a>
+        <h5 class="card-title text-center">@Context.Session.GetString("NombreCompletoUsuario")</h5>
     <div class="mb-4">
             <label class="form-label d-flex justify-content-between">@webLoyal.Resources.language.Resources.PassWord <a href="~/auth/recover" method="get">@webLoyal.Resources.language.Resources.ForgotPassword</a></label>
+         
             <input asp-for="Password" class="form-control" type="password" data-placement="top" required="" placeholder="********" />
 
             <span asp-validation-for="Password" class="text-danger"></span>

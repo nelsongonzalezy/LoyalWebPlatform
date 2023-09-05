@@ -25,7 +25,7 @@
     <header>
         <div class="sidebar">
             <div class="sidebar-header">
-                <a href="../menu/index" class="sidebar-logo"><img style="height:60px;" src="~/assets/img/LogoLoyal.png" /></a>
+                <a href="~/menu/index" class="sidebar-logo"><img style="height:60px;" src="~/assets/img/LogoLoyal.png" /></a>
             </div><!-- sidebar-header -->
 
             <div id="sidebarMenu" class="sidebar-body">
@@ -40,22 +40,22 @@
             <div class="sidebar-footer">
                 <div class="sidebar-footer-top">
                     <div class="sidebar-footer-thumb">
-                        <img src="https://via.placeholder.com/500/4c5366/fff" alt="">
+                        <img src="~/assets/img/user_1077114.png" alt="">
                     </div><!-- sidebar-footer-thumb -->
                     <div class="sidebar-footer-body">
-                        <h6><div href="">@Context.Session.GetString("Email")</div></h6>
-                        <p>Premium Member</p>
+                        <h6><div href="">@Context.Session.GetString("DireccionEmail")</div></h6>
+                        <p>@Context.Session.GetString("NombrePerfil")</p>
                     </div><!-- sidebar-footer-body -->
                     <a id="sidebarFooterMenu" href="" class="dropdown-link"><i class="ri-arrow-down-s-line"></i></a>
                 </div><!-- sidebar-footer-top -->
                 <div class="sidebar-footer-menu">
                     <nav class="nav">
-                        <a href="~/profile/edit/@Context.Session.GetString("UserCode")"><i class="ri-edit-2-line"></i>Profile</a>
-                        <a><i class="ri-profile-line"></i> </a>
+                        <a href="~/profile/edit/@Context.Session.GetString("CodigoUsuario")"><i class="ri-edit-2-line"></i>Profile</a>
+                        <a><i></i> </a>
                     </nav>
                     <hr>
                     <nav class="nav">
-                        <a href=""><i class=""></i></a>
+                        <a ><i ></i></a>
                         <a href=""><i class=""></i></a>
                         <a href=""><i class=""></i></a>
                         <a href="~/auth/index"><i class="ri-logout-box-r-line"></i> Log Out</a>
@@ -69,7 +69,7 @@
             <div class="me-auto">
                 
             </div>
-            <div class="dropdown dropdown-notification ms-3 ms-xl-4">
+@*            <div class="dropdown dropdown-notification ms-3 ms-xl-4">
                 <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true"><small>3</small><i class="ri-notification-3-line"></i></a>
                 <div class="dropdown-menu dropdown-menu-end mt-10-f me--10-f" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 36px, 0px);" data-popper-placement="bottom-end">
                     <div class="dropdown-menu-header">
@@ -114,8 +114,8 @@
                     </ul>
                     <div class="dropdown-menu-footer"><a href="">Show all Notifications</a></div>
                 </div><!-- dropdown-menu -->
-            </div>
-            <a href="~/auth/FastLock/@Context.Session.GetString("Email")"  class="menu-link ms-2 ms-xl-3"><i class="ri-spy-line"></i></a>
+            </div>*@
+            <a href="~/auth/FastLock/@Context.Session.GetString("DireccionEmail")" class="menu-link ms-2 ms-xl-3"><i class="ri-spy-line"></i></a>
    @*         <div class="ms-2 ms-xl-3">*@
               @*  <a class="menu-link me-3 me-lg-4" href="~/auth/FastLock/@Context.Session.GetString("Email")"><i class="ri-spy-line"></i></a>
                 @*<div class="dropdown-menu dropdown-menu-end mt-10-f me--10-f">

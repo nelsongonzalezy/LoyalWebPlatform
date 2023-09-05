@@ -17,6 +17,8 @@ namespace core
                        .AddScoped<IProduct, ProductService>()
                        .AddScoped<IDraft, DraftService>()
                        .AddScoped<IRequestMonitor, RequestMonitorService>()
+                       .AddScoped<IPolicies, PoliciesServices>()
+                       .AddScoped<IAgents, AgentsService>()
                        .AddScoped<HttpClient>()
                        .AddScoped<HttpClientConfig>()
                        .AddScoped<IHttpServicesAuthorized, HttpServices>()

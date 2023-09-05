@@ -25,32 +25,73 @@ namespace webLoyal.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Index(LoginModel model)
+
         {       
-            var ActiveSession = await _loginS.Login(model);
 
-            HttpContext.Session.SetString(nameof(model.UserName), model.UserName);
-            HttpContext.Session.SetString(nameof(ActiveSession.UserCode), "1");
-            HttpContext.Session.SetString(nameof(ActiveSession.IndicatorCode), ActiveSession.IndicatorCode.ToString());
-            HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
-            HttpContext.Session.SetString(nameof(ActiveSession.FullNameUser), ActiveSession.FullNameUser);
-            HttpContext.Session.SetString(nameof(ActiveSession.CodeProfile), ActiveSession.CodeProfile.ToString());
-            HttpContext.Session.SetString(nameof(ActiveSession.NameProfile), ActiveSession.NameProfile);
-            HttpContext.Session.SetString(nameof(ActiveSession.UserProfile), ActiveSession.UserProfile);
-            HttpContext.Session.SetString(nameof(ActiveSession.PasswordEmail), ActiveSession.PasswordEmail);
-            HttpContext.Session.SetString(nameof(ActiveSession.AddressEmail), ActiveSession.AddressEmail);
-            HttpContext.Session.SetString(nameof(ActiveSession.IndicatorMailVerified), ActiveSession.IndicatorMailVerified.ToString());
-            HttpContext.Session.SetString(nameof(ActiveSession.IndicatorChangePassword), ActiveSession.IndicatorChangePassword.ToString());
-            HttpContext.Session.SetString(nameof(ActiveSession.IndicatorViewAgents), ActiveSession.IndicatorViewAgents.ToString());
-            HttpContext.Session.SetString(nameof(ActiveSession.CodeStateUser), ActiveSession.CodeStateUser.ToString());              
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var ActiveSession = await _loginS.Login(model);
+                    if (ActiveSession != null)
+                    {
+                        HttpContext.Session.SetString(nameof(model.UserName), model.UserName);
+                        HttpContext.Session.SetString(nameof(ActiveSession.CodigoUsuario), "1");
+                        HttpContext.Session.SetString(nameof(ActiveSession.IndicadorValidacion), ActiveSession.IndicadorValidacion.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.DireccionEmail), ActiveSession.DireccionEmail);
+                        HttpContext.Session.SetString(nameof(ActiveSession.NombreCompletoUsuario), ActiveSession.NombreCompletoUsuario);
+                        HttpContext.Session.SetString(nameof(ActiveSession.CodigoPerfil), ActiveSession.CodigoPerfil.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.NombrePerfil), ActiveSession.NombrePerfil);
+                        HttpContext.Session.SetString(nameof(ActiveSession.IndicadorCorreoVerificado), ActiveSession.IndicadorCorreoVerificado.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.IndicadorCambioPassword), ActiveSession.IndicadorCambioPassword.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.IndicadorVistaAgentes), ActiveSession.IndicadorVistaAgentes.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.CodigoEstadoUsuario), ActiveSession.CodigoEstadoUsuario.ToString());
 
-            return Json(new
-            {   
-                success = true,
-                title = Resources.language.Resources.UserFound,
-                text = Resources.language.Resources.WelcomeMessage.ToString() + " " + model.UserName.ToString().ToLower(),
-                icon = "success",
-                timer = 2000
-            });        
+
+                        return Json(new
+                        {
+                            success = true,
+                            title = Resources.language.Resources.UserFound,
+                            text = Resources.language.Resources.WelcomeMessage.ToString() + " " + ActiveSession.NombreCompletoUsuario.ToString().ToLower(),
+                            icon = "success",
+                            timer = 2000
+                        });
+                    }
+                    return Json(new
+                    {
+                        success = false,
+                        title = Resources.language.Resources.UserNotFound.ToString(),
+                        message = Resources.language.Resources.UserNotFoundMsj,
+                        type = "error"
+                    });
+
+
+                }
+                catch (Exception x)
+                {
+
+                    return Json(new
+                    {
+                        success = false,
+                        title = Resources.language.Resources.UserNotFound.ToString(),
+                        message = x.Message.ToString(),
+                        type = "error"
+                    });
+                }
+               
+            }
+            else
+            {
+                return Json(new
+                {
+                    success = false,
+                    title = Resources.language.Resources.UserNotFound.ToString(),
+                    message = Resources.language.Resources.UserNotFoundMsj,
+                    type = "error"
+                });
+            }
+
+
         }
 
         [HttpGet]
@@ -170,20 +211,48 @@ namespace webLoyal.Controllers
 
         [HttpPost]
         public IActionResult FastSingin(string password)
-        {
 
-            var mail = HttpContext.Session.GetString("Email");
-            if (mail == "test@loyalig.com" && password =="123456") {
+        {
+            var model = new LoginModel { UserName = HttpContext.Session.GetString("UserName"),Password=password };
+
+            try
+            {
+                var ActiveSession = await _loginS.Login(model);
+
+                if (ActiveSession.CodigoUsuario != null)
+                {
+                    HttpContext.Session.SetString(nameof(model.UserName), model.UserName);
+                    HttpContext.Session.SetString(nameof(ActiveSession.CodigoUsuario), "1");
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicadorValidacion), ActiveSession.IndicadorValidacion.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.DireccionEmail), ActiveSession.DireccionEmail);
+                    HttpContext.Session.SetString(nameof(ActiveSession.NombreCompletoUsuario), ActiveSession.NombreCompletoUsuario);
+                    HttpContext.Session.SetString(nameof(ActiveSession.CodigoPerfil), ActiveSession.CodigoPerfil.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.NombrePerfil), ActiveSession.NombrePerfil);
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicadorCorreoVerificado), ActiveSession.IndicadorCorreoVerificado.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicadorCambioPassword), ActiveSession.IndicadorCambioPassword.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.IndicadorVistaAgentes), ActiveSession.IndicadorVistaAgentes.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.CodigoEstadoUsuario), ActiveSession.CodigoEstadoUsuario.ToString());
+
+
+                    return Json(new
+                    {
+                        success = true,
+                        title = Resources.language.Resources.UserFound,
+                        text = Resources.language.Resources.WelcomeMessage.ToString() + " " + ActiveSession.NombreCompletoUsuario.ToString().ToLower(),
+                        icon = "success",
+                        timer = 2000
+                    });
+                }
                 return Json(new
                 {
-                    success = true,
-                    title = Resources.language.Resources.UserFound,
-                    text = Resources.language.Resources.WelcomeMessage.ToString() + " " + mail.ToString().ToLower(),
-                    icon = "success",
-                    timer = 2000
+                    success = false,
+                    title = Resources.language.Resources.UserNotFound.ToString(),
+                    message = Resources.language.Resources.UserNotFoundMsj,
+                    type = "error"
                 });
+
             }
-            else
+            catch (Exception)
             {
                 return Json(new
                 {
@@ -193,6 +262,31 @@ namespace webLoyal.Controllers
                     type = "error"
                 });
             }
+           
+
+
+
+
+            //if (mail == "test@loyalig.com" && password =="123456") {
+            //    return Json(new
+            //    {
+            //        success = true,
+            //        title = Resources.language.Resources.UserFound,
+            //        text = Resources.language.Resources.WelcomeMessage.ToString() + " " + mail.ToString().ToLower(),
+            //        icon = "success",
+            //        timer = 2000
+            //    });
+            //}
+            //else
+            //{
+            //    return Json(new
+            //    {
+            //        success = false,
+            //        title = Resources.language.Resources.UserNotFound.ToString(),
+            //        message = Resources.language.Resources.UserNotFoundMsj,
+            //        type = "error"
+            //    });
+            //}
 
         }
     }

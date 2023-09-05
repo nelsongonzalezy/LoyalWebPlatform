@@ -1,22 +1,19 @@
 ﻿using core.Service;
 using Microsoft.AspNetCore.Mvc;
 
-namespace webLoyal.Controllers
+namespace webLoyal.Views.ViewComponents
 {
-    public class PoliciesController : Controller
+    public class PoliciesListViewComponent : ViewComponent
     {
         private readonly IPolicies _request;
-        public PoliciesController(IPolicies request)
+        public PoliciesListViewComponent(IPolicies request)
         {
             _request = request;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IViewComponentResult> InvokeAsync()
         {
             var x = await _request.GetAll();
             return View(x.ToList());
         }
-
-        public IActionResult Detail() { return View(); }
-
     }
 }
