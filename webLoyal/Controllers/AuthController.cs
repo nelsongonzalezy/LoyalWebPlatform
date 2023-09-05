@@ -210,7 +210,7 @@ namespace webLoyal.Controllers
         }
 
         [HttpPost]
-        public IActionResult FastSingin(string password)
+        public async Task<IActionResult> FastSingin(string password)
 
         {
             var model = new LoginModel { UserName = HttpContext.Session.GetString("UserName"),Password=password };
