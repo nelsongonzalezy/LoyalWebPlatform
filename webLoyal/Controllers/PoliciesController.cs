@@ -18,5 +18,11 @@ namespace webLoyal.Controllers
 
         public IActionResult Detail() { return View(); }
 
+        public async Task<IActionResult> Renewal()
+        {
+            var x = await _request.GetFiguresRenewal();
+            return View(x.ToList());
+        }
+
     }
 }

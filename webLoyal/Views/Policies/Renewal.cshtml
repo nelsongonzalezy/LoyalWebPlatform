@@ -1,0 +1,181 @@
+﻿@model List<core.Service.CertificadosRenovacionModel>
+
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+        <ol class="breadcrumb fs-sm mb-1">
+            <li class="breadcrumb-item"><a href="../menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item"><a href="../Policies/Index">Polizas</a></li>
+            <li class="breadcrumb-item active"><a href="../Policies/Renewal">Renovaciones </a></li>
+
+        </ol>
+        <h4 class="main-title mb-0">Renovaciones</h4>
+    </div>
+    <nav class="nav nav-icon nav-icon-lg">
+
+        
+
+    </nav>
+</div>
+<div class="col-xl-12">
+    <div class="row">
+        <div class="col-xl-9">
+            @await Component.InvokeAsync("PoliciesListRenewal")
+            <br />
+         
+        </div>
+       
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-xl-12">
+        <div class="card card-one mt-3">
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th>CodigoSolicitud</th>
+                                <th>CodigoCertificado</th>
+                                <th>NumeroPoliza</th>
+                                <th>TipoVenta</th>
+                                <th>NombreCompleto</th>
+                                <td>NumeroAsegurados</td>
+                                <td>DescripcionPoliza</td>
+                                <td>DescripcionPais</td>
+                                <td>CodigoEstadoCertificado</td>
+
+                                <td>FechaInicioVigencia</td>
+                                <td>DescripcionFormaPago</td>
+                                <td>Prima</td>
+                                <td>PrimaComisionable</td>
+                                <td>Descripcion detallada del Plan</td>
+                                <td>MotivoCancelacion</td>
+                                <td>NumeroCuota</td>
+                                <td>EstadoCuota</td>
+                                <td>NombreAgencia</td>
+                                <td>NombreAgente</td>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td> <a href="../requestmonitor/detail/@item.CodigoSolicitud" class="btn btn-outline-tertiary"> @item.CodigoSolicitud</a> </td>
+                                    <td> <a class="btn btn-outline-tertiary"> @item.CodigoCertificado</a> </td>
+                                    <td><a class="btn btn-link">@item.NumeroPoliza</a></td>
+
+                                    @switch (item.DescripcionTipoVenta)
+                                    {
+
+                                        case "Renovaciones":
+                                            <td> <span class="badge bg-primary"> @item.DescripcionTipoVenta</span> </td>
+                                            break;
+                                        case "Nuevo Negocio":
+                                            <td> <span class="badge bg-info"> @item.DescripcionTipoVenta</span> </td>
+                                            break;
+                                        default:
+                                            <td> <span class="badge bg-info"> @item.DescripcionTipoVenta</span> </td>
+                                            break;
+                                    }
+
+
+
+                                    <td>@item.NombreCompleto</td>
+                                    <td>@item.NumeroAsegurados</td>
+                                    <td>@item.DescripcionPoliza</td>
+                                    <td>@item.DescripcionPais</td>
+                                    @switch (item.CodigoEstadoCertificado)
+                                    {
+                                        case "01":
+                                            <td> <span class="badge bg-warning"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                        case "02":
+                                            <td> <span class="badge bg-info"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                        case "03":
+                                            <td> <span class="badge text-bg-success"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                        case "04":
+                                            <td> <span class="badge bg-danger"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                        case "05":
+                                            <td> <span class="badge bg-info"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                        case "06":
+                                            <td> <span class="badge bg-danger"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                        case "07":
+                                            <td> <span class="badge bg-info"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                        case "08":
+                                            <td> <span class="badge bg-warning"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                        case "09":
+                                            <td> <span class="badge bg-warning"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                        default:
+                                            <td> <span class="badge bg-info"> @item.DescripcionEstadoCertificado</span> </td>
+                                            break;
+                                    }
+
+                                    <td>@item.FechaInicioVigencia</td>
+
+                                    <td>@item.DescripcionFormaPago</td>
+
+                                    <td>@item.Prima.ToString("###.##")</td>
+                                    <td>@item.PrimaComisionable.ToString("###.##")</td>
+
+                                    
+                                    <td>@item.DescripcionPlan</td>
+                                    <td>@item.DescripcionMotivoCancelacion</td>
+                                    <td>@item.NumeroCuota</td>
+                                    <td>@item.DescripcionEstadoCuota</td>
+                                    <td><a class="btn btn-link" href="../agents/detail/@item.CodigoAgencia">@item.NombreAgencia</a></td>
+                                    <td><a class="btn btn-link" href="../agents/detail/@item.CodigoAgente">@item.NombreAgente</a></td>
+                                </tr>
+
+                            }
+
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+    </div><!-- col -->
+</div><!-- col -->
+@section Scripts{
+<script>
+        $("table").DataTable({
+            searchPanes: {
+                viewTotal: true
+            },
+            searchBuilder: true,
+            sort: true,
+            resizable: true,
+            responsive: true,
+            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
+            fixedColumns: true,
+            order: [[0, "desc"]],
+            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+            buttons: [
+                {
+                    extend: 'excelHtml5',
+                    autoFilter: true,
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.PoliciesDetailModel)Excel',
+                },
+                {
+                    extend: 'pdfHtml5',
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.PoliciesDetailModel)Pdf',
+                }
+            ]
+        });
+</script>
+}

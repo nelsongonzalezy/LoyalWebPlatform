@@ -1,7 +1,7 @@
 ﻿@model List<core.Service.MenuModel>;
 
 
-        <div class="col-8">
+
             <div class="d-md-flex align-items-center justify-content-between mb-4">
                 <div>
                     <ol class="breadcrumb fs-sm mb-1">
@@ -19,40 +19,55 @@
             </div>
             <div class="row g-3">
 
-                <div class="">
-                    <div class="col-xl-8 col-sm-12">
+            
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title text-dark">
                                     <h3>
                                         Solicitudes
-
                                     </h3>
                                 </div>
                                 @await Component.InvokeAsync("Requests")
                             </div>
                             <div class="card-footer">
                                 <a href="../requestmonitor/index" class="btn btn-outline-secondary">ver mas</a>
-
-
                             </div>
                         </div>
                     </div>
 
-                    <br />
-                    <div class="col-xl-8 col-sm-12">
+
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title text-dark">
                                     <h3>
                                         Polizas
-
                                     </h3>
                                 </div>
                                 @await Component.InvokeAsync("PoliciesStatus")
                             </div>
                             <div class="card-footer">
                                 <a href="../Policies/index" class="btn btn-outline-secondary">ver mas</a>
+                            </div>
+                        </div>
+
+
+
+                    </div> 
+                    <br />
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title text-dark">
+                                    <h3>
+                                        Renovaciones
+                                    </h3>
+                                </div>
+                        @await Component.InvokeAsync("PoliciesListRenewal")
+                            </div>
+                            <div class="card-footer">
+                                <a href="../Policies/Renewal" class="btn btn-outline-secondary">ver mas</a>
 
 
                             </div>
@@ -60,17 +75,14 @@
 
 
 
-                    </div><!-- col -->
+                    
 
 
                 </div><!-- col -->
-                <div class="col-xl-4">
-
-                </div><!-- col -->
+                
             </div><!-- row -->
 
-        </div>
-
+   
 
 
 
@@ -148,3 +160,20 @@
         </div>
 *@
 
+@*@section  Scripts{
+    <script>
+        'use strict'
+        $('#vmap').vectorMap({
+            map: 'world_en',
+            backgroundColor: '#fff',
+            borderColor: '#fff',
+            color: '#5f748a',
+            selectedColor: null,
+            hoverColor: true,
+            hoverOpacity: 0.8,
+            enableZoom: true,
+            showTooltip: true
+        });
+    </script>
+
+}*@

@@ -1,8 +1,5 @@
-﻿@model List<core.Service.ClaimCreateModel>;
+﻿@model List<core.Service.ListarReclamosModel>;
 
-
-<div class="container">
-    
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
@@ -59,20 +56,18 @@
                         <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
                             <thead>
                                 <tr>
-                                    <th>Claim Id</th>
-                                    <th>ClaimNumber</th>
-                                    <th>ClaimType</th>
-                                    <th>ClaimStatu</th>
-                                    <th>ClaimValue</th>
-                                    <th>User</th>
-                                    <th>UserType</th>
-                                    <th>ClaimDescription</th>
-                                    <th>ClaimDate</th>
-                                    <th>PolicyNumber</th>
-                                    <th>PolicyType</th>
-                                    <th>CertificatStatus</th>
-                                    <th>MemberName</th>
-                                    <th>Country</th>
+                                    <th>#</th>
+                            <th>NumeroPoliza</th>
+                            <th>FechaReclamo</th>
+                            <th>DescripcionEstadoReclamo</th>
+                            <th>DescripcionTipoReclamo</th>
+                            <th>DescripcionOrigen</th>
+                            <th>DescripcionReclamo</th>
+                            <th>AplicaDeducible</th>
+                            <th>ValorDeducible</th>
+                            <th>NotificaTitular</th>
+                            <th>NotificaAgente</th>
+                            <th>NotificaProveedor</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -80,51 +75,55 @@
                                 @if (Model.Count > 0)
                                 {
                                
-                                    @foreach (var claim in Model)
+                                    @foreach (var claim in Model.OrderByDescending(x => x.CodigoReclamo))
                                     {
                                       <tr>
-                                            <td>@claim.ClaimId</td>
-                                            <td>@claim.ClaimNumber</td>
-                                            <td><span class="badge bg-info">@claim.ClaimType</span></td>
-                                            <td>
-                                                    @switch (@claim.ClaimStatus)
-                                                    {
-                                                        case "Pendiente":
-                                                                <span class="badge bg-warning" title="@claim.ClaimStatus"><i class="ri-error-warning-line"></i>&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                        case "Aprobado":
-                                                                <span class="badge bg-success" title="@claim.ClaimStatus"><i class="ri-checkbox-circle-line"></i>&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                        case "Denegado":
-                                                                <span class="badge bg-danger" title="@claim.ClaimStatus"><i class="ri-close-circle-line"></i>&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                        case "En Proceso":
-                                                                <span class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@claim.ClaimStatus"></span> &nbsp @claim.ClaimStatus</span>
+                                            <td>@claim.CodigoReclamo</td>
+                                            <td>@claim.NumeroPoliza</td>
+                                            <td>@claim.FechaReclamo</td>
+                                            <td>@claim.DescripcionEstadoReclamo</td>
+                                            <td>@claim.DescripcionTipoReclamo</td>
+                                            <td>@claim.DescripcionOrigen</td>
 
-                                                            break;
-                                                        case "Recibido":
-                                                                <span class="badge bg-info" title="@claim.ClaimStatus"><i class="ri-add-circle-line"></i>&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                                default:
-                                                            <span class="ri-error-warning-line" title="@claim.ClaimStatus">&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                    }
-                                            </td>
-                                            <td>@claim.ClaimValue.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                            <td>@claim.UserName</td>
-                                            <td><span class="badge bg-info">@claim.UserType</span></td>
-                                            <td>@claim.ClaimDescription</td>
-                                            <td>@claim.ClaimDate</td>
-                                            <td>@claim.PolicyNumber</td>
-                                            <td>@claim.PolicyType</td>
-                                            <td>@claim.CertificatStatus</td>
-                                            <td>@claim.MemberName</td>
-                                            <td>Venezuela</td>
+                                            <td>@claim.DescripcionReclamo</td>
+                                            <td>@claim.AplicaDeducible</td>
+                                            <td>@claim.ValorDeducible.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                @switch (claim.NotificaTitular)
+                                                {
+                                                    case  true:
+                                            <td><span class="badge bg-light"><i class="ri-check-double-fill"></i></span></td>
+                                                        break;
+                                                        case  false:
+                                            <td><span class="badge bg-light"><i class="ri-close-line"></i></span></td>
+                                                        break;
+                                        
+                                                }
+                                                    @switch (claim.NotificaAgente)
+                                                                {
+                                                                    case  true:
+                                            <td><span class="badge bg-danger"><i class="ri-close-line"></i></span></td>
+                                                                        break;
+                                                                        case  false:
+                                            <td><span class="badge bg-light"><i class="ri-close-line"></i></span></td>
+                                                                        break;
+
+                                                    }                                                
+                                                    @switch (claim.NotificaProveedor)
+                                                {
+                                                    case  true:
+                                            <td><span class="badge bg-light"><i class="ri-check-double-fill"></i></span></td>
+                                                        break;
+                                                        case  false:
+                                                        <td><span class="badge bg-light"><i class="ri-close-line"></i></span></td>
+                                                        break;
+                                        
+                                                }
+                                            
                                             <td>
                                                 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                     <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <a href="~/claims/get/@claim.ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                                    <a href="~/claims/delete/@claim.ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
+                                                <a href="~/claims/get/@claim.CodigoReclamo" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
+                                                <a href="~/claims/delete/@claim.CodigoReclamo" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
                                                     </div>
                                                  </div>
                                             </td>
@@ -140,9 +139,6 @@
         </div>
         </div>
 
-
-
-</div>
 @*
 
 	<div  class="card">

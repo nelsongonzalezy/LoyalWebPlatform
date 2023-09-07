@@ -2,6 +2,6 @@
 {
     public interface IClaimsServ
     {
-        Task<IQueryable<ClaimCreateModel>> GetAll();
+        Task<IQueryable<ListarReclamosModel>> GetAll();
     }
 }

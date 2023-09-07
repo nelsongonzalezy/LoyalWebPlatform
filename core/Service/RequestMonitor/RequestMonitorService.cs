@@ -13,7 +13,7 @@
             var x = new List<RequestMonitorStatusModel>();
             foreach (var item in y.Content)
             {
-                item.Icon = "ri-shopping-bag-3-line";
+                item.Icon = "ri-first-aid-kit-line";
             }
             return y.Content.AsQueryable();
         }
