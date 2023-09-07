@@ -2,22 +2,16 @@
 <div class="row g-3">
     @foreach (var item in Model)
     {
-   
-
         <div class="col-12 col-xl-12">
             <div class="card card-one">
                 <div class="card-body">
                     <a href="~/lives/index">
-
-                    
                     <label class="card-title fs-sm fw-medium mb-2">Vidas</label>
                     <h3 class="card-value mb-1"><i class="ri-team-fill ri-2x"></i> @item.TotalPersonas</h3>
                     </a>
-                </div><!-- card-body -->
-            </div><!-- card-one -->
+                </div>
+            </div>
         </div>   
-
-
         <div class="col-12 col-xl-12">
             <div class="card card-one">
 
@@ -28,13 +22,9 @@
 
                     <div class="col"> <h4 class="card-value mb-1"><i class="ri-men-fill ri-2x"></i> @item.AdultosHombres</h4></div>
                 </div>
-                   
-               
-
-                </div><!-- card-body -->
-            </div><!-- card-one -->
+                </div>
+            </div>
         </div>
-
     <div class="col-12 col-xl-12">
         <div class="card card-one">
 
@@ -45,12 +35,8 @@
 
                     <div class="col"> <h4 class="card-value mb-1"><i class="ri-men-fill ri-2x"></i> @item.MenoresHombres</h4></div>
                 </div>
-            </div><!-- card-body -->
-        </div><!-- card-one -->
-        </div><!-- card-one -->
-
+            </div>
+        </div>
+        </div>
     }
-
-
-
 </div>

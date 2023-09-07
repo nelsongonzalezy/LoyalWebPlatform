@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace core.Service
+﻿namespace core.Service
 {
     public class ProductService : IProduct 
     {
@@ -40,9 +34,7 @@ namespace core.Service
                     item.Color = "background-color:rgb(141,195,65)";
                     item.Img = "/assets/img/privilege.png";
                 }
-                
             }
-        
             return y.Content.AsQueryable();
         }
     }

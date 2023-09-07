@@ -20,21 +20,20 @@
                                         <table class="table table-borderless mb-0 dataTable-loading searchable">
                                             <thead>
                                                 <tr>
-                                                    <th>CodigoCertificado</th>
+                                                    <th>#</th>
                                                     <th>NumeroPoliza</th>
-                                                    <th>nombreCompleto</th>
-                                                    <td>DescripcionEstadoCertificado</td>
-                                                    <td>DescripcionTipoPersonaCotizacion</td>
+                                                    <th>nombre Completo</th>
+                                                    <td>Estado Certificado</td>
+                                                    <td>TipoPersona</td>
                                                     <td>Sexo</td>
-                                                    <td>FechaNacimiento</td>
+                                                    <td>Fecha Nacimiento</td>
                                                     <td>Edad</td>
                                                     <td>Peso</td>
                                                     <td>Talla</td>
                                                     <td>Imc</td>
-                                                    <td>CodigoPoliza</td>
-                                                    <td>DescripcionPoliza</td>
-                                                    <td>DescripcionPlan</td>
-                                                    <td>DescripcionPais</td>
+                                                    <td>Producto</td>
+                                                    <td>Plan</td>
+                                                    <td>Pais</td>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -89,8 +88,25 @@
                                                         <td>@item.Peso.ToString("###.##")</td>
                                                         <td>@item.Talla.ToString("###.##")</td>
                                                         <td>@item.Imc.ToString("###.##")</td>
-                                                        <td>@item.CodigoPoliza</td>
-                                                        <td>@item.DescripcionPoliza</td>
+                                                        @switch (item.CodigoPoliza.ToString())
+                                                            {
+                                                                case "1":
+                                                                    <td><span class="badge" style="background-color:rgb(60,95,138);">@item.DescripcionPoliza</span></td>
+                                                                    break;                                                               
+                                                                    case "2":
+                                                                    <td><span class ="badge" style="background-color:rgb(141,195,65);">@item.DescripcionPoliza</span></td>
+                                                                    break;                                                                
+                                                                    case "3":
+                                                                    <td>
+                                                                        <span class="badge" style="background-color:rgb(48,182,181);">@item.DescripcionPoliza</span>
+                                                                    </td>
+                                                                    break;                                                                
+                                                                    case "4":
+                                                                    <td>
+                                                                        <span class="badge" style="background-color:rgb(132,26,102);">@item.DescripcionPoliza</span>
+                                                                    </td>
+                                                                    break;
+                                                            }
                                                         <td>@item.DescripcionPlan</td>
                                                         <td>@item.DescripcionPais</td>
                                                     </tr>
@@ -182,50 +198,6 @@
 
 @section Scripts{
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            startInterval();
-        });
-
-        // Función para mostrar un mensaje con un temporizador de cierre automático
-        function showSweetAlert() {
-            Swal.fire({
-                position: 'top',
-                text: 'Actualizando',
-
-                timer: 2000, // 2 segundos
-                timerProgressBar: true,
-                showConfirmButton: false,
-            }).then(() => {
-                location.reload(); // Refrescar la página después de cerrar la alerta
-            });
-        }
-
-        // Función para comenzar el intervalo de 1 minuto con conteo regresivo de 10 segundos
-        function startInterval() {
-            let countdown = 10;
-
-            const interval = setInterval(() => {
-                Swal.fire({
-                    position: 'top',
-                    text: 'Actualizando',
-
-                    timer: 2000, // 2 segundos
-                    timerProgressBar: true,
-                    showConfirmButton: false,
-                }).then(() => {
-                    location.reload(); // Refrescar la página después de cerrar la alerta
-                });
-
-                countdown--;
-
-                if (countdown < 0) {
-                    clearInterval(interval);
-                    showSweetAlert(); // Ejecutar la función después del conteo regresivo
-                }
-            }, 5000000); // 1 segundo
-        }
-
-
         $("table").DataTable({
             searchPanes: {
                 viewTotal: true
@@ -243,19 +215,14 @@
                     extend: 'excelHtml5',
                     autoFilter: true,
                     className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.PoliciesDetailModel)Excel',
+                    filename: '@nameof(core.Service.LivesService)Excel',
                 },
                 {
                     extend: 'pdfHtml5',
                     className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.PoliciesDetailModel)Pdf',
+                    filename: '@nameof(core.Service.LivesService)Pdf',
                 }
             ]
         });
-
-       
-
-
-
     </script>
 }
