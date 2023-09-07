@@ -1,7 +1,7 @@
 ﻿@model List<core.Service.RequestMonitorStatusModel>;
 
 <div class="row g-3">
-    @foreach( var item in Model)
+    @foreach( var item in Model.OrderBy(x => x.codigoEstadoSolicitud))
     {
         <div class="col-6 col-xl-3">
             <div class="card card-one">

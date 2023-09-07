@@ -1,29 +1,56 @@
 ﻿@model List<core.Service.CifraCertificadoProductoModel>;
 
 
-<div class="row g-2">
-    @foreach (var item in Model)
+<div class="row">
+    @foreach (var item in Model.OrderBy(x=>x.CodigoProducto))
     {
-   
+        <div class="col-6 col-xl-3">
+            <div class="music-player mt-4 mt-xxl-5" style="@item.Color">
+                <div class="media-music">
+                    <a href="" class="media-img"><img src="@item.Img" alt=""></a>
+
+                </div><!-- media-music -->
+                <div class="media-body">
+                    <h5><a href="" class="text-white">@item.DescripcionProducto</a></h5>
+                    <h3 class="card-value text-white"># @item.CantidadRegistros</h3>
+                </div><!-- media-body -->
+            </div>
+        </div>
+   @*
         <div class="col-6 col-md-6 col-xl-6">
             <div class="card card-one card-product" style="@item.Color;">
                 <img class="card-img-top" src="@item.Img" />
                 <div class="card-body p-3">
                     <div class="d-flex align-items-center justify-content-between mb-5">
-                        <h4 class="fw-normal ff-numerals text-white">@item.DescripcionProducto</h4>
-                        <h5 class="card-value text-white"># @item.CantidadRegistros</h5>
+                        <h4 class="fw-normal ff-numerals text-white"></h4>
+                        <h5 class="card-value text-white"></h5>
                     </div>
                     @*<div class="d-flex justify-content-between">
                         <h4 class="card-value ff-numerals text-white">Cartera</h4>
                         <h3 class="card-value ff-numerals text-white">2.3%</h3>
-                    </div>*@
-
+                    </div>
                 </div><!-- card-body -->
             </div><!-- card -->
-        </div>
+        </div>*@
 
     }
-</div>@*
+</div>
+@*<div class="row g-3 g-lg-4">
+    <div class="music-player mt-4 mt-xxl-5">
+        <div class="media-music">
+            <a href="" class="media-img"><img src="../assets/img/liberty.png" alt=""></a>
+            <div class="media-body">
+                <h6><a href="">One Thing Remains - Live</a></h6>
+                <span>Passion, Kristian Stanfill</span>
+            </div><!-- media-body -->
+        </div><!-- media-music -->
+
+       
+    </div>
+</div>*@
+
+
+@*
     <div class="col-6 col-md-6 col-xl-6">
         <div class="card card-one card-product" style="background-color:rgb(60,95,138);">
             <img class="card-img-top" src="~/assets/img/beyond.png" />

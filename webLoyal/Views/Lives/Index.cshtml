@@ -1,35 +1,17 @@
-﻿@model List<core.Service.CertificadosModel>
+﻿@model List<core.Service.VidasResponseModel>
 
             <div class="d-md-flex align-items-center justify-content-between mb-4">
                 <div>
                     <ol class="breadcrumb fs-sm mb-1">
-                        <li class="breadcrumb-item active"><a href="../menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
-                        <li class="breadcrumb-item"><a href="../Policies/index">Polizas</a></li>
+                        <li class="breadcrumb-item active"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+                        <li class="breadcrumb-item"><a href="~/Policies/index">Polizas</a></li>
+                        <li class="breadcrumb-item"><a href="~/Lives/index">Vidas</a></li>
 
                     </ol>
-                <h4 class="main-title mb-0">Polizas</h4>
+                <h4 class="main-title mb-0">Vidas</h4>
                 </div>
-                <nav class="nav nav-icon nav-icon-lg">
 
-                    <a href="javascript:void(0);" class="nav-link" title="Refrescar" onclick="showSweetAlert()"><i class="ri-refresh-line"></i></a>
-
-                </nav>
-            </div>
-        <div class="col-xl-12">
-            <div class="row">
-                <div class="col-xl-9">
-                    @await Component.InvokeAsync("PoliciesProduct")
-                    <br />
-                    @await Component.InvokeAsync("PoliciesStatus")
-                    <br />
-                </div>
-                <div class="col-xl-3">
-                    @await Component.InvokeAsync("PoliciesLives")
-
-                </div>
-            </div>
-        </div>
-                   
+            </div>                   
                     <div class="row g-3">
                         <div class="col-xl-12">
                             <div class="card card-one mt-3">
@@ -38,54 +20,33 @@
                                         <table class="table table-borderless mb-0 dataTable-loading searchable">
                                             <thead>
                                                 <tr>
-                                                    <th>CodigoSolicitud</th>
+                                                    <th>CodigoCertificado</th>
                                                     <th>NumeroPoliza</th>
-                                                    <th>TipoVenta</th>
-                                                    <th>NombreCompleto</th>
-                                                    <td>EstadoCertificado</td>
-                                                    <td>NumeroAsegurados</td>
-                                                    <td>Poliza</td>
-                                                    <td>Pais</td>
-           
-                                                    <td>FechaInicioVigencia</td>
-                                                    <td>FormaPago</td>
-                                                    <td>Prima</td>
-                                                    <td>PrimaComisionable</td>
-                                                    <td>Descripcion detallada del Plan</td>
-                                                    <td>MotivoCancelacion</td>
-                                                    <td>NumeroCuota</td>
-                                                    <td>EstadoCuota</td>
-                                                    <td>NombreAgencia</td>
-                                                    <td>NombreAgente</td>
-
-
-                                
+                                                    <th>nombreCompleto</th>
+                                                    <td>DescripcionEstadoCertificado</td>
+                                                    <td>DescripcionTipoPersonaCotizacion</td>
+                                                    <td>Sexo</td>
+                                                    <td>FechaNacimiento</td>
+                                                    <td>Edad</td>
+                                                    <td>Peso</td>
+                                                    <td>Talla</td>
+                                                    <td>Imc</td>
+                                                    <td>CodigoPoliza</td>
+                                                    <td>DescripcionPoliza</td>
+                                                    <td>DescripcionPlan</td>
+                                                    <td>DescripcionPais</td>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach (var item in Model)
+                                                @foreach (var item in Model.OrderByDescending(x => x.NumeroPoliza))
                                                 {
                                                     <tr>
-                                                        <td> <a class="btn btn-outline-tertiary"> @item.CodigoSolicitud</a> </td>
+                                                        <td> <a class="btn btn-outline-tertiary"> @item.CodigoCertificado</a> </td>
                                                         <td><a class="btn btn-link">@item.NumeroPoliza</a></td>
                                
-                                                        @switch (item.DescripcionTipoVenta)
-                                                        {
-                                                   
-                                                            case "Renovaciones":
-                                                                <td> <span class="badge bg-primary"> @item.DescripcionTipoVenta</span> </td>
-                                                            break;
-                                                            case "Nuevo Negocio":
-                                                                <td> <span class="badge bg-info"> @item.DescripcionTipoVenta</span> </td>
-                                                                break;
-                                                            default:
-                                                                <td> <span class="badge bg-info"> @item.DescripcionTipoVenta</span> </td>
-                                                                break;
-                                                        }
-
-
-
+              
                                                         <td>@item.NombreCompleto</td>
+
                                                         @switch (item.CodigoEstadoCertificado)
                                                         {
                                                             case "01":
@@ -120,25 +81,18 @@
                                                                 break;
                                                         }
 
-                                                        <td>@item.NumeroAsegurados</td>
-                                                        <td>@item.DescripcionPoliza</td>
-                                                        <td>@item.DescripcionPais</td>
+                                                        <td>@item.DescripcionTipoPersonaCotizacion</td>
+                                                        <td>@item.Sexo</td>
+                                                        <td>@item.FechaNacimiento</td>
     
-                                                        <td>@item.FechaInicioVigencia</td>
-                                                        <td>@item.DescripcionFormaPago</td>
-                                                        <td>
-                                                            @item.Prima.ToString("###.##")</td>
-                                                        <td>@item.PrimaComisionable.ToString("###.##")</td>
+                                                        <td>@item.Edad</td>
+                                                        <td>@item.Peso.ToString("###.##")</td>
+                                                        <td>@item.Talla.ToString("###.##")</td>
+                                                        <td>@item.Imc.ToString("###.##")</td>
+                                                        <td>@item.CodigoPoliza</td>
+                                                        <td>@item.DescripcionPoliza</td>
                                                         <td>@item.DescripcionPlan</td>
-                                                        <td>@item.DescripcionMotivoCancelacion</td>
-                                                        <td>@item.NumeroCuota</td>
-                                                        <td>@item.DescripcionEstadoCuota</td>
-                                                        <td><a class="btn btn-link">@item.NombreAgencia</a></td>
-                                                        <td><a class="btn btn-link">@item.NombreAgente</a></td>
-
-
-
-
+                                                        <td>@item.DescripcionPais</td>
                                                     </tr>
 
                                                 }
