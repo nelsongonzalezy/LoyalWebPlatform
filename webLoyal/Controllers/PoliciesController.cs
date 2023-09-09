@@ -15,8 +15,13 @@ namespace webLoyal.Controllers
             var x = await _request.GetAll();
             return View(x.ToList());
         }
-
-        public IActionResult Detail() { return View(); }
+        [HttpGet]
+        [Route("Policies/Detail/{codigoSolicitud}")]
+        public async Task<IActionResult> Detail(int codigoSolicitud) 
+        { 
+            var model = await _request.GetByCode(codigoSolicitud);
+            return View(model); 
+        }
 
         public async Task<IActionResult> Renewal()
         {

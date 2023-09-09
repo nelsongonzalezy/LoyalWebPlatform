@@ -7,6 +7,8 @@
         Task<IQueryable<CifraCertificadoProductoModel>> GetAllProduct();
         Task<IQueryable<CifraCertificadosRenovacionesModel>> GetAllRenewal();
         Task<IQueryable<CertificadosRenovacionModel>> GetFiguresRenewal();
-        
+        Task<VwSolcitudConsultaModel> GetByCode(int codigoSolicitud);
+
+
     }
 }

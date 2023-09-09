@@ -78,7 +78,8 @@
                                     @foreach (var claim in Model.OrderByDescending(x => x.CodigoReclamo))
                                     {
                                       <tr>
-                                            <td>@claim.CodigoReclamo</td>
+                                    <td> <a href="../requestmonitor/detail/@claim.CodigoReclamo" class="btn btn-outline-tertiary"> @claim.CodigoReclamo</a> </td>
+   
                                             <td>@claim.NumeroPoliza</td>
                                             <td>@claim.FechaReclamo</td>
                                             <td>@claim.DescripcionEstadoReclamo</td>

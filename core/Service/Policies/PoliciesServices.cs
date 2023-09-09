@@ -64,5 +64,10 @@
             var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseCertificadosRenovacionModel>("api/v1/Certificados/ObtenerCertificadosRenvacion");
             return y.Content.AsQueryable();
         }
+        public async Task<VwSolcitudConsultaModel> GetByCode(int codigoSolicitud)
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseVwSolcitudConsultaModel>("api/v1/Certificados/ConsultaSolicitud?codigoSolicitud=" + codigoSolicitud);
+            return y.Content;
+        }
     }
 }
