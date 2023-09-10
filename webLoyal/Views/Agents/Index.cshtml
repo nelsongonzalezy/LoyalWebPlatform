@@ -1,0 +1,140 @@
+﻿@model List<core.Service.AgentsDetailModel>
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+        <ol class="breadcrumb fs-sm mb-1">
+            <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item active"><a href="~/Agents/index">@webLoyal.Resources.language.Resources.Agent</a></li>
+
+        </ol>
+        <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Agent</h4>
+    </div> 
+</div>
+
+<div class="col-lg-12 row g-3">
+
+    <div class="card card-one mt-3">
+        <div class="card-body p-3">
+            <div class="table-responsive">
+                <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                    <thead>
+                        <tr>
+                            <th>Agente</th>
+                            <th>Nombre</th>
+                            <th>Estado </th>
+                            <th>Pais</th>
+                            <th>Provincia</th>
+                            <th>Ciudad</th>
+                            <th>Correo</th>
+                            <th>Celular</th>
+                            @*<th>Quota</th>
+                            <th>Sold</th>
+                            <th>Charged</th>
+                            <th>Reached</th>
+                            <th>Progress</th>
+                            <th>Ranting</th>
+*@
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count > 0)
+                        {
+
+                            @foreach (var agents in Model.OrderBy(x => x.CodigoAgente) )
+                            {
+                                <tr>
+
+                                    <td> <a href="../Agents/detail/@agents.CodigoAgente" class="btn btn-outline-tertiary"> @agents.CodigoAgente</a> </td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="avatar"><img src="~/assets/img/agent-11-32.png" /></div>
+                                            <div>
+                                                <a href="../Agents/detail/@agents.CodigoAgente"><h6 class="mb-0">@agents.NombreAgente</h6></a>
+                                            </div>
+                                        </div>
+                                    </td>
+
+
+                                    <td>
+                                        @switch (agents.CodigoEstadoAgente)
+                                        {
+                                            case "01":
+                                                <span class="badge bg-success" title="@agents.DescripcionEstadoAgente"><i class="ri-checkbox-circle-line"></i>&nbsp @agents.DescripcionEstadoAgente</span>
+                                                break;
+                                            case "02":
+                                                <span class="badge bg-warning" title="@agents.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @agents.DescripcionEstadoAgente</span>
+                                                break;
+                                            case "04":
+                                                <span class="badge bg-secondary" title="@agents.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @agents.DescripcionEstadoAgente</span>
+                                                break;
+                                            case "03":
+                                                <span class="badge bg-danger" title="@agents.DescripcionEstadoAgente"><i class="ri-close-circle-line"></i>&nbsp @agents.DescripcionEstadoAgente</span>
+                                                break;
+                                           
+                                            default:
+                                                <span class="ri-error-warning-line" title="@agents.DescripcionEstadoAgente">&nbsp @agents.DescripcionEstadoAgente</span>
+                                                break;
+                                        }
+                                       
+                                        </td>
+                                    <td>@agents.DescripcionPais</td>
+                                    <td>@agents.Provincia</td>
+                                    <td>@agents.Ciudad</td>
+                                    <td>@agents.Correo</td>
+                                    <td>@agents.Celular</td>
+                               
+                                    
+                                   @* <td>@agents.Sold.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                    <td>@agents.Charged.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>*@
+                                    
+                                   
+                                    <td>
+                                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                            <div class="btn-group me-2" role="group" aria-label="First group">
+                                                <a href="../claims/get/@agents.CodigoAgente" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
+                                                <a href="../claims/delete/@agents.CodigoAgente" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+                            }
+
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- card-body -->
+    </div>
+</div>
+</div>
+@section Scripts{
+    <script>
+        $("table").DataTable({
+            searchBuilder: true,
+            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
+            fixedColumns: true,
+            //order: [[0, "desc"]],
+            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+            buttons: [
+                {
+                    extend: 'excelHtml5',
+                    autoFilter: true,
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.BoardAgentsModel)Excel',
+                },
+                {
+                    extend: 'pdfHtml5',
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.BoardAgentsModel)Pdf',
+                }
+            ]
+        });
+
+
+
+    </script>
+
+}

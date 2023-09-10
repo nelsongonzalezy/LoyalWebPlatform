@@ -40,12 +40,10 @@
                                                 @foreach (var item in Model.OrderByDescending(x => x.NumeroPoliza))
                                                 {
                                                     <tr>
-                                                        <td> <a class="btn btn-outline-tertiary"> @item.CodigoCertificado</a> </td>
-                                                        <td><a class="btn btn-link">@item.NumeroPoliza</a></td>
-                               
+                                                        <td> <a class="btn btn-outline-tertiary" href="~/Policies/detail/@item.CodigoSolicitud"> @item.CodigoSolicitud</a> </td>
+                                                        <td> <a class="btn btn-outline-tertiary" href="~/Policies/detail/@item.CodigoSolicitud"> @item.NumeroPoliza</a> </td>                  
               
                                                         <td>@item.NombreCompleto</td>
-
                                                         @switch (item.CodigoEstadoCertificado)
                                                         {
                                                             case "01":
@@ -208,7 +206,7 @@
             responsive: true,
             class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
             fixedColumns: true,
-            order: [[0, "desc"]],
+            //order: [[0, "desc"]],
             dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
             buttons: [
                 {

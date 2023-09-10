@@ -44,5 +44,7 @@
         public int CodigoPaisPostal { get; set; }
         public string DescripcionPaisPostal { get; set; }
         public string CodigoDireccionAlternativa { get; set; }
+        public string CodigoEstadoPersonaSolicitud { get; set; }
+        public string DescripcionEstadoPersonaSolicitud { get; set; }
     }
 }

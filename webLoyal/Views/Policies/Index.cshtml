@@ -29,7 +29,6 @@
                 </div>
             </div>
         </div>
-                   
                     <div class="row g-3">
                         <div class="col-xl-12">
                             <div class="card card-one mt-3">
@@ -67,7 +66,7 @@
                                                 {
                                                     <tr>
                                                         <td> <a class="btn btn-outline-tertiary"> @item.CodigoSolicitud</a> </td>
-                                                        <td><a class="btn btn-link">@item.NumeroPoliza</a></td>
+                                    <td><a href="~/Policies/Detail/@item.CodigoSolicitud" class="btn btn-link">@item.NumeroPoliza</a></td>
                                
                                                         @switch (item.DescripcionTipoVenta)
                                                         {

@@ -3,6 +3,8 @@
     public class VidasResponseModel
     {
         public int CodigoCertificado { get; set; }
+
+        public int CodigoSolicitud { get; set; }
         public string? NumeroPoliza { get; set; }
         public string? DescripcionEstadoCertificado { get; set; }
         public string? CodigoEstadoCertificado { get; set; }

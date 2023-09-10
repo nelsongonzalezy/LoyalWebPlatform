@@ -14,5 +14,10 @@
             var model = await _unAuthorized.GetUnAuthorizedAsync<ResponseAgentsDetailModel>("api/v1/Agente?codigoAgente="+codigoAgente);
             return model.Content.AsQueryable();
         }
+        public async Task<IQueryable<AgentsDetailModel>> GetAll()
+        {
+            var model = await _unAuthorized.GetUnAuthorizedAsync<ResponseAgentsDetailModel>("api/v1/Agente?codigoAgente=");
+            return model.Content.AsQueryable();
+        }
     }
 }
