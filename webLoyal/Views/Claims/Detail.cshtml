@@ -1,0 +1,474 @@
+﻿@model core.Service.ListarReclamosModel
+
+
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+        <ol class="breadcrumb fs-sm mb-1">
+            <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item"><a href="~/Claims/index">@webLoyal.Resources.language.Resources.ClaimId</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detalle / </li>
+        </ol>
+        <h4 class="main-title mb-0"></h4>
+    </div>
+
+</div>
+
+
+<div>
+    <div class="col-12 ">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item"><a class="nav-link active"><p class="d-block mb-1 ls--1 fs-31 fw-big text-white">Reclamo # @Model.CodigoReclamo | @Model.NumeroPoliza | afectador: @Model.NombreCompleto </p></a></li>
+        </ul>
+    </div>
+    <br />
+    <div>
+        <div class="row g-2 justify-content-between">
+            <div>
+                <div>
+                    <div class="col-xl-12">
+                        <div class="row g-3">
+                            <div class="col-md-5 col-xl-3">
+                                <div class="card">
+                                    <div class="card-header"><i class="ri-calendar-todo-line fs-20 lh-1 me-2"></i>Informacion</div>
+                                    <div class="card-body">
+                                        <div class="d-block fw-medium text-dark">
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-4 col-form-label">Estado</label>
+                                                <div class="col-sm-8">
+                                                    @switch (Model.CodigoEstadoReclamo)
+                                                    {
+                                                        case "02":
+                                                            <span class="badge bg-info" title="@Model.DescripcionEstadoReclamo"><i class="ri-error-warning-line"></i>&nbsp @Model.DescripcionEstadoReclamo</span>
+                                                            break;
+                                                        case "05":
+                                                            <span class="badge bg-info" title="@Model.DescripcionEstadoReclamo"><i class="ri-error-warning-line"></i>&nbsp @Model.DescripcionEstadoReclamo</span>
+                                                            break;
+                                                        case "08":
+                                                            <span class="badge bg-warning" title="@Model.DescripcionEstadoReclamo"><i class="ri-error-warning-line"></i>&nbsp @Model.DescripcionEstadoReclamo</span>
+                                                            break;
+                                                        case "03":
+                                                            <span class="badge bg-success" title="@Model.DescripcionEstadoReclamo"><i class="ri-checkbox-circle-line"></i>&nbsp @Model.DescripcionEstadoReclamo</span>
+                                                            break;
+                                                        case "07":
+                                                            <span class="badge bg-success" title="@Model.DescripcionEstadoReclamo"><i class="ri-checkbox-circle-line"></i>&nbsp @Model.DescripcionEstadoReclamo</span>
+                                                            break;
+                                                        case "09":
+                                                            <span class="badge bg-danger" title="@Model.DescripcionEstadoReclamo"><i class="ri-close-circle-line"></i>&nbsp @Model.DescripcionEstadoReclamo</span>
+                                                            break;
+                                                        case "01":
+                                                            <span class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@Model.DescripcionEstadoReclamo"></span> &nbsp @Model.DescripcionEstadoReclamo</span>
+
+                                                            break;
+                                                        case "04":
+                                                            <span class="badge bg-danger" title="@Model.DescripcionEstadoReclamo"><i class="ri-add-circle-line"></i>&nbsp @Model.DescripcionEstadoReclamo</span>
+                                                            break;
+                                                        case "06":
+                                                            <span class="badge bg-danger" title="@Model.DescripcionEstadoReclamo"><i class="ri-add-circle-line"></i>&nbsp @Model.DescripcionEstadoReclamo</span>
+                                                            break;
+                                                        default:
+                                                            <span class="ri-error-warning-line" title="@Model.DescripcionEstadoReclamo">&nbsp @Model.DescripcionEstadoReclamo</span>
+                                                            break;
+                                                    }
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-4 col-form-label">Fecha del Reclamo</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.FechaReclamo">
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-4 col-form-label">Fecha de registro</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.FechaRegistro" >
+                                                </div>
+                                            </div>
+
+                                            <div class="form-check form-switch">
+                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">Aplica deducible</label>
+                                                @switch (@Model.AplicaDeducible)
+                                                {
+                                                    case true:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" checked disabled>
+                                                        break;
+                                                    case false:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" disabled>
+                                                        break;
+
+                                                }
+                                            </div>                                            <div class="form-check form-switch">
+                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">NotificaAgente</label>
+                                                @switch (@Model.NotificaAgente)
+                                                {
+                                                    case true:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" checked disabled>
+                                                        break;
+                                                    case false:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" disabled>
+                                                        break;
+
+                                                }
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">Notificar Proveedor</label>
+                                                @switch (@Model.NotificaProveedor)
+                                                {
+                                                    case true:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" checked disabled>
+                                                        break;
+                                                    case false:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" disabled>
+                                                        break;
+
+                                                }
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">Notificar titular</label>
+                                                @switch (@Model.NotificaTitular)
+                                                {
+                                                    case true:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" checked disabled>
+                                                        break;
+                                                    case false:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" disabled>
+                                                        break;
+
+                                                }
+                                            </div>
+
+                                        </div>
+                                    </div><!-- card-body -->
+                                </div><!-- card -->
+                            </div><!-- col -->
+                            <div class="col-md-5 col-xl-3">
+                                <div class="card">
+                                    <div class="card-header"><i class="ri-calendar-check-line fs-20 lh-1 me-2"></i> Proveedor</div>
+                                    <div class="card-body">
+                                        <div class="d-block fw-medium text-dark">
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-4 col-form-label">Producto</label>
+                                                <div class="col-sm-8">
+                                              @*      <input type="text" readonly class="form-control-plaintext" value="@Model.descr.DescripcionProducto">*@
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-4 col-form-label">Plan</label>
+                                                <div class="col-sm-8">
+                                                @*    <input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionPlanesConsulta">*@
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-4 col-form-label">Forma de Pago</label>
+                                                <div class="col-sm-8">
+                                 @*                   <input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionFormaPago">*@
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-4 col-form-label">Fecha Inicio</label>
+                                                <div class="col-sm-8">
+@*                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.FechaInicioVigencia.ToString("MM/dd/yyyy")">*@
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-4 col-form-label">Fecha Fin</label>
+                                                <div class="col-sm-8">
+@*                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.FechaFinVigencia.ToString("MM/dd/yyyy")">*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- card-body -->
+                                </div><!-- card -->
+                            </div><!-- col -->
+
+                            <div class="col-md-5 col-xl-3">
+                                <div class="card">
+
+                                    <div class="card-header"><i class="ri-contacts-fill fs-20 lh-1 me-2"></i>Datos Tomador</div>
+                                    <div class="card-body">
+
+                                        <div class="mb-1 row">
+                                            <label class="col-sm-4 col-form-label">Nombre</label>
+                                            <div class="col-sm-8">
+                                           @*     <input type="text" readonly class="form-control-plaintext" value="@Model.NombreCompleto">*@
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label class="col-sm-4 col-form-label">Estado Civil</label>
+                                            <div class="col-sm-8">
+                                                @*<input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionEstadoCivil">*@
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label class="col-sm-4 col-form-label">Telefono</label>
+                                            <div class="col-sm-8">
+                                               @* <input type="text" readonly class="form-control-plaintext" value="@Model.TelefonoTomador @Model.Telefono">*@
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label class="col-sm-4 col-form-label">Correo Electronico</label>
+                                            <div class="col-sm-8">
+                                                @*<input type="text" readonly class="form-control-plaintext" value="@Model.CorreoTomador">*@
+                                            </div>
+                                        </div>
+                                    </div><!-- card-body -->
+                                </div><!-- card -->
+                            </div><!-- col -->
+                            <div class="col-md-5 col-xl-3">
+                                <div class="card">
+
+                                    <div class="card-header"><i class="ri-calendar-2-line fs-20 lh-1 me-2"></i>Agente</div>
+                                    <div class="card-body">
+                                        <div class="d-block fw-medium text-dark">
+
+
+                                            <div class="mb-1 row">
+                                                <label class="col-sm-4 col-form-label">Agente</label>
+                                                <div class="col-sm-8">
+                                                    <label class="d-block mb-1 fw-medium text-dark">
+                                                        @*<a class="form-control-plaintext" href="~/agents/detail/@Model.CodigoAgente">@Model.NombreAgente </a>
+*@
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!-- card-body -->
+                                </div><!-- card -->
+                            </div><!-- col -->
+                        </div>
+                    </div>
+
+                    <div class="row g-2">
+                        <div class="col-md-12 col-xl-12">
+                            <div>
+                                <div class="nav nav-pills nav-fill">
+                                    <div class="nav-item"><a class="nav-link active">Asegurados</a></div>
+                                </div>
+                            </div>
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Asegurados</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Documentos</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Notas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Sintomas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Procedimientos</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                                    <div class="accordion" id="accordionExample">
+       @*                                 @foreach (var asegurados in Model.VwAseguradosDbObject.OrderBy(x => x.DescripcionTipoPersonaCotizacion))
+                                        {
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="header-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo" aria-expanded="true" aria-controls="collapse-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo">
+                                                        <div class="card-header">
+                                                            @switch (asegurados.CodigoEstadoPersonaSolicitud)
+                                                            {
+                                                                case "01":
+                                                                    <p class="badge bg-info" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-error-warning-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                case "04":
+                                                                    <p class="badge bg-warning" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-error-warning-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                case "02":
+                                                                    <p class="badge bg-success" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-checkbox-circle-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                case "06":
+                                                                    <p class="badge bg-danger" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-close-circle-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                case "05":
+                                                                    <p class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@asegurados.DescripcionEstadoPersonaSolicitud"></span> &nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+
+                                                                    break;
+                                                                case "03":
+                                                                    <p class="badge bg-danger" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-add-circle-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                default:
+                                                                    <p class="ri-error-warning-line" title="@asegurados.DescripcionEstadoPersonaSolicitud">&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                            }
+
+                                                            @asegurados.DescripcionTipoPersonaCotizacion / @asegurados.NombreCompleto / @asegurados.DescripcionVinculo
+                                                        </div>
+                                                    </button>
+                                                </h2>
+                                                <div id="collapse-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo" class="accordion-collapse collapse show" aria-labelledby="header-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo" data-bs-parent="#header-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo">
+                                                    <div class="accordion-body">
+                                                        <div class="mb-1 row">
+                                                            <label class="col-sm-4 col-form-label">Estado Civil</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.DescripcionEstadoCivil">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Fecha de nacimiento</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.FechaNacimiento.ToString("MM/dd/yyyy")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Edad</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Edad">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Sexo</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Sexo">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Tiempo de espera</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.PeriodoEspera / @asegurados.DescripcionPeriodoTiempo">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Inicio vigencia</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.FechaInicioVigencia.ToString("MM/dd/yyyy")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Fecha Fin de Vigencia</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.FechaFinVigencia.ToString("MM/dd/yyyy")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Correo Electronico</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Correo">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Telefono</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Telefono / @asegurados.Celular">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Direccion</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.DireccionPrincipal / @asegurados.DescripcionPaisPrincipal / @asegurados.CodigoPostalPrincipal">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Estatura</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Talla.ToString("#,###.##")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Peso</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Peso.ToString("#,###.##")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">IMC</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Imc.ToString("##.##")">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+*@
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <table class="table table-hover table-bordered table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>Tipo Documento</th>
+                                                <th>Origen</th>
+
+                                                <th>Descripcion</th>
+                                                <th>Nombre Documento</th>
+                                                <th>Fecha Registro</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @*@foreach (var documentos in Model.VwDocumentoSolicitudDbObject.OrderBy(x => x.DescripcionClasificacionTipoDocumento))
+                                            {
+                                                <tr>
+                                                    <th> @documentos.DescripcionClasificacionTipoDocumento</th>
+                                                    <th> @documentos.Origen</th>
+
+                                                    <td> @documentos.DescripcionTipoDocumento</td>
+                                                    <td> @documentos.NombreDocumento</td>
+
+                                                    <td>
+                                                        @documentos.FechaRegistro.ToString("MM/dd/yyyy")
+                                                    </td>
+                                                </tr>
+
+                                            }*@
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                                    @*@foreach (var mensajes in Model.VwNotasDbObject.OrderBy(x => x.FechaRegistroNota))
+                                    {
+                                        <div class="">
+                                            <div id="chatBodyContent" class="chat-body-content ps ps--active-y">
+                                                <div class="divider"><span>@mensajes.FechaRegistroNota.ToString("MM/dd/yyyy")</span></div>
+
+                                                <div class="msg-item">
+
+                                                    <div class="msg-body">
+                                                        <div class="row gx-3 row-cols-auto">
+                                                            <div class="col"><div class="msg-bubble">@mensajes.Nota <span>@mensajes.NombreUsuario / @mensajes.DescripcionTipoNota</span></div></div>
+                                                            <div class="col">
+                                                                <nav class="nav nav-icon">
+                                                                    <a href="" class="nav-link"><i class="ri-reply-line"></i></a>
+                                                                    <a href="" class="nav-link"><i class="ri-more-fill"></i></a>
+                                                                </nav>
+                                                            </div>
+                                                        </div><!-- row -->
+
+                                                    </div><!-- msg-body -->
+                                                </div><!-- msg-item -->
+
+
+
+
+                                            </div><!-- chat-body-content -->
+
+                                        </div>
+                                    }*@
+
+                                </div>
+                                <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                    <table class="table table-hover table-bordered table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>Seccion Cobertura condicionado</th>
+                                                <th> Descripcion</th>
+                                                <th>    Fecha inicio</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+                            <!-- card -->
+                        </div><!-- col -->
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        var firstTabEl = document.querySelector('#myTab li:last-child button')
+        var firstTab = new bootstrap.Tab(firstTabEl)
+
+        firstTab.show()
+    </script>
+}

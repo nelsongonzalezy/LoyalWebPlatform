@@ -1,10 +1,8 @@
 ﻿namespace core.Service
 {
-    public class ListarReclamosModel
+    public class CreaReclamoInicialModel
     {
         public int CodigoReclamo { get; set; }
-        public int CodigoPersona { get; set; }
-        public string? NombreCompleto { get; set; }
         public string? NumeroPoliza { get; set; }
         public DateTime FechaReclamo { get; set; }
         public string? CodigoEstadoReclamo { get; set; }
@@ -12,6 +10,7 @@
         public string? CodigoTipoReclamo { get; set; }
         public string? DescripcionTipoReclamo { get; set; }
         public string? CodigoOrigen { get; set; }
+        public int? CodigoPersona { get; set; }
         public string? DescripcionOrigen { get; set; }
         public string? DescripcionReclamo { get; set; }
         public bool AplicaDeducible { get; set; }
@@ -23,28 +22,25 @@
         public int UsuarioAsignado { get; set; }
         public int UsuarioRegistro { get; set; }
         public DateTime FechaRegistro { get; set; }
+
+        public IEnumerable<TipoReclamoModel> TipoReclamoDbObject { get; set; }
+        public IEnumerable<OrigenModel> OrigenDbObject { get; set; }
+        public IEnumerable<ListarProveedoresModel> VwListarProveedoresDbObjects { get; set; }
+        public IEnumerable<ListaAseguradosModel> VwAseguradosDbObject { get; set; }
     }
-    public class ResposeListarReclamosModel
+    public class ResponseCreaReclamoInicialModel 
     {
-        public string Message { get; set; }
 
-        public List<ListarReclamosModel> Content { get; set; }
 
-        public double ElapsedMilliseconds { get; set; }
+            public string Message { get; set; }
 
-        public int? TotalRegistros { get; set; }
-        public int? PaginaActual { get; set; }
+            public CreaReclamoInicialModel Content { get; set; }
+
+            public double ElapsedMilliseconds { get; set; }
+
+            public int? TotalRegistros { get; set; }
+            public int? PaginaActual { get; set; }
+
+        
     }
-    public class ResposeReclamosModel
-    {
-        public string Message { get; set; }
-
-        public ListarReclamosModel Content { get; set; }
-
-        public double ElapsedMilliseconds { get; set; }
-
-        public int? TotalRegistros { get; set; }
-        public int? PaginaActual { get; set; }
-    }
-
 }

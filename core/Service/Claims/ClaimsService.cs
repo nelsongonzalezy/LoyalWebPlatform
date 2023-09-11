@@ -13,6 +13,27 @@ namespace core.Service
             //var claims = await HttpServices.GetAuthorizedAsync<List<ClaimListModel>>("api/Claim/GetAll", LoginService.Token);
             return x.Content.AsQueryable();
 
+        }       
+        public async Task<CreaReclamoInicialModel> Start(int CodigoReclamo=0)
+        {
+            var x = await _unAuthorized.GetUnAuthorizedAsync<ResponseCreaReclamoInicialModel>("api/v1/Reclamos/ReclamosInicial?CodigoReclamo="+CodigoReclamo);
+            //var claims = await HttpServices.GetAuthorizedAsync<List<ClaimListModel>>("api/Claim/GetAll", LoginService.Token);
+            return x.Content;
+
+        }        
+        public async Task<bool> CreateClaim(CreaReclamoInicialModel model)
+        {
+            var x = await _unAuthorized.PostUnAuthorizedAsync<CreaReclamoInicialModel, bool>("api/v1/Reclamos/ReclamosInicial?CodigoReclamo=",model);
+            //var claims = await HttpServices.GetAuthorizedAsync<List<ClaimListModel>>("api/Claim/GetAll", LoginService.Token);
+            return x;
+
+        } 
+        public async Task<ListarReclamosModel> GetClaimById(int CodigoReclamo)
+        {
+            var x = await _unAuthorized.GetUnAuthorizedAsync<ResposeReclamosModel>("api/v1/Reclamos/ReclamosDetalle?CodigoReclamo=" + CodigoReclamo);
+            //var claims = await HttpServices.GetAuthorizedAsync<List<ClaimListModel>>("api/Claim/GetAll", LoginService.Token);
+            return x.Content;
+
         }
     }
 }

@@ -13,7 +13,7 @@
         </div>
     </div>
       <div  class="col-lg-12 row g-3">
-            <div class="col-6 col-xl-3">
+            @*<div class="col-6 col-xl-3">
                 <div class="card card-one">
                     <div class="card-body">
                         <label class="card-title fs-sm fw-medium mb-1">Reclamos Abiertos</label>
@@ -49,7 +49,7 @@
                     </div><!-- card-body -->
                 </div><!-- card-one -->
             </div>
-           
+           *@
                <div class="card card-one mt-3">
                 <div class="card-body p-3">
                     <div class="table-responsive">
@@ -92,7 +92,7 @@
                                                 @switch (claim.NotificaTitular)
                                                 {
                                                     case  true:
-                                            <td><span class="badge bg-light"><i class="ri-check-double-fill"></i></span></td>
+                                            <td><span class="badge bg-primary"><i class="ri-check-double-fill"></i></span></td>
                                                         break;
                                                         case  false:
                                             <td><span class="badge bg-light"><i class="ri-close-line"></i></span></td>
@@ -102,7 +102,7 @@
                                                     @switch (claim.NotificaAgente)
                                                                 {
                                                                     case  true:
-                                            <td><span class="badge bg-danger"><i class="ri-close-line"></i></span></td>
+                                            <td><span class="badge bg-secondary"><i class="ri-close-line"></i></span></td>
                                                                         break;
                                                                         case  false:
                                             <td><span class="badge bg-light"><i class="ri-close-line"></i></span></td>
@@ -123,7 +123,7 @@
                                             <td>
                                                 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                     <div class="btn-group me-2" role="group" aria-label="First group">
-                                                <a href="~/claims/get/@claim.CodigoReclamo" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
+                                                <a href="~/claims/detail/@claim.CodigoReclamo" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
                                                 <a href="~/claims/delete/@claim.CodigoReclamo" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
                                                     </div>
                                                  </div>

@@ -19,46 +19,88 @@ namespace webLoyal.Controllers
             return View(model.ToList());
         }       
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create(int CodigoReclamo)
         {
-            var model = new ClaimCreateModel();
-            model.ClaimId = 32;
-            model.ClaimDate = DateTime.Now;
+            var model = await _claimsServ.Start(CodigoReclamo);
+            model.FechaRegistro=DateTime.Now;
+            
             return View(model);
         }   
         [HttpGet]
-       
+        [Route("Claims/Get/{id}")]
         public IActionResult Get(int id)
         {
             var model = new ClaimDetailModel();
             return View(model);
+        }        
+        [HttpGet]
+        [Route("Claims/Detail/{CodigoReclamo}")]
+        public async Task<IActionResult> Detail(int CodigoReclamo)
+        {
+            var model= await _claimsServ.GetClaimById(CodigoReclamo);
+
+            return View(model);
         }
         [HttpPost]
         [Route("Claims/Create")]
-        public async Task<IActionResult> Create(ClaimCreateModel model)
+        public async Task<IActionResult> Create(CreaReclamoInicialModel model)
         {
-            if (true)
+            try
             {
-                return Json(new
+                model.FechaRegistro = DateTime.Now;
+                var x = await _claimsServ.CreateClaim(model);
+                if (x)
                 {
-                    success = true,
-                    title = "Reclamo creado con exito",
-                    text = "Gracias",
-                    icon = "success",
-                    timer = 2000
-                });
+                    return Json(new
+                    {
+                        success = true,
+                        title = "Reclamo creado con exito",
+                        text = "Gracias",
+                        icon = "success",
+                        timer = 2000
+                    });
+                }
+                else
+                {
+                    return Json(new
+                    {
+                        success = false,
+                        title = "Error al crear la solicitud",
+                        message = "Error",
+                        type = "error"
+                    });
 
+                }
             }
-            else
+            catch (Exception ex )
             {
                 return Json(new
                 {
                     success = false,
-                    title = "Usuario o contraseña invalida",
-                    message = "lo sentimos no hemos logrado validar sus credenciales",
+                    title = "Error al crear la solicitud",
+                    message = ex.Message.ToString(),
                     type = "error"
                 });
             }
+                
+
+            //var x = await _claimsServ.CreateClaim(model);
+            //if (true)
+            //{
+            //    return Json(new
+            //    {
+            //        success = true,
+            //        title = "Reclamo creado con exito",
+            //        text = "Gracias",
+            //        icon = "success",
+            //        timer = 2000
+            //    });
+
+            //}
+            //else
+            //{
+               
+            //}
         }
 
         [HttpGet]

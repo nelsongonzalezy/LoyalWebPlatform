@@ -1,6 +1,7 @@
-﻿@model core.Service.ClaimCreateModel
+﻿@model core.Service.CreaReclamoInicialModel
 
-<div class="container">
+
+
 
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
@@ -17,7 +18,117 @@
         </div>
     </div>
 
-    <form id="CreateClaims" class="row g-3 col-12" asp-action="@nameof(ClaimsController.Create)" data-parsley-validate asp-controller="Claims" method="post">
+
+<form id="CreateClaims" class="row g-3 col-12" asp-action="@nameof(ClaimsController.Create)" data-parsley-validate asp-controller="Claims" method="post">
+    <div class="col-8">
+        <div class="card card-one">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-6">
+                        <label class="form-label">@webLoyal.Resources.language.Resources.ClaimId</label>
+                        <input asp-for="CodigoReclamo" class="form-control" id="CodigoReclamo" disabled>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label">@webLoyal.Resources.language.Resources.RegistrationDate</label>
+                        <input asp-for="@Model.FechaRegistro" type="date" class="form-control" id="FechaRegistro" disabled>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label">@webLoyal.Resources.language.Resources.ClaimType</label>
+                        <select asp-for="CodigoTipoReclamo" id="CodigoTipoReclamo" class="form-select select2">
+                            @foreach (var tipoReclamo in Model.TipoReclamoDbObject.OrderBy(x => x.CodigoTipoReclamo))
+                            {
+                                <option class="col-md-6" value="@tipoReclamo.CodigoTipoReclamo">@tipoReclamo.DescripcionTipoReclamo</option>
+                            }
+                        </select>
+
+
+                    </div>
+
+                    <div class="col-6">
+                        <label class="form-label">@webLoyal.Resources.language.Resources.ReportClaimDate</label>
+                        <input asp-for="FechaReclamo" type="date" class="form-control" id="FechaReclamo" required>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <label class="form-label">@webLoyal.Resources.language.Resources.OriginOfTheClaim</label>
+                            <select asp-for="CodigoOrigen" id="CodigoOrigen" class="form-select select2">
+                                @foreach (var OrigenReclamo in Model.OrigenDbObject.OrderBy(x => x.CodigoOrigen))
+                                {
+                                    <option value="@OrigenReclamo.CodigoOrigen">@OrigenReclamo.DescripcionOrigen</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div>
+                            <label class="form-label">@webLoyal.Resources.language.Resources.PolicyNumber</label>
+                            <select id="Poliza" asp-for="CodigoPersona" class="form-select select2" required>
+                                @foreach (var Asegurados in Model.VwAseguradosDbObject.OrderBy(x => x.NumeroPoliza))
+                                {
+                                    <option value="@Asegurados.CodigoPersona">@Asegurados.NumeroPoliza | @Asegurados.DescripcionTipoPersonaCotizacion |@Asegurados.NombreCompleto</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div>
+                            <label class="form-label">@webLoyal.Resources.language.Resources.Claims</label>
+                            <textarea asp-for="DescripcionReclamo" class="form-control" id="DescripcionReclamo" rows="3" placeholder="Enter message here..." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">@webLoyal.Resources.language.Resources.Provider</label>
+                        <select class="form-select select2 col-12" id="Proveedor" aria-label="Example select with button addon">
+                            @foreach (var ProveedorReclamo in Model.VwListarProveedoresDbObjects.OrderBy(x => x.CodigoProveedor))
+                            {
+                                <option value="@ProveedorReclamo.CodigoProveedor"><i class="ri-shopping-bag-3-line">@ProveedorReclamo.DescripcionEstadoProveedor | @ProveedorReclamo.RazonSocialProveedor</i> </option>
+                            }
+                        </select>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <br />
+                        <div class="form-check">
+                            <input asp-for="AplicaDeducible" class="form-check-input" type="checkbox" id="gridCheck2">
+                            <label class="form-check-label" for="gridCheck2">
+                                @webLoyal.Resources.language.Resources.DeductibleApplies
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input asp-for="NotificaProveedor" class="form-check-input" type="checkbox" id="gridCheck3">
+                            <label class="form-check-label" for="gridCheck3">
+                                @webLoyal.Resources.language.Resources.NotifyProvider
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input asp-for="NotificaTitular" class="form-check-input" type="checkbox" id="gridCheck4">
+                            <label class="form-check-label" for="gridCheck4">
+                                @webLoyal.Resources.language.Resources.NotifyInsured
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input asp-for="NotificaAgente" class="form-check-input" type="checkbox" id="gridCheck5">
+                            <label class="form-check-label" for="gridCheck5">
+                                @webLoyal.Resources.language.Resources.NotifyInsuranceAgent
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- card-body -->
+            <div class="card-footer">
+                <div class="col-12">
+                    <button id="submitButton2" type="submit" class="btn btn-primary">@webLoyal.Resources.language.Resources.Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    </form>
+
+@* <form id="CreateClaims" class="row g-3 col-12" asp-action="@nameof(ClaimsController.Create)" data-parsley-validate asp-controller="Claims" method="post">
         <div class="col-6">
         <div class="card card-one">
             <div class="card-body row">
@@ -33,33 +144,31 @@
 
                                 <div class="accordion-body row">
                                     <div class="col-6">
-                                        <label class="form-label">@webLoyal.Resources.language.Resources.ClaimId</label>
-                                        <input value="@Model.ClaimId" class="form-control" disabled>
+                                        <label for="@Model.CodigoReclamo" class="form-label">@webLoyal.Resources.language.Resources.ClaimId</label>
+                                        <input value="" class="form-control" disabled>
                                     </div>
                                     <div class="col-6">
-                                        <label for="inputPassword4" class="form-label">@webLoyal.Resources.language.Resources.RecordDate</label>
-                                        <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
+                                        <label  class="form-label">@webLoyal.Resources.language.Resources.RecordDate</label>
+                                        <input asp-for="FechaReclamo" type="date" required value="" class="form-control">
+                                        <span asp-validation-for="FechaReclamo" class="text-danger"></span>
                                     </div>
                                     <div class="col-md-6">
+                                       
                                         <label class="form-label">@webLoyal.Resources.language.Resources.ClaimType</label>
-                                        <select id="select2F" class="form-select select2">
-
-                                            <option value="000-000-0001">Reembolso</option>
-                                            <option value="000-000-0002">Pre Certificacion</option>
-                                            <option value="000-000-0002">Emergencia</option>
-
+                                        <select asp-for="@Model.CodigoTipoReclamo" id="Tiporeclamo" class="form-select select2">
+                                            @foreach (var tipoReclamo in Model.TipoReclamoDbObject.OrderBy(x => x.CodigoTipoReclamo) )
+                                            {
+                                                <option value="@tipoReclamo.CodigoTipoReclamo">@tipoReclamo.DescripcionTipoReclamo</option>
+                                            }
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label">@webLoyal.Resources.language.Resources.OriginOfTheClaim</label>
-                                        <select id="select2g" class="form-select select2">
-
-                                            <option value="000-000-0001">E-mail</option>
-                                            <option value="000-000-0002">Teléfono</option>
-                                            <option value="000-000-0002">Agent Portal</option>
-                                            <option value="000-000-0002">Agent App</option>
-                                            <option value="000-000-0002">Tomodar App</option>
-                                                
+                                        <select asp-for="@Model.CodigoOrigen" id="Origenreclamo" class="form-select select2">
+                                            @foreach (var OrigenReclamo in Model.OrigenDbObject.OrderBy(x => x.CodigoOrigen))
+                                            {
+                                                <option  value="@OrigenReclamo.CodigoOrigen">@OrigenReclamo.DescripcionOrigen</option>
+                                            }
                                         </select>
                                     </div>
 
@@ -81,21 +190,17 @@
 
                                     <div class="col-12">
                                         <label class="form-label">Certificado</label>
-                                        <select id="select2E" class="form-select select2">
-                                            <option value="000-000-0001">000-000-0001 | Persona 1</option>
-                                            <option value="000-000-0002">000-000-0002 | Persona 2</option>
-                                            <option value="000-000-0003">000-000-0003 | Persona 3</option>
-                                            <option value="000-000-0004">000-000-0004 | Persona 4</option>
-                                            <option value="000-000-0005">000-000-0005 | Persona 5</option>
-                                            <option value="000-000-0006">000-000-0006 | Persona 6</option>
-                                            <option value="000-000-0007">000-000-0007 | Persona 7</option>
-                                            <option value="000-000-0008">000-000-0008 | Persona 8</option>
+                                        <select id="Poliza" class="form-select select2">
+                                            @foreach (var Asegurados in Model.VwAseguradosDbObject.OrderBy(x => x.NumeroPoliza))
+                                            {
+                                                <option value="@Asegurados.NumeroPoliza">@Asegurados.NumeroPoliza | @Asegurados.DescripcionTipoPersonaCotizacion |@Asegurados.NombreCompleto</option>
+                                            }
                                         </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
+@*                        <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTreN">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeN" aria-expanded="false" aria-controls="collapseTwoE">
                                    @webLoyal.Resources.language.Resources.InformationOfTheAffectedOfThePolicy
@@ -105,7 +210,7 @@
                                 <div class="accordion-body row">
                                     <div class="col-md-6">
                                         <label class="form-label">@webLoyal.Resources.language.Resources.Insured</label>
-                                        <select id="select2F" class="form-select select2">
+                                        <select id="PolizaAsegurado" class="form-select select2">
 
                                             <option value="000-000-0001">Titular</option>
                                             <option value="000-000-0002">Dependiente</option>
@@ -125,55 +230,6 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTreF">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeF" aria-expanded="false" aria-controls="collapseTwoE">
-                                    @webLoyal.Resources.language.Resources.Diagnosis
-                                </button>
-                            </h2>
-                            <div id="collapsetreeF" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
-                                <div class="accordion-body row">
-                                        <div class="input-group col-6">
-                                            <select class="form-select" id="select2Z2" aria-label="Example select with button addon">
-                                                <option value="000-000-0001">
-                                                    S83.241A - Dislocation of unspecified toe(s), initial encounter
-                                                </option>
-
-                                                <option value="000-000-0002">
-                                                    U07.1 - COVID-19, virus identified
-                                                </option>
-                                                <option value="000-000-0002">
-                                                    M17.2 - Bilateral post-traumatic osteoarthritis of knee
-                                                </option>
-                                            </select>
-                                            <button class="btn btn-outline-primary" type="button"><i class="ri-add-line"></i></button>
-                                        </div>
-                                    <div class="col-6">
-                                        <label class="form-label"> Valor</label>
-                                        <input type="number" class="form-control"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTreE">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeE" aria-expanded="false" aria-controls="collapseTwoE">
-                                    @webLoyal.Resources.language.Resources.CTP
-                                </button>
-                            </h2>
-                            <div id="collapsetreeE" class="accordion-collapse collapse" aria-labelledby="headingTwoE" data-bs-parent="#accordionExampleE" style="">
-                                <div class="accordion-body row">
-                                    <div class="input-group">
-                                        <select class="form-select" id="select2Z2" aria-label="Example select with button addon">
-                                            <option value="000-000-0001">A57256</option>
-                                            <option value="000-000-0002">99281 </option>
-                                            <option value="000-000-0002">47562 </option>
-                                        </select>
-                                        <button class="btn btn-outline-primary" type="button"><i class="ri-add-line"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTreZ">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeZ" aria-expanded="false" aria-controls="collapseTwoE">
                                     @webLoyal.Resources.language.Resources.Provider
@@ -182,63 +238,18 @@
                             <div id="collapsetreeZ" class="accordion-collapse collapse" aria-labelledby="headingTwoZ" data-bs-parent="#accordionExampleE" style="">
                                 <div class="accordion-body row">
                                     <div class="input-group">
-                                        <select class="form-select" id="select2Z2" aria-label="Example select with button addon">
-                                            <option value="000-000-0001">Rif J00058551-2 - Centro Médico Docente La Trinidad</option>
-                                            <option value="000-000-0002">Rif: J-00229514-7 -  Unidad Oftalmologica de Caracas</option>
-                                            <option value="000-000-0002">Rif: J-40163589-0 -  Diagnostico Integral San Ignacio</option>
+                                        <select class="form-select select2 col-12" id="Proveedor" aria-label="Example select with button addon">
+                                            @foreach (var ProveedorReclamo in Model.VwListarProveedoresDbObjects.OrderBy(x => x.CodigoProveedor))
+                                            {
+                                                <option value="@ProveedorReclamo.CodigoProveedor"><i class="ri-shopping-bag-3-line">@ProveedorReclamo.DescripcionEstadoProveedor | @ProveedorReclamo.RazonSocialProveedor</i> </option>
+                                            }
                                         </select>
                                         <button class="btn btn-outline-primary" type="button"><i class="ri-add-line"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTreY">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeY" aria-expanded="false" aria-controls="collapseTwoE">
-                                    @webLoyal.Resources.language.Resources.MedicalSpeciality
-                                </button>
-                            </h2>
-                            <div id="collapsetreeY" class="accordion-collapse collapse" aria-labelledby="headingTwoZ" data-bs-parent="#accordionExampleY" style="">
-                                <div class="accordion-body row">
-                                    <div class="col-md-6">
-                                        <label class="form-label">@webLoyal.Resources.language.Resources.AttendingDoctor</label>
-                                        <input id="select2E" class="form-control" />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">@webLoyal.Resources.language.Resources.MedicalSpeciality</label>
-                                        <input id="select2E" class="form-control" />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">@webLoyal.Resources.language.Resources.Email</label>
-                                        <input type="email" id="select2E" class="form-control" />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">@webLoyal.Resources.language.Resources.PhoneNumber</label>
-                                        <input type="text" id="select2E" class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTreW">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeW" aria-expanded="false" aria-controls="collapseTwoE">
-                                    @webLoyal.Resources.language.Resources.MainSymptoms
-                                </button>
-                            </h2>
-                            <div id="collapsetreeW" class="accordion-collapse collapse" aria-labelledby="headingTwoZ" data-bs-parent="#accordionExampleW" style="">
-                                <div class="accordion-body row">
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">@webLoyal.Resources.language.Resources.MainSymptoms</label>
-                                        <input id="select2E" class="form-control" />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">@webLoyal.Resources.language.Resources.SymptomDate</label>
-                                        <input type="date" class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="accordion-item">
+                    <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTreX">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetreeX" aria-expanded="false" aria-controls="collapseTwoE">
                                     @webLoyal.Resources.language.Resources.Note
@@ -247,13 +258,13 @@
                             <div id="collapsetreeX" class="accordion-collapse collapse" aria-labelledby="headingTwoZ" data-bs-parent="#accordionExampleX" style="">
                                 <div class="accordion-body row">
                                     <div class="col-12">
-                                        <textarea class="form-control" multiline></textarea>
+                                        <textarea asp-for="DescripcionReclamo" class="form-control" multiline></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
                      </div>
-
+*@
 @*                    
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">@webLoyal.Resources.language.Resources.IC10</label>
@@ -319,45 +330,16 @@
 
                     
       
-                    *@
-                    <div class="col-12">
-                            <br />
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck2">
-                            <label class="form-check-label" for="gridCheck2">
-                                @webLoyal.Resources.language.Resources.DeductibleApplies
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck3">
-                            <label class="form-check-label" for="gridCheck3">
-                                @webLoyal.Resources.language.Resources.NotifyProvider
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck4">
-                            <label class="form-check-label" for="gridCheck4">
-                            @webLoyal.Resources.language.Resources.NotifyInsured
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck5">
-                            <label class="form-check-label" for="gridCheck5">
-                                @webLoyal.Resources.language.Resources.NotifyInsuranceAgent
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button id="submitButton2" type="submit" class="btn btn-primary">@webLoyal.Resources.language.Resources.Accept</button>
-                    </div>
+                  
+
 
 
             </div>
 
         </div>
            
-    </div>
-         <div class="col-6">
+    </div>  *@
+@*         <div class="col-6">
             <div class="card">
                 <div class="card-body row">
                     <div class="col-md-6">
@@ -370,7 +352,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="" class="form-label">@webLoyal.Resources.language.Resources.DueDate</label>
-                        <input type="datetime" value="@Model.ClaimDate" class="form-control" disabled>
+                        <input type="datetime" value="" class="form-control" disabled>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">@webLoyal.Resources.language.Resources.Product</label>
@@ -403,7 +385,7 @@
         </div>
 
     </form>
-
+*@
     @*<div class="accordion accordion-primary" id="">
 
 
@@ -422,13 +404,12 @@
         </div>
     </div>
    *@
-</div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
 <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js" asp-append-version="true"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js" asp-append-version="true"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+@*<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>*@
         @section Scripts{
     <script>
         $("#CreateClaims").submit(function (event) {
@@ -491,56 +472,63 @@
             });
         });
 
-        $('#select2E').select2({
+        $('#CodigoTipoReclamo').select2({
             placeholder: 'Choose one'
         });
 
-        $('#select2E').one('select2:open', function (e) {
-            $('input.select2-search__field').prop('placeholder', 'Search...');
+        $('#CodigoOrigen').select2({
+            placeholder: 'Choose one'
         });
-
-        $('#select2Z').select2({
+        $('#Proveedor').select2({
+            placeholder: 'Choose one'
+        });
+        $('#Poliza').select2({
             placeholder: 'Choose one'
         });
 
-        $('#select2Z').one('select2:open', function (e) {
-            $('input.select2-search__field').prop('placeholder', 'Search...');
-        });  
-        $('#select2F').select2({
-            placeholder: 'Choose one'
-        });
+        //$('#select2Z2').one('select2:open', function (e) {
+        //    $('input.select2-search__field').prop('placeholder', 'Search...');
+        //});
 
-        $('#select2F').one('select2:open', function (e) {
-            $('input.select2-search__field').prop('placeholder', 'Search...');
-        });
-        $('#select2G').select2({
-            placeholder: 'Choose one'
-        });
 
-        $('#select2G').one('select2:open', function (e) {
-            $('input.select2-search__field').prop('placeholder', 'Search...');
-        });      
-        $('#select2E').select2({
-            placeholder: 'Choose one'
-        });
-        $('#selectCTPX').select2({
-            placeholder: 'Choose one'
-        });
+        //$('#select2Z').one('select2:open', function (e) {
+        //    $('input.select2-search__field').prop('placeholder', 'Search...');
+        //});  
+        //$('#select2F').select2({
+        //    placeholder: 'Choose one'
+        //});
 
-        $('#select2E').one('select2:open', function (e) {
-            $('input.select2-search__field').prop('placeholder', 'Search...');
-        });
-        $('#select2D').select2({
-            placeholder: 'Choose multiple',
-            minimumResultsForSearch: Infinity
-        });
-        $('#select2X').one('select2:open', function (e) {
-            $('input.select2-search__field').prop('placeholder', 'Search...');
-        });
-        $('#select2X').select2({
-            placeholder: 'Choose multiple',
-            minimumResultsForSearch: Infinity
-        });
+        //$('#Tiporeclamo2').one('select2:open', function (e) {
+        //    $('input.select2-search__field').prop('placeholder', 'Search...');
+        //});
+        //$('#select2G').select2({
+        //    placeholder: 'Choose one'
+        //});
+
+        //$('#select2G').one('select2:open', function (e) {
+        //    $('input.select2-search__field').prop('placeholder', 'Search...');
+        //});      
+        //$('#select2E').select2({
+        //    placeholder: 'Choose one'
+        //});
+        //$('#selectCTPX').select2({
+        //    placeholder: 'Choose one'
+        //});
+
+        //$('#select2E').one('select2:open', function (e) {
+        //    $('input.select2-search__field').prop('placeholder', 'Search...');
+        //});
+        //$('#select2D').select2({
+        //    placeholder: 'Choose multiple',
+        //    minimumResultsForSearch: Infinity
+        //});
+        //$('#select2X').one('select2:open', function (e) {
+        //    $('input.select2-search__field').prop('placeholder', 'Search...');
+        //});
+        //$('#select2X').select2({
+        //    placeholder: 'Choose multiple',
+        //    minimumResultsForSearch: Infinity
+        //});
 
         
             </script>
