@@ -1,0 +1,504 @@
+﻿@model core.Service.CampanaModel
+
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+        <ol class="breadcrumb fs-sm mb-1">
+            <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item active"><a href="~/campaign/index">Campañas</a></li>
+
+        </ol>
+        <h4 class="main-title mb-0">Campañas</h4>
+    </div>
+    <div class="d-flex gap-2 mt-3 mt-md-0">
+        <a href="~/home/InConstruction" type="button" class="btn btn-primary d-flex align-items-center gap-2">Crear<span class="d-none d-sm-inline"> Nueva Campaña</span></a>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="row">
+
+        <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Forma de pago Anual </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Forma de pago Semestral </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Forma de pago Trimestral </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Forma de pago Mensual </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<div class="row g-3">
+    <div class="row">
+  
+        @foreach (var producto in Model.CampanasProductos.OrderBy(x=>x.CodigoPoliza))
+        {
+            <div class="col-6 col-xl-3">
+                <div class="music-player mt-4 mt-xxl-5" style="background-color:rgb(60,95,138)">
+                    <div class="media-music">
+                        @switch (producto.CodigoPoliza)
+                        {
+                            case 1:
+                                <a href="background-color:rgb(60,95,138)" class="media-img"><img src="~/assets/img/beyond.png" alt=""></a>
+                                break;
+                            case 2:
+                                <a href = "background-color:rgb(141,195,65)" class="media-img"><img src = "~/assets/img/privilege.png" alt=""></a>
+                                break;
+                            case 3:
+                                <a href="background-color:rgb(48,182,181)" class="media-img"><img src="~/assets/img/liberty.png" alt=""></a>
+                                break;
+                            case 4:
+                                <a href="background-color:rgb(132,26,102)" class="media-img"><img src="~/assets/img/legacy.png" alt=""></a>
+                                break;
+
+                        }
+
+                    </div>
+                    <div class="media-body">
+                        <h5><a href="" class="text-white">@producto.DescripcionPoliza</a></h5>
+                        <h5 class="card-value text-white">@producto.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h5>
+                        <h5 class="card-value text-white"># @producto.CantidadRegistros</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    @*  <div class="col-6 col-xl-3">
+            <div class="music-player mt-4 mt-xxl-5" style="">
+                <div class="media-music">
+                    <a href="" class="media-img"><img src="" alt=""></a>
+
+                </div>
+                <div class="media-body">
+                    <h5><a href="" class="text-white">valor</a></h5>
+                    <h3 class="card-value text-white"># valor</h3>
+                </div>
+            </div>
+        </div>        
+        <div class="col-6 col-xl-3">
+            <div class="music-player mt-4 mt-xxl-5" style="">
+                <div class="media-music">
+                    <a href="" class="media-img"><img src="" alt=""></a>
+
+                </div>
+                <div class="media-body">
+                    <h5><a href="" class="text-white">valor</a></h5>
+                    <h3 class="card-value text-white"># valor</h3>
+                </div>
+            </div>
+        </div>
+            <div class="col-6 col-xl-3">
+            <div class="music-player mt-4 mt-xxl-5" style="">
+                <div class="media-music">
+                    <a href="" class="media-img"><img src="" alt=""></a>
+
+                </div>
+                <div class="media-body">
+                    <h5><a href="" class="text-white">valor</a></h5>
+                    <h3 class="card-value text-white"># valor</h3>
+                </div>
+            </div>
+        </div>*@
+    
+</div>
+
+</div>
+<br />
+<div class="row g-3">
+
+    @foreach (var estados in Model.CampanasEstados.OrderBy(x=>x.CodigoEstadoCertificado))
+    {
+        <div class="col-2 col-xl-2">
+            <div class="card card-one">
+                <div class="card-body">
+                    <h5 class="card-title fs-sm fw-medium mb-1">@estados.DescripcionEstadoCertificado</h5>
+                    <label class="card-value mb-1"><i class=""></i>Prima @estados.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</label>
+                    <label class="card-value mb-1"><i class=""></i>Poliza # @estados.CantidadRegistros</label>
+                    <label class="card-value mb-1"><i class=""></i>C.ADM @estados.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</label>
+
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div>
+
+        <!-- card-one -->
+    }
+    
+</div>
+<br />
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Polizas</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Top Agentes</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Criterios</button>
+  </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="col-lg-12 row g-3">
+
+            <div class="card card-one mt-3">
+                <div class="card-body p-3">
+                    <div class="table-responsive">
+                        <table id="Campanaatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                            <thead>
+                                <tr>
+                                    <th>CodigoSolicitud</th>
+                                    <td>CodigoCertificado</td>
+                                    <td>NumeroPoliza </td>
+                                    <td>CodigoTitular</td>
+                                    <td>NombreTitular</td>
+                                    <td>NumeroAsegurados</td>
+                                    <td>DescripcionPais</td>
+                                    <td>CodigoPoliza</td>
+                                    <td>DescripcionPoliza</td>
+                                    <td>DeduciblesTexto</td>
+                                    <td>FechaEfectividad</td>
+                                    <td>DescripcionFormaPago</td>
+                                    <td>FechaCobro</td>
+                                    <td>Prima</td>
+                                    <td>CostoAdministrativo</td>
+                                    <td>PrimaComisionable</td>
+                                    <td>ValorCuota</td>
+                                    <td>ValorIntereses</td>
+                                    <td>Restricciones</td>
+                                    <td>DescripcionEstadoCertificado</td>
+                                    <td>DescripcionMotivoCancelacion</td>
+                                    <td>DescripcionTipoVenta</td>
+                                    <td>PagoAutomatico</td>
+                                    <td>Siniestralidad</td>
+                                    <td>PolizaGrupo</td>
+                                    <td>PolizaDependiente</td>
+                                    <td>Notas</td>
+                                    <td>CodigoAgenteVenta</td>
+                                    <td>PolizaGrupo</td>
+                                    <td>NombreAgenteVenta</td>
+                                    <td>NombreSubAgente</td>
+                                    <td>CodigoSubAgente</td>
+                                    <td>CodigoAgente</td>
+                                    <td>NombreAgencia</td>
+                                    <td>CodigoAgencia</td>
+                                    <td>CodigoEstadoCuota</td>
+                                    <td>CodigoEstadoCertificado</td>
+                                    <td>FechaPago</td>
+                                    <td>Celular</td>
+                                    <td>Correo</td>
+                                    <td>CodigoMGA</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var campanas in Model.Campanas.OrderByDescending(x => x.CodigoCertificado))
+                                {
+                                    <tr>
+                                        <td> @campanas.CodigoSolicitud </td>
+                                        <td> @campanas.CodigoCertificado </td>
+                                        <td><a href="~/policies/detail/@campanas.CodigoSolicitud"> @campanas.NumeroPoliza </a> </td>
+                                        <td> @campanas.CodigoTitular </td>
+                                        <td> @campanas.NombreTitular </td>
+                                        <td> @campanas.NumeroAsegurados </td>
+                                        <td> @campanas.DescripcionPais </td>
+                                        <td> @campanas.CodigoPoliza </td>
+                                        <td> @campanas.DescripcionPoliza </td>
+                                        <td> @campanas.DeduciblesTexto </td>
+                                        <td> @campanas.FechaEfectividad </td>
+                                        <td> @campanas.DescripcionFormaPago </td>
+                                        <td> @campanas.FechaCobro </td>
+                                        <td> @campanas.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td> @campanas.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td> @campanas.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td> @campanas.ValorCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td> @campanas.ValorIntereses </td>
+                                        <td> @campanas.Restricciones </td>
+                                        <td> @campanas.DescripcionEstadoCertificado </td>
+                                        <td> @campanas.DescripcionMotivoCancelacion </td>
+                                        <td> @campanas.DescripcionTipoVenta </td>
+                                        <td> @campanas.PagoAutomatico </td>
+                                        <td> @campanas.Siniestralidad </td>
+                                        <td> @campanas.PolizaGrupo </td>
+                                        <td> @campanas.PolizaDependiente </td>
+                                        <td> @campanas.Notas </td>
+                                        <td> @campanas.CodigoAgenteVenta </td>
+                                        <td> @campanas.PolizaGrupo </td>
+                                        <td> @campanas.NombreAgenteVenta </td>
+                                        <td> @campanas.NombreSubAgente </td>
+                                        <td> @campanas.CodigoSubAgente </td>
+                                        <td> @campanas.CodigoAgente </td>
+                                        <td> @campanas.NombreAgencia </td>
+                                        <td> @campanas.CodigoAgencia </td>
+                                        <td> @campanas.CodigoEstadoCuota </td>
+                                        <td> @campanas.CodigoEstadoCertificado </td>
+                                        <td> @campanas.FechaPago </td>
+                                        <td> @campanas.Celular </td>
+                                        <td> @campanas.Correo </td>
+                                        <td> @campanas.CodigoMGA </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!-- card-body -->
+            </div>
+        </div>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+        <div class="row g-3">
+            @foreach (var item in Model.CampanasAgentes.OrderBy(x => x.Fila).Take(5))
+            {
+                <div class="col-2 col-xl-2">
+                    <div class="card card-one">
+                        <div class="card-body">
+                            <h5 class="card-title fs-sm fw-medium mb-1">@item.Fila</h5>
+                            @switch (@item.Fila)
+                            {
+                                    case 1:
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    break;  
+                                    case 2:
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    break;
+                                    case 3:
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    break;   
+                                    case 4:
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    break;  
+                                    case 5:
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    break;
+
+                            }
+                            <label class="card-value mb-1"><i class=""></i>@item.NombreAgenteVenta</label>
+                            <label class="card-value mb-1"><i class=""></i>Prima  @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
+                            <label class="card-value mb-1"><i class=""></i># @item.Cantidad</label>
+
+                        </div><!-- card-body -->
+                    </div><!-- card-one -->
+                </div>
+
+            }
+            <div class="col-md-6 col-xl-12">
+                <div class="card card-one">
+                    <div class="card-header">
+                        <h6 class="card-title">Performance Rating</h6>
+                        <div class="d-flex gap-1 text-primary fs-20">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        @*<nav class="nav nav-icon nav-icon-sm ms-auto">
+                            <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                            <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                        </nav>*@
+                    </div><!-- card-header -->
+                    <div class="card-body">
+                        <table class="table table-ratings mb-0">
+                            
+                            @foreach (var item in Model.CampanasAgentes.OrderBy(x => x.Fila))
+                            {
+                                <tbody>
+                                    <tr>
+                                        <td><strong>@item.Fila</strong></td>
+                                        <td>@item.CodigoMGA</td>
+                                        <td>@item.NombreMGA</td>
+                                        <td>@item.CodigoAgenteVenta</td>
+                                        <td>@item.NombreAgenteVenta</td>
+                                        <td>@item.Cantidad</td>
+                                        <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                    </tr>
+                                </tbody>
+
+
+                            }
+
+
+                        </table>
+                    </div><!-- card-body -->
+                </div><!-- card -->
+            </div><!-- col -->
+        </div>
+
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+      <div class="card">
+          <div class="card-body">
+                <img src="~/assets/img/miami-inv.jpg" />
+          </div>
+
+      </div>
+
+
+  </div>
+</div>
+@*<div class="col-lg-12 row g-3">
+
+    <div class="card card-one mt-3">
+        <div class="card-body p-3">
+            <div class="table-responsive">
+                <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                    <thead>
+                        <tr>
+                            <th>CodigoSolicitud</th>
+                            <th>CodigoCertificado</th>
+                            <th>NumeroPoliza </th>
+                            <th>CodigoTitular</th>
+                            <th>NombreTitular</th>
+                            <th>NumeroAsegurados</th>
+                            <th>DescripcionPais</th>
+                            <th>CodigoPoliza</th>
+                            <th>DescripcionPoliza</th>
+                            <th>DeduciblesTexto</th>
+                            <th>FechaEfectividad</th>
+                            <th>DescripcionFormaPago</th>
+                            <th>FechaCobro</th>
+                            <th>Prima</th>
+                            <th>CostoAdministrativo</th>
+                            <th>PrimaComisionable</th>
+                            <th>ValorCuota</th>
+                            <th>ValorIntereses</th>
+                            <th>Restricciones</th>
+                            <th>DescripcionEstadoCertificado</th>
+                            <th>DescripcionMotivoCancelacion</th>
+                            <th>DescripcionTipoVenta</th>
+                            <th>PagoAutomatico</th>
+                            <th>Siniestralidad</th>
+                            <th>PolizaGrupo</th>
+                            <th>PolizaDependiente</th>
+                            <th>Notas</th>
+                            <th>CodigoAgenteVenta</th>
+                            <th>PolizaGrupo</th>
+                            <th>NombreAgenteVenta</th>
+                            <th>NombreSubAgente</th>
+                            <th>CodigoSubAgente</th>
+                            <th>CodigoAgente</th>
+                            <th>NombreAgencia</th>
+                            <th>CodigoAgencia</th>
+                            <th>CodigoEstadoCuota</th>
+                            <th>CodigoEstadoCertificado</th>
+                            <th>FechaPago</th>
+                            <th>Celular</th>
+                            <th>Correo</th>
+                            <th>CodigoMGA</th>
+
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- card-body -->
+    </div>
+</div>
+*@
+
+@section Scripts{
+    <script>
+
+        //        var firstTabEl = document.querySelector('#myTab li:last-child button')
+        //var firstTab = new bootstrap.Tab(firstTabEl)
+
+        //firstTab.show();
+
+        $("#Campanaatatablet").DataTable({
+            searchPanes: {
+                viewTotal: true
+            },
+            searchBuilder: true,
+            sort: true,
+            resizable: true,
+            responsive: true,
+            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
+            fixedColumns: true,
+            order: [[0, "desc"]],
+            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+            buttons: [
+                {
+                    extend: 'excelHtml5',
+                    autoFilter: true,
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.PoliciesDetailModel)Excel',
+                },
+                {
+                    extend: 'pdfHtml5',
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.PoliciesDetailModel)Pdf',
+                },
+                {
+                    extend: 'print',
+                    className: 'btn btn-outline-primary',
+                    title: '',
+                    customize: function (win) {
+                        $(win.document.body).addClass('white-bg');
+                        $(win.document.body).css('font-size', '10px');
+
+                        // Personaliza la apariencia de la página impresa si es necesario
+                    }
+                }
+            ]
+        });
+
+
+
+
+    </script>
+
+}

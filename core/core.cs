@@ -20,6 +20,7 @@ namespace core
                        .AddScoped<IPolicies, PoliciesServices>()
                        .AddScoped<IAgents, AgentsService>()
                        .AddScoped<ILives, LivesService>()
+                       .AddScoped<ICampanig, CampaignService>()
                        .AddScoped<HttpClient>()
                        .AddScoped<HttpClientConfig>()
                        .AddScoped<IHttpServicesAuthorized, HttpServices>()

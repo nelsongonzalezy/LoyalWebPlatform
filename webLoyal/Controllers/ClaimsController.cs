@@ -48,8 +48,8 @@ namespace webLoyal.Controllers
             try
             {
                 model.FechaRegistro = DateTime.Now;
-                var x = await _claimsServ.CreateClaim(model);
-                if (x)
+                //var x = await _claimsServ.CreateClaim(model);
+                if (true)
                 {
                     return Json(new
                     {
