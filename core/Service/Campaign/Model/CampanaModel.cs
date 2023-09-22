@@ -6,6 +6,8 @@
         public IEnumerable<VwCampanaDetalleAgentModel> CampanasAgentes { get; set; }
         public IEnumerable<VwCampanaEstadosModel> CampanasEstados { get; set; }
         public IEnumerable<VwCampanaProductosModel> CampanasProductos { get; set; }
+        public DtCampanaModel DtCampanas { get; set; }
+        public IEnumerable<DtDetalleCampanasModel> DtDetalleCampanas { get; set; }
     }   
     public class ResponseCampanaModel
     {

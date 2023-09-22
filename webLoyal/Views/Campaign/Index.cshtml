@@ -7,22 +7,42 @@
             <li class="breadcrumb-item active"><a href="~/campaign/index">Campañas</a></li>
 
         </ol>
-        <h4 class="main-title mb-0">Campañas</h4>
+        <h4 class="main-title mb-0">Campañas @Model.DtCampanas.DescripcionCampana</h4>
+    </div>
+    <div class="d-flex gap-2 mt-3 mt-md-0 align-items-end">
+        <div class="col-6">
+            <input type="date" id="FechaInicio" asp-for="@Model.DtCampanas.FechaInicio" class="form-control hasDatepicker" placeholder="From">
+        </div><!-- col -->
+        <div class="col-6">
+            <input type="date" id="FechaFin" asp-for="@Model.DtCampanas.FechaFin" class="form-control hasDatepicker col-1" placeholder="To">
+        </div><!-- col -->
+
+        
     </div>
     <div class="d-flex gap-2 mt-3 mt-md-0">
-        <a href="~/home/InConstruction" type="button" class="btn btn-primary d-flex align-items-center gap-2">Crear<span class="d-none d-sm-inline"> Nueva Campaña</span></a>
+        <button id="enviarDatos" class="btn btn-primary d-flex align-items-center gap-2">Actualizar Datos</button>
+        <a href="~/home/InConstruction" type="button" class="btn btn-primary d-flex align-items-center gap-2"><span class="d-none d-sm-inline">Crear Nueva Campaña</span></a>
     </div>
 </div>
 
 <div class="row g-3">
     <div class="row">
+       @* <input type="date" id="fecha1">
+        <input type="date" id="fecha2">*@
+        <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        @if (Model.DtDetalleCampanas.Any(x => x.FormaAnual))
+                        {
+                            <input id="FormaAnual" class="form-check-input" type="checkbox" role="switch" checked>
+                        }
+                        else
+                        {
+                            <input id="FormaAnual" class="form-check-input" type="checkbox" role="switch">
 
-        <div class="col-4 col-xl-3">
-            <div class="card">
-                <div class="card-body">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Forma de pago Anual </label>
+                        }
+                        <label class="form-check-label" for="FormaAnual">Forma de pago Anual </label>
                     </div>
                 </div>
             </div>
@@ -31,8 +51,17 @@
             <div class="card">
                 <div class="card-body">
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Forma de pago Semestral </label>
+                        @if (Model.DtDetalleCampanas.Any(x => x.FormaSemestral))
+                        {
+                            <input id="FormaSemestral" class="form-check-input" type="checkbox" role="switch" checked>
+                        }
+                        else
+                        {
+                            <input id="FormaSemestral" class="form-check-input" type="checkbox" role="switch">
+
+                        }
+                       
+                        <label class="form-check-label" for="FormaSemestral">Forma de pago Semestral </label>
                     </div>
                 </div>
             </div>
@@ -41,8 +70,17 @@
             <div class="card">
                 <div class="card-body">
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Forma de pago Trimestral </label>
+                        @if (Model.DtDetalleCampanas.Any(x => x.FormaTrimestral))
+                        {
+                            <input id="FormaTrimestral" class="form-check-input" type="checkbox" role="switch" checked>
+                        }
+                        else
+                        {
+                            <input id="FormaTrimestral" class="form-check-input" type="checkbox" role="switch">
+
+                        }
+                       
+                        <label class="form-check-label" for="FormaTrimestral">Forma de pago Trimestral </label>
                     </div>
                 </div>
             </div>
@@ -51,8 +89,17 @@
             <div class="card">
                 <div class="card-body">
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Forma de pago Mensual </label>
+                        @if (Model.DtDetalleCampanas.Any(x => x.FormaMensual))
+                        {
+                            <input id="FormaMensual" class="form-check-input" type="checkbox" role="switch" checked>
+                        }
+                        else
+                        {
+                            <input id="FormaMensual" class="form-check-input" type="checkbox" role="switch">
+
+                        }
+                       
+                        <label class="form-check-label" for="FormaMensual">Forma de pago Mensual </label>
                     </div>
                 </div>
             </div>
@@ -378,7 +425,7 @@
 
       <div class="card">
           <div class="card-body">
-                <img src="~/assets/img/miami-inv.jpg" />
+                <img src="~/assets/img/MIAMI-INV.jpg" />
           </div>
 
       </div>
@@ -453,10 +500,44 @@
 @section Scripts{
     <script>
 
-        //        var firstTabEl = document.querySelector('#myTab li:last-child button')
-        //var firstTab = new bootstrap.Tab(firstTabEl)
+        $(document).ready(function () {
+            $("#enviarDatos").on("click", function () {
+                enviarPeticionAlControlador();
+            });
+        });
 
-        //firstTab.show();
+        function enviarPeticionAlControlador() {
+            // Obtener los valores
+            var boolw1 = $("#FormaAnual").prop("checked");
+            var boolw2 = $("#FormaSemestral").prop("checked");
+            var boolw3 = $("#FormaTrimestral").prop("checked");
+            var boolw4 = $("#FormaMensual").prop("checked");
+            var fecha1 = $("#FechaInicio").val();
+            var fecha2 = $("#FechaFin").val();
+
+            // Crear la URL de la petición GET
+            var nuevaURL = "/campaign/Index?CodigoCampana=3" +
+                "&FormaAnual=" + boolw1 +
+                "&FormaSemestral=" + boolw2 +
+                "&FormaTrimestral=" + boolw3 +
+                "&FormaMensual=" + boolw4 +
+                "&FechaInicio=" + fecha1 +
+                "&FechaFin=" + fecha2;
+
+            // Redirigir al controlador
+            window.location.href = nuevaURL;
+
+            // Mostrar Sweet Alert
+            Swal.fire({
+                icon: 'success',
+                title: 'Petición Enviada',
+                text: 'La petición ha sido enviada correctamente.',
+                        showConfirmButton: false
+            });
+        }
+
+
+
 
         $("#Campanaatatablet").DataTable({
             searchPanes: {

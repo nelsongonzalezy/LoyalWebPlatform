@@ -7,6 +7,21 @@
         public int AdultosMujeres { get; set; }
         public int MenoresHombres { get; set; }
         public int MenoresMujeres { get; set; }
+
+        public double PorcentajeHombres
+        {
+            get
+            {
+                if (TotalPersonas != 0)
+                {
+                    return (double)AdultosHombres / TotalPersonas * 100;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
     }
     public class ResponseCifrasPersonasCertificadoResponseModel
     {

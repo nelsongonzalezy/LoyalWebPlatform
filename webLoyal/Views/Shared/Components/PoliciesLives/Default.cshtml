@@ -6,21 +6,70 @@
             <div class="card card-one">
                 <div class="card-body">
                     <a href="~/lives/index">
-                    <label class="card-title fs-sm fw-medium mb-2">Vidas</label>
-                    <h3 class="card-value mb-1"><i class="ri-team-fill ri-2x"></i> @item.TotalPersonas</h3>
+                        <label class="card-title fs-sm fw-medium mb-2">Vidas</label>
+                        <h3 class="card-value mb-1"><i class="ri-team-fill ri-2x"></i> @item.TotalPersonas</h3>
                     </a>
                 </div>
             </div>
-        </div>   
+        </div>
+        <div class="col-12 col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="people-item">
+                        <div class="avatar"><span class="avatar-initial bg-teal fs-20"><i class="ri-shopping-cart-line"></i></span></div>
+                        <div class="people-body">
+                            <h6><a href="">Purchase from #10322</a></h6>
+                            <span>Oct 21, 2023, 3:30pm</span>
+                        </div><!-- people-body -->
+                        <div class="text-end">
+                            <div class="fs-sm">+ $250.00</div>
+                            <span class="d-block fs-xs text-success">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+           
+
+        </div>
+        <div class="col-12 col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="people-item">
+                        <div class="avatar"><span class="avatar-initial bg-teal fs-20"><i class="ri-shopping-cart-line"></i></span></div>
+                        <div class="people-body">
+                            <h6><a href="">Purchase from #10322</a></h6>
+                            <span>Oct 21, 2023, 3:30pm</span>
+                        </div><!-- people-body -->
+                        <div class="text-end">
+                            <div class="fs-sm">+ $250.00</div>
+                            <span class="d-block fs-xs text-success">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
         <div class="col-12 col-xl-12">
             <div class="card card-one">
 
                 <div class="card-body">
                 <label class="card-title fs-sm fw-medium mb-2">Adultos</label>
                 <div class="row g-2">
+                        <div class="people-body">
+                            <h4 class="card-value mb-1"><i class="ri-women-line ri-2x"></i> @item.AdultosMujeres</h4>
+                            <span>Oct 21, 2023, 3:30pm</span>
+                        </div><!-- people-body -->
+                        <div class="text-end">
+                            <div class="fs-sm">+ $250.00</div>
+                            <span class="d-block fs-xs text-success">Completed</span>
+                        </div>
                     <div class="col"> <h4 class="card-value mb-1"><i class="ri-women-line ri-2x"></i> @item.AdultosMujeres</h4></div>
 
-                    <div class="col"> <h4 class="card-value mb-1"><i class="ri-men-line ri-2x"></i> @item.AdultosHombres</h4></div>
+                    <div class="col"> <h4 class="card-value mb-1"><i class="ri-men-line ri-2x"></i> @item.AdultosHombres @item.PorcentajeHombres%</h4></div>
                 </div>
                 </div>
             </div>
