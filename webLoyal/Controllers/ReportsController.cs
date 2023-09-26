@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class ReportsController : Controller
+    public class ReportsController : BaseController
     {
         private readonly IClaimsReports _ClaimReports;
         public ReportsController(IClaimsReports claimReports) { _ClaimReports = claimReports; }

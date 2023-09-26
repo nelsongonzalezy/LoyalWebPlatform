@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class MenuController : Controller
+    public class MenuController : BaseController
     {
         private readonly IMenu _menu;
 

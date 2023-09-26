@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class ProviderController : Controller
+    public class ProviderController : BaseController
     {
         private readonly IProvider _provider;
 
