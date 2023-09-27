@@ -4,7 +4,7 @@ using static System.Net.WebRequestMethods;
 
 namespace webLoyal.Controllers
 {
-    public class CampaignController : Controller
+    public class CampaignController : BaseController
     {
         private readonly ICampanig _campain;
 

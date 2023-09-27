@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class DashController : Controller
+    public class DashController : BaseController
     {
         private readonly IBoardService _IBoardService;
         public DashController(IBoardService IBoardService) { _IBoardService = IBoardService; }

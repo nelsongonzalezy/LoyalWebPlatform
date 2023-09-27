@@ -4,7 +4,7 @@ using System;
 
 namespace webLoyal.Controllers
 {
-    public class ClaimsController : Controller
+    public class ClaimsController : BaseController
     {
         private readonly IClaimsServ _claimsServ;
 

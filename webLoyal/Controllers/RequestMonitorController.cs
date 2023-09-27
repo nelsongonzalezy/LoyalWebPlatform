@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class RequestMonitorController : Controller
+    public class RequestMonitorController : BaseController
     {
         private readonly IRequestMonitor _requestMonitor;
         public RequestMonitorController(IRequestMonitor requestMonitor)
