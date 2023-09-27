@@ -1,10 +1,15 @@
 ﻿using core.Service;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using Newtonsoft.Json.Linq;
+using System.Security.Claims;
+using webLoyal.Authorization;
 
 namespace webLoyal.Controllers
 {
-    public class AuthController : Controller
+    public class AuthController : BaseController
     {
         private readonly ILogin _loginS;
         private readonly IStringLocalizer<AuthController> _localizer;
@@ -17,17 +22,18 @@ namespace webLoyal.Controllers
             _loginS = loginS;
         }
 
+        [AllowAnonymous]
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string error = null)
         {
+            //TODO: puedes mandar este error a la vista
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Index(LoginModel model)
-
         {       
-
             if (ModelState.IsValid)
             {
                 try
@@ -36,23 +42,23 @@ namespace webLoyal.Controllers
                     if (ActiveSession != null)
                     {
                         HttpContext.Session.SetString(nameof(model.UserName), model.UserName);
-                        HttpContext.Session.SetString(nameof(ActiveSession.CodigoUsuario), "1");
-                        HttpContext.Session.SetString(nameof(ActiveSession.IndicadorValidacion), ActiveSession.IndicadorValidacion.ToString());
-                        HttpContext.Session.SetString(nameof(ActiveSession.DireccionEmail), ActiveSession.DireccionEmail);
-                        HttpContext.Session.SetString(nameof(ActiveSession.NombreCompletoUsuario), ActiveSession.NombreCompletoUsuario);
-                        HttpContext.Session.SetString(nameof(ActiveSession.CodigoPerfil), ActiveSession.CodigoPerfil.ToString());
-                        HttpContext.Session.SetString(nameof(ActiveSession.NombrePerfil), ActiveSession.NombrePerfil);
-                        HttpContext.Session.SetString(nameof(ActiveSession.IndicadorCorreoVerificado), ActiveSession.IndicadorCorreoVerificado.ToString());
-                        HttpContext.Session.SetString(nameof(ActiveSession.IndicadorCambioPassword), ActiveSession.IndicadorCambioPassword.ToString());
-                        HttpContext.Session.SetString(nameof(ActiveSession.IndicadorVistaAgentes), ActiveSession.IndicadorVistaAgentes.ToString());
-                        HttpContext.Session.SetString(nameof(ActiveSession.CodigoEstadoUsuario), ActiveSession.CodigoEstadoUsuario.ToString());
-
-
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoUsuario), "1");
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorValidacion), ActiveSession.Content.User.IndicadorValidacion.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.DireccionEmail), ActiveSession.Content.User.DireccionEmail);
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.NombreCompletoUsuario), ActiveSession.Content.User.NombreCompletoUsuario);
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoPerfil), ActiveSession.Content.User.CodigoPerfil.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.NombrePerfil), ActiveSession.Content.User.NombrePerfil);
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorCorreoVerificado), ActiveSession.Content.User.IndicadorCorreoVerificado.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorCambioPassword), ActiveSession.Content.User.IndicadorCambioPassword.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorVistaAgentes), ActiveSession.Content.User.IndicadorVistaAgentes.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoEstadoUsuario), ActiveSession.Content.User.CodigoEstadoUsuario.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.Token), ActiveSession.Content.Token);
+                        
                         return Json(new
                         {
                             success = true,
                             title = Resources.language.Resources.UserFound,
-                            text = Resources.language.Resources.WelcomeMessage.ToString() + " " + ActiveSession.NombreCompletoUsuario.ToString().ToLower(),
+                            text = Resources.language.Resources.WelcomeMessage.ToString() + " " + ActiveSession.Content.User.NombreCompletoUsuario.ToString().ToLower(),
                             icon = "success",
                             timer = 2000
                         });
@@ -221,34 +227,34 @@ namespace webLoyal.Controllers
         [HttpPost]
         [Route("Auth/FastSingin")]
         public async Task<IActionResult> FastSingin(string password)
-
         {
             var model = new LoginModel { UserName = HttpContext.Session.GetString("UserName"),Password=password };
 
             try
             {
+                //TODO: Revisar
                 var ActiveSession = await _loginS.Login(model);
 
-                if (ActiveSession.CodigoUsuario != null)
+                if (ActiveSession.Content.User.CodigoUsuario > 0)
                 {
                     HttpContext.Session.SetString(nameof(model.UserName), model.UserName);
-                    HttpContext.Session.SetString(nameof(ActiveSession.CodigoUsuario), "1");
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicadorValidacion), ActiveSession.IndicadorValidacion.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.DireccionEmail), ActiveSession.DireccionEmail);
-                    HttpContext.Session.SetString(nameof(ActiveSession.NombreCompletoUsuario), ActiveSession.NombreCompletoUsuario);
-                    HttpContext.Session.SetString(nameof(ActiveSession.CodigoPerfil), ActiveSession.CodigoPerfil.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.NombrePerfil), ActiveSession.NombrePerfil);
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicadorCorreoVerificado), ActiveSession.IndicadorCorreoVerificado.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicadorCambioPassword), ActiveSession.IndicadorCambioPassword.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.IndicadorVistaAgentes), ActiveSession.IndicadorVistaAgentes.ToString());
-                    HttpContext.Session.SetString(nameof(ActiveSession.CodigoEstadoUsuario), ActiveSession.CodigoEstadoUsuario.ToString());
-
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoUsuario), "1");
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorValidacion), ActiveSession.Content.User.IndicadorValidacion.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.DireccionEmail), ActiveSession.Content.User.DireccionEmail);
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.NombreCompletoUsuario), ActiveSession.Content.User.NombreCompletoUsuario);
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoPerfil), ActiveSession.Content.User.CodigoPerfil.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.NombrePerfil), ActiveSession.Content.User.NombrePerfil);
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorCorreoVerificado), ActiveSession.Content.User.IndicadorCorreoVerificado.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorCambioPassword), ActiveSession.Content.User.IndicadorCambioPassword.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorVistaAgentes), ActiveSession.Content.User.IndicadorVistaAgentes.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoEstadoUsuario), ActiveSession.Content.User.CodigoEstadoUsuario.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.Token), ActiveSession.Content.Token);
 
                     return Json(new
                     {
                         success = true,
                         title = Resources.language.Resources.UserFound,
-                        text = Resources.language.Resources.WelcomeMessage.ToString() + " " + ActiveSession.NombreCompletoUsuario.ToString().ToLower(),
+                        text = Resources.language.Resources.WelcomeMessage.ToString() + " " + ActiveSession.Content.User.NombreCompletoUsuario.ToString().ToLower(),
                         icon = "success",
                         timer = 2000
                     });
@@ -298,6 +304,14 @@ namespace webLoyal.Controllers
             //    });
             //}
 
+        }
+        
+        [HttpGet]
+        [Route("Auth/LogOut")]
+        public async Task<IActionResult> LogOut()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
         }
     }
 }

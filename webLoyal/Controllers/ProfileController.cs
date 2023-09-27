@@ -2,7 +2,7 @@
 
 namespace webLoyal.Controllers
 {
-    public class ProfileController : Controller
+    public class ProfileController : BaseController
     {
         [HttpGet]
         [Route("Profile/edit/{UserCode}")]

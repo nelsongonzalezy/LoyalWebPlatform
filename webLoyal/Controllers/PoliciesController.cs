@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class PoliciesController : Controller
+    public class PoliciesController : BaseController
     {
         private readonly IPolicies _request;
         public PoliciesController(IPolicies request)

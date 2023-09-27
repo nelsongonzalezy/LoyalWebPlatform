@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class AgentsController : Controller
+    public class AgentsController : BaseController
     {
         private readonly IAgents _Agents;
 

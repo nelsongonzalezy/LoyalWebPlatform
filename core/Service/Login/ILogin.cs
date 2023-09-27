@@ -2,6 +2,6 @@
 {
     public interface ILogin
     {
-        Task<LoginAuthModel> Login(LoginModel model);
+        Task<ResponseRequestLoginAuthModel> Login(LoginModel model);
     }
 }

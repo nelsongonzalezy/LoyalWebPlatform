@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class LivesController : Controller
+    public class LivesController : BaseController
     {
         private readonly ILives _Lives;
 

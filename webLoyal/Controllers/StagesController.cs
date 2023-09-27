@@ -2,7 +2,7 @@
 
 namespace webLoyal.Controllers
 {
-    public class StagesController : Controller
+    public class StagesController : BaseController
     {
         public IActionResult Index()
         {
