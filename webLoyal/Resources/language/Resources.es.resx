@@ -401,4 +401,43 @@
   <data name="Home" xml:space="preserve">
     <value>Inicio</value>
   </data>
+  <data name="AgentsList" xml:space="preserve">
+    <value>Lista de Agentes</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Educación</value>
+  </data>
+  <data name="Recognitions" xml:space="preserve">
+    <value>Reconocimientos</value>
+  </data>
+  <data name="Achievements" xml:space="preserve">
+    <value>Logros</value>
+  </data>
+  <data name="WorkExperience" xml:space="preserve">
+    <value>Experiencia Laboral</value>
+  </data>
+  <data name="PeopleServed" xml:space="preserve">
+    <value>Personas Atendidas</value>
+  </data>
+  <data name="InsuredPersons" xml:space="preserve">
+    <value>Personas Aseguradas</value>
+  </data>
+  <data name="BankData" xml:space="preserve">
+    <value>Datos Bancarios</value>
+  </data>
+  <data name="BankData" xml:space="preserve">
+    <value>Bank Data</value>
+  </data>
+  <data name="AccountNumber" xml:space="preserve">
+    <value>Número De Cuenta</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Tipo de Cuenta</value>
+  </data>
+  <data name="RoutingCode" xml:space="preserve">
+    <value>Código De Enrutamiento</value>
+  </data>
+  <data name="BankingAddress" xml:space="preserve">
+    <value>Dirección Bancaria</value>
+  </data>
 </root>
