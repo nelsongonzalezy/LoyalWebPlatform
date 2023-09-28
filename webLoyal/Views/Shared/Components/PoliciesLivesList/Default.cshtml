@@ -1,6 +1,49 @@
 ﻿@model List<core.Service.CifrasPersonasCertificadoResponseModel>
 <div class="row g-3">
+   
     @foreach (var item in Model)
+    {
+        <div class="col-3 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">Mujeres</label>
+                    <h3 class="card-value mb-1"><i class="ri-women-line"></i> @item.AdultosMujeres</h3>
+
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div>
+        <div class="col-3 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">Hombres</label>
+                    <h3 class="card-value mb-1"><i class="ri-men-line"></i> @item.AdultosHombres</h3>
+
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div> 
+        <div class="col-3 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">Niñas</label>
+                    <h3 class="card-value mb-1"><i class="ri-women-line"></i> @item.MenoresMujeres</h3>
+
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div>  
+        <div class="col-3 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">Niños</label>
+                    <h3 class="card-value mb-1"><i class="ri-men-line"></i> @item.MenoresHombres</h3>
+
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div> 
+
+    }
+</div>
+
+@*    @foreach (var item in Model)
     {
         <div class="col-12 col-xl-12">
             <div class="card border-primary">
@@ -90,4 +133,4 @@
         </div>
      
     }
-</div>
+*@
