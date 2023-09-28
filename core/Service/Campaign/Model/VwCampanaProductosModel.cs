@@ -6,5 +6,6 @@
         public decimal PrimaComisionable { get; set; }
         public int CodigoPoliza { get; set; }
         public string? DescripcionPoliza { get; set; }
+        public decimal PorcentajeCantidadRegistros { get; set; }
     }
 }

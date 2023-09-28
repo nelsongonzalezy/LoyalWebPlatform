@@ -137,8 +137,11 @@
                     </div>
                     <div class="media-body">
                         <h5><a href="" class="text-white">@producto.DescripcionPoliza</a></h5>
-                        <h5 class="card-value text-white">@producto.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h5>
-                        <h5 class="card-value text-white"># @producto.CantidadRegistros</h5>
+                        <h6 class="card-value text-white">Prima: @producto.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
+                        <h6 class="card-value text-white">Polizas: @producto.CantidadRegistros</h6>
+                        <h6 class="d-block fs-xs text-success">
+                        <span class="badge badge-pill bg-light">@producto.PorcentajeCantidadRegistros.ToString("P2")</span>
+                        </h6>
                     </div>
                 </div>
             </div>
@@ -190,13 +193,18 @@
     {
         <div class="col-2 col-xl-2">
             <div class="card card-one">
+                <div class="card-header"><h5 class="card-title mb-1">@estados.DescripcionEstadoCertificado</h5></div>
                 <div class="card-body">
-                    <h5 class="card-title fs-sm fw-medium mb-1">@estados.DescripcionEstadoCertificado</h5>
-                    <label class="card-value mb-1"><i class=""></i>Prima @estados.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</label>
-                    <label class="card-value mb-1"><i class=""></i>Poliza # @estados.CantidadRegistros</label>
-                    <label class="card-value mb-1"><i class=""></i>C.ADM @estados.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</label>
+                    
+                    <h6 class="card-value mb-1">Prima @estados.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
+                    <h6 class="card-value mb-1">Polizas @estados.CantidadRegistros</h6>
+                    <h6 class="card-value mb-1">C.ADM @estados.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
+                   
 
                 </div><!-- card-body -->
+                <div class="card-footer">
+                    <h6 class="card-value mb-1">Representacion:&nbsp<span class="d-block fs-xs text-success">@estados.PorcentajeCantidadRegistros.ToString("P2")</span></h6>
+                </div>
             </div><!-- card-one -->
         </div>
 
@@ -327,50 +335,56 @@
             {
                 <div class="col-2 col-xl-2">
                     <div class="card card-one">
-                        <div class="card-body">
-                            <h5 class="card-title fs-sm fw-medium mb-1">@item.Fila</h5>
-                            @switch (@item.Fila)
-                            {
+                        <div class="card-header">
+                            <h5 class="card-value fs-28 mb-0">
+                                @item.Fila &nbsp
+                                @switch (@item.Fila)
+                                {
                                     case 1:
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    break;  
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        break;
                                     case 2:
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-line"></i>
-                                    break;
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
                                     case 3:
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-line"></i>
-                                    <i class="ri-star-line"></i>
-                                    break;   
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
                                     case 4:
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-line"></i>
-                                    <i class="ri-star-line"></i>
-                                    <i class="ri-star-line"></i>
-                                    break;  
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <i class="ri-star-line"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
                                     case 5:
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-line"></i>
-                                    <i class="ri-star-line"></i>
-                                    <i class="ri-star-line"></i>
-                                    <i class="ri-star-line"></i>
-                                    break;
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <i class="ri-star-line"></i>
+                                        <i class="ri-star-line"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
 
-                            }
+                                }
+                            </h5>
+                        </div>
+                        <div class="card-body">
+
+
                             <label class="card-value mb-1"><i class=""></i>@item.NombreAgenteVenta</label>
-                            <label class="card-value mb-1"><i class=""></i>Prima  @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
-                            <label class="card-value mb-1"><i class=""></i># @item.Cantidad</label>
+                            <label class="card-value mb-1"><i class=""></i>Prima:  @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
+                            <label class="card-value mb-1"><i class=""></i>Polizas: @item.Cantidad</label>
 
                         </div><!-- card-body -->
                     </div><!-- card-one -->
@@ -394,19 +408,52 @@
                         </nav>*@
                     </div><!-- card-header -->
                     <div class="card-body">
-                        <table class="table table-ratings mb-0">
-                            
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Posicion</th>
+                                    <th>Codigo </th>
+                                    <th>Agente</th>
+                                    <th>Primas</th>
+                                    <th>Polizas</th>
+                                    <th>Procentaje</th>
+                           
+
+                                </tr>
+          
+                            </thead>
                             @foreach (var item in Model.CampanasAgentes.OrderBy(x => x.Fila))
                             {
                                 <tbody>
                                     <tr>
                                         <td><strong>@item.Fila</strong></td>
-                                        <td>@item.CodigoMGA</td>
-                                        <td>@item.NombreMGA</td>
-                                        <td>@item.CodigoAgenteVenta</td>
-                                        <td>@item.NombreAgenteVenta</td>
+                                        @*<td>@item.CodigoMGA</td>
+                                        <td>@item.NombreMGA</td>*@
+                                        <td> <a href="../Agents/detail/@item.CodigoAgenteVenta" class="btn btn-outline-tertiary"> @item.CodigoAgenteVenta </a> </td>
+@*                                        <td>@item.CodigoAgenteVenta</td>*@
+                                        <td>@item.NombreAgenteVenta.Trim() &nbsp/&nbsp @item.NombreMGA.Trim()</td>
                                         <td>@item.Cantidad</td>
-                                        <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>
+
+                                            @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>
+                                            @{
+                                                decimal objetivo = 20000; // El valor objetivo
+                                                decimal primaActual = @item.Prima; // El valor actual de la prima
+
+                                                // Calcular el porcentaje de avance
+                                                decimal porcentajeAvance = (primaActual / objetivo) * 1;
+                                            }
+                                            @porcentajeAvance.ToString("P2")
+                                        </td>
+
+                                        @*<td>
+                                            <div class="progress" style="height: 20px;">
+                                                <div class="progress-bar" role="progressbar" style="width: @porcentajeAvance.ToString("P2");" aria-valuenow="@porcentajeAvance" aria-valuemin="0" aria-valuemax="100">
+                                                    @porcentajeAvance.ToString("P2")
+                                                </div>
+                                            </div>
+                                        </td>*@
                                     </tr>
                                 </tbody>
 
