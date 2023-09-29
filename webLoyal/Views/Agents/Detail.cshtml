@@ -4,7 +4,7 @@
         <div>
             <ol class="breadcrumb fs-sm mb-1">
                 <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
-                <li class="breadcrumb-item"><a href="~/Agents/Index">Lista de Agentes</a></li>
+                <li class="breadcrumb-item"><a href="~/Agents/Index"></a>@webLoyal.Resources.language.Resource.AgentsList</li>
                 <li class="breadcrumb-item active" aria-current="page">@webLoyal.Resources.language.Resources.Agent</li>
             </ol>
         </div>
@@ -40,11 +40,11 @@
                                 @item.Provincia,  @item.CiudadOficina @item.DescripcionPaisOficina , @item.CodigoDireccionPostal
                             </p>
                             <ul class="mt-3">
-                                <li>Correo Electronico: @item.Correo</li>
-                                <li>Celular: @item.Celular</li>
-                                <li>Direccion bancaria: @item.DirecciónCuenta</li>
-                                <li>Fecha de Nacimiento: @item.FechaNacimiento</li>
-                                <li>Fecha de Contrato: @item.FechaInicioContrato</li>
+                                <li>@webLoyal.Resources.language.Resources.Email: @item.Correo</li>
+                                <li>@webLoyal.Resources.language.Resources.CellPhone: @item.Celular</li>
+                                <li>@webLoyal.Resources.language.Resources.BankingAddress: @item.DirecciónCuenta</li>
+                                <li>@webLoyal.Resources.language.Resources.Birthdate: @item.FechaNacimiento</li>
+                                <li>@webLoyal.Resources.language.Resources.ContractDate: @item.FechaInicioContrato</li>
 
                             </ul>
                     </div><!-- media-body -->
@@ -56,8 +56,8 @@
                     <div class="profile-item">
                         <i class="ri-article-line"></i>
                         <div class="profile-item-body">
-                            <p>Educación</p>
-                            <span>Lic.</span>
+                            <p>@webLoyal.Resources.language.Resources.Education</p>
+                            <span>@webLoyal.Resources.language.Resources.Degree.</span>
                         </div><!-- profile-item-body -->
                     </div><!-- profile-item -->
                 </div><!-- col -->
@@ -65,8 +65,8 @@
                     <div class="profile-item">
                         <i class="ri-medal-2-line"></i>
                         <div class="profile-item-body">
-                            <p>Reconocimientos</p>
-                            <span>Logros</span>
+                            <p>@webLoyal.Resources.language.Resources.Recognitions</p>
+                            <span>@webLoyal.Resources.language.Resources.Achievements</span>
                         </div><!-- profile-item-body -->
                     </div><!-- profile-item -->
                 </div><!-- col -->
@@ -74,8 +74,8 @@
                     <div class="profile-item">
                         <i class="ri-suitcase-line"></i>
                         <div class="profile-item-body">
-                            <p>15+ Años</p>
-                            <span>Experiencia Laboral</span>
+                            <p>15+ @webLoyal.Resources.language.Resources.Years</p>
+                            <span>@webLoyal.Resources.language.Resources.WorkExperience</span>
                         </div><!-- profile-item-body -->
                     </div><!-- profile-item -->
                 </div><!-- col -->
@@ -84,7 +84,7 @@
                         <i class="ri-team-line"></i>
                         <div class="profile-item-body">
                             <p>3,560</p>
-                            <span>Personas atendidas</span>
+                            <span>@webLoyal.Resources.language.Resources.PeopleServed</span>
                         </div><!-- profile-item-body -->
                     </div><!-- profile-item -->
                 </div><!-- col -->
@@ -93,7 +93,7 @@
                         <i class="ri-team-line"></i>
                         <div class="profile-item-body">
                             <p>3,506</p>
-                            <span>Personas Aseguradas</span>
+                            <span>@webLoyal.Resources.language.Resources.IsuredPersons</span>
                         </div><!-- profile-item-body -->
                     </div><!-- profile-item -->
                 </div><!-- col -->
@@ -102,7 +102,7 @@
             <!-- col -->
             <div class="card card-post mt-4">
                 <div class="card-header">
-                    <h6 class="card-title">Datos Bancarios</h6>
+                    <h6 class="card-title">@webLoyal.Resources.language.Resources.BankData</h6>
                     <a href="" class="link-more"><i class="ri-more-2-fill"></i></a>
                 </div><!-- card-header -->
                 <div class="card-body">
@@ -111,10 +111,10 @@
                         <div class="experience-body">
                             <h5>@item.DescripcionBanco</h5>
                             <ul class="mt-3">
-                                <li>Numero de Cuenta: @item.NumeroCuentaDeposito</li>
-                                <li>Tipo de Cuenta: @item.TipoCuentaDeposito</li>
-                                <li>Codigo de Enrutamiento: @item.CodigoRouting</li>
-                                <li>Direccion bancaria: @item.DirecciónCuenta @item.CodigoPostalOficina</li>
+                                <li>@webLoyal.Resources.language.Resources.AccountNumber: @item.NumeroCuentaDeposito</li>
+                                <li>@webLoyal.Resources.language.Resources.AccountType: @item.TipoCuentaDeposito</li>
+                                <li>@webLoyal.Resources.language.Resources.RoutingCode: @item.CodigoRouting</li>
+                                <li>@webLoyal.Resources.language.Resources.BankingAddress: @item.DirecciónCuenta @item.CodigoPostalOficina</li>
                                
                             </ul>
                         </div><!-- experience-body -->
