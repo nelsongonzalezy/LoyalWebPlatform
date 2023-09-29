@@ -440,4 +440,19 @@
   <data name="BankingAddress" xml:space="preserve">
     <value>Dirección Bancaria</value>
   </data>
+  <data name="CellPhone" xml:space="preserve">
+    <value>Celular</value>
+  </data>
+  <data name="Birthdate" xml:space="preserve">
+    <value>Fecha De Nacimiento</value>
+  </data>
+  <data name="ContractDate" xml:space="preserve">
+    <value>Fecha De Contrato</value>
+  </data>
+  <data name="Degree" xml:space="preserve">
+    <value>Licenciatura</value>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>Años</value>
+  </data>
 </root>

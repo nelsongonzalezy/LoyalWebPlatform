@@ -503,5 +503,20 @@
   </data>
   <data name="BankingAddress" xml:space="preserve">
     <value>Banking Address</value>
-  </data> 
+  </data>
+  <data name="CellPhone" xml:space="preserve">
+    <value>Cell phone</value>
+  </data>
+  <data name="Birthdate" xml:space="preserve">
+    <value>Birthdate</value>
+  </data>
+  <data name="ContractDate" xml:space="preserve">
+    <value>Contract Date</value>
+  </data>
+  <data name="Degree" xml:space="preserve">
+    <value>Degree</value>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>Years</value>
+  </data>
 </root>
