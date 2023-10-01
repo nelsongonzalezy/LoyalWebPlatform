@@ -454,4 +454,10 @@
   <data name="Years" xml:space="preserve">
     <value>Years</value>
   </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Province" xml:space="preserve">
+    <value>Province</value>
+  </data>
 </root>
