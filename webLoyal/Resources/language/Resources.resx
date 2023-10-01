@@ -552,7 +552,7 @@
   <data name="Important" xml:space="preserve">
     <value>Important</value>
   </data>
-  <data name="Deleted Files" xml:space="preserve">
+  <data name="DeletedFiles" xml:space="preserve">
     <value>Deleted Files</value>
   </data><data name="Documents" xml:space="preserve">
     <value>Documents</value>
@@ -562,5 +562,16 @@
     <value>Videos</value>
   </data><data name="Audio" xml:space="preserve">
     <value>Audio</value>
-  </data> 
+  </data>
+  <data name="ZipFiles" xml:space="preserve">
+    <value>Zip Files</value>
+  </data><data name="StorageStatus" xml:space="preserve">
+    <value>Storage Status</value>
+  </data><data name="Get2TB(2,000GB)OfStorageNowAndGet40%OffOffersEndsSoon" xml:space="preserve">
+    <value>Get 2TB (2,000GB) of storage now and get 40% off. Offers ends soon</value>
+  </data><data name="LearnMore" xml:space="preserve">
+    <value>Learn more</value>
+  </data><data name="RecentlyAccessedFiles" xml:space="preserve">
+    <value>Recently Accessed Files</value>
+  </data>
 </root>
