@@ -552,4 +552,15 @@
   <data name="Important" xml:space="preserve">
     <value>Important</value>
   </data>
+  <data name="Deleted Files" xml:space="preserve">
+    <value>Deleted Files</value>
+  </data><data name="Documents" xml:space="preserve">
+    <value>Documents</value>
+  </data><data name="Images" xml:space="preserve">
+    <value>Images</value>
+  </data><data name="Videos" xml:space="preserve">
+    <value>Videos</value>
+  </data><data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data> 
 </root>
