@@ -461,4 +461,16 @@
   <data name="Province" xml:space="preserve">
     <value>Provincia</value>
   </data>
+  <data name="EnterTheCodeSentToYourMobileDevice." xml:space="preserve">
+    <value>Ingresa el código enviado a tu dispositivo móvil.</value>
+  </data>
+  <data name="PasswordOne" xml:space="preserve">
+    <value>Contraseña Principal</value>
+  </data>
+  <data name="PasswordTwo" xml:space="preserve">
+    <value>Contraseña Secundaria</value>
+  </data>
+  <data name="ForgotPassword?" xml:space="preserve">
+    <value>¿Has olvidado tu contraseña?</value>
+  </data>
 </root>
