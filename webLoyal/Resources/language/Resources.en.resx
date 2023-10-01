@@ -472,4 +472,19 @@
   <data name="ForgotPassword?" xml:space="preserve">
     <value>Forgot Password?</value>
   </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>All Files</value>
+  </data>
+  <data name="MyDevices" xml:space="preserve">
+    <value>My Devices</value>
+  </data>
+  <data name="Recents" xml:space="preserve">
+    <value>Recents</value>
+  </data>
+  <data name="Important" xml:space="preserve">
+    <value>Important</value>
+  </data>
 </root>
