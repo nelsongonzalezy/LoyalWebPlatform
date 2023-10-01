@@ -7,10 +7,10 @@
         {
             this._unAuthorized = unAuthorized;
         }
-        public async Task<IQueryable<VidasResponseModel>> GetAllLife()
+        public async Task<VidasResponseModel> GetAllLife()
         {
             var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseVidasResponseModel>("api/v1/Vidas/ObtenerVidas");
-            return y.Content.AsQueryable();
+            return y.Content;
         }        
         public async Task<IQueryable<CifrasPersonasCertificadoResponseModel>> GetAllCountLife()
         {
