@@ -460,7 +460,7 @@
   <data name="Province" xml:space="preserve">
     <value>Province</value>
   </data>
-  <data name="EnterTheCodeSentToYourMobileDevice." xml:space="preserve">
+  <data name="EnterTheCodeSentToYourMobileDevice" xml:space="preserve">
     <value>Enter the code sent to your mobile device.</value>
   </data>
   <data name="PasswordOne" xml:space="preserve">

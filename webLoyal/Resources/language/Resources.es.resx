@@ -461,7 +461,7 @@
   <data name="Province" xml:space="preserve">
     <value>Provincia</value>
   </data>
-  <data name="EnterTheCodeSentToYourMobileDevice." xml:space="preserve">
+  <data name="EnterTheCodeSentToYourMobileDevice" xml:space="preserve">
     <value>Ingresa el código enviado a tu dispositivo móvil.</value>
   </data>
   <data name="PasswordOne" xml:space="preserve">
