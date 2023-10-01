@@ -15,7 +15,7 @@ namespace webLoyal.Controllers
         public async Task<IActionResult> Index()
         {
             var x = await _Lives.GetAllLife();
-            return View(x.ToList());
+            return View(x);
         }
     }
 }

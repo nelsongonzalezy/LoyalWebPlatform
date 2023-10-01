@@ -2,7 +2,7 @@
 {
     public interface ILives 
     {
-        Task<IQueryable<VidasResponseModel>> GetAllLife();
+        Task<VidasResponseModel> GetAllLife();
         Task<IQueryable<CifrasPersonasCertificadoResponseModel>> GetAllCountLife(); 
     }
 }

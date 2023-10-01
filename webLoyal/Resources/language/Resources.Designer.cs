@@ -70,6 +70,33 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account Number.
+        /// </summary>
+        public static string AccountNumber {
+            get {
+                return ResourceManager.GetString("AccountNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account Type.
+        /// </summary>
+        public static string AccountType {
+            get {
+                return ResourceManager.GetString("AccountType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Achievements.
+        /// </summary>
+        public static string Achievements {
+            get {
+                return ResourceManager.GetString("Achievements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Active.
         /// </summary>
         public static string Active {
@@ -124,6 +151,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Agents List.
+        /// </summary>
+        public static string AgentsList {
+            get {
+                return ResourceManager.GetString("AgentsList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Attending Doctor.
         /// </summary>
         public static string AttendingDoctor {
@@ -142,6 +178,33 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bank Data.
+        /// </summary>
+        public static string BankData {
+            get {
+                return ResourceManager.GetString("BankData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Banking Address.
+        /// </summary>
+        public static string BankingAddress {
+            get {
+                return ResourceManager.GetString("BankingAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Birthdate.
+        /// </summary>
+        public static string Birthdate {
+            get {
+                return ResourceManager.GetString("Birthdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Business Name.
         /// </summary>
         public static string BusinessName {
@@ -156,6 +219,15 @@ namespace webLoyal.Resources.language {
         public static string CanceledCertificates {
             get {
                 return ResourceManager.GetString("CanceledCertificates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cell phone.
+        /// </summary>
+        public static string CellPhone {
+            get {
+                return ResourceManager.GetString("CellPhone", resourceCulture);
             }
         }
         
@@ -313,6 +385,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contract Date.
+        /// </summary>
+        public static string ContractDate {
+            get {
+                return ResourceManager.GetString("ContractDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Country Description.
         /// </summary>
         public static string CountryDescription {
@@ -363,6 +444,15 @@ namespace webLoyal.Resources.language {
         public static string DeductibleApplies {
             get {
                 return ResourceManager.GetString("DeductibleApplies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Degree.
+        /// </summary>
+        public static string Degree {
+            get {
+                return ResourceManager.GetString("Degree", resourceCulture);
             }
         }
         
@@ -435,6 +525,15 @@ namespace webLoyal.Resources.language {
         public static string EditProfile {
             get {
                 return ResourceManager.GetString("EditProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Education.
+        /// </summary>
+        public static string Education {
+            get {
+                return ResourceManager.GetString("Education", resourceCulture);
             }
         }
         
@@ -597,6 +696,15 @@ namespace webLoyal.Resources.language {
         public static string Insured {
             get {
                 return ResourceManager.GetString("Insured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insured Persons.
+        /// </summary>
+        public static string InsuredPersons {
+            get {
+                return ResourceManager.GetString("InsuredPersons", resourceCulture);
             }
         }
         
@@ -799,20 +907,20 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oopps. The page you were looking for doesn&apos;t exist. You may have mistyped the address or the page may have moved..
-        /// </summary>
-        public static string PageNotFoundMsj {
-            get {
-                return ResourceManager.GetString("PageNotFoundMsj", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string PassWord {
             get {
                 return ResourceManager.GetString("PassWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to People Served.
+        /// </summary>
+        public static string PeopleServed {
+            get {
+                return ResourceManager.GetString("PeopleServed", resourceCulture);
             }
         }
         
@@ -925,6 +1033,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Recognitions.
+        /// </summary>
+        public static string Recognitions {
+            get {
+                return ResourceManager.GetString("Recognitions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Record Date.
         /// </summary>
         public static string RecordDate {
@@ -997,6 +1114,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Routing Code.
+        /// </summary>
+        public static string RoutingCode {
+            get {
+                return ResourceManager.GetString("RoutingCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select.
         /// </summary>
         public static string Select {
@@ -1020,15 +1146,6 @@ namespace webLoyal.Resources.language {
         public static string ServicesUnavailableOoppsMsj {
             get {
                 return ResourceManager.GetString("ServicesUnavailableOoppsMsj", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Oopps. The server is unable to service your request due to maintenance downtime or capacity problems. Please try again later..
-        /// </summary>
-        public static string ServiceUnavailableMsj {
-            get {
-                return ResourceManager.GetString("ServiceUnavailableMsj", resourceCulture);
             }
         }
         
@@ -1128,6 +1245,24 @@ namespace webLoyal.Resources.language {
         public static string WelcomeMessage {
             get {
                 return ResourceManager.GetString("WelcomeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Work Experience.
+        /// </summary>
+        public static string WorkExperience {
+            get {
+                return ResourceManager.GetString("WorkExperience", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Years {
+            get {
+                return ResourceManager.GetString("Years", resourceCulture);
             }
         }
     }
