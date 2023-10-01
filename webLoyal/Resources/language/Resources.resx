@@ -554,24 +554,94 @@
   </data>
   <data name="DeletedFiles" xml:space="preserve">
     <value>Deleted Files</value>
-  </data><data name="Documents" xml:space="preserve">
+  </data>
+  <data name="Documents" xml:space="preserve">
     <value>Documents</value>
-  </data><data name="Images" xml:space="preserve">
+  </data>
+  <data name="Images" xml:space="preserve">
     <value>Images</value>
-  </data><data name="Videos" xml:space="preserve">
+  </data>
+  <data name="Videos" xml:space="preserve">
     <value>Videos</value>
-  </data><data name="Audio" xml:space="preserve">
+  </data>
+  <data name="Audio" xml:space="preserve">
     <value>Audio</value>
   </data>
   <data name="ZipFiles" xml:space="preserve">
     <value>Zip Files</value>
-  </data><data name="StorageStatus" xml:space="preserve">
+  </data>
+  <data name="StorageStatus" xml:space="preserve">
     <value>Storage Status</value>
-  </data><data name="Get2TB(2,000GB)OfStorageNowAndGet40%OffOffersEndsSoon" xml:space="preserve">
+  </data>
+  <data name="Get2TB(2,000GB)OfStorageNowAndGet40%OffOffersEndsSoon" xml:space="preserve">
     <value>Get 2TB (2,000GB) of storage now and get 40% off. Offers ends soon</value>
-  </data><data name="LearnMore" xml:space="preserve">
+  </data>
+  <data name="LearnMore" xml:space="preserve">
     <value>Learn more</value>
-  </data><data name="RecentlyAccessedFiles" xml:space="preserve">
+  </data>
+  <data name="RecentlyAccessedFiles" xml:space="preserve">
     <value>Recently Accessed Files</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>View Details</value>
+  </data>
+  <data name="MarkAsImportant" xml:space="preserve">
+    <value>Mark as Important</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="CopyTo" xml:space="preserve">
+    <value>Copy to</value>
+  </data>
+  <data name="MoveTo" xml:space="preserve">
+    <value>Move to</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="LastAccess" xml:space="preserve">
+    <value>Last Access</value>
+  </data>
+  <data name="HoursAgo" xml:space="preserve">
+    <value>hours ago</value>
+  </data>
+  <data name="Folders" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="Downloads" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="PersonalStuff" xml:space="preserve">
+    <value>Personal Stuff</value>
+  </data>
+  <data name="3DObjects" xml:space="preserve">
+    <value>3D Objects</value>
+  </data>
+  <data name="Recordings" xml:space="preserve">
+    <value>Recordings</value>
+  </data><data name="Support" xml:space="preserve">
+    <value>Support</value>
+  </data><data name="CloudFiles" xml:space="preserve">
+    <value>Cloud Files</value>
+  </data><data name="LastModified" xml:space="preserve">
+    <value>Last Modified</value>
+  </data><data name="FileSize" xml:space="preserve">
+    <value>File Size</value>
+  </data>
+  <data name="DashboardConcepts" xml:space="preserve">
+    <value>Dashboard Concepts</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Gallery</value>
+  </data>
+  <data name="Receipts" xml:space="preserve">
+    <value>Receipts</value>
   </data>
 </root>
