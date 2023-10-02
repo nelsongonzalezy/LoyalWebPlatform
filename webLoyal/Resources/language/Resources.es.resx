@@ -488,4 +488,100 @@
   <data name="Important" xml:space="preserve">
     <value>Importante</value>
   </data>
+  <data name="DeletedFiles" xml:space="preserve">
+    <value>Archivos Eliminados</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documentos</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Imágenes</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>Videos</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="ZipFiles" xml:space="preserve">
+    <value>Archivos Zip</value>
+  </data>
+  <data name="StorageStatus" xml:space="preserve">
+    <value>Estado de Almacenamiento</value>
+  </data>
+  <data name="Get2TB(2,000GB)OfStorageNowAndGet40%OffOffersEndsSoon" xml:space="preserve">
+    <value>Obtenga 2 TB (2000 GB) de almacenamiento ahora y obtenga un 40 % de descuento. Las ofertas terminan pronto</value>
+  </data>
+  <data name="LearnMore" xml:space="preserve">
+    <value>Aprende Más</value>
+  </data>
+  <data name="RecentlyAccessedFiles" xml:space="preserve">
+    <value>Archivos accedidos recientemente</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>Ver detalles</value>
+  </data>
+  <data name="MarkAsImportant" xml:space="preserve">
+    <value>Marcar Como Importante</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Compartir</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="CopyTo" xml:space="preserve">
+    <value>Copiar a</value>
+  </data>
+  <data name="MoveTo" xml:space="preserve">
+    <value>Mover a</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Renombrar</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="LastAccess" xml:space="preserve">
+    <value>Último acceso</value>
+  </data>
+  <data name="HoursAgo" xml:space="preserve">
+    <value>horas atras</value>
+  </data>
+  <data name="Folders" xml:space="preserve">
+    <value>Carpetas</value>
+  </data>
+  <data name="Downloads" xml:space="preserve">
+    <value>Descargas</value>
+  </data>
+  <data name="PersonalStuff" xml:space="preserve">
+    <value>Cosas personales</value>
+  </data>
+  <data name="3DObjects" xml:space="preserve">
+    <value>Objetos 3D</value>
+  </data>
+  <data name="Recordings" xml:space="preserve">
+    <value>Grabaciones</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Apoyo</value>
+  </data>
+  <data name="CloudFiles" xml:space="preserve">
+    <value>Archivos en la nube</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>Última modificación</value>
+  </data>
+  <data name="FileSize" xml:space="preserve">
+    <value>Tamaño del archivo</value>
+  </data>
+  <data name="DashboardConcepts" xml:space="preserve">
+    <value>Conceptos del panel de control</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Galería</value>
+  </data>
+  <data name="Receipts" xml:space="preserve">
+    <value>Recibos</value>
+  </data>
 </root>

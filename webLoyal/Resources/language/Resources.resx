@@ -626,13 +626,17 @@
   </data>
   <data name="Recordings" xml:space="preserve">
     <value>Recordings</value>
-  </data><data name="Support" xml:space="preserve">
+  </data>
+  <data name="Support" xml:space="preserve">
     <value>Support</value>
-  </data><data name="CloudFiles" xml:space="preserve">
+  </data>
+  <data name="CloudFiles" xml:space="preserve">
     <value>Cloud Files</value>
-  </data><data name="LastModified" xml:space="preserve">
+  </data>
+  <data name="LastModified" xml:space="preserve">
     <value>Last Modified</value>
-  </data><data name="FileSize" xml:space="preserve">
+  </data>
+  <data name="FileSize" xml:space="preserve">
     <value>File Size</value>
   </data>
   <data name="DashboardConcepts" xml:space="preserve">
