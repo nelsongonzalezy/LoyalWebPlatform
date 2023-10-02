@@ -508,7 +508,7 @@
   <data name="StorageStatus" xml:space="preserve">
     <value>Storage Status</value>
   </data>
-  <data name="Get2TB(2,000GB)OfStorageNowAndGet40%OffOffersEndsSoon" xml:space="preserve">
+  <data name="Get2TBOfStorageNowAndGet40OffOffersEndsSoon" xml:space="preserve">
     <value>Get 2TB (2,000GB) of storage now and get 40% off. Offers ends soon</value>
   </data>
   <data name="LearnMore" xml:space="preserve">
@@ -556,7 +556,7 @@
   <data name="PersonalStuff" xml:space="preserve">
     <value>Personal Stuff</value>
   </data>
-  <data name="3DObjects" xml:space="preserve">
+  <data name="TriDObjects" xml:space="preserve">
     <value>3D Objects</value>
   </data>
   <data name="Recordings" xml:space="preserve">

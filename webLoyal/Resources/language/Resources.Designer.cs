@@ -1265,5 +1265,349 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("Years", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Province {
+            get {
+                return ResourceManager.GetString("Province", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string EnterTheCodeSentToYourMobileDevice {
+            get {
+                return ResourceManager.GetString("EnterTheCodeSentToYourMobileDevice", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string PasswordOne {
+            get {
+                return ResourceManager.GetString("PasswordOne", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string PasswordTwo {
+            get {
+                return ResourceManager.GetString("PasswordTwo", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string ForgotPassword {
+            get {
+                return ResourceManager.GetString("ForgotPassword", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string New {
+            get {
+                return ResourceManager.GetString("New", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string AllFiles {
+            get {
+                return ResourceManager.GetString("AllFiles", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string MyDevices {
+            get {
+                return ResourceManager.GetString("MyDevices", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Recents {
+            get {
+                return ResourceManager.GetString("Recents", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Important {
+            get {
+                return ResourceManager.GetString("Important", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string DeletedFiles {
+            get {
+                return ResourceManager.GetString("DeletedFiles", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Documents {
+            get {
+                return ResourceManager.GetString("Documents", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Images {
+            get {
+                return ResourceManager.GetString("Images", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Videos {
+            get {
+                return ResourceManager.GetString("Videos", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Audio {
+            get {
+                return ResourceManager.GetString("Audio", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string ZipFiles {
+            get {
+                return ResourceManager.GetString("ZipFiles", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string StorageStatus {
+            get {
+                return ResourceManager.GetString("StorageStatus", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Get2TBOfStorageNowAndGet40OffOffersEndsSoon {
+            get {
+                return ResourceManager.GetString("Get2TBOfStorageNowAndGet40OffOffersEndsSoon", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string LearnMore {
+            get {
+                return ResourceManager.GetString("LearnMore", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string RecentlyAccessedFiles {
+            get {
+                return ResourceManager.GetString("RecentlyAccessedFiles", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string ViewDetails {
+            get {
+                return ResourceManager.GetString("ViewDetails", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string MarkAsImportant {
+            get {
+                return ResourceManager.GetString("MarkAsImportant", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Share {
+            get {
+                return ResourceManager.GetString("Share", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Download {
+            get {
+                return ResourceManager.GetString("Download", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string CopyTo {
+            get {
+                return ResourceManager.GetString("CopyTo", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string MoveTo {
+            get {
+                return ResourceManager.GetString("MoveTo", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Rename {
+            get {
+                return ResourceManager.GetString("Rename", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string LastAccess {
+            get {
+                return ResourceManager.GetString("LastAccess", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string HoursAgo {
+            get {
+                return ResourceManager.GetString("HoursAgo", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Folders {
+            get {
+                return ResourceManager.GetString("Folders", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Downloads {
+            get {
+                return ResourceManager.GetString("Downloads", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string PersonalStuff {
+            get {
+                return ResourceManager.GetString("PersonalStuff", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string TriDObjects {
+            get {
+                return ResourceManager.GetString("TriDObjects", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Recordings {
+            get {
+                return ResourceManager.GetString("Recordings", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Support {
+            get {
+                return ResourceManager.GetString("Support", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string CloudFiles {
+            get {
+                return ResourceManager.GetString("CloudFiles", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string LastModified {
+            get {
+                return ResourceManager.GetString("LastModified", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string FileSize {
+            get {
+                return ResourceManager.GetString("FileSize", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string DashboardConcepts {
+            get {
+                return ResourceManager.GetString("DashboardConcepts", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Gallery {
+            get {
+                return ResourceManager.GetString("Gallery", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        public static string Receipts {
+            get {
+                return ResourceManager.GetString("Receipts", resourceCulture);
+            }
+        }
     }
 }

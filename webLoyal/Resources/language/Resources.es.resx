@@ -116,8 +116,7 @@
     <value>Crear Proveedor</value>
   </data>
   <data name="ProviderCode" xml:space="preserve">
-    <value>Código del Proveedor
-</value>
+    <value>Código del Proveedor</value>
   </data>
   <data name="BusinessName" xml:space="preserve">
     <value>Razón Social</value>
@@ -349,7 +348,7 @@
   </data>
   <data name="DescriptionCountry" xml:space="preserve">
     <value>Descripción del País</value>
-    </data>
+  </data>
   <data name="ClaimId" xml:space="preserve">
     <value>Codigo de Reclamo</value>
   </data>
@@ -509,7 +508,7 @@
   <data name="StorageStatus" xml:space="preserve">
     <value>Estado de Almacenamiento</value>
   </data>
-  <data name="Get2TB(2,000GB)OfStorageNowAndGet40%OffOffersEndsSoon" xml:space="preserve">
+  <data name="Get2TBOfStorageNowAndGet40OffOffersEndsSoon" xml:space="preserve">
     <value>Obtenga 2 TB (2000 GB) de almacenamiento ahora y obtenga un 40 % de descuento. Las ofertas terminan pronto</value>
   </data>
   <data name="LearnMore" xml:space="preserve">
@@ -557,7 +556,7 @@
   <data name="PersonalStuff" xml:space="preserve">
     <value>Cosas personales</value>
   </data>
-  <data name="3DObjects" xml:space="preserve">
+  <data name="TriDObjects" xml:space="preserve">
     <value>Objetos 3D</value>
   </data>
   <data name="Recordings" xml:space="preserve">
