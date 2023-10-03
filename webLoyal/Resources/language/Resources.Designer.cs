@@ -1609,5 +1609,110 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("SendRequest", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Campaigns.
+        /// </summary>
+        public static string Campaigns {
+            get {
+                return ResourceManager.GetString("Campaigns", resourceCulture);
+            }
+        
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to UpdateData.
+        /// </summary>
+        public static string UpdateData {
+            get {
+                return ResourceManager.GetString("UpdateData", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to CreateNewCampaign.
+        /// </summary>
+        public static string CreateNewCampaign {
+            get {
+                return ResourceManager.GetString("CreateNewCampaign", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to AnnualPaymentForm.
+        /// </summary>
+        public static string AnnualPaymentForm {
+            get {
+                return ResourceManager.GetString("AnnualPaymentForm", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to SemiannualPaymentForm.
+        /// </summary>
+        public static string SemiannualPaymentForm {
+            get {
+                return ResourceManager.GetString("SemiannualPaymentForm", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to QuarterlyPaymentMethod.
+        /// </summary>
+        public static string QuarterlyPaymentMethod {
+            get {
+                return ResourceManager.GetString("QuarterlyPaymentMethod", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to MonthlyPaymentMethod.
+        /// </summary>
+        public static string MonthlyPaymentMethod {
+            get {
+                return ResourceManager.GetString("MonthlyPaymentMethod", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Bonus.
+        /// </summary>
+        public static string Bonus {
+            get {
+                return ResourceManager.GetString("Bonus", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Representation.
+        /// </summary>
+        public static string Representation {
+            get {
+                return ResourceManager.GetString("Representation", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Policies.
+        /// </summary>
+        public static string Policies {
+            get {
+                return ResourceManager.GetString("Policies", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Criteria.
+        /// </summary>
+        public static string Criteria {
+            get {
+                return ResourceManager.GetString("Criteria", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to TopAgents.
+        /// </summary>
+        public static string TopAgents {
+            get {
+                return ResourceManager.GetString("TopAgents", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Campaign.
+        /// </summary>
+        public static string Campaign {
+            get {
+                return ResourceManager.GetString("Campaign", resourceCulture);
+            }
+        }
     }
 }

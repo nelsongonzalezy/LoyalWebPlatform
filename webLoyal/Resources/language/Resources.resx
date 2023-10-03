@@ -648,4 +648,43 @@
   <data name="SendRequest" xml:space="preserve">
     <value>Send Request</value>
   </data>
+  <data name="Campaigns" xml:space="preserve">
+    <value>Campaigns</value>
+  </data>
+  <data name="UpdateData" xml:space="preserve">
+    <value>Update Data</value>
+  </data>
+  <data name="CreateNewCampaign" xml:space="preserve">
+    <value>Create New Campaign</value>
+  </data>
+  <data name="AnnualPaymentForm" xml:space="preserve">
+    <value>Annual Payment Form</value>
+  </data>
+  <data name="SemiannualPaymentForm" xml:space="preserve">
+    <value>Semiannual Payment Form</value>
+  </data>
+  <data name="QuarterlyPaymentMethod" xml:space="preserve">
+    <value>Quarterly Payment Method</value>
+  </data>
+  <data name="MonthlyPaymentMethod" xml:space="preserve">
+    <value>Monthly Payment Method</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+    <value>Bonus</value>
+  </data>
+  <data name="Representation" xml:space="preserve">
+    <value>Representation</value>
+  </data>
+  <data name="Policies" xml:space="preserve">
+    <value>Policies</value>
+  </data>
+  <data name="Criteria" xml:space="preserve">
+    <value>Criteria</value>
+  </data>
+  <data name="TopAgents" xml:space="preserve">
+    <value>Top Agents</value>
+  </data>
+  <data name="Campaign" xml:space="preserve">
+    <value>Campaign</value>
+  </data>
 </root>

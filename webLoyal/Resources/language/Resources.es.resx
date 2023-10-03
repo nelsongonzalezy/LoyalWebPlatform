@@ -583,4 +583,43 @@
   <data name="SendRequest" xml:space="preserve">
     <value>Enviar Petición</value>
   </data>
+  <data name="Campaigns" xml:space="preserve">
+    <value>Campañas</value>
+  </data>
+  <data name="UpdateData" xml:space="preserve">
+    <value>Actualizar Datos</value>
+  </data>
+  <data name="CreateNewCampaign" xml:space="preserve">
+    <value>Crear Nueva Campaña</value>
+  </data>
+  <data name="AnnualPaymentForm" xml:space="preserve">
+    <value>Forma De Pago Anual</value>
+  </data>
+  <data name="SemiannualPaymentForm" xml:space="preserve">
+    <value>Forma De Pago Semestral</value>
+  </data>
+  <data name="QuarterlyPaymentMethod" xml:space="preserve">
+    <value>Forma De Pago Trimestra</value>
+  </data>
+  <data name="MonthlyPaymentMethod" xml:space="preserve">
+    <value>Forma De Pago Mensual</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+    <value>Prima</value>
+  </data>
+  <data name="Representation" xml:space="preserve">
+    <value>Representación</value>
+  </data>
+  <data name="Policies" xml:space="preserve">
+    <value>Pólizas</value>
+  </data>
+  <data name="Criteria" xml:space="preserve">
+    <value>Criterios</value>
+  </data>
+  <data name="TopAgents" xml:space="preserve">
+    <value>Top de Agentes</value>
+  </data>
+  <data name="Campaign" xml:space="preserve">
+    <value>Campaña</value>
+  </data>
 </root>

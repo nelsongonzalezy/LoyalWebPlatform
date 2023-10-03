@@ -4,10 +4,10 @@
     <div>
         <ol class="breadcrumb fs-sm mb-1">
             <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
-            <li class="breadcrumb-item active"><a href="~/campaign/index">Campañas</a></li>
+            <li class="breadcrumb-item active"><a href="~/campaign/index">@webLoyal.Resources.language.Resources.Campaign</a></li>
 
         </ol>
-        <h4 class="main-title mb-0">Campañas @Model.DtCampanas.DescripcionCampana</h4>
+        <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Campaigns @Model.DtCampanas.DescripcionCampana</h4>
     </div>
     <div class="d-flex gap-2 mt-3 mt-md-0 align-items-end">
         <div class="col-6">
@@ -20,8 +20,8 @@
         
     </div>
     <div class="d-flex gap-2 mt-3 mt-md-0">
-        <button id="enviarDatos" class="btn btn-primary d-flex align-items-center gap-2">Actualizar Datos</button>
-        <a href="~/home/InConstruction" type="button" class="btn btn-primary d-flex align-items-center gap-2"><span class="d-none d-sm-inline">Crear Nueva Campaña</span></a>
+        <button id="enviarDatos" class="btn btn-primary d-flex align-items-center gap-2">@webLoyal.Resources.language.Resources.UpdateData</button>
+        <a href="~/home/InConstruction" type="button" class="btn btn-primary d-flex align-items-center gap-2"><span class="d-none d-sm-inline">@webLoyal.Resources.language.Resources.CreateNewCampaign</span></a>
     </div>
 </div>
 
@@ -42,7 +42,7 @@
                             <input id="FormaAnual" class="form-check-input" type="checkbox" role="switch">
 
                         }
-                        <label class="form-check-label" for="FormaAnual">Forma de pago Anual </label>
+                        <label class="form-check-label" for="FormaAnual">@webLoyal.Resources.language.Resources.AnnualPaymentForm </label>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
 
                         }
                        
-                        <label class="form-check-label" for="FormaSemestral">Forma de pago Semestral </label>
+                        <label class="form-check-label" for="FormaSemestral">@webLoyal.Resources.language.Resources.SemiannualPaymentForm</label>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
 
                         }
                        
-                        <label class="form-check-label" for="FormaTrimestral">Forma de pago Trimestral </label>
+                        <label class="form-check-label" for="FormaTrimestral">@webLoyal.Resources.language.Resources.QuarterlyPaymentMethod</label>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
 
                         }
                        
-                        <label class="form-check-label" for="FormaMensual">Forma de pago Mensual </label>
+                        <label class="form-check-label" for="FormaMensual">@webLoyal.Resources.language.Resources.MonthlyPaymentMethod</label>
                     </div>
                 </div>
             </div>
@@ -137,8 +137,8 @@
                     </div>
                     <div class="media-body">
                         <h5><a href="" class="text-white">@producto.DescripcionPoliza</a></h5>
-                        <h6 class="card-value text-white">Prima: @producto.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
-                        <h6 class="card-value text-white">Polizas: @producto.CantidadRegistros</h6>
+                        <h6 class="card-value text-white">@webLoyal.Resources.language.Resources.Bonus: @producto.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
+                        <h6 class="card-value text-white">@webLoyal.Resources.language.Resources.Policies: @producto.CantidadRegistros</h6>
                         <h6 class="d-block fs-xs text-success">
                         <span class="badge badge-pill bg-light">@producto.PorcentajeCantidadRegistros.ToString("P2")</span>
                         </h6>
@@ -196,14 +196,14 @@
                 <div class="card-header"><h5 class="card-title mb-1">@estados.DescripcionEstadoCertificado</h5></div>
                 <div class="card-body">
                     
-                    <h6 class="card-value mb-1">Prima @estados.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
-                    <h6 class="card-value mb-1">Polizas @estados.CantidadRegistros</h6>
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Bonus @estados.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Policies @estados.CantidadRegistros</h6>
                     <h6 class="card-value mb-1">C.ADM @estados.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
                    
 
                 </div><!-- card-body -->
                 <div class="card-footer">
-                    <h6 class="card-value mb-1">Representacion:&nbsp<span class="d-block fs-xs text-success">@estados.PorcentajeCantidadRegistros.ToString("P2")</span></h6>
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Representation:&nbsp<span class="d-block fs-xs text-success">@estados.PorcentajeCantidadRegistros.ToString("P2")</span></h6>
                 </div>
             </div><!-- card-one -->
         </div>
@@ -215,9 +215,9 @@
 <br />
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Polizas</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Top Agentes</button>
-    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Criterios</button>
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">@webLoyal.Resources.language.Resources.Policies</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">@webLoyal.Resources.language.Resources.TopAgents</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">@webLoyal.Resources.language.Resources.Criteria</button>
   </div>
 </nav>
 
