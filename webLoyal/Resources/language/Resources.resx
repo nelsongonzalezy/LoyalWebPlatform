@@ -645,4 +645,7 @@
   <data name="Receipts" xml:space="preserve">
     <value>Receipts</value>
   </data>
+  <data name="SendRequest" xml:space="preserve">
+    <value>Send Request</value>
+  </data>
 </root>

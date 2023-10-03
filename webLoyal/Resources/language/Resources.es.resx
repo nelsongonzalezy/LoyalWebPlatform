@@ -580,4 +580,7 @@
   <data name="Receipts" xml:space="preserve">
     <value>Recibos</value>
   </data>
+  <data name="SendRequest" xml:space="preserve">
+    <value>Enviar Petición</value>
+  </data>
 </root>

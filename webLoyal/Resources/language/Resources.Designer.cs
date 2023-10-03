@@ -1601,5 +1601,13 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("Receipts", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to SendRequest.
+        /// </summary>
+        public static string SendRequest {
+            get {
+                return ResourceManager.GetString("SendRequest", resourceCulture);
+            }
+        }
     }
 }
