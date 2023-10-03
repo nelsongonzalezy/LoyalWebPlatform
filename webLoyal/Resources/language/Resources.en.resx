@@ -469,9 +469,6 @@
   <data name="PasswordTwo" xml:space="preserve">
     <value>Password Two</value>
   </data>
-  <data name="ForgotPassword?" xml:space="preserve">
-    <value>Forgot Password?</value>
-  </data>
   <data name="New" xml:space="preserve">
     <value>New</value>
   </data>

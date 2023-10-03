@@ -1266,7 +1266,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Country.
         /// </summary>
         public static string Country {
             get {
@@ -1274,7 +1274,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Province.
         /// </summary>
         public static string Province {
             get {
@@ -1282,7 +1282,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to EnterTheCodeSentToYourMobileDevice.
         /// </summary>
         public static string EnterTheCodeSentToYourMobileDevice {
             get {
@@ -1290,7 +1290,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to PasswordOne.
         /// </summary>
         public static string PasswordOne {
             get {
@@ -1298,7 +1298,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to PasswordTwo.
         /// </summary>
         public static string PasswordTwo {
             get {
@@ -1306,15 +1306,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
-        /// </summary>
-        public static string ForgotPassword {
-            get {
-                return ResourceManager.GetString("ForgotPassword", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to New.
         /// </summary>
         public static string New {
             get {
@@ -1322,7 +1314,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to AllFiles.
         /// </summary>
         public static string AllFiles {
             get {
@@ -1330,7 +1322,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to MyDevices.
         /// </summary>
         public static string MyDevices {
             get {
@@ -1338,7 +1330,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Recents.
         /// </summary>
         public static string Recents {
             get {
@@ -1346,7 +1338,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Important.
         /// </summary>
         public static string Important {
             get {
@@ -1354,7 +1346,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to DeletedFiles.
         /// </summary>
         public static string DeletedFiles {
             get {
@@ -1362,7 +1354,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Documents.
         /// </summary>
         public static string Documents {
             get {
@@ -1370,7 +1362,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Images.
         /// </summary>
         public static string Images {
             get {
@@ -1378,7 +1370,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Videos.
         /// </summary>
         public static string Videos {
             get {
@@ -1386,7 +1378,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Audio.
         /// </summary>
         public static string Audio {
             get {
@@ -1394,7 +1386,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to ZipFiles.
         /// </summary>
         public static string ZipFiles {
             get {
@@ -1402,7 +1394,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to StorageStatus.
         /// </summary>
         public static string StorageStatus {
             get {
@@ -1410,7 +1402,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Get2TBOfStorageNowAndGet40OffOffersEndsSoon.
         /// </summary>
         public static string Get2TBOfStorageNowAndGet40OffOffersEndsSoon {
             get {
@@ -1418,7 +1410,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to LearnMore.
         /// </summary>
         public static string LearnMore {
             get {
@@ -1426,7 +1418,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to RecentlyAccessedFiles.
         /// </summary>
         public static string RecentlyAccessedFiles {
             get {
@@ -1434,7 +1426,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to ViewDetails.
         /// </summary>
         public static string ViewDetails {
             get {
@@ -1442,7 +1434,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to MarkAsImportant.
         /// </summary>
         public static string MarkAsImportant {
             get {
@@ -1450,7 +1442,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Share.
         /// </summary>
         public static string Share {
             get {
@@ -1458,7 +1450,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Download.
         /// </summary>
         public static string Download {
             get {
@@ -1466,7 +1458,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to CopyTo.
         /// </summary>
         public static string CopyTo {
             get {
@@ -1474,7 +1466,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to MoveTo.
         /// </summary>
         public static string MoveTo {
             get {
@@ -1482,7 +1474,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Rename.
         /// </summary>
         public static string Rename {
             get {
@@ -1490,7 +1482,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string Delete {
             get {
@@ -1498,7 +1490,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to LastAccess.
         /// </summary>
         public static string LastAccess {
             get {
@@ -1506,7 +1498,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to HoursAgo.
         /// </summary>
         public static string HoursAgo {
             get {
@@ -1514,7 +1506,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Folders.
         /// </summary>
         public static string Folders {
             get {
@@ -1522,7 +1514,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Downloads.
         /// </summary>
         public static string Downloads {
             get {
@@ -1530,7 +1522,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to PersonalStuff.
         /// </summary>
         public static string PersonalStuff {
             get {
@@ -1538,7 +1530,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to TriDObjects.
         /// </summary>
         public static string TriDObjects {
             get {
@@ -1546,7 +1538,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Recordings.
         /// </summary>
         public static string Recordings {
             get {
@@ -1554,7 +1546,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Support.
         /// </summary>
         public static string Support {
             get {
@@ -1562,7 +1554,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to CloudFiles.
         /// </summary>
         public static string CloudFiles {
             get {
@@ -1570,7 +1562,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to LastModified.
         /// </summary>
         public static string LastModified {
             get {
@@ -1578,7 +1570,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to FileSize.
         /// </summary>
         public static string FileSize {
             get {
@@ -1586,7 +1578,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to DashboardConcepts.
         /// </summary>
         public static string DashboardConcepts {
             get {
@@ -1594,7 +1586,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Gallery.
         /// </summary>
         public static string Gallery {
             get {
@@ -1602,7 +1594,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to Receipts.
         /// </summary>
         public static string Receipts {
             get {

@@ -469,9 +469,6 @@
   <data name="PasswordTwo" xml:space="preserve">
     <value>Contraseña Secundaria</value>
   </data>
-  <data name="ForgotPassword?" xml:space="preserve">
-    <value>¿Has olvidado tu contraseña?</value>
-  </data>
   <data name="New" xml:space="preserve">
     <value>Nuevo</value>
   </data>
