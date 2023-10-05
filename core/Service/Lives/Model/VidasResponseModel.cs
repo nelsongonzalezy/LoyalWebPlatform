@@ -5,6 +5,7 @@
         public IEnumerable<ListaPersonasModel> ListaPersonas { get; set; }
         public IEnumerable<CifrasPersonasModel> CifrasPersonas { get; set; }
         public IEnumerable<CifrasVidasPorRangoModel> CifrasPorRangos { get; set; }
+        public IEnumerable<CifrasVidasPorProductoModel> CifrasPorProducto { get; set; }
 
     }
     public class ResponseVidasResponseModel

@@ -16,7 +16,11 @@ namespace webLoyal.Controllers
         [Route("/campaign/index")]
         public async Task<IActionResult> Index(int CodigoCampana, bool FormaAnual, bool FormaSemestral, bool FormaTrimestral, bool FormaMensual, DateTime FechaInicio, DateTime FechaFin)
         {
-            var model = new CampanaRequestModel { CodigoCampana= CodigoCampana, FechaFin=DateTime.Today, FechaInicio=DateTime.Today, FormaAnual= FormaAnual, FormaMensual= FormaMensual, FormaSemestral= FormaSemestral, FormaTrimestral= FormaTrimestral };
+
+            //FechaFin = FechaFin==null? DateTime.Now: FechaFin;
+            //FechaInicio = FechaInicio == null? DateTime.Now: FechaInicio;
+
+            var model = new CampanaRequestModel { CodigoCampana= CodigoCampana, FechaFin= DateTime.Now, FechaInicio= DateTime.Now, FormaAnual= FormaAnual, FormaMensual= FormaMensual, FormaSemestral= FormaSemestral, FormaTrimestral= FormaTrimestral };
             var x = await _campain.GetCampana(model);
             foreach (var item in x.DtDetalleCampanas) 
             {
@@ -25,8 +29,11 @@ namespace webLoyal.Controllers
                 item.FormaSemestral = FormaSemestral;
                 item.FormaTrimestral = FormaTrimestral;
                 item.FormaMensual = FormaMensual;
+               
 
             };
+            x.DtCampanas.FechaFin = FechaFin;
+            x.DtCampanas.FechaInicio = FechaInicio;
             return View(x);
         }
         //[HttpGet]

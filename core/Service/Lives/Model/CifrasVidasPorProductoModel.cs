@@ -1,8 +1,7 @@
 ﻿namespace core.Service
 {
-    public class CifrasVidasPorRangoModel
+    public class CifrasVidasPorProductoModel
     {
-        public string? GrupoEdad { get; set; }
         public int CodigoPoliza { get; set; }
         public string? DescripcionPoliza { get; set; }
         public int TotalPersonas { get; set; }

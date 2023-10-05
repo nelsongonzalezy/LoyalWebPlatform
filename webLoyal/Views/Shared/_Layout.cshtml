@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string imagenBase64 = @Context.Session.GetString("UsuarioImagen");
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -41,10 +44,10 @@
             <div class="sidebar-footer">
                 <div class="sidebar-footer-top">
                     <div class="sidebar-footer-thumb">
-                        <img src="~/assets/img/user_1077114.png" alt="">
+                        <img src="data:image/png;base64,@imagenBase64" />
                     </div><!-- sidebar-footer-thumb -->
                     <div class="sidebar-footer-body">
-                        <h6><div href="">@Context.Session.GetString("DireccionEmail")</div></h6>
+                        <h6><div href="">@Context.Session.GetString("NombreCompletoUsuario")</div></h6>
                         <p>@Context.Session.GetString("NombrePerfil")</p>
                     </div><!-- sidebar-footer-body -->
                     <a id="sidebarFooterMenu" href="" class="dropdown-link"><i class="ri-arrow-down-s-line"></i></a>

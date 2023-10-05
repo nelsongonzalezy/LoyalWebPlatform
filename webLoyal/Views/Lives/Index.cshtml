@@ -18,6 +18,68 @@
             @await Component.InvokeAsync("PoliciesLivesList")
               
     </div>
+    <div class="col-xl-12">
+
+        <div class="row">
+            @foreach (var producto in Model.CifrasPorProducto.OrderBy(x => x.CodigoPoliza))
+            {
+                <div class="col-3 col-xl-3">
+                    @if (producto.CodigoPoliza > 0)
+                    {
+                        var estilo = string.Empty;
+                        switch (producto.CodigoPoliza)
+                        {
+                            case 1:
+                                estilo = "background-color:rgb(60,95,138)";
+                                break;
+                            case 2:
+                                estilo = "background-color:rgb(141,195,65)";
+                                break;
+                            case 3:
+                                estilo = "background-color:rgb(48,182,181)";
+                                break;
+                            case 4:
+                                estilo = "background-color:rgb(132,26,102)";
+                                break;
+                        }
+
+
+                        <div class="music-player mt-4 mt-xxl-5" style="@estilo">
+                            <div class="media-music">
+                                @switch (producto.CodigoPoliza)
+                                {
+                                    case 1:
+                                        <a href="background-color:rgb(60,95,138)" class="media-img"><img src="~/assets/img/beyond.png" alt=""></a>
+                                        break;
+                                    case 2:
+                                        <a href="background-color:rgb(141,195,65)" class="media-img"><img src="~/assets/img/privilege.png" alt=""></a>
+                                        break;
+                                    case 3:
+                                        <a href="background-color:rgb(48,182,181)" class="media-img"><img src="~/assets/img/liberty.png" alt=""></a>
+                                        break;
+                                    case 4:
+                                        <a href="background-color:rgb(132,26,102)" class="media-img"><img src="~/assets/img/legacy.png" alt=""></a>
+                                        break;
+
+                                }
+
+                            </div>
+                            <div class="media-body">
+                                <h5><a href="" class="text-white">@producto.DescripcionPoliza</a></h5>
+                                <h6 class="card-value text-white">Vidas: @producto.TotalPersonas</h6>
+                                <h6 class="d-block fs-xs text-success">
+                                    <span class="badge badge-pill bg-light">@producto.PorcentajeGrupoEdadSobreTotal.ToString("P2")</span>
+                                </h6>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+
+
+        </div>
+
+    </div>
 
     <div class="col-xl-12">
         <div class="card">
@@ -146,44 +208,212 @@
         document.addEventListener("DOMContentLoaded", function () {
             // Obtener los datos del modelo y deserializarlos correctamente
             var data = JSON.parse('@Html.Raw(Json.Serialize(Model.CifrasPorRangos))');
-            //debugger;
-            // Preparar los datos para el gráfico
-            var seriesData = data.map(item => item.porcentajeGrupoEdadSobreTotal.toFixed(2)); // Redondear a 2 decimales
-            var labels = data.map(item => `${item.grupoEdad}\ Vidas: ${item.totalPersonas}`);
+
+            // Crear un objeto para almacenar los datos agrupados
+            var groupedData = {};
+
+            // Iterar sobre los datos y agrupar por descripcionPoliza y grupoEdad
+            data.forEach(function (item) {
+                var grupoEdad = item.grupoEdad;
+                var descripcionPoliza = item.descripcionPoliza;
+                var porcentaje = item.porcentajeGrupoEdadSobreTotal.toFixed(2);
+
+                if (!groupedData[descripcionPoliza]) {
+                    groupedData[descripcionPoliza] = {
+                        name: descripcionPoliza,
+                        data: {}
+                    };
+                }
+
+                groupedData[descripcionPoliza].data[grupoEdad] = porcentaje;
+            });
+
+            // Convertir el objeto a un array de series
+            var seriesData = Object.values(groupedData);
+
+            // Obtener la lista de grupos de edad
+            var gruposEdad = Object.keys(data.reduce(function (acc, item) {
+                acc[item.grupoEdad] = true;
+                return acc;
+            }, {}));
 
             // Configurar el gráfico
             var options = {
                 chart: {
-                    type: 'bar',
                     height: 350,
-                },
-                plotOptions: {
-                    bar: {
-                        dataLabels: {
-                            position: 'top', // Colocar etiquetas arriba de las barras
-                        },
-                    }
+                    type: "bar",
                 },
                 dataLabels: {
-                    formatter: function (val) {
-                        return `${val}%`; // Personalizar el formato de las etiquetas
-                    },
+                    enabled: true
                 },
-                series: [{
-                    name: 'Porcentaje',
-                    data: seriesData
-                }],
+                colors: ['#3C5F8A', '#8DC341', '#30B6B5', '#841A66'],
+                series: seriesData.map(function (item) {
+                    return {
+                        name: item.name,
+                        data: gruposEdad.map(function (grupoEdad) {
+                            return item.data[grupoEdad] || 0;
+                        })
+                    };
+                }),
                 xaxis: {
-                    categories: labels,
+                    categories: gruposEdad,
+                },
+                yaxis: {
+                    axisTicks: {
+                        show: true
+                    },
+                    axisBorder: {
+                        show: true,
+                    },
+                    title: {
+                        text: "Porcentaje"
+                    }
+                },
+                tooltip: {
+                    shared: false,
+                    intersect: true,
+                    x: {
+                        show: false
+                    }
+                },
+                legend: {
+                    horizontalAlign: "left",
+                    offsetX: 40
                 }
             };
 
-            // Crear el gráfico
             var chart = new ApexCharts(document.querySelector("#chartejemplos"), options);
-
-            // Renderizar el gráfico
             chart.render();
         });
+
+
+        //document.addEventListener("DOMContentLoaded", function () {
+        //    // Obtener los datos del modelo y deserializarlos correctamente
+        //    var data = JSON.parse('@Html.Raw(Json.Serialize(Model.CifrasPorRangos))');
+
+        //    // Crear un objeto para almacenar los datos agrupados
+        //    var groupedData = {};
+
+        //    // Iterar sobre los datos y agrupar por descripcionPoliza y grupoEdad
+        //    data.forEach(function (item) {
+        //        var grupoEdad = item.grupoEdad;
+        //        var descripcionPoliza = item.descripcionPoliza;
+        //        var porcentaje = item.porcentajeGrupoEdadSobreTotal.toFixed(2);
+
+        //        if (!groupedData[descripcionPoliza]) {
+        //            groupedData[descripcionPoliza] = {
+        //                name: descripcionPoliza,
+        //                data: {}
+        //            };
+        //        }
+
+        //        groupedData[descripcionPoliza].data[grupoEdad] = porcentaje;
+        //    });
+
+        //    // Convertir el objeto a un array de series
+        //    var seriesData = Object.values(groupedData);
+
+        //    // Obtener la lista de grupos de edad
+        //    var gruposEdad = Object.keys(data.reduce(function (acc, item) {
+        //        acc[item.grupoEdad] = true;
+        //        return acc;
+        //    }, {}));
+
+        //    // Configurar el gráfico
+        //    var options = {
+        //        chart: {
+        //            height: 350,
+        //            type: "bar",
+
+        //        },
+        //        dataLabels: {
+        //            enabled: true
+        //        },
+        //        colors: ['#3C5F8A', '#8DC341', '#30B6B5','#841A66'],
+        //        series: seriesData.map(function (item) {
+        //            return {
+        //                name: item.name,
+        //                data: gruposEdad.map(function (grupoEdad) {
+        //                    return item.data[grupoEdad] || 0;
+        //                })
+        //            };
+        //        }),
+        //        xaxis: {
+        //            categories: gruposEdad,
+        //        },
+        //        yaxis: {
+        //            axisTicks: {
+        //                show: true
+        //            },
+        //            axisBorder: {
+        //                show: true,
+        //            },
+        //            title: {
+        //                text: "Porcentaje"
+        //            }
+        //        },
+        //        tooltip: {
+        //            shared: false,
+        //            intersect: true,
+        //            x: {
+        //                show: false
+        //            }
+        //        },
+        //        legend: {
+        //            horizontalAlign: "left",
+        //            offsetX: 40
+        //        }
+        //    };
+
+        //    var chart = new ApexCharts(document.querySelector("#chartejemplos"), options);
+        //    chart.render();
+        //});
+
+
+
+
+        //document.addEventListener("DOMContentLoaded", function () {
+        //    // Obtener los datos del modelo y deserializarlos correctamente
+        //    var data = JSON.parse('@Html.Raw(Json.Serialize(Model.CifrasPorRangos))');
+        //    //debugger;
+        //    // Preparar los datos para el gráfico
+        //    var seriesData = data.map(item => item.porcentajeGrupoEdadSobreTotal.toFixed(2)); // Redondear a 2 decimales
+        //    var labels = data.map(item => `${item.grupoEdad}\ Vidas: ${item.totalPersonas}`);
+
+        //    // Configurar el gráfico
+        //    var options = {
+        //        chart: {
+        //            type: 'bar',
+        //            height: 350,
+        //            stacked: true
+        //        },
+        //        plotOptions: {
+        //            bar: {
+        //                dataLabels: {
+        //                    position: 'top', // Colocar etiquetas arriba de las barras
+        //                },
+        //            }
+        //        },
+        //        dataLabels: {
+        //            formatter: function (val) {
+        //                return `${val}%`; // Personalizar el formato de las etiquetas
+        //            },
+        //        },
+        //        series: [{
+        //            name: 'Porcentaje',
+        //            data: seriesData
+        //        }],
+        //        xaxis: {
+        //            categories: labels,
+        //        }
+        //    };
+
+        //    // Crear el gráfico
+        //    var chart = new ApexCharts(document.querySelector("#chartejemplos"), options);
+
+        //    // Renderizar el gráfico
+        //    chart.render();
+        //});
 
 
         $("table").DataTable({

@@ -41,6 +41,7 @@ namespace webLoyal.Controllers
                     var ActiveSession = await _loginS.Login(model);
                     if (ActiveSession != null)
                     {
+                        string imagenBase64 = ActiveSession.Content.User.UsuarioImagen!=null? Convert.ToBase64String(ActiveSession.Content.User.UsuarioImagen):string.Empty;
                         HttpContext.Session.SetString(nameof(model.UserName), model.UserName);
                         HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoUsuario), "1");
                         HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorValidacion), ActiveSession.Content.User.IndicadorValidacion.ToString());
@@ -52,6 +53,7 @@ namespace webLoyal.Controllers
                         HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorCambioPassword), ActiveSession.Content.User.IndicadorCambioPassword.ToString());
                         HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorVistaAgentes), ActiveSession.Content.User.IndicadorVistaAgentes.ToString());
                         HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoEstadoUsuario), ActiveSession.Content.User.CodigoEstadoUsuario.ToString());
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.UsuarioImagen), imagenBase64?? string.Empty);
                         HttpContext.Session.SetString(nameof(ActiveSession.Content.Token), ActiveSession.Content.Token);
                         
                         return Json(new

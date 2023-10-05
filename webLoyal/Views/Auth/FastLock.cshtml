@@ -3,13 +3,17 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_LockScreen.cshtml";
+    string imagenBase64 = @Context.Session.GetString("UsuarioImagen");
 }
 <div class="card-body">
     <form id="@nameof(AuthController.FastSingin)" asp-action="@nameof(AuthController.FastSingin)" asp-controller="Auth" method="post">
 
 
 
-        <a href="" class="card-thumb"><img src="~/assets/img/user_1077114.png" alt=""></a>
+        <a href="" class="card-thumb">
+          @*  <img src="~/assets/img/user_1077114.png" alt="">*@
+            <img src="data:image/png;base64,@imagenBase64" />
+        </a>
         <h5 class="card-title text-center">@Context.Session.GetString("NombreCompletoUsuario")</h5>
     <div class="mb-4">
             <label class="form-label d-flex justify-content-between">@webLoyal.Resources.language.Resources.PassWord <a href="~/auth/recover" method="get">@webLoyal.Resources.language.Resources.ForgotPassword</a></label>
