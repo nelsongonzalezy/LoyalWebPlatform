@@ -687,4 +687,100 @@
   <data name="Campaign" xml:space="preserve">
     <value>Campaign</value>
   </data>
+  <data name="RequestCode" xml:space="preserve">
+    <value>Request Code</value>
+  </data>
+  <data name="OwnerCode" xml:space="preserve">
+    <value>Owner Code</value>
+  </data>
+  <data name="NumberInsured" xml:space="preserve">
+    <value>Number Insured</value>
+  </data>
+  <data name="DescriptionPolicy" xml:space="preserve">
+    <value>Description Policy</value>
+  </data>
+  <data name="DeductiblesText" xml:space="preserve">
+    <value>Deductibles Text</value>
+  </data>
+  <data name="DateEffectiveness" xml:space="preserve">
+    <value>Date Effectiveness</value>
+  </data>
+  <data name="DescriptionFormPayment" xml:space="preserve">
+    <value>Description FormPayment</value>
+  </data>
+  <data name="DateCollection" xml:space="preserve">
+    <value>Date Collection</value>
+  </data>
+  <data name="AdministrativeCost" xml:space="preserve">
+    <value>Administrative Cost</value>
+  </data>
+  <data name="CommissionablePremium" xml:space="preserve">
+    <value>Commissionable Premium</value>
+  </data>
+  <data name="QuotaValue" xml:space="preserve">
+    <value>Quota Value</value>
+  </data>
+  <data name="ValueInterest" xml:space="preserve">
+    <value>Value Interest</value>
+  </data>
+  <data name="Restrictions" xml:space="preserve">
+    <value>Restrictions</value>
+  </data>
+  <data name="DescriptionStateCertificate" xml:space="preserve">
+    <value>Description State Certificate</value>
+  </data>
+  <data name="DescriptionReasonCancellation" xml:space="preserve">
+    <value>Description Reason Cancellation</value>
+  </data>
+  <data name="DescriptionTypeSale" xml:space="preserve">
+    <value>Description Type Sale</value>
+  </data>
+  <data name="AutomaticPayment" xml:space="preserve">
+    <value>Automatic Payment</value>
+  </data>
+  <data name="AccidentRate" xml:space="preserve">
+    <value>Accident Rate</value>
+  </data>
+  <data name="PolicyGroup" xml:space="preserve">
+    <value>Policy Group</value>
+  </data>
+  <data name="PolicyDependent" xml:space="preserve">
+    <value>Policy Dependent</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="CodeAgentSale" xml:space="preserve">
+    <value>Code Agent Sale</value>
+  </data>
+  <data name="NameAgentSale" xml:space="preserve">
+    <value>Name Agent Sale</value>
+  </data>
+  <data name="NameSubAgent" xml:space="preserve">
+    <value>Name SubAgent</value>
+  </data>
+  <data name="SubAgentCode" xml:space="preserve">
+    <value>SubAgent Code</value>
+  </data>
+  <data name="AgentCode" xml:space="preserve">
+    <value>Agent Code</value>
+  </data>
+  <data name="AgencyName" xml:space="preserve">
+    <value>Agency Name</value>
+  </data>
+  <data name="AgencyCode" xml:space="preserve">
+    <value>Agency Code</value>
+  </data>
+  <data name="CodeStateQuota" xml:space="preserve">
+    <value>Code State Quota</value>
+  </data>
+  <data name="CertificateStateCode" xml:space="preserve">
+    <value>CertificateStateCode</value>
+  </data>
+  <data name="PayDay" xml:space="preserve">
+    <value>Pay Day</value>
+  </data>
+  <data name="CodeMGA." xml:space="preserve">
+    <value>CodeMGA.</value>
+  </data>
 </root>

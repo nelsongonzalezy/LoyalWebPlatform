@@ -287,7 +287,7 @@
     <value>Tipo de Documento</value>
   </data>
   <data name="CertificateCode" xml:space="preserve">
-    <value>Codigo de Certificado</value>
+    <value>Código de Certificado</value>
   </data>
   <data name="ActiveCertificates" xml:space="preserve">
     <value>Certificados Activos</value>
@@ -350,7 +350,7 @@
     <value>Descripción del País</value>
   </data>
   <data name="ClaimId" xml:space="preserve">
-    <value>Codigo de Reclamo</value>
+    <value>Código de Reclamo</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Confirmar Contraseña</value>
@@ -621,5 +621,104 @@
   </data>
   <data name="Campaign" xml:space="preserve">
     <value>Campaña</value>
+  </data>
+  <data name="RequestCode" xml:space="preserve">
+    <value>Código de Solicitud</value>
+  </data>
+  <data name="OwnerCode" xml:space="preserve">
+    <value>Código de Titular</value>
+  </data>
+  <data name="OwnerName" xml:space="preserve">
+    <value>Nombre del Titular</value>
+  </data>
+  <data name="NumberInsured" xml:space="preserve">
+    <value>Número de Asegurados</value>
+  </data>
+  <data name="DescriptionPolicy" xml:space="preserve">
+    <value>Descripción de Póliza</value>
+  </data>
+  <data name="DeductiblesText" xml:space="preserve">
+    <value>Texto de Deducibles</value>
+  </data>
+  <data name="DateEffectiveness" xml:space="preserve">
+    <value>Fecha de Efectividad</value>
+  </data>
+  <data name="DescriptionFormPayment" xml:space="preserve">
+    <value>Descripción de Forma Pago</value>
+  </data>
+  <data name="DateCollection" xml:space="preserve">
+    <value>Fecha Cobro</value>
+  </data>
+  <data name="AdministrativeCost" xml:space="preserve">
+    <value>Costo Administrativo</value>
+  </data>
+  <data name="CommissionablePremium" xml:space="preserve">
+    <value>Prima Comisionable</value>
+  </data>
+  <data name="QuotaValue" xml:space="preserve">
+    <value>Valor de Cuota</value>
+  </data>
+  <data name="ValueInterest" xml:space="preserve">
+    <value>Valor de Intereses</value>
+  </data>
+  <data name="Restrictions" xml:space="preserve">
+    <value>Restricciones</value>
+  </data>
+  <data name="DescriptionStateCertificate" xml:space="preserve">
+    <value>Descripción del Estado Certificado</value>
+  </data>
+  <data name="DescriptionReasonCancellation" xml:space="preserve">
+    <value>Descripción del Motivo Cancelacion</value>
+  </data>
+  <data name="DescriptionTypeSale" xml:space="preserve">
+    <value>Descripción del Tipo de Venta</value>
+  </data>
+  <data name="AutomaticPayment" xml:space="preserve">
+    <value>Pago Automático</value>
+  </data>
+  <data name="AccidentRate" xml:space="preserve">
+    <value>Siniestralidad</value>
+  </data>
+  <data name="PolicyGroup" xml:space="preserve">
+    <value>Póliza Grupal</value>
+  </data>
+  <data name="PolicyDependent" xml:space="preserve">
+    <value>Poliza Dependiente</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="CodeAgentSale" xml:space="preserve">
+    <value>Código Agente de Venta</value>
+  </data>
+  <data name="NameAgentSale" xml:space="preserve">
+    <value>Nombre Agente de Venta</value>
+  </data>
+  <data name="NameSubAgent" xml:space="preserve">
+    <value>Nombre de SubAgente</value>
+  </data>
+  <data name="SubAgentCode" xml:space="preserve">
+    <value>Código de SubAgente</value>
+  </data>
+  <data name="AgentCode" xml:space="preserve">
+    <value>Código de Agente</value>
+  </data>
+  <data name="AgencyName" xml:space="preserve">
+    <value>Nombre de Agencia</value>
+  </data>
+  <data name="AgencyCode" xml:space="preserve">
+    <value>Código de Agencia</value>
+  </data>
+  <data name="CodeStateQuota" xml:space="preserve">
+    <value>Código del Estado de la Cuota</value>
+  </data>
+  <data name="CertificateStateCode" xml:space="preserve">
+    <value>Código de Estado del Certificado</value>
+  </data>
+  <data name="PayDay" xml:space="preserve">
+    <value>Fecha de Pago</value>
+  </data>
+  <data name="CodeMGA." xml:space="preserve">
+    <value>Código MGA.</value>
   </data>
 </root>

@@ -1282,7 +1282,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to EnterTheCodeSentToYourMobileDevice.
+        ///   Looks up a localized string similar to Enter The Code Sent To Your Mobile Device.
         /// </summary>
         public static string EnterTheCodeSentToYourMobileDevice {
             get {
@@ -1290,7 +1290,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to PasswordOne.
+        ///   Looks up a localized string similar to Password One.
         /// </summary>
         public static string PasswordOne {
             get {
@@ -1298,7 +1298,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to PasswordTwo.
+        ///   Looks up a localized string similar to Password Two.
         /// </summary>
         public static string PasswordTwo {
             get {
@@ -1314,7 +1314,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to AllFiles.
+        ///   Looks up a localized string similar to All Files.
         /// </summary>
         public static string AllFiles {
             get {
@@ -1322,7 +1322,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to MyDevices.
+        ///   Looks up a localized string similar to My Devices.
         /// </summary>
         public static string MyDevices {
             get {
@@ -1346,7 +1346,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to DeletedFiles.
+        ///   Looks up a localized string similar to Deleted Files.
         /// </summary>
         public static string DeletedFiles {
             get {
@@ -1386,7 +1386,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to ZipFiles.
+        ///   Looks up a localized string similar to Zip Files.
         /// </summary>
         public static string ZipFiles {
             get {
@@ -1394,7 +1394,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to StorageStatus.
+        ///   Looks up a localized string similar to Storage Status.
         /// </summary>
         public static string StorageStatus {
             get {
@@ -1410,7 +1410,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to LearnMore.
+        ///   Looks up a localized string similar to Learn More.
         /// </summary>
         public static string LearnMore {
             get {
@@ -1418,7 +1418,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to RecentlyAccessedFiles.
+        ///   Looks up a localized string similar to Recently Accessed Files.
         /// </summary>
         public static string RecentlyAccessedFiles {
             get {
@@ -1426,7 +1426,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to ViewDetails.
+        ///   Looks up a localized string similar to View Details.
         /// </summary>
         public static string ViewDetails {
             get {
@@ -1434,7 +1434,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to MarkAsImportant.
+        ///   Looks up a localized string similar to MarkAs Important.
         /// </summary>
         public static string MarkAsImportant {
             get {
@@ -1458,7 +1458,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to CopyTo.
+        ///   Looks up a localized string similar to Copy To.
         /// </summary>
         public static string CopyTo {
             get {
@@ -1466,7 +1466,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to MoveTo.
+        ///   Looks up a localized string similar to Move To.
         /// </summary>
         public static string MoveTo {
             get {
@@ -1490,7 +1490,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to LastAccess.
+        ///   Looks up a localized string similar to Last Access.
         /// </summary>
         public static string LastAccess {
             get {
@@ -1498,7 +1498,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to HoursAgo.
+        ///   Looks up a localized string similar to Hours Ago.
         /// </summary>
         public static string HoursAgo {
             get {
@@ -1522,7 +1522,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to PersonalStuff.
+        ///   Looks up a localized string similar to Personal Stuff.
         /// </summary>
         public static string PersonalStuff {
             get {
@@ -1554,7 +1554,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to CloudFiles.
+        ///   Looks up a localized string similar to Cloud Files.
         /// </summary>
         public static string CloudFiles {
             get {
@@ -1562,7 +1562,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to LastModified.
+        ///   Looks up a localized string similar to Last Modified.
         /// </summary>
         public static string LastModified {
             get {
@@ -1570,7 +1570,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to FileSize.
+        ///   Looks up a localized string similar to File Size.
         /// </summary>
         public static string FileSize {
             get {
@@ -1578,7 +1578,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to DashboardConcepts.
+        ///   Looks up a localized string similar to Dashboard Concepts.
         /// </summary>
         public static string DashboardConcepts {
             get {
@@ -1602,7 +1602,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to SendRequest.
+        ///   Looks up a localized string similar to Send Request.
         /// </summary>
         public static string SendRequest {
             get {
@@ -1619,7 +1619,7 @@ namespace webLoyal.Resources.language {
         
         }
         /// <summary>
-        ///   Looks up a localized string similar to UpdateData.
+        ///   Looks up a localized string similar to Update Data.
         /// </summary>
         public static string UpdateData {
             get {
@@ -1627,7 +1627,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to CreateNewCampaign.
+        ///   Looks up a localized string similar to Create New Campaign.
         /// </summary>
         public static string CreateNewCampaign {
             get {
@@ -1635,7 +1635,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to AnnualPaymentForm.
+        ///   Looks up a localized string similar to Annual Payment Form.
         /// </summary>
         public static string AnnualPaymentForm {
             get {
@@ -1643,7 +1643,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to SemiannualPaymentForm.
+        ///   Looks up a localized string similar to Semiannual Payment Form.
         /// </summary>
         public static string SemiannualPaymentForm {
             get {
@@ -1651,7 +1651,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to QuarterlyPaymentMethod.
+        ///   Looks up a localized string similar to Quarterly Payment Method.
         /// </summary>
         public static string QuarterlyPaymentMethod {
             get {
@@ -1659,7 +1659,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to MonthlyPaymentMethod.
+        ///   Looks up a localized string similar to Monthly Payment Method.
         /// </summary>
         public static string MonthlyPaymentMethod {
             get {
@@ -1699,7 +1699,7 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to TopAgents.
+        ///   Looks up a localized string similar to Top Agents.
         /// </summary>
         public static string TopAgents {
             get {
@@ -1712,6 +1712,270 @@ namespace webLoyal.Resources.language {
         public static string Campaign {
             get {
                 return ResourceManager.GetString("Campaign", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Request Code.
+        /// </summary>
+        public static string RequestCode {
+            get {
+                return ResourceManager.GetString("RequestCode", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Code.
+        /// </summary>
+        public static string OwnerCode {
+            get {
+                return ResourceManager.GetString("OwnerCode", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Name.
+        /// </summary>
+        public static string OwnerName {
+            get {
+                return ResourceManager.GetString("OwnerName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Number Insured.
+        /// </summary>
+        public static string NumberInsured {
+            get {
+                return ResourceManager.GetString("NumberInsured", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Description Policy.
+        /// </summary>
+        public static string DescriptionPolicy {
+            get {
+                return ResourceManager.GetString("DescriptionPolicy", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Deductibles Text.
+        /// </summary>
+        public static string DeductiblesText {
+            get {
+                return ResourceManager.GetString("DeductiblesText", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Date Effectiveness.
+        /// </summary>
+        public static string DateEffectiveness {
+            get {
+                return ResourceManager.GetString("DateEffectiveness", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Description Form Payment.
+        /// </summary>
+        public static string DescriptionFormPayment {
+            get {
+                return ResourceManager.GetString("DescriptionFormPayment", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Date Collection.
+        /// </summary>
+        public static string DateCollection {
+            get {
+                return ResourceManager.GetString("DateCollection", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Administrative Cost.
+        /// </summary>
+        public static string AdministrativeCost {
+            get {
+                return ResourceManager.GetString("AdministrativeCost", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Commissionable Premium.
+        /// </summary>
+        public static string CommissionablePremium {
+            get {
+                return ResourceManager.GetString("CommissionablePremium", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Quota Value.
+        /// </summary>
+        public static string QuotaValue {
+            get {
+                return ResourceManager.GetString("QuotaValue", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Value Interest.
+        /// </summary>
+        public static string ValueInterest {
+            get {
+                return ResourceManager.GetString("ValueInterest", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Restrictions.
+        /// </summary>
+        public static string Restrictions {
+            get {
+                return ResourceManager.GetString("Restrictions", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Description State Certificate.
+        /// </summary>
+        public static string DescriptionStateCertificate {
+            get {
+                return ResourceManager.GetString("DescriptionStateCertificate", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Description Reason Cancellation.
+        /// </summary>
+        public static string DescriptionReasonCancellation {
+            get {
+                return ResourceManager.GetString("DescriptionReasonCancellation", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Description Type Sale.
+        /// </summary>
+        public static string DescriptionTypeSale {
+            get {
+                return ResourceManager.GetString("DescriptionTypeSale", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Automatic Payment.
+        /// </summary>
+        public static string AutomaticPayment {
+            get {
+                return ResourceManager.GetString("AutomaticPayment", resourceCulture);
+            }
+        } 
+        /// <summary>
+        ///   Looks up a localized string similar to Accident Rate.
+        /// </summary>
+        public static string AccidentRate {
+            get {
+                return ResourceManager.GetString("AccidentRate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Policy Group.
+        /// </summary>
+        public static string PolicyGroup {
+            get {
+                return ResourceManager.GetString("PolicyGroup", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Policy Dependent.
+        /// </summary>
+        public static string PolicyDependent {
+            get {
+                return ResourceManager.GetString("PolicyDependent", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Notes.
+        /// </summary>
+        public static string Notes {
+            get {
+                return ResourceManager.GetString("Notes", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Code Agent Sale.
+        /// </summary>
+        public static string CodeAgentSale {
+            get {
+                return ResourceManager.GetString("CodeAgentSale", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Name Agent Sale.
+        /// </summary>
+        public static string NameAgentSale {
+            get {
+                return ResourceManager.GetString("NameAgentSale", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Name Sub Agent.
+        /// </summary>
+        public static string NameSubAgent {
+            get {
+                return ResourceManager.GetString("NameSubAgent", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Sub Agent Code.
+        /// </summary>
+        public static string SubAgentCode {
+            get {
+                return ResourceManager.GetString("SubAgentCode", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agent Code.
+        /// </summary>
+        public static string AgentCode {
+            get {
+                return ResourceManager.GetString("AgentCode", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agency Name.
+        /// </summary>
+        public static string AgencyName {
+            get {
+                return ResourceManager.GetString("AgencyName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agency Code.
+        /// </summary>
+        public static string AgencyCode {
+            get {
+                return ResourceManager.GetString("AgencyCode", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Code State Quota.
+        /// </summary>
+        public static string CodeStateQuota {
+            get {
+                return ResourceManager.GetString("CodeStateQuota", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Certificate State Code.
+        /// </summary>
+        public static string CertificateStateCode {
+            get {
+                return ResourceManager.GetString("CertificateStateCode", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Pay Day.
+        /// </summary>
+        public static string PayDay {
+            get {
+                return ResourceManager.GetString("PayDay", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Code MGA.
+        /// </summary>
+        public static string CodeMGA {
+            get {
+                return ResourceManager.GetString("CodeMGA", resourceCulture);
             }
         }
     }
