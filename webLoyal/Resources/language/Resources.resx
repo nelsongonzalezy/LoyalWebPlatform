@@ -780,7 +780,25 @@
   <data name="PayDay" xml:space="preserve">
     <value>Pay Day</value>
   </data>
-  <data name="CodeMGA." xml:space="preserve">
+  <data name="CodeMGA" xml:space="preserve">
     <value>CodeMGA.</value>
+  </data>
+  <data name="PerformanceRating" xml:space="preserve">
+    <value>Performance Rating</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Premiums" xml:space="preserve">
+    <value>Premiums</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="Agents" xml:space="preserve">
+    <value>Agents</value>
   </data>
 </root>

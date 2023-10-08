@@ -718,7 +718,25 @@
   <data name="PayDay" xml:space="preserve">
     <value>Fecha de Pago</value>
   </data>
-  <data name="CodeMGA." xml:space="preserve">
-    <value>Código MGA.</value>
+  <data name="CodeMGA" xml:space="preserve">
+    <value>Código MGA</value>
+  </data>
+  <data name="PerformanceRating" xml:space="preserve">
+    <value>Clasificación de Rendimiento</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Posición</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Premiums" xml:space="preserve">
+    <value>Primas</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Porcentaje</value>
+  </data>
+  <data name="Agents" xml:space="preserve">
+    <value>Agentes</value>
   </data>
 </root>

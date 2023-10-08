@@ -1978,5 +1978,53 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("CodeMGA", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Performance Rating.
+        /// </summary>
+        public static string PerformanceRating {
+            get {
+                return ResourceManager.GetString("PerformanceRating", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Position.
+        /// </summary>
+        public static string Position {
+            get {
+                return ResourceManager.GetString("Position", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Code.
+        /// </summary>
+        public static string Code {
+            get {
+                return ResourceManager.GetString("Code", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Premiums.
+        /// </summary>
+        public static string Premiums {
+            get {
+                return ResourceManager.GetString("Premiums", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Percentage.
+        /// </summary>
+        public static string Percentage {
+            get {
+                return ResourceManager.GetString("Percentage", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agents.
+        /// </summary>
+        public static string Agents {
+            get {
+                return ResourceManager.GetString("Agents", resourceCulture);
+            }
+        }
     }
 }
