@@ -52,8 +52,8 @@
         public int? CodigoPaisPostal { get; set; }
         public string DescripcionPaisPostal { get; set; }
         public int? CodigoUsuario { get; set; }
-        public string CodigoAgenciaMaster { get; set; }
-        public int? AgenciaMaster { get; set; }
+        public int? CodigoAgenciaMaster { get; set; }
+        public string AgenciaMaster { get; set; }
         public string Talla { get; set; }
         public int? CodigoBanco { get; set; }
         public string DescripcionBanco { get; set; }

@@ -111,7 +111,7 @@ namespace core.Service
         #endregion
 
         #region UnAuthorized
-
+            
         public async Task<TResponse> GetUnAuthorizedAsync<TResponse>(string pathUrl)
         {
             try

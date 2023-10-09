@@ -39,7 +39,43 @@
 
             <div id="sidebarMenu" class="sidebar-body">
 
-                @Html.Partial("~/Views/Menu/PartialMenu.cshtml")
+                <div class="nav-group">
+                    <a href="#" class="nav-label">Monitor</a>
+                    <ul class="nav nav-sidebar">
+                        <li class="nav-item">
+                            <a id="2" href="~/RequestMonitor/index" class="nav-link"><i class="ri-pie-chart-2-fill"></i> <span>Monitor de Solicitudes</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-group">
+                    <a href="#" class="nav-label">Ventas</a>
+                    <ul class="nav nav-sidebar">
+                        <li class="nav-item">
+                            <a id="3" href="~/agents/index" class="nav-link"><i class="ri-pie-chart-2-fill"></i> <span>Agentes</span></a>
+                            <a id="4" href="~/campaign/index?CodigoCampana=3&FormaAnual=true" class="nav-link"><i class="ri-medal-2-line"></i> <span>Campañas</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-group">
+
+
+                    <a href="#" class="nav-label">Funciones</a>
+                    <ul class="nav nav-sidebar">
+                        <li class="nav-item">
+                            <a id="5" href="~/Policies/index" class="nav-link"><i class="ri-shopping-bag-3-line"></i> <span>Polizas</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="6" href="~/Provider/index" class="nav-link"><i class="ri-exchange-dollar-fill"></i> <span>Proveedores</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="7" href="~/claims/index" class="nav-link"><i class="ri-dossier-line"></i> <span>Reclamos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="8" href="~/lives/index" class="nav-link"><i class="ri-team-line"></i> <span>Vidas</span></a>
+                        </li>
+                    </ul>
+                </div>
+                @*@Html.Partial("~/Views/Menu/PartialMenu.cshtml")*@
             </div><!-- sidebar-body -->
             <div class="sidebar-footer">
                 <div class="sidebar-footer-top">
@@ -163,5 +199,35 @@
 
     @await RenderSectionAsync("Scripts", required: false)
    
+<script>
+    $(document).ready(function () {
+        var activeLinkId = sessionStorage.getItem('activeLinkId');
+        if (activeLinkId) {
+            $('#' + activeLinkId).addClass('active');
+            $('#' + activeLinkId).closest('.nav-group').addClass('show');
+        }
 
+        $('.nav-link').on('click', function (e) {
+            e.preventDefault();
+            $('.nav-link').removeClass('active');
+            $('.nav-group').removeClass('show');
+
+            $(this).addClass('active');
+            $(this).closest('.nav-group').addClass('show');
+
+            sessionStorage.setItem('activeLinkId', $(this).attr('id'));
+
+            var href = $(this).attr('href');
+            if (href && href !== '#') {
+                window.location.href = href;
+            }
+        });
+    });
+
+</script>
+
+
+
+
+v
 </html>
