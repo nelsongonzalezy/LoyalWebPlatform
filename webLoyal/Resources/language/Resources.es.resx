@@ -280,6 +280,7 @@
   <data name="RegistrationDate" xml:space="preserve">
     <value>Fecha de registro</value>
   </data>
+
   <data name="TypeOfDocument" xml:space="preserve">
     <value>Tipo de Documento</value>
   </data>
@@ -786,5 +787,32 @@
   </data>
   <data name="ConditionalCoverageSection" xml:space="preserve">
     <value>Sección Cobertura Condicionada</value>
+  </data>
+  <data name="GenerateDenialLetter" xml:space="preserve">
+    <value>Generar Carta de Denegación</value>
+  </data>
+  <data name="InsuredName" xml:space="preserve">
+    <value>Nombre del Asegurado</value>
+  </data>
+  <data name="NameOfBeneficiary" xml:space="preserve">
+    <value>Nombre del Beneficiario</value>
+  </data>
+  <data name="HospitalOrProvider" xml:space="preserve">
+    <value>Hospital o Proveedor</value>
+  </data>
+  <data name="DateOfAdmission" xml:space="preserve">
+    <value>Fecha de Ingreso</value>
+  </data>
+  <data name="DischargeDate" xml:space="preserve">
+    <value>Fecha de Egreso</value>
+  </data>
+  <data name="Treatment" xml:space="preserve">
+    <value>Tratamiento</value>
+  </data>
+  <data name="CauseOfDenial" xml:space="preserve">
+    <value>Causa de Negación</value>
+  </data>
+  <data name="Emails" xml:space="preserve">
+    <value>Correos Electrónicos</value>
   </data>
 </root>

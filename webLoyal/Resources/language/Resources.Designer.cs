@@ -2153,5 +2153,77 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("ConditionalCoverageSection", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Denial Letter.
+        /// </summary>
+        public static string GenerateDenialLetter {
+            get {
+                return ResourceManager.GetString("GenerateDenialLetter", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Insured Name.
+        /// </summary>
+        public static string InsuredName {
+            get {
+                return ResourceManager.GetString("InsuredName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Name Of Beneficiary.
+        /// </summary>
+        public static string NameOfBeneficiary {
+            get {
+                return ResourceManager.GetString("NameOfBeneficiary", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital Or Provider.
+        /// </summary>
+        public static string HospitalOrProvider {
+            get {
+                return ResourceManager.GetString("HospitalOrProvider", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Date Of Admission.
+        /// </summary>
+        public static string DateOfAdmission {
+            get {
+                return ResourceManager.GetString("DateOfAdmission", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Discharge Date.
+        /// </summary>
+        public static string DischargeDate {
+            get {
+                return ResourceManager.GetString("DischargeDate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Treatment.
+        /// </summary>
+        public static string Treatment {
+            get {
+                return ResourceManager.GetString("Treatment", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Cause Of Denial.
+        /// </summary>
+        public static string CauseOfDenial {
+            get {
+                return ResourceManager.GetString("CauseOfDenial", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Emails.
+        /// </summary>
+        public static string Emails {
+            get {
+                return ResourceManager.GetString("Emails", resourceCulture);
+            }
+        }
     }
 }
