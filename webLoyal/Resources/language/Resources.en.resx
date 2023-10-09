@@ -280,9 +280,6 @@
   <data name="RegistrationDate" xml:space="preserve">
     <value>Registration Date</value>
   </data>
-  <data name="Descripction" xml:space="preserve">
-    <value>Descripction</value>
-  </data>
   <data name="TypeOfDocument" xml:space="preserve">
     <value>Type Of Document</value>
   </data>
@@ -592,10 +589,10 @@
   <data name="CreateNewCampaign" xml:space="preserve">
     <value>Create New Campaign</value>
   </data>
-  <data name="AnnualPaymentForm" xml:space="preserve">
+  <data name="AnnualPaymentMethod" xml:space="preserve">
     <value>Annual Payment Form</value>
   </data>
-  <data name="SemiannualPaymentForm" xml:space="preserve">
+  <data name="SemiannualPaymentMethod" xml:space="preserve">
     <value>Semiannual Payment Form</value>
   </data>
   <data name="QuarterlyPaymentMethod" xml:space="preserve">
@@ -718,7 +715,103 @@
   <data name="PayDay" xml:space="preserve">
     <value>Pay Day</value>
   </data>
-  <data name="CodeMGA." xml:space="preserve">
-    <value>CodeMGA.</value>
+  <data name="CodeMGA" xml:space="preserve">
+    <value>CodeMGA</value>
+  </data>
+  <data name="PerformanceRating" xml:space="preserve">
+    <value>Performance Rating</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Premiums" xml:space="preserve">
+    <value>Premiums</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="Agents" xml:space="preserve">
+    <value>Agents</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ClaimDate" xml:space="preserve">
+    <value>ClaimDate</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>Plan</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="FinishDate" xml:space="preserve">
+    <value>Finish Date</value>
+  </data>
+  <data name="PolicyholderDetails" xml:space="preserve">
+    <value>Policyholder Details</value>
+  </data>
+  <data name="CivilStatus" xml:space="preserve">
+    <value>Civil Status Date</value>
+  </data>
+  <data name="PolicyholderData" xml:space="preserve">
+    <value>Policyholder Data</value>
+  </data>
+  <data name="Symptoms" xml:space="preserve">
+    <value>Symptoms</value>
+  </data>
+  <data name="Procedures" xml:space="preserve">
+    <value>Procedures</value>
+  </data>
+  <data name="DocumentType" xml:space="preserve">
+    <value>Document Type</value>
+  </data>
+  <data name="Origin" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DocumentName" xml:space="preserve">
+    <value>Document Name</value>
+  </data>
+  <data name="ConditionalCoverageSection" xml:space="preserve">
+    <value>Conditional Coverage Section</value>
+  </data>
+  <data name="GenerateDenialLetter" xml:space="preserve">
+    <value>Generate Denial Letter</value>
+  </data>
+  <data name="InsuredName" xml:space="preserve">
+    <value>Insured Name</value>
+  </data>
+  <data name="NameOfBeneficiary" xml:space="preserve">
+    <value>Name of Beneficiary</value>
+  </data>
+  <data name="HospitalOrProvider" xml:space="preserve">
+    <value>Hospital Or Provider</value>
+  </data>
+  <data name="DateOfAdmission" xml:space="preserve">
+    <value>Date Of Admission</value>
+  </data>
+  <data name="DischargeDate" xml:space="preserve">
+    <value>Discharge Date</value>
+  </data>
+  <data name="Treatment" xml:space="preserve">
+    <value>Treatment</value>
+  </data>
+  <data name="CauseOfDenial" xml:space="preserve">
+    <value>Cause of Denial</value>
+  </data>
+  <data name="Emails" xml:space="preserve">
+    <value>Emails</value>
   </data>
 </root>

@@ -383,8 +383,8 @@
 
 
                             <label class="card-value mb-1"><i class=""></i>@item.NombreAgenteVenta</label>
-                            <label class="card-value mb-1"><i class=""></i>Prima:  @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
-                            <label class="card-value mb-1"><i class=""></i>Polizas: @item.Cantidad</label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Bonus:  @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Policies: @item.Cantidad</label>
 
                         </div><!-- card-body -->
                     </div><!-- card-one -->
@@ -394,7 +394,7 @@
             <div class="col-md-6 col-xl-12">
                 <div class="card card-one">
                     <div class="card-header">
-                        <h6 class="card-title">Performance Rating</h6>
+                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating </h6>
                         <div class="d-flex gap-1 text-primary fs-20">
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
@@ -411,12 +411,12 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Posicion</th>
-                                    <th>Codigo </th>
-                                    <th>Agente</th>
-                                    <th>Primas</th>
-                                    <th>Polizas</th>
-                                    <th>Procentaje</th>
+                                    <th>@webLoyal.Resources.language.Resources.Position</th>
+                                    <th>@webLoyal.Resources.language.Resources.Code</th>
+                                    <th>@webLoyal.Resources.language.Resources.Agents</th>
+                                    <th>@webLoyal.Resources.language.Resources.Premiums</th>
+                                    <th>@webLoyal.Resources.language.Resources.Policies</th>
+                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
                            
 
                                 </tr>

@@ -457,15 +457,6 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Descripction.
-        /// </summary>
-        public static string Descripction {
-            get {
-                return ResourceManager.GetString("Descripction", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Description Country.
         /// </summary>
         public static string DescriptionCountry {
@@ -1635,19 +1626,19 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Annual Payment Form.
+        ///   Looks up a localized string similar to Annual Payment Method.
         /// </summary>
-        public static string AnnualPaymentForm {
+        public static string AnnualPaymentMethod {
             get {
-                return ResourceManager.GetString("AnnualPaymentForm", resourceCulture);
+                return ResourceManager.GetString("AnnualPaymentMethod", resourceCulture);
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Semiannual Payment Form.
+        ///   Looks up a localized string similar to Semiannual Payment Method.
         /// </summary>
-        public static string SemiannualPaymentForm {
+        public static string SemiannualPaymentMethod {
             get {
-                return ResourceManager.GetString("SemiannualPaymentForm", resourceCulture);
+                return ResourceManager.GetString("SemiannualPaymentMethod", resourceCulture);
             }
         }
         /// <summary>
@@ -1976,6 +1967,262 @@ namespace webLoyal.Resources.language {
         public static string CodeMGA {
             get {
                 return ResourceManager.GetString("CodeMGA", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Performance Rating.
+        /// </summary>
+        public static string PerformanceRating {
+            get {
+                return ResourceManager.GetString("PerformanceRating", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Position.
+        /// </summary>
+        public static string Position {
+            get {
+                return ResourceManager.GetString("Position", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Code.
+        /// </summary>
+        public static string Code {
+            get {
+                return ResourceManager.GetString("Code", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Premiums.
+        /// </summary>
+        public static string Premiums {
+            get {
+                return ResourceManager.GetString("Premiums", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Percentage.
+        /// </summary>
+        public static string Percentage {
+            get {
+                return ResourceManager.GetString("Percentage", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agents.
+        /// </summary>
+        public static string Agents {
+            get {
+                return ResourceManager.GetString("Agents", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string Information {
+            get {
+                return ResourceManager.GetString("Information", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Date.
+        /// </summary>
+        public static string ClaimDate {
+            get {
+                return ResourceManager.GetString("ClaimDate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to PLan.
+        /// </summary>
+        public static string Plan {
+            get {
+                return ResourceManager.GetString("Plan", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Payment Method.
+        /// </summary>
+        public static string PaymentMethod {
+            get {
+                return ResourceManager.GetString("PaymentMethod", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Start Date.
+        /// </summary>
+        public static string StartDate {
+            get {
+                return ResourceManager.GetString("StartDate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Finish Date.
+        /// </summary>
+        public static string FinishDate {
+            get {
+                return ResourceManager.GetString("FinishDate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Policyholder Details.
+        /// </summary>
+        public static string PolicyholderDetails {
+            get {
+                return ResourceManager.GetString("PolicyholderDetails", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Civil Status.
+        /// </summary>
+        public static string CivilStatus {
+            get {
+                return ResourceManager.GetString("CivilStatus", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Policyholder Data.
+        /// </summary>
+        public static string PolicyholderData {
+            get {
+                return ResourceManager.GetString("PolicyholderData", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Symptoms.
+        /// </summary>
+        public static string Symptoms {
+            get {
+                return ResourceManager.GetString("Symptoms", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Procedures.
+        /// </summary>
+        public static string Procedures {
+            get {
+                return ResourceManager.GetString("Procedures", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Document Type.
+        /// </summary>
+        public static string DocumentType {
+            get {
+                return ResourceManager.GetString("DocumentType", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Origin.
+        /// </summary>
+        public static string Origin {
+            get {
+                return ResourceManager.GetString("Origin", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Document Name.
+        /// </summary>
+        public static string DocumentName {
+            get {
+                return ResourceManager.GetString("DocumentName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Conditional Coverage Section.
+        /// </summary>
+        public static string ConditionalCoverageSection {
+            get {
+                return ResourceManager.GetString("ConditionalCoverageSection", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Denial Letter.
+        /// </summary>
+        public static string GenerateDenialLetter {
+            get {
+                return ResourceManager.GetString("GenerateDenialLetter", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Insured Name.
+        /// </summary>
+        public static string InsuredName {
+            get {
+                return ResourceManager.GetString("InsuredName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Name Of Beneficiary.
+        /// </summary>
+        public static string NameOfBeneficiary {
+            get {
+                return ResourceManager.GetString("NameOfBeneficiary", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital Or Provider.
+        /// </summary>
+        public static string HospitalOrProvider {
+            get {
+                return ResourceManager.GetString("HospitalOrProvider", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Date Of Admission.
+        /// </summary>
+        public static string DateOfAdmission {
+            get {
+                return ResourceManager.GetString("DateOfAdmission", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Discharge Date.
+        /// </summary>
+        public static string DischargeDate {
+            get {
+                return ResourceManager.GetString("DischargeDate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Treatment.
+        /// </summary>
+        public static string Treatment {
+            get {
+                return ResourceManager.GetString("Treatment", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Cause Of Denial.
+        /// </summary>
+        public static string CauseOfDenial {
+            get {
+                return ResourceManager.GetString("CauseOfDenial", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Emails.
+        /// </summary>
+        public static string Emails {
+            get {
+                return ResourceManager.GetString("Emails", resourceCulture);
             }
         }
     }
