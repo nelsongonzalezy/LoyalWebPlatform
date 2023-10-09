@@ -29,11 +29,11 @@
                         <div class="row g-3">
                             <div class="col-md-5 col-xl-3">
                                 <div class="card">
-                                    <div class="card-header"><i class="ri-calendar-todo-line fs-20 lh-1 me-2"></i>Informacion</div>
+                                    <div class="card-header"><i class="ri-calendar-todo-line fs-20 lh-1 me-2"></i>@webLoyal.Resources.language.Resources.Information</div>
                                     <div class="card-body">
                                         <div class="d-block fw-medium text-dark">
                                             <div class="mb-1 row">
-                                                <label class="col-sm-4 col-form-label">Estado</label>
+                                                <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Status</label>
                                                 <div class="col-sm-8">
                                                     @switch (Model.CodigoEstadoReclamo)
                                                     {
@@ -72,20 +72,20 @@
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label class="col-sm-4 col-form-label">Fecha del Reclamo</label>
+                                                <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.ClaimDate</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" readonly class="form-control-plaintext" value="@Model.FechaReclamo">
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label class="col-sm-4 col-form-label">Fecha de registro</label>
+                                                <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.RegistrationDate</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" readonly class="form-control-plaintext" value="@Model.FechaRegistro" >
                                                 </div>
                                             </div>
 
                                             <div class="form-check form-switch">
-                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">Aplica deducible</label>
+                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">@webLoyal.Resources.language.Resources.DeductibleApplies</label>
                                                 @switch (@Model.AplicaDeducible)
                                                 {
                                                     case true:
@@ -97,7 +97,7 @@
 
                                                 }
                                             </div>                                            <div class="form-check form-switch">
-                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">NotificaAgente</label>
+                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">@webLoyal.Resources.language.Resources.NotifyInsuranceAgent</label>
                                                 @switch (@Model.NotificaAgente)
                                                 {
                                                     case true:
@@ -110,7 +110,7 @@
                                                 }
                                             </div>
                                             <div class="form-check form-switch">
-                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">Notificar Proveedor</label>
+                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">@webLoyal.Resources.language.Resources.NotifyProvider</label>
                                                 @switch (@Model.NotificaProveedor)
                                                 {
                                                     case true:
@@ -123,7 +123,7 @@
                                                 }
                                             </div>
                                             <div class="form-check form-switch">
-                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">Notificar titular</label>
+                                                <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">@webLoyal.Resources.language.Resources.NotifyInsured</label>
                                                 @switch (@Model.NotificaTitular)
                                                 {
                                                     case true:
@@ -142,35 +142,35 @@
                             </div><!-- col -->
                             <div class="col-md-5 col-xl-3">
                                 <div class="card">
-                                    <div class="card-header"><i class="ri-calendar-check-line fs-20 lh-1 me-2"></i> Proveedor</div>
+                                    <div class="card-header"><i class="ri-calendar-check-line fs-20 lh-1 me-2"></i>@webLoyal.Resources.language.Resources.Provider</div>
                                     <div class="card-body">
                                         <div class="d-block fw-medium text-dark">
                                             <div class="mb-1 row">
-                                                <label class="col-sm-4 col-form-label">Producto</label>
+                                                <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Product</label>
                                                 <div class="col-sm-8">
                                               @*      <input type="text" readonly class="form-control-plaintext" value="@Model.descr.DescripcionProducto">*@
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label class="col-sm-4 col-form-label">Plan</label>
+                                                <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Plan</label>
                                                 <div class="col-sm-8">
                                                 @*    <input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionPlanesConsulta">*@
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label class="col-sm-4 col-form-label">Forma de Pago</label>
+                                                <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.PaymentMethod</label>
                                                 <div class="col-sm-8">
                                  @*                   <input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionFormaPago">*@
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label class="col-sm-4 col-form-label">Fecha Inicio</label>
+                                                <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.StartDate</label>
                                                 <div class="col-sm-8">
 @*                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.FechaInicioVigencia.ToString("MM/dd/yyyy")">*@
                                                 </div>
                                             </div>
                                             <div class="mb-1 row">
-                                                <label class="col-sm-4 col-form-label">Fecha Fin</label>
+                                                <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.FinishDate</label>
                                                 <div class="col-sm-8">
 @*                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.FechaFinVigencia.ToString("MM/dd/yyyy")">*@
                                                 </div>
@@ -183,29 +183,29 @@
                             <div class="col-md-5 col-xl-3">
                                 <div class="card">
 
-                                    <div class="card-header"><i class="ri-contacts-fill fs-20 lh-1 me-2"></i>Datos Tomador</div>
+                                    <div class="card-header"><i class="ri-contacts-fill fs-20 lh-1 me-2"></i>@webLoyal.Resources.language.Resources.PolicyHolderInformation</div>
                                     <div class="card-body">
 
                                         <div class="mb-1 row">
-                                            <label class="col-sm-4 col-form-label">Nombre</label>
+                                            <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Name</label>
                                             <div class="col-sm-8">
                                            @*     <input type="text" readonly class="form-control-plaintext" value="@Model.NombreCompleto">*@
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label class="col-sm-4 col-form-label">Estado Civil</label>
+                                            <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.CivilStatus</label>
                                             <div class="col-sm-8">
                                                 @*<input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionEstadoCivil">*@
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label class="col-sm-4 col-form-label">Telefono</label>
+                                            <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.PhoneNumber</label>
                                             <div class="col-sm-8">
                                                @* <input type="text" readonly class="form-control-plaintext" value="@Model.TelefonoTomador @Model.Telefono">*@
                                             </div>
                                         </div>
                                         <div class="mb-1 row">
-                                            <label class="col-sm-4 col-form-label">Correo Electronico</label>
+                                            <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Email</label>
                                             <div class="col-sm-8">
                                                 @*<input type="text" readonly class="form-control-plaintext" value="@Model.CorreoTomador">*@
                                             </div>
@@ -216,13 +216,13 @@
                             <div class="col-md-5 col-xl-3">
                                 <div class="card">
 
-                                    <div class="card-header"><i class="ri-calendar-2-line fs-20 lh-1 me-2"></i>Agente</div>
+                                    <div class="card-header"><i class="ri-calendar-2-line fs-20 lh-1 me-2"></i>@webLoyal.Resources.language.Resources.Agent</div>
                                     <div class="card-body">
                                         <div class="d-block fw-medium text-dark">
 
 
                                             <div class="mb-1 row">
-                                                <label class="col-sm-4 col-form-label">Agente</label>
+                                                <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Agent</label>
                                                 <div class="col-sm-8">
                                                     <label class="d-block mb-1 fw-medium text-dark">
                                                         @*<a class="form-control-plaintext" href="~/agents/detail/@Model.CodigoAgente">@Model.NombreAgente </a>
@@ -242,25 +242,25 @@
                         <div class="col-md-12 col-xl-12">
                             <div>
                                 <div class="nav nav-pills nav-fill">
-                                    <div class="nav-item"><a class="nav-link active">Asegurados</a></div>
+                                    <div class="nav-item"><a class="nav-link active">@webLoyal.Resources.language.Resources.InsuredPersons</a></div>
                                 </div>
                             </div>
 
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Asegurados</button>
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">@webLoyal.Resources.language.Resources.Insured</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Documentos</button>
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">@webLoyal.Resources.language.Resources.Documents</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Notas</button>
+                                    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">@webLoyal.Resources.language.Resources.Notes</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Sintomas</button>
+                                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">@webLoyal.Resources.language.Resources.Symptoms</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Procedimientos</button>
+                                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">@webLoyal.Resources.language.Resources.Procedures</button>
                                 </li>
                             </ul>
 
@@ -370,12 +370,11 @@
                                     <table class="table table-hover table-bordered table-responsive">
                                         <thead>
                                             <tr>
-                                                <th>Tipo Documento</th>
-                                                <th>Origen</th>
-
-                                                <th>Descripcion</th>
-                                                <th>Nombre Documento</th>
-                                                <th>Fecha Registro</th>
+                                                <th>@webLoyal.Resources.language.Resources.DocumentType</th>
+                                                <th>@webLoyal.Resources.language.Resources.Origin</th>
+                                                <th>@webLoyal.Resources.language.Resources.Description</th>
+                                                <th>@webLoyal.Resources.language.Resources.DocumentName</th>
+                                                <th>@webLoyal.Resources.language.Resources.RegistrationDate</th>
 
                                             </tr>
                                         </thead>
@@ -436,9 +435,9 @@
                                     <table class="table table-hover table-bordered table-responsive">
                                         <thead>
                                             <tr>
-                                                <th>Seccion Cobertura condicionado</th>
-                                                <th> Descripcion</th>
-                                                <th>    Fecha inicio</th>
+                                                <th>@webLoyal.Resources.language.Resources.ConditionalCoverageSection</th>
+                                                <th>@webLoyal.Resources.language.Resources.Description</th>
+                                                <th>@webLoyal.Resources.language.Resources.StartDate</th>
 
                                             </tr>
                                         </thead>

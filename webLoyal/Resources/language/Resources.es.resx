@@ -280,9 +280,6 @@
   <data name="RegistrationDate" xml:space="preserve">
     <value>Fecha de registro</value>
   </data>
-  <data name="Descripction" xml:space="preserve">
-    <value>Descripción</value>
-  </data>
   <data name="TypeOfDocument" xml:space="preserve">
     <value>Tipo de Documento</value>
   </data>
@@ -592,10 +589,10 @@
   <data name="CreateNewCampaign" xml:space="preserve">
     <value>Crear Nueva Campaña</value>
   </data>
-  <data name="AnnualPaymentForm" xml:space="preserve">
+  <data name="AnnualPaymentMethod" xml:space="preserve">
     <value>Forma De Pago Anual</value>
   </data>
-  <data name="SemiannualPaymentForm" xml:space="preserve">
+  <data name="SemiannualPaymentMethod" xml:space="preserve">
     <value>Forma De Pago Semestral</value>
   </data>
   <data name="QuarterlyPaymentMethod" xml:space="preserve">
@@ -738,5 +735,56 @@
   </data>
   <data name="Agents" xml:space="preserve">
     <value>Agentes</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>estado</value>
+  </data>
+  <data name="ClaimDate" xml:space="preserve">
+    <value>Fecha del Reclamo</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>Plan</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Método de Pago</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Fecha de Inicio</value>
+  </data>
+  <data name="FinishDate" xml:space="preserve">
+    <value>Fecha de Finalización</value>
+  </data>
+  <data name="PolicyholderDetails" xml:space="preserve">
+    <value>Datos de Tomador</value>
+  </data>
+  <data name="CivilStatus" xml:space="preserve">
+    <value>Estado Civil</value>
+  </data>
+  <data name="PolicyholderData" xml:space="preserve">
+    <value>Datos del Tomador</value>
+  </data>
+  <data name="Symptoms" xml:space="preserve">
+    <value>Síntomas</value>
+  </data>
+  <data name="Procedures" xml:space="preserve">
+    <value>Procedimientos</value>
+  </data>
+  <data name="DocumentType" xml:space="preserve">
+    <value>Tipo de Documento</value>
+  </data>
+  <data name="Origin" xml:space="preserve">
+    <value>Orígen</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="DocumentName" xml:space="preserve">
+    <value>Nombre del Documento</value>
+  </data>
+  <data name="ConditionalCoverageSection" xml:space="preserve">
+    <value>Sección Cobertura Condicionada</value>
   </data>
 </root>
