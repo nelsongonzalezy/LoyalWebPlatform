@@ -4,7 +4,7 @@
         <div>
             <ol class="breadcrumb fs-sm mb-1">
                 <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
-                <li class="breadcrumb-item"><a href="~/Agents/Index"></a>@webLoyal.Resources.language.Resources.AgentsList</li>
+            <li class="breadcrumb-item"><a href="~/Agents/Index">@webLoyal.Resources.language.Resources.AgentsList</a></li>
                 <li class="breadcrumb-item active" aria-current="page">@webLoyal.Resources.language.Resources.Agent</li>
             </ol>
         </div>
@@ -19,7 +19,8 @@
                         <img src="~/assets/img/-customer-service-agent_89777-2.png" class="img-fluid" alt="...">
                     </div><!-- media-img -->
                     <div class="media-body">
-                        <h5 class="media-name">@item.NombreCompleto
+                    <h1>@item.DescripcionTipoAgente: @item.NombreCobranza</h1>
+                    <h5 class="media-name">@item.NombreCompleto
                             @switch (item.CodigoEstadoAgente)
                             {
                                 case "01":
@@ -216,15 +217,15 @@
                                 <tr>
                                     <th>#</th>
                                     <th>NumeroPoliza</th>
-                                    <th>DescripcionTipoVenta</th>
+                                    <th>TipoVenta</th>
                                     <td>NombreCompleto</td>
                                     <td>NumeroAsegurados</td>
-                                    <td>DescripcionPoliza</td>
-                                    <td>DescripcionPais</td>
+                                    <td>Poliza</td>
+                                    <td>Pais</td>
                                     <td>Estado certificado</td>
                                     <td>FechaInicioVigencia</td>
                                     <td>Prima</td>
-                                    <td>DescripcionPlan</td>
+                                    <td>Plan</td>
                                     <td>CuotasPagadas</td>
                                     <td>CuotasPagadasValor</td>
                                     <td>CuotasPendiente</td>
@@ -251,18 +252,18 @@
                                         <td>@cartera.NumeroAsegurados</td>
                                         @switch (cartera.DescripcionPoliza.ToString())
                                         {
-                                            case "Legacy":
+                                            case "Beyond":
                                                 <td><span class="badge" style="background-color:rgb(60,95,138);">@cartera.DescripcionPoliza</span></td>
                                                 break;
-                                            case "Liberty":
+                                            case "Privilege":
                                                 <td><span class="badge" style="background-color:rgb(141,195,65);">@cartera.DescripcionPoliza</span></td>
                                                 break;
-                                            case "3":
+                                            case "Liberty":
                                                 <td>
                                                     <span class="badge" style="background-color:rgb(48,182,181);">@cartera.DescripcionPoliza</span>
                                                 </td>
                                                 break;
-                                            case "4":
+                                            case "Legacy":
                                                 <td>
                                                     <span class="badge" style="background-color:rgb(132,26,102);">@cartera.DescripcionPoliza</span>
                                                 </td>
