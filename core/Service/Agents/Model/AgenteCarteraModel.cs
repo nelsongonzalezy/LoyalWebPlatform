@@ -23,6 +23,6 @@
         public int CuotasCanceladas { get; set; }
         public decimal CuotasCanceladasValor { get; set; }
         public int NumeroCuotasAnho { get; set; }
-        public string FechaSiguientePago { get; set; }
+        public string FechaSiguientePago { get; set; } = string.Empty;
     }
 }
