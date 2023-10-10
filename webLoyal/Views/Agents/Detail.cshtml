@@ -1,15 +1,15 @@
-﻿@model List<core.Service.AgentsDetailModel>
+﻿@model core.Service.ConsultaAgentesCarteraModel
    
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
                 <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
-                <li class="breadcrumb-item"><a href="~/Agents/Index"></a>@webLoyal.Resources.language.Resources.AgentsList</li>
+            <li class="breadcrumb-item"><a href="~/Agents/Index">@webLoyal.Resources.language.Resources.AgentsList</a></li>
                 <li class="breadcrumb-item active" aria-current="page">@webLoyal.Resources.language.Resources.Agent</li>
             </ol>
         </div>
     </div>
-@foreach (var item in Model)
+@foreach (var item in Model.Agente)
     {
         
         <div class="row g-5">
@@ -19,7 +19,8 @@
                         <img src="~/assets/img/-customer-service-agent_89777-2.png" class="img-fluid" alt="...">
                     </div><!-- media-img -->
                     <div class="media-body">
-                        <h5 class="media-name">@item.NombreCompleto
+                    <h1>@item.DescripcionTipoAgente: @item.NombreCobranza</h1>
+                    <h5 class="media-name">@item.NombreCompleto
                             @switch (item.CodigoEstadoAgente)
                             {
                                 case "01":
@@ -51,6 +52,7 @@
                 </div><!-- media-profile -->
             </div>
         </div>
+
             <div class="row row-cols-sm-auto g-4 g-md-5 g-xl-4 g-xxl-5">
                 <div class="col">
                     <div class="profile-item">
@@ -98,7 +100,90 @@
                     </div><!-- profile-item -->
                 </div><!-- col -->
             </div>
+    <div class="col-xl-12">
 
+        <div class="row g-3">
+            @foreach (var producto in Model.AgenteCarteraPorProducto.OrderBy(x => x.Codigopoliza))
+            {
+                <div class="col-3 col-xl-3">
+                    @if (producto.Codigopoliza > 0)
+                    {
+                        var estilo = string.Empty;
+                        switch (producto.Codigopoliza)
+                        {
+                            case 1:
+                                estilo = "background-color:rgb(60,95,138)";
+                                break;
+                            case 2:
+                                estilo = "background-color:rgb(141,195,65)";
+                                break;
+                            case 3:
+                                estilo = "background-color:rgb(48,182,181)";
+                                break;
+                            case 4:
+                                estilo = "background-color:rgb(132,26,102)";
+                                break;
+                        }
+
+
+                        <div class="music-player mt-4 mt-xxl-5" style="@estilo">
+                            <div class="media-music">
+                                @switch (producto.Codigopoliza)
+                                {
+                                    case 1:
+                                        <a href="background-color:rgb(60,95,138)" class="media-img"><img src="~/assets/img/beyond.png" alt=""></a>
+                                        break;
+                                    case 2:
+                                        <a href="background-color:rgb(141,195,65)" class="media-img"><img src="~/assets/img/privilege.png" alt=""></a>
+                                        break;
+                                    case 3:
+                                        <a href="background-color:rgb(48,182,181)" class="media-img"><img src="~/assets/img/liberty.png" alt=""></a>
+                                        break;
+                                    case 4:
+                                        <a href="background-color:rgb(132,26,102)" class="media-img"><img src="~/assets/img/legacy.png" alt=""></a>
+                                        break;
+
+                                }
+
+                            </div>
+                            <div class="media-body">
+                                <h5><a href="" class="text-white">@producto.DescripcionPoliza</a></h5>
+                                <h6 class="card-value text-white">Nro Polizas: @producto.CantidadRegistros</h6>
+                                <h6 class="card-value text-white">Prima: @producto.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </h6>
+                                @*<h6 class="d-block fs-xs text-success">
+                                    <span class="badge badge-pill bg-light">@producto.Prima.ToString("###.##")</span>
+                                </h6>*@
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+
+
+        </div>
+
+    </div>
+    <br />
+    <div class="col-xl-12">
+        <div class="row g-3">
+        @foreach (var estado in Model.AgenteCarteraPorEstado)
+        {
+            <div class="col-3 col-xl-3">
+                <div class="card card-one">
+                    <div class="card-body">
+                        <label class="card-title fs-sm fw-medium mb-1">@estado.DescripcionTipoVenta / @estado.DescripcionEstadoCertificado </label>
+                            <h6 class="card-value mb-1">Primas @estado.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </h6>
+                        <h6 class="card-value mb-1">Nro Polizas @estado.CantidadRegistros.ToString("#,###.##")</h6>
+             
+
+                    </div><!-- card-body -->
+                </div><!-- card-one -->
+            </div>
+
+
+        }
+    </div>
+    </div>
             <!-- col -->
             <div class="card card-post mt-4">
                 <div class="card-header">
@@ -122,7 +207,129 @@
                 </div><!-- card-body -->
             </div>
 
-               
+    <div class="row g-3">
+        <div class="col-xl-12">
+            <div class="card card-one mt-3">
+                <div class="card-body p-3">
+                    <div class="table-responsive">
+                        <table class="table table-borderless mb-0 dataTable-loading searchable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>NumeroPoliza</th>
+                                    <th>TipoVenta</th>
+                                    <td>NombreCompleto</td>
+                                    <td>NumeroAsegurados</td>
+                                    <td>Poliza</td>
+                                    <td>Pais</td>
+                                    <td>Estado certificado</td>
+                                    <td>FechaInicioVigencia</td>
+                                    <td>Prima</td>
+                                    <td>Plan</td>
+                                    <td>CuotasPagadas</td>
+                                    <td>CuotasPagadasValor</td>
+                                    <td>CuotasPendiente</td>
+                                    <td>CuotasPendienteValor</td>
+                                    <td>CuotasCanceladas</td>
+                                    <td>CuotasCanceladasValor</td>
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var cartera in Model.AgenteCartera.OrderByDescending(x => x.NumeroPoliza))
+                                {
+                                    <tr>
+                                        <td> <a class="btn btn-outline-tertiary" href="~/Policies/detail/@cartera.CodigoCertificado"> @cartera.CodigoCertificado</a> </td>
+                                        <td>
+                                            <a class="btn btn-outline-tertiary" href="~/Policies/detail/@cartera.CodigoCertificado"> @cartera.NumeroPoliza</a>
+                                        </td>
+
+                                        <td>
+                                            @cartera.DescripcionTipoVenta</td>
+                                        <td>@cartera.NombreCompleto</td>
+                                        <td>@cartera.NumeroAsegurados</td>
+                                        @switch (cartera.DescripcionPoliza.ToString())
+                                        {
+                                            case "Beyond":
+                                                <td><span class="badge" style="background-color:rgb(60,95,138);">@cartera.DescripcionPoliza</span></td>
+                                                break;
+                                            case "Privilege":
+                                                <td><span class="badge" style="background-color:rgb(141,195,65);">@cartera.DescripcionPoliza</span></td>
+                                                break;
+                                            case "Liberty":
+                                                <td>
+                                                    <span class="badge" style="background-color:rgb(48,182,181);">@cartera.DescripcionPoliza</span>
+                                                </td>
+                                                break;
+                                            case "Legacy":
+                                                <td>
+                                                    <span class="badge" style="background-color:rgb(132,26,102);">@cartera.DescripcionPoliza</span>
+                                                </td>
+                                                break;
+                                        }
+                                        <td>@cartera.DescripcionPais</td>
+                                        @switch (cartera.DescripcionEstadoCertificado)
+                                        {
+                                            case "Periodo de Gracia":
+                                                <td> <span class="badge bg-warning"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                            case "02":
+                                                <td> <span class="badge bg-info"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                            case "Activa":
+                                                <td> <span class="badge text-bg-success"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                            case "04":
+                                                <td> <span class="badge bg-danger"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                            case "05":
+                                                <td> <span class="badge bg-info"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                            case "Cancelada":
+                                                <td> <span class="badge bg-danger"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                            case "07":
+                                                <td> <span class="badge bg-info"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                            case "08":
+                                                <td> <span class="badge bg-warning"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                            case "Pendiente de Pago":
+                                                <td> <span class="badge bg-warning"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                            default:
+                                                <td> <span class="badge bg-info"> @cartera.DescripcionEstadoCertificado</span> </td>
+                                                break;
+                                        }
+
+                                        <td>@cartera.FechaInicioVigencia</td>
+                                        <td>@cartera.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td>@cartera.DescripcionPlan</td>
+
+                                        <td>@cartera.CuotasPagadas</td>
+                                        <td>@cartera.CuotasPagadasValor.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td>@cartera.CuotasPendiente</td>
+                                        <td>@cartera.CuotasPendienteValor.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td>@cartera.CuotasCanceladas</td>
+                                        <td>@cartera.CuotasCanceladasValor.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+       
+                                    </tr>
+
+                                }
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!-- card-body -->
+            </div>
+        </div><!-- col -->
+    </div>
+
+    <!-- col -->
         @*    <div class="card card-post mt-4">
                 <div class="card-header">
                     <h6 class="card-title">Estadísticas</h6>
@@ -369,6 +576,44 @@
         var radarChart = new Chart(marksCanvas, {
         type: 'radar',
         data: marksData
+        });
+
+        $("table").DataTable({
+            searchPanes: {
+                viewTotal: true
+            },
+            searchBuilder: true,
+            sort: true,
+            resizable: true,
+            responsive: true,
+            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
+            fixedColumns: true,
+            //order: [[0, "desc"]],
+            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+            buttons: [
+                {
+                    extend: 'excelHtml5',
+                    autoFilter: true,
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.LivesService)Excel',
+                },
+                {
+                    extend: 'pdfHtml5',
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.LivesService)Pdf',
+                },
+                {
+                    extend: 'print',
+                    className: 'btn btn-outline-primary',
+                    title: '',
+                    customize: function (win) {
+                        $(win.document.body).addClass('white-bg');
+                        $(win.document.body).css('font-size', '10px');
+
+                        // Personaliza la apariencia de la página impresa si es necesario
+                    }
+                }
+            ]
         });
     </script>
 }

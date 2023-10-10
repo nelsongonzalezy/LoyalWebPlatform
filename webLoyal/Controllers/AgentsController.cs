@@ -16,8 +16,8 @@ namespace webLoyal.Controllers
         [Route("Agents/Detail/{codigoAgente}")]
         public async Task<IActionResult> Detail(int codigoAgente)
         {
-            var model = await _Agents.GetAgentsById(codigoAgente.ToString());
-            return View(model.ToList());
+            var model = await _Agents.GetAgentAndwallet(codigoAgente,"99", codigoAgente, "99");
+            return View(model);
         }
         [HttpGet]
         [Route("Agents/Index")]
