@@ -814,4 +814,25 @@
   <data name="Emails" xml:space="preserve">
     <value>Emails</value>
   </data>
+  <data name="GenerateGuaranteeLetter" xml:space="preserve">
+    <value>Generate Guarantee Letter</value>
+  </data>
+  <data name="GenerateLetterOfGuarantee" xml:space="preserve">
+    <value>Generate Letter Of Guarantee</value>
+  </data>
+  <data name="BudgetNumber" xml:space="preserve">
+    <value>Budget Number</value>
+  </data>
+  <data name="AdmissionsDepartment" xml:space="preserve">
+    <value>Admissions Department</value>
+  </data>
+  <data name="DeductibleAmount" xml:space="preserve">
+    <value>Deductible Amount</value>
+  </data>
+  <data name="USDInsuredLiability" xml:space="preserve">
+    <value>USD Insured Liability</value>
+  </data>
+  <data name="NOTICEOFCONFIDENTIALITY" xml:space="preserve">
+    <value>NOTICE OF CONFIDENTIALITY</value>
+  </data>
 </root>

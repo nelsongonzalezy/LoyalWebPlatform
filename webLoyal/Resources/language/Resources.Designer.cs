@@ -2225,5 +2225,61 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("Emails", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Guarantee Letter.
+        /// </summary>
+        public static string GenerateGuaranteeLetter {
+            get {
+                return ResourceManager.GetString("GenerateGuaranteeLetter", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Budget Number.
+        /// </summary>
+        public static string BudgetNumber {
+            get {
+                return ResourceManager.GetString("BudgetNumber", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Admissions Department.
+        /// </summary>
+        public static string AdmissionsDepartment {
+            get {
+                return ResourceManager.GetString("AdmissionsDepartment", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Deductible Amount.
+        /// </summary>
+        public static string DeductibleAmount {
+            get {
+                return ResourceManager.GetString("DeductibleAmount", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to USD Insured Liability.
+        /// </summary>
+        public static string USDInsuredLiability {
+            get {
+                return ResourceManager.GetString("USDInsuredLiability", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to NOTICE OF CONFIDENTIALITY.
+        /// </summary>
+        public static string NOTICEOFCONFIDENTIALITY {
+            get {
+                return ResourceManager.GetString("NOTICEOFCONFIDENTIALITY", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Letter Of Guarantee.
+        /// </summary>
+        public static string GenerateLetterOfGuarantee {
+            get {
+                return ResourceManager.GetString("GenerateLetterOfGuarantee", resourceCulture);
+            }
+        }
     }
 }
