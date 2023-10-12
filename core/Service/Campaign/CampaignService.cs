@@ -13,5 +13,11 @@
 
             return y.Content;
         }
+        public async Task<IQueryable<CampanasModel>> GetListCampana()
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseCampanaListModel>("api/v1/Campana/ListadeCampanas?CodigoCamapana=0");
+
+            return y.Content.AsQueryable();
+        }
     }
 }

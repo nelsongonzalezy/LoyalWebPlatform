@@ -1,6 +1,5 @@
 ﻿using core.Service;
 using Microsoft.AspNetCore.Mvc;
-using static System.Net.WebRequestMethods;
 
 namespace webLoyal.Controllers
 {
@@ -35,6 +34,13 @@ namespace webLoyal.Controllers
             x.DtCampanas.FechaFin = FechaFin;
             x.DtCampanas.FechaInicio = FechaInicio;
             return View(x);
+        }        
+        [Route("/campaign/List")]
+        public async Task<IActionResult> List()
+        {
+            var model = await _campain.GetListCampana();
+
+            return View(model.ToList());
         }
         //[HttpGet]
         //[Route("/campaign/index2?CodigoCampana={$CodigoCampana}&FormaAnual=1&FormaSemestral=1&FormaTrimestral=1&FormaMensual=1&FechaInicio=2023-09-05&FechaInicio=2023-09-28")]
