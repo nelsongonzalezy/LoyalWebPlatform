@@ -2401,5 +2401,126 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("GenerateLetterOfGuarantee", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Office.
+        /// </summary>
+        public static string ClaimOffice {
+            get {
+                return ResourceManager.GetString("ClaimOffice", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Letter Of Claim Department.
+        /// </summary>
+        public static string ClaimDepartment {
+            get {
+                return ResourceManager.GetString("ClaimDepartment", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Status Description.
+        /// </summary>
+        public static string ClaimStatusDescription {
+            get {
+                return ResourceManager.GetString("ClaimStatusDescription", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Description Of The Claim Type.
+        /// </summary>
+        public static string DescriptionOfTheClaimType {
+            get {
+                return ResourceManager.GetString("DescriptionOfTheClaimType", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Description Of Origin.
+        /// </summary>
+        public static string DescriptionOfOrigin {
+            get {
+                return ResourceManager.GetString("DescriptionOfOrigin", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Description.
+        /// </summary>
+        public static string ClaimDescription {
+            get {
+                return ResourceManager.GetString("ClaimDescription", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Deductible Value.
+        /// </summary>
+        public static string DeductibleValue {
+            get {
+                return ResourceManager.GetString("DeductibleValue", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agent History.
+        /// </summary>
+        public static string AgentHistory {
+            get {
+                return ResourceManager.GetString("AgentHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agents History.
+        /// </summary>
+        public static string AgentsHistory {
+            get {
+                return ResourceManager.GetString("AgentsHistory", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to New Business Policies.
+        /// </summary>
+        public static string NewBusinessPolicies {
+            get {
+                return ResourceManager.GetString("NewBusinessPolicies", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Charged Policies.
+        /// </summary>
+        public static string ChargedPolicies {
+            get {
+                return ResourceManager.GetString("ChargedPolicies", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Policies Under Evaluation.
+        /// </summary>
+        public static string PoliciesUnderEvaluation {
+            get {
+                return ResourceManager.GetString("PoliciesUnderEvaluation", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Approved Policies.
+        /// </summary>
+        public static string ApprovedPolicies {
+            get {
+                return ResourceManager.GetString("ApprovedPolicies", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agents Id.
+        /// </summary>
+        public static string AgentsId {
+            get {
+                return ResourceManager.GetString("AgentsId", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agents Status.
+        /// </summary>
+        public static string AgentsStatus {
+            get {
+                return ResourceManager.GetString("AgentsStatus", resourceCulture);
+            }
+        }
     }
 }

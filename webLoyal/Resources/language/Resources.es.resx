@@ -891,4 +891,49 @@
   <data name="NOTICEOFCONFIDENTIALITY" xml:space="preserve">
     <value>NOTIFICACIÓN DE CONFIDENCIALIDAD</value>
   </data>
+  <data name="ClaimOffice" xml:space="preserve">
+    <value>Oficina de Reclamos</value>
+  </data>
+  <data name="ClaimDepartment" xml:space="preserve">
+    <value>Departamento de Reclamos</value>
+  </data>
+  <data name="ClaimStatusDescription" xml:space="preserve">
+    <value>Descripción del Estado Reclamo</value>
+  </data>
+  <data name="DescriptionOfTheClaimType" xml:space="preserve">
+    <value>Descripción del Tipo Reclamo</value>
+  </data>
+  <data name="DescriptionOfOrigin" xml:space="preserve">
+    <value>Descripcion del Origen</value>
+  </data>
+  <data name="ClaimDescription" xml:space="preserve">
+    <value>Descripcion del Reclamo</value>
+  </data>
+  <data name="DeductibleValue" xml:space="preserve">
+    <value>Valor Deducible</value>
+  </data>
+  <data name="AgentHistory" xml:space="preserve">
+    <value>Historial de Agente</value>
+  </data>
+  <data name="AgentsHistory" xml:space="preserve">
+    <value>Historial de Agentes</value>
+  </data>
+  <data name="NewBusinessPolicies" xml:space="preserve">
+    <value>New Business Policies</value>
+  </data>
+  <data name="ChargedPolicies" xml:space="preserve">
+    <value>Charged Policies</value>
+  </data>
+  <data name="PoliciesUnderEvaluation" xml:space="preserve">
+    <value>Policies Under Evaluation</value>
+  </data>
+  <data name="ApprovedPolicies" xml:space="preserve">
+    <value>Approved Policies</value>
+  </data>
+  <data name="AgentsId" xml:space="preserve">
+    <value>AIdentificación de Agentes</value>
+  </data>
+  <data name="AgentsStatus" xml:space="preserve">
+    <value>Estado de los Agentes</value>
+  </data>
 </root>
