@@ -936,4 +936,22 @@
   <data name="AgentsStatus" xml:space="preserve">
     <value>Estado de los Agentes</value>
   </data>
+  <data name="Quota" xml:space="preserve">
+    <value>Cuota</value>
+  </data>
+  <data name="Sold" xml:space="preserve">
+    <value>Vendido</value>
+  </data>
+  <data name="Charged" xml:space="preserve">
+    <value>Cargado</value>
+  </data>
+  <data name="Reached" xml:space="preserve">
+    <value>Alcanzado</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progreso</value>
+  </data>
+  <data name="Ranting" xml:space="preserve">
+    <value>Despotricando</value>
+  </data>
 </root>

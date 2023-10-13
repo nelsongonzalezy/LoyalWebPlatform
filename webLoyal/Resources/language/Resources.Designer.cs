@@ -2519,7 +2519,55 @@ namespace webLoyal.Resources.language {
         /// </summary>
         public static string AgentsStatus {
             get {
-                return ResourceManager.GetString("AgentsStatus", resourceCulture);
+                return ResourceManager.GetString("AgentsId", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Quota.
+        /// </summary>
+        public static string Quota {
+            get {
+                return ResourceManager.GetString("Quota", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Sold.
+        /// </summary>
+        public static string Sold {
+            get {
+                return ResourceManager.GetString("Sold", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Charged.
+        /// </summary>
+        public static string Charged {
+            get {
+                return ResourceManager.GetString("Charged", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Reached.
+        /// </summary>
+        public static string Reached {
+            get {
+                return ResourceManager.GetString("Reached", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Progress.
+        /// </summary>
+        public static string Progress {
+            get {
+                return ResourceManager.GetString("Progress", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Ranting.
+        /// </summary>
+        public static string Ranting {
+            get {
+                return ResourceManager.GetString("Ranting", resourceCulture);
             }
         }
     }

@@ -945,4 +945,22 @@
   <data name="AgentsStatus" xml:space="preserve">
     <value>Agents Status</value>
   </data>
+  <data name="Quota" xml:space="preserve">
+    <value>Quota</value>
+  </data>
+  <data name="Sold" xml:space="preserve">
+    <value>Sold</value>
+  </data>
+  <data name="Charged" xml:space="preserve">
+    <value>Charged</value>
+  </data>
+  <data name="Reached" xml:space="preserve">
+    <value>Reached</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="Ranting" xml:space="preserve">
+    <value>Ranting</value>
+  </data>
 </root>
