@@ -2570,5 +2570,117 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("Ranting", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Dashboard.
+        /// </summary>
+        public static string Dashboard {
+            get {
+                return ResourceManager.GetString("Dashboard", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome To Dashboard.
+        /// </summary>
+        public static string WelcomeToDashboard {
+            get {
+                return ResourceManager.GetString("WelcomeToDashboard", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Generate.
+        /// </summary>
+        public static string Generate {
+            get {
+                return ResourceManager.GetString("Generate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Unique Purchases.
+        /// </summary>
+        public static string UniquePurchases {
+            get {
+                return ResourceManager.GetString("UniquePurchases", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Than Last Week.
+        /// </summary>
+        public static string ThanLastWeek {
+            get {
+                return ResourceManager.GetString("ThanLastWeek", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Order Value.
+        /// </summary>
+        public static string OrderValue {
+            get {
+                return ResourceManager.GetString("OrderValue", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Order Quantity.
+        /// </summary>
+        public static string OrderQuantity {
+            get {
+                return ResourceManager.GetString("OrderQuantity", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Conversion Rate.
+        /// </summary>
+        public static string ConversionRate {
+            get {
+                return ResourceManager.GetString("ConversionRate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Top Suppliers.
+        /// </summary>
+        public static string TopSuppliers {
+            get {
+                return ResourceManager.GetString("TopSuppliers", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Top Insured.
+        /// </summary>
+        public static string TopInsured {
+            get {
+                return ResourceManager.GetString("TopInsured", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Claims Figures.
+        /// </summary>
+        public static string ClaimsFigures {
+            get {
+                return ResourceManager.GetString("ClaimsFigures", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Month.
+        /// </summary>
+        public static string Month {
+            get {
+                return ResourceManager.GetString("Month", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Week.
+        /// </summary>
+        public static string Week {
+            get {
+                return ResourceManager.GetString("Week", resourceCulture);
+            }
+        }
     }
 }

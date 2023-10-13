@@ -954,4 +954,46 @@
   <data name="Ranting" xml:space="preserve">
     <value>Despotricando</value>
   </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Panel Principal</value>
+  </data>
+  <data name="WelcomeToDashboard" xml:space="preserve">
+    <value>Bienvenido al Panel Principal</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generar</value>
+  </data>
+  <data name="UniquePurchases" xml:space="preserve">
+    <value>Compras Únicas</value>
+  </data>
+  <data name="ThanLastWeek" xml:space="preserve">
+    <value>Que la Semana Anterior</value>
+  </data>
+  <data name="OrderValue" xml:space="preserve">
+    <value>Valor del Pedido</value>
+  </data>
+  <data name="OrderQuantity" xml:space="preserve">
+    <value>Ordene la Cantidad</value>
+  </data>
+  <data name="ConversionRate" xml:space="preserve">
+    <value>Tasa de Conversión</value>
+  </data>
+  <data name="TopSuppliers" xml:space="preserve">
+    <value>Top Proveedores</value>
+  </data>
+  <data name="TopInsured" xml:space="preserve">
+    <value>Top Asegurado</value>
+  </data>
+  <data name="ClaimsFigures" xml:space="preserve">
+    <value>Cifras de Reclamaciones</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Año</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Semana</value>
+  </data>
 </root>
