@@ -1,0 +1,363 @@
+﻿@model core.Service.CreateCampaignModel
+
+<form id="CreateCampaing" class="row g-3 col-12" asp-action="@nameof(CampaignController.Create)" data-parsley-validate asp-controller="Campaign" method="post">
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+        <ol class="breadcrumb fs-sm mb-1">
+            <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item active"><a href="~/campaign/List">@webLoyal.Resources.language.Resources.Campaign</a></li>
+
+        </ol>
+        <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Campaigns </h4>
+    </div>
+        <div class="d-flex gap-2 mt-3 mt-md-0">
+            <button id="submitButton2" type="submit" class="btn btn-primary">@webLoyal.Resources.language.Resources.Accept</button>
+        </div>
+     
+
+</div>
+    <div class="row g-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Nombre <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" asp-for="DescripcionCampana" placeholder="Nombre de la campaña" required>
+                        <span asp-validation-for="DescripcionCampana" class="text-danger"></span>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Fecha Inicio <span class="text-danger">*</span></label>
+                                <input type="date" id="FechaInicio" asp-for="FechaInicio" class="form-control hasDatepicker" placeholder="From" required>
+                                <span asp-validation-for="FechaInicio" class="text-danger"></span>
+                            </div>
+                            <div class="col-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Fecha Fin <span class="text-danger">*</span></label>
+                                <input type="date" id="FechaFin" asp-for="FechaFin" class="form-control hasDatepicker" placeholder="To" required>
+                                <span asp-validation-for="FechaFin" class="text-danger"></span>
+                            </div>
+                            <div class="col-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Fecha Inicio Dobles</label>
+                                <input type="date" id="FechaInicioDoble" asp-for="FechaInicioDoble" class="form-control hasDatepicker" placeholder="From">
+                            </div>
+                            <div class="col-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Fecha Fin Dobles</label>
+                                <input type="date" id="FechaFinDoble" asp-for="FechaFinDoble" class="form-control hasDatepicker" placeholder="From">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" asp-for="Individual" type="checkbox" role="switch" id="Individual">
+                        <label class="form-check-label" for="Individual">Campaña  Individual  </label>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="RangoInicial" class="form-label">Rango Inicial</label>
+                            <input type="number" id="RangoInicial" asp-for="RangoInicial" class="form-control" disabled>
+                        </div>
+                        <div class="col-6">
+                            <label for="RangoFinal" class="form-label">Rango Final</label>
+                            <input type="number" id="RangoFinal" asp-for="RangoFinal" class="form-control" disabled>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <div class="col-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" asp-for="FormasPagos" type="checkbox" role="switch" id="FormasPagos">
+                            <label class="form-check-label" for="FormasPagos">Formas Pagos</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" asp-for="FormaAnual" role="switch" id="FormaAnual" disabled>
+                                <label class="form-check-label" for="FormaAnual">Forma anual</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" asp-for="FormaSemestral" role="switch" id="FormaSemestral" disabled>
+                                <label class="form-check-label" for="FormaSemestral">Forma Semestral</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" asp-for="FormaTrimestral" role="switch" id="FormaTrimestral" disabled>
+                                <label class="form-check-label" for="FormaTrimestral">Forma Trimestral</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" asp-for="FormaMensual" role="switch" id="FormaMensual" disabled>
+                                <label class="form-check-label" for="FormaMensual">Forma Mensual</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <div class="col-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" asp-for="Vidas" role="switch" id="Vidas">
+                            <label class="form-check-label" for="Vidas">Vidas</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+
+                        <div class="col-3">
+                            <label for="EdadInicial" class="form-label">Edad Inicial</label>
+                            <input type="number" id="EdadInicial" asp-for="EdadInicial" class="form-control">
+                        </div>
+                        <div class="col-3">
+                            <label for="EdadFinal" class="form-label">Edad Final</label>
+                            <input type="number" asp-for="EdadFinal" id="EdadFinal" class="form-control">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>        
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <div class="col-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" asp-for="Productos" type="checkbox" role="switch" id="Productos">
+                            <label class="form-check-label" for="Productos">Productos</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" asp-for="Beyond" role="switch" id="Beyond" disabled>
+                                <label class="form-check-label" for="Beyond">Beyond</label>
+                            </div>
+                            <input class="form-control" asp-for="BeyondMeta" type="number" id="BeyondMeta" disabled>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" asp-for="FormaSemestral" role="switch" id="Privilege" disabled>
+                                <label class="form-check-label" for="Privilege">Privilege</label>
+                            </div>
+                            <input class="form-control" asp-for="PrivilegeMeta" type="number" id="PrivilegeMeta" disabled>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" asp-for="FormaTrimestral" role="switch" id="Liberty" disabled>
+                                <label class="form-check-label" for="Liberty">Liberty</label>
+                            </div>
+                            <input class="form-control" asp-for="LibertyMeta" type="number" id="LibertyMeta" disabled>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" asp-for="FormaMensual" role="switch" id="Legacy" disabled>
+                                <label class="form-check-label" for="Legacy">Legacy</label>
+                            </div>
+                            <input class="form-control" asp-for="LegacyMeta" type="number" id="LegacyMeta" disabled>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="col-6">
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</form>
+
+
+@section    Scripts{
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var checkbox = document.getElementById('Individual');
+            var rangoInicial = document.getElementById('RangoInicial');
+            var rangoFinal = document.getElementById('RangoFinal');
+
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    rangoInicial.disabled = false;
+                    rangoFinal.disabled = false;
+                } else {
+                    rangoInicial.disabled = true;
+                    rangoFinal.disabled = true;
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var formasPagosCheckbox = document.getElementById('FormasPagos');
+            var formaAnualCheckbox = document.getElementById('FormaAnual');
+            var formaSemestralCheckbox = document.getElementById('FormaSemestral');
+            var formaTrimestralCheckbox = document.getElementById('FormaTrimestral');
+            var formaMensualCheckbox = document.getElementById('FormaMensual');
+
+            var checkboxes = [formaAnualCheckbox, formaSemestralCheckbox, formaTrimestralCheckbox, formaMensualCheckbox];
+
+            function toggleCheckboxes(disabled) {
+                checkboxes.forEach(function (checkbox) {
+                    checkbox.disabled = disabled;
+                });
+            }
+
+            formasPagosCheckbox.addEventListener('change', function () {
+                toggleCheckboxes(!this.checked);
+            });
+
+            // Deshabilitar los checkboxes al cargar la página
+            toggleCheckboxes(true);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var vidasCheckbox = document.getElementById('Vidas');
+            var edadInicialInput = document.getElementById('EdadInicial');
+            var edadFinalInput = document.getElementById('EdadFinal');
+
+            function toggleInputs(disabled) {
+                edadInicialInput.disabled = disabled;
+                edadFinalInput.disabled = disabled;
+            }
+
+            vidasCheckbox.addEventListener('change', function () {
+                toggleInputs(!this.checked);
+            });
+
+            // Deshabilitar los inputs al cargar la página
+            toggleInputs(true);
+        });
+
+        $("#CreateCampaing").submit(function (event) {
+            event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+            var form = $(this);
+
+            //if (form.valid()) {
+            //    return;
+            //}
+
+            // Deshabilitar el botón de enviar y agregar clases para activar el spinner
+            var submitButton = form.find('#submitButton2');
+            submitButton.prop('disabled', true);
+            submitButton.addClass('btn btn-primary');
+            submitButton.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> &nbsp;Loading...');
+
+            // Mostrar un mensaje de carga con SweetAlert
+            Swal.fire({
+                title: 'Procesando',
+                text: 'Espere un momento...',
+                icon: 'info',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                timer: 2000 // Duración de espera en milisegundos (en este caso, 2 segundos)
+            }).then(function () {
+                // Llamar a tu método AJAX
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: form.serialize(), // Serializar los datos del formulario
+                    success: function (result) {
+                        if (result.success) {
+                            // Mostrar el mensaje de confirmación sin botón de acción
+                            Swal.fire({
+                                title: result.title,
+                                text: result.text,
+                                icon: result.icon,
+                                showConfirmButton: false,
+                                allowOutsideClick: false,
+                                timer: 2000 // Duración de espera en milisegundos antes de redireccionar (en este caso, 2 segundos)
+                            }).then(function () {
+                                // Redireccionar
+                                window.location.href = "/campaign/List";
+                            });
+                        } else {
+                            Swal.fire(result.title, result.message, result.type);
+                        }
+                    },
+                    error: function () {
+                        Swal.fire(result.title, result.message, result.type);
+                    },
+                    complete: function () {
+                        // Habilitar el botón de enviar después de completar la solicitud y eliminar el spinner
+                        submitButton.prop('disabled', false);
+                        submitButton.removeClass('');
+                        submitButton.html('Aceptar');
+                    }
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var productosCheckbox = document.getElementById('Productos');
+            var beyondCheckbox = document.getElementById('Beyond');
+            var privilegeCheckbox = document.getElementById('Privilege');
+            var libertyCheckbox = document.getElementById('Liberty');
+            var legacyCheckbox = document.getElementById('Legacy');
+            var beyondMetaInput = document.getElementById('BeyondMeta');
+            var privilegeMetaInput = document.getElementById('PrivilegeMeta');
+            var libertyMetaInput = document.getElementById('LibertyMeta');
+            var legacyMetaInput = document.getElementById('LegacyMeta');
+
+            function toggleElement(element, enabled) {
+                element.disabled = !enabled;
+            }
+
+            productosCheckbox.addEventListener('change', function () {
+                var isChecked = this.checked;
+                toggleElement(beyondCheckbox, isChecked);
+                toggleElement(privilegeCheckbox, isChecked);
+                toggleElement(libertyCheckbox, isChecked);
+                toggleElement(legacyCheckbox, isChecked);
+            });
+
+            beyondCheckbox.addEventListener('change', function () {
+                toggleElement(beyondMetaInput, this.checked);
+            });
+
+            privilegeCheckbox.addEventListener('change', function () {
+                toggleElement(privilegeMetaInput, this.checked);
+            });
+
+            libertyCheckbox.addEventListener('change', function () {
+                toggleElement(libertyMetaInput, this.checked);
+            });
+
+            legacyCheckbox.addEventListener('change', function () {
+                toggleElement(legacyMetaInput, this.checked);
+            });
+        });
+
+    </script>
+}

@@ -23,13 +23,10 @@ namespace webLoyal.Controllers
             var x = await _campain.GetCampana(model);
             foreach (var item in x.DtDetalleCampanas) 
             {
-                 
                 item.FormaAnual = FormaAnual;
                 item.FormaSemestral = FormaSemestral;
                 item.FormaTrimestral = FormaTrimestral;
                 item.FormaMensual = FormaMensual;
-               
-
             };
             x.DtCampanas.FechaFin = FechaFin;
             x.DtCampanas.FechaInicio = FechaInicio;
@@ -41,6 +38,65 @@ namespace webLoyal.Controllers
             var model = await _campain.GetListCampana();
 
             return View(model.ToList());
+        }        
+        [Route("/campaign/Create")]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/campaign/Create")]
+        public async Task<IActionResult> Create(CreateCampaignModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    if (await _campain.CreateCampana(model))
+                    {
+                        return Json(new
+                        {
+                            success = true,
+                            title = "Campaña creado con exito",
+                            text = "Gracias",
+                            icon = "success",
+                            timer = 2000
+                        });
+                    }
+                    else
+                    {
+                        return Json(new
+                        {
+                            success = false,
+                            title = "Error al crear la solicitud",
+                            message = "Error",
+                            type = "error"
+                        });
+
+                    }
+                }else 
+                {
+                    return Json(new
+                    {
+                        success = false,
+                        title = "Debe validar los campos",
+                        message = "Error",
+                        type = "error"
+                    });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Json(new
+                {
+                    success = false,
+                    title = "Error al crear la solicitud",
+                    message = ex.Message.ToString(),
+                    type = "error"
+                });
+            }
         }
         //[HttpGet]
         //[Route("/campaign/index2?CodigoCampana={$CodigoCampana}&FormaAnual=1&FormaSemestral=1&FormaTrimestral=1&FormaMensual=1&FechaInicio=2023-09-05&FechaInicio=2023-09-28")]

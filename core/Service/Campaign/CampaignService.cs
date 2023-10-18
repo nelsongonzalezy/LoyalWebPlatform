@@ -19,5 +19,11 @@
 
             return y.Content.AsQueryable();
         }
+        public async Task<bool> CreateCampana(CreateCampaignModel model)
+        {
+            var y = await _unAuthorized.PostUnAuthorizedAsync<CreateCampaignModel, bool>("api/v1/Campana/Crear", model);
+
+            return y;
+        }
     }
 }

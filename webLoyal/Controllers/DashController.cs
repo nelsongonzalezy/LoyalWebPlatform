@@ -29,5 +29,27 @@ namespace webLoyal.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public async Task<IActionResult> MiVistaParcial()
+        {
+            var model = await _IBoardService.GetSales(0, 0);
+            //List<VentasTotalesModel> ventasTotales = model.VentasTotales.ToList();
+
+            //List<VentasPorAnioModel> ventasAgrupadas = ventasTotales
+            //    .GroupBy(v => v.AnioFechaCobro)
+            //    .Select(g => new VentasPorAnioModel
+            //    {
+            //        Anio = g.Key,
+            //        Ventas = g.Select(v => new VentaModel
+            //        {
+            //            Mes = v.MesFechaCobro,
+            //            Total = v.ValorCuota
+            //        }).ToList()
+            //    })
+            //    .ToList();
+
+
+            return PartialView("_MiVistaParcial", model.VentasTotales);
+        }
     }
 }
