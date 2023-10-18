@@ -1,0 +1,59 @@
+﻿@model List<core.Service.VentasTotalesModel>
+
+<div id="chart"></div>
+
+<div id="chartVentasTotales"></div>
+<div id="chartNuevosNegocios"></div>
+<div id="chartRenovaciones"></div>
+
+
+
+
+<script>
+
+        var options = {
+            series: [
+                {
+                    name: 'VentasTotales',
+                    data: @Html.Raw(Json.Serialize(Model.Select(v => v.ValorCuota).ToList()))
+                }
+            ],
+            chart: {
+                type: 'bar',
+                height: 430
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: true,
+                    columnWidth: '55%',
+                    endingShape: 'rounded'
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            xaxis: {
+                categories: @Html.Raw(Json.Serialize(Model.Select(v => v.MesFechaCobro).ToList()))
+            },
+            fill: {
+                opacity: 1
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+    </script>
+

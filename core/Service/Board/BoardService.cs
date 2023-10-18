@@ -2,6 +2,11 @@
 {
     public class BoardService : IBoardService
     {
+        private readonly IHttpServicesUnAuthorized _unAuthorized;
+        public BoardService(IHttpServicesUnAuthorized unAuthorized)
+        {
+            _unAuthorized = unAuthorized;
+        }
         public async Task<IQueryable<BoardAgentsModel>> GetBoardAgents()
         {
             var ret = new List<BoardAgentsModel>();
@@ -42,6 +47,12 @@
             }
 
             return ret.AsQueryable();
+        }
+
+        public async Task<ConsultaVentasGeneralModel> GetSales(int year,int month) 
+        {
+            var  x= await _unAuthorized.GetUnAuthorizedAsync<ConsultaVentasGeneralResponse>("api/v1/Certificados/ConsultaVentasCertificados?anio="+ year + "&mes="+ month);
+            return x.Content;
         }
     }
 }

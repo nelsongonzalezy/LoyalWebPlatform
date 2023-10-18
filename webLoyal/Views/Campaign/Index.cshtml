@@ -23,7 +23,7 @@
         <button id="enviarDatos" class="btn btn-primary d-flex align-items-center gap-2">@webLoyal.Resources.language.Resources.UpdateData</button>
         @*<a href="~/home/InConstruction" type="button" class="btn btn-primary d-flex align-items-center gap-2"><span class="d-none d-sm-inline">@webLoyal.Resources.language.Resources.CreateNewCampaign</span></a>*@
         <div class="btn-group">
-            <a href="~/home/InConstruction" type="button" class="btn btn-primary d-flex align-items-center gap-2">@webLoyal.Resources.language.Resources.CreateNewCampaign</a>
+            <a href="~/campaign/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2">@webLoyal.Resources.language.Resources.CreateNewCampaign</a>
             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Toggle Dropdown</span>
             </button>
@@ -574,7 +574,7 @@
             var fecha2 = $("#FechaFin").val();
 
             // Crear la URL de la petición GET
-            var nuevaURL = "/campaign/Index?CodigoCampana=3" +
+            var nuevaURL = "/campaign/Index?CodigoCampana=25" +
                 "&FormaAnual=" + boolw1 +
                 "&FormaSemestral=" + boolw2 +
                 "&FormaTrimestral=" + boolw3 +

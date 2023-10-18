@@ -12,7 +12,7 @@
     </div>
 
     <div class="d-flex gap-2 mt-3 mt-md-0">
-        <a href="~/home/InConstruction" type="button" class="btn btn-primary d-flex align-items-center gap-2"><span class="d-none d-sm-inline">@webLoyal.Resources.language.Resources.CreateNewCampaign</span></a>
+        <a href="~/campaign/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2"><span class="d-none d-sm-inline">@webLoyal.Resources.language.Resources.CreateNewCampaign</span></a>
     </div>
 
 </div>
@@ -40,7 +40,7 @@
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                    <td> <a class="btn btn-outline-tertiary"> @item.CodigoCampana</a> </td>
+                                    <td> <a href="~/campaign/index?CodigoCampana=@item.CodigoCampana&FormaAnual=true" class="btn btn-outline-tertiary"> @item.CodigoCampana</a> </td>
                                     <td> @item.DescripcionCampana </td>
                                     <td>  @item.FechaInicio </td>
                                     <td>  @item.FechaFin </td>

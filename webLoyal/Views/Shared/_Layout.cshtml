@@ -51,8 +51,10 @@
                     <a href="#" class="nav-label">Ventas</a>
                     <ul class="nav nav-sidebar">
                         <li class="nav-item">
+                            <a id="9" class="nav-link" asp-action="index" asp-controller="Dash"><i class="ri-pie-chart-2-fill"></i> <span>Dash</span></a>
+
                             <a id="3" href="~/agents/index" class="nav-link"><i class="ri-pie-chart-2-fill"></i> <span>Agentes</span></a>
-                            <a id="4" href="~/campaign/index?CodigoCampana=3&FormaAnual=true" class="nav-link"><i class="ri-medal-2-line"></i> <span>Campañas</span></a>
+                            <a id="4" href="~/campaign/index?CodigoCampana=25&FormaAnual=true&FormaSemestral=true&FormaTrimestral=true&FormaMensual=true" class="nav-link"><i class="ri-medal-2-line"></i> <span>Campañas</span></a>
                         </li>
                     </ul>
                 </div>
@@ -223,11 +225,27 @@
             }
         });
     });
+    $(document).ready(function () {
+        $('.ajax-action').click(function (e) {
+            e.preventDefault();
+
+            var action = $(this).attr('asp-action');
+            var controller = $(this).attr('asp-controller');
+
+            $.ajax({
+                url: '/' + controller + '/' + action,
+                type: 'GET',
+                success: function (data) {
+                    $('body').html(data);
+                }
+            });
+        });
+    });
+
 
 </script>
 
 
 
 
-v
 </html>
