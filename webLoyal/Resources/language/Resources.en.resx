@@ -1083,4 +1083,43 @@
   <data name="Away" xml:space="preserve">
     <value>Away</value>
   </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="IfYouWantToAssociateAnAgentSelect" xml:space="preserve">
+    <value>If you want to associate an agent, select</value>
+  </data>
+  <data name="StartOfValidity" xml:space="preserve">
+    <value>Start of Validity</value>
+  </data>
+  <data name="SelectTheCountry" xml:space="preserve">
+    <value>Select the Country</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>Applicant</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="SelectTheGenre" xml:space="preserve">
+    <value>Select the Genre</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Spouse" xml:space="preserve">
+    <value>Spouse</value>
+  </data>
+  <data name="NumberOfChildrenOptional" xml:space="preserve">
+    <value>Number of Children (Optional)</value>
+  </data>
+  <data name="Transplant" xml:space="preserve">
+    <value>Transplant</value>
+  </data>
+  <data name="MaternityComplications" xml:space="preserve">
+    <value>Maternity Complications</value>
+  </data>
 </root>

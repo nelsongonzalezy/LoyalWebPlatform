@@ -2914,5 +2914,109 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("Away", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Draft.
+        /// </summary>
+        public static string Draft {
+            get {
+                return ResourceManager.GetString("Draft", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to If You Want To Associate An Agent Select.
+        /// </summary>
+        public static string IfYouWantToAssociateAnAgentSelect {
+            get {
+                return ResourceManager.GetString("IfYouWantToAssociateAnAgentSelect", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Start Of Validity.
+        /// </summary>
+        public static string StartOfValidity {
+            get {
+                return ResourceManager.GetString("StartOfValidity", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Select The Country.
+        /// </summary>
+        public static string SelectTheCountry {
+            get {
+                return ResourceManager.GetString("SelectTheCountry", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Applicant.
+        /// </summary>
+        public static string Applicant {
+            get {
+                return ResourceManager.GetString("Applicant", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Sex.
+        /// </summary>
+        public static string Sex {
+            get {
+                return ResourceManager.GetString("Sex", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Select The Genre.
+        /// </summary>
+        public static string SelectTheGenre {
+            get {
+                return ResourceManager.GetString("SelectTheGenre", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Female.
+        /// </summary>
+        public static string Female {
+            get {
+                return ResourceManager.GetString("Female", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Male.
+        /// </summary>
+        public static string Male {
+            get {
+                return ResourceManager.GetString("Male", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Spouse.
+        /// </summary>
+        public static string Spouse {
+            get {
+                return ResourceManager.GetString("Spouse", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Number Of Children Optional.
+        /// </summary>
+        public static string NumberOfChildrenOptional {
+            get {
+                return ResourceManager.GetString("NumberOfChildrenOptional", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Transplant.
+        /// </summary>
+        public static string Transplant {
+            get {
+                return ResourceManager.GetString("Transplant", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Maternity Complications.
+        /// </summary>
+        public static string MaternityComplications {
+            get {
+                return ResourceManager.GetString("MaternityComplications", resourceCulture);
+            }
+        }
     }
 }

@@ -1079,8 +1079,47 @@
   </data>
   <data name="Rating" xml:space="preserve">
     <value>Clasificación</value>
-  </data
+  </data>
   <data name="Away" xml:space="preserve">
     <value>Lejos</value>
-  </data>>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Borrador</value>
+  </data>
+  <data name="IfYouWantToAssociateAnAgentSelect" xml:space="preserve">
+    <value>Si desea asociar un agente, seleccione</value>
+  </data>
+  <data name="StartOfValidity" xml:space="preserve">
+    <value>Inicio de Vigencia</value>
+  </data>
+  <data name="SelectTheCountry" xml:space="preserve">
+    <value>Seleccione el país</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>Solicitante</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Sexo</value>
+  </data>
+  <data name="SelectTheGenre" xml:space="preserve">
+    <value>Seleccione el género</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Femenino</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Masculino</value>
+  </data>
+  <data name="Spouse" xml:space="preserve">
+    <value>Cónyuge</value>
+  </data>
+  <data name="NumberOfChildrenOptional" xml:space="preserve">
+    <value>Número de niños (opcional)</value>
+  </data>
+  <data name="Transplant" xml:space="preserve">
+    <value>Trasplante</value>
+  </data>
+  <data name="MaternityComplications" xml:space="preserve">
+    <value>Complicaciones de la maternidad</value>
+  </data>
 </root>
