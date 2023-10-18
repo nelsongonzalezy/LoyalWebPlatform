@@ -996,4 +996,91 @@
   <data name="Week" xml:space="preserve">
     <value>Week</value>
   </data>
+  <data name="HelpdeskService" xml:space="preserve">
+    <value>Helpdesk Service</value>
+  </data>
+  <data name="SupportRequests" xml:space="preserve">
+    <value>Support Requests</value>
+  </data>
+  <data name="SupportAgents" xml:space="preserve">
+    <value>Support Agents</value>
+  </data>
+  <data name="ComplaintsReceived" xml:space="preserve">
+    <value>Complaints Received</value>
+  </data>
+  <data name="ComplaintsResolved" xml:space="preserve">
+    <value>Complaints Resolved</value>
+  </data>
+  <data name="CurrentTicketStatus" xml:space="preserve">
+    <value>Current Ticket Status</value>
+  </data>
+  <data name="HigherThanLastMonth" xml:space="preserve">
+    <value>higher than last month</value>
+  </data>
+  <data name="TheTotalNumberOfComplaintsThatHaveBeenReceived" xml:space="preserve">
+    <value>The total number of complaints that have been received</value>
+  </data>
+  <data name="TimeToResolvedComplaint" xml:space="preserve">
+    <value>Time to Resolved Complaint</value>
+  </data>
+  <data name="TheAverageTimeTakenToResolveComplaints" xml:space="preserve">
+    <value>The average time taken to resolve complaints</value>
+  </data>
+  <data name="AverageSpeedOfAnswer" xml:space="preserve">
+    <value>Average Speed of Answer</value>
+  </data>
+  <data name="TicketsByRequestType" xml:space="preserve">
+    <value>Tickets By Request Type</value>
+  </data>
+  <data name="OverallRating" xml:space="preserve">
+    <value>Overall Rating</value>
+  </data>
+  <data name="MeasuresTheQualityOrYourSupportTeamsEfforts" xml:space="preserve">
+    <value>Measures the quality or your support team’s efforts</value>
+  </data>
+  <data name="PerformanceScore" xml:space="preserve">
+    <value>Performance Score</value>
+  </data>
+  <data name="ThePercentageValueAssignedToTheOperatingMetric" xml:space="preserve">
+    <value>The percentage value assigned to the operating metric</value>
+  </data>
+  <data name="AgentPerformanceScore" xml:space="preserve">
+    <value>Agent Performance Score</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="DashbyteAllRightsReserved" xml:space="preserve">
+    <value>Dashbyte. All Rights Reserved</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="Excellent" xml:space="preserve">
+    <value>Excellent</value>
+  </data>
+  <data name="VeryGood" xml:space="preserve">
+    <value>Very Good</value>
+  </data>
+  <data name="Good" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="Fair" xml:space="preserve">
+    <value>Fair</value>
+  </data>
+  <data name="Poor" xml:space="preserve">
+    <value>Poor</value>
+  </data>
+  <data name="AgentID" xml:space="preserve">
+    <value>Agent ID</value>
+  </data>
+  <data name="AgentName" xml:space="preserve">
+    <value>Agent Name</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="Away" xml:space="preserve">
+    <value>Away</value>
+  </data>
 </root>

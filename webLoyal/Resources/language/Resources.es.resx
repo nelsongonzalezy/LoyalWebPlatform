@@ -996,4 +996,91 @@
   <data name="Week" xml:space="preserve">
     <value>Semana</value>
   </data>
+  <data name="HelpdeskService" xml:space="preserve">
+    <value>Servicio de Asistencia Técnica</value>
+  </data>
+  <data name="SupportRequests" xml:space="preserve">
+    <value>Solicitudes de Soporte</value>
+  </data>
+  <data name="SupportAgents" xml:space="preserve">
+    <value>agentes de Soporte</value>
+  </data>
+  <data name="ComplaintsReceived" xml:space="preserve">
+    <value>Quejas Recibidas</value>
+  </data>
+  <data name="ComplaintsResolved" xml:space="preserve">
+    <value>Quejas Resueltas</value>
+  </data>
+  <data name="CurrentTicketStatus" xml:space="preserve">
+    <value>Estado Actual del Ticket</value>
+  </data>
+  <data name="HigherThanLastMonth" xml:space="preserve">
+    <value>más alto que el mes pasado</value>
+  </data>
+  <data name="TheTotalNumberOfComplaintsThatHaveBeenReceived" xml:space="preserve">
+    <value>El número total de quejas que se han recibido.</value>
+  </data>
+  <data name="TimeToResolvedComplaint" xml:space="preserve">
+    <value>Tiempo Para Resolver La Queja</value>
+  </data>
+  <data name="TheAverageTimeTakenToResolveComplaints" xml:space="preserve">
+    <value>El Tiempo Promedio Necesario Para Resolver Las Quejas</value>
+  </data>
+  <data name="AverageSpeedOfAnswer" xml:space="preserve">
+    <value>Velocidad Promedio de Respuesta</value>
+  </data>
+  <data name="TicketsByRequestType" xml:space="preserve">
+    <value>Tickets By Request Type</value>
+  </data>
+  <data name="OverallRating" xml:space="preserve">
+    <value>Calificación Global</value>
+  </data>
+  <data name="MeasuresTheQualityOrYourSupportTeamsEfforts" xml:space="preserve">
+    <value>Mide la calidad de los esfuerzos de su equipo de soporte.</value>
+  </data>
+  <data name="PerformanceScore" xml:space="preserve">
+    <value>Puntuación de Rendimiento</value>
+  </data>
+  <data name="ThePercentageValueAssignedToTheOperatingMetric" xml:space="preserve">
+    <value>El valor porcentual asignado a la métrica operativa.</value>
+  </data>
+  <data name="AgentPerformanceScore" xml:space="preserve">
+    <value>APuntuación de Rendimiento del Agente</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pendiente</value>
+  </data>
+  <data name="DashbyteAllRightsReserved" xml:space="preserve">
+    <value>Dashbyte. Reservados todos los derechos</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Creado por</value>
+  </data>
+  <data name="Excellent" xml:space="preserve">
+    <value>Excelente</value>
+  </data>
+  <data name="VeryGood" xml:space="preserve">
+    <value>Muy bien</value>
+  </data>
+  <data name="Good" xml:space="preserve">
+    <value>Bien</value>
+  </data>
+  <data name="Fair" xml:space="preserve">
+    <value>Razonable</value>
+  </data>
+  <data name="Poor" xml:space="preserve">
+    <value>Pobre</value>
+  </data>
+  <data name="AgentID" xml:space="preserve">
+    <value>ID del Agente</value>
+  </data>
+  <data name="AgentName" xml:space="preserve">
+    <value>Nombre del Agente</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Clasificación</value>
+  </data
+  <data name="Away" xml:space="preserve">
+    <value>Lejos</value>
+  </data>>
 </root>
