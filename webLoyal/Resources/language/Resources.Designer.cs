@@ -2401,5 +2401,286 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("GenerateLetterOfGuarantee", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Office.
+        /// </summary>
+        public static string ClaimOffice {
+            get {
+                return ResourceManager.GetString("ClaimOffice", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Letter Of Claim Department.
+        /// </summary>
+        public static string ClaimDepartment {
+            get {
+                return ResourceManager.GetString("ClaimDepartment", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Status Description.
+        /// </summary>
+        public static string ClaimStatusDescription {
+            get {
+                return ResourceManager.GetString("ClaimStatusDescription", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Description Of The Claim Type.
+        /// </summary>
+        public static string DescriptionOfTheClaimType {
+            get {
+                return ResourceManager.GetString("DescriptionOfTheClaimType", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Description Of Origin.
+        /// </summary>
+        public static string DescriptionOfOrigin {
+            get {
+                return ResourceManager.GetString("DescriptionOfOrigin", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Description.
+        /// </summary>
+        public static string ClaimDescription {
+            get {
+                return ResourceManager.GetString("ClaimDescription", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Deductible Value.
+        /// </summary>
+        public static string DeductibleValue {
+            get {
+                return ResourceManager.GetString("DeductibleValue", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agent History.
+        /// </summary>
+        public static string AgentHistory {
+            get {
+                return ResourceManager.GetString("AgentHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agents History.
+        /// </summary>
+        public static string AgentsHistory {
+            get {
+                return ResourceManager.GetString("AgentsHistory", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to New Business Policies.
+        /// </summary>
+        public static string NewBusinessPolicies {
+            get {
+                return ResourceManager.GetString("NewBusinessPolicies", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Charged Policies.
+        /// </summary>
+        public static string ChargedPolicies {
+            get {
+                return ResourceManager.GetString("ChargedPolicies", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Policies Under Evaluation.
+        /// </summary>
+        public static string PoliciesUnderEvaluation {
+            get {
+                return ResourceManager.GetString("PoliciesUnderEvaluation", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Approved Policies.
+        /// </summary>
+        public static string ApprovedPolicies {
+            get {
+                return ResourceManager.GetString("ApprovedPolicies", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agents Id.
+        /// </summary>
+        public static string AgentsId {
+            get {
+                return ResourceManager.GetString("AgentsId", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Agents Status.
+        /// </summary>
+        public static string AgentsStatus {
+            get {
+                return ResourceManager.GetString("AgentsId", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Quota.
+        /// </summary>
+        public static string Quota {
+            get {
+                return ResourceManager.GetString("Quota", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Sold.
+        /// </summary>
+        public static string Sold {
+            get {
+                return ResourceManager.GetString("Sold", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Charged.
+        /// </summary>
+        public static string Charged {
+            get {
+                return ResourceManager.GetString("Charged", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Reached.
+        /// </summary>
+        public static string Reached {
+            get {
+                return ResourceManager.GetString("Reached", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Progress.
+        /// </summary>
+        public static string Progress {
+            get {
+                return ResourceManager.GetString("Progress", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Ranting.
+        /// </summary>
+        public static string Ranting {
+            get {
+                return ResourceManager.GetString("Ranting", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Dashboard.
+        /// </summary>
+        public static string Dashboard {
+            get {
+                return ResourceManager.GetString("Dashboard", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome To Dashboard.
+        /// </summary>
+        public static string WelcomeToDashboard {
+            get {
+                return ResourceManager.GetString("WelcomeToDashboard", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Generate.
+        /// </summary>
+        public static string Generate {
+            get {
+                return ResourceManager.GetString("Generate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Unique Purchases.
+        /// </summary>
+        public static string UniquePurchases {
+            get {
+                return ResourceManager.GetString("UniquePurchases", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Than Last Week.
+        /// </summary>
+        public static string ThanLastWeek {
+            get {
+                return ResourceManager.GetString("ThanLastWeek", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Order Value.
+        /// </summary>
+        public static string OrderValue {
+            get {
+                return ResourceManager.GetString("OrderValue", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Order Quantity.
+        /// </summary>
+        public static string OrderQuantity {
+            get {
+                return ResourceManager.GetString("OrderQuantity", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Conversion Rate.
+        /// </summary>
+        public static string ConversionRate {
+            get {
+                return ResourceManager.GetString("ConversionRate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Top Suppliers.
+        /// </summary>
+        public static string TopSuppliers {
+            get {
+                return ResourceManager.GetString("TopSuppliers", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Top Insured.
+        /// </summary>
+        public static string TopInsured {
+            get {
+                return ResourceManager.GetString("TopInsured", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Claims Figures.
+        /// </summary>
+        public static string ClaimsFigures {
+            get {
+                return ResourceManager.GetString("ClaimsFigures", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Month.
+        /// </summary>
+        public static string Month {
+            get {
+                return ResourceManager.GetString("Month", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Week.
+        /// </summary>
+        public static string Week {
+            get {
+                return ResourceManager.GetString("Week", resourceCulture);
+            }
+        }
     }
 }

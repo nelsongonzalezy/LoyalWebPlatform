@@ -891,4 +891,109 @@
   <data name="NOTICEOFCONFIDENTIALITY" xml:space="preserve">
     <value>NOTIFICACIÓN DE CONFIDENCIALIDAD</value>
   </data>
+  <data name="ClaimOffice" xml:space="preserve">
+    <value>Oficina de Reclamos</value>
+  </data>
+  <data name="ClaimDepartment" xml:space="preserve">
+    <value>Departamento de Reclamos</value>
+  </data>
+  <data name="ClaimStatusDescription" xml:space="preserve">
+    <value>Descripción del Estado Reclamo</value>
+  </data>
+  <data name="DescriptionOfTheClaimType" xml:space="preserve">
+    <value>Descripción del Tipo Reclamo</value>
+  </data>
+  <data name="DescriptionOfOrigin" xml:space="preserve">
+    <value>Descripcion del Origen</value>
+  </data>
+  <data name="ClaimDescription" xml:space="preserve">
+    <value>Descripcion del Reclamo</value>
+  </data>
+  <data name="DeductibleValue" xml:space="preserve">
+    <value>Valor Deducible</value>
+  </data>
+  <data name="AgentHistory" xml:space="preserve">
+    <value>Historial de Agente</value>
+  </data>
+  <data name="AgentsHistory" xml:space="preserve">
+    <value>Historial de Agentes</value>
+  </data>
+  <data name="NewBusinessPolicies" xml:space="preserve">
+    <value>New Business Policies</value>
+  </data>
+  <data name="ChargedPolicies" xml:space="preserve">
+    <value>Charged Policies</value>
+  </data>
+  <data name="PoliciesUnderEvaluation" xml:space="preserve">
+    <value>Policies Under Evaluation</value>
+  </data>
+  <data name="ApprovedPolicies" xml:space="preserve">
+    <value>Approved Policies</value>
+  </data>
+  <data name="AgentsId" xml:space="preserve">
+    <value>AIdentificación de Agentes</value>
+  </data>
+  <data name="AgentsStatus" xml:space="preserve">
+    <value>Estado de los Agentes</value>
+  </data>
+  <data name="Quota" xml:space="preserve">
+    <value>Cuota</value>
+  </data>
+  <data name="Sold" xml:space="preserve">
+    <value>Vendido</value>
+  </data>
+  <data name="Charged" xml:space="preserve">
+    <value>Cargado</value>
+  </data>
+  <data name="Reached" xml:space="preserve">
+    <value>Alcanzado</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progreso</value>
+  </data>
+  <data name="Ranting" xml:space="preserve">
+    <value>Despotricando</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Panel Principal</value>
+  </data>
+  <data name="WelcomeToDashboard" xml:space="preserve">
+    <value>Bienvenido al Panel Principal</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generar</value>
+  </data>
+  <data name="UniquePurchases" xml:space="preserve">
+    <value>Compras Únicas</value>
+  </data>
+  <data name="ThanLastWeek" xml:space="preserve">
+    <value>Que la Semana Anterior</value>
+  </data>
+  <data name="OrderValue" xml:space="preserve">
+    <value>Valor del Pedido</value>
+  </data>
+  <data name="OrderQuantity" xml:space="preserve">
+    <value>Ordene la Cantidad</value>
+  </data>
+  <data name="ConversionRate" xml:space="preserve">
+    <value>Tasa de Conversión</value>
+  </data>
+  <data name="TopSuppliers" xml:space="preserve">
+    <value>Top Proveedores</value>
+  </data>
+  <data name="TopInsured" xml:space="preserve">
+    <value>Top Asegurado</value>
+  </data>
+  <data name="ClaimsFigures" xml:space="preserve">
+    <value>Cifras de Reclamaciones</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Año</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Semana</value>
+  </data>
 </root>

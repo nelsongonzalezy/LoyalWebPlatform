@@ -690,6 +690,9 @@
   <data name="OwnerCode" xml:space="preserve">
     <value>Owner Code</value>
   </data>
+  <data name="OwnerName" xml:space="preserve">
+    <value>OwnerName</value>
+  </data>
   <data name="NumberInsured" xml:space="preserve">
     <value>Number Insured</value>
   </data>
@@ -875,5 +878,131 @@
   </data>
   <data name="Emails" xml:space="preserve">
     <value>Emails</value>
+  </data>
+  <data name="GenerateGuaranteeLetter" xml:space="preserve">
+    <value>Generate Guarantee Letter</value>
+  </data>
+  <data name="GenerateLetterOfGuarantee" xml:space="preserve">
+    <value>Generate Letter Of Guarantee</value>
+  </data>
+  <data name="BudgetNumber" xml:space="preserve">
+    <value>Budget Number</value>
+  </data>
+  <data name="AdmissionsDepartment" xml:space="preserve">
+    <value>Admissions Department</value>
+  </data>
+  <data name="DeductibleAmount" xml:space="preserve">
+    <value>Deductible Amount</value>
+  </data>
+  <data name="USDInsuredLiability" xml:space="preserve">
+    <value>USD Insured Liability</value>
+  </data>
+  <data name="NOTICEOFCONFIDENTIALITY" xml:space="preserve">
+    <value>NOTICE OF CONFIDENTIALITY</value>
+  </data>
+  <data name="ClaimOffice" xml:space="preserve">
+    <value>Claim Office</value>
+  </data>
+  <data name="ClaimDepartment" xml:space="preserve">
+    <value>Claim Department</value>
+  </data>
+  <data name="ClaimStatusDescription" xml:space="preserve">
+    <value>Claim Status Description</value>
+  </data>
+  <data name="DescriptionOfTheClaimType" xml:space="preserve">
+    <value>Description of the Claim Type</value>
+  </data>
+  <data name="DescriptionOfOrigin" xml:space="preserve">
+    <value>Description of Origin</value>
+  </data>
+  <data name="ClaimDescription" xml:space="preserve">
+    <value>Claim Description</value>
+  </data>
+  <data name="DeductibleValue" xml:space="preserve">
+    <value>Deductible Value</value>
+  </data>
+  <data name="AgentHistory" xml:space="preserve">
+    <value>Agent History</value>
+  </data>
+  <data name="AgentsHistory" xml:space="preserve">
+    <value>Agents History</value>
+  </data>
+  <data name="NewBusinessPolicies" xml:space="preserve">
+    <value>New Business Policies</value>
+  </data>
+  <data name="ChargedPolicies" xml:space="preserve">
+    <value>Charged Policies</value>
+  </data>
+  <data name="PoliciesUnderEvaluation" xml:space="preserve">
+    <value>Policies Under Evaluation</value>
+  </data>
+  <data name="ApprovedPolicies" xml:space="preserve">
+    <value>Approved Policies</value>
+  </data>
+  <data name="AgentsId" xml:space="preserve">
+    <value>Agents Id</value>
+  </data>
+  <data name="AgentsStatus" xml:space="preserve">
+    <value>Agents Status</value>
+  </data>
+  <data name="Quota" xml:space="preserve">
+    <value>Quota</value>
+  </data>
+  <data name="Sold" xml:space="preserve">
+    <value>Sold</value>
+  </data>
+  <data name="Charged" xml:space="preserve">
+    <value>Charged</value>
+  </data>
+  <data name="Reached" xml:space="preserve">
+    <value>Reached</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="Ranting" xml:space="preserve">
+    <value>Ranting</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="WelcomeToDashboard" xml:space="preserve">
+    <value>Welcome to Dashboard</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="UniquePurchases" xml:space="preserve">
+    <value>Unique Purchases</value>
+  </data>
+  <data name="ThanLastWeek" xml:space="preserve">
+    <value>Than Last Week</value>
+  </data>
+  <data name="OrderValue" xml:space="preserve">
+    <value>Order Value</value>
+  </data>
+  <data name="OrderQuantity" xml:space="preserve">
+    <value>Order Quantity</value>
+  </data>
+  <data name="ConversionRate" xml:space="preserve">
+    <value>Conversion Rate</value>
+  </data>
+  <data name="TopSuppliers" xml:space="preserve">
+    <value>Top Suppliers</value>
+  </data>
+  <data name="TopInsured" xml:space="preserve">
+    <value>Top Insured</value>
+  </data>
+  <data name="ClaimsFigures" xml:space="preserve">
+    <value>Claims Figures</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Week</value>
   </data>
 </root>
