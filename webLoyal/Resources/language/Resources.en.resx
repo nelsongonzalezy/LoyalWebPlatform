@@ -1122,4 +1122,76 @@
   <data name="MaternityComplications" xml:space="preserve">
     <value>Maternity Complications</value>
   </data>
+  <data name="StorageManagement" xml:space="preserve">
+    <value>Storage Management</value>
+  </data>
+  <data name="Claim" xml:space="preserve">
+    <value>Claim</value>
+  </data>
+  <data name="CreateClaim" xml:space="preserve">
+    <value>Create Claim</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>In Progress</value>
+  </data>
+  <data name="DateAdded" xml:space="preserve">
+    <value>Date Added</value>
+  </data>
+  <data name="Design" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="CreateIllustrations" xml:space="preserve">
+    <value>Create illustrations</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="AssignedBy:" xml:space="preserve">
+    <value>Assigned by:</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="HoursLeft" xml:space="preserve">
+    <value>hours left</value>
+  </data>
+  <data name="Promotions" xml:space="preserve">
+    <value>Promotions</value>
+  </data>
+  <data name="Tomorrow" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="BuildPromotionStrategy" xml:space="preserve">
+    <value>Build promotion strategy</value>
+  </data>
+  <data name="DayLeft" xml:space="preserve">
+    <value>day left</value>
+  </data>
+  <data name="DaysLeft" xml:space="preserve">
+    <value>days left</value>
+  </data>
+  <data name="Marketing" xml:space="preserve">
+    <value>Marketing</value>
+  </data>
+  <data name="RunMarketResearch" xml:space="preserve">
+    <value>Run Market Research</value>
+  </data>
+  <data name="Updates" xml:space="preserve">
+    <value>Updates</value>
+  </data>
+  <data name="Upcoming" xml:space="preserve">
+    <value>Upcoming</value>
+  </data>
+  <data name="Date Added" xml:space="preserve">
+    <value>Date Added</value>
+  </data>
+  <data name="CreatePromotionStrategy" xml:space="preserve">
+    <value>Create Promotion Strategy</value>
+  </data>
+  <data name="Weeks" xml:space="preserve">
+    <value>weeks</value>
+  </data>
+  <data name="CreateNewLandingPage" xml:space="preserve">
+    <value>Create New Landing Page</value>
+  </data>
 </root>

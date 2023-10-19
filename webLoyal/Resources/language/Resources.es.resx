@@ -1122,4 +1122,73 @@
   <data name="MaternityComplications" xml:space="preserve">
     <value>Complicaciones de la maternidad</value>
   </data>
+  <data name="StorageManagement" xml:space="preserve">
+    <value>Administración de Almacenamiento</value>
+  </data>
+  <data name="Claim" xml:space="preserve">
+    <value>Reclamación</value>
+  </data>
+  <data name="CreateClaim" xml:space="preserve">
+    <value>Crear Reclamo</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>En Curso</value>
+  </data>
+  <data name="DateAdded" xml:space="preserve">
+    <value>Fecha Agregada</value>
+  </data>
+  <data name="Design" xml:space="preserve">
+    <value>Diseño</value>
+  </data>
+  <data name="CreateIllustrations" xml:space="preserve">
+    <value>Crear Ilustraciones</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Hoy</value>
+  </data>
+  <data name="AssignedBy:" xml:space="preserve">
+    <value>Asignado Por:</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Completo</value>
+  </data>
+  <data name="HoursLeft" xml:space="preserve">
+    <value>horas restantes</value>
+  </data>
+  <data name="Promotions" xml:space="preserve">
+    <value>Promociones</value>
+  </data>
+  <data name="Tomorrow" xml:space="preserve">
+    <value>Mañana</value>
+  </data>
+  <data name="BuildPromotionStrategy" xml:space="preserve">
+    <value>Construir Estrategia de Promoción</value>
+  </data>
+  <data name="DayLeft" xml:space="preserve">
+    <value>día restante</value>
+  </data>
+  <data name="DaysLeft" xml:space="preserve">
+    <value>días restantes</value>
+  </data>
+  <data name="Marketing" xml:space="preserve">
+    <value>Mercadeo</value>
+  </data>
+  <data name="RunMarketResearch" xml:space="preserve">
+    <value>Realizar Estudios de Mercado</value>
+  </data>
+  <data name="Updates" xml:space="preserve">
+    <value>Actualizaciones</value>
+  </data>
+  <data name="Upcoming" xml:space="preserve">
+    <value>Próximo</value>
+  </data>
+  <data name="CreatePromotionStrategy" xml:space="preserve">
+    <value>Crear Estrategia de Promoción</value>
+  </data>
+  <data name="Weeks" xml:space="preserve">
+    <value>semanas</value>
+  </data>
+  <data name="CreateNewLandingPage" xml:space="preserve">
+    <value>Crear nueva página de destino</value>
+  </data>
 </root>

@@ -3018,5 +3018,189 @@ namespace webLoyal.Resources.language {
                 return ResourceManager.GetString("MaternityComplications", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to Storage Management.
+        /// </summary>
+        public static string StorageManagement {
+            get {
+                return ResourceManager.GetString("StorageManagement", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Claim.
+        /// </summary>
+        public static string Claim {
+            get {
+                return ResourceManager.GetString("Claim", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Create Claim.
+        /// </summary>
+        public static string CreateClaim {
+            get {
+                return ResourceManager.GetString("CreateClaim", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to In Progress.
+        /// </summary>
+        public static string InProgress {
+            get {
+                return ResourceManager.GetString("InProgress", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Date Added.
+        /// </summary>
+        public static string DateAdded {
+            get {
+                return ResourceManager.GetString("DateAdded", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Design.
+        /// </summary>
+        public static string Design {
+            get {
+                return ResourceManager.GetString("Design", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Create Illustrations.
+        /// </summary>
+        public static string CreateIllustrations {
+            get {
+                return ResourceManager.GetString("CreateIllustrations", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Today.
+        /// </summary>
+        public static string Today {
+            get {
+                return ResourceManager.GetString("Today", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Assigned By.
+        /// </summary>
+        public static string AssignedBy {
+            get {
+                return ResourceManager.GetString("AssignedBy", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Complete.
+        /// </summary>
+        public static string Complete {
+            get {
+                return ResourceManager.GetString("Complete", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to HoursLeft.
+        /// </summary>
+        public static string HoursLeft {
+            get {
+                return ResourceManager.GetString("HoursLeft", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Promotions.
+        /// </summary>
+        public static string Promotions {
+            get {
+                return ResourceManager.GetString("Promotions", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Tomorrow.
+        /// </summary>
+        public static string Tomorrow {
+            get {
+                return ResourceManager.GetString("Tomorrow", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Build Promotion Strategy.
+        /// </summary>
+        public static string BuildPromotionStrategy {
+            get {
+                return ResourceManager.GetString("BuildPromotionStrategy", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Day Left.
+        /// </summary>
+        public static string DayLeft {
+            get {
+                return ResourceManager.GetString("DayLeft", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Days Left.
+        /// </summary>
+        public static string DaysLeft {
+            get {
+                return ResourceManager.GetString("DaysLeft", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Marketing.
+        /// </summary>
+        public static string Marketing {
+            get {
+                return ResourceManager.GetString("Marketing", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Run Market Research.
+        /// </summary>
+        public static string RunMarketResearch {
+            get {
+                return ResourceManager.GetString("RunMarketResearch", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Updates.
+        /// </summary>
+        public static string Updates {
+            get {
+                return ResourceManager.GetString("Updates", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Upcoming.
+        /// </summary>
+        public static string Upcoming {
+            get {
+                return ResourceManager.GetString("Upcoming", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Create Promotion Strategy.
+        /// </summary>
+        public static string CreatePromotionStrategy {
+            get {
+                return ResourceManager.GetString("CreatePromotionStrategy", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Weeks.
+        /// </summary>
+        public static string Weeks {
+            get {
+                return ResourceManager.GetString("Weeks", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Create New Landing Page.
+        /// </summary>
+        public static string CreateNewLandingPage {
+            get {
+                return ResourceManager.GetString("CreateNewLandingPage", resourceCulture);
+            }
+        }
     }
 }
