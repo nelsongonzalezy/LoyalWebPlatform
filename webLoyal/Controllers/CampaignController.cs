@@ -28,8 +28,18 @@ namespace webLoyal.Controllers
                 item.FormaTrimestral = FormaTrimestral;
                 item.FormaMensual = FormaMensual;
             };
-            x.DtCampanas.FechaFin = FechaFin;
-            x.DtCampanas.FechaInicio = FechaInicio;
+            //x.DtCampanas.FechaFin = FechaFin;
+            //x.DtCampanas.FechaInicio = FechaInicio;
+            FechaFin = x.DtCampanas.FechaFin ;
+            FechaInicio=x.DtCampanas.FechaInicio;
+
+            DateTime fechaFutura = FechaFin; // Define tu fecha futura aquí
+
+            TimeSpan diferencia = fechaFutura - DateTime.Now;
+
+            x.mensaje = string.Format("Faltan {0} días {1} horas {2} minutos",
+                diferencia.Days, diferencia.Hours, diferencia.Minutes);
+
             return View(x);
         }        
         [Route("/campaign/List")]
