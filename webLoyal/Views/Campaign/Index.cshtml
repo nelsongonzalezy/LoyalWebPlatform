@@ -9,6 +9,7 @@
         </ol>
         <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Campaigns @Model.DtCampanas.DescripcionCampana</h4>
     </div>
+
     <div class="d-flex gap-2 mt-3 mt-md-0 align-items-end">
         <div class="col-6">
             <input type="date" id="FechaInicio" asp-for="@Model.DtCampanas.FechaInicio" class="form-control hasDatepicker" placeholder="From">
@@ -35,7 +36,28 @@
     </div>
 
 </div>
+<div>
+<div class="row g-3">
+    <div class="row">
+        <div class="col-4 col-xl-3">
+                <div class="card">
+                    <div class="card-body p-3">
+                        <div class="row g-3">
 
+                            <div class="col-sm-8 col-md-9 col-xl-8 d-flex flex-column">
+                                <h6 class="fw-semibold text-dark lh-5">Tiempo de Campaña</h6>
+                                <p class="text-secondary">  @Model.mensaje<span class="d-xl-none d-xxl-inline"> </span>...</p>
+
+                            </div><!-- col -->
+                        </div><!-- row -->
+                    </div>
+        </div>
+    </div>
+
+          
+        </div> <!-- end col-->
+    </div>
+</div>
 <div class="row g-3">
     <div class="row">
        @* <input type="date" id="fecha1">
@@ -228,7 +250,7 @@
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">@webLoyal.Resources.language.Resources.Policies</button>
     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">@webLoyal.Resources.language.Resources.TopAgents</button>
-    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">@webLoyal.Resources.language.Resources.Criteria</button>
+    @*<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">@webLoyal.Resources.language.Resources.Criteria</button>*@
   </div>
 </nav>
 
@@ -425,8 +447,8 @@
                                     <th>@webLoyal.Resources.language.Resources.Position</th>
                                     <th>@webLoyal.Resources.language.Resources.Code</th>
                                     <th>@webLoyal.Resources.language.Resources.Agents</th>
-                                    <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
+                                    <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Percentage</th>
                            
 
@@ -557,6 +579,74 @@
 
 @section Scripts{
     <script>
+        //function updateCountdown() {
+        //    const targetDate = new Date(@Model.DtCampanas.FechaFin);
+        //    const currentDate = new Date();
+
+        //    const timeDifference = targetDate - currentDate;
+
+        //    if (timeDifference <= 0) {
+        //        if (document.getElementById("countdown")) {
+        //            document.getElementById("countdown").innerHTML = "¡La fecha objetivo ha pasado!";
+        //        }
+        //        return;
+        //    }
+
+        //    const daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        //    const hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        //    if (document.getElementById("countdown")) {
+        //        document.getElementById("countdown").innerHTML = `Finaliza en: ${daysRemaining} d, ${hoursRemaining} h`;
+        //    } else {
+        //        setTimeout(updateCountdown, 500); // Esperar 0.5 segundos y volver a intentar
+        //    }
+        //}
+
+        //// Actualizar cada segundo
+        //setInterval(updateCountdown, 1000);
+
+        //// Inicializar el conteo al cargar la página
+        //updateCountdown();
+
+        //function updateCountdown() {
+        //    const targetDate = new Date("2024-01-15");
+        //    const currentDate = new Date();
+
+        //    const timeDifference = targetDate - currentDate;
+
+        //    if (timeDifference <= 0) {
+        //        // Mostrar mensaje si la fecha objetivo ha pasado
+        //        if (document.getElementById("countdown-days")) {
+        //            document.getElementById("countdown-days").innerHTML = "¡La fecha objetivo ha pasado!";
+        //        }
+        //        return;
+        //    }
+
+        //    const daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        //    const hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        //    const minutesRemaining = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        //    const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        //    // Actualizar los divs con los valores correspondientes
+        //    if (document.getElementById("countdown-days")) {
+        //        document.getElementById("countdown-days").innerHTML = `${daysRemaining} <span>Dias</span>`;
+        //    }
+        //    if (document.getElementById("countdown-hours")) {
+        //        document.getElementById("countdown-hours").innerHTML = `${hoursRemaining} <span>Horas</span>`;
+        //    }
+        //    if (document.getElementById("countdown-minutes")) {
+        //        document.getElementById("countdown-minutes").innerHTML = `${minutesRemaining} <span>Minutos</span>`;
+        //    }
+        //    if (document.getElementById("countdown-seconds")) {
+        //        document.getElementById("countdown-seconds").innerHTML = `${secondsRemaining} <span>Segundo</span>`;
+        //    }
+        //}
+
+        //// Actualizar cada segundo
+        //setInterval(updateCountdown, 1000);
+
+        //// Inicializar el conteo al cargar la página
+        //updateCountdown2();
 
         $(document).ready(function () {
             $("#enviarDatos").on("click", function () {
@@ -636,7 +726,7 @@
         });
 
 
-
+               
 
     </script>
 
