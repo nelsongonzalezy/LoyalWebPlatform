@@ -1203,4 +1203,112 @@
   <data name="CreateNewLandingPage" xml:space="preserve">
     <value>Create New Landing Page</value>
   </data>
+  <data name="MonthlyGrowthRevenue" xml:space="preserve">
+    <value>Monthly Growth Revenue</value>
+  </data>
+  <data name="GrowthActual" xml:space="preserve">
+    <value>Growth Actual</value>
+  </data>
+  <data name="Actual" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="MonthlyRevenueGrowth" xml:space="preserve">
+    <value>Monthly Revenue Growth</value>
+  </data>
+  <data name="MeasureHowFastYoureGrowingMonthlyRecurringRevenue" xml:space="preserve">
+    <value>Measure how fast you’re growing monthly recurring revenue</value>
+  </data>
+  <data name="MonthlyRevenueCustomer" xml:space="preserve">
+    <value>Monthly Revenue/Customer</value>
+  </data>
+  <data name="TheRevenueGeneratedPerAccountOnAMonthlyOrYearlyBasis" xml:space="preserve">
+    <value>The revenue generated per account on a monthly or yearly basis</value>
+  </data>
+  <data name="AccountRetention" xml:space="preserve">
+    <value>Account Retention</value>
+  </data>
+  <data name="Expansions" xml:space="preserve">
+    <value>Expansions</value>
+  </data>
+  <data name="CustomersWhoHaveUpgradedTheLevelOfYourProductsOrService" xml:space="preserve">
+    <value>Customers who have upgraded the level of your products or service</value>
+  </data>
+  <data name="Cancellations" xml:space="preserve">
+    <value>Cancellations</value>
+  </data>
+  <data name="CustomersWhoHaveEndedTheirSubscriptionWithYou" xml:space="preserve">
+    <value>Customers who have ended their subscription with you.</value>
+  </data>
+  <data name="RealTimeSales" xml:space="preserve">
+    <value>Real Time Sales</value>
+  </data>
+  <data name="RecentSellers" xml:space="preserve">
+    <value>Recent Sellers</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="ManageCustomer" xml:space="preserve">
+    <value>Manage Customer</value>
+  </data>
+  <data name="TransactionHistory" xml:space="preserve">
+    <value>Transaction History</value>
+  </data>
+  <data name="Purchasefrom" xml:space="preserve">
+    <value>Purchase from</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="ProcessRefundTo" xml:space="preserve">
+    <value>Process refund to</value>
+  </data>
+  <data name="ProcessDeliveryTo" xml:space="preserve">
+    <value>Process delivery to</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="ForPickup" xml:space="preserve">
+    <value>For pickup</value>
+  </data>
+  <data name="PaymentFrom" xml:space="preserve">
+    <value>Payment from</value>
+  </data>
+  <data name="PaymentFailed" xml:space="preserve">
+    <value>Payment failed</value>
+  </data>
+  <data name="Declined" xml:space="preserve">
+    <value>Declined</value>
+  </data>
+  <data name="ManageTransactions" xml:space="preserve">
+    <value>Manage Transactions</value>
+  </data>
+  <data name="SalesRevenue" xml:space="preserve">
+    <value>Sales Revenue</value>
+  </data>
+  <data name="States" xml:space="preserve">
+    <value>States</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="Earnings" xml:space="preserve">
+    <value>Earnings</value>
+  </data>
+  <data name="MostRecentEarnings" xml:space="preserve">
+    <value>Most Recent Earnings</value>
+  </data>
+  <data name="GrossEarnings" xml:space="preserve">
+    <value>Gross Earnings</value>
+  </data>
+  <data name="TaxWitheld" xml:space="preserve">
+    <value>Tax Witheld</value>
+  </data>
+  <data name="NetEarnings" xml:space="preserve">
+    <value>Net Earnings</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
 </root>
