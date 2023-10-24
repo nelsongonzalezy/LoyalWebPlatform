@@ -1293,13 +1293,178 @@
   <data name="GrossEarnings" xml:space="preserve">
     <value>Gross Earnings</value>
   </data>
-  <data name="TaxWitheld" xml:space="preserve">
-    <value>Tax Witheld</value>
-  </data>
   <data name="NetEarnings" xml:space="preserve">
     <value>Net Earnings</value>
   </data>
   <data name="Date" xml:space="preserve">
     <value>Date</value>
+  </data>
+  <data name="SalesCount" xml:space="preserve">
+    <value>Sales Count</value>
+  </data>
+  <data name="TaxWithheld" xml:space="preserve">
+    <value>Tax Withheld</value>
+  </data>
+  <data name="Earning" xml:space="preserve">
+    <value>Earning</value>
+  </data>
+  <data name="DownloadYourEarningsInCSVformat" xml:space="preserve">
+    <value>Download your earnings in CSV format</value>
+  </data>
+  <data name="OpenItInASpreadsheetAndPerformYourOwnCalculationsGraphingEtc" xml:space="preserve">
+    <value>Open it in a spreadsheet and perform your own calculations, graphing etc</value>
+  </data>
+  <data name="TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocation" xml:space="preserve">
+    <value>The CSV file contains additional details, such as the buyer location</value>
+  </data>
+  <data name="FirstSlideLabel" xml:space="preserve">
+    <value>First slide label</value>
+  </data>
+  <data name="SomeRepresentativePlaceholderContentForTheFirstSlide" xml:space="preserve">
+    <value>Some representative placeholder content for the first slide</value>
+  </data>
+  <data name="ProfitThisYear" xml:space="preserve">
+    <value>Profit This Year</value>
+  </data>
+  <data name="LastYear" xml:space="preserve">
+    <value>Last Year</value>
+  </data>
+  <data name="FirstQuarter" xml:space="preserve">
+    <value>First Quarter</value>
+  </data>
+  <data name="SecondQuarter" xml:space="preserve">
+    <value>Second Quarter</value>
+  </data>
+  <data name="ThirdQuarter" xml:space="preserve">
+    <value>Third Quarter</value>
+  </data>
+  <data name="FourthQuarter" xml:space="preserve">
+    <value>FourthQuarter</value>
+  </data>
+  <data name="GrossProfitMargin" xml:space="preserve">
+    <value>Gross Profit Margin</value>
+  </data>
+  <data name="TheGrossProfitYouMakeOnEachDollarOfSales" xml:space="preserve">
+    <value>The gross profit you make on each dollar of sales</value>
+  </data>
+  <data name="NetProfitMargin" xml:space="preserve">
+    <value>Net Profit Margin</value>
+  </data>
+  <data name="MeasuresYourBusinessAtGeneratingProfitSales" xml:space="preserve">
+    <value>Measures your business at generating profit sales</value>
+  </data>
+  <data name="QuickRatioGoal" xml:space="preserve">
+    <value>Quick Ratio Goal</value>
+  </data>
+  <data name="MeasuresYourAccountsReceivable" xml:space="preserve">
+    <value>Measures your Accounts Receivable</value>
+  </data>
+  <data name="CurrentLiabilities" xml:space="preserve">
+    <value>Current Liabilities</value>
+  </data>
+  <data name="AvailableBalance" xml:space="preserve">
+    <value>Available Balance</value>
+  </data>
+  <data name="AccountName" xml:space="preserve">
+    <value>Account Name</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="Expenses" xml:space="preserve">
+    <value>Expenses</value>
+  </data>
+  <data name="ProfitMargin" xml:space="preserve">
+    <value>Profit Margin</value>
+  </data>
+  <data name="ProfitMarginIsAMeasureOfProfitabilityItIsCalculatedByFindingTheProfitAsAPercentageOfTheRevenue" xml:space="preserve">
+    <value>Profit margin is a measure of profitability. It is calculated by finding the profit as a percentage of the revenue</value>
+  </data>
+  <data name="GrossProfit" xml:space="preserve">
+    <value>Gross Profit</value>
+  </data>
+  <data name="OperatingProfit" xml:space="preserve">
+    <value>Operating Profit</value>
+  </data>
+  <data name="NetProfit" xml:space="preserve">
+    <value>Net Profit</value>
+  </data>
+  <data name="ExpenseAnalytics" xml:space="preserve">
+    <value>Expense Analytics</value>
+  </data>
+  <data name="FixedExpenses" xml:space="preserve">
+    <value>Fixed Expenses</value>
+  </data>
+  <data name="FixedExpensesAreGenerallyFixedInBothAmountAndInterval" xml:space="preserve">
+    <value>Fixed expenses are generally fixed in both amount and interval</value>
+  </data>
+  <data name="PeriodicExpense" xml:space="preserve">
+    <value>Periodic Expense</value>
+  </data>
+  <data name="PeriodicExpensesAreUsuallyLessFrequentAndTheAmountCanVary" xml:space="preserve">
+    <value>Periodic expenses are usually less frequent and the amount can vary</value>
+  </data>
+  <data name="VariableExpenses" xml:space="preserve">
+    <value>Variable Expenses</value>
+  </data>
+  <data name="ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges" xml:space="preserve">
+    <value>Change as the quantity of good or service that produces changes</value>
+  </data>
+  <data name="BilledOpportunities" xml:space="preserve">
+    <value>Billed Opportunities</value>
+  </data>
+  <data name="TotalIncome" xml:space="preserve">
+    <value>Total Income</value>
+  </data>
+  <data name="TotalExpenses" xml:space="preserve">
+    <value>Total Expenses</value>
+  </data>
+  <data name="QuickRatio" xml:space="preserve">
+    <value>Quick Ratio</value>
+  </data>
+  <data name="CurrentRatio" xml:space="preserve">
+    <value>Current Ratio</value>
+  </data>
+  <data name="AccountsReceivable" xml:space="preserve">
+    <value>Accounts Receivable</value>
+  </data>
+  <data name="TheProceedsOrPaymentWhichTheCompanyWillReceiveFromItsCustomers" xml:space="preserve">
+    <value>The proceeds or payment which the company will receive from its customers</value>
+  </data>
+  <data name="AccountsPayable" xml:space="preserve">
+    <value>Accounts Payable</value>
+  </data>
+  <data name="MoneyOwedByABusinessToItsSuppliersShownAsALiability" xml:space="preserve">
+    <value>VariablMoney owed by a business to its suppliers shown as a liabilityeExpenses</value>
+  </data>
+  <data name="MeasuresTheAbilityOfACompanyToUseItsNearCashOrQuickAssets" xml:space="preserve">
+    <value>Measures the ability of a company to use its near cash or quick assets</value>
+  </data>
+  <data name="MeasuresWhetherAFirmHasEnoughResourcesToMeetItsShortTermObligations" xml:space="preserve">
+    <value>Measures whether a firm has enough resources to meet its short-term obligations</value>
+  </data>
+  <data name="SecondSlideLabel" xml:space="preserve">
+    <value>Second slide label</value>
+  </data>
+  <data name="SomeRepresentativePlaceholderContentForTheSecondSlide" xml:space="preserve">
+    <value>Some representative placeholder content for the second slide</value>
+  </data>
+  <data name="ThirdSlideLabel" xml:space="preserve">
+    <value>Third slide label</value>
+  </data>
+  <data name="SomeRepresentativePlaceholderContentForTheThirdSlide" xml:space="preserve">
+    <value>Some representative placeholder content for the third slide</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NumberOfCustomersWhoHaveActiveASubscriptionWithYou" xml:space="preserve">
+    <value>Number Of Customers Who Have Active A Subscription With You</value>
+  </data>
+  <data name="OrHigher" xml:space="preserve">
+    <value>Or Higher</value>
   </data>
 </root>

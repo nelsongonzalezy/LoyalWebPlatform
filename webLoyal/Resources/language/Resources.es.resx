@@ -1290,13 +1290,178 @@
   <data name="GrossEarnings" xml:space="preserve">
     <value>Ingresos Completos</value>
   </data>
-  <data name="TaxWitheld" xml:space="preserve">
-    <value>Impuesto Retenido</value>
-  </data>
   <data name="NetEarnings" xml:space="preserve">
     <value>Ganancias Netas</value>
   </data>
   <data name="Date" xml:space="preserve">
     <value>Fecha</value>
+  </data>
+  <data name="SalesCount" xml:space="preserve">
+    <value>Recuento De ventas</value>
+  </data>
+  <data name="TaxWithheld" xml:space="preserve">
+    <value>Impuesto Retenido</value>
+  </data>
+  <data name="Earning" xml:space="preserve">
+    <value>Ganancia</value>
+  </data>
+  <data name="DownloadYourEarningsInCSVformat" xml:space="preserve">
+    <value>Descargue Sus Ganancias En Formato Csv</value>
+  </data>
+  <data name="OpenItInASpreadsheetAndPerformYourOwnCalculationsGraphingEtc" xml:space="preserve">
+    <value>Ábrelo En Una Hoja De Cálculo Y Realice Sus Propios Cálculos, Gráficos, Etc.</value>
+  </data>
+  <data name="TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocation" xml:space="preserve">
+    <value>El Archivo Csv Contiene Detalles Adicionales, Como La Ubicación Del Comprador</value>
+  </data>
+  <data name="FirstSlideLabel" xml:space="preserve">
+    <value>Primera Etiqueta De Diapositivas</value>
+  </data>
+  <data name="SomeRepresentativePlaceholderContentForTheFirstSlide" xml:space="preserve">
+    <value>Algún Contenido Representativo De Marcador De Posición Para La Primera Diapositiva</value>
+  </data>
+  <data name="ProfitThisYear" xml:space="preserve">
+    <value>Beneficio Este Año</value>
+  </data>
+  <data name="LastYear" xml:space="preserve">
+    <value>El Año Pasado</value>
+  </data>
+  <data name="FirstQuarter" xml:space="preserve">
+    <value>Primer Trimestre</value>
+  </data>
+  <data name="SecondQuarter" xml:space="preserve">
+    <value>Segundo Trimestre</value>
+  </data>
+  <data name="ThirdQuarter" xml:space="preserve">
+    <value>Tercer Trimestre</value>
+  </data>
+  <data name="FourthQuarter" xml:space="preserve">
+    <value>Cuarto Trimestre</value>
+  </data>
+  <data name="GrossProfitMargin" xml:space="preserve">
+    <value>Margen De Beneficio Bruto</value>
+  </data>
+  <data name="TheGrossProfitYouMakeOnEachDollarOfSales" xml:space="preserve">
+    <value>La Ganancia Bruta Que Obtiene En Cada Dólar De Ventas</value>
+  </data>
+  <data name="NetProfitMargin" xml:space="preserve">
+    <value>Margen De Beneficio Neto</value>
+  </data>
+  <data name="MeasuresYourBusinessAtGeneratingProfitSales" xml:space="preserve">
+    <value>Mide Su Negocio Para Generar Ventas De Ganancias</value>
+  </data>
+  <data name="QuickRatioGoal" xml:space="preserve">
+    <value>Meta De Relación Rápida</value>
+  </data>
+  <data name="MeasuresYourAccountsReceivable" xml:space="preserve">
+    <value>Mide Sus Cuentas Por Cobrar</value>
+  </data>
+  <data name="CurrentLiabilities" xml:space="preserve">
+    <value>Pasivo Circulante</value>
+  </data>
+  <data name="AvailableBalance" xml:space="preserve">
+    <value>Saldo Disponible</value>
+  </data>
+  <data name="AccountName" xml:space="preserve">
+    <value>Nombre De La Cuenta</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Ingreso</value>
+  </data>
+  <data name="Expenses" xml:space="preserve">
+    <value>Gastos</value>
+  </data>
+  <data name="ProfitMargin" xml:space="preserve">
+    <value>Margen De Beneficio</value>
+  </data>
+  <data name="ProfitMarginIsAMeasureOfProfitabilityItIsCalculatedByFindingTheProfitAsAPercentageOfTheRevenue" xml:space="preserve">
+    <value>El Margen De Beneficio Es Una Medida De Rentabilidad. Se Calcula Al Encontrar La Ganancia Como Un Porcentaje De Los Ingresos</value>
+  </data>
+  <data name="GrossProfit" xml:space="preserve">
+    <value>Beneficio Bruto</value>
+  </data>
+  <data name="OperatingProfit" xml:space="preserve">
+    <value>Beneficio Operativo</value>
+  </data>
+  <data name="NetProfit" xml:space="preserve">
+    <value>Beneficio Neto</value>
+  </data>
+  <data name="ExpenseAnalytics" xml:space="preserve">
+    <value>Análisis De Gastos</value>
+  </data>
+  <data name="FixedExpenses" xml:space="preserve">
+    <value>Gastos Fijos</value>
+  </data>
+  <data name="FixedExpensesAreGenerallyFixedInBothAmountAndInterval" xml:space="preserve">
+    <value>Los Gastos Fijos Generalmente Se Fijan Tanto En La Cantidad Como En El Intervalo</value>
+  </data>
+  <data name="PeriodicExpense" xml:space="preserve">
+    <value>Gasto Periódico</value>
+  </data>
+  <data name="PeriodicExpensesAreUsuallyLessFrequentAndTheAmountCanVary" xml:space="preserve">
+    <value>Los Gastos Periódicos Suelen Ser Menos Frecuentes Y La Cantidad Puede Variar</value>
+  </data>
+  <data name="VariableExpenses" xml:space="preserve">
+    <value>Gastos Variables</value>
+  </data>
+  <data name="ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges" xml:space="preserve">
+    <value>Cambiar Como La Cantidad De Bien O Servicio Que Produce Cambios</value>
+  </data>
+  <data name="BilledOpportunities" xml:space="preserve">
+    <value>Oportunidades Facturadas</value>
+  </data>
+  <data name="TotalIncome" xml:space="preserve">
+    <value>Ingresos Totales</value>
+  </data>
+  <data name="TotalExpenses" xml:space="preserve">
+    <value>Gastos Totales</value>
+  </data>
+  <data name="QuickRatio" xml:space="preserve">
+    <value>Relación Rápida</value>
+  </data>
+  <data name="CurrentRatio" xml:space="preserve">
+    <value>Relación Actual</value>
+  </data>
+  <data name="AccountsReceivable" xml:space="preserve">
+    <value>Cuentas Por Cobrar</value>
+  </data>
+  <data name="TheProceedsOrPaymentWhichTheCompanyWillReceiveFromItsCustomers" xml:space="preserve">
+    <value>Los Ingresos O Pagos Que La Compañía Recibirá De Sus Clientes</value>
+  </data>
+  <data name="AccountsPayable" xml:space="preserve">
+    <value>Cuentas Por Pagar</value>
+  </data>
+  <data name="MoneyOwedByABusinessToItsSuppliersShownAsALiability" xml:space="preserve">
+    <value>Dinero Adeudado Por Una Empresa A Sus Proveedores Que Se Muestran Como Un Pasivo</value>
+  </data>
+  <data name="MeasuresTheAbilityOfACompanyToUseItsNearCashOrQuickAssets" xml:space="preserve">
+    <value>Mide La Capacidad De Una Empresa Para Usar Sus Activos Casi Efectivos O Rápidos</value>
+  </data>
+  <data name="MeasuresWhetherAFirmHasEnoughResourcesToMeetItsShortTermObligations" xml:space="preserve">
+    <value>Mide Si Una Empresa Tiene Suficientes Recursos Para Cumplir Con Sus Obligaciones A Corto Plazo</value>
+  </data>
+  <data name="SecondSlideLabel" xml:space="preserve">
+    <value>Segunda Etiqueta De Diapositivas</value>
+  </data>
+  <data name="SomeRepresentativePlaceholderContentForTheSecondSlide" xml:space="preserve">
+    <value>Algunos Contenidos Representativos De Marcador De Posición Para La Segunda Diapositiva</value>
+  </data>
+  <data name="ThirdSlideLabel" xml:space="preserve">
+    <value>Tercera Etiqueta De Diapositivas</value>
+  </data>
+  <data name="SomeRepresentativePlaceholderContentForTheThirdSlide" xml:space="preserve">
+    <value>Algún Contenido Representativo De Marcador De Posición Para La Tercera Diapositiva</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="NumberOfCustomersWhoHaveActiveASubscriptionWithYou" xml:space="preserve">
+    <value>Número De Clientes Que Tienen Una Suscripción Activa Con Usted</value>
+  </data>
+  <data name="OrHigher" xml:space="preserve">
+    <value>Or Higher</value>
   </data>
 </root>

@@ -3467,14 +3467,6 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Tax Witheld.
-        /// </summary>
-        public static string TaxWitheld {
-            get {
-                return ResourceManager.GetString("TaxWitheld", resourceCulture);
-            }
-        }
-        /// <summary>
         ///   Looks up a localized string similar to Net Earnings.
         /// </summary>
         public static string NetEarnings {
@@ -3488,6 +3480,454 @@ namespace webLoyal.Resources.language {
         public static string Date {
             get {
                 return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Sales Count.
+        /// </summary>
+        public static string SalesCount {
+            get {
+                return ResourceManager.GetString("SalesCount", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Tax Withheld.
+        /// </summary>
+        public static string TaxWithheld {
+            get {
+                return ResourceManager.GetString("TaxWithheld", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Earning.
+        /// </summary>
+        public static string Earning {
+            get {
+                return ResourceManager.GetString("Earning", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Download Your Earnings In CSV format.
+        /// </summary>
+        public static string DownloadYourEarningsInCSVformat {
+            get {
+                return ResourceManager.GetString("DownloadYourEarningsInCSVformat", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to OpenIt In A Spreadsheet And Perform Your Own Calculations Graphing Etc.
+        /// </summary>
+        public static string OpenItInASpreadsheetAndPerformYourOwnCalculationsGraphingEtc {
+            get {
+                return ResourceManager.GetString("OpenItInASpreadsheetAndPerformYourOwnCalculationsGraphingEtc", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to The CSV File Contains Additional Details Such As The Buyer Location.
+        /// </summary>
+        public static string TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocation {
+            get {
+                return ResourceManager.GetString("TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocation", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to First Slide Label.
+        /// </summary>
+        public static string FirstSlideLabel {
+            get {
+                return ResourceManager.GetString("FirstSlideLabel", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Some Representative Placeholder Content For The First Slide.
+        /// </summary>
+        public static string SomeRepresentativePlaceholderContentForTheFirstSlide {
+            get {
+                return ResourceManager.GetString("SomeRepresentativePlaceholderContentForTheFirstSlide", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Profit This Year.
+        /// </summary>
+        public static string ProfitThisYear {
+            get {
+                return ResourceManager.GetString("ProfitThisYear", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Last Year.
+        /// </summary>
+        public static string LastYear {
+            get {
+                return ResourceManager.GetString("LastYear", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to First Quarter.
+        /// </summary>
+        public static string FirstQuarter {
+            get {
+                return ResourceManager.GetString("FirstQuarter", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Second Quarter.
+        /// </summary>
+        public static string SecondQuarter {
+            get {
+                return ResourceManager.GetString("SecondQuarter", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Third Quarter.
+        /// </summary>
+        public static string ThirdQuarter {
+            get {
+                return ResourceManager.GetString("ThirdQuarter", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Fourth Quarter.
+        /// </summary>
+        public static string FourthQuarter {
+            get {
+                return ResourceManager.GetString("FourthQuarter", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Gross Profit Margin.
+        /// </summary>
+        public static string GrossProfitMargin {
+            get {
+                return ResourceManager.GetString("GrossProfitMargin", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to The Gross Profit You Make On Each Dollar Of Sales.
+        /// </summary>
+        public static string TheGrossProfitYouMakeOnEachDollarOfSales {
+            get {
+                return ResourceManager.GetString("TheGrossProfitYouMakeOnEachDollarOfSales", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Net Profit Margin.
+        /// </summary>
+        public static string NetProfitMargin {
+            get {
+                return ResourceManager.GetString("NetProfitMargin", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Measures Your Business At Generating Profit Sales.
+        /// </summary>
+        public static string MeasuresYourBusinessAtGeneratingProfitSales {
+            get {
+                return ResourceManager.GetString("MeasuresYourBusinessAtGeneratingProfitSales", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Quick Ratio Goal.
+        /// </summary>
+        public static string QuickRatioGoal {
+            get {
+                return ResourceManager.GetString("QuickRatioGoal", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Measures Your Accounts Receivable.
+        /// </summary>
+        public static string MeasuresYourAccountsReceivable {
+            get {
+                return ResourceManager.GetString("MeasuresYourAccountsReceivable", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Current Liabilities.
+        /// </summary>
+        public static string CurrentLiabilities {
+            get {
+                return ResourceManager.GetString("CurrentLiabilities", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Available Balance.
+        /// </summary>
+        public static string AvailableBalance {
+            get {
+                return ResourceManager.GetString("AvailableBalance", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Account Name.
+        /// </summary>
+        public static string AccountName {
+            get {
+                return ResourceManager.GetString("AccountName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Income.
+        /// </summary>
+        public static string Income {
+            get {
+                return ResourceManager.GetString("Income", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Expenses.
+        /// </summary>
+        public static string Expenses {
+            get {
+                return ResourceManager.GetString("Expenses", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Profit Margin.
+        /// </summary>
+        public static string ProfitMargin {
+            get {
+                return ResourceManager.GetString("ProfitMargin", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Profit Margin Is A Measure Of Profitability It Is Calculated By Finding The Profit As A Percentage Of The Revenue.
+        /// </summary>
+        public static string ProfitMarginIsAMeasureOfProfitabilityItIsCalculatedByFindingTheProfitAsAPercentageOfTheRevenue {
+            get {
+                return ResourceManager.GetString("ProfitMarginIsAMeasureOfProfitabilityItIsCalculatedByFindingTheProfitAsAPercentageOfTheRevenue", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Gross Profit.
+        /// </summary>
+        public static string GrossProfit {
+            get {
+                return ResourceManager.GetString("GrossProfit", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Operating Profit.
+        /// </summary>
+        public static string OperatingProfit {
+            get {
+                return ResourceManager.GetString("OperatingProfit", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Net Profit.
+        /// </summary>
+        public static string NetProfit {
+            get {
+                return ResourceManager.GetString("NetProfit", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Expense Analytics.
+        /// </summary>
+        public static string ExpenseAnalytics {
+            get {
+                return ResourceManager.GetString("ExpenseAnalytics", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Fixed Expenses.
+        /// </summary>
+        public static string FixedExpenses {
+            get {
+                return ResourceManager.GetString("FixedExpenses", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Fixed Expenses Are Generally Fixed In Both Amount And Interval.
+        /// </summary>
+        public static string FixedExpensesAreGenerallyFixedInBothAmountAndInterval {
+            get {
+                return ResourceManager.GetString("FixedExpensesAreGenerallyFixedInBothAmountAndInterval", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Periodic Expense.
+        /// </summary>
+        public static string PeriodicExpense {
+            get {
+                return ResourceManager.GetString("PeriodicExpense", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Periodic Expenses Are Usually Less Frequent And The Amount Can Vary.
+        /// </summary>
+        public static string PeriodicExpensesAreUsuallyLessFrequentAndTheAmountCanVary {
+            get {
+                return ResourceManager.GetString("PeriodicExpensesAreUsuallyLessFrequentAndTheAmountCanVary", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Variable Expenses.
+        /// </summary>
+        public static string VariableExpenses {
+            get {
+                return ResourceManager.GetString("VariableExpenses", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Change As The Quantity Of Good Or Service That Produces Changes.
+        /// </summary>
+        public static string ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges {
+            get {
+                return ResourceManager.GetString("ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Billed Opportunities.
+        /// </summary>
+        public static string BilledOpportunities {
+            get {
+                return ResourceManager.GetString("BilledOpportunities", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Total Income.
+        /// </summary>
+        public static string TotalIncome {
+            get {
+                return ResourceManager.GetString("TotalIncome", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Total Expenses.
+        /// </summary>
+        public static string TotalExpenses {
+            get {
+                return ResourceManager.GetString("TotalExpenses", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Quick Ratio.
+        /// </summary>
+        public static string QuickRatio {
+            get {
+                return ResourceManager.GetString("QuickRatio", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Current Ratio.
+        /// </summary>
+        public static string CurrentRatio {
+            get {
+                return ResourceManager.GetString("CurrentRatio", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Accounts Receivable.
+        /// </summary>
+        public static string AccountsReceivable {
+            get {
+                return ResourceManager.GetString("AccountsReceivable", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to The Proceeds Or Payment Which The Company Will Receive From Its Customers.
+        /// </summary>
+        public static string TeProceedsOrPaymentWhichTheCompanyWillReceiveFromItsCustomers {
+            get {
+                return ResourceManager.GetString("TheProceedsOrPaymentWhichTheCompanyWillReceiveFromItsCustomers", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Accounts Payable.
+        /// </summary>
+        public static string AccountsPayable {
+            get {
+                return ResourceManager.GetString("AccountsPayable", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Money Owed By A Business To Its Suppliers Shown As A Liability.
+        /// </summary>
+        public static string MoneyOwedByABusinessToItsSuppliersShownAsALiability {
+            get {
+                return ResourceManager.GetString("MoneyOwedByABusinessToItsSuppliersShownAsALiability", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Measures The Ability Of A Company To Use Its Near Cash Or Quick Assets.
+        /// </summary>
+        public static string MeasuresTheAbilityOfACompanyToUseItsNearCashOrQuickAssets {
+            get {
+                return ResourceManager.GetString("MeasuresTheAbilityOfACompanyToUseItsNearCashOrQuickAssets", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Measures Whether A Firm Has Enough Resources To Meet Its Short Term Obligations.
+        /// </summary>
+        public static string MeasuresWhetherAFirmHasEnoughResourcesToMeetItsShortTermObligations {
+            get {
+                return ResourceManager.GetString("MeasuresWhetherAFirmHasEnoughResourcesToMeetItsShortTermObligations", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Second Slide Label.
+        /// </summary>
+        public static string SecondSlideLabel {
+            get {
+                return ResourceManager.GetString("SecondSlideLabel", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Some Representative Placeholder Content For The Second Slide.
+        /// </summary>
+        public static string SomeRepresentativePlaceholderContentForTheSecondSlide {
+            get {
+                return ResourceManager.GetString("SomeRepresentativePlaceholderContentForTheSecondSlide", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Third Slide Label.
+        /// </summary>
+        public static string ThirdSlideLabel {
+            get {
+                return ResourceManager.GetString("ThirdSlideLabel", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Some Representative Placeholder Content For The Third Slide.
+        /// </summary>
+        public static string SomeRepresentativePlaceholderContentForTheThirdSlide {
+            get {
+                return ResourceManager.GetString("SomeRepresentativePlaceholderContentForTheThirdSlide", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Previous.
+        /// </summary>
+        public static string Previous {
+            get {
+                return ResourceManager.GetString("Previous", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        public static string Next {
+            get {
+                return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Number Of Customers Who Have Active A Subscription With You.
+        /// </summary>
+        public static string NumberOfCustomersWhoHaveActiveASubscriptionWithYou {
+            get {
+                return ResourceManager.GetString("NumberOfCustomersWhoHaveActiveASubscriptionWithYou", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Or Higher.
+        /// </summary>
+        public static string OrHigher {
+            get {
+                return ResourceManager.GetString("OrHigher", resourceCulture);
             }
         }
     }
