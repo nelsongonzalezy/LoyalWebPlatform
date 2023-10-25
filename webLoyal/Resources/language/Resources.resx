@@ -1248,14 +1248,14 @@
   <data name="Customer" xml:space="preserve">
     <value>Customer</value>
   </data>
-  <data name="ManageCustomer" xml:space="preserve">
+  <data name="ManageCustomers" xml:space="preserve">
     <value>Manage Customer</value>
   </data>
   <data name="TransactionHistory" xml:space="preserve">
     <value>Transaction History</value>
   </data>
-  <data name="Purchasefrom" xml:space="preserve">
-    <value>Purchase from</value>
+  <data name="PurchaseFrom" xml:space="preserve">
+    <value>Purchase From</value>
   </data>
   <data name="Completed" xml:space="preserve">
     <value>Completed</value>
@@ -1475,5 +1475,11 @@
   </data>
   <data name="OrHigher" xml:space="preserve">
     <value>Or Higher</value>
+  </data>
+  <data name="ManageCustomers" xml:space="preserve">
+    <value>Manage Customers</value>
+  </data>
+  <data name="UseThisPageToDetailYourSitesPrivacyPolicy" xml:space="preserve">
+    <value>Use This Page To Detail Your Site's Privacy Policy</value>
   </data>
 </root>

@@ -1242,7 +1242,7 @@
   <data name="TransactionHistory" xml:space="preserve">
     <value>Historial De Transacciones</value>
   </data>
-  <data name="Purchasefrom" xml:space="preserve">
+  <data name="PurchaseFrom" xml:space="preserve">
     <value>Comprar Desde</value>
   </data>
   <data name="Completed" xml:space="preserve">
@@ -1463,5 +1463,11 @@
   </data>
   <data name="OrHigher" xml:space="preserve">
     <value>Or Higher</value>
+  </data>
+  <data name="ManageCustomers" xml:space="preserve">
+    <value>Administrar clientes</value>
+  </data>
+  <data name="UseThisPageToDetailYourSitesPrivacyPolicy" xml:space="preserve">
+    <value>Utilice Ésta Página Para Detallar La Política De Privacidad De Su Sitio</value>
   </data>
 </root>

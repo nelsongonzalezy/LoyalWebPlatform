@@ -3323,11 +3323,11 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Manage Customer.
+        ///   Looks up a localized string similar to Manage Customers.
         /// </summary>
-        public static string CustoManageCustomermer {
+        public static string CustoManageCustomermers {
             get {
-                return ResourceManager.GetString("ManageCustomer", resourceCulture);
+                return ResourceManager.GetString("ManageCustomers", resourceCulture);
             }
         }
         /// <summary>
@@ -3339,11 +3339,11 @@ namespace webLoyal.Resources.language {
             }
         }
         /// <summary>
-        ///   Looks up a localized string similar to Purchase from.
+        ///   Looks up a localized string similar to Purchase From.
         /// </summary>
-        public static string Purchasefrom {
+        public static string PurchaseFrom {
             get {
-                return ResourceManager.GetString("Purchasefrom", resourceCulture);
+                return ResourceManager.GetString("PurchaseFrom", resourceCulture);
             }
         }
         /// <summary>
@@ -3928,6 +3928,22 @@ namespace webLoyal.Resources.language {
         public static string OrHigher {
             get {
                 return ResourceManager.GetString("OrHigher", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Customers.
+        /// </summary>
+        public static string ManageCustomers {
+            get {
+                return ResourceManager.GetString("ManageCustomers", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to se This Page To Detail Your Site's Privacy Policy.
+        /// </summary>
+        public static string UseThisPageToDetailYourSitesPrivacyPolicy {
+            get {
+                return ResourceManager.GetString("UseThisPageToDetailYourSitesPrivacyPolicy", resourceCulture);
             }
         }
     }
