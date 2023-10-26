@@ -73,5 +73,9 @@ namespace webLoyal.Controllers
         {
             return View();
         }
+        public IActionResult PagesExampleModal()
+        {
+            return View();
+        }
     }
 }
