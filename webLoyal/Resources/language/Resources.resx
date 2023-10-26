@@ -1249,7 +1249,7 @@
     <value>Customer</value>
   </data>
   <data name="ManageCustomers" xml:space="preserve">
-    <value>Manage Customer</value>
+    <value>Manage Customers</value>
   </data>
   <data name="TransactionHistory" xml:space="preserve">
     <value>Transaction History</value>
@@ -1476,10 +1476,22 @@
   <data name="OrHigher" xml:space="preserve">
     <value>Or Higher</value>
   </data>
-  <data name="ManageCustomers" xml:space="preserve">
-    <value>Manage Customers</value>
-  </data>
   <data name="UseThisPageToDetailYourSitesPrivacyPolicy" xml:space="preserve">
     <value>Use This Page To Detail Your Site's Privacy Policy</value>
+  </data>
+  <data name="AssignedBy" xml:space="preserve">
+    <value>Assigned By</value>
+  </data>
+  <data name="MeasuresYourCurrentAssets" xml:space="preserve">
+    <value>MeasuresYourCurrentAssets</value>
+  </data>
+  <data name="NewClaim" xml:space="preserve">
+    <value>New claim</value>
+  </data>
+  <data name="PeriodicExpenses" xml:space="preserve">
+    <value>Periodic expenses</value>
+  </data>
+  <data name="TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn" xml:space="preserve">
+    <value>TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn</value>
   </data>
 </root>

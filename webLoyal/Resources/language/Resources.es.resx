@@ -1470,4 +1470,16 @@
   <data name="UseThisPageToDetailYourSitesPrivacyPolicy" xml:space="preserve">
     <value>Utilice Ésta Página Para Detallar La Política De Privacidad De Su Sitio</value>
   </data>
+  <data name="AssignedBy" xml:space="preserve">
+    <value>Asingnado a </value>
+  </data>
+  <data name="MeasuresYourCurrentAssets" xml:space="preserve">
+    <value>MeasuresYourCurrentAssets</value>
+  </data>
+  <data name="PeriodicExpenses" xml:space="preserve">
+    <value>Gastos periódicos</value>
+  </data>
+  <data name="TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn" xml:space="preserve">
+    <value>TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn</value>
+  </data>
 </root>

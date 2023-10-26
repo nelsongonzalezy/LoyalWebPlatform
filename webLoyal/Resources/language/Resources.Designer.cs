@@ -79,11 +79,47 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account Name.
+        /// </summary>
+        public static string AccountName {
+            get {
+                return ResourceManager.GetString("AccountName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Account Number.
         /// </summary>
         public static string AccountNumber {
             get {
                 return ResourceManager.GetString("AccountNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account Retention.
+        /// </summary>
+        public static string AccountRetention {
+            get {
+                return ResourceManager.GetString("AccountRetention", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accounts Payable.
+        /// </summary>
+        public static string AccountsPayable {
+            get {
+                return ResourceManager.GetString("AccountsPayable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accounts Receivable.
+        /// </summary>
+        public static string AccountsReceivable {
+            get {
+                return ResourceManager.GetString("AccountsReceivable", resourceCulture);
             }
         }
         
@@ -124,6 +160,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Actual.
+        /// </summary>
+        public static string Actual {
+            get {
+                return ResourceManager.GetString("Actual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Address.
         /// </summary>
         public static string Address {
@@ -138,6 +183,15 @@ namespace webLoyal.Resources.language {
         public static string AdministrativeCost {
             get {
                 return ResourceManager.GetString("AdministrativeCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Admissions Department.
+        /// </summary>
+        public static string AdmissionsDepartment {
+            get {
+                return ResourceManager.GetString("AdmissionsDepartment", resourceCulture);
             }
         }
         
@@ -187,6 +241,42 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Agent History.
+        /// </summary>
+        public static string AgentHistory {
+            get {
+                return ResourceManager.GetString("AgentHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agent ID.
+        /// </summary>
+        public static string AgentID {
+            get {
+                return ResourceManager.GetString("AgentID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agent Name.
+        /// </summary>
+        public static string AgentName {
+            get {
+                return ResourceManager.GetString("AgentName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agent Performance Score.
+        /// </summary>
+        public static string AgentPerformanceScore {
+            get {
+                return ResourceManager.GetString("AgentPerformanceScore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Agent Portal.
         /// </summary>
         public static string AgentPortal {
@@ -205,11 +295,38 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Agents History.
+        /// </summary>
+        public static string AgentsHistory {
+            get {
+                return ResourceManager.GetString("AgentsHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agents Id.
+        /// </summary>
+        public static string AgentsId {
+            get {
+                return ResourceManager.GetString("AgentsId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Agents List.
         /// </summary>
         public static string AgentsList {
             get {
                 return ResourceManager.GetString("AgentsList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agents Status.
+        /// </summary>
+        public static string AgentsStatus {
+            get {
+                return ResourceManager.GetString("AgentsStatus", resourceCulture);
             }
         }
         
@@ -228,6 +345,42 @@ namespace webLoyal.Resources.language {
         public static string AnnualPaymentMethod {
             get {
                 return ResourceManager.GetString("AnnualPaymentMethod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applicant.
+        /// </summary>
+        public static string Applicant {
+            get {
+                return ResourceManager.GetString("Applicant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Approved Policies.
+        /// </summary>
+        public static string ApprovedPolicies {
+            get {
+                return ResourceManager.GetString("ApprovedPolicies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assigned By.
+        /// </summary>
+        public static string AssignedBy {
+            get {
+                return ResourceManager.GetString("AssignedBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assigned by:.
+        /// </summary>
+        public static string AssignedBy_ {
+            get {
+                return ResourceManager.GetString("AssignedBy:", resourceCulture);
             }
         }
         
@@ -259,6 +412,33 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Available Balance.
+        /// </summary>
+        public static string AvailableBalance {
+            get {
+                return ResourceManager.GetString("AvailableBalance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average Speed of Answer.
+        /// </summary>
+        public static string AverageSpeedOfAnswer {
+            get {
+                return ResourceManager.GetString("AverageSpeedOfAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Away.
+        /// </summary>
+        public static string Away {
+            get {
+                return ResourceManager.GetString("Away", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back Home.
         /// </summary>
         public static string BackHome {
@@ -286,6 +466,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Billed Opportunities.
+        /// </summary>
+        public static string BilledOpportunities {
+            get {
+                return ResourceManager.GetString("BilledOpportunities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Birthdate.
         /// </summary>
         public static string Birthdate {
@@ -300,6 +489,24 @@ namespace webLoyal.Resources.language {
         public static string Bonus {
             get {
                 return ResourceManager.GetString("Bonus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Budget Number.
+        /// </summary>
+        public static string BudgetNumber {
+            get {
+                return ResourceManager.GetString("BudgetNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Build promotion strategy.
+        /// </summary>
+        public static string BuildPromotionStrategy {
+            get {
+                return ResourceManager.GetString("BuildPromotionStrategy", resourceCulture);
             }
         }
         
@@ -336,6 +543,15 @@ namespace webLoyal.Resources.language {
         public static string CanceledCertificates {
             get {
                 return ResourceManager.GetString("CanceledCertificates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancellations.
+        /// </summary>
+        public static string Cancellations {
+            get {
+                return ResourceManager.GetString("Cancellations", resourceCulture);
             }
         }
         
@@ -412,6 +628,33 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change as the quantity of good or service that produces changes.
+        /// </summary>
+        public static string ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges {
+            get {
+                return ResourceManager.GetString("ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Charged.
+        /// </summary>
+        public static string Charged {
+            get {
+                return ResourceManager.GetString("Charged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Charged Policies.
+        /// </summary>
+        public static string ChargedPolicies {
+            get {
+                return ResourceManager.GetString("ChargedPolicies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City.
         /// </summary>
         public static string City {
@@ -430,11 +673,38 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Claim.
+        /// </summary>
+        public static string Claim {
+            get {
+                return ResourceManager.GetString("Claim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ClaimDate.
         /// </summary>
         public static string ClaimDate {
             get {
                 return ResourceManager.GetString("ClaimDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Department.
+        /// </summary>
+        public static string ClaimDepartment {
+            get {
+                return ResourceManager.GetString("ClaimDepartment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Description.
+        /// </summary>
+        public static string ClaimDescription {
+            get {
+                return ResourceManager.GetString("ClaimDescription", resourceCulture);
             }
         }
         
@@ -457,11 +727,29 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Claim Office.
+        /// </summary>
+        public static string ClaimOffice {
+            get {
+                return ResourceManager.GetString("ClaimOffice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Claims.
         /// </summary>
         public static string Claims {
             get {
                 return ResourceManager.GetString("Claims", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Claims Figures.
+        /// </summary>
+        public static string ClaimsFigures {
+            get {
+                return ResourceManager.GetString("ClaimsFigures", resourceCulture);
             }
         }
         
@@ -489,6 +777,15 @@ namespace webLoyal.Resources.language {
         public static string ClaimsReportsId {
             get {
                 return ResourceManager.GetString("ClaimsReportsId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Claim Status Description.
+        /// </summary>
+        public static string ClaimStatusDescription {
+            get {
+                return ResourceManager.GetString("ClaimStatusDescription", resourceCulture);
             }
         }
         
@@ -583,6 +880,42 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Complaints Received.
+        /// </summary>
+        public static string ComplaintsReceived {
+            get {
+                return ResourceManager.GetString("ComplaintsReceived", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Complaints Resolved.
+        /// </summary>
+        public static string ComplaintsResolved {
+            get {
+                return ResourceManager.GetString("ComplaintsResolved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Complete.
+        /// </summary>
+        public static string Complete {
+            get {
+                return ResourceManager.GetString("Complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Completed.
+        /// </summary>
+        public static string Completed {
+            get {
+                return ResourceManager.GetString("Completed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Conditional Coverage Section.
         /// </summary>
         public static string ConditionalCoverageSection {
@@ -606,6 +939,15 @@ namespace webLoyal.Resources.language {
         public static string ContractDate {
             get {
                 return ResourceManager.GetString("ContractDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conversion Rate.
+        /// </summary>
+        public static string ConversionRate {
+            get {
+                return ResourceManager.GetString("ConversionRate", resourceCulture);
             }
         }
         
@@ -655,11 +997,56 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create Claim.
+        /// </summary>
+        public static string CreateClaim {
+            get {
+                return ResourceManager.GetString("CreateClaim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created by.
+        /// </summary>
+        public static string CreatedBy {
+            get {
+                return ResourceManager.GetString("CreatedBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create illustrations.
+        /// </summary>
+        public static string CreateIllustrations {
+            get {
+                return ResourceManager.GetString("CreateIllustrations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create New Campaign.
         /// </summary>
         public static string CreateNewCampaign {
             get {
                 return ResourceManager.GetString("CreateNewCampaign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create New Landing Page.
+        /// </summary>
+        public static string CreateNewLandingPage {
+            get {
+                return ResourceManager.GetString("CreateNewLandingPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create Promotion Strategy.
+        /// </summary>
+        public static string CreatePromotionStrategy {
+            get {
+                return ResourceManager.GetString("CreatePromotionStrategy", resourceCulture);
             }
         }
         
@@ -691,11 +1078,110 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current Liabilities.
+        /// </summary>
+        public static string CurrentLiabilities {
+            get {
+                return ResourceManager.GetString("CurrentLiabilities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Ratio.
+        /// </summary>
+        public static string CurrentRatio {
+            get {
+                return ResourceManager.GetString("CurrentRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Ticket Status.
+        /// </summary>
+        public static string CurrentTicketStatus {
+            get {
+                return ResourceManager.GetString("CurrentTicketStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer.
+        /// </summary>
+        public static string Customer {
+            get {
+                return ResourceManager.GetString("Customer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customers who have ended their subscription with you..
+        /// </summary>
+        public static string CustomersWhoHaveEndedTheirSubscriptionWithYou {
+            get {
+                return ResourceManager.GetString("CustomersWhoHaveEndedTheirSubscriptionWithYou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customers who have upgraded the level of your products or service.
+        /// </summary>
+        public static string CustomersWhoHaveUpgradedTheLevelOfYourProductsOrService {
+            get {
+                return ResourceManager.GetString("CustomersWhoHaveUpgradedTheLevelOfYourProductsOrService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dashboard.
+        /// </summary>
+        public static string Dashboard {
+            get {
+                return ResourceManager.GetString("Dashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dashboard Concepts.
         /// </summary>
         public static string DashboardConcepts {
             get {
                 return ResourceManager.GetString("DashboardConcepts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dashbyte. All Rights Reserved.
+        /// </summary>
+        public static string DashbyteAllRightsReserved {
+            get {
+                return ResourceManager.GetString("DashbyteAllRightsReserved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date Added.
+        /// </summary>
+        public static string Date_Added {
+            get {
+                return ResourceManager.GetString("Date Added", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date Added.
+        /// </summary>
+        public static string DateAdded {
+            get {
+                return ResourceManager.GetString("DateAdded", resourceCulture);
             }
         }
         
@@ -727,6 +1213,42 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to day left.
+        /// </summary>
+        public static string DayLeft {
+            get {
+                return ResourceManager.GetString("DayLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to days left.
+        /// </summary>
+        public static string DaysLeft {
+            get {
+                return ResourceManager.GetString("DaysLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Declined.
+        /// </summary>
+        public static string Declined {
+            get {
+                return ResourceManager.GetString("Declined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deductible Amount.
+        /// </summary>
+        public static string DeductibleAmount {
+            get {
+                return ResourceManager.GetString("DeductibleAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deductible Applies.
         /// </summary>
         public static string DeductibleApplies {
@@ -741,6 +1263,15 @@ namespace webLoyal.Resources.language {
         public static string DeductiblesText {
             get {
                 return ResourceManager.GetString("DeductiblesText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deductible Value.
+        /// </summary>
+        public static string DeductibleValue {
+            get {
+                return ResourceManager.GetString("DeductibleValue", resourceCulture);
             }
         }
         
@@ -799,6 +1330,24 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Description of Origin.
+        /// </summary>
+        public static string DescriptionOfOrigin {
+            get {
+                return ResourceManager.GetString("DescriptionOfOrigin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description of the Claim Type.
+        /// </summary>
+        public static string DescriptionOfTheClaimType {
+            get {
+                return ResourceManager.GetString("DescriptionOfTheClaimType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description Policy.
         /// </summary>
         public static string DescriptionPolicy {
@@ -840,6 +1389,15 @@ namespace webLoyal.Resources.language {
         public static string DescriptionTypeSale {
             get {
                 return ResourceManager.GetString("DescriptionTypeSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Design.
+        /// </summary>
+        public static string Design {
+            get {
+                return ResourceManager.GetString("Design", resourceCulture);
             }
         }
         
@@ -907,6 +1465,24 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Download your earnings in CSV format.
+        /// </summary>
+        public static string DownloadYourEarningsInCSVformat {
+            get {
+                return ResourceManager.GetString("DownloadYourEarningsInCSVformat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draft.
+        /// </summary>
+        public static string Draft {
+            get {
+                return ResourceManager.GetString("Draft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Due Date.
         /// </summary>
         public static string DueDate {
@@ -921,6 +1497,24 @@ namespace webLoyal.Resources.language {
         public static string Dx {
             get {
                 return ResourceManager.GetString("Dx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Earning.
+        /// </summary>
+        public static string Earning {
+            get {
+                return ResourceManager.GetString("Earning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Earnings.
+        /// </summary>
+        public static string Earnings {
+            get {
+                return ResourceManager.GetString("Earnings", resourceCulture);
             }
         }
         
@@ -1015,6 +1609,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Excellent.
+        /// </summary>
+        public static string Excellent {
+            get {
+                return ResourceManager.GetString("Excellent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exclusions.
         /// </summary>
         public static string Exclusions {
@@ -1024,11 +1627,56 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Expansions.
+        /// </summary>
+        public static string Expansions {
+            get {
+                return ResourceManager.GetString("Expansions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expense Analytics.
+        /// </summary>
+        public static string ExpenseAnalytics {
+            get {
+                return ResourceManager.GetString("ExpenseAnalytics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expenses.
+        /// </summary>
+        public static string Expenses {
+            get {
+                return ResourceManager.GetString("Expenses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Expiration Date.
         /// </summary>
         public static string ExpirationDate {
             get {
                 return ResourceManager.GetString("ExpirationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fair.
+        /// </summary>
+        public static string Fair {
+            get {
+                return ResourceManager.GetString("Fair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female.
+        /// </summary>
+        public static string Female {
+            get {
+                return ResourceManager.GetString("Female", resourceCulture);
             }
         }
         
@@ -1047,6 +1695,42 @@ namespace webLoyal.Resources.language {
         public static string FinishDate {
             get {
                 return ResourceManager.GetString("FinishDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Quarter.
+        /// </summary>
+        public static string FirstQuarter {
+            get {
+                return ResourceManager.GetString("FirstQuarter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First slide label.
+        /// </summary>
+        public static string FirstSlideLabel {
+            get {
+                return ResourceManager.GetString("FirstSlideLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fixed Expenses.
+        /// </summary>
+        public static string FixedExpenses {
+            get {
+                return ResourceManager.GetString("FixedExpenses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fixed expenses are generally fixed in both amount and interval.
+        /// </summary>
+        public static string FixedExpensesAreGenerallyFixedInBothAmountAndInterval {
+            get {
+                return ResourceManager.GetString("FixedExpensesAreGenerallyFixedInBothAmountAndInterval", resourceCulture);
             }
         }
         
@@ -1087,6 +1771,24 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to For pickup.
+        /// </summary>
+        public static string ForPickup {
+            get {
+                return ResourceManager.GetString("ForPickup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FourthQuarter.
+        /// </summary>
+        public static string FourthQuarter {
+            get {
+                return ResourceManager.GetString("FourthQuarter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gallery.
         /// </summary>
         public static string Gallery {
@@ -1096,11 +1798,38 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generate.
+        /// </summary>
+        public static string Generate {
+            get {
+                return ResourceManager.GetString("Generate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generate Denial Letter.
         /// </summary>
         public static string GenerateDenialLetter {
             get {
                 return ResourceManager.GetString("GenerateDenialLetter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Guarantee Letter.
+        /// </summary>
+        public static string GenerateGuaranteeLetter {
+            get {
+                return ResourceManager.GetString("GenerateGuaranteeLetter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate Letter Of Guarantee.
+        /// </summary>
+        public static string GenerateLetterOfGuarantee {
+            get {
+                return ResourceManager.GetString("GenerateLetterOfGuarantee", resourceCulture);
             }
         }
         
@@ -1119,6 +1848,69 @@ namespace webLoyal.Resources.language {
         public static string GoBack {
             get {
                 return ResourceManager.GetString("GoBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Good.
+        /// </summary>
+        public static string Good {
+            get {
+                return ResourceManager.GetString("Good", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gross Earnings.
+        /// </summary>
+        public static string GrossEarnings {
+            get {
+                return ResourceManager.GetString("GrossEarnings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gross Profit.
+        /// </summary>
+        public static string GrossProfit {
+            get {
+                return ResourceManager.GetString("GrossProfit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gross Profit Margin.
+        /// </summary>
+        public static string GrossProfitMargin {
+            get {
+                return ResourceManager.GetString("GrossProfitMargin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Growth Actual.
+        /// </summary>
+        public static string GrowthActual {
+            get {
+                return ResourceManager.GetString("GrowthActual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Helpdesk Service.
+        /// </summary>
+        public static string HelpdeskService {
+            get {
+                return ResourceManager.GetString("HelpdeskService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to higher than last month.
+        /// </summary>
+        public static string HigherThanLastMonth {
+            get {
+                return ResourceManager.GetString("HigherThanLastMonth", resourceCulture);
             }
         }
         
@@ -1150,11 +1942,29 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to hours left.
+        /// </summary>
+        public static string HoursLeft {
+            get {
+                return ResourceManager.GetString("HoursLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to IC10.
         /// </summary>
         public static string IC10 {
             get {
                 return ResourceManager.GetString("IC10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you want to associate an agent, select.
+        /// </summary>
+        public static string IfYouWantToAssociateAnAgentSelect {
+            get {
+                return ResourceManager.GetString("IfYouWantToAssociateAnAgentSelect", resourceCulture);
             }
         }
         
@@ -1182,6 +1992,15 @@ namespace webLoyal.Resources.language {
         public static string Inactive {
             get {
                 return ResourceManager.GetString("Inactive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Income.
+        /// </summary>
+        public static string Income {
+            get {
+                return ResourceManager.GetString("Income", resourceCulture);
             }
         }
         
@@ -1218,6 +2037,15 @@ namespace webLoyal.Resources.language {
         public static string InformationOfTheAffectedOfThePolicy {
             get {
                 return ResourceManager.GetString("InformationOfTheAffectedOfThePolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In Progress.
+        /// </summary>
+        public static string InProgress {
+            get {
+                return ResourceManager.GetString("InProgress", resourceCulture);
             }
         }
         
@@ -1285,6 +2113,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Items.
+        /// </summary>
+        public static string Items {
+            get {
+                return ResourceManager.GetString("Items", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Jhon@smith.com.
         /// </summary>
         public static string Jhon_smith_com {
@@ -1317,6 +2154,15 @@ namespace webLoyal.Resources.language {
         public static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Year.
+        /// </summary>
+        public static string LastYear {
+            get {
+                return ResourceManager.GetString("LastYear", resourceCulture);
             }
         }
         
@@ -1366,11 +2212,119 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Male.
+        /// </summary>
+        public static string Male {
+            get {
+                return ResourceManager.GetString("Male", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Customers.
+        /// </summary>
+        public static string ManageCustomers {
+            get {
+                return ResourceManager.GetString("ManageCustomers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Transactions.
+        /// </summary>
+        public static string ManageTransactions {
+            get {
+                return ResourceManager.GetString("ManageTransactions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mark as Important.
         /// </summary>
         public static string MarkAsImportant {
             get {
                 return ResourceManager.GetString("MarkAsImportant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marketing.
+        /// </summary>
+        public static string Marketing {
+            get {
+                return ResourceManager.GetString("Marketing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maternity Complications.
+        /// </summary>
+        public static string MaternityComplications {
+            get {
+                return ResourceManager.GetString("MaternityComplications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Measure how fast you’re growing monthly recurring revenue.
+        /// </summary>
+        public static string MeasureHowFastYoureGrowingMonthlyRecurringRevenue {
+            get {
+                return ResourceManager.GetString("MeasureHowFastYoureGrowingMonthlyRecurringRevenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Measures the ability of a company to use its near cash or quick assets.
+        /// </summary>
+        public static string MeasuresTheAbilityOfACompanyToUseItsNearCashOrQuickAssets {
+            get {
+                return ResourceManager.GetString("MeasuresTheAbilityOfACompanyToUseItsNearCashOrQuickAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Measures the quality or your support team’s efforts.
+        /// </summary>
+        public static string MeasuresTheQualityOrYourSupportTeamsEfforts {
+            get {
+                return ResourceManager.GetString("MeasuresTheQualityOrYourSupportTeamsEfforts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Measures whether a firm has enough resources to meet its short-term obligations.
+        /// </summary>
+        public static string MeasuresWhetherAFirmHasEnoughResourcesToMeetItsShortTermObligations {
+            get {
+                return ResourceManager.GetString("MeasuresWhetherAFirmHasEnoughResourcesToMeetItsShortTermObligations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Measures your Accounts Receivable.
+        /// </summary>
+        public static string MeasuresYourAccountsReceivable {
+            get {
+                return ResourceManager.GetString("MeasuresYourAccountsReceivable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Measures your business at generating profit sales.
+        /// </summary>
+        public static string MeasuresYourBusinessAtGeneratingProfitSales {
+            get {
+                return ResourceManager.GetString("MeasuresYourBusinessAtGeneratingProfitSales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MeasuresYourCurrentAssets.
+        /// </summary>
+        public static string MeasuresYourCurrentAssets {
+            get {
+                return ResourceManager.GetString("MeasuresYourCurrentAssets", resourceCulture);
             }
         }
         
@@ -1393,11 +2347,65 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to VariablMoney owed by a business to its suppliers shown as a liabilityeExpenses.
+        /// </summary>
+        public static string MoneyOwedByABusinessToItsSuppliersShownAsALiability {
+            get {
+                return ResourceManager.GetString("MoneyOwedByABusinessToItsSuppliersShownAsALiability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Month.
+        /// </summary>
+        public static string Month {
+            get {
+                return ResourceManager.GetString("Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly Growth Revenue.
+        /// </summary>
+        public static string MonthlyGrowthRevenue {
+            get {
+                return ResourceManager.GetString("MonthlyGrowthRevenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Monthly Payment Method.
         /// </summary>
         public static string MonthlyPaymentMethod {
             get {
                 return ResourceManager.GetString("MonthlyPaymentMethod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly Revenue/Customer.
+        /// </summary>
+        public static string MonthlyRevenueCustomer {
+            get {
+                return ResourceManager.GetString("MonthlyRevenueCustomer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly Revenue Growth.
+        /// </summary>
+        public static string MonthlyRevenueGrowth {
+            get {
+                return ResourceManager.GetString("MonthlyRevenueGrowth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Most Recent Earnings.
+        /// </summary>
+        public static string MostRecentEarnings {
+            get {
+                return ResourceManager.GetString("MostRecentEarnings", resourceCulture);
             }
         }
         
@@ -1456,6 +2464,33 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Net Earnings.
+        /// </summary>
+        public static string NetEarnings {
+            get {
+                return ResourceManager.GetString("NetEarnings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Net Profit.
+        /// </summary>
+        public static string NetProfit {
+            get {
+                return ResourceManager.GetString("NetProfit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Net Profit Margin.
+        /// </summary>
+        public static string NetProfitMargin {
+            get {
+                return ResourceManager.GetString("NetProfitMargin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
         public static string New {
@@ -1465,11 +2500,38 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Claim.
+        ///   Looks up a localized string similar to New Business Policies.
+        /// </summary>
+        public static string NewBusinessPolicies {
+            get {
+                return ResourceManager.GetString("NewBusinessPolicies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New claim.
         /// </summary>
         public static string NewClaim {
             get {
                 return ResourceManager.GetString("NewClaim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Claim.
+        /// </summary>
+        public static string Newslaim {
+            get {
+                return ResourceManager.GetString("Newslaim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        public static string Next {
+            get {
+                return ResourceManager.GetString("Next", resourceCulture);
             }
         }
         
@@ -1519,6 +2581,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to NOTICE OF CONFIDENTIALITY.
+        /// </summary>
+        public static string NOTICEOFCONFIDENTIALITY {
+            get {
+                return ResourceManager.GetString("NOTICEOFCONFIDENTIALITY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notify Insurance.
         /// </summary>
         public static string NotifyInsuranceAgent {
@@ -1555,6 +2626,78 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Number of Children (Optional).
+        /// </summary>
+        public static string NumberOfChildrenOptional {
+            get {
+                return ResourceManager.GetString("NumberOfChildrenOptional", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number Of Customers Who Have Active A Subscription With You.
+        /// </summary>
+        public static string NumberOfCustomersWhoHaveActiveASubscriptionWithYou {
+            get {
+                return ResourceManager.GetString("NumberOfCustomersWhoHaveActiveASubscriptionWithYou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open it in a spreadsheet and perform your own calculations, graphing etc.
+        /// </summary>
+        public static string OpenItInASpreadsheetAndPerformYourOwnCalculationsGraphingEtc {
+            get {
+                return ResourceManager.GetString("OpenItInASpreadsheetAndPerformYourOwnCalculationsGraphingEtc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operating Profit.
+        /// </summary>
+        public static string OperatingProfit {
+            get {
+                return ResourceManager.GetString("OperatingProfit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order Quantity.
+        /// </summary>
+        public static string OrderQuantity {
+            get {
+                return ResourceManager.GetString("OrderQuantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orders.
+        /// </summary>
+        public static string Orders {
+            get {
+                return ResourceManager.GetString("Orders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order Value.
+        /// </summary>
+        public static string OrderValue {
+            get {
+                return ResourceManager.GetString("OrderValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Or Higher.
+        /// </summary>
+        public static string OrHigher {
+            get {
+                return ResourceManager.GetString("OrHigher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Origin.
         /// </summary>
         public static string Origin {
@@ -1569,6 +2712,15 @@ namespace webLoyal.Resources.language {
         public static string OriginOfTheClaim {
             get {
                 return ResourceManager.GetString("OriginOfTheClaim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overall Rating.
+        /// </summary>
+        public static string OverallRating {
+            get {
+                return ResourceManager.GetString("OverallRating", resourceCulture);
             }
         }
         
@@ -1627,11 +2779,38 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Payment failed.
+        /// </summary>
+        public static string PaymentFailed {
+            get {
+                return ResourceManager.GetString("PaymentFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment from.
+        /// </summary>
+        public static string PaymentFrom {
+            get {
+                return ResourceManager.GetString("PaymentFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Payment Method.
         /// </summary>
         public static string PaymentMethod {
             get {
                 return ResourceManager.GetString("PaymentMethod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pending.
+        /// </summary>
+        public static string Pending {
+            get {
+                return ResourceManager.GetString("Pending", resourceCulture);
             }
         }
         
@@ -1659,6 +2838,42 @@ namespace webLoyal.Resources.language {
         public static string PerformanceRating {
             get {
                 return ResourceManager.GetString("PerformanceRating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Performance Score.
+        /// </summary>
+        public static string PerformanceScore {
+            get {
+                return ResourceManager.GetString("PerformanceScore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Periodic Expense.
+        /// </summary>
+        public static string PeriodicExpense {
+            get {
+                return ResourceManager.GetString("PeriodicExpense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Periodic expenses.
+        /// </summary>
+        public static string PeriodicExpenses {
+            get {
+                return ResourceManager.GetString("PeriodicExpenses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Periodic expenses are usually less frequent and the amount can vary.
+        /// </summary>
+        public static string PeriodicExpensesAreUsuallyLessFrequentAndTheAmountCanVary {
+            get {
+                return ResourceManager.GetString("PeriodicExpensesAreUsuallyLessFrequentAndTheAmountCanVary", resourceCulture);
             }
         }
         
@@ -1713,6 +2928,15 @@ namespace webLoyal.Resources.language {
         public static string Policies {
             get {
                 return ResourceManager.GetString("Policies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Policies Under Evaluation.
+        /// </summary>
+        public static string PoliciesUnderEvaluation {
+            get {
+                return ResourceManager.GetString("PoliciesUnderEvaluation", resourceCulture);
             }
         }
         
@@ -1780,6 +3004,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Poor.
+        /// </summary>
+        public static string Poor {
+            get {
+                return ResourceManager.GetString("Poor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Position.
         /// </summary>
         public static string Position {
@@ -1794,6 +3027,15 @@ namespace webLoyal.Resources.language {
         public static string Premiums {
             get {
                 return ResourceManager.GetString("Premiums", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previous.
+        /// </summary>
+        public static string Previous {
+            get {
+                return ResourceManager.GetString("Previous", resourceCulture);
             }
         }
         
@@ -1816,11 +3058,29 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Process delivery to.
+        /// </summary>
+        public static string ProcessDeliveryTo {
+            get {
+                return ResourceManager.GetString("ProcessDeliveryTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Processing.
         /// </summary>
         public static string Processing {
             get {
                 return ResourceManager.GetString("Processing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Process refund to.
+        /// </summary>
+        public static string ProcessRefundTo {
+            get {
+                return ResourceManager.GetString("ProcessRefundTo", resourceCulture);
             }
         }
         
@@ -1839,6 +3099,52 @@ namespace webLoyal.Resources.language {
         public static string Profile {
             get {
                 return ResourceManager.GetString("Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profit Margin.
+        /// </summary>
+        public static string ProfitMargin {
+            get {
+                return ResourceManager.GetString("ProfitMargin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profit margin is a measure of profitability. It is calculated by finding the profit as a percentage of the revenue.
+        /// </summary>
+        public static string ProfitMarginIsAMeasureOfProfitabilityItIsCalculatedByFindingTheProfitAsAPercentageOfTheRevenue {
+            get {
+                return ResourceManager.GetString("ProfitMarginIsAMeasureOfProfitabilityItIsCalculatedByFindingTheProfitAsAPercentag" +
+                        "eOfTheRevenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profit This Year.
+        /// </summary>
+        public static string ProfitThisYear {
+            get {
+                return ResourceManager.GetString("ProfitThisYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Progress.
+        /// </summary>
+        public static string Progress {
+            get {
+                return ResourceManager.GetString("Progress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Promotions.
+        /// </summary>
+        public static string Promotions {
+            get {
+                return ResourceManager.GetString("Promotions", resourceCulture);
             }
         }
         
@@ -1870,6 +3176,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Purchase From.
+        /// </summary>
+        public static string PurchaseFrom {
+            get {
+                return ResourceManager.GetString("PurchaseFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quarterly Payment Method.
         /// </summary>
         public static string QuarterlyPaymentMethod {
@@ -1879,11 +3194,74 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quick Ratio.
+        /// </summary>
+        public static string QuickRatio {
+            get {
+                return ResourceManager.GetString("QuickRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quick Ratio Goal.
+        /// </summary>
+        public static string QuickRatioGoal {
+            get {
+                return ResourceManager.GetString("QuickRatioGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quota.
+        /// </summary>
+        public static string Quota {
+            get {
+                return ResourceManager.GetString("Quota", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quota Value.
         /// </summary>
         public static string QuotaValue {
             get {
                 return ResourceManager.GetString("QuotaValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ranting.
+        /// </summary>
+        public static string Ranting {
+            get {
+                return ResourceManager.GetString("Ranting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rating.
+        /// </summary>
+        public static string Rating {
+            get {
+                return ResourceManager.GetString("Rating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reached.
+        /// </summary>
+        public static string Reached {
+            get {
+                return ResourceManager.GetString("Reached", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Real Time Sales.
+        /// </summary>
+        public static string RealTimeSales {
+            get {
+                return ResourceManager.GetString("RealTimeSales", resourceCulture);
             }
         }
         
@@ -1911,6 +3289,15 @@ namespace webLoyal.Resources.language {
         public static string Recents {
             get {
                 return ResourceManager.GetString("Recents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recent Sellers.
+        /// </summary>
+        public static string RecentSellers {
+            get {
+                return ResourceManager.GetString("RecentSellers", resourceCulture);
             }
         }
         
@@ -2050,11 +3437,74 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Run Market Research.
+        /// </summary>
+        public static string RunMarketResearch {
+            get {
+                return ResourceManager.GetString("RunMarketResearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales Count.
+        /// </summary>
+        public static string SalesCount {
+            get {
+                return ResourceManager.GetString("SalesCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales Revenue.
+        /// </summary>
+        public static string SalesRevenue {
+            get {
+                return ResourceManager.GetString("SalesRevenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Second Quarter.
+        /// </summary>
+        public static string SecondQuarter {
+            get {
+                return ResourceManager.GetString("SecondQuarter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Second slide label.
+        /// </summary>
+        public static string SecondSlideLabel {
+            get {
+                return ResourceManager.GetString("SecondSlideLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select.
         /// </summary>
         public static string Select {
             get {
                 return ResourceManager.GetString("Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the Country.
+        /// </summary>
+        public static string SelectTheCountry {
+            get {
+                return ResourceManager.GetString("SelectTheCountry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the Genre.
+        /// </summary>
+        public static string SelectTheGenre {
+            get {
+                return ResourceManager.GetString("SelectTheGenre", resourceCulture);
             }
         }
         
@@ -2095,11 +3545,65 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sex.
+        /// </summary>
+        public static string Sex {
+            get {
+                return ResourceManager.GetString("Sex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Share.
         /// </summary>
         public static string Share {
             get {
                 return ResourceManager.GetString("Share", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sold.
+        /// </summary>
+        public static string Sold {
+            get {
+                return ResourceManager.GetString("Sold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some representative placeholder content for the first slide.
+        /// </summary>
+        public static string SomeRepresentativePlaceholderContentForTheFirstSlide {
+            get {
+                return ResourceManager.GetString("SomeRepresentativePlaceholderContentForTheFirstSlide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some representative placeholder content for the second slide.
+        /// </summary>
+        public static string SomeRepresentativePlaceholderContentForTheSecondSlide {
+            get {
+                return ResourceManager.GetString("SomeRepresentativePlaceholderContentForTheSecondSlide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some representative placeholder content for the third slide.
+        /// </summary>
+        public static string SomeRepresentativePlaceholderContentForTheThirdSlide {
+            get {
+                return ResourceManager.GetString("SomeRepresentativePlaceholderContentForTheThirdSlide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spouse.
+        /// </summary>
+        public static string Spouse {
+            get {
+                return ResourceManager.GetString("Spouse", resourceCulture);
             }
         }
         
@@ -2113,11 +3617,29 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start of Validity.
+        /// </summary>
+        public static string StartOfValidity {
+            get {
+                return ResourceManager.GetString("StartOfValidity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to State.
         /// </summary>
         public static string State {
             get {
                 return ResourceManager.GetString("State", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to States.
+        /// </summary>
+        public static string States {
+            get {
+                return ResourceManager.GetString("States", resourceCulture);
             }
         }
         
@@ -2136,6 +3658,15 @@ namespace webLoyal.Resources.language {
         public static string StatusDescription {
             get {
                 return ResourceManager.GetString("StatusDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Storage Management.
+        /// </summary>
+        public static string StorageManagement {
+            get {
+                return ResourceManager.GetString("StorageManagement", resourceCulture);
             }
         }
         
@@ -2167,6 +3698,24 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Support Agents.
+        /// </summary>
+        public static string SupportAgents {
+            get {
+                return ResourceManager.GetString("SupportAgents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Support Requests.
+        /// </summary>
+        public static string SupportRequests {
+            get {
+                return ResourceManager.GetString("SupportRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Symptom Date.
         /// </summary>
         public static string SymptomDate {
@@ -2185,11 +3734,155 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tax Withheld.
+        /// </summary>
+        public static string TaxWithheld {
+            get {
+                return ResourceManager.GetString("TaxWithheld", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Than Last Week.
+        /// </summary>
+        public static string ThanLastWeek {
+            get {
+                return ResourceManager.GetString("ThanLastWeek", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The average time taken to resolve complaints.
+        /// </summary>
+        public static string TheAverageTimeTakenToResolveComplaints {
+            get {
+                return ResourceManager.GetString("TheAverageTimeTakenToResolveComplaints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The CSV file contains additional details, such as the buyer location.
+        /// </summary>
+        public static string TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocation {
+            get {
+                return ResourceManager.GetString("TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn.
+        /// </summary>
+        public static string TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn {
+            get {
+                return ResourceManager.GetString("TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The gross profit you make on each dollar of sales.
+        /// </summary>
+        public static string TheGrossProfitYouMakeOnEachDollarOfSales {
+            get {
+                return ResourceManager.GetString("TheGrossProfitYouMakeOnEachDollarOfSales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The percentage value assigned to the operating metric.
+        /// </summary>
+        public static string ThePercentageValueAssignedToTheOperatingMetric {
+            get {
+                return ResourceManager.GetString("ThePercentageValueAssignedToTheOperatingMetric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The proceeds or payment which the company will receive from its customers.
+        /// </summary>
+        public static string TheProceedsOrPaymentWhichTheCompanyWillReceiveFromItsCustomers {
+            get {
+                return ResourceManager.GetString("TheProceedsOrPaymentWhichTheCompanyWillReceiveFromItsCustomers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The revenue generated per account on a monthly or yearly basis.
+        /// </summary>
+        public static string TheRevenueGeneratedPerAccountOnAMonthlyOrYearlyBasis {
+            get {
+                return ResourceManager.GetString("TheRevenueGeneratedPerAccountOnAMonthlyOrYearlyBasis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The total number of complaints that have been received.
+        /// </summary>
+        public static string TheTotalNumberOfComplaintsThatHaveBeenReceived {
+            get {
+                return ResourceManager.GetString("TheTotalNumberOfComplaintsThatHaveBeenReceived", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Third Quarter.
+        /// </summary>
+        public static string ThirdQuarter {
+            get {
+                return ResourceManager.GetString("ThirdQuarter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Third slide label.
+        /// </summary>
+        public static string ThirdSlideLabel {
+            get {
+                return ResourceManager.GetString("ThirdSlideLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tickets By Request Type.
+        /// </summary>
+        public static string TicketsByRequestType {
+            get {
+                return ResourceManager.GetString("TicketsByRequestType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time to Resolved Complaint.
+        /// </summary>
+        public static string TimeToResolvedComplaint {
+            get {
+                return ResourceManager.GetString("TimeToResolvedComplaint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Today.
+        /// </summary>
+        public static string Today {
+            get {
+                return ResourceManager.GetString("Today", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tomodar App.
         /// </summary>
         public static string TomodarApp {
             get {
                 return ResourceManager.GetString("TomodarApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tomorrow.
+        /// </summary>
+        public static string Tomorrow {
+            get {
+                return ResourceManager.GetString("Tomorrow", resourceCulture);
             }
         }
         
@@ -2203,11 +3896,65 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Top Insured.
+        /// </summary>
+        public static string TopInsured {
+            get {
+                return ResourceManager.GetString("TopInsured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top Suppliers.
+        /// </summary>
+        public static string TopSuppliers {
+            get {
+                return ResourceManager.GetString("TopSuppliers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to To Register.
         /// </summary>
         public static string ToRegister {
             get {
                 return ResourceManager.GetString("ToRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Expenses.
+        /// </summary>
+        public static string TotalExpenses {
+            get {
+                return ResourceManager.GetString("TotalExpenses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Income.
+        /// </summary>
+        public static string TotalIncome {
+            get {
+                return ResourceManager.GetString("TotalIncome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transaction History.
+        /// </summary>
+        public static string TransactionHistory {
+            get {
+                return ResourceManager.GetString("TransactionHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transplant.
+        /// </summary>
+        public static string Transplant {
+            get {
+                return ResourceManager.GetString("Transplant", resourceCulture);
             }
         }
         
@@ -2239,11 +3986,47 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unique Purchases.
+        /// </summary>
+        public static string UniquePurchases {
+            get {
+                return ResourceManager.GetString("UniquePurchases", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upcoming.
+        /// </summary>
+        public static string Upcoming {
+            get {
+                return ResourceManager.GetString("Upcoming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update Data.
         /// </summary>
         public static string UpdateData {
             get {
                 return ResourceManager.GetString("UpdateData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updates.
+        /// </summary>
+        public static string Updates {
+            get {
+                return ResourceManager.GetString("Updates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to USD Insured Liability.
+        /// </summary>
+        public static string USDInsuredLiability {
+            get {
+                return ResourceManager.GetString("USDInsuredLiability", resourceCulture);
             }
         }
         
@@ -2275,11 +4058,38 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use This Page To Detail Your Site&apos;s Privacy Policy.
+        /// </summary>
+        public static string UseThisPageToDetailYourSitesPrivacyPolicy {
+            get {
+                return ResourceManager.GetString("UseThisPageToDetailYourSitesPrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Value Interest.
         /// </summary>
         public static string ValueInterest {
             get {
                 return ResourceManager.GetString("ValueInterest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Variable Expenses.
+        /// </summary>
+        public static string VariableExpenses {
+            get {
+                return ResourceManager.GetString("VariableExpenses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Very Good.
+        /// </summary>
+        public static string VeryGood {
+            get {
+                return ResourceManager.GetString("VeryGood", resourceCulture);
             }
         }
         
@@ -2311,6 +4121,24 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Week.
+        /// </summary>
+        public static string Week {
+            get {
+                return ResourceManager.GetString("Week", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to weeks.
+        /// </summary>
+        public static string Weeks {
+            get {
+                return ResourceManager.GetString("Weeks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Welcome.
         /// </summary>
         public static string WelcomeMessage {
@@ -2320,11 +4148,29 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Welcome to Dashboard.
+        /// </summary>
+        public static string WelcomeToDashboard {
+            get {
+                return ResourceManager.GetString("WelcomeToDashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Work Experience.
         /// </summary>
         public static string WorkExperience {
             get {
                 return ResourceManager.GetString("WorkExperience", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
             }
         }
         
@@ -2343,1607 +4189,6 @@ namespace webLoyal.Resources.language {
         public static string ZipFiles {
             get {
                 return ResourceManager.GetString("ZipFiles", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Generate Guarantee Letter.
-        /// </summary>
-        public static string GenerateGuaranteeLetter {
-            get {
-                return ResourceManager.GetString("GenerateGuaranteeLetter", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Budget Number.
-        /// </summary>
-        public static string BudgetNumber {
-            get {
-                return ResourceManager.GetString("BudgetNumber", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Admissions Department.
-        /// </summary>
-        public static string AdmissionsDepartment {
-            get {
-                return ResourceManager.GetString("AdmissionsDepartment", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Deductible Amount.
-        /// </summary>
-        public static string DeductibleAmount {
-            get {
-                return ResourceManager.GetString("DeductibleAmount", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to USD Insured Liability.
-        /// </summary>
-        public static string USDInsuredLiability {
-            get {
-                return ResourceManager.GetString("USDInsuredLiability", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to NOTICE OF CONFIDENTIALITY.
-        /// </summary>
-        public static string NOTICEOFCONFIDENTIALITY {
-            get {
-                return ResourceManager.GetString("NOTICEOFCONFIDENTIALITY", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Generate Letter Of Guarantee.
-        /// </summary>
-        public static string GenerateLetterOfGuarantee {
-            get {
-                return ResourceManager.GetString("GenerateLetterOfGuarantee", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Claim Office.
-        /// </summary>
-        public static string ClaimOffice {
-            get {
-                return ResourceManager.GetString("ClaimOffice", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Generate Letter Of Claim Department.
-        /// </summary>
-        public static string ClaimDepartment {
-            get {
-                return ResourceManager.GetString("ClaimDepartment", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Claim Status Description.
-        /// </summary>
-        public static string ClaimStatusDescription {
-            get {
-                return ResourceManager.GetString("ClaimStatusDescription", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Description Of The Claim Type.
-        /// </summary>
-        public static string DescriptionOfTheClaimType {
-            get {
-                return ResourceManager.GetString("DescriptionOfTheClaimType", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Description Of Origin.
-        /// </summary>
-        public static string DescriptionOfOrigin {
-            get {
-                return ResourceManager.GetString("DescriptionOfOrigin", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Claim Description.
-        /// </summary>
-        public static string ClaimDescription {
-            get {
-                return ResourceManager.GetString("ClaimDescription", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Deductible Value.
-        /// </summary>
-        public static string DeductibleValue {
-            get {
-                return ResourceManager.GetString("DeductibleValue", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Agent History.
-        /// </summary>
-        public static string AgentHistory {
-            get {
-                return ResourceManager.GetString("AgentHistory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Agents History.
-        /// </summary>
-        public static string AgentsHistory {
-            get {
-                return ResourceManager.GetString("AgentsHistory", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to New Business Policies.
-        /// </summary>
-        public static string NewBusinessPolicies {
-            get {
-                return ResourceManager.GetString("NewBusinessPolicies", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Charged Policies.
-        /// </summary>
-        public static string ChargedPolicies {
-            get {
-                return ResourceManager.GetString("ChargedPolicies", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Policies Under Evaluation.
-        /// </summary>
-        public static string PoliciesUnderEvaluation {
-            get {
-                return ResourceManager.GetString("PoliciesUnderEvaluation", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Approved Policies.
-        /// </summary>
-        public static string ApprovedPolicies {
-            get {
-                return ResourceManager.GetString("ApprovedPolicies", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Agents Id.
-        /// </summary>
-        public static string AgentsId {
-            get {
-                return ResourceManager.GetString("AgentsId", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Agents Status.
-        /// </summary>
-        public static string AgentsStatus {
-            get {
-                return ResourceManager.GetString("AgentsId", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Quota.
-        /// </summary>
-        public static string Quota {
-            get {
-                return ResourceManager.GetString("Quota", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Sold.
-        /// </summary>
-        public static string Sold {
-            get {
-                return ResourceManager.GetString("Sold", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Charged.
-        /// </summary>
-        public static string Charged {
-            get {
-                return ResourceManager.GetString("Charged", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Reached.
-        /// </summary>
-        public static string Reached {
-            get {
-                return ResourceManager.GetString("Reached", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Progress.
-        /// </summary>
-        public static string Progress {
-            get {
-                return ResourceManager.GetString("Progress", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Ranting.
-        /// </summary>
-        public static string Ranting {
-            get {
-                return ResourceManager.GetString("Ranting", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Dashboard.
-        /// </summary>
-        public static string Dashboard {
-            get {
-                return ResourceManager.GetString("Dashboard", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Welcome To Dashboard.
-        /// </summary>
-        public static string WelcomeToDashboard {
-            get {
-                return ResourceManager.GetString("WelcomeToDashboard", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Generate.
-        /// </summary>
-        public static string Generate {
-            get {
-                return ResourceManager.GetString("Generate", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Unique Purchases.
-        /// </summary>
-        public static string UniquePurchases {
-            get {
-                return ResourceManager.GetString("UniquePurchases", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Than Last Week.
-        /// </summary>
-        public static string ThanLastWeek {
-            get {
-                return ResourceManager.GetString("ThanLastWeek", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Order Value.
-        /// </summary>
-        public static string OrderValue {
-            get {
-                return ResourceManager.GetString("OrderValue", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Order Quantity.
-        /// </summary>
-        public static string OrderQuantity {
-            get {
-                return ResourceManager.GetString("OrderQuantity", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Conversion Rate.
-        /// </summary>
-        public static string ConversionRate {
-            get {
-                return ResourceManager.GetString("ConversionRate", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Top Suppliers.
-        /// </summary>
-        public static string TopSuppliers {
-            get {
-                return ResourceManager.GetString("TopSuppliers", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Top Insured.
-        /// </summary>
-        public static string TopInsured {
-            get {
-                return ResourceManager.GetString("TopInsured", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Claims Figures.
-        /// </summary>
-        public static string ClaimsFigures {
-            get {
-                return ResourceManager.GetString("ClaimsFigures", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Year.
-        /// </summary>
-        public static string Year {
-            get {
-                return ResourceManager.GetString("Year", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Month.
-        /// </summary>
-        public static string Month {
-            get {
-                return ResourceManager.GetString("Month", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Week.
-        /// </summary>
-        public static string Week {
-            get {
-                return ResourceManager.GetString("Week", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Helpdesk Service.
-        /// </summary>
-        public static string HelpdeskService {
-            get {
-                return ResourceManager.GetString("HelpdeskService", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Support Requests.
-        /// </summary>
-        public static string SupportRequests {
-            get {
-                return ResourceManager.GetString("SupportRequests", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Support Agents.
-        /// </summary>
-        public static string SupportAgents {
-            get {
-                return ResourceManager.GetString("SupportAgents", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Complaints Received.
-        /// </summary>
-        public static string ComplaintsReceived {
-            get {
-                return ResourceManager.GetString("ComplaintsReceived", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Complaints Resolved.
-        /// </summary>
-        public static string ComplaintsResolved {
-            get {
-                return ResourceManager.GetString("ComplaintsResolved", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to CurrentTicket Status.
-        /// </summary>
-        public static string CurrentTicketStatus {
-            get {
-                return ResourceManager.GetString("CurrentTicketStatus", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Higher Than Last Month.
-        /// </summary>
-        public static string HigherThanLastMonth {
-            get {
-                return ResourceManager.GetString("HigherThanLastMonth", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to The Total Number Of Complaints That Have Been Received.
-        /// </summary>
-        public static string TheTotalNumberOfComplaintsThatHaveBeenReceived {
-            get {
-                return ResourceManager.GetString("TheTotalNumberOfComplaintsThatHaveBeenReceived", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Time To Resolved Complaint.
-        /// </summary>
-        public static string TimeToResolvedComplaint {
-            get {
-                return ResourceManager.GetString("TimeToResolvedComplaint", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to The Average Time Taken To Resolve Complaints.
-        /// </summary>
-        public static string TheAverageTimeTakenToResolveComplaints {
-            get {
-                return ResourceManager.GetString("TheAverageTimeTakenToResolveComplaints", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Average Speed Of Answer.
-        /// </summary>
-        public static string AverageSpeedOfAnswer {
-            get {
-                return ResourceManager.GetString("AverageSpeedOfAnswer", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Tickets By Request Type.
-        /// </summary>
-        public static string TicketsByRequestType {
-            get {
-                return ResourceManager.GetString("TicketsByRequestType", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Overall Rating.
-        /// </summary>
-        public static string OverallRating {
-            get {
-                return ResourceManager.GetString("OverallRating", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Measures The Quality Or Your Support Teams Efforts.
-        /// </summary>
-        public static string MeasuresTheQualityOrYourSupportTeamsEfforts {
-            get {
-                return ResourceManager.GetString("MeasuresTheQualityOrYourSupportTeamsEfforts", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Performance Score.
-        /// </summary>
-        public static string PerformanceScore {
-            get {
-                return ResourceManager.GetString("PerformanceScore", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to The Percentage Value Assigned To The Operating Metric.
-        /// </summary>
-        public static string ThePercentageValueAssignedToTheOperatingMetric {
-            get {
-                return ResourceManager.GetString("ThePercentageValueAssignedToTheOperatingMetric", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Agent Performance Score.
-        /// </summary>
-        public static string AgentPerformanceScore {
-            get {
-                return ResourceManager.GetString("AgentPerformanceScore", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Pending.
-        /// </summary>
-        public static string Pending {
-            get {
-                return ResourceManager.GetString("Pending", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Dashbyte All Rights Reserved.
-        /// </summary>
-        public static string DashbyteAllRightsReserved {
-            get {
-                return ResourceManager.GetString("DashbyteAllRightsReserved", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Created By.
-        /// </summary>
-        public static string CreatedBy {
-            get {
-                return ResourceManager.GetString("CreatedBy", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Excellent.
-        /// </summary>
-        public static string Excellent {
-            get {
-                return ResourceManager.GetString("Excellent", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Good.
-        /// </summary>
-        public static string Good {
-            get {
-                return ResourceManager.GetString("Good", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Very Good.
-        /// </summary>
-        public static string VeryGood {
-            get {
-                return ResourceManager.GetString("VeryGood", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Fair.
-        /// </summary>
-        public static string Fair {
-            get {
-                return ResourceManager.GetString("Fair", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Poor.
-        /// </summary>
-        public static string Poor {
-            get {
-                return ResourceManager.GetString("Poor", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Agent ID.
-        /// </summary>
-        public static string AgentID {
-            get {
-                return ResourceManager.GetString("AgentID", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Agent Name.
-        /// </summary>
-        public static string AgentName {
-            get {
-                return ResourceManager.GetString("AgentName", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Rating.
-        /// </summary>
-        public static string Rating {
-            get {
-                return ResourceManager.GetString("Rating", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Away.
-        /// </summary>
-        public static string Away {
-            get {
-                return ResourceManager.GetString("Away", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Draft.
-        /// </summary>
-        public static string Draft {
-            get {
-                return ResourceManager.GetString("Draft", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to If You Want To Associate An Agent Select.
-        /// </summary>
-        public static string IfYouWantToAssociateAnAgentSelect {
-            get {
-                return ResourceManager.GetString("IfYouWantToAssociateAnAgentSelect", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Start Of Validity.
-        /// </summary>
-        public static string StartOfValidity {
-            get {
-                return ResourceManager.GetString("StartOfValidity", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Select The Country.
-        /// </summary>
-        public static string SelectTheCountry {
-            get {
-                return ResourceManager.GetString("SelectTheCountry", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Applicant.
-        /// </summary>
-        public static string Applicant {
-            get {
-                return ResourceManager.GetString("Applicant", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Sex.
-        /// </summary>
-        public static string Sex {
-            get {
-                return ResourceManager.GetString("Sex", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Select The Genre.
-        /// </summary>
-        public static string SelectTheGenre {
-            get {
-                return ResourceManager.GetString("SelectTheGenre", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Female.
-        /// </summary>
-        public static string Female {
-            get {
-                return ResourceManager.GetString("Female", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Male.
-        /// </summary>
-        public static string Male {
-            get {
-                return ResourceManager.GetString("Male", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Spouse.
-        /// </summary>
-        public static string Spouse {
-            get {
-                return ResourceManager.GetString("Spouse", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Number Of Children Optional.
-        /// </summary>
-        public static string NumberOfChildrenOptional {
-            get {
-                return ResourceManager.GetString("NumberOfChildrenOptional", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Transplant.
-        /// </summary>
-        public static string Transplant {
-            get {
-                return ResourceManager.GetString("Transplant", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Maternity Complications.
-        /// </summary>
-        public static string MaternityComplications {
-            get {
-                return ResourceManager.GetString("MaternityComplications", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Storage Management.
-        /// </summary>
-        public static string StorageManagement {
-            get {
-                return ResourceManager.GetString("StorageManagement", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Claim.
-        /// </summary>
-        public static string Claim {
-            get {
-                return ResourceManager.GetString("Claim", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Create Claim.
-        /// </summary>
-        public static string CreateClaim {
-            get {
-                return ResourceManager.GetString("CreateClaim", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to In Progress.
-        /// </summary>
-        public static string InProgress {
-            get {
-                return ResourceManager.GetString("InProgress", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Date Added.
-        /// </summary>
-        public static string DateAdded {
-            get {
-                return ResourceManager.GetString("DateAdded", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Design.
-        /// </summary>
-        public static string Design {
-            get {
-                return ResourceManager.GetString("Design", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Create Illustrations.
-        /// </summary>
-        public static string CreateIllustrations {
-            get {
-                return ResourceManager.GetString("CreateIllustrations", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Today.
-        /// </summary>
-        public static string Today {
-            get {
-                return ResourceManager.GetString("Today", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Assigned By.
-        /// </summary>
-        public static string AssignedBy {
-            get {
-                return ResourceManager.GetString("AssignedBy", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Complete.
-        /// </summary>
-        public static string Complete {
-            get {
-                return ResourceManager.GetString("Complete", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to HoursLeft.
-        /// </summary>
-        public static string HoursLeft {
-            get {
-                return ResourceManager.GetString("HoursLeft", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Promotions.
-        /// </summary>
-        public static string Promotions {
-            get {
-                return ResourceManager.GetString("Promotions", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Tomorrow.
-        /// </summary>
-        public static string Tomorrow {
-            get {
-                return ResourceManager.GetString("Tomorrow", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Build Promotion Strategy.
-        /// </summary>
-        public static string BuildPromotionStrategy {
-            get {
-                return ResourceManager.GetString("BuildPromotionStrategy", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Day Left.
-        /// </summary>
-        public static string DayLeft {
-            get {
-                return ResourceManager.GetString("DayLeft", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Days Left.
-        /// </summary>
-        public static string DaysLeft {
-            get {
-                return ResourceManager.GetString("DaysLeft", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Marketing.
-        /// </summary>
-        public static string Marketing {
-            get {
-                return ResourceManager.GetString("Marketing", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Run Market Research.
-        /// </summary>
-        public static string RunMarketResearch {
-            get {
-                return ResourceManager.GetString("RunMarketResearch", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Updates.
-        /// </summary>
-        public static string Updates {
-            get {
-                return ResourceManager.GetString("Updates", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Upcoming.
-        /// </summary>
-        public static string Upcoming {
-            get {
-                return ResourceManager.GetString("Upcoming", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Create Promotion Strategy.
-        /// </summary>
-        public static string CreatePromotionStrategy {
-            get {
-                return ResourceManager.GetString("CreatePromotionStrategy", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Weeks.
-        /// </summary>
-        public static string Weeks {
-            get {
-                return ResourceManager.GetString("Weeks", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Create New Landing Page.
-        /// </summary>
-        public static string CreateNewLandingPage {
-            get {
-                return ResourceManager.GetString("CreateNewLandingPage", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Monthly Growth Revenue.
-        /// </summary>
-        public static string MonthlyGrowthRevenue {
-            get {
-                return ResourceManager.GetString("MonthlyGrowthRevenue", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Growth Actual.
-        /// </summary>
-        public static string GrowthActual {
-            get {
-                return ResourceManager.GetString("GrowthActual", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Actual.
-        /// </summary>
-        public static string Actual {
-            get {
-                return ResourceManager.GetString("Actual", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Monthly Revenue Growth.
-        /// </summary>
-        public static string MonthlyRevenueGrowth {
-            get {
-                return ResourceManager.GetString("MonthlyRevenueGrowth", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Measure How Fast You’re Growing Monthly Recurring Revenue.
-        /// </summary>
-        public static string MeasureHowFastYoureGrowingMonthlyRecurringRevenue {
-            get {
-                return ResourceManager.GetString("MeasureHowFastYoureGrowingMonthlyRecurringRevenue", resourceCulture);
-            }
-        }/// <summary>
-        ///   Looks up a localized string similar to Monthly Revenue/Customer.
-        /// </summary>
-        public static string MonthlyRevenueCustomer {
-            get {
-                return ResourceManager.GetString("MonthlyRevenueCustomer", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to The Revenue Generated Per Account On A Monthly Or Yearly Basis.
-        /// </summary>
-        public static string TheRevenueGeneratedPerAccountOnAMonthlyOrYearlyBasis {
-            get {
-                return ResourceManager.GetString("TheRevenueGeneratedPerAccountOnAMonthlyOrYearlyBasis", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Account Retention.
-        /// </summary>
-        public static string AccountRetention {
-            get {
-                return ResourceManager.GetString("AccountRetention", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Expansions.
-        /// </summary>
-        public static string Expansions {
-            get {
-                return ResourceManager.GetString("Expansions", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Customers Who Have Upgraded The Level Of Your Products Or Service.
-        /// </summary>
-        public static string CustomersWhoHaveUpgradedTheLevelOfYourProductsOrService {
-            get {
-                return ResourceManager.GetString("CustomersWhoHaveUpgradedTheLevelOfYourProductsOrService", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Cancellations.
-        /// </summary>
-        public static string Cancellations {
-            get {
-                return ResourceManager.GetString("Cancellations", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Customers Who Have Ended Their Subscription With You
-        /// </summary>
-        public static string CustomersWhoHaveEndedTheirSubscriptionWithYou {
-            get {
-                return ResourceManager.GetString("CustomersWhoHaveEndedTheirSubscriptionWithYou", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Real Time Sales.
-        /// </summary>
-        public static string RealTimeSales {
-            get {
-                return ResourceManager.GetString("RealTimeSales", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Recent Sellers.
-        /// </summary>
-        public static string RecentSellers {
-            get {
-                return ResourceManager.GetString("RecentSellers", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Customer.
-        /// </summary>
-        public static string Customer {
-            get {
-                return ResourceManager.GetString("Customer", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Manage Customers.
-        /// </summary>
-        public static string CustoManageCustomermers {
-            get {
-                return ResourceManager.GetString("ManageCustomers", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Transaction History.
-        /// </summary>
-        public static string TransactionHistory {
-            get {
-                return ResourceManager.GetString("TransactionHistory", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Purchase From.
-        /// </summary>
-        public static string PurchaseFrom {
-            get {
-                return ResourceManager.GetString("PurchaseFrom", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Completed.
-        /// </summary>
-        public static string Completed {
-            get {
-                return ResourceManager.GetString("Completed", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Process Refund To.
-        /// </summary>
-        public static string ProcessRefundTo {
-            get {
-                return ResourceManager.GetString("ProcessRefundTo", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Process Delivery To.
-        /// </summary>
-        public static string ProcessDeliveryTo {
-            get {
-                return ResourceManager.GetString("ProcessDeliveryTo", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Items.
-        /// </summary>
-        public static string Items {
-            get {
-                return ResourceManager.GetString("Items", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to For Pickup.
-        /// </summary>
-        public static string ForPickup {
-            get {
-                return ResourceManager.GetString("ForPickup", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Payment From.
-        /// </summary>
-        public static string PaymentFrom {
-            get {
-                return ResourceManager.GetString("PaymentFrom", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Payment Failed.
-        /// </summary>
-        public static string PaymentFailed {
-            get {
-                return ResourceManager.GetString("PaymentFailed", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Declined.
-        /// </summary>
-        public static string Declined {
-            get {
-                return ResourceManager.GetString("Declined", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Manage Transactions.
-        /// </summary>
-        public static string ManageTransactions {
-            get {
-                return ResourceManager.GetString("ManageTransactions", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Sales Revenue.
-        /// </summary>
-        public static string SalesRevenue {
-            get {
-                return ResourceManager.GetString("SalesRevenue", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to States.
-        /// </summary>
-        public static string States {
-            get {
-                return ResourceManager.GetString("States", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Orders.
-        /// </summary>
-        public static string Orders {
-            get {
-                return ResourceManager.GetString("Orders", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Earnings.
-        /// </summary>
-        public static string Earnings {
-            get {
-                return ResourceManager.GetString("Earnings", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Most Recent Earnings.
-        /// </summary>
-        public static string MostRecentEarnings {
-            get {
-                return ResourceManager.GetString("MostRecentEarnings", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Gross Earnings.
-        /// </summary>
-        public static string GrossEarnings {
-            get {
-                return ResourceManager.GetString("GrossEarnings", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Net Earnings.
-        /// </summary>
-        public static string NetEarnings {
-            get {
-                return ResourceManager.GetString("NetEarnings", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Date.
-        /// </summary>
-        public static string Date {
-            get {
-                return ResourceManager.GetString("Date", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Sales Count.
-        /// </summary>
-        public static string SalesCount {
-            get {
-                return ResourceManager.GetString("SalesCount", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Tax Withheld.
-        /// </summary>
-        public static string TaxWithheld {
-            get {
-                return ResourceManager.GetString("TaxWithheld", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Earning.
-        /// </summary>
-        public static string Earning {
-            get {
-                return ResourceManager.GetString("Earning", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Download Your Earnings In CSV format.
-        /// </summary>
-        public static string DownloadYourEarningsInCSVformat {
-            get {
-                return ResourceManager.GetString("DownloadYourEarningsInCSVformat", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to OpenIt In A Spreadsheet And Perform Your Own Calculations Graphing Etc.
-        /// </summary>
-        public static string OpenItInASpreadsheetAndPerformYourOwnCalculationsGraphingEtc {
-            get {
-                return ResourceManager.GetString("OpenItInASpreadsheetAndPerformYourOwnCalculationsGraphingEtc", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to The CSV File Contains Additional Details Such As The Buyer Location.
-        /// </summary>
-        public static string TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocation {
-            get {
-                return ResourceManager.GetString("TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocation", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to First Slide Label.
-        /// </summary>
-        public static string FirstSlideLabel {
-            get {
-                return ResourceManager.GetString("FirstSlideLabel", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Some Representative Placeholder Content For The First Slide.
-        /// </summary>
-        public static string SomeRepresentativePlaceholderContentForTheFirstSlide {
-            get {
-                return ResourceManager.GetString("SomeRepresentativePlaceholderContentForTheFirstSlide", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Profit This Year.
-        /// </summary>
-        public static string ProfitThisYear {
-            get {
-                return ResourceManager.GetString("ProfitThisYear", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Last Year.
-        /// </summary>
-        public static string LastYear {
-            get {
-                return ResourceManager.GetString("LastYear", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to First Quarter.
-        /// </summary>
-        public static string FirstQuarter {
-            get {
-                return ResourceManager.GetString("FirstQuarter", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Second Quarter.
-        /// </summary>
-        public static string SecondQuarter {
-            get {
-                return ResourceManager.GetString("SecondQuarter", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Third Quarter.
-        /// </summary>
-        public static string ThirdQuarter {
-            get {
-                return ResourceManager.GetString("ThirdQuarter", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Fourth Quarter.
-        /// </summary>
-        public static string FourthQuarter {
-            get {
-                return ResourceManager.GetString("FourthQuarter", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Gross Profit Margin.
-        /// </summary>
-        public static string GrossProfitMargin {
-            get {
-                return ResourceManager.GetString("GrossProfitMargin", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to The Gross Profit You Make On Each Dollar Of Sales.
-        /// </summary>
-        public static string TheGrossProfitYouMakeOnEachDollarOfSales {
-            get {
-                return ResourceManager.GetString("TheGrossProfitYouMakeOnEachDollarOfSales", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Net Profit Margin.
-        /// </summary>
-        public static string NetProfitMargin {
-            get {
-                return ResourceManager.GetString("NetProfitMargin", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Measures Your Business At Generating Profit Sales.
-        /// </summary>
-        public static string MeasuresYourBusinessAtGeneratingProfitSales {
-            get {
-                return ResourceManager.GetString("MeasuresYourBusinessAtGeneratingProfitSales", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Quick Ratio Goal.
-        /// </summary>
-        public static string QuickRatioGoal {
-            get {
-                return ResourceManager.GetString("QuickRatioGoal", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Measures Your Accounts Receivable.
-        /// </summary>
-        public static string MeasuresYourAccountsReceivable {
-            get {
-                return ResourceManager.GetString("MeasuresYourAccountsReceivable", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Current Liabilities.
-        /// </summary>
-        public static string CurrentLiabilities {
-            get {
-                return ResourceManager.GetString("CurrentLiabilities", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Available Balance.
-        /// </summary>
-        public static string AvailableBalance {
-            get {
-                return ResourceManager.GetString("AvailableBalance", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Account Name.
-        /// </summary>
-        public static string AccountName {
-            get {
-                return ResourceManager.GetString("AccountName", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Income.
-        /// </summary>
-        public static string Income {
-            get {
-                return ResourceManager.GetString("Income", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Expenses.
-        /// </summary>
-        public static string Expenses {
-            get {
-                return ResourceManager.GetString("Expenses", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Profit Margin.
-        /// </summary>
-        public static string ProfitMargin {
-            get {
-                return ResourceManager.GetString("ProfitMargin", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Profit Margin Is A Measure Of Profitability It Is Calculated By Finding The Profit As A Percentage Of The Revenue.
-        /// </summary>
-        public static string ProfitMarginIsAMeasureOfProfitabilityItIsCalculatedByFindingTheProfitAsAPercentageOfTheRevenue {
-            get {
-                return ResourceManager.GetString("ProfitMarginIsAMeasureOfProfitabilityItIsCalculatedByFindingTheProfitAsAPercentageOfTheRevenue", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Gross Profit.
-        /// </summary>
-        public static string GrossProfit {
-            get {
-                return ResourceManager.GetString("GrossProfit", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Operating Profit.
-        /// </summary>
-        public static string OperatingProfit {
-            get {
-                return ResourceManager.GetString("OperatingProfit", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Net Profit.
-        /// </summary>
-        public static string NetProfit {
-            get {
-                return ResourceManager.GetString("NetProfit", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Expense Analytics.
-        /// </summary>
-        public static string ExpenseAnalytics {
-            get {
-                return ResourceManager.GetString("ExpenseAnalytics", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Fixed Expenses.
-        /// </summary>
-        public static string FixedExpenses {
-            get {
-                return ResourceManager.GetString("FixedExpenses", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Fixed Expenses Are Generally Fixed In Both Amount And Interval.
-        /// </summary>
-        public static string FixedExpensesAreGenerallyFixedInBothAmountAndInterval {
-            get {
-                return ResourceManager.GetString("FixedExpensesAreGenerallyFixedInBothAmountAndInterval", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Periodic Expense.
-        /// </summary>
-        public static string PeriodicExpense {
-            get {
-                return ResourceManager.GetString("PeriodicExpense", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Periodic Expenses Are Usually Less Frequent And The Amount Can Vary.
-        /// </summary>
-        public static string PeriodicExpensesAreUsuallyLessFrequentAndTheAmountCanVary {
-            get {
-                return ResourceManager.GetString("PeriodicExpensesAreUsuallyLessFrequentAndTheAmountCanVary", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Variable Expenses.
-        /// </summary>
-        public static string VariableExpenses {
-            get {
-                return ResourceManager.GetString("VariableExpenses", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Change As The Quantity Of Good Or Service That Produces Changes.
-        /// </summary>
-        public static string ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges {
-            get {
-                return ResourceManager.GetString("ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Billed Opportunities.
-        /// </summary>
-        public static string BilledOpportunities {
-            get {
-                return ResourceManager.GetString("BilledOpportunities", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Total Income.
-        /// </summary>
-        public static string TotalIncome {
-            get {
-                return ResourceManager.GetString("TotalIncome", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Total Expenses.
-        /// </summary>
-        public static string TotalExpenses {
-            get {
-                return ResourceManager.GetString("TotalExpenses", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Quick Ratio.
-        /// </summary>
-        public static string QuickRatio {
-            get {
-                return ResourceManager.GetString("QuickRatio", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Current Ratio.
-        /// </summary>
-        public static string CurrentRatio {
-            get {
-                return ResourceManager.GetString("CurrentRatio", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Accounts Receivable.
-        /// </summary>
-        public static string AccountsReceivable {
-            get {
-                return ResourceManager.GetString("AccountsReceivable", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to The Proceeds Or Payment Which The Company Will Receive From Its Customers.
-        /// </summary>
-        public static string TeProceedsOrPaymentWhichTheCompanyWillReceiveFromItsCustomers {
-            get {
-                return ResourceManager.GetString("TheProceedsOrPaymentWhichTheCompanyWillReceiveFromItsCustomers", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Accounts Payable.
-        /// </summary>
-        public static string AccountsPayable {
-            get {
-                return ResourceManager.GetString("AccountsPayable", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Money Owed By A Business To Its Suppliers Shown As A Liability.
-        /// </summary>
-        public static string MoneyOwedByABusinessToItsSuppliersShownAsALiability {
-            get {
-                return ResourceManager.GetString("MoneyOwedByABusinessToItsSuppliersShownAsALiability", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Measures The Ability Of A Company To Use Its Near Cash Or Quick Assets.
-        /// </summary>
-        public static string MeasuresTheAbilityOfACompanyToUseItsNearCashOrQuickAssets {
-            get {
-                return ResourceManager.GetString("MeasuresTheAbilityOfACompanyToUseItsNearCashOrQuickAssets", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Measures Whether A Firm Has Enough Resources To Meet Its Short Term Obligations.
-        /// </summary>
-        public static string MeasuresWhetherAFirmHasEnoughResourcesToMeetItsShortTermObligations {
-            get {
-                return ResourceManager.GetString("MeasuresWhetherAFirmHasEnoughResourcesToMeetItsShortTermObligations", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Second Slide Label.
-        /// </summary>
-        public static string SecondSlideLabel {
-            get {
-                return ResourceManager.GetString("SecondSlideLabel", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Some Representative Placeholder Content For The Second Slide.
-        /// </summary>
-        public static string SomeRepresentativePlaceholderContentForTheSecondSlide {
-            get {
-                return ResourceManager.GetString("SomeRepresentativePlaceholderContentForTheSecondSlide", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Third Slide Label.
-        /// </summary>
-        public static string ThirdSlideLabel {
-            get {
-                return ResourceManager.GetString("ThirdSlideLabel", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Some Representative Placeholder Content For The Third Slide.
-        /// </summary>
-        public static string SomeRepresentativePlaceholderContentForTheThirdSlide {
-            get {
-                return ResourceManager.GetString("SomeRepresentativePlaceholderContentForTheThirdSlide", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Previous.
-        /// </summary>
-        public static string Previous {
-            get {
-                return ResourceManager.GetString("Previous", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Next.
-        /// </summary>
-        public static string Next {
-            get {
-                return ResourceManager.GetString("Next", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Number Of Customers Who Have Active A Subscription With You.
-        /// </summary>
-        public static string NumberOfCustomersWhoHaveActiveASubscriptionWithYou {
-            get {
-                return ResourceManager.GetString("NumberOfCustomersWhoHaveActiveASubscriptionWithYou", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Or Higher.
-        /// </summary>
-        public static string OrHigher {
-            get {
-                return ResourceManager.GetString("OrHigher", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to Manage Customers.
-        /// </summary>
-        public static string ManageCustomers {
-            get {
-                return ResourceManager.GetString("ManageCustomers", resourceCulture);
-            }
-        }
-        /// <summary>
-        ///   Looks up a localized string similar to se This Page To Detail Your Site's Privacy Policy.
-        /// </summary>
-        public static string UseThisPageToDetailYourSitesPrivacyPolicy {
-            get {
-                return ResourceManager.GetString("UseThisPageToDetailYourSitesPrivacyPolicy", resourceCulture);
             }
         }
     }

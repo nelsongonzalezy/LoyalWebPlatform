@@ -1473,4 +1473,16 @@
   <data name="UseThisPageToDetailYourSitesPrivacyPolicy" xml:space="preserve">
     <value>Use This Page To Detail Your Site's Privacy Policy</value>
   </data>
+  <data name="AssignedBy" xml:space="preserve">
+    <value>Assigned By</value>
+  </data>
+  <data name="MeasuresYourCurrentAssets" xml:space="preserve">
+    <value>MeasuresYourCurrentAssets</value>
+  </data>
+  <data name="PeriodicExpenses" xml:space="preserve">
+    <value>Periodic expenses</value>
+  </data>
+  <data name="TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn" xml:space="preserve">
+    <value>TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn</value>
+  </data>
 </root>
