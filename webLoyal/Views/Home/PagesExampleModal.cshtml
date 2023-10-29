@@ -24,58 +24,79 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="p-2 bg-gray-300">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Modal Estático 2
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ventana Emergente 2</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Hac in pagina debes ponere materiam tuam ut visitatores videre eam.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abandonar</button>
-                        <button type="button" class="btn btn-primary">Continuar</button>
-                    </div>
+<div class="d-flex flex-row border mb-2">
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Ventana Emergente 1</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    En el Boton De Abajo Se Despliega Otra Ventana Modal.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Abrir La Segunda Ventana Modal</button>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Ventana Emergente 2</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                     Con el Botón Se Cierra Ésta Ventana MOdal y Retorna A La Anterior.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Modal Estático 2</button>
+</div>
 
+<div class="d-flex flex-row border mb-2">
     <div class="p-2 bg-gray-300">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Modal Estático 3
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Modal Estático 3
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ventana Emergente 3</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Mensaje</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        Hac in pagina debes ponere materiam tuam ut visitatores videre eam.
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Receptor:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Mensaje:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Enviar Mensaje</button>
                     </div>
                 </div>
-            </div>
-        </div>  
-    </div>   
+            </div> 
+        </div>
+    </div>
 </div>
 
     
