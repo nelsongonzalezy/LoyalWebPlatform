@@ -13,7 +13,21 @@
 
             </div>
 <div class="row g-3">
-    <div class="col-xl-12">
+    <div class="col-xl-3">
+        <div class="">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">Total Vidas</label>
+                    <h3 class="card-value mb-1"><i class="ri-team-fill"></i> @Model.CifrasPersonas.Sum(c => c.TotalPersonas)</h3>
+                 
+                    <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @Model.CifrasPersonas.Sum(c => c.PorcentajeGrupoEdadSobreTotal).ToString("P2") </span></small>
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div>
+
+
+    </div>
+    <div class="col-xl-9">
 
             @await Component.InvokeAsync("PoliciesLivesList")
               
@@ -80,6 +94,7 @@
         </div>
 
     </div>
+
 
     <div class="col-xl-12">
         <div class="card">

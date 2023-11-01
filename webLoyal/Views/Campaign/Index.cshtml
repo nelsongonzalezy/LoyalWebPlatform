@@ -9,20 +9,16 @@
         </ol>
         <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Campaigns @Model.DtCampanas.DescripcionCampana</h4>
     </div>
-
     <div class="d-flex gap-2 mt-3 mt-md-0 align-items-end">
         <div class="col-6">
             <input type="date" id="FechaInicio" asp-for="@Model.DtCampanas.FechaInicio" class="form-control hasDatepicker" placeholder="From">
-        </div><!-- col -->
+        </div>
         <div class="col-6">
             <input type="date" id="FechaFin" asp-for="@Model.DtCampanas.FechaFin" class="form-control hasDatepicker col-1" placeholder="To">
-        </div><!-- col -->
-
-        
+        </div>        
     </div>
     <div class="d-flex gap-2 mt-3 mt-md-0">
         <button id="enviarDatos" class="btn btn-primary d-flex align-items-center gap-2">@webLoyal.Resources.language.Resources.UpdateData</button>
-        @*<a href="~/home/InConstruction" type="button" class="btn btn-primary d-flex align-items-center gap-2"><span class="d-none d-sm-inline">@webLoyal.Resources.language.Resources.CreateNewCampaign</span></a>*@
         <div class="btn-group">
             <a href="~/campaign/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2">@webLoyal.Resources.language.Resources.CreateNewCampaign</a>
             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,46 +30,38 @@
             </ul>
         </div>
     </div>
-
 </div>
 <div>
-<div class="row g-3">
-    <div class="row">
-        <div class="col-4 col-xl-3">
+    <div class="row g-3">
+        <div class="row">
+            <div class="col-4 col-xl-3">
                 <div class="card">
                     <div class="card-body p-3">
                         <div class="row g-3">
-
                             <div class="col-sm-8 col-md-9 col-xl-8 d-flex flex-column">
                                 <h6 class="fw-semibold text-dark lh-5">Tiempo de Campaña</h6>
                                 <p class="text-secondary">  @Model.mensaje<span class="d-xl-none d-xxl-inline"> </span>...</p>
-
-                            </div><!-- col -->
-                        </div><!-- row -->
+                            </div>
+                        </div>
                     </div>
+                 </div>
+            </div>
         </div>
-    </div>
-
-          
-        </div> <!-- end col-->
     </div>
 </div>
 <div class="row g-3">
     <div class="row">
-       @* <input type="date" id="fecha1">
-        <input type="date" id="fecha2">*@
         <div class="col-4 col-xl-3">
             <div class="card">
                 <div class="card-body">
                     <div class="form-check form-switch">
                         @if (Model.DtDetalleCampanas.Any(x => x.FormaAnual))
                         {
-                            <input id="FormaAnual" class="form-check-input" type="checkbox" role="switch" checked>
+                            <input id="FormaAnual" class="form-check-input" type="checkbox" checked>
                         }
                         else
                         {
-                            <input id="FormaAnual" class="form-check-input" type="checkbox" role="switch">
-
+                            <input id="FormaAnual" class="form-check-input" type="checkbox">
                         }
                         <label class="form-check-label" for="FormaAnual">@webLoyal.Resources.language.Resources.AnnualPaymentMethod</label>
                     </div>
@@ -86,11 +74,11 @@
                     <div class="form-check form-switch">
                         @if (Model.DtDetalleCampanas.Any(x => x.FormaSemestral))
                         {
-                            <input id="FormaSemestral" class="form-check-input" type="checkbox" role="switch" checked>
+                            <input id="FormaSemestral" class="form-check-input" type="checkbox" checked>
                         }
                         else
                         {
-                            <input id="FormaSemestral" class="form-check-input" type="checkbox" role="switch">
+                            <input id="FormaSemestral" class="form-check-input" type="checkbox" >
 
                         }
                        
@@ -99,20 +87,18 @@
                 </div>
             </div>
         </div>
-                <div class="col-4 col-xl-3">
+        <div class="col-4 col-xl-3">
             <div class="card">
                 <div class="card-body">
                     <div class="form-check form-switch">
                         @if (Model.DtDetalleCampanas.Any(x => x.FormaTrimestral))
                         {
-                            <input id="FormaTrimestral" class="form-check-input" type="checkbox" role="switch" checked>
+                            <input id="FormaTrimestral" class="form-check-input" type="checkbox" checked>
                         }
                         else
                         {
-                            <input id="FormaTrimestral" class="form-check-input" type="checkbox" role="switch">
-
+                            <input id="FormaTrimestral" class="form-check-input" type="checkbox">
                         }
-                       
                         <label class="form-check-label" for="FormaTrimestral">@webLoyal.Resources.language.Resources.QuarterlyPaymentMethod</label>
                     </div>
                 </div>
@@ -124,27 +110,21 @@
                     <div class="form-check form-switch">
                         @if (Model.DtDetalleCampanas.Any(x => x.FormaMensual))
                         {
-                            <input id="FormaMensual" class="form-check-input" type="checkbox" role="switch" checked>
+                            <input id="FormaMensual" class="form-check-input" type="checkbox" checked>
                         }
                         else
                         {
-                            <input id="FormaMensual" class="form-check-input" type="checkbox" role="switch">
-
+                            <input id="FormaMensual" class="form-check-input" type="checkbox">
                         }
-                       
                         <label class="form-check-label" for="FormaMensual">@webLoyal.Resources.language.Resources.MonthlyPaymentMethod</label>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-
 </div>
 <div class="row g-3">
     <div class="row">
-  
         @foreach (var producto in Model.CampanasProductos.OrderBy(x=>x.CodigoPoliza))
         {
             <div class="col-6 col-xl-3">
@@ -164,9 +144,7 @@
                             case 4:
                                 <a href="background-color:rgb(132,26,102)" class="media-img"><img src="~/assets/img/legacy.png" alt=""></a>
                                 break;
-
                         }
-
                     </div>
                     <div class="media-body">
                         <h5><a href="" class="text-white">@producto.DescripcionPoliza</a></h5>
@@ -179,45 +157,7 @@
                 </div>
             </div>
         }
-    @*  <div class="col-6 col-xl-3">
-            <div class="music-player mt-4 mt-xxl-5" style="">
-                <div class="media-music">
-                    <a href="" class="media-img"><img src="" alt=""></a>
-
-                </div>
-                <div class="media-body">
-                    <h5><a href="" class="text-white">valor</a></h5>
-                    <h3 class="card-value text-white"># valor</h3>
-                </div>
-            </div>
-        </div>        
-        <div class="col-6 col-xl-3">
-            <div class="music-player mt-4 mt-xxl-5" style="">
-                <div class="media-music">
-                    <a href="" class="media-img"><img src="" alt=""></a>
-
-                </div>
-                <div class="media-body">
-                    <h5><a href="" class="text-white">valor</a></h5>
-                    <h3 class="card-value text-white"># valor</h3>
-                </div>
-            </div>
-        </div>
-            <div class="col-6 col-xl-3">
-            <div class="music-player mt-4 mt-xxl-5" style="">
-                <div class="media-music">
-                    <a href="" class="media-img"><img src="" alt=""></a>
-
-                </div>
-                <div class="media-body">
-                    <h5><a href="" class="text-white">valor</a></h5>
-                    <h3 class="card-value text-white"># valor</h3>
-                </div>
-            </div>
-        </div>*@
-    
-</div>
-
+    </div>
 </div>
 <br />
 <div class="row g-3">
@@ -228,20 +168,15 @@
             <div class="card card-one">
                 <div class="card-header"><h5 class="card-title mb-1">@estados.DescripcionEstadoCertificado</h5></div>
                 <div class="card-body">
-                    
                     <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Bonus @estados.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
                     <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Policies @estados.CantidadRegistros</h6>
                     <h6 class="card-value mb-1">C.ADM @estados.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
-                   
-
-                </div><!-- card-body -->
+                </div>
                 <div class="card-footer">
                     <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Representation:&nbsp<span class="d-block fs-xs text-success">@estados.PorcentajeCantidadRegistros.ToString("P2")</span></h6>
                 </div>
-            </div><!-- card-one -->
+            </div>
         </div>
-
-        <!-- card-one -->
     }
     
 </div>
@@ -250,8 +185,7 @@
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">@webLoyal.Resources.language.Resources.Policies</button>
     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">@webLoyal.Resources.language.Resources.TopAgents</button>
-    @*<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">@webLoyal.Resources.language.Resources.Criteria</button>*@
-  </div>
+   </div>
 </nav>
 
 <div class="tab-content" id="nav-tabContent">
@@ -357,12 +291,11 @@
                             </tbody>
                         </table>
                     </div>
-                </div><!-- card-body -->
+                </div>
             </div>
         </div>
   </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         <div class="row g-3">
             @foreach (var item in Model.CampanasAgentes.OrderBy(x => x.Fila).Take(5))
             {
@@ -408,21 +341,16 @@
                                         <i class="ri-star-line"></i>
                                         <i class="ri-star-line"></i>
                                         break;
-
                                 }
                             </h5>
                         </div>
                         <div class="card-body">
-
-
                             <label class="card-value mb-1"><i class=""></i>@item.NombreAgenteVenta</label>
                             <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Bonus:  @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
                             <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Policies: @item.Cantidad</label>
-
-                        </div><!-- card-body -->
-                    </div><!-- card-one -->
+                        </div>
+                    </div>
                 </div>
-
             }
             <div class="col-md-6 col-xl-12">
                 <div class="card card-one">
@@ -435,11 +363,7 @@
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-half-fill"></i>
                         </div>
-                        @*<nav class="nav nav-icon nav-icon-sm ms-auto">
-                            <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                            <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                        </nav>*@
-                    </div><!-- card-header -->
+                    </div>
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -450,20 +374,14 @@
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Percentage</th>
-                           
-
                                 </tr>
-          
                             </thead>
                             @foreach (var item in Model.CampanasAgentes.OrderBy(x => x.Fila))
                             {
                                 <tbody>
                                     <tr>
                                         <td><strong>@item.Fila</strong></td>
-                                        @*<td>@item.CodigoMGA</td>
-                                        <td>@item.NombreMGA</td>*@
                                         <td> <a href="../Agents/detail/@item.CodigoAgenteVenta" class="btn btn-outline-tertiary"> @item.CodigoAgenteVenta </a> </td>
-@*                                        <td>@item.CodigoAgenteVenta</td>*@
                                         <td>@item.NombreAgenteVenta.Trim() &nbsp/&nbsp @item.NombreMGA.Trim()</td>
                                         <td>@item.Cantidad</td>
                                         <td>
@@ -471,226 +389,63 @@
                                             @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>
                                             @{
-                                                decimal objetivo = 20000; // El valor objetivo
-                                                decimal primaActual = @item.Prima; // El valor actual de la prima
-
-                                                // Calcular el porcentaje de avance
+                                                decimal objetivo = 20000; 
+                                                decimal primaActual = @item.Prima; 
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
                                             }
                                             @porcentajeAvance.ToString("P2")
                                         </td>
-
-                                        @*<td>
-                                            <div class="progress" style="height: 20px;">
-                                                <div class="progress-bar" role="progressbar" style="width: @porcentajeAvance.ToString("P2");" aria-valuenow="@porcentajeAvance" aria-valuemin="0" aria-valuemax="100">
-                                                    @porcentajeAvance.ToString("P2")
-                                                </div>
-                                            </div>
-                                        </td>*@
                                     </tr>
                                 </tbody>
-
-
                             }
-
-
                         </table>
-                    </div><!-- card-body -->
-                </div><!-- card -->
-            </div><!-- col -->
-        </div>
-
-  </div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-
-      <div class="card">
-          <div class="card-body">
-                <img src="~/assets/img/MIAMI-INV.jpg" />
-          </div>
-
-      </div>
-
-
-  </div>
-</div>
-@*<div class="col-lg-12 row g-3">
-
-    <div class="card card-one mt-3">
-        <div class="card-body p-3">
-            <div class="table-responsive">
-                <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                    <thead>
-                        <tr>
-                            <th>CodigoSolicitud</th>
-                            <th>CodigoCertificado</th>
-                            <th>NumeroPoliza </th>
-                            <th>CodigoTitular</th>
-                            <th>NombreTitular</th>
-                            <th>NumeroAsegurados</th>
-                            <th>DescripcionPais</th>
-                            <th>CodigoPoliza</th>
-                            <th>DescripcionPoliza</th>
-                            <th>DeduciblesTexto</th>
-                            <th>FechaEfectividad</th>
-                            <th>DescripcionFormaPago</th>
-                            <th>FechaCobro</th>
-                            <th>Prima</th>
-                            <th>CostoAdministrativo</th>
-                            <th>PrimaComisionable</th>
-                            <th>ValorCuota</th>
-                            <th>ValorIntereses</th>
-                            <th>Restricciones</th>
-                            <th>DescripcionEstadoCertificado</th>
-                            <th>DescripcionMotivoCancelacion</th>
-                            <th>DescripcionTipoVenta</th>
-                            <th>PagoAutomatico</th>
-                            <th>Siniestralidad</th>
-                            <th>PolizaGrupo</th>
-                            <th>PolizaDependiente</th>
-                            <th>Notas</th>
-                            <th>CodigoAgenteVenta</th>
-                            <th>PolizaGrupo</th>
-                            <th>NombreAgenteVenta</th>
-                            <th>NombreSubAgente</th>
-                            <th>CodigoSubAgente</th>
-                            <th>CodigoAgente</th>
-                            <th>NombreAgencia</th>
-                            <th>CodigoAgencia</th>
-                            <th>CodigoEstadoCuota</th>
-                            <th>CodigoEstadoCertificado</th>
-                            <th>FechaPago</th>
-                            <th>Celular</th>
-                            <th>Correo</th>
-                            <th>CodigoMGA</th>
-
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-
-                    </tbody>
-                </table>
+                    </div>
+                </div>
             </div>
-        </div><!-- card-body -->
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <div class="card">
+            <div class="card-body">
+                    <img src="~/assets/img/MIAMI-INV.jpg" />
+            </div>
+        </div>
     </div>
 </div>
-*@
 
 @section Scripts{
     <script>
-        //function updateCountdown() {
-        //    const targetDate = new Date(@Model.DtCampanas.FechaFin);
-        //    const currentDate = new Date();
-
-        //    const timeDifference = targetDate - currentDate;
-
-        //    if (timeDifference <= 0) {
-        //        if (document.getElementById("countdown")) {
-        //            document.getElementById("countdown").innerHTML = "¡La fecha objetivo ha pasado!";
-        //        }
-        //        return;
-        //    }
-
-        //    const daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        //    const hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-        //    if (document.getElementById("countdown")) {
-        //        document.getElementById("countdown").innerHTML = `Finaliza en: ${daysRemaining} d, ${hoursRemaining} h`;
-        //    } else {
-        //        setTimeout(updateCountdown, 500); // Esperar 0.5 segundos y volver a intentar
-        //    }
-        //}
-
-        //// Actualizar cada segundo
-        //setInterval(updateCountdown, 1000);
-
-        //// Inicializar el conteo al cargar la página
-        //updateCountdown();
-
-        //function updateCountdown() {
-        //    const targetDate = new Date("2024-01-15");
-        //    const currentDate = new Date();
-
-        //    const timeDifference = targetDate - currentDate;
-
-        //    if (timeDifference <= 0) {
-        //        // Mostrar mensaje si la fecha objetivo ha pasado
-        //        if (document.getElementById("countdown-days")) {
-        //            document.getElementById("countdown-days").innerHTML = "¡La fecha objetivo ha pasado!";
-        //        }
-        //        return;
-        //    }
-
-        //    const daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        //    const hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        //    const minutesRemaining = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-        //    const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-        //    // Actualizar los divs con los valores correspondientes
-        //    if (document.getElementById("countdown-days")) {
-        //        document.getElementById("countdown-days").innerHTML = `${daysRemaining} <span>Dias</span>`;
-        //    }
-        //    if (document.getElementById("countdown-hours")) {
-        //        document.getElementById("countdown-hours").innerHTML = `${hoursRemaining} <span>Horas</span>`;
-        //    }
-        //    if (document.getElementById("countdown-minutes")) {
-        //        document.getElementById("countdown-minutes").innerHTML = `${minutesRemaining} <span>Minutos</span>`;
-        //    }
-        //    if (document.getElementById("countdown-seconds")) {
-        //        document.getElementById("countdown-seconds").innerHTML = `${secondsRemaining} <span>Segundo</span>`;
-        //    }
-        //}
-
-        //// Actualizar cada segundo
-        //setInterval(updateCountdown, 1000);
-
-        //// Inicializar el conteo al cargar la página
-        //updateCountdown2();
-
         $(document).ready(function () {
             $("#enviarDatos").on("click", function () {
                 enviarPeticionAlControlador();
             });
         });
-
         function enviarPeticionAlControlador() {
-            // Obtener los valores
             var boolw1 = $("#FormaAnual").prop("checked");
             var boolw2 = $("#FormaSemestral").prop("checked");
             var boolw3 = $("#FormaTrimestral").prop("checked");
             var boolw4 = $("#FormaMensual").prop("checked");
             var fecha1 = $("#FechaInicio").val();
             var fecha2 = $("#FechaFin").val();
-
-            // Crear la URL de la petición GET
-            var nuevaURL = "/campaign/Index?CodigoCampana=25" +
+            var nuevaURL = "/campaign/Index?CodigoCampana=" +
+                "@Model.Campanas.FirstOrDefault().CodigoCampana" +
                 "&FormaAnual=" + boolw1 +
                 "&FormaSemestral=" + boolw2 +
                 "&FormaTrimestral=" + boolw3 +
                 "&FormaMensual=" + boolw4 +
                 "&FechaInicio=" + fecha1 +
                 "&FechaFin=" + fecha2;
-
-            // Redirigir al controlador
             window.location.href = nuevaURL;
 
-            // Mostrar Sweet Alert
             Swal.fire({
                 icon: 'success',
                 title: 'Petición Enviada',
                 text: 'La petición ha sido enviada correctamente.',
-                        showConfirmButton: false
+                showConfirmButton: false
             });
         }
-
-
-
-
         $("#Campanaatatablet").DataTable({
-            searchPanes: {
-                viewTotal: true
-            },
+            searchPanes: {viewTotal: true},
             searchBuilder: true,
             sort: true,
             resizable: true,
@@ -700,34 +455,24 @@
             order: [[0, "desc"]],
             dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
             buttons: [
-                {
-                    extend: 'excelHtml5',
+                {   extend: 'excelHtml5',
                     autoFilter: true,
                     className: 'btn btn-outline-primary',
                     filename: '@nameof(core.Service.PoliciesDetailModel)Excel',
                 },
-                {
-                    extend: 'pdfHtml5',
+                {   extend: 'pdfHtml5',
                     className: 'btn btn-outline-primary',
                     filename: '@nameof(core.Service.PoliciesDetailModel)Pdf',
                 },
-                {
-                    extend: 'print',
+                {   extend: 'print',
                     className: 'btn btn-outline-primary',
                     title: '',
                     customize: function (win) {
                         $(win.document.body).addClass('white-bg');
                         $(win.document.body).css('font-size', '10px');
-
-                        // Personaliza la apariencia de la página impresa si es necesario
                     }
                 }
             ]
         });
-
-
-               
-
     </script>
-
 }

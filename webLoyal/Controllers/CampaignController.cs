@@ -36,9 +36,17 @@ namespace webLoyal.Controllers
             DateTime fechaFutura = FechaFin; // Define tu fecha futura aquí
 
             TimeSpan diferencia = fechaFutura - DateTime.Now;
-
-            x.mensaje = string.Format("Faltan {0} días {1} horas {2} minutos",
+            if (diferencia.Days <0)
+            {
+                x.mensaje = string.Format("Culmino la campaña ");
+            }
+            else
+            {
+                x.mensaje = string.Format("Faltan {0} días {1} horas {2} minutos",
                 diferencia.Days, diferencia.Hours, diferencia.Minutes);
+
+            }
+ 
 
             return View(x);
         }        
