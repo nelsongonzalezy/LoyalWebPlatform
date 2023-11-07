@@ -5,7 +5,6 @@
         <ol class="breadcrumb fs-sm mb-1">
             <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
             <li class="breadcrumb-item active"><a href="~/campaign/index">@webLoyal.Resources.language.Resources.Campaign</a></li>
-
         </ol>
         <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Campaigns @Model.DtCampanas.DescripcionCampana</h4>
     </div>
@@ -26,29 +25,27 @@
             </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="~/campaign/List">Listado</a></li>
-
             </ul>
         </div>
     </div>
 </div>
-<div>
-    <div class="row g-3">
-        <div class="row">
-            <div class="col-4 col-xl-3">
-                <div class="card">
-                    <div class="card-body p-3">
-                        <div class="row g-3">
-                            <div class="col-sm-8 col-md-9 col-xl-8 d-flex flex-column">
-                                <h6 class="fw-semibold text-dark lh-5">Tiempo de Campaña</h6>
-                                <p class="text-secondary">  @Model.mensaje<span class="d-xl-none d-xxl-inline"> </span>...</p>
-                            </div>
+<div class="row g-3">
+    <div class="row">
+        <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body p-3">
+                    <div class="row g-3">
+                        <div class="col-sm-8 col-md-9 col-xl-8 d-flex flex-column">
+                            <h6 class="fw-semibold text-dark lh-5">Tiempo de Campaña</h6>
+                            <p class="text-secondary">  @Model.mensaje<span class="d-xl-none d-xxl-inline"> </span>...</p>
                         </div>
                     </div>
-                 </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="row g-3">
     <div class="row">
         <div class="col-4 col-xl-3">
@@ -81,7 +78,6 @@
                             <input id="FormaSemestral" class="form-check-input" type="checkbox" >
 
                         }
-                       
                         <label class="form-check-label" for="FormaSemestral">@webLoyal.Resources.language.Resources.SemiannualPaymentMethod</label>
                     </div>
                 </div>

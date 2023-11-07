@@ -484,7 +484,7 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bonus.
+        ///   Looks up a localized string similar to Premium.
         /// </summary>
         public static string Bonus {
             get {
