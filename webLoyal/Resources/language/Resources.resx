@@ -667,7 +667,7 @@
     <value>Monthly Payment Method</value>
   </data>
   <data name="Bonus" xml:space="preserve">
-    <value>Bonus</value>
+    <value>Premium</value>
   </data>
   <data name="Representation" xml:space="preserve">
     <value>Representation</value>
@@ -1493,5 +1493,50 @@
   </data>
   <data name="TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn" xml:space="preserve">
     <value>TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn</value>
+  </data>
+  <data name="Affinity" xml:space="preserve">
+    <value>Affinity</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>Collections</value>
+  </data>
+  <data name="Commissions" xml:space="preserve">
+    <value>Commissions</value>
+  </data>
+  <data name="Evaluations" xml:space="preserve">
+    <value>Evaluations</value>
+  </data>
+  <data name="Finance" xml:space="preserve">
+    <value>Finance</value>
+  </data>
+  <data name="HumanTalent" xml:space="preserve">
+    <value>Human talent</value>
+  </data>
+  <data name="IncomeExpenses" xml:space="preserve">
+    <value>Income and expenses</value>
+  </data>
+  <data name="Lives" xml:space="preserve">
+    <value>Lives</value>
+  </data>
+  <data name="Monitor" xml:space="preserve">
+    <value>Monitor</value>
+  </data>
+  <data name="Payroll" xml:space="preserve">
+    <value>Payroll</value>
+  </data>
+  <data name="RequestMonitor" xml:space="preserve">
+    <value>Request Monitor</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="Staff" xml:space="preserve">
+    <value>Staff</value>
+  </data>
+  <data name="Taxes" xml:space="preserve">
+    <value>Taxes</value>
+  </data>
+  <data name="UnderWriter" xml:space="preserve">
+    <value>Underwriter</value>
   </data>
 </root>
