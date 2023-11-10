@@ -1,5 +1,7 @@
-﻿@model core.Service.ConsultaAgentesCarteraModel
-   
+﻿
+
+@model core.Service.ConsultaAgentesCarteraModel
+
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
@@ -9,34 +11,63 @@
             </ol>
         </div>
     </div>
+    <head>
+        <style>
+            .fixed-header {
+                position: fixed;
+                top: -1;
+                left: -50;
+                width: 115%;
+                background-color: transparent;
+                z-index: 9999;
+            }
+            .container {
+                width: 100%;
+                height: 240px;
+                background: transparent;
+                top: 0;
+                position: relative;
+            }
+        </style>
+    </head>
 @foreach (var item in Model.Agente)
     {
-        
-        <div class="row g-5">
-            <div class="col-xl">
-                <div class="media-profile mb-5">
-                    <div class="media-img mb-3 mb-sm-0">
-                        <img src="~/assets/img/-customer-service-agent_89777-2.png" class="img-fluid" alt="...">
-                    </div><!-- media-img -->
-                    <div class="media-body">
-                    <h1>@item.DescripcionTipoAgente: @item.NombreCobranza</h1>
-                    <h5 class="media-name">@item.NombreCompleto
-                            @switch (item.CodigoEstadoAgente)
-                            {
-                                case "01":
-                                    <span class="badge bg-success" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
-                                    break;
-                                    case "02":
-                                    <span class="badge bg-warning" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
-                                    break;
-                                    case "03":
-                                    <span class="badge bg-danger" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
-                                    break;
-                                    case "04":
-                                    <span class="badge bg-black" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
-                                    break;
-                            }
-                            </h5>
+
+
+    <div class="d-flex p-2">
+        <div class="col-xl">
+            <div class="fixed-header">
+                <div class="d-flex flex-row">  
+                    <div class="p-2 bg-gray-300">
+                        <div class="media-profile mb-5 ">
+                            <div class="media-img mb-3 mb-sm-0">
+                                <img src="~/assets/img/-customer-service-agent_89777-2.png" class="img-fluid" alt="...">
+                            </div><!-- media-img -->
+                        </div><!-- media-profile -->
+                    </div>
+                    <div class="p-2 bg-gray-300">
+                        <div class="media-body">
+                            <h1>@item.DescripcionTipoAgente: @item.NombreCobranza</h1>
+                            <h5 class="media-name">@item.NombreCompleto
+                                    @switch (item.CodigoEstadoAgente)
+                                    {
+                                        case "01":
+                                            <span class="badge bg-success" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                            break;
+                                            case "02":
+                                            <span class="badge bg-warning" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                            break;
+                                            case "03":
+                                            <span class="badge bg-danger" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                            break;
+                                            case "04":
+                                            <span class="badge bg-black" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                            break;
+                                    }
+                                    </h5>
+                        </div><!-- media-body -->
+                    </div>
+                    <div class="p-2 bg-gray-300">
                         <p class="d-flex gap-2 mb-4"><i class="ri-map-pin-line"></i>@item.Direccion
                                 @item.Provincia,  @item.CiudadOficina @item.DescripcionPaisOficina , @item.CodigoDireccionPostal
                             </p>
@@ -48,60 +79,62 @@
                                 <li>@webLoyal.Resources.language.Resources.ContractDate: @item.FechaInicioContrato</li>
 
                             </ul>
-                    </div><!-- media-body -->
-                </div><!-- media-profile -->
+                    </div>
+                </div><!-- d-flex -->
             </div>
-        </div>
+        </div><!-- col-xl -->
+    </div><!-- row g-5-->
+    <div class="container"></div>
 
-            <div class="row row-cols-sm-auto g-4 g-md-5 g-xl-4 g-xxl-5">
-                <div class="col">
-                    <div class="profile-item">
-                        <i class="ri-article-line"></i>
-                        <div class="profile-item-body">
-                            <p>@webLoyal.Resources.language.Resources.Education</p>
-                            <span>@webLoyal.Resources.language.Resources.Degree.</span>
-                        </div><!-- profile-item-body -->
-                    </div><!-- profile-item -->
-                </div><!-- col -->
-                <div class="col">
-                    <div class="profile-item">
-                        <i class="ri-medal-2-line"></i>
-                        <div class="profile-item-body">
-                            <p>@webLoyal.Resources.language.Resources.Recognitions</p>
-                            <span>@webLoyal.Resources.language.Resources.Achievements</span>
-                        </div><!-- profile-item-body -->
-                    </div><!-- profile-item -->
-                </div><!-- col -->
-                <div class="col">
-                    <div class="profile-item">
-                        <i class="ri-suitcase-line"></i>
-                        <div class="profile-item-body">
-                            <p>15+ @webLoyal.Resources.language.Resources.Years</p>
-                            <span>@webLoyal.Resources.language.Resources.WorkExperience</span>
-                        </div><!-- profile-item-body -->
-                    </div><!-- profile-item -->
-                </div><!-- col -->
-                <div class="col">
-                    <div class="profile-item">
-                        <i class="ri-team-line"></i>
-                        <div class="profile-item-body">
-                            <p>3,560</p>
-                            <span>@webLoyal.Resources.language.Resources.PeopleServed</span>
-                        </div><!-- profile-item-body -->
-                    </div><!-- profile-item -->
-                </div><!-- col -->
-                <div class="col">
-                    <div class="profile-item">
-                        <i class="ri-team-line"></i>
-                        <div class="profile-item-body">
-                            <p>3,506</p>
-                            <span>@webLoyal.Resources.language.Resources.InsuredPersons</span>
-                        </div><!-- profile-item-body -->
-                    </div><!-- profile-item -->
-                </div><!-- col -->
-            </div>
+    <div class="row row-cols-sm-auto g-4 g-md-5 g-xl-4 g-xxl-5">
+        <div class="col">
+            <div class="profile-item">
+                <i class="ri-article-line"></i>
+                <div class="profile-item-body">
+                    <p>@webLoyal.Resources.language.Resources.Education</p>
+                    <span>@webLoyal.Resources.language.Resources.Degree.</span>
+                </div><!-- profile-item-body -->
+            </div><!-- profile-item -->
+        </div><!-- col -->
+        <div class="col">
+            <div class="profile-item">
+                <i class="ri-medal-2-line"></i>
+                <div class="profile-item-body">
+                    <p>@webLoyal.Resources.language.Resources.Recognitions</p>
+                    <span>@webLoyal.Resources.language.Resources.Achievements</span>
+                </div><!-- profile-item-body -->
+            </div><!-- profile-item -->
+        </div><!-- col -->
+        <div class="col">
+            <div class="profile-item">
+                <i class="ri-suitcase-line"></i>
+                <div class="profile-item-body">
+                    <p>15+ @webLoyal.Resources.language.Resources.Years</p>
+                    <span>@webLoyal.Resources.language.Resources.WorkExperience</span>
+                </div><!-- profile-item-body -->
+            </div><!-- profile-item -->
+        </div><!-- col -->
+        <div class="col">
+            <div class="profile-item">
+                <i class="ri-team-line"></i>
+                <div class="profile-item-body">
+                    <p>3,560</p>
+                    <span>@webLoyal.Resources.language.Resources.PeopleServed</span>
+                </div><!-- profile-item-body -->
+            </div><!-- profile-item -->
+        </div><!-- col -->
+        <div class="col">
+            <div class="profile-item">
+                <i class="ri-team-line"></i>
+                <div class="profile-item-body">
+                    <p>3,506</p>
+                    <span>@webLoyal.Resources.language.Resources.InsuredPersons</span>
+                </div><!-- profile-item-body -->
+            </div><!-- profile-item -->
+        </div><!-- col -->
+    </div>
+
     <div class="col-xl-12">
-
         <div class="row g-3">
             @foreach (var producto in Model.AgenteCarteraPorProducto.OrderBy(x => x.Codigopoliza))
             {
@@ -328,6 +361,7 @@
             </div>
         </div><!-- col -->
     </div>
+
 
     <!-- col -->
         @*    <div class="card card-post mt-4">
