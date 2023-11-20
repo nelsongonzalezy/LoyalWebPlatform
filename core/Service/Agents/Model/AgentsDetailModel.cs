@@ -10,7 +10,7 @@
         public string NombreCompleto { get; set; }
         public string NombreAgente { get; set; }
         public string Sexo { get; set; }
-        public string FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public int? Edad { get; set; }
         public int? CodigoAgenteDependencia { get; set; }
         public string NombreAgenteDependencia { get; set; }
@@ -63,7 +63,7 @@
         public string DirecciónCuenta { get; set; }
         public string TipoCuentaDeposito { get; set; }
         public string TextoBusqueda { get; set; }
-        public DateTime? FechaInicioContrato { get; set; }
+        public DateTime FechaInicioContrato { get; set; }
         public decimal? Persistencia { get; set; }
         public int? ProduccionAnual { get; set; }
         public int? Total { get; set; }

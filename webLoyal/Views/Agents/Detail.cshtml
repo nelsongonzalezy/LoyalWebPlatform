@@ -11,47 +11,84 @@
     </div>
 @foreach (var item in Model.Agente)
     {
-        
-        <div class="row g-5">
+
+@*      <div class="col-12">
+         <div class="card-body">
+          <div class="chat-body-header">
+                <div class="chat-item">
+                    <div class="avatar online"><img src="~/assets/img/-customer-service-agent_89777-2.png" alt=""></div>
+                    <div class="chat-item-body">
+                        <h3>@item.DescripcionTipoAgente: @item.NombreCobranza</h3>
+                        @switch (item.CodigoEstadoAgente)
+                        {
+                            case "01":
+                                <span class="badge bg-success" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                break;
+                            case "02":
+                                <span class="badge bg-warning" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                break;
+                            case "03":
+                                <span class="badge bg-danger" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                break;
+                            case "04":
+                                <span class="badge bg-black" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
+                                break;
+                        }
+                    </div><!-- chat-body -->
+                </div>
+
+          </div> 
+           
+         </div>
+
+     </div> *@
+
+
+    <div>
+        <div class="row g-5 card-body">
             <div class="col-xl">
                 <div class="media-profile mb-5">
                     <div class="media-img mb-3 mb-sm-0">
                         <img src="~/assets/img/-customer-service-agent_89777-2.png" class="img-fluid" alt="...">
                     </div><!-- media-img -->
                     <div class="media-body">
-                    <h1>@item.DescripcionTipoAgente: @item.NombreCobranza</h1>
-                    <h5 class="media-name">@item.NombreCompleto
+                        <h1>@item.DescripcionTipoAgente: @item.NombreCobranza</h1>
+                        <h5 class="media-name">
+                            @item.NombreCompleto
                             @switch (item.CodigoEstadoAgente)
                             {
                                 case "01":
                                     <span class="badge bg-success" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
                                     break;
-                                    case "02":
+                                case "02":
                                     <span class="badge bg-warning" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
                                     break;
-                                    case "03":
+                                case "03":
                                     <span class="badge bg-danger" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
                                     break;
-                                    case "04":
+                                case "04":
                                     <span class="badge bg-black" title="@item.DescripcionEstadoAgente"><i class="ri-error-warning-line"></i>&nbsp @item.DescripcionEstadoAgente</span>
                                     break;
                             }
-                            </h5>
-                        <p class="d-flex gap-2 mb-4"><i class="ri-map-pin-line"></i>@item.Direccion
-                                @item.Provincia,  @item.CiudadOficina @item.DescripcionPaisOficina , @item.CodigoDireccionPostal
-                            </p>
-                            <ul class="mt-3">
-                                <li>@webLoyal.Resources.language.Resources.Email: @item.Correo</li>
-                                <li>@webLoyal.Resources.language.Resources.CellPhone: @item.Celular</li>
-                                <li>@webLoyal.Resources.language.Resources.BankingAddress: @item.DirecciónCuenta</li>
-                                <li>@webLoyal.Resources.language.Resources.Birthdate: @item.FechaNacimiento</li>
-                                <li>@webLoyal.Resources.language.Resources.ContractDate: @item.FechaInicioContrato</li>
+                        </h5>
+                        <p class="d-flex gap-2 mb-4">
+                            <i class="ri-map-pin-line"></i>@item.Direccion
+                            @item.Provincia,  @item.CiudadOficina @item.DescripcionPaisOficina , @item.CodigoDireccionPostal
+                        </p>
+                        <ul class="mt-3">
+                            <li>@webLoyal.Resources.language.Resources.Email: @item.Correo</li>
+                            <li>@webLoyal.Resources.language.Resources.CellPhone: @item.Celular</li>
+                            <li>@webLoyal.Resources.language.Resources.BankingAddress: @item.DirecciónCuenta</li>
+                            <li>@webLoyal.Resources.language.Resources.Birthdate: @item.FechaNacimiento.ToString("MM/dd/yyyy")</li>
+                            <li>@webLoyal.Resources.language.Resources.ContractDate: @item.FechaInicioContrato.ToString("MM/dd/yyyy")</li>
 
-                            </ul>
+                        </ul>
                     </div><!-- media-body -->
                 </div><!-- media-profile -->
             </div>
         </div>
+
+    </div>
 
             <div class="row row-cols-sm-auto g-4 g-md-5 g-xl-4 g-xxl-5">
                 <div class="col">
@@ -77,7 +114,7 @@
                         <i class="ri-suitcase-line"></i>
                         <div class="profile-item-body">
                             <p>15+ @webLoyal.Resources.language.Resources.Years</p>
-                            <span>@webLoyal.Resources.language.Resources.WorkExperience</span>
+                    <span>@webLoyal.Resources.language.Resources.WorkExperience </span>
                         </div><!-- profile-item-body -->
                     </div><!-- profile-item -->
                 </div><!-- col -->
@@ -304,7 +341,7 @@
                                                 break;
                                         }
 
-                                        <td>@cartera.FechaInicioVigencia</td>
+                                        <td>@cartera.FechaInicioVigencia.ToString("MM/dd/yyyy")</td>
                                         <td>@cartera.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
                                         <td>@cartera.DescripcionPlan</td>
 

@@ -123,8 +123,25 @@
     <div class="row">
         @foreach (var producto in Model.CampanasProductos.OrderBy(x=>x.CodigoPoliza))
         {
+            var estilo = string.Empty;
+            switch (producto.CodigoPoliza)
+            {
+                case 1:
+                    estilo = "background-color:rgb(60,95,138)";
+                    break;
+                case 2:
+                    estilo = "background-color:rgb(141,195,65)";
+                    break;
+                case 3:
+                    estilo = "background-color:rgb(48,182,181)";
+                    break;
+                case 4:
+                    estilo = "background-color:rgb(132,26,102)";
+                    break;
+            }
+
             <div class="col-6 col-xl-3">
-                <div class="music-player mt-4 mt-xxl-5" style="background-color:rgb(60,95,138)">
+                <div class="music-player mt-4 mt-xxl-5" style="@estilo">
                     <div class="media-music">
                         @switch (producto.CodigoPoliza)
                         {
@@ -179,13 +196,14 @@
 <br />
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">@webLoyal.Resources.language.Resources.Policies</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">@webLoyal.Resources.language.Resources.TopAgents</button>
-   </div>
+        <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">@webLoyal.Resources.language.Resources.TopAgents</button>
+
+        <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">@webLoyal.Resources.language.Resources.Policies</button>
+     </div>
 </nav>
 
 <div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+  <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <div class="col-lg-12 row g-3">
 
             <div class="card card-one mt-3">
@@ -291,8 +309,8 @@
             </div>
         </div>
   </div>
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-        <div class="row g-3">
+    <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="row g-3">
             @foreach (var item in Model.CampanasAgentes.OrderBy(x => x.Fila).Take(12))
             {
                 <div class="col-2 col-xl-2">
@@ -306,37 +324,19 @@
                                         <i class="ri-star-fill"></i>
                                         <i class="ri-star-fill"></i>
                                         <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
+
                                         break;
                                     case 2:
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
                                         <i class="ri-star-fill"></i>
                                         <i class="ri-star-fill"></i>
                                         <i class="ri-star-line"></i>
                                         break;
                                     case 3:
                                         <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
                                         <i class="ri-star-line"></i>
                                         <i class="ri-star-line"></i>
                                         break;
-                                    case 4:
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-line"></i>
-                                        <i class="ri-star-line"></i>
-                                        <i class="ri-star-line"></i>
-                                        break;
-                                    case 5:
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-line"></i>
-                                        <i class="ri-star-line"></i>
-                                        <i class="ri-star-line"></i>
-                                        <i class="ri-star-line"></i>
-                                        break;
+                                    
                                 }
                             </h5>
                         </div>

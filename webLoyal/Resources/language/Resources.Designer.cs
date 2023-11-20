@@ -1807,6 +1807,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Forecast.
+        /// </summary>
+        public static string ForeCast {
+            get {
+                return ResourceManager.GetString("ForeCast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forgot password.
         /// </summary>
         public static string ForgotPassword {
