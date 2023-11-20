@@ -1,5 +1,7 @@
-﻿@model core.Service.ConsultaAgentesCarteraModel
-   
+﻿
+
+@model core.Service.ConsultaAgentesCarteraModel
+
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
@@ -9,6 +11,25 @@
             </ol>
         </div>
     </div>
+    <head>
+        <style>
+            .fixed-header {
+                position: fixed;
+                top: -1;
+                left: -50;
+                width: 115%;
+                background-color: transparent;
+                z-index: 9999;
+            }
+            .container {
+                width: 100%;
+                height: 240px;
+                background: transparent;
+                top: 0;
+                position: relative;
+            }
+        </style>
+    </head>
 @foreach (var item in Model.Agente)
     {
 
@@ -138,7 +159,6 @@
                 </div><!-- col -->
             </div>
     <div class="col-xl-12">
-
         <div class="row g-3">
             @foreach (var producto in Model.AgenteCarteraPorProducto.OrderBy(x => x.Codigopoliza))
             {
@@ -365,6 +385,7 @@
             </div>
         </div><!-- col -->
     </div>
+
 
     <!-- col -->
         @*    <div class="card card-post mt-4">
