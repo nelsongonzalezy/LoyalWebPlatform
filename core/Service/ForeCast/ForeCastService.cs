@@ -9,9 +9,15 @@
         }
         public async Task<IQueryable<ForeCastModel>> GetListForeCast()
         {
-            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseForeCastModel>("api/v1/ForeCast");
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseForeCastModel>("api/v1/ForeCast/ObtenerForeCast");
 
             return y.Content.AsQueryable();
+        }
+        public async Task<DetalleForeCastModel> GetDetailsForeCast(int CodigoPeriodo, string CodigoTipoVenta)
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseDetalleForeCastModel>("api/v1/ForeCast/ObtenerDetalleForeCast?CodigoPeriodo="+CodigoPeriodo+"&CodigoTipoVenta="+ CodigoTipoVenta + "");
+
+            return y.Content;
         }
     }
 }

@@ -15,5 +15,10 @@ namespace webLoyal.Controllers
             var data  = await _service.GetListForeCast();
             return View(data.ToList());
         }
+        public async Task<IActionResult> Details(int CodigoPeriodo, string CodigoTipoVenta)
+        {
+            var data = await _service.GetDetailsForeCast(CodigoPeriodo, CodigoTipoVenta);
+            return View();
+        }
     }
 }

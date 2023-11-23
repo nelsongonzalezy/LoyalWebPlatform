@@ -58,22 +58,29 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>1-Proyección Ventas</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.PrimaModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
-                                }
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.RenovacionModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
-                                }
-                                <th></th>
-                            </tr>
+                            <thead class="border border-2">
+
+                                <tr>
+                                    <th>1-Proyección Ventas</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        <th>@item.PrimaModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    }
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        <th>@item.RenovacionModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    }
+                                    <th></th>
+                                </tr>
+
+                            </thead>
+
+                         
+
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
@@ -94,6 +101,18 @@
 
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -122,22 +141,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>1-Proyección Polizas</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.PolizaModerada</th>
-                                }
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.RenovacionPolizaModerada.ToString("#,###")</th>
-                                }
-                                <th></th>
-                            </tr>
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Polizas</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.PolizaModerada</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.RenovacionPolizaModerada.ToString("#,###")</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                            </thead>
+
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
@@ -156,6 +178,18 @@
                             </tr>
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Polizas + @item.RenovacionPolizas);
+                                    <th>@Total.ToString("#,###")</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -182,22 +216,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <thead class="border border-2">
                             <tr>
                                 <th>1-Proyección Vidas</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.VidasModerada</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.RenovacionVidasModerada.ToString("#,###")</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
+                            </thead>
+                           
                             <tr>
                                 <th>3-Vidas Real</th>
                                 @foreach (var item in Model)
@@ -216,6 +253,18 @@
                             </tr>
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Asegurados + @item.RenovacionAsegurados);
+                                    <th>@Total.ToString("#,###")</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -248,22 +297,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <thead class="border border-2">
                             <tr>
                                 <th>1-Proyección Ventas</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.PrimaAgresiva.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.RenovacionAgresiva.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
+                        </thead>
+
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
@@ -284,6 +336,18 @@
 
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -312,22 +376,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>1-Proyección Polizas</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.PolizaAgresiva</th>
-                                }
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.RenovacionAgresiva.ToString("#,###")</th>
-                                }
-                                <th></th>
-                            </tr>
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Polizas</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.PolizaAgresiva</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.RenovacionAgresiva.ToString("#,###")</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                            </thead>
+
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
@@ -346,6 +413,18 @@
                             </tr>
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Polizas + @item.RenovacionPolizas);
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -372,22 +451,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>1-Proyección Vidas</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.VidasAgresiva</th>
-                                }
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.VidasAgresiva</th>
-                                }
-                                <th></th>
-                            </tr>
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Vidas</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.VidasAgresiva</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.VidasAgresiva</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                            </thead>
+
                             <tr>
                                 <th>3-Vidas Real</th>
                                 @foreach (var item in Model)
@@ -406,6 +488,18 @@
                             </tr>
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Asegurados + @item.RenovacionAsegurados);
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -436,22 +530,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <thead class="border border-2">
                             <tr>
                                 <th>1-Proyección Ventas</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.PrimaModeradaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.RenovacionModeradaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
+                            </thead>
+
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
@@ -472,6 +569,18 @@
 
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -500,22 +609,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>1-Proyección Polizas</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.PolizaModeradaPosPandemia</th>
-                                }
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.RenovacionModeradaPosPandemia.ToString("#,###")</th>
-                                }
-                                <th></th>
-                            </tr>
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Polizas</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.PolizaModeradaPosPandemia</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.RenovacionPolizaModeradaPosPandemia.ToString("#,###")</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                            </thead>
+
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
@@ -534,6 +646,18 @@
                             </tr>
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Polizas + @item.RenovacionPolizas);
+                                    <th>@Total.ToString("#,###")</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -560,22 +684,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <thead class="border border-2">
                             <tr>
                                 <th>1-Proyección Vidas</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.VidasModeradaPosPandemia</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.RenovacionVidasModeradaPosPandemia.ToString("#,###")</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
+                            </thead>
+
                             <tr>
                                 <th>3-Vidas Real</th>
                                 @foreach (var item in Model)
@@ -594,6 +721,18 @@
                             </tr>
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Asegurados + @item.RenovacionAsegurados);
+                                    <th>@Total.ToString("#,###")</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -624,22 +763,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <thead class="border  border-2">
                             <tr>
                                 <th>1-Proyección Ventas</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.PrimaAgresivaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
+                                    @foreach (var item in Model)
+                                    {
                                     <th>@item.RenovacionAgresivaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
-                                }
+                                    }
                                 <th></th>
                             </tr>
+                            </thead>
+
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
@@ -660,6 +802,18 @@
 
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -688,22 +842,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>1-Proyección Polizas</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.PolizaAgresivaPosPandemia</th>
-                                }
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.RenovacionAgresivaPosPandemia.ToString("#,###")</th>
-                                }
-                                <th></th>
-                            </tr>
+                        <thead class="border  border-2">
+                                <tr>
+                                    <th>1-Proyección Polizas</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.PolizaAgresivaPosPandemia</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.RenovacionPolizaAgresivaPosPandemia.ToString("#,###")</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                            </thead>
+
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
@@ -722,6 +879,18 @@
                             </tr>
 
                         </tbody>
+                        <tfoot>
+                                <tr>
+                                <th>5-Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    var Total = (@item.RenovacionPolizas + @item.Polizas);
+                                    <th>@Total.ToString("#,###")</th>
+                                    }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -748,22 +917,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>1-Proyección Vidas</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.VidasAgresivaPosPandemia</th>
-                                }
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <th>2-Proyección Renovaciones</th>
-                                @foreach (var item in Model)
-                                {
-                                    <th>@item.RenovacionAgresivaPosPandemia.ToString("#,###")</th>
-                                }
-                                <th></th>
-                            </tr>
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Vidas</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.VidasAgresivaPosPandemia</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                        {
+                                        <th>@item.RenovacionAgresivaPosPandemia.ToString("#,###")</th>
+                                        }
+                                    <th></th>
+                                </tr>
+                            </thead>
+
                             <tr>
                                 <th>3-Vidas Real</th>
                                 @foreach (var item in Model)
@@ -782,6 +954,18 @@
                             </tr>
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>5-Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Asegurados + @item.RenovacionAsegurados);
+                                    <th>@Total.ToString("#,###")</th>
+                                }
+                                <th></th>
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
@@ -818,25 +1002,25 @@
             }
             button.classList.add('active');
         }
-        $("table").DataTable({
-            searchBuilder: true,
-            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
-            fixedColumns: true,
-            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
-            buttons: [
-                {
-                    extend: 'excelHtml5',
-                    autoFilter: true,
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.StagesDetailModel)Excel',
-                },
-                {
-                    extend: 'pdfHtml5',
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.StagesDetailModel)Pdf',
-                }
-            ]
-        });
+        // $("table").DataTable({
+        //     searchBuilder: true,
+        //     class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
+        //     fixedColumns: true,
+        //     dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+        //     buttons: [
+        //         {
+        //             extend: 'excelHtml5',
+        //             autoFilter: true,
+        //             className: 'btn btn-outline-primary',
+        //             filename: '@nameof(core.Service.StagesDetailModel)Excel',
+        //         },
+        //         {
+        //             extend: 'pdfHtml5',
+        //             className: 'btn btn-outline-primary',
+        //             filename: '@nameof(core.Service.StagesDetailModel)Pdf',
+        //         }
+        //     ]
+        // });
     </script>
 
 
