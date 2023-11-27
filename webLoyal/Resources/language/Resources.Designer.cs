@@ -2419,6 +2419,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Men.
+        /// </summary>
+        public static string Men {
+            get {
+                return ResourceManager.GetString("Men", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Menu.
         /// </summary>
         public static string Menu {
@@ -4297,6 +4306,15 @@ namespace webLoyal.Resources.language {
         public static string WelcomeToDashboard {
             get {
                 return ResourceManager.GetString("WelcomeToDashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mujeres.
+        /// </summary>
+        public static string Women {
+            get {
+                return ResourceManager.GetString("Women", resourceCulture);
             }
         }
         

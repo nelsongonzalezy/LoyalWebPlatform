@@ -22,6 +22,7 @@ namespace core
                        .AddScoped<ILives, LivesService>()
                        .AddScoped<ICampanig, CampaignService>()
                        .AddScoped<IForeCast, ForeCastService>()
+                       .AddScoped<IStaff, StaffService>()
 
                        .AddScoped<HttpClient>()
                        .AddScoped<HttpClientConfig>()

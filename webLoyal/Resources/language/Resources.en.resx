@@ -1533,4 +1533,10 @@
   <data name="ForeCast" xml:space="preserve">
     <value>Forecast</value>
   </data>
+  <data name="Men" xml:space="preserve">
+    <value>Men</value>
+  </data>
+  <data name="Women" xml:space="preserve">
+    <value>Mujeres</value>
+  </data>
 </root>

@@ -1,0 +1,154 @@
+﻿@model core.Service.StaffModel
+
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+        <ol class="breadcrumb fs-sm mb-1">
+            <li class="breadcrumb-item active"><a href="../menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item"><a href="../Staff/index">@webLoyal.Resources.language.Resources.Staff</a></li>
+
+        </ol>
+        <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Staff</h4>
+    </div>
+</div>
+
+<div class="row g-3">
+
+
+
+
+    @foreach (var item in Model.StafPorSexo)
+    {
+        <div class="col-3 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1"></label>
+                    @if (item.Sexo=="F")
+                    {
+                        <h3 class="card-value mb-1"><i class="ri-women-line"></i> @webLoyal.Resources.language.Resources.Women</h3>
+                    }else
+                    {
+                        <h3 class="card-value mb-1"><i class="ri-men-line"></i> @webLoyal.Resources.language.Resources.Men</h3>
+                    }  
+                    <h3 class="card-value mb-1">@item.DescripcionEstadoPersonalInterno: @item.CantidadRegistros</h3>
+                    <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeGrupoEdadSobreTotal.ToString("P2") </span></small>
+                </div>
+            </div>
+        </div>
+    }    
+        <div class="col-3 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1"></label>
+
+                        <h4 class="card-value mb-1">Total Staff :@Model.StafPorSexo.Sum(x => x.CantidadRegistros) </h4>
+                
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+<div class="row g-3">
+    <div class="col-xl-12">
+        <div class="card card-one mt-3">
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Nombre</th>
+                                <th>sexo</th>
+                                <th>Fecha Inicio Contrato</th>
+                                <th>Fecha de Nacimiento</th>
+                                <th>Edad</th>
+                                <td>Cargo</td>
+                                <td>Pais</td>
+                                <td>Ciudad</td>
+                                <td>Estado</td>
+
+                                <td>Correo</td>
+                                <td>Celular</td>
+                                <td>Estado Civil</td>
+                                <td>Estado del Personal</td>
+
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.DetalleStaff.OrderBy(c => c.CodigoPersonalInterno))
+                            {
+                                <tr>
+
+                                    <td><a href="@item.CodigoPersonalInterno" class="btn btn-link">@item.CodigoPersonalInterno</a></td>
+                                    <td>@item.NombreCompleto</td>
+                                    <td>@item.Sexo</td>
+                                    <td>@item.FechaInicioContrato.ToString("MM/dd/yyyy")</td>
+                                    <td>@item.FechaNacimiento.ToString("MM/dd/yyyy")</td>
+                                    <td>@item.Edad</td>
+@*                                     <td><a href="~/Policies/Detail/@item.CodigoCargo" class="btn btn-link">@item.DescripcionCargo</a></td> *@
+                                    <td><a  class="btn btn-link">@item.DescripcionCargo</a></td>
+                                    <td>@item.DescripcionPais</td>
+                                    <td>@item.Ciudad</td>
+                                    <td>@item.Provincia</td>
+                                    <td><a href="mailto:@item.Correo">@item.Correo</a></td>
+                                    <td><a href="whatsapp://send?text=Hello World!&phone=@item.Celular" >@item.Celular</a></td>
+
+                                    <td>@item.DescripcionEstadoCivil</td>
+                                    @switch (item.CodigoEstadoPersonalInterno)
+                                    {
+                                        case "01":
+                                            <td> <span class="badge text-bg-success"> @item.DescripcionEstadoPersonalInterno</span> </td>
+                                            break;
+                                        case "02":
+                                            <td> <span class="badge text-bg-danger"> @item.DescripcionEstadoPersonalInterno</span> </td>
+                                        break;
+                                    }
+   
+@*                                     <td><a href="~/Policies/Detail/@item.CodigoEstadoPersonalInterno" class="btn btn-link">@item.DescripcionEstadoPersonalInterno</a></td> *@
+
+                                </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+    </div><!-- col -->
+</div><!-- col -->
+
+@section Scripts{
+<script>
+
+        $("table").DataTable({
+            searchPanes: {
+                viewTotal: true
+            },
+            searchBuilder: true,
+            sort: true,
+            resizable: true,
+            responsive: true,
+            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
+            fixedColumns: true,
+            order: [[0, "desc"]],
+            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+            buttons: [
+                {
+                    extend: 'excelHtml5',
+                    autoFilter: true,
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.StaffModel)Excel',
+                },
+                {
+                    extend: 'pdfHtml5',
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.StaffModel)Pdf',
+                }
+            ]
+        });
+</script>
+}
