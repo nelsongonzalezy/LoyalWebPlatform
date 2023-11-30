@@ -101,6 +101,7 @@
         public IEnumerable<VwDocumentoSolicitudModel> VwDocumentoSolicitudDbObject { get; set; }
         public IEnumerable<VwAseguradosModel> VwAseguradosDbObject { get; set; }
         public IEnumerable<VwNotasModel> VwNotasDbObject { get; set; }
+        public IEnumerable<VwCronogramaPagosModel> VwCronogramaPagosDbObject { get; set; }
     }
 
     public class ResponseVwSolcitudConsultaModel 

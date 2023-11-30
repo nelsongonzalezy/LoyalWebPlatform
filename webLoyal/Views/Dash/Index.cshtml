@@ -2,21 +2,69 @@
     <div>
         <ol class="breadcrumb fs-sm mb-1">
             <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item active"><a href="~/Dash/index">@webLoyal.Resources.language.Resources.Dashboard</a></li>
      @*       <li class="breadcrumb-item active"><a href="~/campaign/index"></a></li>*@
 
         </ol>
-        <h4 class="main-title mb-0"> </h4>
-    </div>
+   
+    <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Sales</h4>
+</div>
+<nav class="nav nav-icon nav-icon-lg">
 
-    <div class="d-flex gap-2 mt-3 mt-md-0">
-       
+    <button id="actualizarBtn"><i class="ri-refresh-line"></i></button>
+
+</nav>
+</div>
+@*     <div class="d-flex gap-2 mt-3 mt-md-0">
+        <button id="actualizarBtn">Actualizar Vista Parcial</button>
+    </div>
+    </div> *@
+
+<div class="row g-3">
+    <div class="col-3 col-xl-3">
+        <div class="card card-one">
+            <div class="card-body">
+                <label class="card-title fs-sm fw-medium mb-1">Tasa de Conversión</label>
+                <h3 class="card-value mb-1"> 0.00</h3>
+                <small>Este indicador mide la eficiencia de tu equipo de ventas al convertir cotizaciones en ventas reales</small>
+
+
+            </div><!-- card-body -->
+        </div><!-- card-one -->
+    </div>
+    <div class="col-3 col-xl-3">
+        <div class="card card-one">
+            <div class="card-body">
+                <label class="card-title fs-sm fw-medium mb-1">Valor Promedio de la Póliza</label>
+                <h3 class="card-value mb-1"> 0.00</h3>
+                <small>Este KPI indica el valor promedio de cada póliza vendida. Un aumento en el APV puede sugerir una mejora en la calidad de las pólizas vendidas o la capacidad de vender pólizas con mayores coberturas</small>
+            </div><!-- card-body -->
+        </div><!-- card-one -->
+    </div>
+    <div class="col-3 col-xl-3">
+        <div class="card card-one">
+            <div class="card-body">
+                <label class="card-title fs-sm fw-medium mb-1">Tasa de Retención de Clientes</label>
+                <h3 class="card-value mb-1"> 0.00</h3>
+                <small>Este indicador mide la capacidad de retener a los clientes existentes. Una tasa de retención alta indica la satisfacción y lealtad de los clientes</small>
+            </div><!-- card-body -->
+        </div><!-- card-one -->
+    </div>
+    <div class="col-3 col-xl-3">
+        <div class="card card-one">
+            <div class="card-body">
+                <label class="card-title fs-sm fw-medium mb-1">Indice de Renovación de Pólizas</label>
+                <h3 class="card-value mb-1"> 0.00</h3>
+                <small>Este KPI muestra la efectividad de tu empresa para renovar pólizas vencidas. Una alta tasa de renovación indica la satisfacción continua del cliente y la calidad del servicio.</small>
+            </div><!-- card-body -->
+        </div><!-- card-one -->
     </div>
     </div>
 
 
 
 <div id="miVistaParcialContainer"></div>
-<button id="actualizarBtn">Actualizar Vista Parcial</button>
+
 
 
 @*<div class="">
