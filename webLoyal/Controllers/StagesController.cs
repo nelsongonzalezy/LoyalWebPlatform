@@ -17,7 +17,18 @@ namespace webLoyal.Controllers
         }
         public async Task<IActionResult> Details(int CodigoPeriodo, string CodigoTipoVenta)
         {
+            ViewBag.CodigoTipoVenta = CodigoTipoVenta;
             var data = await _service.GetDetailsForeCast(CodigoPeriodo, CodigoTipoVenta);
+            return View(data);
+        }
+        public async Task<IActionResult> Total()
+        {
+            var data = await _service.GetForeCastTotal();
+            return View(data);
+        }
+        public async Task<IActionResult> TotalPeriodo(int CodigoPeriodo)
+        {
+            var data = await _service.GetForeCastTotal(CodigoPeriodo);
             return View(data);
         }
     }

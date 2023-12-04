@@ -16,10 +16,10 @@
 
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-sectionOne" data-bs-toggle="tab" data-bs-target="#sectionOne" type="button" role="tab" aria-controls="sectionOne" aria-selected="false">Conservative Mode before covid</button>
+        <button class="nav-link" id="nav-sectionOne" data-bs-toggle="tab" data-bs-target="#sectionOne" type="button" role="tab" aria-controls="sectionOne" aria-selected="false">Conservative Mode before covid</button>
 
         <button class="nav-link" id="nav-sectiontwo" data-bs-toggle="tab" data-bs-target="#sectiontwo" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Agresive mode before covid</button>
-        <button class="nav-link" id="nav-sectiontree" data-bs-toggle="tab" data-bs-target="#sectiontree" type="button" role="tab" aria-controls="sectionOne" aria-selected="false">Conservative Mode after covid</button>
+        <button class="nav-link active" id="nav-sectiontree" data-bs-toggle="tab" data-bs-target="#sectiontree" type="button" role="tab" aria-controls="sectionOne" aria-selected="false">Conservative Mode after covid <span class="badge-dot bg-success"></span> </button>
 
         <button class="nav-link" id="nav-sectionfort" data-bs-toggle="tab" data-bs-target="#sectionfort" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Agresive mode After covid</button>
     </div>
@@ -32,7 +32,7 @@
         <li class="nav-item"><a class="nav-link" href="#sectionfive" onclick="showSection('sectionfive', this)">Non-insurable risks</a></li>
 </ul> *@
 <div class="tab-content">
-    <div class="tab-pane active" id="sectionOne" role="tabpanel" aria-labelledby="home-tab">
+    <div class="tab-pane" id="sectionOne" role="tabpanel" aria-labelledby="home-tab">
 
         <div class="card card-one mt-3">
             <div class="card-header">
@@ -64,9 +64,11 @@
                                     <th>1-Proyección Ventas</th>
                                     @foreach (var item in Model)
                                     {
-                                        <th>@item.PrimaModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    <th>@item.PrimaModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                    </th>
                                     }
-                                    <th></th>
+                                <th>
+                                </th>
                                 </tr>
                                 <tr>
                                     <th>2-Proyección Renovaciones</th>
@@ -86,6 +88,7 @@
                                 @foreach (var item in Model)
                                 {
                                 <th>
+                                    
                                     <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
 
                                     </th>
@@ -96,7 +99,8 @@
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
-                                    <th>
+                                <th>
+                                    
                                     <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
                                         </th>
                                 }
@@ -112,7 +116,11 @@
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Cobrado + @item.RenovacionCobrado);
-                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                        @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                    </a>
+                                </th>
                                 }
                                 <th></th>
                             </tr>
@@ -189,7 +197,11 @@
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Polizas + @item.RenovacionPolizas);
-                                    <th>@Total.ToString("#,###")</th>
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
                                 }
                                 <th></th>
                             </tr>
@@ -351,7 +363,11 @@
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Cobrado + @item.RenovacionCobrado);
-                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
                                 }
                                 <th></th>
                             </tr>
@@ -428,7 +444,11 @@
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Polizas + @item.RenovacionPolizas);
-                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
                                 }
                                 <th></th>
                             </tr>
@@ -514,7 +534,7 @@
             </div><!-- card-body -->
         </div>
     </div>
-    <div id="sectiontree" class="tab-pane">
+    <div id="sectiontree" class="tab-pane active">
         <div class="card card-one mt-3">
             <div class="card-header">
                 <h6 class="card-title center">Forecast - Total Portafolio</h6>
@@ -590,7 +610,11 @@
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Cobrado + @item.RenovacionCobrado);
-                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
                                 }
                                 <th></th>
                             </tr>
@@ -667,7 +691,12 @@
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Polizas + @item.RenovacionPolizas);
-                                    <th>@Total.ToString("#,###")</th>
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
+
                                 }
                                 <th></th>
                             </tr>
@@ -742,7 +771,7 @@
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Asegurados + @item.RenovacionAsegurados);
-                                    <th>@Total.ToString("#,###")</th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
                                 }
                                 <th></th>
                             </tr>
@@ -827,7 +856,11 @@
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Cobrado + @item.RenovacionCobrado);
-                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
                                 }
                                 <th></th>
                             </tr>

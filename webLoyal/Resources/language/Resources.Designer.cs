@@ -3491,6 +3491,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Renewal.
+        /// </summary>
+        public static string Renewal {
+            get {
+                return ResourceManager.GetString("Renewal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Report.
         /// </summary>
         public static string Report {

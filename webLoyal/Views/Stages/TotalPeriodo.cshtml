@@ -14,17 +14,17 @@
             <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.ForeCast @Model.ForeCast.DescripcionPeriodo  @webLoyal.Resources.language.Resources.StartDate @Model.ForeCast.FechaInicio.ToString("MM/dd/yyyy")  @webLoyal.Resources.language.Resources.EffectiveEndDate @Model.ForeCast.FechaFin.ToString("MM/dd/yyyy")</h4>
 
 
-    
+
         }
         else
         {
             <h4>   @webLoyal.Resources.language.Resources.Renewal</h4>
             <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.ForeCast @Model.ForeCast.DescripcionPeriodo  @webLoyal.Resources.language.Resources.StartDate @Model.ForeCast.FechaInicio.ToString("MM/dd/yyyy")  @webLoyal.Resources.language.Resources.EffectiveEndDate @Model.ForeCast.FechaFin.ToString("MM/dd/yyyy")</h4>
 
-         
+
         }
-@*         <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.ForeCast @Model.ForeCast.DescripcionPeriodo  @webLoyal.Resources.language.Resources.StartDate @Model.ForeCast.FechaInicio.ToString("MM/dd/yyyy")  @webLoyal.Resources.language.Resources.EffectiveEndDate @Model.ForeCast.FechaFin.ToString("MM/dd/yyyy")</h4>
- *@
+        @*         <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.ForeCast @Model.ForeCast.DescripcionPeriodo  @webLoyal.Resources.language.Resources.StartDate @Model.ForeCast.FechaInicio.ToString("MM/dd/yyyy")  @webLoyal.Resources.language.Resources.EffectiveEndDate @Model.ForeCast.FechaFin.ToString("MM/dd/yyyy")</h4>
+        *@
     </div>
 </div>
 <div class="row g-3">
@@ -35,7 +35,7 @@
                     <label class="card-title fs-sm fw-medium mb-1">Total Ventas</label>
                     <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> @Model.ForeCastPorProducto.Sum(c => c.Cobrado).ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h3>
 
-                   
+
                 </div><!-- card-body -->
             </div><!-- card-one -->
         </div>
@@ -125,24 +125,24 @@
     </div>
 </div>
 <br />
-<div class="row g-3"> 
+<div class="row g-3">
 
-        @foreach (var estados in Model.ForeCastPorPais.OrderBy(x => x.DescripcionPais))
-        {
-            <div class="col-2 col-xl-2">
-                <div class="card card-one">
-                    <div class="card-header"><h5 class="card-title mb-1">@estados.DescripcionPais</h5></div>
-                    <div class="card-body">
-                        <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Bonus @estados.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
-                        <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Policies @estados.CantidadRegistros</h6>
-                        <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Lives @estados.Vidas</h6>
-                    </div>
-                    <div class="card-footer">
-                        <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Representation:&nbsp<span class="d-block fs-xs text-success">@estados.PorcentajePaisSobreTotal.ToString("P2")</span></h6>
-                    </div>
+    @foreach (var estados in Model.ForeCastPorPais.OrderBy(x => x.DescripcionPais))
+    {
+        <div class="col-2 col-xl-2">
+            <div class="card card-one">
+                <div class="card-header"><h5 class="card-title mb-1">@estados.DescripcionPais</h5></div>
+                <div class="card-body">
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Bonus @estados.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Policies @estados.CantidadRegistros</h6>
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Lives @estados.Vidas</h6>
+                </div>
+                <div class="card-footer">
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Representation:&nbsp<span class="d-block fs-xs text-success">@estados.PorcentajePaisSobreTotal.ToString("P2")</span></h6>
                 </div>
             </div>
-        }
+        </div>
+    }
 
 
 
@@ -168,9 +168,9 @@
                                 <td>FechaInicioVigencia</td>
                                 <td>FormaPago</td>
                                 <td>Prima</td>
- 
+
                                 <td>Descripcion detallada del Plan</td>
-                                
+
 
 
 
@@ -240,7 +240,7 @@
                                     <td>
                                         @item.Prima.ToString("###.##")
                                     </td>
-                      
+
                                     <td>@item.DescripcionPlan</td>
 
 
@@ -330,32 +330,32 @@
     </div><!-- col -->
 </div><!-- col -->
 @section Scripts {
-                                    <script>
-                                            $("table").DataTable({
-                searchPanes: {
-                    viewTotal: true
+    <script>
+        $("table").DataTable({
+            searchPanes: {
+                viewTotal: true
+            },
+            searchBuilder: true,
+            sort: true,
+            resizable: true,
+            responsive: true,
+            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
+            fixedColumns: true,
+            order: [[0, "desc"]],
+            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+            buttons: [
+                {
+                    extend: 'excelHtml5',
+                    autoFilter: true,
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.PoliciesDetailModel)Excel',
                 },
-                searchBuilder: true,
-                sort: true,
-                resizable: true,
-                responsive: true,
-                class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
-                fixedColumns: true,
-                order: [[0, "desc"]],
-                dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
-                buttons: [
-                    {
-                        extend: 'excelHtml5',
-                        autoFilter: true,
-                        className: 'btn btn-outline-primary',
-                        filename: '@nameof(core.Service.PoliciesDetailModel)Excel',
-                    },
-                    {
-                        extend: 'pdfHtml5',
-                        className: 'btn btn-outline-primary',
-                        filename: '@nameof(core.Service.PoliciesDetailModel)Pdf',
+                {
+                    extend: 'pdfHtml5',
+                    className: 'btn btn-outline-primary',
+                    filename: '@nameof(core.Service.PoliciesDetailModel)Pdf',
                 }
             ]
         });
     </script>
-                            }
+}

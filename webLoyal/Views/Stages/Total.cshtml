@@ -1,6 +1,5 @@
 ﻿@model core.Service.DetalleForeCastModel
 
-
 <div class="d-md-flex align-items-center justify-content-between mb-4">
     <div>
         <ol class="breadcrumb fs-sm mb-1">
@@ -8,23 +7,8 @@
             <li class="breadcrumb-item" aria-current="page"><a href="../stages/index">Stages</a></li>
             <li class="breadcrumb-item active" aria-current="page">@Model.ForeCast.DescripcionPeriodo</li>
         </ol>
-        @if (ViewBag.CodigoTipoVenta == "01")
-        {
-            <h4>@webLoyal.Resources.language.Resources.NewBusinessPolicies</h4>
-            <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.ForeCast @Model.ForeCast.DescripcionPeriodo  @webLoyal.Resources.language.Resources.StartDate @Model.ForeCast.FechaInicio.ToString("MM/dd/yyyy")  @webLoyal.Resources.language.Resources.EffectiveEndDate @Model.ForeCast.FechaFin.ToString("MM/dd/yyyy")</h4>
+        <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.ForeCast @Model.ForeCast.DescripcionPeriodo  @webLoyal.Resources.language.Resources.StartDate @Model.ForeCast.FechaInicio.ToString("MM/dd/yyyy")  @webLoyal.Resources.language.Resources.EffectiveEndDate @Model.ForeCast.FechaFin.ToString("MM/dd/yyyy")</h4>
 
-
-    
-        }
-        else
-        {
-            <h4>   @webLoyal.Resources.language.Resources.Renewal</h4>
-            <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.ForeCast @Model.ForeCast.DescripcionPeriodo  @webLoyal.Resources.language.Resources.StartDate @Model.ForeCast.FechaInicio.ToString("MM/dd/yyyy")  @webLoyal.Resources.language.Resources.EffectiveEndDate @Model.ForeCast.FechaFin.ToString("MM/dd/yyyy")</h4>
-
-         
-        }
-@*         <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.ForeCast @Model.ForeCast.DescripcionPeriodo  @webLoyal.Resources.language.Resources.StartDate @Model.ForeCast.FechaInicio.ToString("MM/dd/yyyy")  @webLoyal.Resources.language.Resources.EffectiveEndDate @Model.ForeCast.FechaFin.ToString("MM/dd/yyyy")</h4>
- *@
     </div>
 </div>
 <div class="row g-3">
@@ -35,7 +19,6 @@
                     <label class="card-title fs-sm fw-medium mb-1">Total Ventas</label>
                     <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> @Model.ForeCastPorProducto.Sum(c => c.Cobrado).ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h3>
 
-                   
                 </div><!-- card-body -->
             </div><!-- card-one -->
         </div>

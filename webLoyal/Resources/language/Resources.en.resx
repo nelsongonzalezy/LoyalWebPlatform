@@ -1539,4 +1539,7 @@
   <data name="Women" xml:space="preserve">
     <value>Mujeres</value>
   </data>
+  <data name="Renewal" xml:space="preserve">
+    <value>Renewal</value>
+  </data>
 </root>
