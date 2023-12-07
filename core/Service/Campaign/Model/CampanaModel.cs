@@ -8,6 +8,8 @@
         public IEnumerable<VwCampanaProductosModel> CampanasProductos { get; set; }
         public DtCampanaModel DtCampanas { get; set; }
         public IEnumerable<DtDetalleCampanasModel> DtDetalleCampanas { get; set; }
+        public IEnumerable<VwCampanaDetalleMgaModel> CampanasMga { get; set; }
+        public IEnumerable<VwCampanaDetalleAgenciaModel> CampanasAgencia { get; set; }
 
         public string? mensaje { get; set; }
     }   

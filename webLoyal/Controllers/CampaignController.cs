@@ -42,9 +42,7 @@ namespace webLoyal.Controllers
             }
             else
             {
-                x.mensaje = string.Format("Faltan {0} días {1} horas {2} minutos",
-                diferencia.Days, diferencia.Hours, diferencia.Minutes);
-
+                x.mensaje = string.Format("Faltan {0} días {1} horas {2} minutos",diferencia.Days, diferencia.Hours, diferencia.Minutes);
             }
  
 

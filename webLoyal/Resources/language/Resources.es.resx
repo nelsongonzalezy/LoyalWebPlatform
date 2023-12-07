@@ -1539,4 +1539,16 @@
   <data name="Renewal" xml:space="preserve">
     <value>Renovaciones</value>
   </data>
+  <data name="TopAgency" xml:space="preserve">
+    <value>Top Agencia</value>
+  </data>
+  <data name="TopMaster" xml:space="preserve">
+    <value>Top Master</value>
+  </data>
+  <data name="Collected" xml:space="preserve">
+    <value>Cobrado</value>
+  </data>
+  <data name="Goal" xml:space="preserve">
+    <value>Meta</value>
+  </data>
 </root>

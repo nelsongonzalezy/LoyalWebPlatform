@@ -21,14 +21,13 @@
         }        
         public async Task<DetalleForeCastModel> GetForeCastTotal(int CodigoPeriodo)
         {
-            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseDetalleForeCastModel>("api/v1/ForeCast/ObtenerDetalleForeCast?CodigoPeriodo="+CodigoPeriodo+"");
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseDetalleForeCastModel>("api/v1/ForeCast/ObtenerDetalleForeCastPeriodo?CodigoPeriodo=" + CodigoPeriodo+"");
 
             return y.Content;
         }
         public async Task<DetalleForeCastModel> GetForeCastTotal()
         {
             var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseDetalleForeCastModel>("api/v1/ForeCast/ObtenerDetalleForeCastTotal");
-
             return y.Content;
         }
     }

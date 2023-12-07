@@ -1542,4 +1542,16 @@
   <data name="Renewal" xml:space="preserve">
     <value>Renewal</value>
   </data>
+  <data name="TopAgency" xml:space="preserve">
+    <value>Top Agency</value>
+  </data>
+  <data name="TopMaster" xml:space="preserve">
+    <value>Top Master</value>
+  </data>
+  <data name="Collected" xml:space="preserve">
+    <value>Collected</value>
+  </data>
+  <data name="Goal" xml:space="preserve">
+    <value>Goal</value>
+  </data>
 </root>

@@ -50,65 +50,45 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
-                                    <th>@item.DescripcionPeriodo</th>
+                                    <th>@item.DescripcionPeriodo</th> <th></th>
                                 }
-
-                                <th></th>
-
                             </tr>
                         </thead>
                         <tbody>
                             <thead class="border border-2">
-
                                 <tr>
                                     <th>1-Proyección Ventas</th>
                                     @foreach (var item in Model)
                                     {
-                                    <th>@item.PrimaModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
-                                    </th>
+                                        <th>@item.PrimaModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th> 
+                                        <th><i class="ri-arrow-up-circle-line bg-success" data-bs-toggle="tooltip" title="" data-bs-original-title="ri-arrow-up-circle-line" aria-label="ri-arrow-up-circle-line"></i></th>
                                     }
-                                <th>
-                                </th>
                                 </tr>
                                 <tr>
                                     <th>2-Proyección Renovaciones</th>
                                     @foreach (var item in Model)
                                     {
-                                    <th>@item.RenovacionModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+                                        <th>@item.RenovacionModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+                                        <th></th>
                                     }
-                                    <th></th>
                                 </tr>
-
                             </thead>
-
-                         
-
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
                                 {
-                                <th>
-                                    
-                                    <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
-
-                                    </th>
+                                    <th><a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a></th>
+                                    <th></th>
                                 }
-                                <th></th>
                             </tr>
                             <tr>
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
-                                <th>
-                                    
-                                    <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
-                                        </th>
+                                    <th><a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a></th>
+                                    <th></th>
                                 }
-                                <th></th>
                             </tr>
-
-
-
                         </tbody>
                         <tfoot>
                             <tr>
@@ -121,8 +101,8 @@
                                         @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
                                     </a>
                                 </th>
-                                }
                                 <th></th>
+                                }
                             </tr>
 
                         </tfoot>

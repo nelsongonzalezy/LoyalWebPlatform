@@ -871,6 +871,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collected.
+        /// </summary>
+        public static string Collected {
+            get {
+                return ResourceManager.GetString("Collected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Collections.
         /// </summary>
         public static string Collections {
@@ -1893,6 +1902,15 @@ namespace webLoyal.Resources.language {
         public static string Get2TBOfStorageNowAndGet40OffOffersEndsSoon {
             get {
                 return ResourceManager.GetString("Get2TBOfStorageNowAndGet40OffOffersEndsSoon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goal.
+        /// </summary>
+        public static string Goal {
+            get {
+                return ResourceManager.GetString("Goal", resourceCulture);
             }
         }
         
@@ -4040,6 +4058,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Top Agency.
+        /// </summary>
+        public static string TopAgency {
+            get {
+                return ResourceManager.GetString("TopAgency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Top Agents.
         /// </summary>
         public static string TopAgents {
@@ -4054,6 +4081,15 @@ namespace webLoyal.Resources.language {
         public static string TopInsured {
             get {
                 return ResourceManager.GetString("TopInsured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top Master.
+        /// </summary>
+        public static string TopMaster {
+            get {
+                return ResourceManager.GetString("TopMaster", resourceCulture);
             }
         }
         
