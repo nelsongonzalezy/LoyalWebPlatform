@@ -50,7 +50,8 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
-                                    <th>@item.DescripcionPeriodo</th> <th></th>
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
                                 }
                             </tr>
                         </thead>
@@ -60,48 +61,90 @@
                                     <th>1-Proyección Ventas</th>
                                     @foreach (var item in Model)
                                     {
-                                        <th>@item.PrimaModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th> 
-                                        <th><i class="ri-arrow-up-circle-line bg-success" data-bs-toggle="tooltip" title="" data-bs-original-title="ri-arrow-up-circle-line" aria-label="ri-arrow-up-circle-line"></i></th>
+                                    <th></th>
+                                        <th>@item.PrimaModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                      
                                     }
                                 </tr>
                                 <tr>
                                     <th>2-Proyección Renovaciones</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                         <th>@item.RenovacionModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
-                                        <th></th>
+                                        
                                     }
                                 </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.RenovacionModerada + @item.PrimaModerada);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+                                   
+                                    }
+                            </tr>
                             </thead>
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (@item.PrimaModerada > @item.Cobrado)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th><a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a></th>
-                                    <th></th>
+                                    
                                 }
                             </tr>
                             <tr>
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                        
+                                     if (item.RenovacionCobrado < item.RenovacionModerada)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th><a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a></th>
-                                    <th></th>
-                                }
+
+
+                            }
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    var Total2 = (@item.RenovacionModerada + @item.PrimaModerada);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>
                                         <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
-                                        @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
-                                    </a>
-                                </th>
-                                <th></th>
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
                                 }
                             </tr>
 
@@ -126,10 +169,11 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
 
-                                <th></th>
+                               
 
                             </tr>
                         </thead>
@@ -139,51 +183,94 @@
                                     <th>1-Proyección Polizas</th>
                                         @foreach (var item in Model)
                                         {
+
+                                    <th></th>
                                         <th>@item.PolizaModerada</th>
                                         }
-                                    <th></th>
+                                    
                                 </tr>
                                 <tr>
                                     <th>2-Proyección Renovaciones</th>
                                         @foreach (var item in Model)
-                                        {
+                                    {
+                                    <th></th>
                                         <th>@item.RenovacionPolizaModerada.ToString("#,###")</th>
                                         }
-                                    <th></th>
+                                    
                                 </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+
+                                        var Total = (int)(@item.RenovacionPolizaModerada + @item.PolizaModerada);
+                                    <th></th>
+                                    <th>@Total </th>
+
+                                    }
+                            </tr>
                             </thead>
 
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (@item.PolizaModerada > @item.Polizas)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.Polizas</th>
                                 }
-                                <th></th>
+                              
                             </tr>
+
                             <tr>
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionPolizas < item.RenovacionPolizaModerada)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.RenovacionPolizas</th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
-                                    var Total = (@item.Polizas + @item.RenovacionPolizas);
+                                    var Total = (int)(@item.Polizas + @item.RenovacionPolizas);
+                                    var Total2 = (int)(@item.RenovacionPolizaModerada + @item.PolizaModerada);
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>
                                         <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
-                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                            @Total
                                         </a>
                                     </th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tfoot>
@@ -207,9 +294,10 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
-                                <th></th>
+                               
                             </tr>
                         </thead>
                         <tbody>
@@ -218,17 +306,29 @@
                                 <th>1-Proyección Vidas</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.VidasModerada</th>
                                     }
-                                <th></th>
+                              
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.RenovacionVidasModerada.ToString("#,###")</th>
                                     }
-                                <th></th>
+                               
+                            </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (int)(@item.VidasModerada + @item.RenovacionVidasModerada);
+                                    <th></th>
+                                    <th>@Total </th>
+
+                                    }
                             </tr>
                             </thead>
                            
@@ -236,29 +336,59 @@
                                 <th>3-Vidas Real</th>
                                 @foreach (var item in Model)
                                 {
+
+                                    if (@item.VidasModerada > @item.Asegurados)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.Asegurados</th>
                                 }
-                                <th></th>
+                               
                             </tr>
                             <tr>
                                 <th>4-Vidas Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionAsegurados < item.RenovacionVidasModerada)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.RenovacionAsegurados</th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
-                                    var Total = (@item.Asegurados + @item.RenovacionAsegurados);
-                                    <th>@Total.ToString("#,###")</th>
+                                    var Total = (int)(@item.Asegurados + @item.RenovacionAsegurados);
+                                    var Total2 = (int)(@item.VidasModerada + @item.RenovacionVidasModerada);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@Total</th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tfoot>
@@ -286,11 +416,9 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
-
-                                <th></th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -299,57 +427,91 @@
                                 <th>1-Proyección Ventas</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.PrimaAgresiva.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
                                     }
-                                <th></th>
+                                
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.RenovacionAgresiva.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
                                     }
-                                <th></th>
+                                
+                            </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.PrimaAgresiva + @item.RenovacionAgresiva);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+
+                                    }
                             </tr>
                         </thead>
 
                             <tr>
-                                <th>3-Ventas Real</th>
+                            <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
                                 {
-                                    <th>
-                                    <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
-                                        </th>
-                                }
-                                <th></th>
+                                    if (@item.PrimaAgresiva > @item.Cobrado)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                <th><a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a></th>
+
+                                }                                
                             </tr>
                             <tr>
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionCobrado < item.RenovacionAgresiva)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                 <th>
                                     <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
                                     </th>
                                 }
-                                <th></th>
                             </tr>
-
-
-
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    var Total2 = (@item.RenovacionAgresiva + @item.PrimaAgresiva);
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>
                                         <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
                                             @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
                                         </a>
                                     </th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tfoot>
@@ -373,10 +535,11 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
 
-                                <th></th>
+                                
 
                             </tr>
                         </thead>
@@ -385,52 +548,96 @@
                                 <tr>
                                     <th>1-Proyección Polizas</th>
                                         @foreach (var item in Model)
-                                        {
+                                    {
+                                    <th></th>
                                         <th>@item.PolizaAgresiva</th>
                                         }
-                                    <th></th>
+                                    
                                 </tr>
                                 <tr>
                                     <th>2-Proyección Renovaciones</th>
                                         @foreach (var item in Model)
-                                        {
-                                        <th>@item.RenovacionAgresiva.ToString("#,###")</th>
-                                        }
+                                    {
                                     <th></th>
+                                        <th>@item.RenovacionAgresiva.ToString("0")</th>
+                                        }
+                                    
                                 </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.PolizaAgresiva + @item.RenovacionAgresiva);
+                                    <th></th>
+                                    <th>@Total.ToString("0") </th>
+
+                                    }
+                            </tr>
                             </thead>
 
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
                                 {
-                                    <th>@item.Polizas</th>
+                                    if (@item.PolizaAgresiva > @item.Polizas)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                <th>@item.Polizas</th>
                                 }
-                                <th></th>
+                                
                             </tr>
                             <tr>
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionPolizas < item.RenovacionAgresiva)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.RenovacionPolizas.ToString("#,###")</th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
-                                    var Total = (@item.Polizas + @item.RenovacionPolizas);
+                                    var Total = (int)(@item.Polizas + @item.RenovacionPolizas);
+
+                                    var Total2 = (int)(@item.PolizaAgresiva + @item.RenovacionAgresiva);
+        
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                   
                                     <th>
                                         <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
-                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                            @Total
                                         </a>
                                     </th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tfoot>
@@ -454,9 +661,10 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
-                                <th></th>
+                              
                             </tr>
                         </thead>
                         <tbody>
@@ -464,48 +672,89 @@
                                 <tr>
                                     <th>1-Proyección Vidas</th>
                                         @foreach (var item in Model)
-                                        {
+                                    {
+                                    <th></th>
                                         <th>@item.VidasAgresiva</th>
                                         }
-                                    <th></th>
+                                   
                                 </tr>
                                 <tr>
                                     <th>2-Proyección Renovaciones</th>
                                         @foreach (var item in Model)
-                                        {
-                                        <th>@item.VidasAgresiva</th>
-                                        }
+                                    {
                                     <th></th>
+                                        <th>@item.RenovacionVidasAgresiva.ToString("0")</th>
+                                        }
+                                    
                                 </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.VidasAgresiva + @item.RenovacionVidasAgresiva);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+
+                                    }
+                            </tr>
                             </thead>
 
                             <tr>
                                 <th>3-Vidas Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (@item.VidasAgresiva > @item.Asegurados)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.Asegurados</th>
                                 }
-                                <th></th>
+                                
                             </tr>
                             <tr>
                                 <th>4-Vidas Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionAsegurados < item.RenovacionVidasAgresiva)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.RenovacionAsegurados</th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
-                                    var Total = (@item.Asegurados + @item.RenovacionAsegurados);
-                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    var Total = (int)(@item.Asegurados + @item.RenovacionAsegurados);
+                                    var Total2 = (@item.VidasAgresiva + @item.RenovacionVidasAgresiva);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@Total</th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tfoot>
@@ -531,10 +780,11 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
 
-                                <th></th>
+                              
 
                             </tr>
                         </thead>
@@ -544,17 +794,29 @@
                                 <th>1-Proyección Ventas</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.PrimaModeradaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
                                     }
-                                <th></th>
+                               
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.RenovacionModeradaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
                                     }
-                                <th></th>
+                                
+                            </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.PrimaModeradaPosPandemia + @item.RenovacionModeradaPosPandemia);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+
+                                    }
                             </tr>
                             </thead>
 
@@ -562,41 +824,64 @@
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (@item.PrimaModeradaPosPandemia > @item.Cobrado)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                 <th>
                                     <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
                                 </th>
 
                                 }
-                                <th></th>
+                               
                             </tr>
                             <tr>
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionCobrado < item.RenovacionModeradaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                 <th>
                                     <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
                                 </th>
-
                                 }
-                                <th></th>
                             </tr>
-
-
-
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    var Total2 = (@item.RenovacionModeradaPosPandemia + @item.PrimaModeradaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>
                                         <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
                                             @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
                                         </a>
                                     </th>
                                 }
-                                <th></th>
+                               
                             </tr>
 
                         </tfoot>
@@ -620,11 +905,9 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
-
-                                <th></th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -632,53 +915,92 @@
                                 <tr>
                                     <th>1-Proyección Polizas</th>
                                         @foreach (var item in Model)
-                                        {
+                                    {
+                                    <th></th>
                                         <th>@item.PolizaModeradaPosPandemia</th>
                                         }
-                                    <th></th>
+                                    
                                 </tr>
                                 <tr>
                                     <th>2-Proyección Renovaciones</th>
                                         @foreach (var item in Model)
-                                        {
+                                    {
+                                    <th></th>
                                         <th>@item.RenovacionPolizaModeradaPosPandemia.ToString("#,###")</th>
                                         }
-                                    <th></th>
+                                    
                                 </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {var Total = (int)(@item.PolizaModeradaPosPandemia + @item.RenovacionPolizaModeradaPosPandemia);
+                                    <th></th>
+                                    <th>@Total </th>
+                                    }
+                            </tr>
                             </thead>
 
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (@item.PolizaModeradaPosPandemia > @item.Polizas)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.Polizas</th>
                                 }
-                                <th></th>
+                                
                             </tr>
                             <tr>
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+
+                                    if (item.RenovacionPolizas < item.RenovacionPolizaModeradaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.RenovacionPolizas</th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
-                                    var Total = (@item.Polizas + @item.RenovacionPolizas);
+                                    var Total = (int)(@item.Polizas + @item.RenovacionPolizas);
+                                    var Total2 = (@item.RenovacionPolizaModeradaPosPandemia + @item.PolizaModeradaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>
                                         <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
-                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                            @Total
                                         </a>
                                     </th>
-
                                 }
-                                <th></th>
+                              
                             </tr>
 
                         </tfoot>
@@ -702,9 +1024,10 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
-                                <th></th>
+                               
                             </tr>
                         </thead>
                         <tbody>
@@ -713,17 +1036,29 @@
                                 <th>1-Proyección Vidas</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.VidasModeradaPosPandemia</th>
                                     }
-                                <th></th>
+                               
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.RenovacionVidasModeradaPosPandemia.ToString("#,###")</th>
                                     }
-                                <th></th>
+                                
+                            </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.VidasModeradaPosPandemia + @item.RenovacionVidasModeradaPosPandemia);
+                                    <th></th>
+                                    <th>@Total.ToString("0") </th>
+
+                                    }
                             </tr>
                             </thead>
 
@@ -731,29 +1066,57 @@
                                 <th>3-Vidas Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (@item.VidasModeradaPosPandemia > @item.Asegurados)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.Asegurados</th>
                                 }
-                                <th></th>
+                                
                             </tr>
                             <tr>
                                 <th>4-Vidas Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionAsegurados < item.RenovacionVidasModeradaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.RenovacionAsegurados</th>
                                 }
-                                <th></th>
+                            
                             </tr>
 
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
-                                    var Total = (@item.Asegurados + @item.RenovacionAsegurados);
-                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    var Total = (int)(@item.Asegurados + @item.RenovacionAsegurados);
+                                    var Total2 = (@item.RenovacionVidasModeradaPosPandemia + @item.VidasModeradaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@Total</th>
                                 }
-                                <th></th>
+                               
                             </tr>
 
                         </tfoot>
@@ -779,11 +1142,9 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
-
-                                <th></th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -792,17 +1153,29 @@
                                 <th>1-Proyección Ventas</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.PrimaAgresivaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
                                     }
-                                <th></th>
+                                
                             </tr>
                             <tr>
                                 <th>2-Proyección Renovaciones</th>
                                     @foreach (var item in Model)
                                     {
+                                    <th></th>
                                     <th>@item.RenovacionAgresivaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
                                     }
-                                <th></th>
+                                
+                            </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.PrimaAgresivaPosPandemia + @item.RenovacionAgresivaPosPandemia);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+
+                                    }
                             </tr>
                             </thead>
 
@@ -810,21 +1183,39 @@
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (@item.PrimaAgresivaPosPandemia > @item.Cobrado)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                 <th>
                                     <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
                                 </th>
                                 }
-                                <th></th>
+                              
                             </tr>
                             <tr>
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionCobrado < item.RenovacionAgresivaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                 <th>
                                     <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
                                 </th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
 
@@ -832,17 +1223,28 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
                                     var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    var Total2 = (@item.PrimaAgresivaPosPandemia + @item.RenovacionAgresivaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>
                                         <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
                                             @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
                                         </a>
                                     </th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tfoot>
@@ -866,11 +1268,9 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
-
-                                <th></th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -878,48 +1278,88 @@
                                 <tr>
                                     <th>1-Proyección Polizas</th>
                                         @foreach (var item in Model)
-                                        {
+                                    {
+                                    <th></th>
                                         <th>@item.PolizaAgresivaPosPandemia</th>
                                         }
-                                    <th></th>
+                                    
                                 </tr>
                                 <tr>
                                     <th>2-Proyección Renovaciones</th>
                                         @foreach (var item in Model)
-                                        {
-                                        <th>@item.RenovacionPolizaAgresivaPosPandemia.ToString("#,###")</th>
-                                        }
+                                    {
                                     <th></th>
+                                        <th>@item.RenovacionPolizaAgresivaPosPandemia.ToString("0")</th>
+                                        }
+                                    
                                 </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (int)(@item.PolizaAgresivaPosPandemia + @item.RenovacionPolizaAgresivaPosPandemia);
+                                    <th></th>
+                                    <th>@Total</th>
+
+                                    }
+                            </tr>
                             </thead>
 
                             <tr>
                                 <th>3-Ventas Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (@item.PolizaAgresivaPosPandemia > @item.Polizas)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.Polizas</th>
                                 }
-                                <th></th>
+                                
                             </tr>
                             <tr>
                                 <th>4-Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionPolizas < item.RenovacionPolizaAgresivaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.RenovacionPolizas</th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tbody>
                         <tfoot>
                                 <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                     @foreach (var item in Model)
                                     {
-                                    var Total = (@item.RenovacionPolizas + @item.Polizas);
-                                    <th>@Total.ToString("#,###")</th>
-                                    }
-                                <th></th>
+                                    var Total = (int)(@item.RenovacionPolizas + @item.Polizas);
+                                    var Total2 = (int)(@item.PolizaAgresivaPosPandemia + @item.RenovacionPolizaAgresivaPosPandemia);
+
+                                        if (@Total < @Total2)
+                                        {
+                                            <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                        }
+                                        else
+                                        {
+                                            <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                        }
+                                        <th>@Total.ToString("#,###")</th>
+                                     }
                             </tr>
 
                         </tfoot>
@@ -943,9 +1383,10 @@
                                 <th></th>
                                 @foreach (var item in Model)
                                 {
+                                    <th></th>
                                     <th>@item.DescripcionPeriodo</th>
                                 }
-                                <th></th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -953,18 +1394,30 @@
                                 <tr>
                                     <th>1-Proyección Vidas</th>
                                         @foreach (var item in Model)
-                                        {
+                                    {
+                                    <th></th>
                                         <th>@item.VidasAgresivaPosPandemia</th>
                                         }
-                                    <th></th>
+                                    
                                 </tr>
                                 <tr>
                                     <th>2-Proyección Renovaciones</th>
                                         @foreach (var item in Model)
-                                        {
+                                    {
+                                    <th></th>
                                         <th>@item.RenovacionAgresivaPosPandemia.ToString("#,###")</th>
                                         }
-                                    <th></th>
+                                  
+                                </tr>
+                                <tr>
+                                    <th>Proyección Total</th>
+                                        @foreach (var item in Model)
+                                        {
+                                            var Total = (int)(@item.VidasAgresivaPosPandemia + @item.RenovacionAgresivaPosPandemia);
+                                            <th></th>
+                                            <th>@Total</th>
+
+                                        }
                                 </tr>
                             </thead>
 
@@ -972,29 +1425,59 @@
                                 <th>3-Vidas Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (@item.VidasAgresivaPosPandemia > @item.Asegurados)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.Asegurados</th>
                                 }
-                                <th></th>
+                                
                             </tr>
                             <tr>
                                 <th>4-Vidas Renovaciones Real</th>
                                 @foreach (var item in Model)
                                 {
+                                    if (item.RenovacionAsegurados < item.RenovacionAgresivaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
                                     <th>@item.RenovacionAsegurados    </th>
                                 }
-                                <th></th>
+                                
                             </tr>
 
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>5-Total</th>
+                                <th>Total</th>
                                 @foreach (var item in Model)
                                 {
-                                    var Total = (@item.Asegurados + @item.RenovacionAsegurados);
-                                    <th>@Total.ToString("#,###")</th>
+                                    var Total = (int)(@item.Asegurados + @item.RenovacionAsegurados);
+                                    var Total2 = (int)(@item.VidasAgresivaPosPandemia + @item.RenovacionAgresivaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+
+                                    <th>@Total</th>
                                 }
-                                <th></th>
+                               
                             </tr>
 
                         </tfoot>
