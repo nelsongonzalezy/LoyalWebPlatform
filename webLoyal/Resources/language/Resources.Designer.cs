@@ -169,6 +169,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add documents.
+        /// </summary>
+        public static string AddDocuments {
+            get {
+                return ResourceManager.GetString("AddDocuments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Address.
         /// </summary>
         public static string Address {
@@ -556,6 +565,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancellation.
+        /// </summary>
+        public static string Cancellation {
+            get {
+                return ResourceManager.GetString("Cancellation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancellations.
         /// </summary>
         public static string Cancellations {
@@ -642,6 +660,15 @@ namespace webLoyal.Resources.language {
         public static string ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges {
             get {
                 return ResourceManager.GetString("ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change of plan.
+        /// </summary>
+        public static string ChangeOfPlan {
+            get {
+                return ResourceManager.GetString("ChangeOfPlan", resourceCulture);
             }
         }
         
@@ -1011,6 +1038,15 @@ namespace webLoyal.Resources.language {
         public static string CountryDescription {
             get {
                 return ResourceManager.GetString("CountryDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coverage.
+        /// </summary>
+        public static string Coverage {
+            get {
+                return ResourceManager.GetString("Coverage", resourceCulture);
             }
         }
         
@@ -1987,6 +2023,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        public static string History {
+            get {
+                return ResourceManager.GetString("History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {
@@ -2451,6 +2496,24 @@ namespace webLoyal.Resources.language {
         public static string Menu {
             get {
                 return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modification.
+        /// </summary>
+        public static string Modification {
+            get {
+                return ResourceManager.GetString("Modification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modify Taker.
+        /// </summary>
+        public static string ModifyTaker {
+            get {
+                return ResourceManager.GetString("ModifyTaker", resourceCulture);
             }
         }
         
@@ -3455,6 +3518,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Record Note.
+        /// </summary>
+        public static string RecordNote {
+            get {
+                return ResourceManager.GetString("RecordNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Recover.
         /// </summary>
         public static string Recover {
@@ -3613,6 +3685,15 @@ namespace webLoyal.Resources.language {
         public static string SalesRevenue {
             get {
                 return ResourceManager.GetString("SalesRevenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Schedule.
+        /// </summary>
+        public static string Schedule {
+            get {
+                return ResourceManager.GetString("Schedule", resourceCulture);
             }
         }
         

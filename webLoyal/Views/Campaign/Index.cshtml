@@ -357,7 +357,7 @@
             <div class="col-md-6 col-xl-12">
                 <div class="card card-one">
                     <div class="card-header">
-                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating </h6>
+                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating @webLoyal.Resources.language.Resources.Agent</h6>
                         <div class="d-flex gap-1 text-primary fs-20">
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
@@ -398,10 +398,10 @@
                                                     objetivo = 1;
                                                 }
 
-                                                decimal primaActual = @item.Prima; 
+                                                decimal primaActual = @item.PrimaCobrada;
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
                                             }
-                                            @porcentajeAvance.ToString("P2")
+                                            <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
                                         </td>
                                         <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Individual").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
 
@@ -457,7 +457,7 @@
             <div class="col-md-6 col-xl-12">
                 <div class="card card-one">
                     <div class="card-header">
-                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating </h6>
+                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating @webLoyal.Resources.language.Resources.AgencyCode</h6>
                         <div class="d-flex gap-1 text-primary fs-20">
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
@@ -472,7 +472,7 @@
                                 <tr>
                                     <th>@webLoyal.Resources.language.Resources.Position</th>
                                     <th>@webLoyal.Resources.language.Resources.Code</th>
-                                    <th>@webLoyal.Resources.language.Resources.Agents</th>
+                                    <th>@webLoyal.Resources.language.Resources.AgencyName</th>
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Collected</th>
@@ -498,10 +498,10 @@
                                                     objetivo = 1;
                                                 }
 
-                                                decimal primaActual = @item.Prima;
+                                                decimal primaActual = @item.PrimaCobrada;
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
-                                            }
-                                            @porcentajeAvance.ToString("P2")
+                                            }                                   
+                                            <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
                                         </td>
                                         <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Doble").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
 
@@ -558,7 +558,7 @@
             <div class="col-md-6 col-xl-12">
                 <div class="card card-one">
                     <div class="card-header">
-                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating </h6>
+                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating MGA </h6>
                         <div class="d-flex gap-1 text-primary fs-20">
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
@@ -573,7 +573,7 @@
                                 <tr>
                                     <th>@webLoyal.Resources.language.Resources.Position</th>
                                     <th>@webLoyal.Resources.language.Resources.Code</th>
-                                    <th>@webLoyal.Resources.language.Resources.Agents</th>
+                                    <th>@webLoyal.Resources.language.Resources.AgencyName</th>
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Collected</th>
@@ -581,13 +581,13 @@
                                     <th>@webLoyal.Resources.language.Resources.Goal</th>
                                 </tr>
                             </thead>
-                            @foreach (var item in Model.CampanasAgencia.OrderBy(x => x.Fila))
+                            @foreach (var item in Model.CampanasMga.OrderBy(x => x.Fila))
                             {
                                 <tbody>
                                     <tr>
                                         <td><strong>@item.Fila</strong></td>
-                                        <td> <a href="../Agents/detail/@item.CodigoAgencia" class="btn btn-outline-tertiary"> @item.CodigoAgencia </a> </td>
-                                        <td>@item.NombreAgencia.Trim()</td>
+                                        <td> <a href="../Agents/detail/@item.CodigoMGA" class="btn btn-outline-tertiary"> @item.CodigoMGA </a> </td>
+                                        <td>@item.NombreMGA.Trim()</td>
                                         <td>@item.Cantidad</td>
                                         <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
@@ -598,10 +598,10 @@
                                                 {
                                                     objetivo = 1;
                                                 }
-                                                decimal primaActual = @item.Prima;
+                                                decimal primaActual = @item.PrimaCobrada;
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
                                             }
-                                            @porcentajeAvance.ToString("P2")
+                                            <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
                                         </td>
                                         <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "M").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                     </tr>

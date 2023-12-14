@@ -1551,4 +1551,31 @@
   <data name="Goal" xml:space="preserve">
     <value>Meta</value>
   </data>
+  <data name="AddDocuments" xml:space="preserve">
+    <value>Agregar documentos</value>
+  </data>
+  <data name="Cancellation" xml:space="preserve">
+    <value>Cancelacion</value>
+  </data>
+  <data name="ChangeOfPlan" xml:space="preserve">
+    <value>Cambio de Plan</value>
+  </data>
+  <data name="Coverage" xml:space="preserve">
+    <value>Cobertura</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Historia</value>
+  </data>
+  <data name="Modification" xml:space="preserve">
+    <value>Modificacion</value>
+  </data>
+  <data name="ModifyTaker" xml:space="preserve">
+    <value>Modificar Tomador</value>
+  </data>
+  <data name="RecordNote" xml:space="preserve">
+    <value>Registrar notas</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Cronograma</value>
+  </data>
 </root>

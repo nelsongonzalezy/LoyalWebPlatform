@@ -65,8 +65,8 @@
                                                 @foreach (var item in Model)
                                                 {
                                                     <tr>
-                                                        <td> <a class="btn btn-outline-tertiary"> @item.CodigoSolicitud</a> </td>
-                                    <td><a href="~/Policies/Detail/@item.CodigoSolicitud" class="btn btn-link">@item.NumeroPoliza</a></td>
+                                                        <td><a class="btn btn-outline-tertiary"> @item.CodigoSolicitud</a></td>
+                                                        <td><a href="~/Policies/Detail/@item.CodigoSolicitud" class="btn btn-link">@item.NumeroPoliza</a></td>
                                
                                                         @switch (item.DescripcionTipoVenta)
                                                         {
@@ -122,8 +122,8 @@
                                                         <td>@item.NumeroAsegurados</td>
                                                         <td>@item.DescripcionPoliza</td>
                                                         <td>@item.DescripcionPais</td>
-    
-                                                        <td>@item.FechaInicioVigencia</td>
+
+                                    <td>@item.FechaInicioVigencia.ToString("MM/dd/yyyy")</td>
                                                         <td>@item.DescripcionFormaPago</td>
                                                         <td>
                                                             @item.Prima.ToString("###.##")</td>

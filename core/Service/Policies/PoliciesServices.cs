@@ -68,6 +68,11 @@
         {
             var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseVwSolcitudConsultaModel>("api/v1/Certificados/ConsultaSolicitud?codigoSolicitud=" + codigoSolicitud);
             return y.Content;
+        } 
+        public async Task<IQueryable<VvCertificadosPorPaisModel>> GetpoliciesForCountry()
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseRequestVvCertificadosPorPaisModel>("api/v1/Certificados/ConsultaCertificadosPorPais");
+            return y.Content.AsQueryable();
         }
     }
 }

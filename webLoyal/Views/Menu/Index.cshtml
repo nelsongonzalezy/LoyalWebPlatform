@@ -1,179 +1,132 @@
-﻿@model List<core.Service.MenuModel>;
+﻿@model List<core.Service.VvCertificadosPorPaisModel>;
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+        <div>
+            <ol class="breadcrumb fs-sm mb-1">
+                <li class="breadcrumb-item"><a href="../menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
 
-
-
-            <div class="d-md-flex align-items-center justify-content-between mb-4">
-                <div>
-                    <ol class="breadcrumb fs-sm mb-1">
-                        <li class="breadcrumb-item"><a href="../menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
-
-                    </ol>
-
-                </div>
-                <nav class="nav nav-icon nav-icon-lg">
-
-
-
-                </nav>
-
-            </div>
-            <div class="row g-3">
-
-            
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title text-dark">
-                                    <h3>
-                                        Solicitudes
-                                    </h3>
-                                </div>
-                                @await Component.InvokeAsync("Requests")
-                            </div>
-                            <div class="card-footer">
-                                <a href="../requestmonitor/index" class="btn btn-outline-secondary">ver mas</a>
-                            </div>
+            </ol>
+        </div>
+        <nav class="nav nav-icon nav-icon-lg">
+        </nav>
+</div>
+<div class="row g-3">
+    <div class="col-md-5 col-sm-12">
+        <div class="row g-3">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-dark">
+                            <h3>
+                                Solicitudes
+                            </h3>
                         </div>
+                        @await Component.InvokeAsync("Requests")
                     </div>
-
-
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title text-dark">
-                                    <h3>
-                                        Polizas
-                                    </h3>
-                                </div>
-                                @await Component.InvokeAsync("PoliciesStatus")
-                            </div>
-                            <div class="card-footer">
-                                <a href="../Policies/index" class="btn btn-outline-secondary">ver mas</a>
-                            </div>
+                    <div class="card-footer">
+                        <a href="../requestmonitor/index" class="btn btn-outline-secondary">ver mas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row g-3">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-dark">
+                            <h3>
+                                Polizas
+                            </h3>
                         </div>
-
-
-
-                    </div> 
-                    <br />
-                    <div class="col-md-6 col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title text-dark">
-                                    <h3>
-                                        Renovaciones
-                                    </h3>
-                                </div>
+                        @await Component.InvokeAsync("PoliciesStatus")
+                    </div>
+                    <div class="card-footer">
+                        <a href="../Policies/index" class="btn btn-outline-secondary">ver mas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row g-3">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title text-dark">
+                            <h3>
+                                Renovaciones
+                            </h3>
+                        </div>
                         @await Component.InvokeAsync("PoliciesListRenewal")
-                            </div>
-                            <div class="card-footer">
-                                <a href="../Policies/Renewal" class="btn btn-outline-secondary">ver mas</a>
-
-
-                            </div>
-                        </div>
-
-
-
-                    
-
-
-                </div><!-- col -->
-                
-            </div><!-- row -->
-
-   
-
-
-
-
-@*            @foreach (var menu in Model)
-            {
-                <div class="col-3">
-
-                <div class="card card-file">
-                    <div class="card-file-icon danger">
-                        <i class="fa fa-ambulance" aria-hidden="true"></i>
                     </div>
-                
-                <div class="card-body">
-                    <h6><a href="@menu.Url" class="link-02"> @menu.NameOption</a></h6>
-                    <span> </span>
+                    <div class="card-footer">
+                        <a href="../Policies/Renewal" class="btn btn-outline-secondary">ver mas</a>
+                    </div>
                 </div>
-                </div>
-            </div>
-      
-            }*@
-@*            <div class="card card-file">
-               
-                <!-- dropdown -->
-                <div class="card-file-icon danger">
-                    <i class="fa fa-ambulance" aria-hidden="true"></i>
-                </div>
-                <div class="card-body">
-                    <h6><a href="../Claims/index" class="link-02">Reclamos</a></h6>
-                    <span> </span>
-                </div>
-                <div class="card-footer"><span class="d-none d-sm-inline">Last access: </span></div>
             </div>
         </div>
-        <div class="col-3 col-sm-4 col-md-3 col-xl">
-            <div class="card card-file">
-                <div class="card-file-icon primary">
-                    <i class="ri-file-word-line"></i>
+    
+    </div>
+    <div class="col-md-7 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title text-dark">
+                    <h3>
+                        Distribucion de polizas
+                    </h3>
                 </div>
-                <div class="card-body">
-                    <h6><a href="" class="link-02">Board</a></h6>
-                    <span> </span>
-                </div>
-                <div class="card-footer"><span class="d-none d-sm-inline">Last access: </span></div>
+                <div id="map" style="height: 800px;"></div>
             </div>
         </div>
-        <!-- col -->
-        <div class="col-3 col-sm-4 col-md-3 col-xl">
-            <div class="card card-file">
-                
-                <div class="card-file-icon info">
-                    <i class="ri-image-line"></i>
-                </div>
-                <div class="card-body">
-                    <h6><a href="../Stages/index" class="link-02">Forecast</a></h6>
-                    <span></span>
-                </div>
-                <div class="card-footer"><span class="d-none d-sm-inline">Last access: </span></div>
-            </div>
-        </div>
-        <!-- col -->
-        <div class="col-3 col-sm-4 col-md-3 col-xl">
-            <div class="card card-file">
-               
-                <!-- dropdown -->
-                <div class="card-file-icon success">
-                    <i class="ri-file-excel-line"></i>
-                </div>
-                <div class="card-body">
-                    <h6><a href="../Certificates/index" class="link-02"> Certificaciones</a></h6>
-                    <span></span>
-                </div>
-                <div class="card-footer"><span class="d-none d-sm-inline"> Last access: </span></div>
-            </div>
-        </div>
-*@
+    </div>
 
-@*@section  Scripts{
-    <script>
-        'use strict'
-        $('#vmap').vectorMap({
-            map: 'world_en',
-            backgroundColor: '#fff',
-            borderColor: '#fff',
-            color: '#5f748a',
-            selectedColor: null,
-            hoverColor: true,
-            hoverOpacity: 0.8,
-            enableZoom: true,
-            showTooltip: true
-        });
-    </script>
+</div>
+   
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
 
-}*@
+@section  Scripts{
+
+
+
+
+
+<!-- ... Otras partes de tu vista ... -->
+
+
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibmVsc29uZ29uemFsZXp5IiwiYSI6ImNscHlzZW1obDB3b3Yya256ZG9ocDU4bWEifQ.SDxw9G4RdoN5om22Noqtag';
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-66, 15],
+        zoom: 2
+    });
+
+    var locations = @Html.Raw(Json.Serialize(Model));
+    var colorPalette = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
+
+    // Agrega marcadores animados para cada ubicación desde el modelo de datos
+    locations.forEach(function (location, i) {
+        var markerText = `
+            <b>${location.descripcionPais}</b><br>
+            Cantidad de Registros: ${location.cantidadRegistros}<br>
+            Porcentaje sobre el Total: ${(location.porcentajePaisSobreTotal*100)}%<br>
+            Cobrado: $${location.cobrado}
+        `;
+
+        // Agrega marcadores con animación de pulso y colores diferentes
+        var marker = new mapboxgl.Marker({ color: colorPalette[i % colorPalette.length] })
+            .setLngLat([parseFloat(location.longitud), parseFloat(location.latitud)])
+            .setPopup(new mapboxgl.Popup().setHTML(markerText))
+            .addTo(map);
+
+        // Agrega animación de pulso al marcador
+        marker.getElement().style.animation = 'pulse 1.5s infinite';
+    });
+</script>
+
+<!-- ... Otras partes de tu vista ... -->
+
+}

@@ -8,7 +8,7 @@
         Task<IQueryable<CifraCertificadosRenovacionesModel>> GetAllRenewal();
         Task<IQueryable<CertificadosRenovacionModel>> GetFiguresRenewal();
         Task<VwSolcitudConsultaModel> GetByCode(int codigoSolicitud);
-
+        Task<IQueryable<VvCertificadosPorPaisModel>> GetpoliciesForCountry();
 
     }
 }

@@ -23,6 +23,7 @@ namespace core
                        .AddScoped<ICampanig, CampaignService>()
                        .AddScoped<IForeCast, ForeCastService>()
                        .AddScoped<IStaff, StaffService>()
+                       .AddScoped<ICommission, CommissionService>()
 
                        .AddScoped<HttpClient>()
                        .AddScoped<HttpClientConfig>()

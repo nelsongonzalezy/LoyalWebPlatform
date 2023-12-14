@@ -1,4 +1,69 @@
-﻿@*<ul class="nav">
+﻿@{
+    ViewData["Title"] = "Map with Animated Markers Example";
+}
+
+<!-- Mapbox GL JS -->
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+
+<h1>Map with Animated Markers Example</h1>
+
+<div id="map" style="height: 400px;"></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibmVsc29uZ29uemFsZXp5IiwiYSI6ImNscHlzZW1obDB3b3Yya256ZG9ocDU4bWEifQ.SDxw9G4RdoN5om22Noqtag';
+
+    var locations = [
+        { name: 'Miami', coordinates: [-80.1917902, 25.7616798] },
+        { name: 'Caracas', coordinates: [-66.9036063, 10.4805937] },
+        { name: 'Madrid', coordinates: [-3.7037902, 40.4167754] },
+        { name: 'Ciudad de México', coordinates: [-99.133209, 19.4326077] },
+        { name: 'Panamá', coordinates: [-79.5166, 8.9836] }
+    ];
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-66, 15],
+        zoom: 2
+    });
+
+    // Agrega marcadores animados para cada ubicación con datos aleatorios y puntero azul
+    locations.forEach(function (location) {
+        var policiesSold = Math.floor(Math.random() * 100) + 1;
+        var registrations = Math.floor(Math.random() * 500) + 1;
+        var salesValueUSD = (Math.random() * 100000).toFixed(2);
+
+        var markerText = `
+                    <b>${location.name}</b><br>
+                    Polizas Vendidas: ${policiesSold}<br>
+                    Vidas Registradas: ${registrations}<br>
+                    Valor en USD: $${salesValueUSD}
+                `;
+
+        // Agrega marcadores con animación de pulso y puntero azul
+        var marker = new mapboxgl.Marker({ color: 'blue' })
+            .setLngLat(location.coordinates)
+            .setPopup(new mapboxgl.Popup().setHTML(markerText))
+            .addTo(map);
+
+        // Agrega animación de pulso al marcador
+        marker.getElement().style.animation = 'pulse 1.5s infinite';
+    });
+</script>
+
+<style>
+    /* Agrega estilos adicionales aquí si es necesario */
+</style>
+
+
+
+
+
+
+
+
+@*<ul class="nav">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Home</a>
   </li>
@@ -12,7 +77,7 @@
     <a class="nav-link disabled">Disabled</a>
   </li>
 </ul>*@
-
+@* 
 
 
 <div class="row row-cols-auto g-4 g-xxl-5">
@@ -327,7 +392,7 @@
 
         </section>
     </div>
-</div>
+</div> *@
 <!-- col -->
 @*<div class="col d-none d-xl-block">
     <div class="sidebar-right">
