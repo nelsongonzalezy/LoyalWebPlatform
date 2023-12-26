@@ -214,7 +214,7 @@
             <div class="card card-one mt-3">
                 <div class="card-body p-3">
                     <div class="table-responsive">
-                        <table id="Campanaatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                        <table id="Campanaatatablet" class="stripe hover display compact">
                             <thead>
                                 <tr>
                                     <th>@webLoyal.Resources.language.Resources.RequestCode</th>
@@ -367,7 +367,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table">
+                        <table class="stripe hover display compact" id="tableAgent">
                             <thead>
                                 <tr>
                                     <th>@webLoyal.Resources.language.Resources.Position</th>
@@ -376,13 +376,16 @@
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Collected</th>
+                                    <th>@webLoyal.Resources.language.Resources.Pending</th>
+                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
                                     <th>@webLoyal.Resources.language.Resources.Percentage</th>
                                     <th>@webLoyal.Resources.language.Resources.Goal</th>
                                 </tr>
                             </thead>
+
+                            <tbody>
                             @foreach (var item in Model.CampanasAgentes.OrderBy(x => x.Fila))
                             {
-                                <tbody>
                                     <tr>
                                         <td><strong>@item.Fila</strong></td>
                                         <td> <a href="../Agents/detail/@item.CodigoAgenteVenta" class="btn btn-outline-tertiary"> @item.CodigoAgenteVenta </a> </td>
@@ -390,6 +393,7 @@
                                         <td>@item.Cantidad</td>
                                         <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@item.PrimaPendiente.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>
                                             @{
                                                 decimal objetivo = Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Individual").Select(x => x.RangoInicial).FirstOrDefault();
@@ -400,14 +404,17 @@
 
                                                 decimal primaActual = @item.PrimaCobrada;
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
+                                                decimal restante = 1 - porcentajeAvance;
                                             }
                                             <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
                                         </td>
+                                        <td> <span class="badge badge-pill bg-warning">@restante.ToString("P2")</span></td>
                                         <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Individual").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
 
                                     </tr>
-                                </tbody>
-                            }
+
+                                }
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -467,7 +474,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table">
+                        <table class="stripe hover display compact" id="tableAgency">
                             <thead>
                                 <tr>
                                     <th>@webLoyal.Resources.language.Resources.Position</th>
@@ -476,13 +483,17 @@
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Collected</th>
+                                    <th>@webLoyal.Resources.language.Resources.Pending</th>
+
+                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
                                     <th>@webLoyal.Resources.language.Resources.Percentage</th>
                                     <th>@webLoyal.Resources.language.Resources.Goal</th>
                                 </tr>
                             </thead>
+                            <tbody>
                             @foreach (var item in Model.CampanasAgencia.OrderBy(x => x.Fila))
                             {
-                                <tbody>
+                               
                                     <tr>
                                         <td><strong>@item.Fila</strong></td>
                                         <td> <a href="../Agents/detail/@item.CodigoAgencia" class="btn btn-outline-tertiary"> @item.CodigoAgencia </a> </td>
@@ -490,6 +501,7 @@
                                         <td>@item.Cantidad</td>
                                         <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@item.PrimaPendiente.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>
                                             @{
                                                 decimal objetivo = Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Doble").Select(x => x.RangoInicial).FirstOrDefault();
@@ -500,14 +512,17 @@
 
                                                 decimal primaActual = @item.PrimaCobrada;
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
+                                                decimal restante = 1 - porcentajeAvance;
                                             }                                   
                                             <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
                                         </td>
+                                        <td> <span class="badge badge-pill bg-warning">@restante.ToString("P2")</span></td>
                                         <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Doble").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
 
                                     </tr>
-                                </tbody>
+                              
                             }
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -568,7 +583,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table">
+                        <table class="stripe hover display compact" id="TableMGA">
                             <thead>
                                 <tr>
                                     <th>@webLoyal.Resources.language.Resources.Position</th>
@@ -577,13 +592,16 @@
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Collected</th>
+                                    <th>@webLoyal.Resources.language.Resources.Pending</th>
+                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
                                     <th>@webLoyal.Resources.language.Resources.Percentage</th>
                                     <th>@webLoyal.Resources.language.Resources.Goal</th>
                                 </tr>
                             </thead>
+                            <tbody>
                             @foreach (var item in Model.CampanasMga.OrderBy(x => x.Fila))
                             {
-                                <tbody>
+                              
                                     <tr>
                                         <td><strong>@item.Fila</strong></td>
                                         <td> <a href="../Agents/detail/@item.CodigoMGA" class="btn btn-outline-tertiary"> @item.CodigoMGA </a> </td>
@@ -591,6 +609,7 @@
                                         <td>@item.Cantidad</td>
                                         <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@item.PrimaPendiente.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>
                                             @{
                                                 decimal objetivo = Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana=="M").Select(x =>x.RangoInicial).FirstOrDefault();
@@ -600,13 +619,16 @@
                                                 }
                                                 decimal primaActual = @item.PrimaCobrada;
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
+                                                decimal restante = 1 - porcentajeAvance;
                                             }
                                             <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
                                         </td>
+                                        <td> <span class="badge badge-pill bg-warning">@restante.ToString("P2")</span></td>
                                         <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "M").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                     </tr>
-                                </tbody>
+                                
                             }
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -623,6 +645,7 @@
 </div>
 
 @section Scripts{
+
     <script>
         $(document).ready(function () {
             $("#enviarDatos").on("click", function () {
@@ -653,35 +676,11 @@
                 showConfirmButton: false
             });
         }
-        $("#Campanaatatablet").DataTable({
-            searchPanes: {viewTotal: true},
-            searchBuilder: true,
-            sort: true,
-            resizable: true,
-            responsive: true,
-            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
-            fixedColumns: true,
-            order: [[0, "desc"]],
-            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
-            buttons: [
-                {   extend: 'excelHtml5',
-                    autoFilter: true,
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.PoliciesDetailModel)Excel',
-                },
-                {   extend: 'pdfHtml5',
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.PoliciesDetailModel)Pdf',
-                },
-                {   extend: 'print',
-                    className: 'btn btn-outline-primary',
-                    title: '',
-                    customize: function (win) {
-                        $(win.document.body).addClass('white-bg');
-                        $(win.document.body).css('font-size', '10px');
-                    }
-                }
-            ]
-        });
+        initDataTable("tableAgent");
+        initDataTable("TableMGA");
+        initDataTable("tableAgency");
+        initDataTable("Campanaatatablet");
+      
     </script>
+
 }

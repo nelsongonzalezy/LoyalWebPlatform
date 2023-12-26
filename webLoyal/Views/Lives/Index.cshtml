@@ -113,7 +113,7 @@
                             <div class="card card-one mt-3">
                                 <div class="card-body p-3">
                                     <div class="table-responsive">
-                                        <table class="table table-borderless mb-0 dataTable-loading searchable">
+                    <table id="LivesIndex" class="stripe hover display compact">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
@@ -220,6 +220,8 @@
 @section Scripts{
 
    <script>
+        initDataTable("LivesIndex");
+
         document.addEventListener("DOMContentLoaded", function () {
             // Obtener los datos del modelo y deserializarlos correctamente
             var data = JSON.parse('@Html.Raw(Json.Serialize(Model.CifrasPorRangos))');
@@ -302,161 +304,6 @@
         });
 
 
-        //document.addEventListener("DOMContentLoaded", function () {
-        //    // Obtener los datos del modelo y deserializarlos correctamente
-        //    var data = JSON.parse('@Html.Raw(Json.Serialize(Model.CifrasPorRangos))');
-
-        //    // Crear un objeto para almacenar los datos agrupados
-        //    var groupedData = {};
-
-        //    // Iterar sobre los datos y agrupar por descripcionPoliza y grupoEdad
-        //    data.forEach(function (item) {
-        //        var grupoEdad = item.grupoEdad;
-        //        var descripcionPoliza = item.descripcionPoliza;
-        //        var porcentaje = item.porcentajeGrupoEdadSobreTotal.toFixed(2);
-
-        //        if (!groupedData[descripcionPoliza]) {
-        //            groupedData[descripcionPoliza] = {
-        //                name: descripcionPoliza,
-        //                data: {}
-        //            };
-        //        }
-
-        //        groupedData[descripcionPoliza].data[grupoEdad] = porcentaje;
-        //    });
-
-        //    // Convertir el objeto a un array de series
-        //    var seriesData = Object.values(groupedData);
-
-        //    // Obtener la lista de grupos de edad
-        //    var gruposEdad = Object.keys(data.reduce(function (acc, item) {
-        //        acc[item.grupoEdad] = true;
-        //        return acc;
-        //    }, {}));
-
-        //    // Configurar el gráfico
-        //    var options = {
-        //        chart: {
-        //            height: 350,
-        //            type: "bar",
-
-        //        },
-        //        dataLabels: {
-        //            enabled: true
-        //        },
-        //        colors: ['#3C5F8A', '#8DC341', '#30B6B5','#841A66'],
-        //        series: seriesData.map(function (item) {
-        //            return {
-        //                name: item.name,
-        //                data: gruposEdad.map(function (grupoEdad) {
-        //                    return item.data[grupoEdad] || 0;
-        //                })
-        //            };
-        //        }),
-        //        xaxis: {
-        //            categories: gruposEdad,
-        //        },
-        //        yaxis: {
-        //            axisTicks: {
-        //                show: true
-        //            },
-        //            axisBorder: {
-        //                show: true,
-        //            },
-        //            title: {
-        //                text: "Porcentaje"
-        //            }
-        //        },
-        //        tooltip: {
-        //            shared: false,
-        //            intersect: true,
-        //            x: {
-        //                show: false
-        //            }
-        //        },
-        //        legend: {
-        //            horizontalAlign: "left",
-        //            offsetX: 40
-        //        }
-        //    };
-
-        //    var chart = new ApexCharts(document.querySelector("#chartejemplos"), options);
-        //    chart.render();
-        //});
-
-
-
-
-        //document.addEventListener("DOMContentLoaded", function () {
-        //    // Obtener los datos del modelo y deserializarlos correctamente
-        //    var data = JSON.parse('@Html.Raw(Json.Serialize(Model.CifrasPorRangos))');
-        //    //debugger;
-        //    // Preparar los datos para el gráfico
-        //    var seriesData = data.map(item => item.porcentajeGrupoEdadSobreTotal.toFixed(2)); // Redondear a 2 decimales
-        //    var labels = data.map(item => `${item.grupoEdad}\ Vidas: ${item.totalPersonas}`);
-
-        //    // Configurar el gráfico
-        //    var options = {
-        //        chart: {
-        //            type: 'bar',
-        //            height: 350,
-        //            stacked: true
-        //        },
-        //        plotOptions: {
-        //            bar: {
-        //                dataLabels: {
-        //                    position: 'top', // Colocar etiquetas arriba de las barras
-        //                },
-        //            }
-        //        },
-        //        dataLabels: {
-        //            formatter: function (val) {
-        //                return `${val}%`; // Personalizar el formato de las etiquetas
-        //            },
-        //        },
-        //        series: [{
-        //            name: 'Porcentaje',
-        //            data: seriesData
-        //        }],
-        //        xaxis: {
-        //            categories: labels,
-        //        }
-        //    };
-
-        //    // Crear el gráfico
-        //    var chart = new ApexCharts(document.querySelector("#chartejemplos"), options);
-
-        //    // Renderizar el gráfico
-        //    chart.render();
-        //});
-
-
-        $("table").DataTable({
-            searchPanes: {
-                viewTotal: true
-            },
-            searchBuilder: true,
-            sort: true,
-            resizable: true,
-            responsive: true,
-            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
-            fixedColumns: true,
-            //order: [[0, "desc"]],
-            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
-            buttons: [
-                {
-                    extend: 'excelHtml5',
-                    autoFilter: true,
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.LivesService)Excel',
-                },
-                {
-                    extend: 'pdfHtml5',
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.LivesService)Pdf',
-                }
-            ]
-        });
 
     </script>
 }

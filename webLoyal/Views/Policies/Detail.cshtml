@@ -1,4 +1,5 @@
 ﻿@model core.Service.VwSolcitudConsultaModel
+@using webLoyal.Views.ViewComponents
 
 
         <div class="d-md-flex align-items-center justify-content-between mb-4">
@@ -23,17 +24,20 @@
     <div class="col-12">
         <div class="col-12">
             <nav class="navbar navbar-light bg-light">
-                <form class="container-fluid justify-content-start">
+                <div class="container-fluid justify-content-start">
                     <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.ChangeOfPlan</button>
                     <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.Modification</button>
                     <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.Cancellation</button>
                     <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.RecordNote</button>
                     <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.ModifyTaker</button>
                     <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.AddDocuments</button>
-                </form>
+
+                    
+                </div>
             </nav>
         </div>
     </div>  
+    <div id="myModalContainer"></div>
     <br />
         <div>
             <div class="row g-2 justify-content-between">
@@ -601,6 +605,21 @@
 
 @section Scripts{
     <script>
+            function abrirModal() {
+                // Valores de los parámetros
+                var parametro1 = 42;
+                var parametro2 = 99;
+
+                // Hacer la llamada al ViewComponent y cargar el contenido en el contenedor modal
+                $.get("/MyModal", { parametro1: parametro1, parametro2: parametro2 }, function (data) {
+                    // Insertar el contenido del modal en el contenedor modal
+                    $("#myModalContainer").html(data);
+
+                    // Mostrar el modal
+                    $('#myModal').modal('show');
+                });
+            }
+
         var firstTabEl = document.querySelector('#myTab li:last-child button')
         var firstTab = new bootstrap.Tab(firstTabEl)
 

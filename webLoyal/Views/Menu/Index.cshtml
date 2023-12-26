@@ -95,36 +95,70 @@
 
 
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibmVsc29uZ29uemFsZXp5IiwiYSI6ImNscHlzZW1obDB3b3Yya256ZG9ocDU4bWEifQ.SDxw9G4RdoN5om22Noqtag';
+    // mapboxgl.accessToken = 'pk.eyJ1IjoibmVsc29uZ29uemFsZXp5IiwiYSI6ImNscHlzZW1obDB3b3Yya256ZG9ocDU4bWEifQ.SDxw9G4RdoN5om22Noqtag';
 
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-66, 15],
-        zoom: 2
-    });
+    // var map = new mapboxgl.Map({
+    //     container: 'map',
+    //     style: 'mapbox://styles/mapbox/streets-v11',
+    //     center: [-66, 15],
+    //     zoom: 2
+    // });
 
-    var locations = @Html.Raw(Json.Serialize(Model));
-    var colorPalette = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
+    // var locations = @Html.Raw(Json.Serialize(Model));
+    // var colorPalette = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
 
-    // Agrega marcadores animados para cada ubicación desde el modelo de datos
-    locations.forEach(function (location, i) {
-        var markerText = `
-            <b>${location.descripcionPais}</b><br>
-            Cantidad de Registros: ${location.cantidadRegistros}<br>
-            Porcentaje sobre el Total: ${(location.porcentajePaisSobreTotal*100)}%<br>
-            Cobrado: $${location.cobrado}
-        `;
+    // // Agrega marcadores animados para cada ubicación desde el modelo de datos
+    // locations.forEach(function (location, i) {
+    //     var markerText = `
+    //         <b>${location.descripcionPais}</b><br>
+    //         Cantidad de Registros: ${location.cantidadRegistros}<br>
+    //         Porcentaje sobre el Total: ${(location.porcentajePaisSobreTotal*100)}%<br>
+    //         Cobrado: $${location.cobrado}
+    //     `;
 
-        // Agrega marcadores con animación de pulso y colores diferentes
-        var marker = new mapboxgl.Marker({ color: colorPalette[i % colorPalette.length] })
-            .setLngLat([parseFloat(location.longitud), parseFloat(location.latitud)])
-            .setPopup(new mapboxgl.Popup().setHTML(markerText))
-            .addTo(map);
+    //     // Agrega marcadores con animación de pulso y colores diferentes
+    //     var marker = new mapboxgl.Marker({ color: colorPalette[i % colorPalette.length] })
+    //         .setLngLat([parseFloat(location.longitud), parseFloat(location.latitud)])
+    //         .setPopup(new mapboxgl.Popup().setHTML(markerText))
+    //         .addTo(map);
 
-        // Agrega animación de pulso al marcador
-        marker.getElement().style.animation = 'pulse 1.5s infinite';
-    });
+    //     // Agrega animación de pulso al marcador
+    //     marker.getElement().style.animation = 'pulse 1.5s infinite';
+    // });
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoibmVsc29uZ29uemFsZXp5IiwiYSI6ImNscHlzZW1obDB3b3Yya256ZG9ocDU4bWEifQ.SDxw9G4RdoN5om22Noqtag';
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10', // Cambiado a un estilo de mapa minimalista en escala de grises
+            center: [-66, 15],
+            zoom: 2
+        });
+
+        var locations = @Html.Raw(Json.Serialize(Model));
+
+        // Color azul para los marcadores
+        var markerColor = '#264977';
+
+        // Agrega marcadores animados para cada ubicación desde el modelo de datos
+        locations.forEach(function (location, i) {
+            var markerText = `
+                <b>${location.descripcionPais}</b><br>
+                Cantidad de Registros: ${location.cantidadRegistros}<br>
+                Porcentaje sobre el Total: ${(location.porcentajePaisSobreTotal * 100)}%<br>
+                Cobrado: $${location.cobrado}
+            `;
+
+            // Agrega marcadores con animación de pulso y color azul
+            var marker = new mapboxgl.Marker({ color: markerColor })
+                .setLngLat([parseFloat(location.longitud), parseFloat(location.latitud)])
+                .setPopup(new mapboxgl.Popup().setHTML(markerText))
+                .addTo(map);
+
+            // Agrega animación de pulso al marcador
+            marker.getElement().style.animation = 'pulse 1.5s infinite';
+        });
+
 </script>
 
 <!-- ... Otras partes de tu vista ... -->

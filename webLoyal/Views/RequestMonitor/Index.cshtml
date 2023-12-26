@@ -26,7 +26,7 @@
                    <div class="card">
                        <div class="card-body">
                            <div class="table-responsive">
-                               <table>
+                            <table id="monitor" class="stripe hover display compact">
                                    <thead>
                                         <th>#</th>
                                         <th>Agente</th>
@@ -92,41 +92,7 @@
 
 @section Scripts{
     <script>
-        //// Función para mostrar una alerta estilo SweetAlert
-        //function showSweetAlert() {
-        //    Swal.fire({
-        //        position: 'top-end',
-        //        text: "Refrescando...",
-        //        icon: "info",
-        //        timer: 2000, // 2 segundos
-        //        timerProgressBar: true,
-        //        showConfirmButton: false
-        //    }).then(() => {
-        //        location.reload(); // Refrescar la página después de cerrar la alerta
-        //    });
-        //}
-        //function startInterval() {
-        //    let countdown = 1;
-
-        //    const interval = setInterval(() => {
-        //        Swal.fire({
-        //            title: `Refrescando en ${countdown} segundos...`,
-        //            icon: "info",
-        //            timer: 1000, // 1 segundo
-        //            timerProgressBar: true,
-        //            showConfirmButton: false,
-        //            position: 'top'
-        //        });
-
-        //        countdown--;
-
-        //        if (countdown < 0) {
-        //            clearInterval(interval);
-        //            showSweetAlert(); // Ejecutar la función después del conteo regresivo
-        //        }
-        //    }, 1000); // 1 segundo
-        //}
-
+        initDataTable("monitor");
 
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -171,39 +137,5 @@
                 }
             }, 50000); // 1 segundo
         }
-
-
-
-
-
-        $("table").DataTable({
-            searchPanes: {
-                viewTotal: true
-            },
-            searchBuilder: true,
-            sort: true,
-            resizable: true,
-            responsive: true,
-            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
-            fixedColumns: true,
-            order: [[0, "desc"]],
-            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
-            buttons: [
-                {
-                    extend: 'excelHtml5',
-                    autoFilter: true,
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.ResponseRequestCifraSolicitudEstadoModel)Excel',
-                },
-                {
-                    extend: 'pdfHtml5',
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.ResponseRequestCifraSolicitudEstadoModel)Pdf',
-                }
-            ]
-        });
-
-
-
     </script>
     }

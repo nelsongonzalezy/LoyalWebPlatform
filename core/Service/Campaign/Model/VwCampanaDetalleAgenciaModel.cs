@@ -10,5 +10,6 @@
         public Decimal Prima { get; set; }
         public Decimal PrimaReal { get; set; }
         public Decimal PrimaCobrada { get; set; }
+        public Decimal PrimaPendiente { get; set; }
     }
 }

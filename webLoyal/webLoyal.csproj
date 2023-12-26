@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Folder Include="Views\NewFolder\" />
+    <Folder Include="wwwroot\assets\app\Campaign\" />
   </ItemGroup>
 
 </Project>

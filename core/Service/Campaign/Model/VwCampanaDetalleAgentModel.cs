@@ -11,5 +11,6 @@
         public int Cantidad { get; set; }
         public Decimal Prima { get; set; }
         public Decimal PrimaCobrada { get; set; }
+        public Decimal PrimaPendiente { get; set; }
     }
 }

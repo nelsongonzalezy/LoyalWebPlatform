@@ -1,8 +1,5 @@
 using core;
-using core.Service;
 using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
-using Microsoft.Extensions.Options;
 using System.Globalization;
 using webLoyal.Authorization;
 
@@ -44,6 +41,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSession();
 app.UseRouting();
+
 
 app.UseAuthorization();
 
