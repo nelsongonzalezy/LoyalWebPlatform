@@ -1581,4 +1581,7 @@
   <data name="Schedule" xml:space="preserve">
     <value>Schedule</value>
   </data>
+  <data name="Remaining" xml:space="preserve">
+    <value>Remaining</value>
+  </data>
 </root>

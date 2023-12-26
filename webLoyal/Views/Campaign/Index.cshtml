@@ -377,8 +377,8 @@
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Collected</th>
                                     <th>@webLoyal.Resources.language.Resources.Pending</th>
-                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
-                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
+                                    <th>@webLoyal.Resources.language.Resources.Progress</th>
+                                    <th>@webLoyal.Resources.language.Resources.Remaining</th>
                                     <th>@webLoyal.Resources.language.Resources.Goal</th>
                                 </tr>
                             </thead>
@@ -406,7 +406,15 @@
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
                                                 decimal restante = 1 - porcentajeAvance;
                                             }
-                                            <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
+                                            @if (porcentajeAvance>1)
+                                            {
+                                                <span class="badge badge-pill bg-success">@porcentajeAvance.ToString("P2")</span>
+                                            }else
+                                            {
+                                                <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
+                                            }
+
+                                            
                                         </td>
                                         <td> <span class="badge badge-pill bg-warning">@restante.ToString("P2")</span></td>
                                         <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Individual").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
@@ -513,8 +521,15 @@
                                                 decimal primaActual = @item.PrimaCobrada;
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
                                                 decimal restante = 1 - porcentajeAvance;
-                                            }                                   
-                                            <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
+                                            }
+                                            @if (porcentajeAvance > 1)
+                                            {
+                                                <span class="badge badge-pill bg-success">@porcentajeAvance.ToString("P2")</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
+                                            }
                                         </td>
                                         <td> <span class="badge badge-pill bg-warning">@restante.ToString("P2")</span></td>
                                         <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Doble").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
@@ -621,7 +636,14 @@
                                                 decimal porcentajeAvance = (primaActual / objetivo) * 1;
                                                 decimal restante = 1 - porcentajeAvance;
                                             }
-                                            <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
+                                            @if (porcentajeAvance > 1)
+                                            {
+                                                <span class="badge badge-pill bg-success">@porcentajeAvance.ToString("P2")</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
+                                            }
                                         </td>
                                         <td> <span class="badge badge-pill bg-warning">@restante.ToString("P2")</span></td>
                                         <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "M").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>

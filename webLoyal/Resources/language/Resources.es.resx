@@ -1578,4 +1578,7 @@
   <data name="Schedule" xml:space="preserve">
     <value>Cronograma</value>
   </data>
+  <data name="Remaining" xml:space="preserve">
+    <value>Restante</value>
+  </data>
 </root>
