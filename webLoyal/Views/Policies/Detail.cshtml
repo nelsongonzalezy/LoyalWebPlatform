@@ -14,6 +14,13 @@
 
         </div>
 
+<div id="miModal" class="modal fade" tabindex="-1" id="modalDetalle">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+     <div class="modal-content">
+            <div id="modalContenido"></div>
+            </div>
+    </div>
+</div>
 
     <div>
     <div class="col-12">
@@ -25,14 +32,13 @@
         <div class="col-12">
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid justify-content-start">
-                    <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.ChangeOfPlan</button>
-                    <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.Modification</button>
-                    <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.Cancellation</button>
-                    <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.RecordNote</button>
-                    <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.ModifyTaker</button>
-                    <button class="btn btn-sm btn-outline-secondary me-2" type="button">@webLoyal.Resources.language.Resources.AddDocuments</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="ChangeOfPlan">@webLoyal.Resources.language.Resources.ChangeOfPlan</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="Modification">@webLoyal.Resources.language.Resources.Modification</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="Cancellation">@webLoyal.Resources.language.Resources.Cancellation</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="RecordNote">@webLoyal.Resources.language.Resources.RecordNote</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="ModifyTaker">@webLoyal.Resources.language.Resources.ModifyTaker</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="AddDocuments">@webLoyal.Resources.language.Resources.AddDocuments</button>
 
-                    
                 </div>
             </nav>
         </div>
@@ -367,16 +373,18 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <table class="table table-hover table-bordered table-responsive">
+                                    <div class="card">
+                                        <div class="card-body">
+                                    <table id="Documentosdetails" class="table table-hover table-bordered table-responsive">
                                         <thead>
                                             <tr>
                                                 <th>Tipo Documento</th>
                                                 <th>Origen</th>
-                                                
+
                                                 <th>Descripcion</th>
                                                 <th>Nombre Documento</th>
                                                 <th>Fecha Registro</th>
-                                          
+
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -394,21 +402,26 @@
                                                     </td>
                                                 </tr>
 
-                                                }
-        
+                                            }
+
                                         </tbody>
                                     </table>
+                                        </div>
+
+                                    </div>
+
 
                                 </div>
                                 <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                                    @foreach (var mensajes in Model.VwNotasDbObject.OrderBy(x=>x.FechaRegistroNota) )
+                                    <div class="card"><div class="card-body">
+                                    @foreach (var mensajes in Model.VwNotasDbObject.OrderBy(x => x.FechaRegistroNota))
                                     {
                                         <div class="">
                                             <div id="chatBodyContent" class="chat-body-content ps ps--active-y">
                                                 <div class="divider"><span>@mensajes.FechaRegistroNota.ToString("MM/dd/yyyy")</span></div>
 
                                                 <div class="msg-item">
-                                                    
+
                                                     <div class="msg-body">
                                                         <div class="row gx-3 row-cols-auto">
                                                             <div class="col"><div class="msg-bubble">@mensajes.Nota <span>@mensajes.NombreUsuario / @mensajes.DescripcionTipoNota</span></div></div>
@@ -431,9 +444,13 @@
                                         </div>
                                     }
 
+                                    </div></div>
+
+
                                 </div>
                                 <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                                    <table class="table table-hover table-bordered table-responsive">
+                                    <div class="card"><div class="card-body">
+                                    <table id="coberturas" class="table table-hover table-bordered table-responsive">
                                         <thead>
                                             <tr>
                                                 <th>Seccion Cobertura condicionado</th>
@@ -459,8 +476,11 @@
 
                                         </tbody>
                                     </table>
+
+                                    </div></div>
+
                                 </div>
-                                <div class="tab-pane" id="cronograma" role="tabpanel" aria-labelledby="cronograma-tab">
+@*                                 <div class="tab-pane" id="cronograma" role="tabpanel" aria-labelledby="cronograma-tab">
 
                                 <div class="accordion" id="accordionExample">
                                     @foreach (var Cronograma in Model.VwCronogramaPagosDbObject.OrderByDescending(x => x.CodigoCronogramaPagos))
@@ -518,52 +538,59 @@
                                         </div>
 
                                     }
-                                </div>
+                                </div> *@
                             <div class="tab-pane" id="cronograma" role="tabpanel" aria-labelledby="cronograma-tab">
 
                                 <div class="accordion" id="accordionExample">
-                                    @foreach (var Cronograma in Model.VwCronogramaPagosDbObject.OrderByDescending(x => x.CodigoCronogramaPagos))
+                                    @foreach (var grupoCertificado in Model.VwCronogramaPagosDbObject.OrderByDescending(x => x.CodigoCronogramaPagos)
+                                    .GroupBy(x => x.CodigoCertificado))
                                     {
+                                        var codigoCertificado = grupoCertificado.Key;
+                                        var cronogramasCertificado = grupoCertificado.OrderByDescending(x => x.CodigoCronogramaPagos);
+
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="header-@Cronograma.CodigoCertificado">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@Cronograma.CodigoCertificado" aria-expanded="true" aria-controls="collapse-@Cronograma.CodigoCertificado">
+                                            <h2 class="accordion-header" id="header-@codigoCertificado">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@codigoCertificado" aria-expanded="true" aria-controls="collapse-@codigoCertificado">
                                                     <div class="card-header">
                                                     </div>
-                                                    @Cronograma.DescripcionEstadoCertificado
+                                                    @cronogramasCertificado.First().DescripcionEstadoCertificado
                                                 </button>
                                             </h2>
-
                                         </div>
-                                        <div id="collapse-@Cronograma.CodigoCertificado" class="accordion-collapse collapse" aria-labelledby="header-@Cronograma.CodigoCertificado" data-bs-parent="#header-@Cronograma.CodigoCertificado">
+
+                                        <div id="collapse-@codigoCertificado" class="accordion-collapse collapse" aria-labelledby="header-@codigoCertificado" data-bs-parent="#header-@codigoCertificado">
                                             <div class="accordion-body">
                                                 <div class="mb-1 row table-responsive">
-                                                    <table class="table table-striped table-hover">
+                                                    <table id="CronogramaPagosLista" class="table table-striped table-hover">
                                                         <thead>
                                                             <tr>
-                                                                <th>Numero Cuota</th>
-                                                                <th>DescripcionEstadoCuota</th>
-                                                                <th>ValorCuota</th>
-                                                                <th>CostoAdministrativo</th>
-                                                                <th>ValorPrima</th>
-                                                                <th>ValorIntereses</th>
-                                                                <th>ValorSaldoCuota</th>
-                                                                <th>FechaCobro</th>
-                                                                <th>FechaPago</th>
+                                                            <th>@webLoyal.Resources.language.Resources.Quota</th>
+                                                            <th>@webLoyal.Resources.language.Resources.Description</th>
+                                                            <th>@webLoyal.Resources.language.Resources.QuotaValue</th>
+                                                            <th>@webLoyal.Resources.language.Resources.AdministrativeCost</th>
+                                                            <th>@webLoyal.Resources.language.Resources.Premiums</th>
+                                                            <th>  @webLoyal.Resources.language.Resources.ValueInterest</th>
+                                                            <th>@webLoyal.Resources.language.Resources.QuotaValue</th>
+                                                            <th>@webLoyal.Resources.language.Resources.DateEffectiveness</th>
+                                                            <th>@webLoyal.Resources.language.Resources.PayDay</th>
+                                                            
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>@Cronograma.NumeroCuota</td>
-                                                                <td>@Cronograma.DescripcionEstadoCuota</td>
-                                                                <td>@Cronograma.ValorCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                                                <td>@Cronograma.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                                                <td>@Cronograma.ValorPrima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                                                <td>@Cronograma.ValorIntereses.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                                                <td>@Cronograma.ValorSaldoCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                                                <td>@Cronograma.FechaCobro.ToString("MM/dd/yyyy")</td>
-                                                                <td>@Cronograma.FechaPago.ToString("MM/dd/yyyy")</td>
-
-                                                            </tr>
+                                                            @foreach (var cronograma in cronogramasCertificado.Where(x => x.CodigoCertificado == codigoCertificado))
+                                                            {
+                                                                <tr>
+                                                                    <td>@cronograma.NumeroCuota</td>
+                                                                    <td>@cronograma.DescripcionEstadoCuota</td>
+                                                                    <td>@cronograma.ValorCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.ValorPrima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.ValorIntereses.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.ValorSaldoCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.FechaCobro.ToString("MM/dd/yyyy")</td>
+                                                                    <td>@cronograma.FechaPago.ToString("MM/dd/yyyy")</td>
+                                                                </tr>
+                                                            }
                                                         </tbody>
                                                         <tfoot>
                                                         </tfoot>
@@ -571,13 +598,18 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     }
+
                                 </div>
                             </div>
                             </div>
                                 <div class="tab-pane" id="historial" role="tabpanel" aria-labelledby="historial-tab">
-                                    <table class="table table-hover table-bordered table-responsive">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            
+                                        </div>
+                                    </div>
+                                    @* <table class="table table-hover table-bordered table-responsive">
                                         <thead>
                                             <tr>
                                                 <th>Tipo Documento</th>
@@ -593,9 +625,9 @@
                                     
 
                                         </tbody>
-                                    </table>
+                                    </table>*@
 
-                                </div>
+                                </div> 
 
                             </div>
                         </div>
@@ -605,20 +637,35 @@
 
 @section Scripts{
     <script>
-            function abrirModal() {
-                // Valores de los parámetros
-                var parametro1 = 42;
-                var parametro2 = 99;
+        initDataTable("coberturas");
+        initDataTable("Documentosdetails");
 
-                // Hacer la llamada al ViewComponent y cargar el contenido en el contenedor modal
-                $.get("/MyModal", { parametro1: parametro1, parametro2: parametro2 }, function (data) {
-                    // Insertar el contenido del modal en el contenedor modal
-                    $("#myModalContainer").html(data);
+            $(document).on("click", ".mostrar-modal", function (e) {
+                e.preventDefault();
 
-                    // Mostrar el modal
-                    $('#myModal').modal('show');
+                // Obtener los datos del botón clicado
+                var controller = $(this).data("controller");
+                var action = $(this).data("action");
+
+                // Construir la URL de la acción utilizando los datos del botón
+                var url = '@Url.Action("a", "c")'; // Deja los parámetros vacíos por ahora
+
+                // Reemplaza los parámetros con los valores correctos
+                url = url.replace("c", controller).replace("a", action);
+                console.log(url)
+                // Hacer la petición al controlador para obtener la vista parcial
+                $.get(url, function (data) {
+                    // Colocar la vista parcial dentro del contenedor de la modal
+                    $("#modalContenido").html(data);
+
+                    // Mostrar la modal
+                    $("#miModal").modal('show');
                 });
-            }
+            });
+
+
+
+
 
         var firstTabEl = document.querySelector('#myTab li:last-child button')
         var firstTab = new bootstrap.Tab(firstTabEl)

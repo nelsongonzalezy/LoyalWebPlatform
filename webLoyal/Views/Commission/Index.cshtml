@@ -15,6 +15,13 @@
     </div>
 
 </div>
+<div id="miModal" class="modal fade" tabindex="-1" id="modalDetalle">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div id="modalContenido"></div>
+        </div>
+    </div>
+</div>
 <div class="progress w-1"></div>
 <div class="row g-3">
 
@@ -123,12 +130,11 @@
                                                 <i class="ri-function-fill"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                                <li><a class="dropdown-item" href="#">Envio de Estado de cuenta por correo</a></li>
-                                                <li><a class="dropdown-item" href="#">Enviar a Acumulados</a></li>
-                                                <li><a class="dropdown-item" href="#">Cancelar comisiones</a></li>
-                                                <li><a class="dropdown-item" href="#">Regeneracion de Estados de cuenta</a></li>
-                                                <li><a href="@CicloComisionesAgente.CodigoEstadoCuenta" class="dropdown-item" href="#">Ver Estado de Cuentas</a></li>
-                                    
+                                                <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Envio de Estado de cuenta por correo</a></li>
+                                                <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Enviar a Acumulados</a></li>
+                                                <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Cancelar comisiones</a></li>
+                                                <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Regeneracion de Estados de cuenta</a></li>
+                                                <li><a href="@CicloComisionesAgente.CodigoEstadoCuenta" class="dropdown-item mostrar-modal">Ver Estado de Cuentas</a></li>
                                             </ul>
                                         </div>
                                     </td>
@@ -237,6 +243,28 @@
     <script>
         initDataTable("commtable");
 
+        $(document).on("click", ".mostrar-modal", function (e) {
+            e.preventDefault();
+
+            // Obtener los datos del botón clicado
+            var controller = $(this).data("controller");
+            var action = $(this).data("action");
+
+            // Construir la URL de la acción utilizando los datos del botón
+            var url = '@Url.Action("a", "c")'; // Deja los parámetros vacíos por ahora
+
+            // Reemplaza los parámetros con los valores correctos
+            url = url.replace("c", controller).replace("a", action);
+            console.log(url)
+            // Hacer la petición al controlador para obtener la vista parcial
+            $.get(url, function (data) {
+                // Colocar la vista parcial dentro del contenedor de la modal
+                $("#modalContenido").html(data);
+
+                // Mostrar la modal
+                $("#miModal").modal('show');
+            });
+        });
 
         $('#CodigoOrigen').select2({
             placeholder: 'Choose one'

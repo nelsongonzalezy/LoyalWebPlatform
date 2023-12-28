@@ -40,5 +40,10 @@ namespace webLoyal.Controllers
                 x.FormaPago
             }));
         }
+        public IActionResult Cancellation()
+        {
+            return PartialView("_Cancellation");
+
+        }
     }
 }

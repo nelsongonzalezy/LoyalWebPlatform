@@ -29,5 +29,35 @@ namespace webLoyal.Controllers
             return View(x.ToList());
         }
 
+        public IActionResult Cancellation()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult ChangeOfPlan()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult Modification()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult RecordNote()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult ModifyTaker()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult AddDocuments()
+        {
+            return PartialView("_Cancellation");
+        
+        }
     }
 }
