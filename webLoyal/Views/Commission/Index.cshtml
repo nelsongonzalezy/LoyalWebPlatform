@@ -43,8 +43,6 @@
             <div class="card-body">
                 <label class="card-title fs-sm fw-medium mb-1">@webLoyal.Resources.language.Resources.Policies</label>
                 <h3 class="card-value mb-1"><i class="ri-folder-3-line"></i>   @Model.CicloComisionesAgente.Where(x => x.CodigoEstadoCicloComisionesAgente != "03").Sum(z => z.CantidadPolizas)</h3>
-@*                 <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeMujeres.ToString("P2") </span></small> *@
-
             </div><!-- card-body -->
         </div><!-- card-one -->
     </div>    
@@ -53,8 +51,6 @@
             <div class="card-body">
                 <label class="card-title fs-sm fw-medium mb-1">@webLoyal.Resources.language.Resources.Agent</label>
                 <h3 class="card-value mb-1"><i class="ri-user-line"></i>   @Model.CicloComisionesAgente.Where(x => x.CodigoEstadoCicloComisionesAgente != "03" && x.TotalComisiones > 0 && x.TotalNuevoNegocio >= 0 && x.TotalRenovaciones >= 0).Count()</h3>
-@*                 <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeMujeres.ToString("P2") </span></small> *@
-
             </div><!-- card-body -->
         </div><!-- card-one -->
     </div>
@@ -65,8 +61,6 @@
                 <h3 class="card-value mb-1">
                     <i class="ri-menu-fold-line"></i>     @Model.CicloComisionesAgente.Where(x => x.CodigoEstadoCicloComisionesAgente!= "03" && x.TotalNuevoNegocio>0).Sum(z => z.TotalNuevoNegocio).ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
                 </h3>
-@*                 <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeMujeres.ToString("P2") </span></small> *@
-
             </div><!-- card-body -->
         </div><!-- card-one -->
     </div>
@@ -75,8 +69,6 @@
             <div class="card-body">
                 <label class="card-title fs-sm fw-medium mb-1">@webLoyal.Resources.language.Resources.Renewal</label>
                 <h3 class="card-value mb-1"><i class="ri-menu-unfold-line"></i>     @Model.CicloComisionesAgente.Where(x => x.CodigoEstadoCicloComisionesAgente != "03" && x.TotalRenovaciones > 0).Sum(z => z.TotalRenovaciones).ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h3>
-                @* <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeMujeres.ToString("P2") </span></small> *@
-
             </div><!-- card-body -->
         </div><!-- card-one -->
     </div>
@@ -85,8 +77,6 @@
             <div class="card-body">
                 <label class="card-title fs-sm fw-medium mb-1">@webLoyal.Resources.language.Resources.TotalIncome</label>
                 <h3 class="card-value mb-1"><i class="ri-thumb-up-line"></i>    @Model.CicloComisionesAgente.Where(x => x.CodigoEstadoCicloComisionesAgente != "03" && x.TotalNuevoNegocio >= 0 && x.TotalRenovaciones >= 0).Sum(z => z.TotalNuevoNegocio + z.TotalRenovaciones).ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h3>
-  @*               <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeMujeres.ToString("P2") </span></small> *@
-
             </div><!-- card-body -->
         </div><!-- card-one -->
     </div>

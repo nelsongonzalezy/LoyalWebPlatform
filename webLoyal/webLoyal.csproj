@@ -45,7 +45,18 @@
 
   <ItemGroup>
     <Folder Include="Views\NewFolder\" />
-    <Folder Include="wwwroot\assets\app\Campaign\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\assets\app\Campaign\CampaignTable.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\assets\app\Campaign\StandarTable.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\js\StandarTable.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
