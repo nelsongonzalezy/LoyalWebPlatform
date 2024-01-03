@@ -1,0 +1,708 @@
+﻿@model core.Service.CampanaModel
+
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+        <ol class="breadcrumb fs-sm mb-1">
+            <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item active"><a href="~/campaign/index">@webLoyal.Resources.language.Resources.Campaign</a></li>
+        </ol>
+        <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Campaigns @Model.DtCampanas.DescripcionCampana</h4>
+    </div>
+    <div class="d-flex gap-2 mt-3 mt-md-0 align-items-end">
+        <div class="col-6">
+            <input type="date" id="FechaInicio" asp-for="@Model.DtCampanas.FechaInicio" class="form-control hasDatepicker" placeholder="From">
+        </div>
+        <div class="col-6">
+            <input type="date" id="FechaFin" asp-for="@Model.DtCampanas.FechaFin" class="form-control hasDatepicker col-1" placeholder="To">
+        </div>        
+    </div>
+    <div class="d-flex gap-2 mt-3 mt-md-0">
+        <button id="enviarDatos" class="btn btn-primary d-flex align-items-center gap-2">@webLoyal.Resources.language.Resources.UpdateData</button>
+        <div class="btn-group">
+            <a href="~/campaign/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2">@webLoyal.Resources.language.Resources.CreateNewCampaign</a>
+            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="~/campaign/List">Listado</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row g-3">
+    <div class="row">
+        <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body p-3">
+                    <div class="row g-3">
+                        <div class="col-sm-8 col-md-9 col-xl-8 d-flex flex-column">
+                            <h6 class="fw-semibold text-dark lh-5">Tiempo de Campaña</h6>
+                            <p class="text-secondary">  @Model.mensaje<span class="d-xl-none d-xxl-inline"> </span>...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="row">
+        <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        @if (Model.DtDetalleCampanas.Any(x => x.FormaAnual))
+                        {
+                            <input id="FormaAnual" class="form-check-input" type="checkbox" checked>
+                        }
+                        else
+                        {
+                            <input id="FormaAnual" class="form-check-input" type="checkbox">
+                        }
+                        <label class="form-check-label" for="FormaAnual">@webLoyal.Resources.language.Resources.AnnualPaymentMethod</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        @if (Model.DtDetalleCampanas.Any(x => x.FormaSemestral))
+                        {
+                            <input id="FormaSemestral" class="form-check-input" type="checkbox" checked>
+                        }
+                        else
+                        {
+                            <input id="FormaSemestral" class="form-check-input" type="checkbox" >
+
+                        }
+                        <label class="form-check-label" for="FormaSemestral">@webLoyal.Resources.language.Resources.SemiannualPaymentMethod</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        @if (Model.DtDetalleCampanas.Any(x => x.FormaTrimestral))
+                        {
+                            <input id="FormaTrimestral" class="form-check-input" type="checkbox" checked>
+                        }
+                        else
+                        {
+                            <input id="FormaTrimestral" class="form-check-input" type="checkbox">
+                        }
+                        <label class="form-check-label" for="FormaTrimestral">@webLoyal.Resources.language.Resources.QuarterlyPaymentMethod</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-xl-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-check form-switch">
+                        @if (Model.DtDetalleCampanas.Any(x => x.FormaMensual))
+                        {
+                            <input id="FormaMensual" class="form-check-input" type="checkbox" checked>
+                        }
+                        else
+                        {
+                            <input id="FormaMensual" class="form-check-input" type="checkbox">
+                        }
+                        <label class="form-check-label" for="FormaMensual">@webLoyal.Resources.language.Resources.MonthlyPaymentMethod</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row g-3">
+    <div class="row">
+        @foreach (var producto in Model.CampanasProductos.OrderBy(x=>x.CodigoPoliza))
+        {
+            var estilo = string.Empty;
+            switch (producto.CodigoPoliza)
+            {
+                case 1:
+                    estilo = "background-color:rgb(60,95,138)";
+                    break;
+                case 2:
+                    estilo = "background-color:rgb(141,195,65)";
+                    break;
+                case 3:
+                    estilo = "background-color:rgb(48,182,181)";
+                    break;
+                case 4:
+                    estilo = "background-color:rgb(132,26,102)";
+                    break;
+            }
+
+            <div class="col-6 col-xl-3">
+                <div class="music-player mt-4 mt-xxl-5" style="@estilo">
+                    <div class="media-music">
+                        @switch (producto.CodigoPoliza)
+                        {
+                            case 1:
+                                <a href="background-color:rgb(60,95,138)" class="media-img"><img src="~/assets/img/beyond.png" alt=""></a>
+                                break;
+                            case 2:
+                                <a href = "background-color:rgb(141,195,65)" class="media-img"><img src = "~/assets/img/privilege.png" alt=""></a>
+                                break;
+                            case 3:
+                                <a href="background-color:rgb(48,182,181)" class="media-img"><img src="~/assets/img/liberty.png" alt=""></a>
+                                break;
+                            case 4:
+                                <a href="background-color:rgb(132,26,102)" class="media-img"><img src="~/assets/img/legacy.png" alt=""></a>
+                                break;
+                        }
+                    </div>
+                    <div class="media-body">
+                        <h5><a href="" class="text-white">@producto.DescripcionPoliza</a></h5>
+                        <h6 class="card-value text-white">@webLoyal.Resources.language.Resources.Bonus: @producto.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
+                        <h6 class="card-value text-white">@webLoyal.Resources.language.Resources.Policies: @producto.CantidadRegistros</h6>
+                        <h6 class="d-block fs-xs text-success">
+                        <span class="badge badge-pill bg-light">@producto.PorcentajeCantidadRegistros.ToString("P2")</span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<br />
+<div class="row g-3">
+
+    @foreach (var estados in Model.CampanasEstados.OrderBy(x=>x.CodigoEstadoCertificado))
+    {
+        <div class="col-2 col-xl-2">
+            <div class="card card-one">
+                <div class="card-header"><h5 class="card-title mb-1">@estados.DescripcionEstadoCertificado</h5></div>
+                <div class="card-body">
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Bonus @estados.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Policies @estados.CantidadRegistros</h6>
+                    <h6 class="card-value mb-1">C.ADM @estados.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</h6>
+                </div>
+                <div class="card-footer">
+                    <h6 class="card-value mb-1">@webLoyal.Resources.language.Resources.Representation:&nbsp<span class="d-block fs-xs text-success">@estados.PorcentajeCantidadRegistros.ToString("P2")</span></h6>
+                </div>
+            </div>
+        </div>
+    }
+    
+</div>
+<br />
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="true"><span class="badge-dot bg-primary"></span>&nbsp @webLoyal.Resources.language.Resources.TopAgents</button>
+       @foreach (var item in Model.DtDetalleCampanas.Where(x=> x.TipoAgenteCampana=="M"))
+        {
+            <button class="nav-link" id="nav-Agency-tab" data-bs-toggle="tab" data-bs-target="#nav-Agency" type="button" role="tab" aria-controls="nav-Agency" aria-selected="false"><span class="badge-dot bg-primary"></span>&nbsp @webLoyal.Resources.language.Resources.TopAgency</button>
+            <button class="nav-link" id="nav-Master-tab" data-bs-toggle="tab" data-bs-target="#nav-Master" type="button" role="tab" aria-controls="nav-Master" aria-selected="false"><span class="badge-dot bg-primary"></span>&nbsp @webLoyal.Resources.language.Resources.TopMaster</button>
+
+        }
+        <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false"><span class="badge-dot bg-primary"></span>&nbsp @webLoyal.Resources.language.Resources.Policies</button>
+     </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="col-lg-12 row g-3">
+
+            <div class="card card-one mt-3">
+                <div class="card-body p-3">
+                    <div class="table-responsive">
+                        <table id="Campanaatatablet" class="stripe hover display compact">
+                            <thead>
+                                <tr>
+                                    <th>@webLoyal.Resources.language.Resources.RequestCode</th>
+                                    <td>@webLoyal.Resources.language.Resources.CertificateCode</td>
+                                    <td>@webLoyal.Resources.language.Resources.PolicyNumber </td>
+                                    <td>@webLoyal.Resources.language.Resources.OwnerCode</td>
+                                    <td>@webLoyal.Resources.language.Resources.OwnerName</td>
+                                    <td>@webLoyal.Resources.language.Resources.NumberInsured</td>
+                                    <td>@webLoyal.Resources.language.Resources.CountryDescription</td>
+                                    <td>@webLoyal.Resources.language.Resources.PolicyCode</td>
+                                    <td>@webLoyal.Resources.language.Resources.DescriptionPolicy</td>
+                                    <td>@webLoyal.Resources.language.Resources.DeductiblesText</td>
+                                    <td>@webLoyal.Resources.language.Resources.DateEffectiveness</td>
+                                    <td>@webLoyal.Resources.language.Resources.DescriptionFormPayment</td>
+                                    <td>@webLoyal.Resources.language.Resources.DateCollection</td>
+                                    <td>@webLoyal.Resources.language.Resources.Bonus</td>
+                                    <td>@webLoyal.Resources.language.Resources.AdministrativeCost</td>
+                                    <td>@webLoyal.Resources.language.Resources.CommissionablePremium</td>
+                                    <td>@webLoyal.Resources.language.Resources.QuotaValue</td>
+                                    <td>@webLoyal.Resources.language.Resources.ValueInterest</td>
+                                    <td>@webLoyal.Resources.language.Resources.Restrictions</td>
+                                    <td>@webLoyal.Resources.language.Resources.DescriptionStateCertificate</td>
+                                    <td>@webLoyal.Resources.language.Resources.DescriptionReasonCancellation</td>
+                                    <td>@webLoyal.Resources.language.Resources.DescriptionTypeSale</td>
+                                    <td>@webLoyal.Resources.language.Resources.AutomaticPayment</td>
+                                    <td>@webLoyal.Resources.language.Resources.AccidentRate</td>
+                                    <td>@webLoyal.Resources.language.Resources.PolicyGroup</td>
+                                    <td>@webLoyal.Resources.language.Resources.PolicyDependent</td>
+                                    <td>@webLoyal.Resources.language.Resources.Notes</td>
+                                    <td>@webLoyal.Resources.language.Resources.CodeAgentSale</td>
+                                    <td>@webLoyal.Resources.language.Resources.PolicyGroup</td>
+                                    <td>@webLoyal.Resources.language.Resources.NameAgentSale</td>
+                                    <td>@webLoyal.Resources.language.Resources.NameSubAgent</td>
+                                    <td>@webLoyal.Resources.language.Resources.SubAgentCode</td>
+                                    <td>@webLoyal.Resources.language.Resources.AgentCode</td>
+                                    <td>@webLoyal.Resources.language.Resources.AgencyName</td>
+                                    <td>@webLoyal.Resources.language.Resources.AgencyCode</td>
+                                    <td>@webLoyal.Resources.language.Resources.CodeStateQuota</td>
+                                    <td>@webLoyal.Resources.language.Resources.CertificateStateCode</td>
+                                    <td>@webLoyal.Resources.language.Resources.PayDay</td>
+                                    <td>@webLoyal.Resources.language.Resources.CellPhone</td>
+                                    <td>@webLoyal.Resources.language.Resources.Email</td>
+                                    <td>@webLoyal.Resources.language.Resources.CodeMGA</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var campanas in Model.Campanas.OrderByDescending(x => x.CodigoCertificado))
+                                {
+                                    <tr>
+                                        <td> @campanas.CodigoSolicitud </td>
+                                        <td> @campanas.CodigoCertificado </td>
+                                        <td><a href="~/policies/detail/@campanas.CodigoSolicitud"> @campanas.NumeroPoliza </a> </td>
+                                        <td> @campanas.CodigoTitular </td>
+                                        <td> @campanas.NombreTitular </td>
+                                        <td> @campanas.NumeroAsegurados </td>
+                                        <td> @campanas.DescripcionPais </td>
+                                        <td> @campanas.CodigoPoliza </td>
+                                        <td> @campanas.DescripcionPoliza </td>
+                                        <td> @campanas.DeduciblesTexto </td>
+                                        <td> @campanas.FechaEfectividad </td>
+                                        <td> @campanas.DescripcionFormaPago </td>
+                                        <td> @campanas.FechaCobro </td>
+                                        <td> @campanas.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td> @campanas.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td> @campanas.PrimaComisionable.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td> @campanas.ValorCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                                        <td> @campanas.ValorIntereses </td>
+                                        <td> @campanas.Restricciones </td>
+                                        <td> @campanas.DescripcionEstadoCertificado </td>
+                                        <td> @campanas.DescripcionMotivoCancelacion </td>
+                                        <td> @campanas.DescripcionTipoVenta </td>
+                                        <td> @campanas.PagoAutomatico </td>
+                                        <td> @campanas.Siniestralidad </td>
+                                        <td> @campanas.PolizaGrupo </td>
+                                        <td> @campanas.PolizaDependiente </td>
+                                        <td> @campanas.Notas </td>
+                                        <td> @campanas.CodigoAgenteVenta </td>
+                                        <td> @campanas.PolizaGrupo </td>
+                                        <td> @campanas.NombreAgenteVenta </td>
+                                        <td> @campanas.NombreSubAgente </td>
+                                        <td> @campanas.CodigoSubAgente </td>
+                                        <td> @campanas.CodigoAgente </td>
+                                        <td> @campanas.NombreAgencia </td>
+                                        <td> @campanas.CodigoAgencia </td>
+                                        <td> @campanas.CodigoEstadoCuota </td>
+                                        <td> @campanas.CodigoEstadoCertificado </td>
+                                        <td> @campanas.FechaPago </td>
+                                        <td> @campanas.Celular </td>
+                                        <td> @campanas.Correo </td>
+                                        <td> @campanas.CodigoMGA </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+    <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="row g-3">
+            @foreach (var item in Model.CampanasAgentes.OrderBy(x => x.Fila).Take(12))
+            {
+                <div class="col-2 col-xl-2">
+                    <div class="card card-one">
+                        <div class="card-header">
+                            <h5 class="card-value fs-28 mb-0">
+                                @item.Fila &nbsp
+                                @switch (@item.Fila)
+                                {
+                                    case 1:
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+
+                                        break;
+                                    case 2:
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
+                                    case 3:
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
+                                    
+                                }
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <label class="card-value mb-1"><i class=""></i>@item.NombreAgenteVenta</label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Bonus:  @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Collected:  @item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Policies: @item.Cantidad</label>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="col-md-6 col-xl-12">
+                <div class="card card-one">
+                    <div class="card-header">
+                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating @webLoyal.Resources.language.Resources.Agent</h6>
+                        <div class="d-flex gap-1 text-primary fs-20">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="stripe hover display compact" id="tableAgent">
+                            <thead>
+                                <tr>
+                                    <th>@webLoyal.Resources.language.Resources.Position</th>
+                                    <th>@webLoyal.Resources.language.Resources.Code</th>
+                                    <th>@webLoyal.Resources.language.Resources.Agents</th>
+                                    <th>@webLoyal.Resources.language.Resources.Policies</th>
+                                    <th>@webLoyal.Resources.language.Resources.Premiums</th>
+                                    <th>@webLoyal.Resources.language.Resources.Collected</th>
+                                    <th>@webLoyal.Resources.language.Resources.Pending</th>
+                                    <th>@webLoyal.Resources.language.Resources.Progress</th>
+                                    <th>@webLoyal.Resources.language.Resources.Remaining</th>
+                                    <th>@webLoyal.Resources.language.Resources.Goal</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            @foreach (var item in Model.CampanasAgentes.OrderBy(x => x.Fila))
+                            {
+                                    <tr>
+                                        <td><strong>@item.Fila</strong></td>
+                                        <td> <a href="../Agents/detail/@item.CodigoAgenteVenta" class="btn btn-outline-tertiary"> @item.CodigoAgenteVenta </a> </td>
+                                        <td>@item.NombreAgenteVenta.Trim() &nbsp/&nbsp @item.NombreMGA.Trim()</td>
+                                        <td>@item.Cantidad</td>
+                                        <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@item.PrimaPendiente.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>
+                                            @{
+                                                decimal objetivo = Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Individual").Select(x => x.RangoInicial).FirstOrDefault();
+                                                if (objetivo == 0)
+                                                {
+                                                    objetivo = 1;
+                                                }
+
+                                                decimal primaActual = @item.PrimaCobrada;
+                                                decimal porcentajeAvance = (primaActual / objetivo) * 1;
+                                                decimal restante = 1 - porcentajeAvance;
+                                            }
+                                            @if (porcentajeAvance>1)
+                                            {
+                                                <span class="badge badge-pill bg-success">@porcentajeAvance.ToString("P2")</span>
+                                            }else
+                                            {
+                                                <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
+                                            }
+
+                                            
+                                        </td>
+                                        <td> <span class="badge badge-pill bg-warning">@restante.ToString("P2")</span></td>
+                                        <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Individual").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-Agency" role="tabpanel" aria-labelledby="nav-Agency-tab">
+        <div class="row g-3">
+            @foreach (var item in Model.CampanasAgencia.OrderBy(x => x.Fila).Take(12))
+            {
+                <div class="col-2 col-xl-2">
+                    <div class="card card-one">
+                        <div class="card-header">
+                            <h5 class="card-value fs-28 mb-0">
+                                @item.Fila &nbsp
+                                @switch (@item.Fila)
+                                {
+                                    case 1:
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+
+                                        break;
+                                    case 2:
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
+                                    case 3:
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
+
+                                }
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <label class="card-value mb-1"><i class=""></i>@item.NombreAgencia</label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Bonus:  @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Collected:  @item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Policies: @item.Cantidad</label>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="col-md-6 col-xl-12">
+                <div class="card card-one">
+                    <div class="card-header">
+                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating @webLoyal.Resources.language.Resources.AgencyCode</h6>
+                        <div class="d-flex gap-1 text-primary fs-20">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="stripe hover display compact" id="tableAgency">
+                            <thead>
+                                <tr>
+                                    <th>@webLoyal.Resources.language.Resources.Position</th>
+                                    <th>@webLoyal.Resources.language.Resources.Code</th>
+                                    <th>@webLoyal.Resources.language.Resources.AgencyName</th>
+                                    <th>@webLoyal.Resources.language.Resources.Policies</th>
+                                    <th>@webLoyal.Resources.language.Resources.Premiums</th>
+                                    <th>@webLoyal.Resources.language.Resources.Collected</th>
+                                    <th>@webLoyal.Resources.language.Resources.Pending</th>
+
+                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
+                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
+                                    <th>@webLoyal.Resources.language.Resources.Goal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var item in Model.CampanasAgencia.OrderBy(x => x.Fila))
+                            {
+                               
+                                    <tr>
+                                        <td><strong>@item.Fila</strong></td>
+                                        <td> <a href="../Agents/detail/@item.CodigoAgencia" class="btn btn-outline-tertiary"> @item.CodigoAgencia </a> </td>
+                                        <td>@item.NombreAgencia.Trim()</td>
+                                        <td>@item.Cantidad</td>
+                                        <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@item.PrimaPendiente.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>
+                                            @{
+                                                decimal objetivo = Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Doble").Select(x => x.RangoInicial).FirstOrDefault();
+                                                if (objetivo == 0)
+                                                {
+                                                    objetivo = 1;
+                                                }
+
+                                                decimal primaActual = @item.PrimaCobrada;
+                                                decimal porcentajeAvance = (primaActual / objetivo) * 1;
+                                                decimal restante = 1 - porcentajeAvance;
+                                            }
+                                            @if (porcentajeAvance > 1)
+                                            {
+                                                <span class="badge badge-pill bg-success">@porcentajeAvance.ToString("P2")</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
+                                            }
+                                        </td>
+                                        <td> <span class="badge badge-pill bg-warning">@restante.ToString("P2")</span></td>
+                                        <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "I" && x.DescripcionDetalleCampana.Trim() == "Doble").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+
+                                    </tr>
+                              
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-Master" role="tabpanel" aria-labelledby="nav-Master-tab">
+        <div class="row g-3">
+            @foreach (var item in Model.CampanasMga.OrderBy(x => x.Fila).Take(12))
+            {
+                <div class="col-2 col-xl-2">
+                    <div class="card card-one">
+                        <div class="card-header">
+                            <h5 class="card-value fs-28 mb-0">
+                                @item.Fila &nbsp
+                                @switch (@item.Fila)
+                                {
+                                    case 1:
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+
+                                        break;
+                                    case 2:
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
+                                    case 3:
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                        <i class="ri-star-line"></i>
+                                        break;
+
+
+                                }
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <label class="card-value mb-1"><i class=""></i>@item.NombreMGA</label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Bonus:  @item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Collected:  @item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </label>
+                            <label class="card-value mb-1"><i class=""></i>@webLoyal.Resources.language.Resources.Policies: @item.Cantidad</label>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="col-md-6 col-xl-12">
+                <div class="card card-one">
+                    <div class="card-header">
+                        <h6 class="card-title">@webLoyal.Resources.language.Resources.PerformanceRating MGA </h6>
+                        <div class="d-flex gap-1 text-primary fs-20">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="stripe hover display compact" id="TableMGA">
+                            <thead>
+                                <tr>
+                                    <th>@webLoyal.Resources.language.Resources.Position</th>
+                                    <th>@webLoyal.Resources.language.Resources.Code</th>
+                                    <th>@webLoyal.Resources.language.Resources.AgencyName</th>
+                                    <th>@webLoyal.Resources.language.Resources.Policies</th>
+                                    <th>@webLoyal.Resources.language.Resources.Premiums</th>
+                                    <th>@webLoyal.Resources.language.Resources.Collected</th>
+                                    <th>@webLoyal.Resources.language.Resources.Pending</th>
+                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
+                                    <th>@webLoyal.Resources.language.Resources.Percentage</th>
+                                    <th>@webLoyal.Resources.language.Resources.Goal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var item in Model.CampanasMga.OrderBy(x => x.Fila))
+                            {
+                              
+                                    <tr>
+                                        <td><strong>@item.Fila</strong></td>
+                                        <td> <a href="../Agents/detail/@item.CodigoMGA" class="btn btn-outline-tertiary"> @item.CodigoMGA </a> </td>
+                                        <td>@item.NombreMGA.Trim()</td>
+                                        <td>@item.Cantidad</td>
+                                        <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>@item.PrimaPendiente.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                        <td>
+                                            @{
+                                                decimal objetivo = Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana=="M").Select(x =>x.RangoInicial).FirstOrDefault();
+                                                if (objetivo==0)
+                                                {
+                                                    objetivo = 1;
+                                                }
+                                                decimal primaActual = @item.PrimaCobrada;
+                                                decimal porcentajeAvance = (primaActual / objetivo) * 1;
+                                                decimal restante = 1 - porcentajeAvance;
+                                            }
+                                            @if (porcentajeAvance > 1)
+                                            {
+                                                <span class="badge badge-pill bg-success">@porcentajeAvance.ToString("P2")</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-pill bg-primary">@porcentajeAvance.ToString("P2")</span>
+                                            }
+                                        </td>
+                                        <td> <span class="badge badge-pill bg-warning">@restante.ToString("P2")</span></td>
+                                        <td>@Model.DtDetalleCampanas.Where(x => x.TipoAgenteCampana == "M").Select(x => x.RangoInicial).FirstOrDefault().ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                    </tr>
+                                
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <div class="card">
+            <div class="card-body">
+                    <img src="~/assets/img/MIAMI-INV.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            $("#enviarDatos").on("click", function () {
+                enviarPeticionAlControlador();
+            });
+        });
+        function enviarPeticionAlControlador() {
+            var boolw1 = $("#FormaAnual").prop("checked");
+            var boolw2 = $("#FormaSemestral").prop("checked");
+            var boolw3 = $("#FormaTrimestral").prop("checked");
+            var boolw4 = $("#FormaMensual").prop("checked");
+            var fecha1 = $("#FechaInicio").val();
+            var fecha2 = $("#FechaFin").val();
+            var nuevaURL = "/campaign/Index?CodigoCampana=" +
+                "@Model.Campanas.FirstOrDefault().CodigoCampana" +
+                "&FormaAnual=" + boolw1 +
+                "&FormaSemestral=" + boolw2 +
+                "&FormaTrimestral=" + boolw3 +
+                "&FormaMensual=" + boolw4 +
+                "&FechaInicio=" + fecha1 +
+                "&FechaFin=" + fecha2;
+            window.location.href = nuevaURL;
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Petición Enviada',
+                text: 'La petición ha sido enviada correctamente.',
+                showConfirmButton: false
+            });
+        }
+        initDataTable("tableAgent");
+        initDataTable("TableMGA");
+        initDataTable("tableAgency");
+        initDataTable("Campanaatatablet");
+      
+    </script>
+
+}

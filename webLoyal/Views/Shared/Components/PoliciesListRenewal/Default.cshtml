@@ -1,0 +1,15 @@
+﻿@model List<core.Service.CifraCertificadosRenovacionesModel>;
+
+<div class="row g-3">
+    @foreach( var item in Model)
+    {
+        <div class="col-4 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">@item.DescripcionEstadoCertificado</label>
+                    <h5 class="card-value mb-1"><i class="ri-heart-pulse-line"></i> @item.CantidadRegistros</h5>
+                </div>
+            </div>
+        </div>
+    }
+</div>

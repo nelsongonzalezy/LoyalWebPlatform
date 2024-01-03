@@ -1,0 +1,137 @@
+﻿@model List<core.Service.CifrasPersonasCertificadoResponseModel>
+<div class="row g-3">
+   
+    @foreach (var item in Model)
+    {
+        <div class="col-3 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">Mujeres</label>
+                    <h3 class="card-value mb-1"><i class="ri-women-line"></i> @item.AdultosMujeres</h3>
+                    <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeMujeres.ToString("P2") </span></small>
+
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div>
+        <div class="col-3 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">Hombres</label>
+                    <h3 class="card-value mb-1"><i class="ri-men-line"></i> @item.AdultosHombres</h3>
+                    <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeHombres.ToString("P2") </span></small>
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div> 
+        <div class="col-3 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">Niñas</label>
+                    <h3 class="card-value mb-1"><i class="ri-women-line"></i> @item.MenoresMujeres</h3>
+                    <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeMenoresMuejres.ToString("P2") </span></small>
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div>  
+        <div class="col-3 col-xl-3">
+            <div class="card card-one">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-1">Niños</label>
+                    <h3 class="card-value mb-1"><i class="ri-men-line"></i> @item.MenoresHombres</h3>
+                    <small>Representacion:&nbsp<span class="d-inline-flex text-primary"> @item.PorcentajeMenoresHombres.ToString("P2") </span></small>
+                </div><!-- card-body -->
+            </div><!-- card-one -->
+        </div> 
+
+    }
+</div>
+
+@*    @foreach (var item in Model)
+    {
+        <div class="col-12 col-xl-12">
+            <div class="card border-primary">
+                <div class="card-body">
+                    <a href="~/lives/index">
+                        <label class="card-title fs-sm fw-medium mb-2">Vidas</label>
+                        <h3 class="card-value mb-1"><i class="ri-team-fill ri-2x"></i> @item.TotalPersonas</h3>
+                   <div class="row">
+                       <div class="col-6">
+                                <div class="text-start">
+                                    <h6>
+                                        <i class="ri-women-line"></i>
+                                        Mujeres @{
+                                            double sumaf = ((double)item.AdultosMujeres + (double)item.MenoresMujeres);
+                                        }@sumaf
+                                    </h6>
+                                    <span class="d-block fs-xs text-success">@item.PorcentajeMujeresTotales.ToString("P2")</span>
+                                </div>
+                       </div>
+                            <div class="col-6">
+                                <div class="text-end">
+                                    <h6>
+                                        Hombres:  <i class="ri-men-line"></i> @{
+                                            double suma = ((double)item.AdultosHombres + (double)item.MenoresHombres);
+                                        }@suma</h6>
+                                    <span class="d-block fs-xs text-success">@item.PorcentajeHombresTotales.ToString("P2")</span>
+                                </div>
+                       </div>
+                           
+                       
+                    
+                   </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-12 col-xl-12">
+            <div class="card border-primary">
+                <div class="card-body">
+                    <label class="card-title fs-sm fw-medium mb-2">Adultos</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-start">
+                                <h6>
+                                    <i class="ri-women-line"></i>
+                                    Mujeres @item.AdultosMujeres
+                                </h6>
+                                <span class="d-block fs-xs text-success">@item.PorcentajeMujeres.ToString("P2")</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-end">
+                                <h6>
+                                    Hombres:  @item.AdultosHombres 
+                                </h6>
+                                <span class="d-block fs-xs text-success">@item.PorcentajeHombres.ToString("P2")</span>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <label class="card-title fs-sm fw-medium mb-2">Niños</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-start">
+                                <h6>
+                                    <i class="ri-women-line"></i>
+                                    Mujeres @item.MenoresMujeres
+                                </h6>
+                                <span class="d-block fs-xs text-success">@item.PorcentajeMenoresMuejres.ToString("P2")</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-end">
+                                <h6>
+                                    Hombres:  @item.MenoresHombres 
+                                </h6>
+                                <span class="d-block fs-xs text-success">@item.PorcentajeMenoresHombres.ToString("P2")</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+           
+
+        </div>
+     
+    }
+*@

@@ -1,5 +1,4 @@
-﻿
-<div class="container">
+﻿@model List<core.Service.ForeCastModel>
 
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
@@ -15,888 +14,29 @@
         </div>
     </div>
 
-<ul class="nav nav-pills nav-fill">
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link" id="nav-sectionOne" data-bs-toggle="tab" data-bs-target="#sectionOne" type="button" role="tab" aria-controls="sectionOne" aria-selected="false">Conservative Mode before covid</button>
+
+        <button class="nav-link" id="nav-sectiontwo" data-bs-toggle="tab" data-bs-target="#sectiontwo" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Agresive mode before covid</button>
+        <button class="nav-link active" id="nav-sectiontree" data-bs-toggle="tab" data-bs-target="#sectiontree" type="button" role="tab" aria-controls="sectionOne" aria-selected="false">Conservative Mode after covid <span class="badge-dot bg-success"></span> </button>
+
+        <button class="nav-link" id="nav-sectionfort" data-bs-toggle="tab" data-bs-target="#sectionfort" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Agresive mode After covid</button>
+    </div>
+</nav>
+@* <ul class="nav nav-pills nav-fill">
         <li class="nav-item"><a class="nav-link active" href="#sectionOne" onclick="showSection('sectionOne', this)">Conservative Mode before covid</a></li>
         <li class="nav-item"><a class="nav-link" href="#sectiontwo" onclick="showSection('sectiontwo', this)">Agresive mode before covid</a></li>
         <li class="nav-item"><a class="nav-link" href="#sectiontree" onclick="showSection('sectiontree', this)">Conservative Mode after covid</a></li>
         <li class="nav-item"><a class="nav-link" href="#sectionfort" onclick="showSection('sectionfort', this)">Agresive mode After covid</a></li>
         <li class="nav-item"><a class="nav-link" href="#sectionfive" onclick="showSection('sectionfive', this)">Non-insurable risks</a></li>
-</ul>
-
-<section id="sectionOne">
+</ul> *@
+<div class="tab-content">
+    <div class="tab-pane" id="sectionOne" role="tabpanel" aria-labelledby="home-tab">
 
         <div class="card card-one mt-3">
             <div class="card-header">
-                <h6 class="card-title center">Forecast - total Portafolio</h6>
-                <nav class="nav nav-icon nav-icon-sm ms-auto">
-                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                </nav>
-            </div><!-- card-header -->
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                                @foreach (var claim in Model)
-                                {*@
-                                    <tr>
-                                        <td>Sales </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                        <td>
-                                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                                <div class="btn-group me-2" role="group" aria-label="First group">
-                                                    <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                                    <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                                </div>
-                                            </div>
-
-                                        </td>
-
-                                    </tr>
-                            <tr>
-                                <td>Renewals </td>
-                                <td>$0</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>                            <tr>
-                                <td>Total </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-@*                                }
-
-                            }*@
-
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
-        </div>
-        <div class="card card-one mt-3">
-            <div class="card-header">
-                <h6 class="card-title center">Forecast - total Policies</h6>
-                <nav class="nav nav-icon nav-icon-sm ms-auto">
-                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                </nav>
-            </div><!-- card-header -->
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
-                            <tr>
-                                <td>Sales </td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td class="info">150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Renewals </td>
-                                <td>0</td>
-                                <td>150</td>
-                                <td class="info">150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Total </td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td class="info">$150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            @*                                }
-
-                            }*@
-
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
-        </div>
-        <div class="card card-one mt-3">
-            <div class="card-header">
-                <h6 class="card-title center">Forecast - total Live</h6>
-                <nav class="nav nav-icon nav-icon-sm ms-auto">
-                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                </nav>
-            </div><!-- card-header -->
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
-                            <tr>
-                                <td>Sales </td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td class="info">100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Renewals </td>
-                                <td>$0</td>
-                                <td>100</td>
-                                <td class="info">100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Total </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            @*                                }
-
-                            }*@
-
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
-        </div>
-</section>
-<section id="sectiontwo" style="display: none;">
-        <div class="card card-one mt-3">
-            <div class="card-header">
-                <h6 class="card-title center">Forecast - total Portafolio</h6>
-                <nav class="nav nav-icon nav-icon-sm ms-auto">
-                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                </nav>
-            </div><!-- card-header -->
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
-                            <tr>
-                                <td>Sales </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Renewals </td>
-                                <td>$0</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Total </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            @*                                }
-
-                            }*@
-
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
-        </div>
-        <div class="card card-one mt-3">
-            <div class="card-header">
-                <h6 class="card-title center">Forecast - total Policies</h6>
-                <nav class="nav nav-icon nav-icon-sm ms-auto">
-                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                </nav>
-            </div><!-- card-header -->
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
-                            <tr>
-                                <td>Sales </td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td class="info">150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Renewals </td>
-                                <td>0</td>
-                                <td>150</td>
-                                <td class="info">150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Total </td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td class="info">$150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            @*                                }
-
-                            }*@
-
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
-        </div>
-        <div class="card card-one mt-3">
-            <div class="card-header">
-                <h6 class="card-title center">Forecast - total Live</h6>
-                <nav class="nav nav-icon nav-icon-sm ms-auto">
-                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                </nav>
-            </div><!-- card-header -->
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
-                            <tr>
-                                <td>Sales </td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td class="info">100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Renewals </td>
-                                <td>$0</td>
-                                <td>100</td>
-                                <td class="info">100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Total </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            @*                                }
-
-                            }*@
-
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
-        </div>
-</section>
-<section id="sectiontree" style="display: none;">
-        <div class="card card-one mt-3">
-            <div class="card-header">
-                <h6 class="card-title center">Forecast - total Portafolio</h6>
-                <nav class="nav nav-icon nav-icon-sm ms-auto">
-                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                </nav>
-            </div><!-- card-header -->
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
-                            <tr>
-                                <td>Sales </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Renewals </td>
-                                <td>$0</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Total </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            @*                                }
-
-                            }*@
-
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
-        </div>
-        <div class="card card-one mt-3">
-            <div class="card-header">
-                <h6 class="card-title center">Forecast - total Policies</h6>
-                <nav class="nav nav-icon nav-icon-sm ms-auto">
-                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                </nav>
-            </div><!-- card-header -->
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
-                            <tr>
-                                <td>Sales </td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td class="info">150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Renewals </td>
-                                <td>0</td>
-                                <td>150</td>
-                                <td class="info">150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Total </td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td class="info">$150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            @*                                }
-
-                            }*@
-
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
-        </div>
-        <div class="card card-one mt-3">
-            <div class="card-header">
-                <h6 class="card-title center">Forecast - total Live</h6>
-                <nav class="nav nav-icon nav-icon-sm ms-auto">
-                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                </nav>
-            </div><!-- card-header -->
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
-                            <tr>
-                                <td>Sales </td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td class="info">100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Renewals </td>
-                                <td>$0</td>
-                                <td>100</td>
-                                <td class="info">100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Total </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            @*                                }
-
-                            }*@
-
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
-        </div>
-</section>
-<section id="sectionfort" style="display: none;">
-        <div class="card card-one mt-3">
-            <div class="card-header">
-                <h6 class="card-title center">Forecast - total Portafolio</h6>
+                <h6 class="card-title center">Forecast - Total Portafolio</h6>
                 <nav class="nav nav-icon nav-icon-sm ms-auto">
                     <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
                     <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
@@ -908,91 +48,114 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
                             </tr>
                         </thead>
                         <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Ventas</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.PrimaModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                      
+                                    }
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.RenovacionModerada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+                                        
+                                    }
+                                </tr>
                             <tr>
-                                <td>Sales </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.RenovacionModerada + @item.PrimaModerada);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+                                   
+                                    }
+                            </tr>
+                            </thead>
+                            <tr>
+                                <th>3-Ventas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.PrimaModerada > @item.Cobrado)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
 
-                                </td>
-
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th><a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a></th>
+                                    
+                                }
                             </tr>
                             <tr>
-                                <td>Renewals </td>
-                                <td>$0</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
+                                <th>4-Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                        
+                                     if (item.RenovacionCobrado < item.RenovacionModerada)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
 
-                                </td>
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th><a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a></th>
 
+
+                            }
                             </tr>
-                            <tr>
-                                <td>Total </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-                            @*                                }
-
-                            }*@
-
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    var Total2 = (@item.RenovacionModerada + @item.PrimaModerada);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
+                                }
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
         </div>
         <div class="card card-one mt-3">
             <div class="card-header">
-                <h6 class="card-title center">Forecast - total Policies</h6>
+                <h6 class="card-title center">Forecast - Total Policies</h6>
                 <nav class="nav nav-icon nav-icon-sm ms-auto">
                     <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
                     <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
@@ -1004,91 +167,120 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+
+                               
 
                             </tr>
                         </thead>
                         <tbody>
-                            @*@if (Model.Count > 0)
-                            {
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Polizas</th>
+                                        @foreach (var item in Model)
+                                        {
 
-                            @foreach (var claim in Model)
-                            {*@
+                                    <th></th>
+                                        <th>@item.PolizaModerada</th>
+                                        }
+                                    
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.RenovacionPolizaModerada.ToString("#,###")</th>
+                                        }
+                                    
+                                </tr>
                             <tr>
-                                <td>Sales </td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td class="info">150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
 
-                                </td>
+                                        var Total = (int)(@item.RenovacionPolizaModerada + @item.PolizaModerada);
+                                    <th></th>
+                                    <th>@Total </th>
 
+                                    }
                             </tr>
+                            </thead>
+
                             <tr>
-                                <td>Renewals </td>
-                                <td>0</td>
-                                <td>150</td>
-                                <td class="info">150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
+                                <th>3-Ventas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.PolizaModerada > @item.Polizas)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
 
-                                </td>
-
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.Polizas</th>
+                                }
+                              
                             </tr>
+
                             <tr>
-                                <td>Total </td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td class="info">$150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>150</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
+                                <th>4-Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionPolizas < item.RenovacionPolizaModerada)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
 
-                                </td>
-
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.RenovacionPolizas</th>
+                                }
+                                
                             </tr>
-                            @*                                }
-
-                            }*@
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (int)(@item.Polizas + @item.RenovacionPolizas);
+                                    var Total2 = (int)(@item.RenovacionPolizaModerada + @item.PolizaModerada);
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total
+                                        </a>
+                                    </th>
+                                }
+                                
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
         </div>
         <div class="card card-one mt-3">
             <div class="card-header">
-                <h6 class="card-title center">Forecast - total Live</h6>
+                <h6 class="card-title center">Forecast - Total Live</h6>
                 <nav class="nav nav-icon nav-icon-sm ms-auto">
                     <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
                     <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
@@ -1100,95 +292,1213 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>1st Year</th>
-                                <th>2st Year</th>
-                                <th>3st Year</th>
-                                <th>4st Year</th>
-                                <th>5st Year</th>
-                                <th>7st Year</th>
-                                <th></th>
-
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+                               
                             </tr>
                         </thead>
                         <tbody>
-                            @*@if (Model.Count > 0)
-                            {
-
-                            @foreach (var claim in Model)
-                            {*@
+                            <thead class="border border-2">
                             <tr>
-                                <td>Sales </td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td class="info">100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
+                                <th>1-Proyección Vidas</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.VidasModerada</th>
+                                    }
+                              
                             </tr>
                             <tr>
-                                <td>Renewals </td>
-                                <td>$0</td>
-                                <td>100</td>
-                                <td class="info">100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
+                                <th>2-Proyección Renovaciones</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.RenovacionVidasModerada.ToString("#,###")</th>
+                                    }
+                               
                             </tr>
                             <tr>
-                                <td>Total </td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td class="info">$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>$150,000</td>
-                                <td>
-                                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                        <div class="btn-group me-2" role="group" aria-label="First group">
-                                            <a href="../claims/get/ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                            <a href="../claims/delete/ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
-                                        </div>
-                                    </div>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (int)(@item.VidasModerada + @item.RenovacionVidasModerada);
+                                    <th></th>
+                                    <th>@Total </th>
 
-                                </td>
-
+                                    }
                             </tr>
-                            @*                                }
+                            </thead>
+                           
+                            <tr>
+                                <th>3-Vidas Real</th>
+                                @foreach (var item in Model)
+                                {
 
-                            }*@
+                                    if (@item.VidasModerada > @item.Asegurados)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.Asegurados</th>
+                                }
+                               
+                            </tr>
+                            <tr>
+                                <th>4-Vidas Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionAsegurados < item.RenovacionVidasModerada)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.RenovacionAsegurados</th>
+                                }
+                                
+                            </tr>
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (int)(@item.Asegurados + @item.RenovacionAsegurados);
+                                    var Total2 = (int)(@item.VidasModerada + @item.RenovacionVidasModerada);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@Total</th>
+                                }
+                                
+                            </tr>
+
+                        </tfoot>
                     </table>
                 </div>
             </div><!-- card-body -->
         </div>
-</section>
-<section id="sectionfive" style="display: none;">
-      
-</section>
+    </div>
+
+    <div id="sectiontwo" class="tab-pane">
+
+        <div class="card card-one mt-3">
+            <div class="card-header">
+                <h6 class="card-title center">Forecast - Total Portafolio</h6>
+                <nav class="nav nav-icon nav-icon-sm ms-auto">
+                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                </nav>
+            </div><!-- card-header -->
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <thead class="border border-2">
+                            <tr>
+                                <th>1-Proyección Ventas</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.PrimaAgresiva.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    }
+                                
+                            </tr>
+                            <tr>
+                                <th>2-Proyección Renovaciones</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.RenovacionAgresiva.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    }
+                                
+                            </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.PrimaAgresiva + @item.RenovacionAgresiva);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+
+                                    }
+                            </tr>
+                        </thead>
+
+                            <tr>
+                            <th>3-Ventas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.PrimaAgresiva > @item.Cobrado)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                <th><a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a></th>
+
+                                }                                
+                            </tr>
+                            <tr>
+                                <th>4-Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionCobrado < item.RenovacionAgresiva)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                <th>
+                                    <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
+                                    </th>
+                                }
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    var Total2 = (@item.RenovacionAgresiva + @item.PrimaAgresiva);
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
+                                }
+                                
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+        <div class="card card-one mt-3">
+            <div class="card-header">
+                <h6 class="card-title center">Forecast - Total Policies</h6>
+                <nav class="nav nav-icon nav-icon-sm ms-auto">
+                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                </nav>
+            </div><!-- card-header -->
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+
+                                
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Polizas</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.PolizaAgresiva</th>
+                                        }
+                                    
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.RenovacionAgresiva.ToString("0")</th>
+                                        }
+                                    
+                                </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.PolizaAgresiva + @item.RenovacionAgresiva);
+                                    <th></th>
+                                    <th>@Total.ToString("0") </th>
+
+                                    }
+                            </tr>
+                            </thead>
+
+                            <tr>
+                                <th>3-Ventas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.PolizaAgresiva > @item.Polizas)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                <th>@item.Polizas</th>
+                                }
+                                
+                            </tr>
+                            <tr>
+                                <th>4-Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionPolizas < item.RenovacionAgresiva)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.RenovacionPolizas.ToString("#,###")</th>
+                                }
+                                
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (int)(@item.Polizas + @item.RenovacionPolizas);
+
+                                    var Total2 = (int)(@item.PolizaAgresiva + @item.RenovacionAgresiva);
+        
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                   
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total
+                                        </a>
+                                    </th>
+                                }
+                                
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+        <div class="card card-one mt-3">
+            <div class="card-header">
+                <h6 class="card-title center">Forecast - Total Live</h6>
+                <nav class="nav nav-icon nav-icon-sm ms-auto">
+                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                </nav>
+            </div><!-- card-header -->
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Vidas</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.VidasAgresiva</th>
+                                        }
+                                   
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.RenovacionVidasAgresiva.ToString("0")</th>
+                                        }
+                                    
+                                </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.VidasAgresiva + @item.RenovacionVidasAgresiva);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+
+                                    }
+                            </tr>
+                            </thead>
+
+                            <tr>
+                                <th>3-Vidas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.VidasAgresiva > @item.Asegurados)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.Asegurados</th>
+                                }
+                                
+                            </tr>
+                            <tr>
+                                <th>4-Vidas Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionAsegurados < item.RenovacionVidasAgresiva)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.RenovacionAsegurados</th>
+                                }
+                                
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (int)(@item.Asegurados + @item.RenovacionAsegurados);
+                                    var Total2 = (@item.VidasAgresiva + @item.RenovacionVidasAgresiva);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@Total</th>
+                                }
+                                
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+    </div>
+    <div id="sectiontree" class="tab-pane active">
+        <div class="card card-one mt-3">
+            <div class="card-header">
+                <h6 class="card-title center">Forecast - Total Portafolio</h6>
+                <nav class="nav nav-icon nav-icon-sm ms-auto">
+                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                </nav>
+            </div><!-- card-header -->
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+
+                              
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <thead class="border border-2">
+                            <tr>
+                                <th>1-Proyección Ventas</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.PrimaModeradaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    }
+                               
+                            </tr>
+                            <tr>
+                                <th>2-Proyección Renovaciones</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.RenovacionModeradaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    }
+                                
+                            </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.PrimaModeradaPosPandemia + @item.RenovacionModeradaPosPandemia);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+
+                                    }
+                            </tr>
+                            </thead>
+
+                            <tr>
+                                <th>3-Ventas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.PrimaModeradaPosPandemia > @item.Cobrado)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                <th>
+                                    <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
+                                </th>
+
+                                }
+                               
+                            </tr>
+                            <tr>
+                                <th>4-Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionCobrado < item.RenovacionModeradaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                <th>
+                                    <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
+                                </th>
+                                }
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    var Total2 = (@item.RenovacionModeradaPosPandemia + @item.PrimaModeradaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
+                                }
+                               
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+        <div class="card card-one mt-3">
+            <div class="card-header">
+                <h6 class="card-title center">Forecast - Total Policies</h6>
+                <nav class="nav nav-icon nav-icon-sm ms-auto">
+                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                </nav>
+            </div><!-- card-header -->
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Polizas</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.PolizaModeradaPosPandemia</th>
+                                        }
+                                    
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.RenovacionPolizaModeradaPosPandemia.ToString("#,###")</th>
+                                        }
+                                    
+                                </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {var Total = (int)(@item.PolizaModeradaPosPandemia + @item.RenovacionPolizaModeradaPosPandemia);
+                                    <th></th>
+                                    <th>@Total </th>
+                                    }
+                            </tr>
+                            </thead>
+
+                            <tr>
+                                <th>3-Ventas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.PolizaModeradaPosPandemia > @item.Polizas)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.Polizas</th>
+                                }
+                                
+                            </tr>
+                            <tr>
+                                <th>4-Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+
+                                    if (item.RenovacionPolizas < item.RenovacionPolizaModeradaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.RenovacionPolizas</th>
+                                }
+                                
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (int)(@item.Polizas + @item.RenovacionPolizas);
+                                    var Total2 = (@item.RenovacionPolizaModeradaPosPandemia + @item.PolizaModeradaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total
+                                        </a>
+                                    </th>
+                                }
+                              
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+        <div class="card card-one mt-3">
+            <div class="card-header">
+                <h6 class="card-title center">Forecast - Total Live</h6>
+                <nav class="nav nav-icon nav-icon-sm ms-auto">
+                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                </nav>
+            </div><!-- card-header -->
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <thead class="border border-2">
+                            <tr>
+                                <th>1-Proyección Vidas</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.VidasModeradaPosPandemia</th>
+                                    }
+                               
+                            </tr>
+                            <tr>
+                                <th>2-Proyección Renovaciones</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.RenovacionVidasModeradaPosPandemia.ToString("#,###")</th>
+                                    }
+                                
+                            </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.VidasModeradaPosPandemia + @item.RenovacionVidasModeradaPosPandemia);
+                                    <th></th>
+                                    <th>@Total.ToString("0") </th>
+
+                                    }
+                            </tr>
+                            </thead>
+
+                            <tr>
+                                <th>3-Vidas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.VidasModeradaPosPandemia > @item.Asegurados)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.Asegurados</th>
+                                }
+                                
+                            </tr>
+                            <tr>
+                                <th>4-Vidas Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionAsegurados < item.RenovacionVidasModeradaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.RenovacionAsegurados</th>
+                                }
+                            
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (int)(@item.Asegurados + @item.RenovacionAsegurados);
+                                    var Total2 = (@item.RenovacionVidasModeradaPosPandemia + @item.VidasModeradaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@Total</th>
+                                }
+                               
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+    </div>
+    <div id="sectionfort" class="tab-pane">
+        <div class="card card-one mt-3">
+            <div class="card-header">
+                <h6 class="card-title center">Forecast - Total Portafolio</h6>
+                <nav class="nav nav-icon nav-icon-sm ms-auto">
+                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                </nav>
+            </div><!-- card-header -->
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <thead class="border  border-2">
+                            <tr>
+                                <th>1-Proyección Ventas</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.PrimaAgresivaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    }
+                                
+                            </tr>
+                            <tr>
+                                <th>2-Proyección Renovaciones</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                    <th>@item.RenovacionAgresivaPosPandemia.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</th>
+                                    }
+                                
+                            </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (@item.PrimaAgresivaPosPandemia + @item.RenovacionAgresivaPosPandemia);
+                                    <th></th>
+                                    <th>@Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </th>
+
+                                    }
+                            </tr>
+                            </thead>
+
+                            <tr>
+                                <th>3-Ventas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.PrimaAgresivaPosPandemia > @item.Cobrado)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                <th>
+                                    <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=01"> @item.Cobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
+                                </th>
+                                }
+                              
+                            </tr>
+                            <tr>
+                                <th>4-Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionCobrado < item.RenovacionAgresivaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                <th>
+                                    <a href="~/stages/details?CodigoPeriodo=@item.CodigoPeriodo&CodigoTipoVenta=02"> @item.RenovacionCobrado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</a>
+                                </th>
+                                }
+                                
+                            </tr>
+
+
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (@item.Cobrado + @item.RenovacionCobrado);
+                                    var Total2 = (@item.PrimaAgresivaPosPandemia + @item.RenovacionAgresivaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>
+                                        <a href="~/stages/TotalPeriodo?CodigoPeriodo=@item.CodigoPeriodo">
+                                            @Total.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                                        </a>
+                                    </th>
+                                }
+                                
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+        <div class="card card-one mt-3">
+            <div class="card-header">
+                <h6 class="card-title center">Forecast - Total Policies</h6>
+                <nav class="nav nav-icon nav-icon-sm ms-auto">
+                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                </nav>
+            </div><!-- card-header -->
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <thead class="border  border-2">
+                                <tr>
+                                    <th>1-Proyección Polizas</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.PolizaAgresivaPosPandemia</th>
+                                        }
+                                    
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.RenovacionPolizaAgresivaPosPandemia.ToString("0")</th>
+                                        }
+                                    
+                                </tr>
+                            <tr>
+                                <th>Proyección Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                        var Total = (int)(@item.PolizaAgresivaPosPandemia + @item.RenovacionPolizaAgresivaPosPandemia);
+                                    <th></th>
+                                    <th>@Total</th>
+
+                                    }
+                            </tr>
+                            </thead>
+
+                            <tr>
+                                <th>3-Ventas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.PolizaAgresivaPosPandemia > @item.Polizas)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.Polizas</th>
+                                }
+                                
+                            </tr>
+                            <tr>
+                                <th>4-Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionPolizas < item.RenovacionPolizaAgresivaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.RenovacionPolizas</th>
+                                }
+                                
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                                <tr>
+                                <th>Total</th>
+                                    @foreach (var item in Model)
+                                    {
+                                    var Total = (int)(@item.RenovacionPolizas + @item.Polizas);
+                                    var Total2 = (int)(@item.PolizaAgresivaPosPandemia + @item.RenovacionPolizaAgresivaPosPandemia);
+
+                                        if (@Total < @Total2)
+                                        {
+                                            <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                        }
+                                        else
+                                        {
+                                            <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                        }
+                                        <th>@Total.ToString("#,###")</th>
+                                     }
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+        <div class="card card-one mt-3">
+            <div class="card-header">
+                <h6 class="card-title center">Forecast - Total Live</h6>
+                <nav class="nav nav-icon nav-icon-sm ms-auto">
+                    <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+                    <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+                </nav>
+            </div><!-- card-header -->
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                @foreach (var item in Model)
+                                {
+                                    <th></th>
+                                    <th>@item.DescripcionPeriodo</th>
+                                }
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <thead class="border border-2">
+                                <tr>
+                                    <th>1-Proyección Vidas</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.VidasAgresivaPosPandemia</th>
+                                        }
+                                    
+                                </tr>
+                                <tr>
+                                    <th>2-Proyección Renovaciones</th>
+                                        @foreach (var item in Model)
+                                    {
+                                    <th></th>
+                                        <th>@item.RenovacionAgresivaPosPandemia.ToString("#,###")</th>
+                                        }
+                                  
+                                </tr>
+                                <tr>
+                                    <th>Proyección Total</th>
+                                        @foreach (var item in Model)
+                                        {
+                                            var Total = (int)(@item.VidasAgresivaPosPandemia + @item.RenovacionAgresivaPosPandemia);
+                                            <th></th>
+                                            <th>@Total</th>
+
+                                        }
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <th>3-Vidas Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (@item.VidasAgresivaPosPandemia > @item.Asegurados)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.Asegurados</th>
+                                }
+                                
+                            </tr>
+                            <tr>
+                                <th>4-Vidas Renovaciones Real</th>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.RenovacionAsegurados < item.RenovacionAgresivaPosPandemia)
+                                    {
+                                    <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                    <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+                                    <th>@item.RenovacionAsegurados    </th>
+                                }
+                                
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                @foreach (var item in Model)
+                                {
+                                    var Total = (int)(@item.Asegurados + @item.RenovacionAsegurados);
+                                    var Total2 = (int)(@item.VidasAgresivaPosPandemia + @item.RenovacionAgresivaPosPandemia);
+
+                                    if (@Total < @Total2)
+                                    {
+                                        <th><spam class="text-danger"><i class="ri-arrow-down-line fs-15 lh-3"></i></th>
+
+                                    }
+                                    else
+                                    {
+                                        <th><spam class="text-success"><i class="ri-arrow-up-line fs-15 lh-3"></i></th>
+                                    }
+
+                                    <th>@Total</th>
+                                }
+                               
+                            </tr>
+
+                        </tfoot>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+    </div>
 </div>
+
+<div id="sectionfive">
+      
+</div>
+
 @section Scripts{
     <script>
+                var firstTabEl = document.querySelector('#myTab li:last-child button')
+        var firstTab = new bootstrap.Tab(firstTabEl)
+
+        firstTab.show()
+
         function showSection(sectionId, button) {
             // Oculta todas las secciones
             var sections = document.getElementsByTagName('section');
@@ -1207,26 +1517,25 @@
             }
             button.classList.add('active');
         }
-        $("table").DataTable({
-            searchBuilder: true,
-            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
-            fixedColumns: true,
-            order: [[0, "desc"]],
-            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
-            buttons: [
-                {
-                    extend: 'excelHtml5',
-                    autoFilter: true,
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.StagesDetailModel)Excel',
-                },
-                {
-                    extend: 'pdfHtml5',
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.StagesDetailModel)Pdf',
-                }
-            ]
-        });
+        // $("table").DataTable({
+        //     searchBuilder: true,
+        //     class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
+        //     fixedColumns: true,
+        //     dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+        //     buttons: [
+        //         {
+        //             extend: 'excelHtml5',
+        //             autoFilter: true,
+        //             className: 'btn btn-outline-primary',
+        //             filename: '@nameof(core.Service.StagesDetailModel)Excel',
+        //         },
+        //         {
+        //             extend: 'pdfHtml5',
+        //             className: 'btn btn-outline-primary',
+        //             filename: '@nameof(core.Service.StagesDetailModel)Pdf',
+        //         }
+        //     ]
+        // });
     </script>
 
 

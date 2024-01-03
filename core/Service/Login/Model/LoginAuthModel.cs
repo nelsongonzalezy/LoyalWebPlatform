@@ -10,7 +10,7 @@ namespace core.Service
         public string NombrePagina { get; set; }
         public int CodigoPerfil { get; set; }
         public string NombrePerfil { get; set; }
-        public string UsuarioImagen { get; set; }
+        public byte[] UsuarioImagen { get; set; }
         public string PasswordCorreo { get; set; }
         public string DireccionEmail { get; set; }
         public string IndicadorCorreoVerificado { get; set; }

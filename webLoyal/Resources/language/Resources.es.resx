@@ -1,5 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -116,8 +175,7 @@
     <value>Crear Proveedor</value>
   </data>
   <data name="ProviderCode" xml:space="preserve">
-    <value>Código del Proveedor
-</value>
+    <value>Código del Proveedor</value>
   </data>
   <data name="BusinessName" xml:space="preserve">
     <value>Razón Social</value>
@@ -281,14 +339,11 @@
   <data name="RegistrationDate" xml:space="preserve">
     <value>Fecha de registro</value>
   </data>
-  <data name="Descripction" xml:space="preserve">
-    <value>Descripción</value>
-  </data>
   <data name="TypeOfDocument" xml:space="preserve">
     <value>Tipo de Documento</value>
   </data>
   <data name="CertificateCode" xml:space="preserve">
-    <value>Codigo de Certificado</value>
+    <value>Código de Certificado</value>
   </data>
   <data name="ActiveCertificates" xml:space="preserve">
     <value>Certificados Activos</value>
@@ -349,9 +404,9 @@
   </data>
   <data name="DescriptionCountry" xml:space="preserve">
     <value>Descripción del País</value>
-    </data>
+  </data>
   <data name="ClaimId" xml:space="preserve">
-    <value>Codigo de Reclamo</value>
+    <value>Código de Reclamo</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Confirmar Contraseña</value>
@@ -400,5 +455,1130 @@
   </data>
   <data name="Home" xml:space="preserve">
     <value>Inicio</value>
+  </data>
+  <data name="AgentsList" xml:space="preserve">
+    <value>Lista de Agentes</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Educación</value>
+  </data>
+  <data name="Recognitions" xml:space="preserve">
+    <value>Reconocimientos</value>
+  </data>
+  <data name="Achievements" xml:space="preserve">
+    <value>Logros</value>
+  </data>
+  <data name="WorkExperience" xml:space="preserve">
+    <value>Experiencia Laboral</value>
+  </data>
+  <data name="PeopleServed" xml:space="preserve">
+    <value>Personas Atendidas</value>
+  </data>
+  <data name="InsuredPersons" xml:space="preserve">
+    <value>Personas Aseguradas</value>
+  </data>
+  <data name="BankData" xml:space="preserve">
+    <value>Bank Data</value>
+  </data>
+  <data name="AccountNumber" xml:space="preserve">
+    <value>Número De Cuenta</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Tipo de Cuenta</value>
+  </data>
+  <data name="RoutingCode" xml:space="preserve">
+    <value>Código De Enrutamiento</value>
+  </data>
+  <data name="BankingAddress" xml:space="preserve">
+    <value>Dirección Bancaria</value>
+  </data>
+  <data name="CellPhone" xml:space="preserve">
+    <value>Celular</value>
+  </data>
+  <data name="Birthdate" xml:space="preserve">
+    <value>Fecha De Nacimiento</value>
+  </data>
+  <data name="ContractDate" xml:space="preserve">
+    <value>Fecha De Contrato</value>
+  </data>
+  <data name="Degree" xml:space="preserve">
+    <value>Licenciatura</value>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>Años</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="Province" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="EnterTheCodeSentToYourMobileDevice" xml:space="preserve">
+    <value>Ingresa el código enviado a tu dispositivo móvil.</value>
+  </data>
+  <data name="PasswordOne" xml:space="preserve">
+    <value>Contraseña Principal</value>
+  </data>
+  <data name="PasswordTwo" xml:space="preserve">
+    <value>Contraseña Secundaria</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Todos Los Archivos</value>
+  </data>
+  <data name="MyDevices" xml:space="preserve">
+    <value>Mis Dispositivos</value>
+  </data>
+  <data name="Recents" xml:space="preserve">
+    <value>Recientes</value>
+  </data>
+  <data name="Important" xml:space="preserve">
+    <value>Importante</value>
+  </data>
+  <data name="DeletedFiles" xml:space="preserve">
+    <value>Archivos Eliminados</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documentos</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Imágenes</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>Videos</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="ZipFiles" xml:space="preserve">
+    <value>Archivos Zip</value>
+  </data>
+  <data name="StorageStatus" xml:space="preserve">
+    <value>Estado de Almacenamiento</value>
+  </data>
+  <data name="Get2TBOfStorageNowAndGet40OffOffersEndsSoon" xml:space="preserve">
+    <value>Obtenga 2 TB (2000 GB) de almacenamiento ahora y obtenga un 40 % de descuento. Las ofertas terminan pronto</value>
+  </data>
+  <data name="LearnMore" xml:space="preserve">
+    <value>Aprende Más</value>
+  </data>
+  <data name="RecentlyAccessedFiles" xml:space="preserve">
+    <value>Archivos accedidos recientemente</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>Ver detalles</value>
+  </data>
+  <data name="MarkAsImportant" xml:space="preserve">
+    <value>Marcar Como Importante</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Compartir</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="CopyTo" xml:space="preserve">
+    <value>Copiar a</value>
+  </data>
+  <data name="MoveTo" xml:space="preserve">
+    <value>Mover a</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Renombrar</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="LastAccess" xml:space="preserve">
+    <value>Último acceso</value>
+  </data>
+  <data name="HoursAgo" xml:space="preserve">
+    <value>horas atras</value>
+  </data>
+  <data name="Folders" xml:space="preserve">
+    <value>Carpetas</value>
+  </data>
+  <data name="Downloads" xml:space="preserve">
+    <value>Descargas</value>
+  </data>
+  <data name="PersonalStuff" xml:space="preserve">
+    <value>Cosas personales</value>
+  </data>
+  <data name="TriDObjects" xml:space="preserve">
+    <value>Objetos 3D</value>
+  </data>
+  <data name="Recordings" xml:space="preserve">
+    <value>Grabaciones</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Apoyo</value>
+  </data>
+  <data name="CloudFiles" xml:space="preserve">
+    <value>Archivos en la nube</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>Última modificación</value>
+  </data>
+  <data name="FileSize" xml:space="preserve">
+    <value>Tamaño del archivo</value>
+  </data>
+  <data name="DashboardConcepts" xml:space="preserve">
+    <value>Conceptos del panel de control</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Galería</value>
+  </data>
+  <data name="Receipts" xml:space="preserve">
+    <value>Recibos</value>
+  </data>
+  <data name="SendRequest" xml:space="preserve">
+    <value>Enviar Petición</value>
+  </data>
+  <data name="Campaigns" xml:space="preserve">
+    <value>Campañas</value>
+  </data>
+  <data name="UpdateData" xml:space="preserve">
+    <value>Actualizar Datos</value>
+  </data>
+  <data name="CreateNewCampaign" xml:space="preserve">
+    <value>Crear Nueva Campaña</value>
+  </data>
+  <data name="AnnualPaymentMethod" xml:space="preserve">
+    <value>Forma De Pago Anual</value>
+  </data>
+  <data name="SemiannualPaymentMethod" xml:space="preserve">
+    <value>Forma De Pago Semestral</value>
+  </data>
+  <data name="QuarterlyPaymentMethod" xml:space="preserve">
+    <value>Forma De Pago Trimestra</value>
+  </data>
+  <data name="MonthlyPaymentMethod" xml:space="preserve">
+    <value>Forma De Pago Mensual</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+    <value>Prima</value>
+  </data>
+  <data name="Representation" xml:space="preserve">
+    <value>Representación</value>
+  </data>
+  <data name="Policies" xml:space="preserve">
+    <value>Pólizas</value>
+  </data>
+  <data name="Criteria" xml:space="preserve">
+    <value>Criterios</value>
+  </data>
+  <data name="TopAgents" xml:space="preserve">
+    <value>Top de Agentes</value>
+  </data>
+  <data name="Campaign" xml:space="preserve">
+    <value>Campaña</value>
+  </data>
+  <data name="RequestCode" xml:space="preserve">
+    <value>Código de Solicitud</value>
+  </data>
+  <data name="OwnerCode" xml:space="preserve">
+    <value>Código de Titular</value>
+  </data>
+  <data name="OwnerName" xml:space="preserve">
+    <value>Nombre del Titular</value>
+  </data>
+  <data name="NumberInsured" xml:space="preserve">
+    <value>Número de Asegurados</value>
+  </data>
+  <data name="DescriptionPolicy" xml:space="preserve">
+    <value>Descripción de Póliza</value>
+  </data>
+  <data name="DeductiblesText" xml:space="preserve">
+    <value>Texto de Deducibles</value>
+  </data>
+  <data name="DateEffectiveness" xml:space="preserve">
+    <value>Fecha de Efectividad</value>
+  </data>
+  <data name="DescriptionFormPayment" xml:space="preserve">
+    <value>Descripción de Forma Pago</value>
+  </data>
+  <data name="DateCollection" xml:space="preserve">
+    <value>Fecha Cobro</value>
+  </data>
+  <data name="AdministrativeCost" xml:space="preserve">
+    <value>Costo Administrativo</value>
+  </data>
+  <data name="CommissionablePremium" xml:space="preserve">
+    <value>Prima Comisionable</value>
+  </data>
+  <data name="QuotaValue" xml:space="preserve">
+    <value>Valor de Cuota</value>
+  </data>
+  <data name="ValueInterest" xml:space="preserve">
+    <value>Valor de Intereses</value>
+  </data>
+  <data name="Restrictions" xml:space="preserve">
+    <value>Restricciones</value>
+  </data>
+  <data name="DescriptionStateCertificate" xml:space="preserve">
+    <value>Descripción del Estado Certificado</value>
+  </data>
+  <data name="DescriptionReasonCancellation" xml:space="preserve">
+    <value>Descripción del Motivo Cancelacion</value>
+  </data>
+  <data name="DescriptionTypeSale" xml:space="preserve">
+    <value>Descripción del Tipo de Venta</value>
+  </data>
+  <data name="AutomaticPayment" xml:space="preserve">
+    <value>Pago Automático</value>
+  </data>
+  <data name="AccidentRate" xml:space="preserve">
+    <value>Siniestralidad</value>
+  </data>
+  <data name="PolicyGroup" xml:space="preserve">
+    <value>Póliza Grupal</value>
+  </data>
+  <data name="PolicyDependent" xml:space="preserve">
+    <value>Poliza Dependiente</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="CodeAgentSale" xml:space="preserve">
+    <value>Código Agente de Venta</value>
+  </data>
+  <data name="NameAgentSale" xml:space="preserve">
+    <value>Nombre Agente de Venta</value>
+  </data>
+  <data name="NameSubAgent" xml:space="preserve">
+    <value>Nombre de SubAgente</value>
+  </data>
+  <data name="SubAgentCode" xml:space="preserve">
+    <value>Código de SubAgente</value>
+  </data>
+  <data name="AgentCode" xml:space="preserve">
+    <value>Código de Agente</value>
+  </data>
+  <data name="AgencyName" xml:space="preserve">
+    <value>Nombre de Agencia</value>
+  </data>
+  <data name="AgencyCode" xml:space="preserve">
+    <value>Código de Agencia</value>
+  </data>
+  <data name="CodeStateQuota" xml:space="preserve">
+    <value>Código del Estado de la Cuota</value>
+  </data>
+  <data name="CertificateStateCode" xml:space="preserve">
+    <value>Código de Estado del Certificado</value>
+  </data>
+  <data name="PayDay" xml:space="preserve">
+    <value>Fecha de Pago</value>
+  </data>
+  <data name="CodeMGA" xml:space="preserve">
+    <value>Código MGA</value>
+  </data>
+  <data name="PerformanceRating" xml:space="preserve">
+    <value>Clasificación de Rendimiento</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Posición</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Premiums" xml:space="preserve">
+    <value>Primas</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Porcentaje</value>
+  </data>
+  <data name="Agents" xml:space="preserve">
+    <value>Agentes</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>estado</value>
+  </data>
+  <data name="ClaimDate" xml:space="preserve">
+    <value>Fecha del Reclamo</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>Plan</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Método de Pago</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Fecha de Inicio</value>
+  </data>
+  <data name="FinishDate" xml:space="preserve">
+    <value>Fecha de Finalización</value>
+  </data>
+  <data name="PolicyholderDetails" xml:space="preserve">
+    <value>Datos de Tomador</value>
+  </data>
+  <data name="CivilStatus" xml:space="preserve">
+    <value>Estado Civil</value>
+  </data>
+  <data name="PolicyholderData" xml:space="preserve">
+    <value>Datos del Tomador</value>
+  </data>
+  <data name="Symptoms" xml:space="preserve">
+    <value>Síntomas</value>
+  </data>
+  <data name="Procedures" xml:space="preserve">
+    <value>Procedimientos</value>
+  </data>
+  <data name="DocumentType" xml:space="preserve">
+    <value>Tipo de Documento</value>
+  </data>
+  <data name="Origin" xml:space="preserve">
+    <value>Orígen</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="DocumentName" xml:space="preserve">
+    <value>Nombre del Documento</value>
+  </data>
+  <data name="ConditionalCoverageSection" xml:space="preserve">
+    <value>Sección Cobertura Condicionada</value>
+  </data>
+  <data name="GenerateDenialLetter" xml:space="preserve">
+    <value>Generar Carta de Denegación</value>
+  </data>
+  <data name="InsuredName" xml:space="preserve">
+    <value>Nombre del Asegurado</value>
+  </data>
+  <data name="NameOfBeneficiary" xml:space="preserve">
+    <value>Nombre del Beneficiario</value>
+  </data>
+  <data name="HospitalOrProvider" xml:space="preserve">
+    <value>Hospital o Proveedor</value>
+  </data>
+  <data name="DateOfAdmission" xml:space="preserve">
+    <value>Fecha de Ingreso</value>
+  </data>
+  <data name="DischargeDate" xml:space="preserve">
+    <value>Fecha de Egreso</value>
+  </data>
+  <data name="Treatment" xml:space="preserve">
+    <value>Tratamiento</value>
+  </data>
+  <data name="CauseOfDenial" xml:space="preserve">
+    <value>Causa de Negación</value>
+  </data>
+  <data name="Emails" xml:space="preserve">
+    <value>Correos Electrónicos</value>
+  </data>
+  <data name="GenerateGuaranteeLetter" xml:space="preserve">
+    <value>Generar Carta Garantía</value>
+  </data>
+  <data name="GenerateLetterOfGuarantee" xml:space="preserve">
+    <value>Generar Carta De Garantía</value>
+  </data>
+  <data name="BudgetNumber" xml:space="preserve">
+    <value>Número de Presupuesto</value>
+  </data>
+  <data name="AdmissionsDepartment" xml:space="preserve">
+    <value>Departamento de Admisiones</value>
+  </data>
+  <data name="DeductibleAmount" xml:space="preserve">
+    <value>Monto Deducible</value>
+  </data>
+  <data name="USDInsuredLiability" xml:space="preserve">
+    <value>Responsabilidad del Asegurado en USD</value>
+  </data>
+  <data name="NOTICEOFCONFIDENTIALITY" xml:space="preserve">
+    <value>NOTIFICACIÓN DE CONFIDENCIALIDAD</value>
+  </data>
+  <data name="ClaimOffice" xml:space="preserve">
+    <value>Oficina de Reclamos</value>
+  </data>
+  <data name="ClaimDepartment" xml:space="preserve">
+    <value>Departamento de Reclamos</value>
+  </data>
+  <data name="ClaimStatusDescription" xml:space="preserve">
+    <value>Descripción del Estado Reclamo</value>
+  </data>
+  <data name="DescriptionOfTheClaimType" xml:space="preserve">
+    <value>Descripción del Tipo Reclamo</value>
+  </data>
+  <data name="DescriptionOfOrigin" xml:space="preserve">
+    <value>Descripcion del Origen</value>
+  </data>
+  <data name="ClaimDescription" xml:space="preserve">
+    <value>Descripcion del Reclamo</value>
+  </data>
+  <data name="DeductibleValue" xml:space="preserve">
+    <value>Valor Deducible</value>
+  </data>
+  <data name="AgentHistory" xml:space="preserve">
+    <value>Historial de Agente</value>
+  </data>
+  <data name="AgentsHistory" xml:space="preserve">
+    <value>Historial de Agentes</value>
+  </data>
+  <data name="NewBusinessPolicies" xml:space="preserve">
+    <value>New Business Policies</value>
+  </data>
+  <data name="ChargedPolicies" xml:space="preserve">
+    <value>Charged Policies</value>
+  </data>
+  <data name="PoliciesUnderEvaluation" xml:space="preserve">
+    <value>Policies Under Evaluation</value>
+  </data>
+  <data name="ApprovedPolicies" xml:space="preserve">
+    <value>Approved Policies</value>
+  </data>
+  <data name="AgentsId" xml:space="preserve">
+    <value>AIdentificación de Agentes</value>
+  </data>
+  <data name="AgentsStatus" xml:space="preserve">
+    <value>Estado de los Agentes</value>
+  </data>
+  <data name="Quota" xml:space="preserve">
+    <value>Cuota</value>
+  </data>
+  <data name="Sold" xml:space="preserve">
+    <value>Vendido</value>
+  </data>
+  <data name="Charged" xml:space="preserve">
+    <value>Cargado</value>
+  </data>
+  <data name="Reached" xml:space="preserve">
+    <value>Alcanzado</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progreso</value>
+  </data>
+  <data name="Ranting" xml:space="preserve">
+    <value>Despotricando</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Panel Principal</value>
+  </data>
+  <data name="WelcomeToDashboard" xml:space="preserve">
+    <value>Bienvenido al Panel Principal</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generar</value>
+  </data>
+  <data name="UniquePurchases" xml:space="preserve">
+    <value>Compras Únicas</value>
+  </data>
+  <data name="ThanLastWeek" xml:space="preserve">
+    <value>Que la Semana Anterior</value>
+  </data>
+  <data name="OrderValue" xml:space="preserve">
+    <value>Valor del Pedido</value>
+  </data>
+  <data name="OrderQuantity" xml:space="preserve">
+    <value>Ordene la Cantidad</value>
+  </data>
+  <data name="ConversionRate" xml:space="preserve">
+    <value>Tasa de Conversión</value>
+  </data>
+  <data name="TopSuppliers" xml:space="preserve">
+    <value>Top Proveedores</value>
+  </data>
+  <data name="TopInsured" xml:space="preserve">
+    <value>Top Asegurado</value>
+  </data>
+  <data name="ClaimsFigures" xml:space="preserve">
+    <value>Cifras de Reclamaciones</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Año</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Semana</value>
+  </data>
+  <data name="HelpdeskService" xml:space="preserve">
+    <value>Servicio de Asistencia Técnica</value>
+  </data>
+  <data name="SupportRequests" xml:space="preserve">
+    <value>Solicitudes de Soporte</value>
+  </data>
+  <data name="SupportAgents" xml:space="preserve">
+    <value>agentes de Soporte</value>
+  </data>
+  <data name="ComplaintsReceived" xml:space="preserve">
+    <value>Quejas Recibidas</value>
+  </data>
+  <data name="ComplaintsResolved" xml:space="preserve">
+    <value>Quejas Resueltas</value>
+  </data>
+  <data name="CurrentTicketStatus" xml:space="preserve">
+    <value>Estado Actual del Ticket</value>
+  </data>
+  <data name="HigherThanLastMonth" xml:space="preserve">
+    <value>más alto que el mes pasado</value>
+  </data>
+  <data name="TheTotalNumberOfComplaintsThatHaveBeenReceived" xml:space="preserve">
+    <value>El número total de quejas que se han recibido.</value>
+  </data>
+  <data name="TimeToResolvedComplaint" xml:space="preserve">
+    <value>Tiempo Para Resolver La Queja</value>
+  </data>
+  <data name="TheAverageTimeTakenToResolveComplaints" xml:space="preserve">
+    <value>El Tiempo Promedio Necesario Para Resolver Las Quejas</value>
+  </data>
+  <data name="AverageSpeedOfAnswer" xml:space="preserve">
+    <value>Velocidad Promedio de Respuesta</value>
+  </data>
+  <data name="TicketsByRequestType" xml:space="preserve">
+    <value>Tickets By Request Type</value>
+  </data>
+  <data name="OverallRating" xml:space="preserve">
+    <value>Calificación Global</value>
+  </data>
+  <data name="MeasuresTheQualityOrYourSupportTeamsEfforts" xml:space="preserve">
+    <value>Mide la calidad de los esfuerzos de su equipo de soporte.</value>
+  </data>
+  <data name="PerformanceScore" xml:space="preserve">
+    <value>Puntuación de Rendimiento</value>
+  </data>
+  <data name="ThePercentageValueAssignedToTheOperatingMetric" xml:space="preserve">
+    <value>El valor porcentual asignado a la métrica operativa.</value>
+  </data>
+  <data name="AgentPerformanceScore" xml:space="preserve">
+    <value>APuntuación de Rendimiento del Agente</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pendiente</value>
+  </data>
+  <data name="DashbyteAllRightsReserved" xml:space="preserve">
+    <value>Dashbyte. Reservados todos los derechos</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Creado por</value>
+  </data>
+  <data name="Excellent" xml:space="preserve">
+    <value>Excelente</value>
+  </data>
+  <data name="VeryGood" xml:space="preserve">
+    <value>Muy bien</value>
+  </data>
+  <data name="Good" xml:space="preserve">
+    <value>Bien</value>
+  </data>
+  <data name="Fair" xml:space="preserve">
+    <value>Razonable</value>
+  </data>
+  <data name="Poor" xml:space="preserve">
+    <value>Pobre</value>
+  </data>
+  <data name="AgentID" xml:space="preserve">
+    <value>ID del Agente</value>
+  </data>
+  <data name="AgentName" xml:space="preserve">
+    <value>Nombre del Agente</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Clasificación</value>
+  </data>
+  <data name="Away" xml:space="preserve">
+    <value>Lejos</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Borrador</value>
+  </data>
+  <data name="IfYouWantToAssociateAnAgentSelect" xml:space="preserve">
+    <value>Si desea asociar un agente, seleccione</value>
+  </data>
+  <data name="StartOfValidity" xml:space="preserve">
+    <value>Inicio de Vigencia</value>
+  </data>
+  <data name="SelectTheCountry" xml:space="preserve">
+    <value>Seleccione el país</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>Solicitante</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Sexo</value>
+  </data>
+  <data name="SelectTheGenre" xml:space="preserve">
+    <value>Seleccione el género</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Femenino</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Masculino</value>
+  </data>
+  <data name="Spouse" xml:space="preserve">
+    <value>Cónyuge</value>
+  </data>
+  <data name="NumberOfChildrenOptional" xml:space="preserve">
+    <value>Número de niños (opcional)</value>
+  </data>
+  <data name="Transplant" xml:space="preserve">
+    <value>Trasplante</value>
+  </data>
+  <data name="MaternityComplications" xml:space="preserve">
+    <value>Complicaciones de la maternidad</value>
+  </data>
+  <data name="StorageManagement" xml:space="preserve">
+    <value>Administración de Almacenamiento</value>
+  </data>
+  <data name="Claim" xml:space="preserve">
+    <value>Reclamación</value>
+  </data>
+  <data name="CreateClaim" xml:space="preserve">
+    <value>Crear Reclamo</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>En Curso</value>
+  </data>
+  <data name="DateAdded" xml:space="preserve">
+    <value>Fecha Agregada</value>
+  </data>
+  <data name="Design" xml:space="preserve">
+    <value>Diseño</value>
+  </data>
+  <data name="CreateIllustrations" xml:space="preserve">
+    <value>Crear Ilustraciones</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Hoy</value>
+  </data>
+  <data name="AssignedBy:" xml:space="preserve">
+    <value>Asignado Por:</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Completo</value>
+  </data>
+  <data name="HoursLeft" xml:space="preserve">
+    <value>horas restantes</value>
+  </data>
+  <data name="Promotions" xml:space="preserve">
+    <value>Promociones</value>
+  </data>
+  <data name="Tomorrow" xml:space="preserve">
+    <value>Mañana</value>
+  </data>
+  <data name="BuildPromotionStrategy" xml:space="preserve">
+    <value>Construir Estrategia de Promoción</value>
+  </data>
+  <data name="DayLeft" xml:space="preserve">
+    <value>día restante</value>
+  </data>
+  <data name="DaysLeft" xml:space="preserve">
+    <value>días restantes</value>
+  </data>
+  <data name="Marketing" xml:space="preserve">
+    <value>Mercadeo</value>
+  </data>
+  <data name="RunMarketResearch" xml:space="preserve">
+    <value>Realizar Estudios de Mercado</value>
+  </data>
+  <data name="Updates" xml:space="preserve">
+    <value>Actualizaciones</value>
+  </data>
+  <data name="Upcoming" xml:space="preserve">
+    <value>Próximo</value>
+  </data>
+  <data name="CreatePromotionStrategy" xml:space="preserve">
+    <value>Crear Estrategia de Promoción</value>
+  </data>
+  <data name="Weeks" xml:space="preserve">
+    <value>semanas</value>
+  </data>
+  <data name="CreateNewLandingPage" xml:space="preserve">
+    <value>Crear nueva página de destino</value>
+  </data>
+  <data name="MonthlyGrowthRevenue" xml:space="preserve">
+    <value>Ingresos de Crecimiento Mensual</value>
+  </data>
+  <data name="GrowthActual" xml:space="preserve">
+    <value>Crecimiento Real</value>
+  </data>
+  <data name="Actual" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="MonthlyRevenueGrowth" xml:space="preserve">
+    <value>Crecimiento de Ingresos Mensuales</value>
+  </data>
+  <data name="MeasureHowFastYoureGrowingMonthlyRecurringRevenue" xml:space="preserve">
+    <value>Mida qué tan rápido está aumentando sus ingresos recurrentes mensuales</value>
+  </data>
+  <data name="MonthlyRevenueCustomer" xml:space="preserve">
+    <value>Ingresos mensuales/Cliente</value>
+  </data>
+  <data name="TheRevenueGeneratedPerAccountOnAMonthlyOrYearlyBasis" xml:space="preserve">
+    <value>Los ingresos generados por cuenta de forma mensual o anual.</value>
+  </data>
+  <data name="AccountRetention" xml:space="preserve">
+    <value>Retención de cuenta</value>
+  </data>
+  <data name="Expansions" xml:space="preserve">
+    <value>Expansiones</value>
+  </data>
+  <data name="CustomersWhoHaveUpgradedTheLevelOfYourProductsOrService" xml:space="preserve">
+    <value>Clientes que han mejorado el nivel de sus productos o servicios.</value>
+  </data>
+  <data name="Cancellations" xml:space="preserve">
+    <value>Cancelaciones</value>
+  </data>
+  <data name="CustomersWhoHaveEndedTheirSubscriptionWithYou" xml:space="preserve">
+    <value>Clientes que han finalizado su suscripción contigo.</value>
+  </data>
+  <data name="RealTimeSales" xml:space="preserve">
+    <value>Ventas en tiempo real</value>
+  </data>
+  <data name="RecentSellers" xml:space="preserve">
+    <value>Vendedores recientes</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="ManageCustomer" xml:space="preserve">
+    <value>Administrar Clientes</value>
+  </data>
+  <data name="TransactionHistory" xml:space="preserve">
+    <value>Historial De Transacciones</value>
+  </data>
+  <data name="PurchaseFrom" xml:space="preserve">
+    <value>Comprar Desde</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Terminado</value>
+  </data>
+  <data name="ProcessRefundTo" xml:space="preserve">
+    <value>Procesar Reembolso A</value>
+  </data>
+  <data name="ProcessDeliveryTo" xml:space="preserve">
+    <value>Entrega Del Proceso A</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Elementos</value>
+  </data>
+  <data name="ForPickup" xml:space="preserve">
+    <value>Para Recoger</value>
+  </data>
+  <data name="PaymentFrom" xml:space="preserve">
+    <value>Pago De</value>
+  </data>
+  <data name="PaymentFailed" xml:space="preserve">
+    <value>Pago Fallido</value>
+  </data>
+  <data name="Declined" xml:space="preserve">
+    <value>Rechazado</value>
+  </data>
+  <data name="ManageTransactions" xml:space="preserve">
+    <value>Administrar Transacciones</value>
+  </data>
+  <data name="SalesRevenue" xml:space="preserve">
+    <value>Los Ingresos Por Ventas</value>
+  </data>
+  <data name="States" xml:space="preserve">
+    <value>Estados</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Pedidos</value>
+  </data>
+  <data name="Earnings" xml:space="preserve">
+    <value>Ganancias</value>
+  </data>
+  <data name="MostRecentEarnings" xml:space="preserve">
+    <value>Ganancias Más Recientes</value>
+  </data>
+  <data name="GrossEarnings" xml:space="preserve">
+    <value>Ingresos Completos</value>
+  </data>
+  <data name="NetEarnings" xml:space="preserve">
+    <value>Ganancias Netas</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="SalesCount" xml:space="preserve">
+    <value>Recuento De ventas</value>
+  </data>
+  <data name="TaxWithheld" xml:space="preserve">
+    <value>Impuesto Retenido</value>
+  </data>
+  <data name="Earning" xml:space="preserve">
+    <value>Ganancia</value>
+  </data>
+  <data name="DownloadYourEarningsInCSVformat" xml:space="preserve">
+    <value>Descargue Sus Ganancias En Formato Csv</value>
+  </data>
+  <data name="OpenItInASpreadsheetAndPerformYourOwnCalculationsGraphingEtc" xml:space="preserve">
+    <value>Ábrelo En Una Hoja De Cálculo Y Realice Sus Propios Cálculos, Gráficos, Etc.</value>
+  </data>
+  <data name="TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocation" xml:space="preserve">
+    <value>El Archivo Csv Contiene Detalles Adicionales, Como La Ubicación Del Comprador</value>
+  </data>
+  <data name="FirstSlideLabel" xml:space="preserve">
+    <value>Primera Etiqueta De Diapositivas</value>
+  </data>
+  <data name="SomeRepresentativePlaceholderContentForTheFirstSlide" xml:space="preserve">
+    <value>Algún Contenido Representativo De Marcador De Posición Para La Primera Diapositiva</value>
+  </data>
+  <data name="ProfitThisYear" xml:space="preserve">
+    <value>Beneficio Este Año</value>
+  </data>
+  <data name="LastYear" xml:space="preserve">
+    <value>El Año Pasado</value>
+  </data>
+  <data name="FirstQuarter" xml:space="preserve">
+    <value>Primer Trimestre</value>
+  </data>
+  <data name="SecondQuarter" xml:space="preserve">
+    <value>Segundo Trimestre</value>
+  </data>
+  <data name="ThirdQuarter" xml:space="preserve">
+    <value>Tercer Trimestre</value>
+  </data>
+  <data name="FourthQuarter" xml:space="preserve">
+    <value>Cuarto Trimestre</value>
+  </data>
+  <data name="GrossProfitMargin" xml:space="preserve">
+    <value>Margen De Beneficio Bruto</value>
+  </data>
+  <data name="TheGrossProfitYouMakeOnEachDollarOfSales" xml:space="preserve">
+    <value>La Ganancia Bruta Que Obtiene En Cada Dólar De Ventas</value>
+  </data>
+  <data name="NetProfitMargin" xml:space="preserve">
+    <value>Margen De Beneficio Neto</value>
+  </data>
+  <data name="MeasuresYourBusinessAtGeneratingProfitSales" xml:space="preserve">
+    <value>Mide Su Negocio Para Generar Ventas De Ganancias</value>
+  </data>
+  <data name="QuickRatioGoal" xml:space="preserve">
+    <value>Meta De Relación Rápida</value>
+  </data>
+  <data name="MeasuresYourAccountsReceivable" xml:space="preserve">
+    <value>Mide Sus Cuentas Por Cobrar</value>
+  </data>
+  <data name="CurrentLiabilities" xml:space="preserve">
+    <value>Pasivo Circulante</value>
+  </data>
+  <data name="AvailableBalance" xml:space="preserve">
+    <value>Saldo Disponible</value>
+  </data>
+  <data name="AccountName" xml:space="preserve">
+    <value>Nombre De La Cuenta</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Ingreso</value>
+  </data>
+  <data name="Expenses" xml:space="preserve">
+    <value>Gastos</value>
+  </data>
+  <data name="ProfitMargin" xml:space="preserve">
+    <value>Margen De Beneficio</value>
+  </data>
+  <data name="ProfitMarginIsAMeasureOfProfitabilityItIsCalculatedByFindingTheProfitAsAPercentageOfTheRevenue" xml:space="preserve">
+    <value>El Margen De Beneficio Es Una Medida De Rentabilidad. Se Calcula Al Encontrar La Ganancia Como Un Porcentaje De Los Ingresos</value>
+  </data>
+  <data name="GrossProfit" xml:space="preserve">
+    <value>Beneficio Bruto</value>
+  </data>
+  <data name="OperatingProfit" xml:space="preserve">
+    <value>Beneficio Operativo</value>
+  </data>
+  <data name="NetProfit" xml:space="preserve">
+    <value>Beneficio Neto</value>
+  </data>
+  <data name="ExpenseAnalytics" xml:space="preserve">
+    <value>Análisis De Gastos</value>
+  </data>
+  <data name="FixedExpenses" xml:space="preserve">
+    <value>Gastos Fijos</value>
+  </data>
+  <data name="FixedExpensesAreGenerallyFixedInBothAmountAndInterval" xml:space="preserve">
+    <value>Los Gastos Fijos Generalmente Se Fijan Tanto En La Cantidad Como En El Intervalo</value>
+  </data>
+  <data name="PeriodicExpense" xml:space="preserve">
+    <value>Gasto Periódico</value>
+  </data>
+  <data name="PeriodicExpensesAreUsuallyLessFrequentAndTheAmountCanVary" xml:space="preserve">
+    <value>Los Gastos Periódicos Suelen Ser Menos Frecuentes Y La Cantidad Puede Variar</value>
+  </data>
+  <data name="VariableExpenses" xml:space="preserve">
+    <value>Gastos Variables</value>
+  </data>
+  <data name="ChangeAsTheQuantityOfGoodOrServiceThatProducesChanges" xml:space="preserve">
+    <value>Cambiar Como La Cantidad De Bien O Servicio Que Produce Cambios</value>
+  </data>
+  <data name="BilledOpportunities" xml:space="preserve">
+    <value>Oportunidades Facturadas</value>
+  </data>
+  <data name="TotalIncome" xml:space="preserve">
+    <value>Ingresos Totales</value>
+  </data>
+  <data name="TotalExpenses" xml:space="preserve">
+    <value>Gastos Totales</value>
+  </data>
+  <data name="QuickRatio" xml:space="preserve">
+    <value>Relación Rápida</value>
+  </data>
+  <data name="CurrentRatio" xml:space="preserve">
+    <value>Relación Actual</value>
+  </data>
+  <data name="AccountsReceivable" xml:space="preserve">
+    <value>Cuentas Por Cobrar</value>
+  </data>
+  <data name="TheProceedsOrPaymentWhichTheCompanyWillReceiveFromItsCustomers" xml:space="preserve">
+    <value>Los Ingresos O Pagos Que La Compañía Recibirá De Sus Clientes</value>
+  </data>
+  <data name="AccountsPayable" xml:space="preserve">
+    <value>Cuentas Por Pagar</value>
+  </data>
+  <data name="MoneyOwedByABusinessToItsSuppliersShownAsALiability" xml:space="preserve">
+    <value>Dinero Adeudado Por Una Empresa A Sus Proveedores Que Se Muestran Como Un Pasivo</value>
+  </data>
+  <data name="MeasuresTheAbilityOfACompanyToUseItsNearCashOrQuickAssets" xml:space="preserve">
+    <value>Mide La Capacidad De Una Empresa Para Usar Sus Activos Casi Efectivos O Rápidos</value>
+  </data>
+  <data name="MeasuresWhetherAFirmHasEnoughResourcesToMeetItsShortTermObligations" xml:space="preserve">
+    <value>Mide Si Una Empresa Tiene Suficientes Recursos Para Cumplir Con Sus Obligaciones A Corto Plazo</value>
+  </data>
+  <data name="SecondSlideLabel" xml:space="preserve">
+    <value>Segunda Etiqueta De Diapositivas</value>
+  </data>
+  <data name="SomeRepresentativePlaceholderContentForTheSecondSlide" xml:space="preserve">
+    <value>Algunos Contenidos Representativos De Marcador De Posición Para La Segunda Diapositiva</value>
+  </data>
+  <data name="ThirdSlideLabel" xml:space="preserve">
+    <value>Tercera Etiqueta De Diapositivas</value>
+  </data>
+  <data name="SomeRepresentativePlaceholderContentForTheThirdSlide" xml:space="preserve">
+    <value>Algún Contenido Representativo De Marcador De Posición Para La Tercera Diapositiva</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="NumberOfCustomersWhoHaveActiveASubscriptionWithYou" xml:space="preserve">
+    <value>Número De Clientes Que Tienen Una Suscripción Activa Con Usted</value>
+  </data>
+  <data name="OrHigher" xml:space="preserve">
+    <value>Or Higher</value>
+  </data>
+  <data name="ManageCustomers" xml:space="preserve">
+    <value>Administrar clientes</value>
+  </data>
+  <data name="UseThisPageToDetailYourSitesPrivacyPolicy" xml:space="preserve">
+    <value>Utilice Ésta Página Para Detallar La Política De Privacidad De Su Sitio</value>
+  </data>
+  <data name="AssignedBy" xml:space="preserve">
+    <value>Asingnado a </value>
+  </data>
+  <data name="MeasuresYourCurrentAssets" xml:space="preserve">
+    <value>MeasuresYourCurrentAssets</value>
+  </data>
+  <data name="PeriodicExpenses" xml:space="preserve">
+    <value>Gastos periódicos</value>
+  </data>
+  <data name="TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn" xml:space="preserve">
+    <value>TheCSVFileContainsAdditionalDetailsSuchAsTheBuyerLocationn</value>
+  </data>
+  <data name="Affinity" xml:space="preserve">
+    <value>Afinidad</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>Cobranzas</value>
+  </data>
+  <data name="Commissions" xml:space="preserve">
+    <value>Comisiones</value>
+  </data>
+  <data name="Evaluations" xml:space="preserve">
+    <value>Evaluaciones</value>
+  </data>
+  <data name="Finance" xml:space="preserve">
+    <value>Finanzas</value>
+  </data>
+  <data name="HumanTalent" xml:space="preserve">
+    <value>Talento Humano</value>
+  </data>
+  <data name="IncomeExpenses" xml:space="preserve">
+    <value>Ingresos y egresos</value>
+  </data>
+  <data name="Lives" xml:space="preserve">
+    <value>Vidas</value>
+  </data>
+  <data name="Monitor" xml:space="preserve">
+    <value>Monitor</value>
+  </data>
+  <data name="Payroll" xml:space="preserve">
+    <value>Nomina</value>
+  </data>
+  <data name="RequestMonitor" xml:space="preserve">
+    <value>Monitor de Solicitudes</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Ventas</value>
+  </data>
+  <data name="Staff" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="Taxes" xml:space="preserve">
+    <value>Impuestos</value>
+  </data>
+  <data name="UnderWriter" xml:space="preserve">
+    <value>Asegurador</value>
+  </data>
+  <data name="ForeCast" xml:space="preserve">
+    <value>Pronóstico</value>
+  </data>
+  <data name="Men" xml:space="preserve">
+    <value>Hombres</value>
+  </data>
+  <data name="Women" xml:space="preserve">
+    <value>Mujeres</value>
+  </data>
+  <data name="Renewal" xml:space="preserve">
+    <value>Renovaciones</value>
+  </data>
+  <data name="TopAgency" xml:space="preserve">
+    <value>Top Agencia</value>
+  </data>
+  <data name="TopMaster" xml:space="preserve">
+    <value>Top Master</value>
+  </data>
+  <data name="Collected" xml:space="preserve">
+    <value>Cobrado</value>
+  </data>
+  <data name="Goal" xml:space="preserve">
+    <value>Meta</value>
+  </data>
+  <data name="AddDocuments" xml:space="preserve">
+    <value>Agregar documentos</value>
+  </data>
+  <data name="Cancellation" xml:space="preserve">
+    <value>Cancelacion</value>
+  </data>
+  <data name="ChangeOfPlan" xml:space="preserve">
+    <value>Cambio de Plan</value>
+  </data>
+  <data name="Coverage" xml:space="preserve">
+    <value>Cobertura</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Historia</value>
+  </data>
+  <data name="Modification" xml:space="preserve">
+    <value>Modificacion</value>
+  </data>
+  <data name="ModifyTaker" xml:space="preserve">
+    <value>Modificar Tomador</value>
+  </data>
+  <data name="RecordNote" xml:space="preserve">
+    <value>Registrar notas</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Cronograma</value>
+  </data>
+  <data name="Remaining" xml:space="preserve">
+    <value>Restante</value>
   </data>
 </root>

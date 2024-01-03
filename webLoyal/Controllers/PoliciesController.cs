@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class PoliciesController : Controller
+    public class PoliciesController : BaseController
     {
         private readonly IPolicies _request;
         public PoliciesController(IPolicies request)
@@ -15,8 +15,49 @@ namespace webLoyal.Controllers
             var x = await _request.GetAll();
             return View(x.ToList());
         }
+        [HttpGet]
+        [Route("Policies/Detail/{codigoSolicitud}")]
+        public async Task<IActionResult> Detail(int codigoSolicitud) 
+        { 
+            var model = await _request.GetByCode(codigoSolicitud);
+            return View(model); 
+        }
 
-        public IActionResult Detail() { return View(); }
+        public async Task<IActionResult> Renewal()
+        {
+            var x = await _request.GetFiguresRenewal();
+            return View(x.ToList());
+        }
 
+        public IActionResult Cancellation()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult ChangeOfPlan()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult Modification()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult RecordNote()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult ModifyTaker()
+        {
+            return PartialView("_Cancellation");
+        
+        }        
+        public IActionResult AddDocuments()
+        {
+            return PartialView("_Cancellation");
+        
+        }
     }
 }

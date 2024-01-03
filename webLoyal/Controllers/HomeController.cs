@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
+using webLoyal.Authorization;
 using webLoyal.Models;
 
 namespace webLoyal.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -66,6 +67,15 @@ namespace webLoyal.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult PagesExample()
+        {
+            return View();
+        }
+        public IActionResult PagesExampleModal()
+        {
+            return View();
         }
     }
 }

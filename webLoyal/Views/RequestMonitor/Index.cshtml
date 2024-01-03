@@ -1,15 +1,12 @@
 ﻿@model List<core.Service.RequestMonitorDetailModel>
-<div>
-    <div class="container">
-
         <div class="d-md-flex align-items-center justify-content-between mb-4">
             <div>
                 <ol class="breadcrumb fs-sm mb-1">
                     <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
-                    <li class="breadcrumb-item active"><a href="~/requestmonitor/index">requestmonitor</a></li>
+                    <li class="breadcrumb-item active"><a href="~/requestmonitor/index">Monitor de Solicitudes</a></li>
 
                 </ol>
-
+            <h4 class="main-title mb-0">Solicitudes</h4>
             </div>
             <nav class="nav nav-icon nav-icon-lg">
 
@@ -18,7 +15,10 @@
             </nav>
         </div>
         <div class="row g-3">
-            <div class="col-xl-8">
+            <div class="col-xl-12"> 
+                @await Component.InvokeAsync("Product")
+            
+                <br />
                 @await Component.InvokeAsync("Requests")
                 <br />
                 <div class="row g-3">
@@ -26,7 +26,7 @@
                    <div class="card">
                        <div class="card-body">
                            <div class="table-responsive">
-                               <table>
+                            <table id="monitor" class="stripe hover display compact">
                                    <thead>
                                         <th>#</th>
                                         <th>Agente</th>
@@ -87,51 +87,12 @@
                 </div><!-- col -->
                 </div><!-- col -->
             </div><!-- col -->
-            <div class="col-xl-4">
-                @await Component.InvokeAsync("Product")
-            </div><!-- col -->
+            
         </div><!-- row -->
-    </div>
-</div>    
-
 
 @section Scripts{
     <script>
-        //// Función para mostrar una alerta estilo SweetAlert
-        //function showSweetAlert() {
-        //    Swal.fire({
-        //        position: 'top-end',
-        //        text: "Refrescando...",
-        //        icon: "info",
-        //        timer: 2000, // 2 segundos
-        //        timerProgressBar: true,
-        //        showConfirmButton: false
-        //    }).then(() => {
-        //        location.reload(); // Refrescar la página después de cerrar la alerta
-        //    });
-        //}
-        //function startInterval() {
-        //    let countdown = 1;
-
-        //    const interval = setInterval(() => {
-        //        Swal.fire({
-        //            title: `Refrescando en ${countdown} segundos...`,
-        //            icon: "info",
-        //            timer: 1000, // 1 segundo
-        //            timerProgressBar: true,
-        //            showConfirmButton: false,
-        //            position: 'top'
-        //        });
-
-        //        countdown--;
-
-        //        if (countdown < 0) {
-        //            clearInterval(interval);
-        //            showSweetAlert(); // Ejecutar la función después del conteo regresivo
-        //        }
-        //    }, 1000); // 1 segundo
-        //}
-
+        initDataTable("monitor");
 
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -176,39 +137,5 @@
                 }
             }, 50000); // 1 segundo
         }
-
-
-
-
-
-        $("table").DataTable({
-            searchPanes: {
-                viewTotal: true
-            },
-            searchBuilder: true,
-            sort: true,
-            resizable: true,
-            responsive: true,
-            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
-            fixedColumns: true,
-            order: [[0, "desc"]],
-            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
-            buttons: [
-                {
-                    extend: 'excelHtml5',
-                    autoFilter: true,
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.ResponseRequestCifraSolicitudEstadoModel)Excel',
-                },
-                {
-                    extend: 'pdfHtml5',
-                    className: 'btn btn-outline-primary',
-                    filename: '@nameof(core.Service.ResponseRequestCifraSolicitudEstadoModel)Pdf',
-                }
-            ]
-        });
-
-
-
     </script>
     }

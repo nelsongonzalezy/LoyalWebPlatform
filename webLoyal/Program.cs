@@ -1,9 +1,7 @@
 using core;
-using core.Service;
 using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
-using Microsoft.Extensions.Options;
 using System.Globalization;
+using webLoyal.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 var supportedCultures = new[]
@@ -18,8 +16,11 @@ builder.Services.AddControllersWithViews();
 builder.Services.InitializerCore();
 builder.Services.AddLocalization(options => options.ResourcesPath = "/Resources/language");
 builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization();
-builder.Services.AddSession(options => {options.IdleTimeout = TimeSpan.FromMinutes(30);});
-
+builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(30); });
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add(new CustomAuthorizeFilter());
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -40,6 +41,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSession();
 app.UseRouting();
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

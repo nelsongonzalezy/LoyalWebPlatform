@@ -3,18 +3,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class MenuController : Controller
+    public class MenuController : BaseController
     {
         private readonly IMenu _menu;
+        private readonly IPolicies _Policies;
 
-        public MenuController(IMenu menu) 
+        public MenuController(IMenu menu, IPolicies Policies) 
         {
             _menu = menu;
+            _Policies = Policies;
         }
 
         public async  Task<IActionResult> Index()
         {
-            var x = await _menu.GetByUser();
+            var x = await _Policies.GetpoliciesForCountry();
             return View(x.ToList());
         }
         public async  Task<IActionResult> PartialMenu()

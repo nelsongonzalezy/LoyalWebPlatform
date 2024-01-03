@@ -1,0 +1,95 @@
+﻿@model List<core.Service.CampanasModel>
+
+
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+        <ol class="breadcrumb fs-sm mb-1">
+            <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item active"><a href="~/campaign/index">@webLoyal.Resources.language.Resources.Campaign</a></li>
+
+        </ol>
+        <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Campaigns </h4>
+    </div>
+
+    <div class="d-flex gap-2 mt-3 mt-md-0">
+        <a href="~/campaign/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2"><span class="d-none d-sm-inline">@webLoyal.Resources.language.Resources.CreateNewCampaign</span></a>
+    </div>
+
+</div>
+
+<div class="row g-3">
+    <div class="col-xl-12">
+        <div class="card card-one mt-3">
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table class="table table-borderless mb-0 dataTable-loading searchable">
+                        <thead>
+                            <tr>
+                                <th>Campana</th>
+                                <th>Descripcion</th>
+                                <th>FechaInicio</th>
+                                <th>FechaFin</th>
+                                <td>FechaInicioDoble</td>
+                                <td>FechaFinDoble</td>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td> <a href="~/campaign/index?CodigoCampana=@item.CodigoCampana&FormaAnual=true" class="btn btn-outline-tertiary"> @item.CodigoCampana</a> </td>
+                                    <td> @item.DescripcionCampana </td>
+                                    <td>  @item.FechaInicio </td>
+                                    <td>  @item.FechaFin </td>
+                                    <td>  @item.FechaInicioDoble </td>
+                                    <td>  @item.FechaFinDoble </td>
+                                    
+
+
+
+
+                                </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- card-body -->
+        </div>
+    </div><!-- col -->
+</div><!-- col -->
+
+@section Scripts{
+                                    <script>
+    $("table").DataTable({
+        searchPanes: {
+            viewTotal: true
+        },
+        searchBuilder: true,
+        sort: true,
+        resizable: true,
+        responsive: true,
+        class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns table-striped',
+        fixedColumns: true,
+        order: [[0, "desc"]],
+        dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+        buttons: [
+            {
+                extend: 'excelHtml5',
+                autoFilter: true,
+                className: 'btn btn-outline-primary',
+                filename: '@nameof(core.Service.PoliciesDetailModel)Excel',
+            },
+            {
+                extend: 'pdfHtml5',
+                className: 'btn btn-outline-primary',
+                filename: '@nameof(core.Service.PoliciesDetailModel)Pdf',
+            }
+        ]
+    });
+
+                                    </script>}

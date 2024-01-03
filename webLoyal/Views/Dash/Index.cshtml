@@ -1,64 +1,132 @@
-﻿
-<div class="">
+﻿<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+        <ol class="breadcrumb fs-sm mb-1">
+            <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item active"><a href="~/Dash/index">@webLoyal.Resources.language.Resources.Dashboard</a></li>
+     @*       <li class="breadcrumb-item active"><a href="~/campaign/index"></a></li>*@
+
+        </ol>
+   
+    <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.Sales</h4>
+</div>
+<nav class="nav nav-icon nav-icon-lg">
+
+    <button id="actualizarBtn"><i class="ri-refresh-line"></i></button>
+
+</nav>
+</div>
+@*     <div class="d-flex gap-2 mt-3 mt-md-0">
+        <button id="actualizarBtn">Actualizar Vista Parcial</button>
+    </div>
+    </div> *@
+
+<div class="row g-3">
+    <div class="col-3 col-xl-3">
+        <div class="card card-one">
+            <div class="card-body">
+                <label class="card-title fs-sm fw-medium mb-1">Tasa de Conversión</label>
+                <h3 class="card-value mb-1"> 0.00</h3>
+                <small>Este indicador mide la eficiencia de tu equipo de ventas al convertir cotizaciones en ventas reales</small>
+
+
+            </div><!-- card-body -->
+        </div><!-- card-one -->
+    </div>
+    <div class="col-3 col-xl-3">
+        <div class="card card-one">
+            <div class="card-body">
+                <label class="card-title fs-sm fw-medium mb-1">Valor Promedio de la Póliza</label>
+                <h3 class="card-value mb-1"> 0.00</h3>
+                <small>Este KPI indica el valor promedio de cada póliza vendida. Un aumento en el APV puede sugerir una mejora en la calidad de las pólizas vendidas o la capacidad de vender pólizas con mayores coberturas</small>
+            </div><!-- card-body -->
+        </div><!-- card-one -->
+    </div>
+    <div class="col-3 col-xl-3">
+        <div class="card card-one">
+            <div class="card-body">
+                <label class="card-title fs-sm fw-medium mb-1">Tasa de Retención de Clientes</label>
+                <h3 class="card-value mb-1"> 0.00</h3>
+                <small>Este indicador mide la capacidad de retener a los clientes existentes. Una tasa de retención alta indica la satisfacción y lealtad de los clientes</small>
+            </div><!-- card-body -->
+        </div><!-- card-one -->
+    </div>
+    <div class="col-3 col-xl-3">
+        <div class="card card-one">
+            <div class="card-body">
+                <label class="card-title fs-sm fw-medium mb-1">Indice de Renovación de Pólizas</label>
+                <h3 class="card-value mb-1"> 0.00</h3>
+                <small>Este KPI muestra la efectividad de tu empresa para renovar pólizas vencidas. Una alta tasa de renovación indica la satisfacción continua del cliente y la calidad del servicio.</small>
+            </div><!-- card-body -->
+        </div><!-- card-one -->
+    </div>
+    </div>
+
+
+
+<div id="miVistaParcialContainer"></div>
+
+
+
+@*<div class="">
     <div class="d-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
-                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Cifras de Reclamos</li>
+                <li class="breadcrumb-item"><a href="#">@webLoyal.Resources.language.Resources.Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@webLoyal.Resources.language.Resources.ClaimsFigures</li>
             </ol>
-            <h4 class="main-title mb-0">Welcome to Dashboard</h4>
+            <h4 class="main-title mb-0">@webLoyal.Resources.language.Resources.WelcomeToDashboard</h4>
         </div>
 
         <nav class="nav nav-icon nav-icon-lg">
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="btnradio1">Año</label>
+                <label class="btn btn-outline-primary" for="btnradio1">@webLoyal.Resources.language.Resources.Year</label>
 
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio2">Mes</label>
+                <label class="btn btn-outline-primary" for="btnradio2">@webLoyal.Resources.language.Resources.Month</label>
 
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio3">Semana</label>
+                <label class="btn btn-outline-primary" for="btnradio3">@webLoyal.Resources.language.Resources.Week</label>
             </div>
 
         </nav>
-        <button type="button" class="btn btn-primary d-flex align-items-center gap-2"><i class="ri-bar-chart-2-line fs-18 lh-1"></i>Generate<span class="d-none d-sm-inline"> Nuevo Reclamo</span></button>
+        <button type="button" class="btn btn-primary d-flex align-items-center gap-2"><i class="ri-bar-chart-2-line fs-18 lh-1"></i>@webLoyal.Resources.language.Resources.Generate<span class="d-none d-sm-inline"> @webLoyal.Resources.language.Resources.NewClaim</span></button>
     </div>
 
     <div class="row g-3">
         <div class="col-6 col-xl-3">
             <div class="card card-one">
                 <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Unique Purchases</label>
+                    <label class="card-title fs-sm fw-medium mb-1">@webLoyal.Resources.language.Resources.UniquePurchases</label>
                     <h3 class="card-value mb-1"><i class="ri-shopping-bag-3-line"></i> 8,327</h3>
-                    <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> than last week</small>
+                    <small><span class="d-inline-flex text-danger">0.7% <i class="ri-arrow-down-line"></i></span> @webLoyal.Resources.language.Resources.ThanLastWeek</small>
                 </div><!-- card-body -->
             </div><!-- card-one -->
         </div><!-- col -->
         <div class="col-6 col-xl-3">
             <div class="card card-one">
                 <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Order Value</label>
+                    <label class="card-title fs-sm fw-medium mb-1">@webLoyal.Resources.language.Resources.OrderValue</label>
                     <h3 class="card-value mb-1"><i class="ri-briefcase-4-line"></i> <span>$</span>12,105</h3>
-                    <small><span class="d-inline-flex text-success">2.1% <i class="ri-arrow-up-line"></i></span> than last week</small>
+                    <small><span class="d-inline-flex text-success">2.1% <i class="ri-arrow-up-line"></i></span> @webLoyal.Resources.language.Resources.ThanLastWeek</small>
                 </div><!-- card-body -->
             </div><!-- card-one -->
         </div><!-- col -->
         <div class="col-6 col-xl-3">
             <div class="card card-one">
                 <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Order Quantity</label>
+                    <label class="card-title fs-sm fw-medium mb-1">@webLoyal.Resources.language.Resources.OrderQuantity</label>
                     <h3 class="card-value mb-1"><i class="ri-inbox-line"></i> 4,598</h3>
-                    <small><span class="d-inline-flex text-danger">0.3% <i class="ri-arrow-down-line"></i></span> than last week</small>
+                    <small><span class="d-inline-flex text-danger">0.3% <i class="ri-arrow-down-line"></i></span> @webLoyal.Resources.language.Resources.ThanLastWeek</small>
                 </div><!-- card-body -->
             </div><!-- card-one -->
         </div><!-- col -->
         <div class="col-6 col-xl-3">
             <div class="card card-one">
                 <div class="card-body">
-                    <label class="card-title fs-sm fw-medium mb-1">Conversion Rate</label>
+                    <label class="card-title fs-sm fw-medium mb-1">@webLoyal.Resources.language.Resources.ConversionRate</label>
                     <h3 class="card-value mb-1"><i class="ri-bar-chart-box-line"></i> 6.28<span>%</span></h3>
-                    <small><span class="d-inline-flex text-success">1.2% <i class="ri-arrow-up-line"></i></span> than last week</small>
+                    <small><span class="d-inline-flex text-success">1.2% <i class="ri-arrow-up-line"></i></span> @webLoyal.Resources.language.Resources.ThanLastWeek</small>
                 </div><!-- card-body -->
             </div><!-- card-one -->
         </div><!-- col -->
@@ -66,7 +134,7 @@
             <div class="card card-one">
                 <div class="card-header">
                     <h6 class="card-title">
-                        Top de proveedores
+                        @webLoyal.Resources.language.Resources.TopSuppliers
                     </h6>
                     <nav class="nav nav-icon nav-icon-sm ms-auto">
                         <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
@@ -199,7 +267,7 @@
         <div class="col-md-6 col-xl-4">
             <div class="card card-one">
                 <div class="card-header">
-                    <h6 class="card-title">Top de Agentes</h6>
+                    <h6 class="card-title">@webLoyal.Resources.language.Resources.TopAgents</h6>
                     <nav class="nav nav-icon nav-icon-sm ms-auto">
                         <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
                         <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
@@ -352,7 +420,7 @@
                             <div class="avatar bg-danger text-white"><i class="cf cf-emc"></i></div>
                             <div>
                                 <h6 class="mb-0">
-                                    Jacob Joshua Beraja
+                                    Jacob Joshua Baraja
 
                                 </h6>
                                 <small>USD</small>
@@ -373,7 +441,7 @@
         <div class="col-md-6 col-xl-4">
             <div class="card card-one">
                 <div class="card-header">
-                    <h6 class="card-title">Top de asegurados</h6>
+                    <h6 class="card-title">@webLoyal.Resources.language.Resources.TopInsured</h6>
                     <nav class="nav nav-icon nav-icon-sm ms-auto">
                         <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
                         <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
@@ -509,4 +577,73 @@
 
 
 
-</div>
+</div>*@
+@section Scripts{
+    <script>
+                                 $(document).ready(function () {
+            // Llamada AJAX para cargar la vista parcial
+            $.ajax({
+                url: '@Url.Action("MiVistaParcial", "Dash")',
+                type: 'GET',
+                success: function (data) {
+                    $('#miVistaParcialContainer').html(data);
+                }
+            });
+
+            // Manejador de evento para el botón
+            $('#actualizarBtn').click(function () {
+                $.ajax({
+                    url: '@Url.Action("MiVistaParcial", "Dash")',
+                    type: 'GET',
+                    success: function (data) {
+                        $('#miVistaParcialContainer').html(data);
+                    }
+                });
+            });
+        });
+        //var options = {
+        //    series: [{
+        //        data: [44, 55, 41, 64, 22, 43, 21]
+        //    }, {
+        //        data: [53, 32, 33, 52, 13, 44, 32]
+        //    }],
+        //    chart: {
+        //        type: 'bar',
+        //        height: 430
+        //    },
+        //    plotOptions: {
+        //        bar: {
+        //            horizontal: true,
+        //            dataLabels: {
+        //                position: 'top',
+        //            },
+        //        }
+        //    },
+        //    dataLabels: {
+        //        enabled: true,
+        //        offsetX: -6,
+        //        style: {
+        //            fontSize: '12px',
+        //            colors: ['#fff']
+        //        }
+        //    },
+        //    stroke: {
+        //        show: true,
+        //        width: 1,
+        //        colors: ['#fff']
+        //    },
+        //    tooltip: {
+        //        shared: true,
+        //        intersect: false
+        //    },
+        //    xaxis: {
+        //        categories: [2001, 2002, 2003, 2004, 2005, 2006, 2007],
+        //    },
+        //};
+
+        //var chart = new ApexCharts(document.querySelector("#chart"), options);
+        //chart.render();
+
+
+    </script>
+        }

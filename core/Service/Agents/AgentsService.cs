@@ -14,5 +14,15 @@
             var model = await _unAuthorized.GetUnAuthorizedAsync<ResponseAgentsDetailModel>("api/v1/Agente?codigoAgente="+codigoAgente);
             return model.Content.AsQueryable();
         }
+        public async Task<IQueryable<AgentsDetailModel>> GetAll()
+        {
+            var model = await _unAuthorized.GetUnAuthorizedAsync<ResponseAgentsDetailModel>("api/v1/Agente?codigoAgente=");
+            return model.Content.AsQueryable();
+        }        
+        public async Task<ConsultaAgentesCarteraModel> GetAgentAndwallet(int CodigoAgentePrincipal, string CodigoEstadoCertificado, int CodigoAgente, string CodigoTipoVenta)
+        {
+            var model = await _unAuthorized.GetUnAuthorizedAsync<ResponseConsultaAgentesCarteraModel>("api/v1/Agente/ObtenAgentescartera?CodigoAgentePrincipal="+ CodigoAgentePrincipal + "&CodigoEstadoCertificado="+ CodigoEstadoCertificado + "&CodigoAgente="+CodigoAgente+"&CodigoTipoVenta="+ CodigoTipoVenta);
+            return model.Content;
+        }
     }
 }

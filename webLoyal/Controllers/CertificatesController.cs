@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webLoyal.Controllers
 {
-    public class CertificatesController : Controller
+    public class CertificatesController : BaseController
     {
         public IActionResult Index()
         {

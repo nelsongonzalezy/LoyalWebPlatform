@@ -1,263 +1,675 @@
-﻿<div class="container">
+﻿@model core.Service.VwSolcitudConsultaModel
+@using webLoyal.Views.ViewComponents
 
-    <div class="d-md-flex align-items-center justify-content-between mb-4">
-        <div>
-            <ol class="breadcrumb fs-sm mb-1">
-                <li class="breadcrumb-item"><a href="../menu/Policies">Policies</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Details</li>
-            </ol>
-            <h4 class="main-title mb-0"></h4>
+
+        <div class="d-md-flex align-items-center justify-content-between mb-4">
+            <div>
+                <ol class="breadcrumb fs-sm mb-1">
+                    <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+            <li class="breadcrumb-item"><a href="~/policies/index">@webLoyal.Resources.language.Resources.Policies</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Detalle / @Model.NumeroPoliza / @Model.NombreCompleto</li>
+                </ol>
+                <h4 class="main-title mb-0"></h4>
+            </div>
+
         </div>
 
+<div id="miModal" class="modal fade" tabindex="-1" id="modalDetalle">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+     <div class="modal-content">
+            <div id="modalContenido"></div>
+            </div>
     </div>
-    <head>
-        <style>
-            #container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            }
-            #column-1 {
-            width: 50%;
-            }
-            #column-2 {
-            width: 50%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <ul class="nav nav-pills nav-fill">
-                <li class="nav-item"><a class="nav-link active" href="#sectionOne" onclick="showSection('sectionOne', this)"><p class="d-block text-white"><h6 class="card-title">Titular de la Poliza : Nelson Gonzalez</h6></p></a></li>
-            </ul>
-        </header>
-        <div id="container">
+</div>
+
+    <div>
+    <div class="col-12">
+        <div class="col-12 btn btn-primary">
+            <div class="nav-item"><p class="text-white">@webLoyal.Resources.language.Resources.Policies @Model.NumeroPoliza / @Model.NombreCompleto </p></div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="col-12">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid justify-content-start">
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="ChangeOfPlan">@webLoyal.Resources.language.Resources.ChangeOfPlan</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="Modification">@webLoyal.Resources.language.Resources.Modification</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="Cancellation">@webLoyal.Resources.language.Resources.Cancellation</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="RecordNote">@webLoyal.Resources.language.Resources.RecordNote</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="ModifyTaker">@webLoyal.Resources.language.Resources.ModifyTaker</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="AddDocuments">@webLoyal.Resources.language.Resources.AddDocuments</button>
+
+                </div>
+            </nav>
+        </div>
+    </div>  
+    <div id="myModalContainer"></div>
+    <br />
+        <div>
             <div class="row g-2 justify-content-between">
-                <div id="column-1">
-                    <div id="card-header">
+
                         <div class="col-xl-12">
                             <div class="row g-3">
-                                <div class="col-md-5 col-xl-4">
-                                    <div class="card card-one">
-                                        <div class="card-body p-3">
-                                            <div class="d-block fs-40 lh-1 text-primary mb-1"><i class="ri-calendar-todo-line"></i></div>
-                                            <label class="d-block mb-1 fw-medium text-dark">
-                                                <p>Efectividad</p>
-                                                <p>Pendiente UW</p>
-                                                <p>Venezuela</p>
-                                                <p>Transplante de Organos</p>
-                                            </label>
+                                <div class="col-md-5 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-header"><i class="ri-calendar-todo-line fs-20 lh-1 me-2"></i>@webLoyal.Resources.language.Resources.Information</div>
+                                        <div class="card-body">
+                                        <div class="d-block fw-medium text-dark">
+                                             <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Status</label>
+                                                <div class="col-sm-8">
+                                                    @switch (Model.CodigoEstadoCertificado)
+                                                    {
+                                                        case "02":
+                                                            <span class="badge bg-info" title="@Model.DescripcionEstadoCertificado"><i class="ri-error-warning-line"></i>&nbsp @Model.DescripcionEstadoCertificado</span>
+                                                            break;
+                                                        case "05":
+                                                            <span class="badge bg-info" title="@Model.DescripcionEstadoCertificado"><i class="ri-error-warning-line"></i>&nbsp @Model.DescripcionEstadoCertificado</span>
+                                                            break;
+                                                        case "08":
+                                                            <span class="badge bg-warning" title="@Model.DescripcionEstadoCertificado"><i class="ri-error-warning-line"></i>&nbsp @Model.DescripcionEstadoCertificado</span>
+                                                            break;
+                                                        case "03":
+                                                            <span class="badge bg-success" title="@Model.DescripcionEstadoCertificado"><i class="ri-checkbox-circle-line"></i>&nbsp @Model.DescripcionEstadoCertificado</span>
+                                                            break;
+                                                        case "07":
+                                                            <span class="badge bg-success" title="@Model.DescripcionEstadoCertificado"><i class="ri-checkbox-circle-line"></i>&nbsp @Model.DescripcionEstadoCertificado</span>
+                                                            break;
+                                                        case "09":
+                                                            <span class="badge bg-danger" title="@Model.DescripcionEstadoCertificado"><i class="ri-close-circle-line"></i>&nbsp @Model.DescripcionEstadoCertificado</span>
+                                                            break;
+                                                        case "01":
+                                                            <span class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@Model.DescripcionEstadoCertificado"></span> &nbsp @Model.DescripcionEstadoCertificado</span>
+
+                                                            break;
+                                                        case "04":
+                                                            <span class="badge bg-danger" title="@Model.DescripcionEstadoCertificado"><i class="ri-add-circle-line"></i>&nbsp @Model.DescripcionEstadoCertificado</span>
+                                                            break;
+                                                        case "06":
+                                                            <span class="badge bg-danger" title="@Model.DescripcionEstadoCertificado"><i class="ri-add-circle-line"></i>&nbsp @Model.DescripcionEstadoCertificado</span>
+                                                            break;
+                                                        default:
+                                                            <span class="ri-error-warning-line" title="@Model.DescripcionEstadoCertificado">&nbsp @Model.DescripcionEstadoCertificado</span>
+                                                            break;
+                                                    }
+                                                </div>
+                                            </div> 
+                                            <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.EffectiveStartDate</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.FechaInicioSolicitada.ToString("MM/dd/yyyy")">
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Country</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionPais">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-check form-switch">
+                                        <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">@webLoyal.Resources.language.Resources.Transplant</label>
+                                            @switch (@Model.IndicadorTrasplante)
+                                            {
+                                                case 1:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" checked disabled>
+                                                    break;
+                                                case 0:
+                                                <input class="col-sm-2 form-check-input" type="checkbox" role="switch" disabled>
+                                                    break;
+                                               
+                                            }  
+                                            </div> 
+                                            <div class="form-check form-switch">
+                                        <label class="col-sm-10 form-check-label" for="flexSwitchCheckCheckedDisabled">@webLoyal.Resources.language.Resources.MaternityComplications</label>
+                                            @switch (@Model.IndicadorMaternidad)
+                                            {
+                                                case 1:
+                                                    <input class="col-sm-2 form-check-input" type="checkbox" role="switch" checked disabled>
+                                                    break;
+                                                case 0:
+                                                        <input class="col-sm-2 form-check-input" type="checkbox" role="switch" disabled>
+                                                    break;
+                                               
+                                            }  
+                                            </div>
+                                            </div>
                                         </div><!-- card-body -->
                                     </div><!-- card -->
                                 </div><!-- col -->
-                                <div class="col-md-6 col-xl-4">
-                                    <div class="card card-one">
-                                        <div class="card-body p-3">
-                                            <div class="d-block fs-40 lh-1 text-ui-02 mb-1"><i class="ri-calendar-check-line"></i></div>
-                                            <label class="d-block mb-1 fw-medium text-dark">
-                                                <p>Opción II (US$ 1.000 - US$ 2.000)</p>
-                                                <p>US$ 3.343 - Pirma Anualizada</p>
-                                                <p>Forma de Pago: Trimestral</p>
-                                                <p>En Evaluación</p>
-                                            </label>
+                                <div class="col-md-5 col-xl-3">
+                        <div class="card h-100">
+                                        <div class="card-header"><i class="ri-calendar-check-line fs-20 lh-1 me-2"></i> @webLoyal.Resources.language.Resources.Product</div>
+                                        <div class="card-body">
+                                        <div class="d-block fw-medium text-dark">
+                                            <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Product</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionProducto">
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Premiums</label>
+                                                <div class="col-sm-8">
+                                            <input type="text" readonly class="form-control-plaintext" value="@Model.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))">
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Plan</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionPlanesConsulta">
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.PaymentMethod</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionFormaPago">
+                                                </div>
+                                            </div> 
+                                            <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.StartDate</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.FechaInicioVigencia.ToString("MM/dd/yyyy")">
+                                                </div>
+                                            </div>
+                                            <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.EffectiveEndDate</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" readonly class="form-control-plaintext" value="@Model.FechaFinVigencia.ToString("MM/dd/yyyy")">
+                                                </div>
+                                            </div>
+                                        </div>
                                         </div><!-- card-body -->
                                     </div><!-- card -->
                                 </div><!-- col -->
-                                <div class="col-md-6 col-xl-4">
-                                    <div class="card card-one">
-                                        <div class="card-body p-3">
-                                            <div class="d-block fs-40 lh-1 text-secondary mb-1"><i class="ri-calendar-2-line"></i></div>
-                                            <label class="d-block mb-1 fw-medium text-dark">
-                                                <p>0793-Diego Alcalá (o Cambios período)</p>
-                                                <p>+58 414 0279709</p>
-                                                <p>+58 212 3444172</p>
-                                                <p>diegoalcalag@gmail.com</p>
-                                            </label>
-                                        </div><!-- card-body -->
+
+                                <div class="col-md-5 col-xl-3">
+                        <div class="card h-100">
+
+                            <div class="card-header"><i class="ri-contacts-fill fs-20 lh-1 me-2"></i>@webLoyal.Resources.language.Resources.PolicyholderDetails</div>
+                                    <div class="card-body">
+
+                                        <div class="mb-1 row">
+                                    <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Name</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" readonly class="form-control-plaintext" value="@Model.NombreCompleto">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                            <label class="col-sm-4 col-form-label">Estado Civil</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" readonly class="form-control-plaintext" value="@Model.DescripcionEstadoCivil">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                    <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.PhoneNumber</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" readonly class="form-control-plaintext" value="@Model.TelefonoTomador @Model.Telefono">
+                                            </div>
+                                        </div>
+                                        <div class="mb-1 row">
+                                    <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Email</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" readonly class="form-control-plaintext" value="@Model.CorreoTomador">
+                                            </div>
+                                        </div>
+                                    </div><!-- card-body -->
                                     </div><!-- card -->
                                 </div><!-- col -->
-                            </div>
-                        </div>
-                        <nav>
-                            <ul class="nav nav-pills nav-fill">
-                                <li class="nav-item"><a class="nav-link active" href="#sectionOne" onclick="showSection('sectionOne', this)">Datos del Titular</a></li>
-                            </ul>
-                        </nav>
-                        <div class="col-md-10 col-xl-12">
-                            <div class="card card-one-center">
-                                <p class="d-block mb-1 fw-medium text-dark">Nelson E Gonzales Y</p>
-                                <p class="d-block mb-1 fw-medium text-dark">+58414 0799709</p>
-                                <p class="d-block mb-1 fw-medium text-dark">nelsongonzales1950@gmail.com</p>
-                                <p class="d-block mb-1 fw-medium text-dark">Av Ppal las Villas</p>
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-md-6 col-xl-6">
-                                <div class="card card-one">
-                                    <div class="card-body p-3">
-                                        <div class="d-block fs-40 lh-1 text-primary mb-1"><i class="ri-contacts-fill"></i></div>
-                                        <label class="d-block mb-1 fw-medium text-dark">
-                                            </bold><p>Nelson E Gonzales Y</p></bold>
-                                            </bold><p>Titular</p></bold>
-                                            </bold><p>En Evaluación</p></bold>
-                                        </label>
+                            <div class="col-md-5 col-xl-3">
+                        <div class="card h-100">
+
+                            <div class="card-header"><i class="ri-calendar-2-line fs-20 lh-1 me-2"></i>@webLoyal.Resources.language.Resources.Agent</div>
+                                    <div class="card-body">
+                                        <div class="d-block fw-medium text-dark">
+
+
+                                            <div class="mb-1 row">
+                                        <label class="col-sm-4 col-form-label">@webLoyal.Resources.language.Resources.Agent</label>
+                                                <div class="col-sm-8">
+                                                    <label class="d-block mb-1 fw-medium text-dark">
+                                                        <a class="form-control-plaintext" href="~/agents/detail/@Model.CodigoAgente">@Model.NombreAgente </a>
+
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div><!-- card-body -->
                                 </div><!-- card -->
                             </div><!-- col -->
-                            <div class="col-md-6 col-xl-6">
-                                <div class="card card-one">
-                                    <div class="card-body p-3">
-                                        <div class="d-block fs-40 lh-1 text-primary mb-1"><i class="ri-group-line"></i></div>
-                                        <label class="d-block mb-1 fw-medium text-dark">
-                                            <p>Miriam Rafaela</p>
-                                            <p>Carrillo de Montenegro</p>
-                                            <p>Conguye</p>
-                                            <p>En Evaluación</p>
-                                        </label>
-                                    </div><!-- card-body -->
-                                </div><!-- card -->
-                            </div><!-- col -->    
-                        </div>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                            <button class="btn btn-primary" type="submit">Detalles</button>
-                        </form>
-                    </div>    
-                </div>
-                <div id="column-2">
-                    <div id="sidebar">
-                        <div class="col-xl-12">
-                            <div class="card card-one">
-                                <div class="card-header">
-                                    <h6 class="card-title">Historial de Documentos</h6>
-                                        <nav class="nav nav-icon nav-icon-sm ms-auto">
-                                            <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
-                                            <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
-                                        </nav>
-                                </div><!-- card-header -->
-                                <div class="card-body p-3">
-                                    <ul class="events-list">
-                                        <li class="active">
-                                            <div class="event-date">
-                                                <small>Mar</small>
-                                                <h5>09</h5>
-                                            </div><!-- event-date -->
-                                            <div class="events-body">
-                                                <div class="ev-item">
-                                                    <small>08:00am - 10:30am</small>
-                                                    <h6>Intervención Médica de Urgencia</h6>
-                                                    <p>Intervención Médica de Urgencia-Miriam Carrillo.pdf</p>
-                                                </div><!-- event-item -->
-                                            </div><!-- events-body -->
-                                        </li>
-                                        <li>
-                                            <div class="event-date">
-                                                <small>Mie</small>
-                                                <h5>07</h5>
-                                            </div><!-- event-date -->
-                                            <div class="events-body">
-                                                <div class="ev-item">
-                                                    <small>08:00am - 11:30am</small>
-                                                    <h6>Cuestionario de Declaración del Médico Tratante</h6>
-                                                    <p>Cuestionario de Declaración del Médico Tratante-Nelson Gonzalez.pdf</p>
-                                                </div><!-- event-item -->
-                                                <div class="ev-item">
-                                                    <small>1:30pm - 5:30pm</small>
-                                                    <h6>Exámen Médico</h6>
-                                                    <p>Exámen Médico Nelson Gonzalez.pdf</p>
-                                                </div><!-- event-item -->
-                                            </div><!-- events-body -->
-                                        </li>
-                                        <li>
-                                            <div class="event-date">
-                                                <small>Jue</small>
-                                                <h5>08</h5>
-                                            </div><!-- event-date -->
-                                            <div class="events-body">
-                                                <div class="ev-item">
-                                                    <small>08:30am - 03:30pm</small>
-                                                    <h6>Tarjeta de Vacunación COVID</h6>
-                                                    <p>Tarjeta de Vacuna COVID.pdf</p>
-                                                </div><!-- event-item -->
-                                            </div><!-- events-body -->
-                                        </li>
-                                        <li class="active">
-                                            <div class="event-date">
-                                                <small>Lun</small>
-                                                <h5>23</h5>
-                                            </div><!-- event-date -->
-                                            <div class="events-body">
-                                                <div class="ev-item">
-                                                    <small>09:00am - 05:30pm</small>
-                                                    <h6 class="mb-0">Exámen Médico</h6>
-                                                    <p>Exámen Médico Miriam Carrillo.pdf</p>
-                                                </div><!-- event-item -->
-                                            </div><!-- events-body -->
-                                        </li>
-                                        <li class="active">
-                                            <div class="event-date">
-                                                <small>Sab</small>
-                                                <h5>03</h5>
-                                            </div><!-- event-date -->
-                                            <div class="events-body">
-                                                <div class="ev-item">
-                                                    <small>08:00am - 10:30am</small>
-                                                    <h6>Cuestionario de Declaración del Médico Tratante</h6>
-                                                    <p>Cuestionario de Declaración del Médico Tratante-Miriam Carrillo.pdf</p>
-                                                </div><!-- event-item -->
-                                            </div><!-- events-body -->
-                                        </li>
-                                        <li>
-                                            <div class="event-date">
-                                                <small>Mie</small>
-                                                <h5>07</h5>
-                                            </div><!-- event-date -->
-                                            <div class="events-body">
-                                                <div class="ev-item">
-                                                    <small>08:00am - 11:30am</small>
-                                                    <h6>Cuestionario de Declaración del Médico Tratante</h6>
-                                                    <p>Cuestionario de Declaración del Médico Tratante-Orlando Montenegro.pdf</p>
-                                                </div><!-- event-item -->
-                                                <div class="ev-item">
-                                                    <small>1:30pm - 5:30pm</small>
-                                                    <h6>Exámen Médico</h6>
-                                                    <p>Exámen Médico Nelson Gonzalez.pdf</p>
-                                                </div><!-- event-item -->
-                                            </div><!-- events-body -->
-                                        </li>
-                                        <li>
-                                            <div class="event-date">
-                                                <small>Jue</small>
-                                                <h5>08</h5>
-                                            </div><!-- event-date -->
-                                            <div class="events-body">
-                                                <div class="ev-item">
-                                                    <small>08:30am - 03:30pm</small>
-                                                    <h6>Exámen de Rutinario</h6>
-                                                    <p>Exámen Rutinario-Mirian Carrillo.pdf</p>
-                                                </div><!-- event-item -->
-                                            </div><!-- events-body -->
-                                        </li>
-                                        <li class="active">
-                                            <div class="event-date">
-                                                <small>Lun</small>
-                                                <h5>23</h5>
-                                            </div><!-- event-date -->
-                                            <div class="events-body">
-                                                <div class="ev-item">
-                                                    <small>09:00am - 05:30pm</small>
-                                                    <h6 class="mb-0">Exámen Médico Especializado</h6>
-                                                    <p>Exámen Médico Ginecológico Miriam Carrillo.pdf</p>
-                                                </div><!-- event-item -->
-                                            </div><!-- events-body -->
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
-                    </div>    
-                </div>
+
+                        <div class="row g-2">
+                            <div class="col-md-12 col-xl-12">
+
+                            <div class="col-12">
+                                <div class="col-12 btn btn-primary">
+                            <div class="nav-item"><p class="text-white">@webLoyal.Resources.language.Resources.Insured</p></div>
+                                </div>
+                            </div>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">@webLoyal.Resources.language.Resources.Insured</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">@webLoyal.Resources.language.Resources.Documents</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">@webLoyal.Resources.language.Resources.Notes</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">@webLoyal.Resources.language.Resources.Coverage</button>
+                                </li> 
+                                <li class="nav-item" role="cronograma">
+                            <button class="nav-link" id="cronograma-tab" data-bs-toggle="tab" data-bs-target="#cronograma" type="button" role="tab" aria-controls="cronograma" aria-selected="false">@webLoyal.Resources.language.Resources.Schedule</button>
+                                </li>
+                                <li class="nav-item" role="historial">
+                            <button class="nav-link" id="cronograma-tab" data-bs-toggle="tab" data-bs-target="#historial" type="button" role="tab" aria-controls="historial" aria-selected="false">@webLoyal.Resources.language.Resources.History</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                                    <div class="accordion" id="accordionExample">
+                                        @foreach (var asegurados in Model.VwAseguradosDbObject.OrderBy(x => x.DescripcionTipoPersonaCotizacion))
+                                        {
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="header-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo" aria-expanded="false" aria-controls="collapse-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo">
+                                                        <div class="card-header">
+                                                            @switch (asegurados.CodigoEstadoPersonaSolicitud)
+                                                            {
+                                                                case "01":
+                                                                    <p class="badge bg-info" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-error-warning-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                case "04":
+                                                                    <p class="badge bg-warning" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-error-warning-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                case "02":
+                                                                    <p class="badge bg-success" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-checkbox-circle-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                case "06":
+                                                                    <p class="badge bg-danger" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-close-circle-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                case "05":
+                                                                    <p class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@asegurados.DescripcionEstadoPersonaSolicitud"></span> &nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+
+                                                                    break;
+                                                                case "03":
+                                                                    <p class="badge bg-danger" title="@asegurados.DescripcionEstadoPersonaSolicitud"><i class="ri-add-circle-line"></i>&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                                default:
+                                                                    <p class="ri-error-warning-line" title="@asegurados.DescripcionEstadoPersonaSolicitud">&nbsp @asegurados.DescripcionEstadoPersonaSolicitud</p>
+                                                                    break;
+                                                            }
+                                                            
+                                                            @asegurados.DescripcionTipoPersonaCotizacion / @asegurados.NombreCompleto / @asegurados.DescripcionVinculo </div>
+                                                    </button>
+                                                </h2>
+                                            <div id="collapse-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo" class="accordion-collapse collapse" aria-labelledby="header-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo" data-bs-parent="#header-@asegurados.CodigoPersona-@asegurados.DescripcionVinculo">
+                                                    <div class="accordion-body">
+                                                        <div class="mb-1 row">
+                                                            <label class="col-sm-4 col-form-label">Estado Civil</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.DescripcionEstadoCivil">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Fecha de nacimiento</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.FechaNacimiento.ToString("MM/dd/yyyy")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Edad</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Edad">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Sexo</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Sexo">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Tiempo de espera</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.PeriodoEspera / @asegurados.DescripcionPeriodoTiempo">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Inicio vigencia</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.FechaInicioVigencia.ToString("MM/dd/yyyy")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Fecha Fin de Vigencia</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.FechaFinVigencia.ToString("MM/dd/yyyy")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Correo Electronico</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Correo">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Telefono</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Telefono / @asegurados.Celular">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Direccion</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.DireccionPrincipal / @asegurados.DescripcionPaisPrincipal / @asegurados.CodigoPostalPrincipal">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Estatura</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Talla.ToString("#,###.##")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">Peso</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Peso.ToString("#,###.##")">
+                                                            </div>
+                                                            <label class="col-sm-4 col-form-label">IMC</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" readonly class="form-control-plaintext" value="@asegurados.Imc.ToString("##.##")">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        }
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="card">
+                                        <div class="card-body">
+                                    <table id="Documentosdetails" class="table table-hover table-bordered table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>Tipo Documento</th>
+                                                <th>Origen</th>
+
+                                                <th>Descripcion</th>
+                                                <th>Nombre Documento</th>
+                                                <th>Fecha Registro</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var documentos in Model.VwDocumentoSolicitudDbObject.OrderBy(x => x.DescripcionClasificacionTipoDocumento))
+                                            {
+                                                <tr>
+                                                    <th> @documentos.DescripcionClasificacionTipoDocumento</th>
+                                                    <th> @documentos.Origen</th>
+
+                                                    <td> @documentos.DescripcionTipoDocumento</td>
+                                                    <td> @documentos.NombreDocumento</td>
+
+                                                    <td>
+                                                        @documentos.FechaRegistro.ToString("MM/dd/yyyy")
+                                                    </td>
+                                                </tr>
+
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                                    <div class="card"><div class="card-body">
+                                    @foreach (var mensajes in Model.VwNotasDbObject.OrderBy(x => x.FechaRegistroNota))
+                                    {
+                                        <div class="">
+                                            <div id="chatBodyContent" class="chat-body-content ps ps--active-y">
+                                                <div class="divider"><span>@mensajes.FechaRegistroNota.ToString("MM/dd/yyyy")</span></div>
+
+                                                <div class="msg-item">
+
+                                                    <div class="msg-body">
+                                                        <div class="row gx-3 row-cols-auto">
+                                                            <div class="col"><div class="msg-bubble">@mensajes.Nota <span>@mensajes.NombreUsuario / @mensajes.DescripcionTipoNota</span></div></div>
+                                                            <div class="col">
+                                                                <nav class="nav nav-icon">
+                                                                    <a href="" class="nav-link"><i class="ri-reply-line"></i></a>
+                                                                    <a href="" class="nav-link"><i class="ri-more-fill"></i></a>
+                                                                </nav>
+                                                            </div>
+                                                        </div><!-- row -->
+
+                                                    </div><!-- msg-body -->
+                                                </div><!-- msg-item -->
+
+
+
+
+                                            </div><!-- chat-body-content -->
+
+                                        </div>
+                                    }
+
+                                    </div></div>
+
+
+                                </div>
+                                <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                    <div class="card"><div class="card-body">
+                                    <table id="coberturas" class="table table-hover table-bordered table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>Seccion Cobertura condicionado</th>
+                                                <th> Descripcion</th>
+                                                <th>    Fecha inicio</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var condicionado in Model.WvCertificadoCoberturasCondicionadoDbObject)
+                                            {
+                                                <tr>
+                                                    <th> @condicionado.DescripcionSeccionCoberturaCondicionado</th>
+
+                                                    <td> @condicionado.DescripcionCoberturaCondicionado</td>
+
+                                                    <td>
+                                                        @condicionado.FechaInicioCobertura.ToString("MM/dd/yyyy")
+                                                    </td>
+                                                </tr>
+
+                                            }
+
+                                        </tbody>
+                                    </table>
+
+                                    </div></div>
+
+                                </div>
+@*                                 <div class="tab-pane" id="cronograma" role="tabpanel" aria-labelledby="cronograma-tab">
+
+                                <div class="accordion" id="accordionExample">
+                                    @foreach (var Cronograma in Model.VwCronogramaPagosDbObject.OrderByDescending(x => x.CodigoCronogramaPagos))
+                                    {
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="header-@Cronograma.CodigoCertificado">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@Cronograma.CodigoCertificado" aria-expanded="true" aria-controls="collapse-@Cronograma.CodigoCertificado">
+                                                    <div class="card-header">
+
+
+          
+                                                    </div>
+                                                    @Cronograma.DescripcionEstadoCertificado
+                                                </button>
+                                            </h2>
+
+                                        </div>
+                                        <div id="collapse-@Cronograma.CodigoCertificado" class="accordion-collapse collapse" aria-labelledby="header-@Cronograma.CodigoCertificado" data-bs-parent="#header-@Cronograma.CodigoCertificado">
+                                            <div class="accordion-body">
+                                            <div class="mb-1 row table-responsive">
+                                                <table class="table table-striped table-hover">
+                                                    <thead>
+                                                            <tr>
+                                                                <th>Numero Cuota</th>
+                                                            <th>DescripcionEstadoCuota</th>
+                                                            <th>ValorCuota</th>
+                                                            <th>CostoAdministrativo</th>
+                                                            <th>ValorPrima</th>
+                                                            <th>ValorIntereses</th>
+                                                            <th>ValorSaldoCuota</th>
+                                                            <th>FechaCobro</th>
+                                                            <th>FechaPago</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>@Cronograma.NumeroCuota</td>
+                                                                <td>@Cronograma.DescripcionEstadoCuota</td>
+                                                            <td>@Cronograma.ValorCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                            <td>@Cronograma.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                <td>@Cronograma.ValorPrima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                            <td>@Cronograma.ValorIntereses.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                            <td>@Cronograma.ValorSaldoCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                            <td>@Cronograma.FechaCobro.ToString("MM/dd/yyyy")</td>
+                                                            <td>@Cronograma.FechaPago.ToString("MM/dd/yyyy")</td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                        <tfoot>
+
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                </div> *@
+                            <div class="tab-pane" id="cronograma" role="tabpanel" aria-labelledby="cronograma-tab">
+
+                                <div class="accordion" id="accordionExample">
+                                    @foreach (var grupoCertificado in Model.VwCronogramaPagosDbObject.OrderByDescending(x => x.CodigoCronogramaPagos)
+                                    .GroupBy(x => x.CodigoCertificado))
+                                    {
+                                        var codigoCertificado = grupoCertificado.Key;
+                                        var cronogramasCertificado = grupoCertificado.OrderByDescending(x => x.CodigoCronogramaPagos);
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="header-@codigoCertificado">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@codigoCertificado" aria-expanded="true" aria-controls="collapse-@codigoCertificado">
+                                                    <div class="card-header">
+                                                    </div>
+                                                    @cronogramasCertificado.First().DescripcionEstadoCertificado
+                                                </button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapse-@codigoCertificado" class="accordion-collapse collapse" aria-labelledby="header-@codigoCertificado" data-bs-parent="#header-@codigoCertificado">
+                                            <div class="accordion-body">
+                                                <div class="mb-1 row table-responsive">
+                                                    <table id="CronogramaPagosLista" class="table table-striped table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                            <th>@webLoyal.Resources.language.Resources.Quota</th>
+                                                            <th>@webLoyal.Resources.language.Resources.Description</th>
+                                                            <th>@webLoyal.Resources.language.Resources.QuotaValue</th>
+                                                            <th>@webLoyal.Resources.language.Resources.AdministrativeCost</th>
+                                                            <th>@webLoyal.Resources.language.Resources.Premiums</th>
+                                                            <th>  @webLoyal.Resources.language.Resources.ValueInterest</th>
+                                                            <th>@webLoyal.Resources.language.Resources.QuotaValue</th>
+                                                            <th>@webLoyal.Resources.language.Resources.DateEffectiveness</th>
+                                                            <th>@webLoyal.Resources.language.Resources.PayDay</th>
+                                                            
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @foreach (var cronograma in cronogramasCertificado.Where(x => x.CodigoCertificado == codigoCertificado))
+                                                            {
+                                                                <tr>
+                                                                    <td>@cronograma.NumeroCuota</td>
+                                                                    <td>@cronograma.DescripcionEstadoCuota</td>
+                                                                    <td>@cronograma.ValorCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.ValorPrima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.ValorIntereses.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.ValorSaldoCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                                    <td>@cronograma.FechaCobro.ToString("MM/dd/yyyy")</td>
+                                                                    <td>@cronograma.FechaPago.ToString("MM/dd/yyyy")</td>
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                        <tfoot>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
+                                </div>
+                            </div>
+                            </div>
+                                <div class="tab-pane" id="historial" role="tabpanel" aria-labelledby="historial-tab">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            
+                                        </div>
+                                    </div>
+                                    @* <table class="table table-hover table-bordered table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>Tipo Documento</th>
+                                                <th>Origen</th>
+
+                                                <th>Descripcion</th>
+                                                <th>Nombre Documento</th>
+                                                <th>Fecha Registro</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                    
+
+                                        </tbody>
+                                    </table>*@
+
+                                </div> 
+
+                            </div>
+                        </div>
             </div>
         </div>
-    </body>
-</div>
+    </div>
+
+@section Scripts{
+    <script>
+        initDataTable("coberturas");
+        initDataTable("Documentosdetails");
+
+            $(document).on("click", ".mostrar-modal", function (e) {
+                e.preventDefault();
+
+                // Obtener los datos del botón clicado
+                var controller = $(this).data("controller");
+                var action = $(this).data("action");
+
+                // Construir la URL de la acción utilizando los datos del botón
+                var url = '@Url.Action("a", "c")'; // Deja los parámetros vacíos por ahora
+
+                // Reemplaza los parámetros con los valores correctos
+                url = url.replace("c", controller).replace("a", action);
+                console.log(url)
+                // Hacer la petición al controlador para obtener la vista parcial
+                $.get(url, function (data) {
+                    // Colocar la vista parcial dentro del contenedor de la modal
+                    $("#modalContenido").html(data);
+
+                    // Mostrar la modal
+                    $("#miModal").modal('show');
+                });
+            });
+
+
+
+
+
+        var firstTabEl = document.querySelector('#myTab li:last-child button')
+        var firstTab = new bootstrap.Tab(firstTabEl)
+
+        firstTab.show()
+    </script>
+}

@@ -8382,10 +8382,10 @@ function createTooltipItem(chart, item) {
   return {
     chart,
     label,
-    parsed: controller.getParsed(index),
+    parsed: BaseController.getParsed(index),
     raw: chart.data.datasets[datasetIndex].data[index],
     formattedValue: value,
-    dataset: controller.getDataset(),
+    dataset: BaseController.getDataset(),
     dataIndex: index,
     datasetIndex,
     element

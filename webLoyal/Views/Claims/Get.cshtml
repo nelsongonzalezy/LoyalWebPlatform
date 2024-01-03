@@ -5,3 +5,61 @@
     Model.ClaimDate.ToString("dd/MM/yyyy");
 
 }
+<h5 id="section3" class="main-subtitle">Vertical Orientation</h5>
+<p>A basic content wizard with vertical orientation.</p>
+
+<div id="wizard3" class="wizard-demo">
+    <h3>Personal Information</h3>
+    <div>
+        <p class="mb-0">Try the keyboard navigation by clicking arrow left or right!</p>
+    </div>
+    
+    
+    
+    <h3>Billing Information</h3>
+    <div>
+        <p class="mb-0">Wonderful transition effects.</p>
+    </div>
+    <h3>Payment Details</h3>
+    <div>
+        <p class="mb-0">The next and previous buttons help you to navigate through your content.</p>
+    </div>
+</div>
+<div class="card card-example mt-3">
+    <div class="card-footer border-top-0">
+        <pre><code class="language-js">$(&apos;#wizard3&apos;).steps({
+  headerTag: &apos;h3&apos;,
+  bodyTag: &apos;section&apos;,
+  autoFocus: true,
+  titleTemplate: &apos;&lt;span class=&quot;number&quot;&gt;#index#&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;#title#&lt;/span&gt;&apos;,
+  stepsOrientation: 1
+});</code></pre>
+    </div><!-- card-footer -->
+</div><!-- card -->
+
+<br>
+<br>
+<br>
+
+
+<script src="~/lib/bootstrap/js/bootstrap.bundle.min.js.map"></script>
+<script src="~/lib/bootstrap/js/bootstrap.bundle.js.map"></script>
+<script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="~/lib/prismjs/prism.js"></script>
+<script src="~/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="~/lib/parsleyjs/parsley.min.js"></script>
+<script src="~/lib/jquery-steps/build/jquery.steps.min.js"></script>
+
+
+
+                <script>
+
+    $('#wizard3').steps({
+        headerTag: 'h3',
+        bodyTag: 'div',
+        autoFocus: true,
+        titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>',
+        stepsOrientation: 1
+    });
+                </script>

@@ -53,6 +53,26 @@
             }
 
             return y.Content.AsQueryable();
+        }       
+        public async Task<IQueryable<CifraCertificadosRenovacionesModel>> GetAllRenewal()
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseCifraCertificadosRenovacionesModel>("api/v1/Certificados/ObtenerCifrasCertificadosRenvacion");
+            return y.Content.AsQueryable();
+        } 
+        public async Task<IQueryable<CertificadosRenovacionModel>> GetFiguresRenewal()
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseCertificadosRenovacionModel>("api/v1/Certificados/ObtenerCertificadosRenvacion");
+            return y.Content.AsQueryable();
+        }
+        public async Task<VwSolcitudConsultaModel> GetByCode(int codigoSolicitud)
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseVwSolcitudConsultaModel>("api/v1/Certificados/ConsultaSolicitud?codigoSolicitud=" + codigoSolicitud);
+            return y.Content;
+        } 
+        public async Task<IQueryable<VvCertificadosPorPaisModel>> GetpoliciesForCountry()
+        {
+            var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseRequestVvCertificadosPorPaisModel>("api/v1/Certificados/ConsultaCertificadosPorPais");
+            return y.Content.AsQueryable();
         }
     }
 }

@@ -10,7 +10,7 @@
         public string NombreCompleto { get; set; }
         public string NombreAgente { get; set; }
         public string Sexo { get; set; }
-        public string FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public int? Edad { get; set; }
         public int? CodigoAgenteDependencia { get; set; }
         public string NombreAgenteDependencia { get; set; }
@@ -52,8 +52,8 @@
         public int? CodigoPaisPostal { get; set; }
         public string DescripcionPaisPostal { get; set; }
         public int? CodigoUsuario { get; set; }
-        public string CodigoAgenciaMaster { get; set; }
-        public int? AgenciaMaster { get; set; }
+        public int? CodigoAgenciaMaster { get; set; }
+        public string AgenciaMaster { get; set; }
         public string Talla { get; set; }
         public int? CodigoBanco { get; set; }
         public string DescripcionBanco { get; set; }
@@ -63,7 +63,7 @@
         public string DirecciónCuenta { get; set; }
         public string TipoCuentaDeposito { get; set; }
         public string TextoBusqueda { get; set; }
-        public DateTime? FechaInicioContrato { get; set; }
+        public DateTime FechaInicioContrato { get; set; }
         public decimal? Persistencia { get; set; }
         public int? ProduccionAnual { get; set; }
         public int? Total { get; set; }

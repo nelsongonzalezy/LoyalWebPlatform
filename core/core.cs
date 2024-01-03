@@ -19,6 +19,12 @@ namespace core
                        .AddScoped<IRequestMonitor, RequestMonitorService>()
                        .AddScoped<IPolicies, PoliciesServices>()
                        .AddScoped<IAgents, AgentsService>()
+                       .AddScoped<ILives, LivesService>()
+                       .AddScoped<ICampanig, CampaignService>()
+                       .AddScoped<IForeCast, ForeCastService>()
+                       .AddScoped<IStaff, StaffService>()
+                       .AddScoped<ICommission, CommissionService>()
+
                        .AddScoped<HttpClient>()
                        .AddScoped<HttpClientConfig>()
                        .AddScoped<IHttpServicesAuthorized, HttpServices>()

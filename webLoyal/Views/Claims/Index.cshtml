@@ -1,22 +1,19 @@
-﻿@model List<core.Service.ClaimCreateModel>;
+﻿@model List<core.Service.ListarReclamosModel>;
 
-
-<div class="container">
-    
     <div class="d-md-flex align-items-center justify-content-between mb-4">
         <div>
             <ol class="breadcrumb fs-sm mb-1">
-                <li class="breadcrumb-item"><a href="~/menu/index">Menu</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Historial de reclamos</li>
+                <li class="breadcrumb-item"><a href="~/menu/index">@webLoyal.Resources.language.Resources.Menu</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@webLoyal.Resources.language.Resources.ClaimsHistory</li>
             </ol>
             <h4 class="main-title mb-0"></h4>
         </div>
         <div class="d-flex gap-2 mt-3 mt-md-0">
-            <a href="~/Claims/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2">Crear<span class="d-none d-sm-inline"> reclamo</span></a>
+            <a href="~/Claims/Create" type="button" class="btn btn-primary d-flex align-items-center gap-2">@webLoyal.Resources.language.Resources.Create<span class="d-none d-sm-inline">@webLoyal.Resources.language.Resources.Claims reclamo</span></a>
         </div>
     </div>
       <div  class="col-lg-12 row g-3">
-            <div class="col-6 col-xl-3">
+            @*<div class="col-6 col-xl-3">
                 <div class="card card-one">
                     <div class="card-body">
                         <label class="card-title fs-sm fw-medium mb-1">Reclamos Abiertos</label>
@@ -52,27 +49,25 @@
                     </div><!-- card-body -->
                 </div><!-- card-one -->
             </div>
-           
+           *@
                <div class="card card-one mt-3">
                 <div class="card-body p-3">
                     <div class="table-responsive">
-                        <table id="Claimdatatablet" class="table table-borderless mb-0 dataTable-loading searchable">
+                <table id="ClaimIndex" class="stripe hover display compact">
                             <thead>
                                 <tr>
-                                    <th>Claim Id</th>
-                                    <th>ClaimNumber</th>
-                                    <th>ClaimType</th>
-                                    <th>ClaimStatu</th>
-                                    <th>ClaimValue</th>
-                                    <th>User</th>
-                                    <th>UserType</th>
-                                    <th>ClaimDescription</th>
-                                    <th>ClaimDate</th>
-                                    <th>PolicyNumber</th>
-                                    <th>PolicyType</th>
-                                    <th>CertificatStatus</th>
-                                    <th>MemberName</th>
-                                    <th>Country</th>
+                                    <th>#</th>
+                            <th>@webLoyal.Resources.language.Resources.PolicyNumber</th>
+                            <th>@webLoyal.Resources.language.Resources.ClaimDate</th>
+                            <th>@webLoyal.Resources.language.Resources.ClaimStatusDescription</th>
+                            <th>@webLoyal.Resources.language.Resources.DescriptionOfTheClaimType</th>
+                            <th>@webLoyal.Resources.language.Resources.DescriptionOfOrigin</th>
+                            <th>@webLoyal.Resources.language.Resources.ClaimDescription</th>
+                            <th>@webLoyal.Resources.language.Resources.DeductibleApplies</th>
+                            <th>@webLoyal.Resources.language.Resources.DeductibleValue</th>
+                            <th>@webLoyal.Resources.language.Resources.NotifyInsured</th>
+                            <th>@webLoyal.Resources.language.Resources.NotifyInsuranceAgent</th>
+                            <th>@webLoyal.Resources.language.Resources.NotifyProvider</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -80,51 +75,56 @@
                                 @if (Model.Count > 0)
                                 {
                                
-                                    @foreach (var claim in Model)
+                                    @foreach (var claim in Model.OrderByDescending(x => x.CodigoReclamo))
                                     {
                                       <tr>
-                                            <td>@claim.ClaimId</td>
-                                            <td>@claim.ClaimNumber</td>
-                                            <td><span class="badge bg-info">@claim.ClaimType</span></td>
-                                            <td>
-                                                    @switch (@claim.ClaimStatus)
-                                                    {
-                                                        case "Pendiente":
-                                                                <span class="badge bg-warning" title="@claim.ClaimStatus"><i class="ri-error-warning-line"></i>&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                        case "Aprobado":
-                                                                <span class="badge bg-success" title="@claim.ClaimStatus"><i class="ri-checkbox-circle-line"></i>&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                        case "Denegado":
-                                                                <span class="badge bg-danger" title="@claim.ClaimStatus"><i class="ri-close-circle-line"></i>&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                        case "En Proceso":
-                                                                <span class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@claim.ClaimStatus"></span> &nbsp @claim.ClaimStatus</span>
+                                    <td> <a href="../requestmonitor/detail/@claim.CodigoReclamo" class="btn btn-outline-tertiary"> @claim.CodigoReclamo</a> </td>
+   
+                                            <td>@claim.NumeroPoliza</td>
+                                            <td>@claim.FechaReclamo</td>
+                                            <td>@claim.DescripcionEstadoReclamo</td>
+                                            <td>@claim.DescripcionTipoReclamo</td>
+                                            <td>@claim.DescripcionOrigen</td>
 
-                                                            break;
-                                                        case "Recibido":
-                                                                <span class="badge bg-info" title="@claim.ClaimStatus"><i class="ri-add-circle-line"></i>&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                                default:
-                                                            <span class="ri-error-warning-line" title="@claim.ClaimStatus">&nbsp @claim.ClaimStatus</span>
-                                                            break;
-                                                    }
-                                            </td>
-                                            <td>@claim.ClaimValue.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                            <td>@claim.UserName</td>
-                                            <td><span class="badge bg-info">@claim.UserType</span></td>
-                                            <td>@claim.ClaimDescription</td>
-                                            <td>@claim.ClaimDate</td>
-                                            <td>@claim.PolicyNumber</td>
-                                            <td>@claim.PolicyType</td>
-                                            <td>@claim.CertificatStatus</td>
-                                            <td>@claim.MemberName</td>
-                                            <td>Venezuela</td>
+                                            <td>@claim.DescripcionReclamo</td>
+                                            <td>@claim.AplicaDeducible</td>
+                                            <td>@claim.ValorDeducible.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                @switch (claim.NotificaTitular)
+                                                {
+                                                    case  true:
+                                            <td><span class="badge bg-primary"><i class="ri-check-double-fill"></i></span></td>
+                                                        break;
+                                                        case  false:
+                                            <td><span class="badge bg-light"><i class="ri-close-line"></i></span></td>
+                                                        break;
+                                        
+                                                }
+                                                    @switch (claim.NotificaAgente)
+                                                                {
+                                                                    case  true:
+                                            <td><span class="badge bg-secondary"><i class="ri-close-line"></i></span></td>
+                                                                        break;
+                                                                        case  false:
+                                            <td><span class="badge bg-light"><i class="ri-close-line"></i></span></td>
+                                                                        break;
+
+                                                    }                                                
+                                                    @switch (claim.NotificaProveedor)
+                                                {
+                                                    case  true:
+                                            <td><span class="badge bg-light"><i class="ri-check-double-fill"></i></span></td>
+                                                        break;
+                                                        case  false:
+                                                        <td><span class="badge bg-light"><i class="ri-close-line"></i></span></td>
+                                                        break;
+                                        
+                                                }
+                                            
                                             <td>
                                                 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                                     <div class="btn-group me-2" role="group" aria-label="First group">
-                                                        <a href="~/claims/get/@claim.ClaimId" class="btn btn-sm btn-outline-primary disabled"><i class="ri-pencil-fill"></i></a>
-                                                    <a href="~/claims/delete/@claim.ClaimId" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
+                                                <a href="~/claims/detail/@claim.CodigoReclamo" class="btn btn-sm btn-outline-primary"><i class="ri-pencil-fill"></i></a>
+                                                <a href="~/claims/delete/@claim.CodigoReclamo" class="btn btn-sm btn-outline-danger disabled"><i class="ri-delete-bin-2-fill"></i></a>
                                                     </div>
                                                  </div>
                                             </td>
@@ -140,65 +140,9 @@
         </div>
         </div>
 
-
-
-</div>
-@*
-
-	<div  class="card">
-		<div  class="card-body">
-			<h6  class="card-title">Data Table</h6>
-			<div  class="table-responsive">
-				<div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
-
-					<div class="dataTable-container">
-							<table   class="table table-striped table-hover">
-							<thead   >
-								<tr   >
-									<th   style="width: 19.9544%;"><a href="#" class="dataTable-sorter">Claim Id</a></th>
-									<th   style="width: 29.0764%;"><a href="#" class="dataTable-sorter">ClaimNumber</a></th>
-									<th   style="width: 16.6477%;"><a href="#" class="dataTable-sorter">ClaimType</a></th>
-									<th   style="width: 7.29761%;"><a href="#" class="dataTable-sorter">ClaimStatus</a></th>
-									<th   style="width: 14.7092%;"><a href="#" class="dataTable-sorter">ClaimValue</a></th>
-									<th   style="width: 12.3147%;"><a href="#" class="dataTable-sorter">ClaimDescription</a></th>
-									<th   style="width: 12.3147%;"><a href="#" class="dataTable-sorter">ClaimDate</a></th>
-								</tr>
-							</thead>
-							<tbody   >
-								
-								
-							</tbody>
-						</table>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</div>*@
 @section Scripts{
     <script>
-        $("table").DataTable({
-            searchBuilder: true,
-            class: 'table table-borderless mb-0 dataTable-loading searchable dataTable-wrapper no-footer sortable fixed-columns',
-            fixedColumns: true,
-            order: [[0, "desc"]],
-            dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
-            buttons: [
-                {
-                    extend: 'excelHtml5',
-                    autoFilter: true,
-                    className: 'btn btn-outline-primary',
-                    filename: 'ReclamosExcel',
-                },
-                {
-                    extend: 'pdfHtml5',
-                    className: 'btn btn-outline-primary',
-                    filename: 'ReclamosPdf',
-                }
-            ]
-        });
+        initDataTable("ClaimIndex");
      </script>
 
 }
