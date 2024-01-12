@@ -170,6 +170,24 @@
     </div><!-- col -->
 </div><!-- col -->
 <!-- Vista modal -->
+@* 
+<div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="miModalLabel">Título de la Modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="contenidoModal">
+                <!-- Contenido de la modal se cargará aquí -->
+            </div>
+        </div>
+    </div>
+</div> *@
+
+
 
 <div class="modal fade" tabindex="-1" id="modalDetalle">
     <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
@@ -179,25 +197,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="table-responsive">
-                    <table id="commission" class="table table-borderless mb-0 dataTable-loading searchable" >
-                        <thead>
-                            <tr>
-                                <th>@webLoyal.Resources.language.Resources.AgentCode</th>
-                                <th>@webLoyal.Resources.language.Resources.AgentName</th>
-                                <th>@webLoyal.Resources.language.Resources.PolicyCode</th>
-                                <th>@webLoyal.Resources.language.Resources.NameOfBeneficiary</th>
-                                <th>Prima Anual</th>
-                                <th>Prima Neta</th>
-                                <th>Costo administrativo</th>
-                                <th>Prima Comisionable administrativo</th>
-                                <th>Porcentaje</th>
-                                <th>Comision</th>
-                                <th>Forma de pago</th>
-                            </tr>
-                        </thead>
-                        <tbody id="modalDetalleContent"></tbody>
-                    </table>
+                <div class="table-responsive" id="modalContenidoDetalle">
+
                 </div>
             </div>
             <div class="modal-footer">
@@ -205,7 +206,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 
 @* <div class="modal fade modal-xl" id="modalDetalle" tabindex="-1" role="dialog" aria-labelledby="modalDetalleLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -232,6 +233,7 @@
 @section Scripts{
     <script>
         initDataTable("commtable");
+ 
 
         $(document).on("click", ".mostrar-modal", function (e) {
             e.preventDefault();
@@ -255,34 +257,103 @@
                 $("#miModal").modal('show');
             });
         });
+        // $(document).on("click", ".mostrar-modal", function (e) {
+        //     e.preventDefault();
+
+        //     // Obtener los datos del botón clicado
+        //     var controller = $(this).data("controller");
+        //     var action = $(this).data("action");
+
+        //     // Construir la URL de la acción utilizando los datos del botón
+        //     var url = '/TuControlador/TuAccion'; // Reemplaza 'TuControlador' y 'TuAccion' con los nombres correctos
+
+        //     // Hacer la petición al controlador para obtener la vista parcial
+        //     $.ajax({
+        //         url: url,
+        //         type: "GET",
+        //         data: { id: 1 }, // Puedes pasar parámetros según tus necesidades
+        //         success: function (data) {
+        //             // Colocar la vista parcial dentro del contenedor de la modal
+        //             $("#modalContenido").html(data);
+        //             console.log(data)
+        //             // Mostrar la modal
+        //             $("#miModal").modal('show');
+        //         },
+        //         error: function () {
+        //             // Manejar errores si es necesario
+        //             alert("Error al cargar la vista parcial.");
+        //         }
+        //     });
+        // });
+
 
         $('#CodigoOrigen').select2({
             placeholder: 'Choose one'
         });
  
-            function abrirModal(id1, id2) {
+            // function abrirModal(id1, id2) {
 
-                var apiUrl = '/commission/Detail/?CodigoCicloComisiones=' + encodeURIComponent(id1) + '&CodigoAgente=' + encodeURIComponent(id2);
-                $.get(apiUrl, function (data) {
+            //     var apiUrl = '/commission/Detail/?CodigoCicloComisiones=' + encodeURIComponent(id1) + '&CodigoAgente=' + encodeURIComponent(id2);
+            //     $.get(apiUrl, function (data) {
 
+            //         $('#modalDetalle').modal('show');
+
+
+            //         $('#modalDetalleContent').empty();
+
+            //         var table = '';
+
+            //         for (var i = 0; i < data.length; i++) {
+            //             table += '<tr>';
+
+            //             for (var prop in data[i]) {
+            //                 table += '<td>' + data[i][prop] + '</td>';
+            //             }
+            //             table += '</tr>';
+            //         }
+            //         $('#modalDetalleContent').append(table);
+            //     });
+            // }
+        function abrirModal(id1, id2) {
+            // Construir la URL de la acción utilizando los parámetros
+            var url = '/commission/Detail/?CodigoCicloComisiones=' + encodeURIComponent(id1) + '&CodigoAgente=' + encodeURIComponent(id2);
+
+            // Hacer la petición al controlador para obtener la vista parcial
+            $.ajax({
+                url: url,
+                type: "GET",
+                data: { CodigoCicloComisiones: id1, CodigoAgente: id2 },
+                success: function (data) {
+                    // Mostrar la modal
                     $('#modalDetalle').modal('show');
+                    console.log(data)
+                    $('#modalContenidoDetalle').empty();
+                    $("#modalContenidoDetalle").html(data)
+                    initDataTable("commission");
+                    // Limpiar el contenido existente
 
 
-                    $('#modalDetalleContent').empty();
+                    // // Construir la tabla con los datos recibidos
+                    // var table = '<table>'; // Puedes personalizar el formato según tus necesidades
 
-                    var table = '';
+                    // for (var i = 0; i < data.length; i++) {
+                    //     table += '<tr>';
 
-                    for (var i = 0; i < data.length; i++) {
-                        table += '<tr>';
+                    //     for (var prop in data[i]) {
+                    //         table += '<td>' + data[i][prop] + '</td>';
+                    //     }
+                    //     table += '</tr>';
+                    // }
 
-                        for (var prop in data[i]) {
-                            table += '<td>' + data[i][prop] + '</td>';
-                        }
-                        table += '</tr>';
-                    }
-                    $('#modalDetalleContent').append(table);
-                });
-            }
+                    // table += '</table>';
+                    // $('#modalDetalleContent').append(table);
+                },
+                error: function () {
+                    // Manejar errores si es necesario
+                    alert("Error al cargar la vista parcial.");
+                }
+            });
+        }
 
 
         $(document).ready(function () {

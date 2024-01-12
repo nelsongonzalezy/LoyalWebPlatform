@@ -54,6 +54,9 @@
     <Content Update="wwwroot\assets\app\Campaign\StandarTable.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="wwwroot\js\site.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\js\StandarTable.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

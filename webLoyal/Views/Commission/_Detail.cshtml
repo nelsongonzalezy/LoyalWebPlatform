@@ -1,0 +1,49 @@
+﻿@model List<core.Service.VwDetalleCicloComisionesAgenteModel>
+<table id="commission" class="table table-borderless mb-0 dataTable-loading searchable">
+    <thead>
+        <tr>
+            <th>@webLoyal.Resources.language.Resources.AgentName</th>
+            <th>@webLoyal.Resources.language.Resources.AgencyCode</th>
+            <th>@webLoyal.Resources.language.Resources.PolicyCode</th>
+            <th>@webLoyal.Resources.language.Resources.NameOfBeneficiary</th>
+            <th>@webLoyal.Resources.language.Resources.DescriptionTypeSale</th>
+            <th>Prima Anual</th>
+            <th>Prima Neta</th>
+            <th>Costo administrativo</th>
+            <th>Prima Comisionable administrativo</th>
+            <th>Porcentaje</th>
+            <th>Comision</th>
+            <th>Forma de pago</th>
+        </tr>
+    </thead>
+    <tbody id="modalContenido">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> <a href="~/Agents/detail/@item.CodigoAgente" class="btn btn-outline-tertiary"> @item.CodigoAgente</a> </td>
+                <td>@item.NombreAgente</td>
+                <td>@item.NumeroPoliza</td>
+                <td>@item.TitularPoliza</td>
+                @switch (item.CodigoTipoVenta)
+                {
+                    case "01":
+                        <td> <span class="badge bg-success">@item.DescripcionTipoVenta</span> </td>
+                        break;
+                    case "02":
+                        <td> <span class="badge bg-info"> @item.DescripcionTipoVenta</span> </td>
+                        break;
+                    default :
+                        <td> <span class="badge bg-warning"> @item.DescripcionTipoVenta</span> </td>
+                        break;
+                }
+                <td>@item.PrimaAnual.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                <td>@item.PrimaNeta.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                <td>@item.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                <td>@item.PrimaComisionableAnual.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                <td>@item.PorcentajeComision.ToString("P2")</td>
+                <td>@item.MontoComision.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                <td>@item.FormaPago</td>
+            </tr>
+        }
+    </tbody>
+</table>

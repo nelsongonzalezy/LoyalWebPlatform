@@ -32,32 +32,35 @@ namespace webLoyal.Controllers
         public IActionResult Cancellation()
         {
             return PartialView("_Cancellation");
-        
         }        
         public IActionResult ChangeOfPlan()
         {
             return PartialView("_Cancellation");
-        
         }        
         public IActionResult Modification()
         {
             return PartialView("_Cancellation");
-        
         }        
         public IActionResult RecordNote()
         {
             return PartialView("_Cancellation");
-        
         }        
         public IActionResult ModifyTaker()
         {
             return PartialView("_Cancellation");
-        
         }        
         public IActionResult AddDocuments()
         {
             return PartialView("_Cancellation");
-        
+        }
+        public IActionResult RecodeAgent()
+        {
+            return PartialView("_RecodeAgent");
+        }
+        [HttpPost]
+        public IActionResult RecodeAgent(RecodeAgentModel model)
+        {
+            return PartialView("_RecodeAgent");
         }
     }
 }

@@ -373,6 +373,7 @@
                                     <th>@webLoyal.Resources.language.Resources.Position</th>
                                     <th>@webLoyal.Resources.language.Resources.Code</th>
                                     <th>@webLoyal.Resources.language.Resources.Agents</th>
+                                    <th>@webLoyal.Resources.language.Resources.Documents</th>
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Collected</th>
@@ -390,6 +391,10 @@
                                         <td><strong>@item.Fila</strong></td>
                                         <td> <a href="../Agents/detail/@item.CodigoAgenteVenta" class="btn btn-outline-tertiary"> @item.CodigoAgenteVenta </a> </td>
                                         <td>@item.NombreAgenteVenta.Trim() &nbsp/&nbsp @item.NombreMGA.Trim()</td>
+                                        <td>
+                                            <span class="badge badge-pill bg-warning"><i class="ri-passport-line ri-xl" data-bs-toggle="tooltip" title="" data-bs-original-title="Passport" aria-label="Passport"></i></span>
+                                            <span class="badge badge-pill bg-warning"><i class="ri-visa-line ri-xl" data-bs-toggle="tooltip" title="" data-bs-original-title="Visa" aria-label="Visa"></i></span>
+                                        </td>
                                         <td>@item.Cantidad</td>
                                         <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
@@ -488,6 +493,7 @@
                                     <th>@webLoyal.Resources.language.Resources.Position</th>
                                     <th>@webLoyal.Resources.language.Resources.Code</th>
                                     <th>@webLoyal.Resources.language.Resources.AgencyName</th>
+                                    <th>@webLoyal.Resources.language.Resources.Documents</th>
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Collected</th>
@@ -506,6 +512,10 @@
                                         <td><strong>@item.Fila</strong></td>
                                         <td> <a href="../Agents/detail/@item.CodigoAgencia" class="btn btn-outline-tertiary"> @item.CodigoAgencia </a> </td>
                                         <td>@item.NombreAgencia.Trim()</td>
+                                        <td>
+                                            <span class="badge badge-pill bg-warning"><i class="ri-passport-line ri-xl" data-bs-toggle="tooltip" title="" data-bs-original-title="Passport" aria-label="Passport"></i></span>
+                                            <span class="badge badge-pill bg-warning"><i class="ri-visa-line ri-xl" data-bs-toggle="tooltip" title="" data-bs-original-title="Visa" aria-label="Visa"></i></span>
+                                        </td>
                                         <td>@item.Cantidad</td>
                                         <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
@@ -604,6 +614,7 @@
                                     <th>@webLoyal.Resources.language.Resources.Position</th>
                                     <th>@webLoyal.Resources.language.Resources.Code</th>
                                     <th>@webLoyal.Resources.language.Resources.AgencyName</th>
+                                    <th>@webLoyal.Resources.language.Resources.Documents</th>
                                     <th>@webLoyal.Resources.language.Resources.Policies</th>
                                     <th>@webLoyal.Resources.language.Resources.Premiums</th>
                                     <th>@webLoyal.Resources.language.Resources.Collected</th>
@@ -621,6 +632,10 @@
                                         <td><strong>@item.Fila</strong></td>
                                         <td> <a href="../Agents/detail/@item.CodigoMGA" class="btn btn-outline-tertiary"> @item.CodigoMGA </a> </td>
                                         <td>@item.NombreMGA.Trim()</td>
+                                        <td>
+                                            <span class="badge badge-pill bg-warning"><i class="ri-passport-line ri-xl" data-bs-toggle="tooltip" title="" data-bs-original-title="Passport" aria-label="Passport"></i></span>
+                                            <span class="badge badge-pill bg-warning"><i class="ri-visa-line ri-xl" data-bs-toggle="tooltip" title="" data-bs-original-title="Visa" aria-label="Visa"></i></span>
+                                        </td>
                                         <td>@item.Cantidad</td>
                                         <td>@item.Prima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                         <td>@item.PrimaCobrada.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
