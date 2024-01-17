@@ -39,6 +39,8 @@
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="ModifyTaker">@webLoyal.Resources.language.Resources.ModifyTaker</button>
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="AddDocuments">@webLoyal.Resources.language.Resources.AddDocuments</button>
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="RecodeAgent"> Recode @webLoyal.Resources.language.Resources.Agent</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="RecodeAgent" data-codigo="@Model.CodigoCertificado"> Recode @webLoyal.Resources.language.Resources.Agent</button>
+
                 </div>
             </nav>
         </div>
@@ -573,6 +575,7 @@
                                                             <th>@webLoyal.Resources.language.Resources.QuotaValue</th>
                                                             <th>@webLoyal.Resources.language.Resources.DateEffectiveness</th>
                                                             <th>@webLoyal.Resources.language.Resources.PayDay</th>
+                                                            <th></th>
                                                             
                                                             </tr>
                                                         </thead>
@@ -581,7 +584,43 @@
                                                             {
                                                                 <tr>
                                                                     <td>@cronograma.NumeroCuota</td>
-                                                                    <td>@cronograma.DescripcionEstadoCuota</td>
+                                                                    @switch (cronograma.CodigoEstadoCuota)
+                                                                {
+                                                                    case "01":
+                                                                        <td><p class="badge bg-info" title="@cronograma.DescripcionEstadoCuota"><i class="ri-error-warning-line"></i>&nbsp @cronograma.DescripcionEstadoCuota</p></td>
+                                                                        break;
+                                                                    case "02":
+                                                                        <td>
+                                                                            <p class="badge bg-success" title="@cronograma.DescripcionEstadoCuota"><i class="ri-checkbox-circle-line"></i>&nbsp @cronograma.DescripcionEstadoCuota</p>
+                                                                        </td>
+                                                                        break;
+                                                                    case "03":
+                                                                        <td>
+                                                                            <p class="badge bg-danger" title="@cronograma.DescripcionEstadoCuota"><i class="ri-close-circle-line"></i>&nbsp @cronograma.DescripcionEstadoCuota</p>
+                                                                        </td>
+                                                                        break;
+                                                                    case "04":
+                                                                        <td>
+                                                                            <p class="badge bg-danger" title="@cronograma.DescripcionEstadoCuota"><i class="ri-close-circle-line"></i>&nbsp @cronograma.DescripcionEstadoCuota</p>
+                                                                        </td>
+                                                                        break;
+                                                                    case "05":
+                                                                        <td>
+                                                                            <p class="badge bg-secondary"><span class="spinner-border spinner-border-sm" role="status" title="@cronograma.DescripcionEstadoCuota"></span> &nbsp @cronograma.DescripcionEstadoCuota</p>
+                                                                        </td>
+
+                                                                        break;
+                                                                    case "06":
+                                                                        <td>
+                                                                            <p class="badge bg-info" title="@cronograma.DescripcionEstadoCuota"><i class="ri-add-circle-line"></i>&nbsp @cronograma.DescripcionEstadoCuota</p>
+                                                                        </td>
+                                                                        break;
+                                                                    default:
+                                                                        <td>
+                                                                            <p class="ri-error-warning-line" title="@cronograma.DescripcionEstadoCuota">&nbsp @cronograma.DescripcionEstadoCuota</p>
+                                                                        </td>
+                                                                        break;
+                                                                }
                                                                     <td>@cronograma.ValorCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                                                     <td>@cronograma.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                                                     <td>@cronograma.ValorPrima.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
@@ -589,6 +628,26 @@
                                                                     <td>@cronograma.ValorSaldoCuota.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
                                                                     <td>@cronograma.FechaCobro.ToString("MM/dd/yyyy")</td>
                                                                     <td>@cronograma.FechaPago.ToString("MM/dd/yyyy")</td>
+                                                                    <td>
+                                                                    <div class="btn-group" role="group">
+                                                                        <button id="btnGroupDrop1" type="button" class="btn btn btn-outline-tertiary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                            <i class="ri-function-fill"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                                            @if (cronograma.CodigoEstadoCuota=="05")
+                                                                            {
+                                                                                <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Envio de Cuota a Comision</a></li>
+                                                                            }
+                                                                            <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Ver detalle</a></li>
+                                                                            <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Ver Aviso de Prima</a></li>
+                                                                            <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Registrar pago</a></li>
+                                                                            <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Regenerar Aviso de Prima</a></li>
+
+                                                                            
+                                                                        </ul>
+                                                                    </div>
+
+                                                                    </td>
                                                                 </tr>
                                                             }
                                                         </tbody>
@@ -636,9 +695,12 @@
     </div>
 
 @section Scripts{
+
+
     <script>
         initDataTable("coberturas");
         initDataTable("Documentosdetails");
+
 
             $(document).on("click", ".mostrar-modal", function (e) {
                 e.preventDefault();
@@ -671,5 +733,101 @@
         var firstTab = new bootstrap.Tab(firstTabEl)
 
         firstTab.show()
+        function mostraralert(e) {
+            e.preventDefault();
+
+            Swal.fire({
+                title: '123123',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Si'
+            }).then((resultado) => {
+                if (resultado.isConfirmed) {
+                    const form = document.getElementById('@nameof(PoliciesController.RecodeAgent)');
+                    const action = form.action; // Utilizar directamente el atributo action
+                    const controller = form.getAttribute('asp-controller');
+
+                    // Realizar la petición AJAX utilizando la dirección del formulario
+                    $.ajax({
+                        type: form.method, // Utilizar directamente el atributo method
+                        url: action,
+                        data: $(form).serialize(),
+                        success: function (result) {
+                            // Procesar la respuesta según tus necesidades
+                            console.log(result);
+
+                            // Puedes mostrar otro Swal.fire con el resultado si es necesario
+                            Swal.fire({
+                                title: 'Resultado de la petición',
+                                text: result,
+                                icon: 'success'
+                            });
+                        },
+                        error: function () {
+                            // Manejar errores si es necesario
+                            console.error('Error en la petición AJAX');
+                        }
+                    });
+                }
+            });
+        }
+
+
+        // function mostraralert(e) {
+        //     e.preventDefault();
+
+        //     Swal.fire({
+        //         title: '123123',
+        //         icon: 'question',
+        //     showCancelButton:true,
+        //     confirmButton:'Si'
+        //     }).then((resultado) => { if (resultado.isConfirmed) 
+        //         {
+        //             const formulario = document.getElmentById('@nameof(PoliciesController.RecodeAgent)')
+        //         formulario.Submit();
+        //         } });
+        // }
+
+            //     function aceptarVistaParcial(event) {
+            //     event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+            //     Swal.fire({
+            //         this.title:'123123',
+            //         icon: 'question',
+            //         showCancelButton: true,
+            //         ConfirmButton: 'Si'
+            //     }).then((resultado) => {
+            //         if (resultado.IsConfirmed) {
+            //         const formulario = document.getElementById('@nameof(PoliciesController.RecodeAgent)')
+            //             formulario.submit();
+            //         }
+            //     }
+            //     )
+            //     // Coloca aquí el código que deseas ejecutar al enviar el formulario
+
+            //     // Ejemplo: Cerrar la vista parcial (puedes ocultarla, eliminarla, etc.)
+            //     $(this).closest("div").hide();
+            // });
+
+        // function aceptarVistaParcial(event) {
+        //     event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+        //     Swal.fire({
+        //         this.title: '123123',
+        //         icon: 'question',
+        //         showCancelButton: true,
+        //         ConfirmButton: 'Si'
+        //     }).then((resultado) => {
+        //         if (resultado.IsConfirmed) {
+        //             const formulario = document.getElementById('@nameof(PoliciesController.RecodeAgent)')
+        //             formulario.submit();
+        //         }
+        //     }
+        //     )
+        //     // Coloca aquí el código que deseas ejecutar al enviar el formulario
+
+        //     // Ejemplo: Cerrar la vista parcial (puedes ocultarla, eliminarla, etc.)
+        //     $(this).closest("div").hide();
+        // });
     </script>
 }

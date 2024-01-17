@@ -304,6 +304,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This process will perform an Agent recode, and will perform a calculation of all commissions that are not paid to the newly assigned agent of the selected policy.
+        /// </summary>
+        public static string AgentRecodingWarning {
+            get {
+                return ResourceManager.GetString("AgentRecodingWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Agents.
         /// </summary>
         public static string Agents {
@@ -345,6 +354,15 @@ namespace webLoyal.Resources.language {
         public static string AgentsStatus {
             get {
                 return ResourceManager.GetString("AgentsStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alert.
+        /// </summary>
+        public static string Alert {
+            get {
+                return ResourceManager.GetString("Alert", resourceCulture);
             }
         }
         
@@ -552,6 +570,15 @@ namespace webLoyal.Resources.language {
         public static string Campaigns {
             get {
                 return ResourceManager.GetString("Campaigns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
             }
         }
         
@@ -3941,6 +3968,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Success.
+        /// </summary>
+        public static string Success {
+            get {
+                return ResourceManager.GetString("Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Support.
         /// </summary>
         public static string Support {
@@ -4405,6 +4441,15 @@ namespace webLoyal.Resources.language {
         public static string WaitMoment {
             get {
                 return ResourceManager.GetString("WaitMoment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string Warning {
+            get {
+                return ResourceManager.GetString("Warning", resourceCulture);
             }
         }
         

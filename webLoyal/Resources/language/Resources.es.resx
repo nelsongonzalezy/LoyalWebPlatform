@@ -1581,4 +1581,19 @@
   <data name="Remaining" xml:space="preserve">
     <value>Restante</value>
   </data>
+  <data name="AgentRecodingWarning" xml:space="preserve">
+    <value>Este proceso realizara una recodificación del Agente, y realizara un calculo de todas las comisiones que no estén pagadas al agente nuevo asignado de la póliza seleccionada</value>
+  </data>
+  <data name="Alert" xml:space="preserve">
+    <value>Alerta</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Advertencia</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Exito</value>
+  </data>
 </root>

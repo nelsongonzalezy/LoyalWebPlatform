@@ -1,19 +1,51 @@
-﻿<form class="form-control">
+﻿@model core.Service.RecodeAgentModel
+@using core.Service
+
+@{
+    List<ListaAgentesModel> listaDeModelos = ViewBag.ListaDeModelos;
+    // O si estás usando ViewData: List<TuModelo> listaDeModelos = ViewData["ListaDeModelos"] as List<TuModelo>;
+}
+
+<!-- Resto de tu vista -->
+
+<form id="@nameof(PoliciesController.RecodeAgent)" onsubmit="mostraralert(event)" method="post" asp-action="RecodeAgent" asp-controller="Policies">
     <div class="modal-header">
         <h5 class="modal-title">Detalles del Segundo Modelo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body"> 
+        <div class="alert alert-warning" role="alert">
+            <h4 class="alert-heading"><i class="ri-information-line"></i> @webLoyal.Resources.language.Resources.Warning</h4>
+            <p>@webLoyal.Resources.language.Resources.AgentRecodingWarning</p>
+
+        </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label class="form-label">@webLoyal.Resources.language.Resources.Agent</label>
+            <select asp-for="CodigoAgente" id="CodigoAgente" class="form-select select2" required>
+                @foreach (var agentes in listaDeModelos.OrderBy(x => x.CodigoAgente))
+                {
+                    <option value="@agentes.CodigoAgente">@agentes.NombreAgente | @agentes.DescripcionTipoAgente |@agentes.DescripcionEstadoAgente</option>
+                }
+            </select>
         </div>
         <div>
             <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter message here..."></textarea>
+            <textarea class="form-control" id="Nota" rows="3" placeholder="Enter message here..."></textarea>
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@webLoyal.Resources.language.Resources.Cancel</button>
+        <button type="submit" id="submitButton" class="btn btn-primary">@webLoyal.Resources.language.Resources.Accept</button>
+        <button onclick="mostraralert()" class="btn btn-primary">example</button>
     </div>
 </form>
+@* <button onclick="mostraralert()" class="btn btn-primary">example</button> *@
+
+@section Scripts {
+    <script>
+ 
+    </script>
+
+
+
+}

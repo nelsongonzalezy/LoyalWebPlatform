@@ -6,9 +6,11 @@ namespace webLoyal.Controllers
     public class PoliciesController : BaseController
     {
         private readonly IPolicies _request;
-        public PoliciesController(IPolicies request)
+        private readonly IAgents _requestAgente;
+        public PoliciesController(IPolicies request, IAgents requestAgente)
         {
             _request = request;
+            _requestAgente = requestAgente;
         }
         public async Task<IActionResult> Index()
         {
@@ -53,14 +55,27 @@ namespace webLoyal.Controllers
         {
             return PartialView("_Cancellation");
         }
-        public IActionResult RecodeAgent()
+        public async Task<IActionResult> RecodeAgent(int CodigoCertificado)
         {
+            IQueryable<ListaAgentesModel> listaDeModelos = await _requestAgente.ListAgentByState("01"); 
+            ViewBag.ListaDeModelos = listaDeModelos.ToList();
+            ViewBag.CodigoCertificado = CodigoCertificado;
+
+            var model =await _requestAgente.ListAgentByState("01");
             return PartialView("_RecodeAgent");
         }
         [HttpPost]
         public IActionResult RecodeAgent(RecodeAgentModel model)
         {
-            return PartialView("_RecodeAgent");
+            var x = _requestAgente.ListAgentByState("01");
+            return Json(new
+            {
+                success = true,
+                title = Resources.language.Resources.Success,
+                text = Resources.language.Resources.WelcomeMessage.ToString(),
+                icon = "success",
+                timer = 2000
+            });
         }
     }
 }

@@ -82,92 +82,172 @@
     </div>
   
 
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><span class="badge-dot bg-primary"></span>&nbsp @webLoyal.Resources.language.Resources.Agent</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><span class="badge-dot bg-primary"></span>&nbsp @webLoyal.Resources.language.Resources.ViewDetails</button>
 
-
-    <div class="col-xl-12">
-        <div class="card card-one mt-3">
-            <div class="card-body p-3">
-                <div class="table-responsive">
-                    <table id="commtable" class="display compact stripe table table-borderless mb-0 dataTable-loading searchable">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>@webLoyal.Resources.language.Resources.AgentCode</th>
-                                <th>@webLoyal.Resources.language.Resources.AgentName</th>
-                                <th>@webLoyal.Resources.language.Resources.ViewDetails</th>
-                                <th>Acciones</th>
-                                <th>Acumulados</th>
-                                <th>@webLoyal.Resources.language.Resources.NewBusinessPolicies</th>
-                                <th>@webLoyal.Resources.language.Resources.Renewal</th>
-                                <th>@webLoyal.Resources.language.Resources.TotalIncome</th>
-                                <th>@webLoyal.Resources.language.Resources.Policies</th>
-                                <th>@webLoyal.Resources.language.Resources.StatusDescription</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var CicloComisionesAgente in Model.CicloComisionesAgente.OrderBy(x=>x.CodigoAgente))
-                            {
-                                <tr>
-                                    <td>@CicloComisionesAgente.CodigoCicloComisiones</td>
-                                    <td><a href="~/agents/Detail/@CicloComisionesAgente.CodigoAgente" class="btn btn-outline-tertiary">@CicloComisionesAgente.CodigoAgente</a></td>
-                                    
-                                    <td>@CicloComisionesAgente.NombreAgente</td>
-                                    <td><a onclick="abrirModal('@CicloComisionesAgente.CodigoCicloComisiones', '@CicloComisionesAgente.CodigoAgente' )" class="abrir-modal btn btn-outline-tertiary"><i class="ri-file-list-line" data-bs-toggle="tooltip" title="Detalle de polizas" data-bs-original-title="Detalle de polizas" aria-label="Detalle de polizas"></i></a></td>
-                                    <td>
-                                        <div class="btn-group" role="group">
-                                            <button id="btnGroupDrop1" type="button" class="btn btn btn-outline-tertiary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="ri-function-fill"></i>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                                <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Envio de Estado de cuenta por correo</a></li>
-                                                <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Enviar a Acumulados</a></li>
-                                                <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Cancelar comisiones</a></li>
-                                                <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Regeneracion de Estados de cuenta</a></li>
-                                                <li><a href="@CicloComisionesAgente.CodigoEstadoCuenta" class="dropdown-item mostrar-modal">Ver Estado de Cuentas</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                    <td>@CicloComisionesAgente.TotalAcumulado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                    <td>@CicloComisionesAgente.TotalNuevoNegocio.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                    <td>@CicloComisionesAgente.TotalRenovaciones.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
-                                    @switch (CicloComisionesAgente.TotalComisiones)
-                                        {
-                                            case >0:    
-                                            <td> <span class="badge bg-success"> @CicloComisionesAgente.TotalComisiones.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</span> </td>
-                                                break;
-                                            case <0:
-                                            <td> <span class="badge bg-danger"> @CicloComisionesAgente.TotalComisiones.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</span> </td>
-                                                break;
-                                            case 0:
-                                            <td> <span class="badge bg-warning"> @CicloComisionesAgente.TotalComisiones.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</span> </td>
-                                            break;
-                                        }
-                                    
-                                    <td>@CicloComisionesAgente.CantidadPolizas</td>
-                                    @switch (CicloComisionesAgente.CodigoEstadoCicloComisionesAgente)
-                                    {
-                                        case "01":
-                                            <td> <span class="badge bg-info">@CicloComisionesAgente.DescripcionEstadoCicloComisionesAgente</span> </td>
-                                            break;
-                                        case "02":
-                                            <td> <span class="badge bg-success">@CicloComisionesAgente.DescripcionEstadoCicloComisionesAgente</span> </td>
-                                            break;
-                                        case "03":
-                                            <td> <span class="badge bg-warning">@CicloComisionesAgente.DescripcionEstadoCicloComisionesAgente</span> </td>
-                                            break;
-
-                                    }
-                                    
-                                </tr>
-                                
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div><!-- card-body -->
         </div>
-    </div><!-- col -->
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="col-lg-12 row g-3">
+
+                <div class="col-xl-12">
+                    <div class="card card-one mt-3">
+                        <div class="card-body p-3">
+                            <div class="table-responsive">
+                                <table id="commtable" class="display compact stripe table table-borderless mb-0 dataTable-loading searchable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>@webLoyal.Resources.language.Resources.AgentCode</th>
+                                            <th>@webLoyal.Resources.language.Resources.AgentName</th>
+                                            <th>@webLoyal.Resources.language.Resources.ViewDetails</th>
+                                            <th>Acciones</th>
+                                            <th>Acumulados</th>
+                                            <th>@webLoyal.Resources.language.Resources.NewBusinessPolicies</th>
+                                            <th>@webLoyal.Resources.language.Resources.Renewal</th>
+                                            <th>@webLoyal.Resources.language.Resources.TotalIncome</th>
+                                            <th>@webLoyal.Resources.language.Resources.Policies</th>
+                                            <th>@webLoyal.Resources.language.Resources.StatusDescription</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var CicloComisionesAgente in Model.CicloComisionesAgente.OrderBy(x => x.CodigoAgente))
+                                        {
+                                            <tr>
+                                                <td>@CicloComisionesAgente.CodigoCicloComisiones</td>
+                                                <td><a href="~/agents/Detail/@CicloComisionesAgente.CodigoAgente" class="btn btn-outline-tertiary">@CicloComisionesAgente.CodigoAgente</a></td>
+
+                                                <td>@CicloComisionesAgente.NombreAgente</td>
+                                                <td><a onclick="abrirModal('@CicloComisionesAgente.CodigoCicloComisiones', '@CicloComisionesAgente.CodigoAgente' )" class="abrir-modal btn btn-outline-tertiary"><i class="ri-file-list-line" data-bs-toggle="tooltip" title="Detalle de polizas" data-bs-original-title="Detalle de polizas" aria-label="Detalle de polizas"></i></a></td>
+                                                <td>
+                                                    <div class="btn-group" role="group">
+                                                        <button id="btnGroupDrop1" type="button" class="btn btn btn-outline-tertiary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-function-fill"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                            <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Envio de Estado de cuenta por correo</a></li>
+                                                            <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Enviar a Acumulados</a></li>
+                                                            <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Cancelar comisiones</a></li>
+                                                            <li><a class="dropdown-item mostrar-modal" data-controller="commission" data-action="Cancellation">Regeneracion de Estados de cuenta</a></li>
+                                                            <li><a href="@CicloComisionesAgente.CodigoEstadoCuenta" class="dropdown-item mostrar-modal">Ver Estado de Cuentas</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>@CicloComisionesAgente.TotalAcumulado.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                <td>@CicloComisionesAgente.TotalNuevoNegocio.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                <td>@CicloComisionesAgente.TotalRenovaciones.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                @switch (CicloComisionesAgente.TotalComisiones)
+                                                {
+                                                    case > 0:
+                                                        <td> <span class="badge bg-success"> @CicloComisionesAgente.TotalComisiones.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</span> </td>
+                                                        break;
+                                                    case < 0:
+                                                        <td> <span class="badge bg-danger"> @CicloComisionesAgente.TotalComisiones.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</span> </td>
+                                                        break;
+                                                    case 0:
+                                                        <td> <span class="badge bg-warning"> @CicloComisionesAgente.TotalComisiones.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</span> </td>
+                                                        break;
+                                                }
+
+                                                <td>@CicloComisionesAgente.CantidadPolizas</td>
+                                                @switch (CicloComisionesAgente.CodigoEstadoCicloComisionesAgente)
+                                                {
+                                                    case "01":
+                                                        <td> <span class="badge bg-info">@CicloComisionesAgente.DescripcionEstadoCicloComisionesAgente</span> </td>
+                                                        break;
+                                                    case "02":
+                                                        <td> <span class="badge bg-success">@CicloComisionesAgente.DescripcionEstadoCicloComisionesAgente</span> </td>
+                                                        break;
+                                                    case "03":
+                                                        <td> <span class="badge bg-warning">@CicloComisionesAgente.DescripcionEstadoCicloComisionesAgente</span> </td>
+                                                        break;
+
+                                                }
+
+                                            </tr>
+
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div><!-- card-body -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="col-lg-12 row g-3">
+
+                <div class="col-xl-12">
+                    <div class="card card-one mt-3">
+                        <div class="card-body p-3">
+                            <div class="table-responsive">
+                                <table id="commtabledetail" class="display compact stripe table table-borderless mb-0 dataTable-loading searchable">
+                                    <thead>
+                                        <tr>
+                                            <th>@webLoyal.Resources.language.Resources.AgentName</th>
+                                            <th>@webLoyal.Resources.language.Resources.AgencyCode</th>
+                                            <th>@webLoyal.Resources.language.Resources.PolicyCode</th>
+                                            <th>@webLoyal.Resources.language.Resources.NameOfBeneficiary</th>
+                                            <th>@webLoyal.Resources.language.Resources.DescriptionTypeSale</th>
+                                            <th>Prima Anual</th>
+                                            <th>Prima Neta</th>
+                                            <th>Costo administrativo</th>
+                                            <th>Prima Comisionable administrativo</th>
+                                            <th>Porcentaje</th>
+                                            <th>Comision</th>
+                                            <th>Forma de pago</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.DetalleCicloComisionesAgente)
+                                        {
+                                            <tr>
+                                                <td> <a href="~/Agents/detail/@item.CodigoAgente" class="btn btn-outline-tertiary"> @item.CodigoAgente</a> </td>
+                                                <td>@item.NombreAgente</td>
+                                                <td>@item.NumeroPoliza</td>
+                                                <td>@item.TitularPoliza</td>
+                                                @switch (item.CodigoTipoVenta)
+                                                {
+                                                    case "01":
+                                                        <td> <span class="badge bg-success">@item.DescripcionTipoVenta</span> </td>
+                                                        break;
+                                                    case "02":
+                                                        <td> <span class="badge bg-info"> @item.DescripcionTipoVenta</span> </td>
+                                                        break;
+                                                    default:
+                                                        <td> <span class="badge bg-warning"> @item.DescripcionTipoVenta</span> </td>
+                                                        break;
+                                                }
+                                                <td>@item.PrimaAnual.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                <td>@item.PrimaNeta.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                <td>@item.CostoAdministrativo.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                <td>@item.PrimaComisionableAnual.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                <td>@item.PorcentajeComision.ToString("P2")</td>
+                                                <td>@item.MontoComision.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                                <td>@item.FormaPago</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div><!-- card-body -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- col -->
 </div><!-- col -->
 <!-- Vista modal -->
 @* 
@@ -233,6 +313,7 @@
 @section Scripts{
     <script>
         initDataTable("commtable");
+        initDataTable("commtabledetail");
  
 
         $(document).on("click", ".mostrar-modal", function (e) {
