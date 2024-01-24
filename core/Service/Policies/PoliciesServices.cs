@@ -74,5 +74,9 @@
             var y = await _unAuthorized.GetUnAuthorizedAsync<ResponseRequestVvCertificadosPorPaisModel>("api/v1/Certificados/ConsultaCertificadosPorPais");
             return y.Content.AsQueryable();
         }
+        public async Task<bool> RecodeAgent(RecodeAgentModel model)
+        {
+            return await _unAuthorized.PostUnAuthorizedAsync<RecodeAgentModel,bool>("api/v1/Certificados/RecodificarAgente", model);
+        }
     }
 }

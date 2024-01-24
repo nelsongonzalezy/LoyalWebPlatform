@@ -1608,4 +1608,16 @@
   <data name="Success" xml:space="preserve">
     <value>Success</value>
   </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Are you sure about doing this?</value>
+  </data>
+  <data name="SuccessMsj" xml:space="preserve">
+    <value>Operation Completed Successfully</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="EnterMsj" xml:space="preserve">
+    <value>Enter message here...</value>
+  </data>
 </root>

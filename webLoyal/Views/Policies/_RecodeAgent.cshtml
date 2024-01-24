@@ -2,17 +2,17 @@
 @using core.Service
 
 @{
-    List<ListaAgentesModel> listaDeModelos = ViewBag.ListaDeModelos;
-    // O si estás usando ViewData: List<TuModelo> listaDeModelos = ViewData["ListaDeModelos"] as List<TuModelo>;
-}
+    List<ListaAgentesModel> listaDeModelos = ViewBag.ListaDeModelos;}
 
-<!-- Resto de tu vista -->
+
 
 <form id="@nameof(PoliciesController.RecodeAgent)" onsubmit="mostraralert(event)" method="post" asp-action="RecodeAgent" asp-controller="Policies">
     <div class="modal-header">
         <h5 class="modal-title">Detalles del Segundo Modelo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
+    <input asp-for="CodigoCertificado"value="@Model.CodigoCertificado" hidden="true"/>
+    <label>@ViewBag.CodigoCertificado</label>
     <div class="modal-body"> 
         <div class="alert alert-warning" role="alert">
             <h4 class="alert-heading"><i class="ri-information-line"></i> @webLoyal.Resources.language.Resources.Warning</h4>
@@ -27,25 +27,17 @@
                     <option value="@agentes.CodigoAgente">@agentes.NombreAgente | @agentes.DescripcionTipoAgente |@agentes.DescripcionEstadoAgente</option>
                 }
             </select>
+            <span asp-validation-for="CodigoAgente" class="text-danger"></span>
         </div>
         <div>
             <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-            <textarea class="form-control" id="Nota" rows="3" placeholder="Enter message here..."></textarea>
+            <textarea asp-for="Nota" class="form-control" id="Nota" rows="3" placeholder="@webLoyal.Resources.language.Resources.EnterMsj" required></textarea>
+            <span asp-validation-for="Nota" class="text-danger"></span>
         </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@webLoyal.Resources.language.Resources.Cancel</button>
         <button type="submit" id="submitButton" class="btn btn-primary">@webLoyal.Resources.language.Resources.Accept</button>
-        <button onclick="mostraralert()" class="btn btn-primary">example</button>
+
     </div>
 </form>
-@* <button onclick="mostraralert()" class="btn btn-primary">example</button> *@
-
-@section Scripts {
-    <script>
- 
-    </script>
-
-
-
-}

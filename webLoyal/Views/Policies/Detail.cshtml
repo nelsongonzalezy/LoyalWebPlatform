@@ -38,8 +38,8 @@
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="RecordNote">@webLoyal.Resources.language.Resources.RecordNote</button>
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="ModifyTaker">@webLoyal.Resources.language.Resources.ModifyTaker</button>
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="AddDocuments">@webLoyal.Resources.language.Resources.AddDocuments</button>
-                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="RecodeAgent"> Recode @webLoyal.Resources.language.Resources.Agent</button>
-                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="RecodeAgent" data-codigo="@Model.CodigoCertificado"> Recode @webLoyal.Resources.language.Resources.Agent</button>
+                   
+                    <button class="btn btn-sm btn-outline-secondary me-2"id="RecodeAgent" type="button" data-controller="Policies" data-action="RecodeAgent" > Recode @webLoyal.Resources.language.Resources.Agent</button>
 
                 </div>
             </nav>
@@ -255,19 +255,19 @@
                                 <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">@webLoyal.Resources.language.Resources.Insured</button>
                                 </li>
-                                <li class="nav-item" role="presentation">
+                                <li class="nav-item" role="tablist">
                             <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">@webLoyal.Resources.language.Resources.Documents</button>
                                 </li>
-                                <li class="nav-item" role="presentation">
+                                <li class="nav-item" role="tablist">
                             <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">@webLoyal.Resources.language.Resources.Notes</button>
                                 </li>
-                                <li class="nav-item" role="presentation">
+                        <li class="nav-item" role="tablist">
                             <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">@webLoyal.Resources.language.Resources.Coverage</button>
-                                </li> 
-                                <li class="nav-item" role="cronograma">
+                                </li>
+                        <li class="nav-item" role="tablist">
                             <button class="nav-link" id="cronograma-tab" data-bs-toggle="tab" data-bs-target="#cronograma" type="button" role="tab" aria-controls="cronograma" aria-selected="false">@webLoyal.Resources.language.Resources.Schedule</button>
                                 </li>
-                                <li class="nav-item" role="historial">
+                        <li class="nav-item" role="tablist">
                             <button class="nav-link" id="cronograma-tab" data-bs-toggle="tab" data-bs-target="#historial" type="button" role="tab" aria-controls="historial" aria-selected="false">@webLoyal.Resources.language.Resources.History</button>
                                 </li>
                             </ul>
@@ -713,7 +713,7 @@
                 var url = '@Url.Action("a", "c")'; // Deja los parámetros vacíos por ahora
 
                 // Reemplaza los parámetros con los valores correctos
-                url = url.replace("c", controller).replace("a", action);
+                url = url.replace("c", controller).replace("a", action)
                 console.log(url)
                 // Hacer la petición al controlador para obtener la vista parcial
                 $.get(url, function (data) {
@@ -725,8 +725,26 @@
                 });
             });
 
+        $(document).ready(function () {
+            $("#RecodeAgent").on("click", function () {
+                enviarPeticionAlControlador();
+            });
+        });
+        function enviarPeticionAlControlador() {
+            
+            
+            var nuevaURL = "/Policies/RecodeAgent?CodigoCertificado=" +
+                "@Model.CodigoCertificado" ;
+            // window.location.href = nuevaURL;
+            console.log(nuevaURL)
+            $.get(nuevaURL, function (data) {
+                // Colocar la vista parcial dentro del contenedor de la modal
+                $("#modalContenido").html(data);
 
-
+                // Mostrar la modal
+                $("#miModal").modal('show');
+            });
+        }
 
 
         var firstTabEl = document.querySelector('#myTab li:last-child button')
@@ -737,97 +755,49 @@
             e.preventDefault();
 
             Swal.fire({
-                title: '123123',
+                title: '@webLoyal.Resources.language.Resources.AreYouSure',
                 icon: 'question',
                 showCancelButton: true,
-                confirmButtonText: 'Si'
-            }).then((resultado) => {
-                if (resultado.isConfirmed) {
-                    const form = document.getElementById('@nameof(PoliciesController.RecodeAgent)');
-                    const action = form.action; // Utilizar directamente el atributo action
-                    const controller = form.getAttribute('asp-controller');
+                confirmButtonText: '@webLoyal.Resources.language.Resources.Yes',
+                willClose: (confirmed) => {
+                    if (confirmed) {
+                        const form = document.getElementById('@nameof(PoliciesController.RecodeAgent)');
+                        const action = form.action; // Utilizar directamente el atributo action
+                        const controller = form.getAttribute('asp-controller');
 
-                    // Realizar la petición AJAX utilizando la dirección del formulario
-                    $.ajax({
-                        type: form.method, // Utilizar directamente el atributo method
-                        url: action,
-                        data: $(form).serialize(),
-                        success: function (result) {
-                            // Procesar la respuesta según tus necesidades
-                            console.log(result);
+                        // Realizar la petición AJAX utilizando la dirección del formulario
+                        $.ajax({
+                            type: form.method, // Utilizar directamente el atributo method
+                            url: action,
+                            data: $(form).serialize(),
+                            success: function (result) {
+                                // Procesar la respuesta según tus necesidades
+                                console.log(result);
 
-                            // Puedes mostrar otro Swal.fire con el resultado si es necesario
-                            Swal.fire({
-                                title: 'Resultado de la petición',
-                                text: result,
-                                icon: 'success'
-                            });
-                        },
-                        error: function () {
-                            // Manejar errores si es necesario
-                            console.error('Error en la petición AJAX');
-                        }
-                    });
+                                // Puedes mostrar otro Swal.fire con el resultado si es necesario
+                                Swal.fire({
+                                    title: result.title,
+                                    text: result.text,
+                                    icon: result.icon
+                                }).then((response) => {
+                                    // Verificar si el usuario confirmó
+                                    if (response.isConfirmed) {
+                                        // Actualizar la página actual después de la petición AJAX exitosa
+                                        location.reload();
+                                    }
+                                });
+
+                            },
+                            error: function () {
+                                // Manejar errores si es necesario
+                                console.error('Error en la petición AJAX');
+                            }
+                        });
+                    }
                 }
             });
         }
 
 
-        // function mostraralert(e) {
-        //     e.preventDefault();
-
-        //     Swal.fire({
-        //         title: '123123',
-        //         icon: 'question',
-        //     showCancelButton:true,
-        //     confirmButton:'Si'
-        //     }).then((resultado) => { if (resultado.isConfirmed) 
-        //         {
-        //             const formulario = document.getElmentById('@nameof(PoliciesController.RecodeAgent)')
-        //         formulario.Submit();
-        //         } });
-        // }
-
-            //     function aceptarVistaParcial(event) {
-            //     event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
-
-            //     Swal.fire({
-            //         this.title:'123123',
-            //         icon: 'question',
-            //         showCancelButton: true,
-            //         ConfirmButton: 'Si'
-            //     }).then((resultado) => {
-            //         if (resultado.IsConfirmed) {
-            //         const formulario = document.getElementById('@nameof(PoliciesController.RecodeAgent)')
-            //             formulario.submit();
-            //         }
-            //     }
-            //     )
-            //     // Coloca aquí el código que deseas ejecutar al enviar el formulario
-
-            //     // Ejemplo: Cerrar la vista parcial (puedes ocultarla, eliminarla, etc.)
-            //     $(this).closest("div").hide();
-            // });
-
-        // function aceptarVistaParcial(event) {
-        //     event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
-
-        //     Swal.fire({
-        //         this.title: '123123',
-        //         icon: 'question',
-        //         showCancelButton: true,
-        //         ConfirmButton: 'Si'
-        //     }).then((resultado) => {
-        //         if (resultado.IsConfirmed) {
-        //             const formulario = document.getElementById('@nameof(PoliciesController.RecodeAgent)')
-        //             formulario.submit();
-        //         }
-        //     }
-        //     )
-        //     // Coloca aquí el código que deseas ejecutar al enviar el formulario
-
-        //     // Ejemplo: Cerrar la vista parcial (puedes ocultarla, eliminarla, etc.)
-        //     $(this).closest("div").hide();
-        // });
     </script>
 }

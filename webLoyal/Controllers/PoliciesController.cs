@@ -59,23 +59,21 @@ namespace webLoyal.Controllers
         {
             IQueryable<ListaAgentesModel> listaDeModelos = await _requestAgente.ListAgentByState("01"); 
             ViewBag.ListaDeModelos = listaDeModelos.ToList();
-            ViewBag.CodigoCertificado = CodigoCertificado;
+            var model = new RecodeAgentModel{ CodigoCertificado= CodigoCertificado };
 
-            var model =await _requestAgente.ListAgentByState("01");
-            return PartialView("_RecodeAgent");
+           /* var model =await _requestAgente.ListAgentByState("01")*/;
+            return PartialView("_RecodeAgent",model);
         }
         [HttpPost]
-        public IActionResult RecodeAgent(RecodeAgentModel model)
+        public async Task<IActionResult> RecodeAgent(RecodeAgentModel model)
         {
-            var x = _requestAgente.ListAgentByState("01");
-            return Json(new
-            {
-                success = true,
-                title = Resources.language.Resources.Success,
-                text = Resources.language.Resources.WelcomeMessage.ToString(),
-                icon = "success",
-                timer = 2000
-            });
+       
+            var x = HttpContext.Session.GetString("CodigoUsuario");
+            model.CodigoUsuario = int.Parse(x);
+
+
+            return BaseResult(await _request.RecodeAgent(model));
+            
         }
     }
 }

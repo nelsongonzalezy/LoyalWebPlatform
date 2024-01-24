@@ -403,6 +403,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure about doing this?.
+        /// </summary>
+        public static string AreYouSure {
+            get {
+                return ResourceManager.GetString("AreYouSure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Assigned By.
         /// </summary>
         public static string AssignedBy {
@@ -1686,6 +1695,15 @@ namespace webLoyal.Resources.language {
         public static string Emergency {
             get {
                 return ResourceManager.GetString("Emergency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter message here....
+        /// </summary>
+        public static string EnterMsj {
+            get {
+                return ResourceManager.GetString("EnterMsj", resourceCulture);
             }
         }
         
@@ -3977,6 +3995,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Operation Completed Successfully.
+        /// </summary>
+        public static string SuccessMsj {
+            get {
+                return ResourceManager.GetString("SuccessMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Support.
         /// </summary>
         public static string Support {
@@ -4522,6 +4549,15 @@ namespace webLoyal.Resources.language {
         public static string Years {
             get {
                 return ResourceManager.GetString("Years", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
         

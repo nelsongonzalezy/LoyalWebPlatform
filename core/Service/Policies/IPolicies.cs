@@ -10,5 +10,7 @@
         Task<VwSolcitudConsultaModel> GetByCode(int codigoSolicitud);
         Task<IQueryable<VvCertificadosPorPaisModel>> GetpoliciesForCountry();
 
+        Task<bool> RecodeAgent(RecodeAgentModel model);
+
     }
 }
