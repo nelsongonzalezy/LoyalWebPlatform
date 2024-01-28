@@ -34,7 +34,15 @@
                 <div class="container-fluid justify-content-start">
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="ChangeOfPlan">@webLoyal.Resources.language.Resources.ChangeOfPlan</button>
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="Modification">@webLoyal.Resources.language.Resources.Modification</button>
-                    <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="Cancellation">@webLoyal.Resources.language.Resources.Cancellation</button>
+                    @switch (Model.CodigoEstadoCertificado)
+                    {
+                        case "03":
+                            <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="Cancellation">@webLoyal.Resources.language.Resources.Cancellation</button>
+                            break;
+                        case "04":
+                            <button class="btn btn-sm btn-outline-secondary me-2" id="Activation" type="button" data-controller="Policies" data-action="Activation">@webLoyal.Resources.language.Resources.Active</button>
+                            break;
+                    }
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="RecordNote">@webLoyal.Resources.language.Resources.RecordNote</button>
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="ModifyTaker">@webLoyal.Resources.language.Resources.ModifyTaker</button>
                     <button class="btn btn-sm btn-outline-secondary me-2 mostrar-modal" type="button" data-controller="Policies" data-action="AddDocuments">@webLoyal.Resources.language.Resources.AddDocuments</button>
@@ -696,7 +704,7 @@
 
 @section Scripts{
 
-
+    <script src="~/assets/app/policies/activation.js"></script>
     <script>
         initDataTable("coberturas");
         initDataTable("Documentosdetails");

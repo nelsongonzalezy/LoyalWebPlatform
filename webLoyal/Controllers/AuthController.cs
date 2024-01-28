@@ -43,7 +43,7 @@ namespace webLoyal.Controllers
                     {
                         string imagenBase64 = ActiveSession.Content.User.UsuarioImagen!=null? Convert.ToBase64String(ActiveSession.Content.User.UsuarioImagen):string.Empty;
                         HttpContext.Session.SetString(nameof(model.UserName), model.UserName);
-                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoUsuario), "1");
+                        HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoUsuario), ActiveSession.Content.User.CodigoUsuario.ToString());
                         HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorValidacion), ActiveSession.Content.User.IndicadorValidacion.ToString());
                         HttpContext.Session.SetString(nameof(ActiveSession.Content.User.DireccionEmail), ActiveSession.Content.User.DireccionEmail);
                         HttpContext.Session.SetString(nameof(ActiveSession.Content.User.NombreCompletoUsuario), ActiveSession.Content.User.NombreCompletoUsuario);
@@ -239,8 +239,8 @@ namespace webLoyal.Controllers
 
                 if (ActiveSession.Content.User.CodigoUsuario > 0)
                 {
-                    HttpContext.Session.SetString(nameof(model.UserName), model.UserName);
-                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoUsuario), "1");
+                    HttpContext.Session.SetString(nameof(model.UserName), model.UserName.ToString());
+                    HttpContext.Session.SetString(nameof(ActiveSession.Content.User.CodigoUsuario), ActiveSession.Content.User.CodigoUsuario.ToString());
                     HttpContext.Session.SetString(nameof(ActiveSession.Content.User.IndicadorValidacion), ActiveSession.Content.User.IndicadorValidacion.ToString());
                     HttpContext.Session.SetString(nameof(ActiveSession.Content.User.DireccionEmail), ActiveSession.Content.User.DireccionEmail);
                     HttpContext.Session.SetString(nameof(ActiveSession.Content.User.NombreCompletoUsuario), ActiveSession.Content.User.NombreCompletoUsuario);

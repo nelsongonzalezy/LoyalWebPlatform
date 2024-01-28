@@ -8,7 +8,7 @@
 
 <form id="@nameof(PoliciesController.RecodeAgent)" onsubmit="mostraralert(event)" method="post" asp-action="RecodeAgent" asp-controller="Policies">
     <div class="modal-header">
-        <h5 class="modal-title">Detalles del Segundo Modelo</h5>
+        <h5 class="modal-title">@webLoyal.Resources.language.Resources.Recordings</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <input asp-for="CodigoCertificado"value="@Model.CodigoCertificado" hidden="true"/>

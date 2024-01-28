@@ -1620,4 +1620,7 @@
   <data name="EnterMsj" xml:space="preserve">
     <value>Enter message here...</value>
   </data>
+  <data name="ActiveMsj" xml:space="preserve">
+    <value>You will start the process of reactivating the policy</value>
+  </data>
 </root>

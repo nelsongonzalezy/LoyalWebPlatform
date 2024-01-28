@@ -6,6 +6,7 @@
         public IEnumerable<AgenteCarteraModel> AgenteCartera { get; set; }
         public IEnumerable<AgenteCarteraPorEstadoModel> AgenteCarteraPorEstado { get; set; }
         public IEnumerable<AgenteCarteraPorProductoModel> AgenteCarteraPorProducto { get; set; }
+        public IEnumerable<ListaEstructuraCarteraModel> ListaEstructuraCartera { get; set; }
     }
     public class ResponseConsultaAgentesCarteraModel
     {

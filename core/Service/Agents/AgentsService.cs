@@ -29,5 +29,10 @@
             var model = await _unAuthorized.GetUnAuthorizedAsync<ResponseListaAgentesModel>("api/v1/Agente/ListarAgentes?CodigoEstadoAgente=" + CodigoEstadoAgente );
             return model.Content.AsQueryable();
         }
+        public async Task<IQueryable<ListaEstructuraCarteraModel>> ListPortfolioByAgente(string CodigoEstadoAgente)
+        {
+            var model = await _unAuthorized.GetUnAuthorizedAsync<ResponseListaEstructuraCarteraModel>("api/v1/Agente/ObtenerAgentesCartera?CodigoAgente=" + CodigoEstadoAgente);
+            return model.Content.AsQueryable();
+        }
     }
 }

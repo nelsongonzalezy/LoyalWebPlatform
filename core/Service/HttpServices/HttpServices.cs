@@ -126,12 +126,8 @@ namespace core.Service
             }
             catch (Exception x)
             {
-
                 throw;
             }
-         
-
-     
         }
 
         public async Task<TResponse> PostUnAuthorizedAsync<TSource, TResponse>(string pathUrl, TSource body)
@@ -187,7 +183,8 @@ namespace core.Service
 
         private string GetUrl(string pathUrl)
         {
-            var url = "http://apirestloyal-env.us-east-1.elasticbeanstalk.com/" + pathUrl;
+            //string url = "http://apirestloyal-env.us-east-1.elasticbeanstalk.com/" + pathUrl;
+            string url = "https://api.app-loyalig.com/" + pathUrl;
             return url;
         }
     }

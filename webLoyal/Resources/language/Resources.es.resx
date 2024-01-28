@@ -1608,4 +1608,7 @@
   <data name="EnterMsj" xml:space="preserve">
     <value>Ingrese el mensaje aquí...</value>
   </data>
+  <data name="ActiveMsj" xml:space="preserve">
+    <value>Usted iniciara el proceso de reactivación de la póliza</value>
+  </data>
 </root>

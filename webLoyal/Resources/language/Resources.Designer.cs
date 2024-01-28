@@ -160,6 +160,15 @@ namespace webLoyal.Resources.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You will start the process of reactivating the policy.
+        /// </summary>
+        public static string ActiveMsj {
+            get {
+                return ResourceManager.GetString("ActiveMsj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Actual.
         /// </summary>
         public static string Actual {

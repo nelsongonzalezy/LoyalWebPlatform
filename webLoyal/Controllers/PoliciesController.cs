@@ -55,6 +55,17 @@ namespace webLoyal.Controllers
         {
             return PartialView("_Cancellation");
         }
+        public async Task<IActionResult> Activation(int CodigoCertificado)
+        {
+            var model = new ActivationModel { CodigoUsuario= int.Parse(HttpContext.Session.GetString("CodigoUsuario")), CodigoCertificado= CodigoCertificado };
+            return PartialView("_Activation",model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Activation(ActivationModel model)
+        {
+
+            return BaseResult(false);
+        }
         public async Task<IActionResult> RecodeAgent(int CodigoCertificado)
         {
             IQueryable<ListaAgentesModel> listaDeModelos = await _requestAgente.ListAgentByState("01"); 
